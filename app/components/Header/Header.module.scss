@@ -1,0 +1,87 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  height: 6vh;
+  background: white;
+}
+
+.containerLogo {
+  display: flex;
+  align-items: center;
+  margin-left: 4rem;
+}
+
+.logo {
+  margin-right: 1rem;
+}
+
+.containerNav {
+  display: flex;
+  align-items: center;
+  margin-right: 4rem;
+  gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.buttonsContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.containerBurger {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+  }
+}
+
+.hamburger {
+  width: 2rem;
+  height: 2rem;
+}
+
+.navLink:focus {
+  outline: none;
+  border-bottom: solid black 1px;
+}
+
+.buttonLang:focus {
+  outline: none;
+  border-bottom: solid black 1px;
+}
+
+.activeLink {
+  border-bottom: 2px solid orange; /* ou la couleur de votre choix */
+  color: orange; /* Changez la couleur pour indiquer la section active */
+}
+
+.activeButton {
+  padding: 3px 4px;
+  background: black;
+  color: white;
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+.inactiveButton {
+  background: white;
+  color: black;
+}
