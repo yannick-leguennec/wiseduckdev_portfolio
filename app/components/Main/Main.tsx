@@ -1,21 +1,40 @@
+import { useLanguage } from "@/app/context/LanguageContext";
 import classes from "./Main.module.scss";
 import Image from "next/image";
-import mainPicture from "../../../public/images/duck-main.png";
+import mainPicture from "../../public/images/duck-main.png";
+import { TranslationsType } from "@/app/types/TranslationsType";
 
 function Main() {
+  const { activeLanguage } = useLanguage();
+
+  const translations: TranslationsType = {
+    subtitle: {
+      EN: "Full-Stack JS Developer",
+      FR: "Développeur Full-Stack JS",
+    },
+    description: {
+      EN: "Make your dreams a reality",
+      FR: "Réalisez vos rêves",
+    },
+  };
+
   return (
     <section id="main" className={`${classes.mainSection}`}>
-      {/* <Image
+      <Image
         src={mainPicture}
         alt="Profil picture of the wise duck dev"
         className={`${classes.image}`}
-      /> */}
+        layout="fill"
+        objectFit="cover"
+      />
       <div className={`${classes.titleContainer}`}>
         <h1 className={`${classes.title}`}>The Wise Duck Dev</h1>
         <div className={`${classes.socialContainer}`}>
-          <h2 className={`${classes.subtitle}`}>Full-Stack Developer</h2>
+          <h2 className={`${classes.subtitle}`}>
+            {translations.subtitle[activeLanguage]}
+          </h2>
           <p className={`${classes.description}`}>
-            Dreaming is just the beginning.
+            {translations.description[activeLanguage]}
           </p>
         </div>
       </div>

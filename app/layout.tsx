@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
-import "normalize.css/normalize.css";
 import "./globals.css";
 
 const raleway = Raleway({ subsets: ["latin"], display: "swap" });

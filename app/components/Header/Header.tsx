@@ -1,14 +1,17 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/app/context/LanguageContext";
 import Image from "next/image";
-import logo from "../../../public/images/fake_logo.png";
+import logo from "../../public/images/fake_logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import classes from "./Header.module.scss";
+import { TranslationsType } from "@/app/types/TranslationsType";
 
 function Header() {
   const [activeSection, setActiveSection] = useState("");
-  const [activeLanguage, setActiveLanguage] = useState<Language>("EN");
+
+  const { activeLanguage, toggleLanguage } = useLanguage();
 
   // Allow to detect the current section when the user scrolls
   useEffect(() => {
@@ -67,16 +70,6 @@ function Header() {
         });
       });
     }
-  };
-
-  const toggleLanguage = (lang: any) => {
-    setActiveLanguage(lang);
-  };
-
-  type Language = "EN" | "FR";
-
-  type TranslationsType = {
-    [key: string]: { EN: string; FR: string };
   };
 
   const translations: TranslationsType = {
