@@ -14,7 +14,7 @@ function Main() {
     },
     description: {
       EN: "Make your dreams a reality",
-      FR: "Réalisez vos rêves",
+      FR: "Faite de vos rêves une réalité",
     },
   };
 

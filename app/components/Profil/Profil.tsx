@@ -38,7 +38,7 @@ function Profil() {
     },
     point5: {
       EN: "Diplomed in Entrepreurship And Business Creation from HEC Montreal",
-      FR: "Diplômé en Entrepreurship et Création d'Entreprise de HEC Montréal",
+      FR: "Diplômé en Entrepreneuriat et Création d'Entreprise - HEC Montréal",
     },
     description2: {
       EN: "Looking for a cutting edge web and web developer? Let's connect and chart the course to success in the vast digital landscape.",

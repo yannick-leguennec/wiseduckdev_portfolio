@@ -9,8 +9,13 @@ import classes from "./Header.module.scss";
 import { TranslationsType } from "@/app/types/TranslationsType";
 
 function Header() {
+  // State variable to store the current section
   const [activeSection, setActiveSection] = useState("");
-
+  // State variable to store the burger menu status
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // Function to toggle the burger menu
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  // Custom hook to manage the language changes
   const { activeLanguage, toggleLanguage } = useLanguage();
 
   // Allow to detect the current section when the user scrolls
@@ -51,7 +56,7 @@ function Header() {
     };
   }, []);
 
-  // Function to add the active class to the current section
+  // Function to add the activeLink class to the current section
   const isActive = (sectionName: string) =>
     activeSection === sectionName ? classes.activeLink : "";
 
@@ -72,6 +77,7 @@ function Header() {
     }
   };
 
+  // Object to store the translations
   const translations: TranslationsType = {
     main: { EN: "Main", FR: "Accueil" },
     profil: { EN: "Profile", FR: "Profil" },
@@ -139,13 +145,60 @@ function Header() {
         </div>
       </div>
       <div
-        role="burger menu button"
+        role="button"
         tabIndex={0}
-        aria-expanded="false"
+        aria-expanded={isMenuOpen ? "true" : "false"}
         className={classes.containerBurger}
+        onClick={toggleMenu} // Appel de la fonction pour basculer l'état
       >
         <GiHamburgerMenu className={classes.hamburger} />
       </div>
+      {isMenuOpen && (
+        <div className={classes.mobileMenu}>
+          {" "}
+          {/* Ajoute ta classe CSS pour le style du menu mobile */}
+          <nav>
+            <ul className={classes.navigationMobile}>
+              {Object.keys(translations).map((key) => (
+                <li key={key} className={classes.navItem}>
+                  <a
+                    href={`#${key}`}
+                    onClick={() => {
+                      scrollToSection(key);
+                      toggleMenu(); // Ferme le menu après le clic
+                    }}
+                    className={`${classes.navLink} ${isActive(key)}`}
+                  >
+                    {translations[key][activeLanguage]}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div className={classes.buttonsContainer}>
+            <button
+              className={`${classes.buttonLang} ${
+                activeLanguage === "EN"
+                  ? classes.activeButton
+                  : classes.inactiveButton
+              }`}
+              onClick={() => toggleLanguage("EN")}
+            >
+              EN
+            </button>
+            <button
+              className={`${classes.buttonLang} ${
+                activeLanguage === "FR"
+                  ? classes.activeButton
+                  : classes.inactiveButton
+              }`}
+              onClick={() => toggleLanguage("FR")}
+            >
+              FR
+            </button>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

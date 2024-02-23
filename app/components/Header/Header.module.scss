@@ -41,6 +41,11 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
 }
 
 .containerBurger {
@@ -69,8 +74,12 @@
 }
 
 .activeLink {
-  border-bottom: 2px solid orange; /* ou la couleur de votre choix */
-  color: orange; /* Changez la couleur pour indiquer la section active */
+  border-bottom: 2px solid rgb(255, 115, 0); /* ou la couleur de votre choix */
+  color: rgb(
+    255,
+    115,
+    0
+  ); /* Changez la couleur pour indiquer la section active */
 }
 
 .activeButton {
@@ -84,4 +93,25 @@
 .inactiveButton {
   background: white;
   color: black;
+}
+
+.mobileMenu {
+  position: fixed;
+  margin-top: 6vh;
+  min-height: 94vh;
+  max-height: 94vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigationMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
 }
