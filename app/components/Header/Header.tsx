@@ -10,7 +10,7 @@ import { TranslationsType } from "@/app/types/TranslationsType";
 
 function Header() {
   // State variable to store the current section
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("main");
   // State variable to store the burger menu status
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // Function to toggle the burger menu
@@ -81,14 +81,21 @@ function Header() {
   const translations: TranslationsType = {
     main: { EN: "Main", FR: "Accueil" },
     profil: { EN: "Profile", FR: "Profil" },
-    skills: { EN: "Skills", FR: "Compétences" },
+    skills: { EN: "Skills", FR: "Expertise" },
     experience: { EN: "Experience", FR: "Expérience" },
     portfolio: { EN: "Portfolio", FR: "Portfolio" },
     contact: { EN: "Contact", FR: "Contact" },
   };
 
+  const translationAlt: TranslationsType = {
+    altLogo: {
+      EN: "Certified Full Stack JavaScript Web and Web Mobile Developer specialized in React Wise Duck Dev Logo",
+      FR: "Logo du développeur certifié web et web mobile Full Stack JavaScript spécialisé en React Wise Duck Dev",
+    },
+  };
+
   return (
-    <header className={classes.header}>
+    <header className={classes.header} role="banner">
       <a
         href="#main"
         tabIndex={0}
@@ -97,7 +104,7 @@ function Header() {
       >
         <Image
           src={logo}
-          alt="Site Logo"
+          alt={translationAlt.altLogo[activeLanguage]}
           width={50}
           height={50}
           className={classes.logo}
@@ -105,7 +112,11 @@ function Header() {
         <h1 className={classes.logoName}>The Wise Duck</h1>
       </a>
       <div className={classes.containerNav}>
-        <nav className={classes.navigation}>
+        <nav
+          className={classes.navigation}
+          role="navigation"
+          aria-label="Main navigation"
+        >
           <ul className={classes.navList}>
             {Object.keys(translations).map((key: string) => (
               <li key={key} className={classes.navItem}>
@@ -129,6 +140,7 @@ function Header() {
                 : classes.inactiveButton
             }`}
             onClick={() => toggleLanguage("EN")}
+            role="button"
           >
             EN
           </button>
@@ -139,6 +151,7 @@ function Header() {
                 : classes.inactiveButton
             }`}
             onClick={() => toggleLanguage("FR")}
+            role="button"
           >
             FR
           </button>
@@ -149,15 +162,14 @@ function Header() {
         tabIndex={0}
         aria-expanded={isMenuOpen ? "true" : "false"}
         className={classes.containerBurger}
-        onClick={toggleMenu} // Appel de la fonction pour basculer l'état
+        onClick={toggleMenu}
       >
         <GiHamburgerMenu className={classes.hamburger} />
       </div>
       {isMenuOpen && (
         <div className={classes.mobileMenu}>
           {" "}
-          {/* Ajoute ta classe CSS pour le style du menu mobile */}
-          <nav>
+          <nav role="navigation">
             <ul className={classes.navigationMobile}>
               {Object.keys(translations).map((key) => (
                 <li key={key} className={classes.navItem}>
@@ -165,7 +177,7 @@ function Header() {
                     href={`#${key}`}
                     onClick={() => {
                       scrollToSection(key);
-                      toggleMenu(); // Ferme le menu après le clic
+                      toggleMenu();
                     }}
                     className={`${classes.navLink} ${isActive(key)}`}
                   >
@@ -183,6 +195,7 @@ function Header() {
                   : classes.inactiveButton
               }`}
               onClick={() => toggleLanguage("EN")}
+              role="button"
             >
               EN
             </button>
@@ -193,6 +206,7 @@ function Header() {
                   : classes.inactiveButton
               }`}
               onClick={() => toggleLanguage("FR")}
+              role="button"
             >
               FR
             </button>

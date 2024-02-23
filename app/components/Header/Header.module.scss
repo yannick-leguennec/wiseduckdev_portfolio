@@ -26,7 +26,7 @@
   margin-right: 4rem;
   gap: 1.5rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     display: none;
   }
 }
@@ -42,7 +42,7 @@
   align-items: center;
   gap: 0.5rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     margin-top: 2rem;
     gap: 1rem;
   }
@@ -51,7 +51,7 @@
 .containerBurger {
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     display: flex;
     align-items: center;
     margin-right: 2rem;
@@ -74,12 +74,8 @@
 }
 
 .activeLink {
-  border-bottom: 2px solid rgb(255, 115, 0); /* ou la couleur de votre choix */
-  color: rgb(
-    255,
-    115,
-    0
-  ); /* Changez la couleur pour indiquer la section active */
+  border-bottom: 2px solid rgb(255, 115, 0);
+  color: rgb(255, 115, 0);
 }
 
 .activeButton {

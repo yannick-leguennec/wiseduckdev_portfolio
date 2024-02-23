@@ -24,7 +24,7 @@ const defaultValue: LanguageContextType = {
 };
 
 // Language Context
-const LanguageContext = createContext<LanguageContextType>(defaultValue);
+export const LanguageContext = createContext<LanguageContextType>(defaultValue);
 
 // useLanguage Hook
 export const useLanguage = () => useContext(LanguageContext);

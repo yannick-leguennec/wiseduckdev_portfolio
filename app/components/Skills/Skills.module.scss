@@ -1,0 +1,146 @@
+.skillsSection {
+  min-height: 94vh;
+  max-height: 94vh;
+  width: 100%;
+  background-color: rgb(231, 230, 230);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    position: relative;
+    flex-direction: column;
+    max-height: fit-content;
+    padding: 4rem 0;
+  }
+}
+
+.title {
+  font-size: 5rem;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    display: block;
+  }
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-weight: 550;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+}
+
+.para1 {
+  margin-bottom: 1.5rem;
+}
+
+.para {
+  font-weight: 600;
+  margin: 1.5rem 0;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 94vh;
+  max-height: 94vh;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    max-height: fit-content;
+  }
+}
+
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 30%;
+  margin-left: 10%;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: auto;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.skillsContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5%;
+  margin-left: 5%;
+  padding: 2rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.navItem {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0.8rem 0;
+}
+
+.activeLink {
+  border-bottom: 2px solid rgb(255, 115, 0);
+  color: rgb(255, 115, 0);
+}
+
+.itemsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.list {
+  display: inline-block;
+  background-color: white;
+  color: rgb(255, 115, 0);
+  font-weight: 600;
+  padding: 0.8rem;
+  border-radius: 25px;
+  margin-bottom: 0.5rem;
+}
+
+.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+// Styles pour mobile
+@media (max-width: 768px) {
+  // Ajuste la largeur selon tes besoins
+  .active,
+  .hidden {
+    display: block; // Affiche tous les articles en mode mobile
+  }
+}

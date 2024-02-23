@@ -5,8 +5,10 @@ import Image from "next/image";
 import profilePicture from "../../public/images/profil_picture.png";
 
 function Profil() {
+  // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
 
+  // Object to store the translations
   const translations: TranslationsType = {
     title: {
       EN: "WHY",
@@ -44,6 +46,10 @@ function Profil() {
       EN: "Looking for a cutting edge web and web developer? Let's connect and chart the course to success in the vast digital landscape.",
       FR: "À la recherche d'un développeur web à la pointe de la technologie ? Faisons connaissance et traçons ensemble la voie du succès dans l'immensité du paysage numérique.",
     },
+    altPicture: {
+      EN: "Certified Full Stack JavaScript Web and Web Mobile Developer specialized in React Wise Duck Dev Logo",
+      FR: "Logo du développeur certifié web et web mobile Full Stack JavaScript spécialisé en React Wise Duck Dev",
+    },
   };
 
   return (
@@ -51,7 +57,7 @@ function Profil() {
       <div className={`${classes.imageContainer}`}>
         <Image
           src={profilePicture}
-          alt="Profile picture of the full stack JS developer Wise Duck Dev"
+          alt={translations.altPicture[activeLanguage]}
           className={`${classes.image}`}
         />
       </div>

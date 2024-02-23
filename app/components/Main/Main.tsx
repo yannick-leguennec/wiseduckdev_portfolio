@@ -5,8 +5,10 @@ import mainPicture from "../../public/images/duck-main.png";
 import { TranslationsType } from "@/app/types/TranslationsType";
 
 function Main() {
+  // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
 
+  // Object to store the translations
   const translations: TranslationsType = {
     subtitle: {
       EN: "Full-Stack JS Developer",
@@ -16,13 +18,17 @@ function Main() {
       EN: "Make your dreams a reality",
       FR: "Faite de vos rêves une réalité",
     },
+    altPicture: {
+      EN: "Certified Full Stack JavaScript Web and Web Mobile Developer specialized in React Wise Duck Dev Logo",
+      FR: "Logo du développeur certifié web et web mobile Full Stack JavaScript spécialisé en React Wise Duck Dev",
+    },
   };
 
   return (
     <section id="main" className={`${classes.mainSection}`}>
       <Image
         src={mainPicture}
-        alt="Profil picture of the wise duck dev"
+        alt={translations.altPicture[activeLanguage]}
         className={`${classes.image}`}
         layout="fill"
         objectFit="cover"
