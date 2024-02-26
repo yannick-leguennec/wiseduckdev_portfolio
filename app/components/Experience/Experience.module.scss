@@ -1,0 +1,72 @@
+.experienceSection {
+  min-height: 94vh;
+  max-height: auto;
+  width: 100%;
+  background-color: white;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    max-height: fit-content;
+  }
+}
+
+.contentContainer {
+  width: 60%;
+  margin-left: 2rem;
+  padding: 2rem 4rem;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+    padding: 2rem 2rem;
+  }
+}
+
+.imageContainer {
+  width: 25%;
+
+  @media (max-width: 768px) {
+    width: 40%;
+  }
+}
+
+.article {
+  margin: 1.5rem 0;
+}
+
+.title {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    display: block;
+  }
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-weight: 550;
+  margin-bottom: 0.7rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+.image {
+  width: 90%;
+
+  @media (max-width: 768px) {
+    width: 40%;
+  }
+
+  @media (max-width: 430px) {
+    width: 100%;
+  }
+}
