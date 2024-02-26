@@ -1,0 +1,26 @@
+.portfolioSection {
+  min-height: 94vh;
+  max-height: auto;
+  width: 100%;
+  background-color: rgb(231, 230, 230);
+}
+
+.title {
+  font-size: 5rem;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    display: block;
+  }
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-weight: 550;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+}

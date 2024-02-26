@@ -7,7 +7,6 @@ import { log } from "console";
 const Skills = () => {
   //State variable to store the active category
   const [activeCategory, setActiveCategory] = useState("programmingLanguages");
-  console.log("active category", activeCategory);
   // Custom hook to manage the language changes
   const { activeLanguage, toggleLanguage } = useLanguage();
 

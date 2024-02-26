@@ -1,0 +1,74 @@
+.contactSection {
+  min-height: 94vh;
+  max-height: auto;
+  width: 100%;
+  background-color: white;
+}
+
+.formContainer {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+}
+
+.nameContainer {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.labelContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.input {
+  border: 2px solid rgb(231, 230, 230);
+  border-radius: 25px;
+  height: 2.5rem;
+  width: 50%;
+  padding-left: 1rem;
+}
+
+.title {
+  font-size: 5rem;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    display: block;
+  }
+}
+
+.label {
+  font-size: 1.5rem;
+  font-weight: 550;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+.requiredStar {
+  color: red;
+}
+
+.button {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  background-color: rgb(255, 115, 0);
+  border-radius: 25px;
+  width: fit-content;
+  padding: 0.5rem 2rem;
+}

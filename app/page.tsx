@@ -12,6 +12,8 @@ import Main from "./components/Main/Main";
 import Profil from "./components/Profil/Profil";
 import Skills from "./components/Skills/Skills";
 import Experience from "./components/Experience/Experience";
+import Portfolio from "./components/Portfolio/Portfolio";
+import Contact from "./components/Contact/Contact";
 
 export default function Home() {
   const { activeLanguage } = useLanguage();
@@ -29,6 +31,7 @@ export default function Home() {
     alt: string;
   }
 
+  // Component aiming to display a different image based on the screen size
   const ResponsiveImage = ({
     srcDesktop,
     srcMobile,
@@ -37,7 +40,7 @@ export default function Home() {
     const [windowWidth, setWindowWidth] = useState<number | null>(null);
 
     useEffect(() => {
-      // Met à jour la largeur de la fenêtre au montage et lors du redimensionnement de la fenêtre
+      // Update the window width state when the window is resized
       const updateWindowWidth = () => {
         setWindowWidth(window.innerWidth);
       };
@@ -48,7 +51,7 @@ export default function Home() {
       return () => window.removeEventListener("resize", updateWindowWidth);
     }, []);
 
-    // Choisis quelle image afficher basé sur la largeur de la fenêtre
+    // Choose the image source based on the window width
     const src = windowWidth && windowWidth >= 768 ? srcDesktop : srcMobile;
 
     return <Image src={src} alt={alt} />;
@@ -68,6 +71,8 @@ export default function Home() {
           alt={translation.altPicture[activeLanguage]}
         />
         <Experience />
+        <Portfolio />
+        <Contact />
       </main>
     </LanguageProvider>
   );

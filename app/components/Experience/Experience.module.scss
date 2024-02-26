@@ -3,12 +3,13 @@
   max-height: auto;
   width: 100%;
   background-color: white;
-  padding: 2rem 0;
+
   display: flex;
   align-items: center;
   justify-content: space-around;
 
   @media (max-width: 768px) {
+    padding: 2rem 0;
     flex-direction: column;
     max-height: fit-content;
   }
