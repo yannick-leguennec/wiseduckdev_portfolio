@@ -24,7 +24,7 @@
   @media (max-width: 768px) {
     width: 95%;
     margin-left: 0;
-    padding: 2rem 2rem;
+    padding: 2rem 2rem 0 2rem;
   }
 }
 
@@ -32,7 +32,10 @@
   width: 25%;
 
   @media (max-width: 768px) {
-    width: 40%;
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -64,10 +67,10 @@
   width: 90%;
 
   @media (max-width: 768px) {
-    width: 40%;
+    width: 35%;
   }
 
-  @media (max-width: 430px) {
-    width: 100%;
-  }
+  // @media (max-width: 430px) {
+  //   width: 100%;
+  // }
 }
