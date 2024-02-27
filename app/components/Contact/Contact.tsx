@@ -1,5 +1,6 @@
 // Contact.tsx
-import React from "react";
+import React, { useState } from "react";
+import ModalContact from "../Modals/modalContact/modalContact";
 import { useLanguage } from "@/app/context/LanguageContext";
 import { TranslationsType } from "@/app/types/TranslationsType";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -14,6 +15,9 @@ function Contact() {
     email: string;
     message: string;
   }
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
 
   const { activeLanguage } = useLanguage();
 
@@ -70,6 +74,14 @@ function Contact() {
       EN: "Message cannot exceed 1000 characters",
       FR: "Le message ne peut pas dépasser 1000 caractères",
     },
+    emailSent: {
+      EN: "Your email has been sent successfully.\n We will respond to it shortly.",
+      FR: "Votre email a été envoyé avec succès.\n Nous y répondrons dans les plus brefs délais.",
+    },
+    emailError: {
+      EN: "An error occurred while sending the email.\n Please try again.",
+      FR: "Une erreur est survenue lors de l'envoi de l'email.\n Veuillez réessayer.",
+    },
   };
 
   // Schéma de validation des champs du formulaire
@@ -84,8 +96,9 @@ function Contact() {
 
   return (
     <section id="contact" className={classes.contactSection}>
-      <h1 className={classes.title}>Contact</h1>
-
+      <div className={classes.containerTitle}>
+        <h1 className={classes.title}>Contact</h1>
+      </div>
       <Formik
         initialValues={{
           name: "",
@@ -97,9 +110,9 @@ function Contact() {
         onSubmit={(values, { setSubmitting, resetForm }) => {
           // Préparer les données du formulaire pour l'envoi
           const emailData = {
+            name: values.name,
             email: values.email,
-            subject: `Message de ${values.name}`,
-            text: `Nom: ${values.name}\nEmail: ${values.email}\nSujet: ${values.subject}\nMessage: ${values.message}`,
+            text: `Name: ${values.name}\nEmail: ${values.email}\nSubject: ${values.subject}\nMessage: ${values.message}`,
           };
 
           // Envoyer une requête POST à votre API route pour envoyer l'email
@@ -115,18 +128,24 @@ function Contact() {
                 return response.json();
               }
               throw new Error(
-                "Quelque chose s'est mal passé lors de l'envoi de l'email."
+                "Something went wrong while sending the email. Please try again."
               );
             })
             .then((data) => {
-              console.log("Email envoyé avec succès:", data);
-              // Ici, vous pouvez gérer la logique pour afficher la modale de confirmation
-              alert("Email envoyé avec succès!"); // Remplacer par votre logique de modale
+              console.log("Email sent succesfully: ", data);
+              setModalMessage(translations.emailSent[activeLanguage]);
+              setModalIsOpen(true);
               resetForm();
             })
             .catch((error) => {
-              console.error("Erreur lors de l'envoi de l'email:", error);
+              console.error(
+                "An error occured while sending the email: ",
+                error
+              );
+              setModalMessage(translations.emailError[activeLanguage]);
+              setModalIsOpen(true);
             })
+
             .finally(() => {
               setSubmitting(false);
             });
@@ -134,10 +153,10 @@ function Contact() {
       >
         {({ isSubmitting }) => (
           <Form className={classes.formContainer}>
-            <div className={classes.nameContainer}>
+            <div className={classes.upFormContainer}>
               <div className={classes.labelContainer}>
                 <label className={classes.label} htmlFor="name">
-                  {translations.name[activeLanguage]}{" "}
+                  {translations.name[activeLanguage]}
                   <span className={classes.requiredStar}>*</span>
                 </label>
                 <Field
@@ -147,7 +166,9 @@ function Contact() {
                   className={classes.input}
                 />
                 <ErrorMessage name="name" component="div" />
+              </div>
 
+              <div className={classes.labelContainer}>
                 <label className={classes.label} htmlFor="email">
                   Email <span className={classes.requiredStar}>*</span>
                 </label>
@@ -160,31 +181,36 @@ function Contact() {
                 <ErrorMessage name="email" component="div" />
               </div>
             </div>
+            <div className={classes.downFormContainer}>
+              <div className={classes.containerSubtitle}>
+                <label className={classes.label} htmlFor="sujet">
+                  {translations.subject[activeLanguage]}{" "}
+                  <span className={classes.requiredStar}>*</span>
+                </label>
+              </div>
+              <Field
+                type="text"
+                name="subject"
+                placeholder={translations.placeholderSubject[activeLanguage]}
+                className={classes.input}
+              />
+              <ErrorMessage name="subject" component="div" />
 
-            <label className={classes.label} htmlFor="sujet">
-              {translations.subject[activeLanguage]}{" "}
-              <span className={classes.requiredStar}>*</span>
-            </label>
-            <Field
-              type="text"
-              name="subject"
-              placeholder={translations.placeholderSubject[activeLanguage]}
-              className={classes.input}
-            />
-            <ErrorMessage name="subject" component="div" />
-
-            <label className={classes.label} htmlFor="message">
-              {translations.message[activeLanguage]}{" "}
-              <span className={classes.requiredStar}>*</span>
-            </label>
-            <Field
-              as="textarea"
-              name="message"
-              rows="5"
-              placeholder={translations.placeholderMessage[activeLanguage]}
-              className={classes.input}
-            />
-            <ErrorMessage name="message" component="div" />
+              <div className={classes.containerSubtitle}>
+                <label className={classes.label} htmlFor="message">
+                  {translations.message[activeLanguage]}{" "}
+                  <span className={classes.requiredStar}>*</span>
+                </label>
+              </div>
+              <Field
+                as="textarea"
+                name="message"
+                rows="5"
+                placeholder={translations.placeholderMessage[activeLanguage]}
+                className={classes.textarea}
+              />
+              <ErrorMessage name="message" component="div" />
+            </div>
 
             <button
               type="submit"
@@ -196,6 +222,12 @@ function Contact() {
           </Form>
         )}
       </Formik>
+      {modalIsOpen && (
+        <ModalContact
+          message={modalMessage}
+          onClose={() => setModalIsOpen(false)}
+        />
+      )}
     </section>
   );
 }

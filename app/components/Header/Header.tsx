@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useLanguage } from "@/app/context/LanguageContext";
 import Image from "next/image";
 import logo from "../../public/images/fake_logo.png";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { RxHamburgerMenu } from "react-icons/rx";
 import classes from "./Header.module.scss";
 import { TranslationsType } from "@/app/types/TranslationsType";
 
@@ -164,7 +164,7 @@ function Header() {
         className={classes.containerBurger}
         onClick={toggleMenu}
       >
-        <GiHamburgerMenu className={classes.hamburger} />
+        <RxHamburgerMenu className={classes.hamburger} />
       </div>
       {isMenuOpen && (
         <div className={classes.mobileMenu}>

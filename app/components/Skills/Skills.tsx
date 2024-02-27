@@ -127,7 +127,7 @@ const Skills = () => {
                 : classes.hidden
             }`}
           >
-            <h2 className={classes.subtitle}>
+            <h2 className={classes.subtitle1}>
               {translations.programmingLanguages[activeLanguage]}
             </h2>
             <p className={classes.para1}>

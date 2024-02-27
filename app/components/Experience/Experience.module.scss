@@ -9,7 +9,7 @@
   justify-content: space-around;
 
   @media (max-width: 768px) {
-    padding: 2rem 0;
+    padding: 1rem 0;
     flex-direction: column;
     max-height: fit-content;
   }
@@ -22,7 +22,7 @@
   gap: 2rem;
 
   @media (max-width: 768px) {
-    width: 100%;
+    width: 95%;
     margin-left: 0;
     padding: 2rem 2rem;
   }
