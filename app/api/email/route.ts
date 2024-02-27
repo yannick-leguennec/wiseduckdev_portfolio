@@ -17,14 +17,14 @@ export async function POST(request: NextRequest) {
       https://github.com/nodemailer/nodemailer/blob/master/lib/well-known/services.json
   */
     auth: {
-      user: process.env.EMAIL_FROM,
+      user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
     },
   });
 
   const mailOptions: Mail.Options = {
-    from: process.env.EMAIL_FROM,
-    to: process.env.EMAIL_DESTINATION,
+    from: process.env.EMAIL_USER,
+    to: process.env.EMAIL_USER,
     // cc: email, (uncomment this line if you want to send a copy to the sender)
     subject: `Message from ${name} (${email})`,
     text: message,
