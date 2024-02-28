@@ -17,8 +17,8 @@ function Main() {
       FR: "Développeur Full-Stack JS",
     },
     description: {
-      EN: "Make your dreams a reality",
-      FR: "Faite de vos rêves une réalité",
+      EN: "Specialized in React",
+      FR: "Spécialisé en React",
     },
     altPicture: {
       EN: "Certified Full Stack JavaScript Web and Web Mobile Developer specialized in React Wise Duck Dev Logo",
@@ -26,6 +26,7 @@ function Main() {
     },
   };
 
+  // Props for the ResponsiveImage component
   interface ResponsiveImageProps {
     srcDesktop: StaticImageData;
     srcMobile: StaticImageData;
@@ -73,9 +74,9 @@ function Main() {
         srcMobile={mainPictureMobile}
         alt={translations.altPicture[activeLanguage]}
       />
-      <div className={`${classes.titleContainer}`}>
+      <div className={`${classes.textContainer}`}>
         <h1 className={`${classes.title}`}>The Wise Duck Dev</h1>
-        <div className={`${classes.socialContainer}`}>
+        <div className={`${classes.subtitleContainer}`}>
           <h2 className={`${classes.subtitle}`}>
             {translations.subtitle[activeLanguage]}
           </h2>

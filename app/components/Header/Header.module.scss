@@ -1,3 +1,4 @@
+// HEADER
 .header {
   position: fixed;
   top: 0;
@@ -10,6 +11,7 @@
   background: white;
 }
 
+// LOGO
 .containerLogo {
   display: flex;
   align-items: center;
@@ -18,17 +20,18 @@
   @media (max-width: 900px) {
     margin-left: 2rem;
   }
-}
 
-.logo {
-  margin-right: 1rem;
+  &_logo {
+    margin-right: 1rem;
 
-  @media (max-width: 900px) {
-    width: 2rem;
-    height: 2rem;
+    @media (max-width: 900px) {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 }
 
+// NAVIGATION MENU
 .containerNav {
   display: flex;
   align-items: center;
@@ -46,6 +49,17 @@
   gap: 1rem;
 }
 
+.navLink:focus {
+  outline: none;
+  border-bottom: solid black 1px;
+}
+
+.activeLink {
+  border-bottom: 2px solid rgb(255, 115, 0);
+  color: rgb(255, 115, 0);
+}
+
+// LANGUAGES BUTTONS
 .buttonsContainer {
   display: flex;
   align-items: center;
@@ -57,34 +71,9 @@
   }
 }
 
-.containerBurger {
-  display: none;
-
-  @media (max-width: 900px) {
-    display: flex;
-    align-items: center;
-    margin-right: 2rem;
-  }
-}
-
-.hamburger {
-  width: 2rem;
-  height: 2rem;
-}
-
-.navLink:focus {
-  outline: none;
-  border-bottom: solid black 1px;
-}
-
 .buttonLang:focus {
   outline: none;
   border-bottom: solid black 1px;
-}
-
-.activeLink {
-  border-bottom: 2px solid rgb(255, 115, 0);
-  color: rgb(255, 115, 0);
 }
 
 .activeButton {
@@ -100,6 +89,23 @@
   color: black;
 }
 
+// BURGER MENU
+.containerBurger {
+  display: none;
+
+  @media (max-width: 900px) {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+  }
+
+  &_.hamburger {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+// MOBILE MENU
 .mobileMenu {
   position: fixed;
   margin-top: 6vh;

@@ -5,8 +5,10 @@ import plantPicture from "@/app/public/images/plants.png";
 import classes from "./Experience.module.scss";
 
 function Experience() {
+  // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
 
+  // Object containing the translations for the Experience component
   const translation: TranslationsType = {
     altPicture: {
       EN: "AI-generated vibrant green plant symbolizing growth and innovation in my professional web and mobile development experience.",
@@ -49,6 +51,7 @@ function Experience() {
       FR: "Je m'investis continuellement dans l'apprentissage, que ce soit à travers des cours en ligne, des newsletters spécialisées, ou une veille constante des tendances du marché. Cette soif de connaissances me permet de rester informé des dernières innovations, assurant ainsi que mes compétences et mes projets demeurent à l'avant-garde.",
     },
   };
+
   return (
     <section id="experience" className={classes.experienceSection}>
       <div className={classes.contentContainer}>

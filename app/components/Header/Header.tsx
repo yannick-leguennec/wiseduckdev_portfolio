@@ -87,7 +87,7 @@ function Header() {
     portfolio: { EN: "Portfolio", FR: "Portfolio" },
     contact: { EN: "Contact", FR: "Contact" },
   };
-
+  // Object to store the translations for the alt attribute of the logo
   const translationAlt: TranslationsType = {
     altLogo: {
       EN: "Certified Full Stack JavaScript Web and Web Mobile Developer specialized in React Wise Duck Dev Logo",
@@ -108,9 +108,9 @@ function Header() {
           alt={translationAlt.altLogo[activeLanguage]}
           width={50}
           height={50}
-          className={classes.logo}
+          className={classes.containerLogo_logo}
         />
-        <h1 className={classes.logoName}>The Wise Duck</h1>
+        <h1 className={classes.logoName}>The Wise Duck Dev</h1>
       </a>
       <div className={classes.containerNav}>
         <nav
@@ -121,14 +121,6 @@ function Header() {
           <ul className={classes.navList}>
             {Object.keys(translations).map((key: string) => (
               <li key={key} className={classes.navItem}>
-                <a
-                  href={`#${key}`}
-                  tabIndex={0}
-                  className={`${classes.navLink} ${isActive(key)}`}
-                  onClick={() => scrollToSection(key)}
-                >
-                  {translations[key][activeLanguage]}
-                </a>
                 <a
                   href={`#${key}`}
                   tabIndex={0}
@@ -176,7 +168,10 @@ function Header() {
         className={classes.containerBurger}
         onClick={toggleMenu}
       >
-        <RxHamburgerMenu className={classes.hamburger} aria-label="" />
+        <RxHamburgerMenu
+          className={classes.containerBurger_hamburger}
+          aria-label=""
+        />
       </div>
       {isMenuOpen && (
         <div className={classes.mobileMenu}>

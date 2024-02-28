@@ -42,7 +42,7 @@ function Profil() {
       EN: "Diplomed from HEC Montréal in Entrepreneurship and Business Creation",
       FR: "Diplômé de HEC Montréal en Entrepreunariat et Création d'Entreprise",
     },
-    poin6: {
+    point6: {
       EN: "Continuous learning",
       FR: "Apprentissage continue",
     },
@@ -84,7 +84,7 @@ function Profil() {
           <li>{translations.point3[activeLanguage]}</li>
           <li>{translations.point4[activeLanguage]}</li>
           <li>{translations.point5[activeLanguage]}</li>
-          <li>{translations.poin6[activeLanguage]}</li>
+          <li>{translations.point6[activeLanguage]}</li>
         </ul>
         <p>{translations.description2[activeLanguage]}</p>
       </div>

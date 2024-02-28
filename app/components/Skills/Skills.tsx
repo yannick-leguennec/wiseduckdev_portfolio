@@ -2,7 +2,6 @@ import { useState } from "react";
 import classes from "./Skills.module.scss";
 import { useLanguage } from "@/app/context/LanguageContext";
 import { TranslationsType } from "@/app/types/TranslationsType";
-import { log } from "console";
 
 const Skills = () => {
   //State variable to store the active category
@@ -10,6 +9,7 @@ const Skills = () => {
   // Custom hook to manage the language changes
   const { activeLanguage, toggleLanguage } = useLanguage();
 
+  // Object to store the translations
   const translations: TranslationsType = {
     title: {
       EN: "Skills",
@@ -73,7 +73,7 @@ const Skills = () => {
     },
   };
 
-  // Object to store the translations
+  // Object to store the translations of the categories (navigation links)
   const categories: TranslationsType = {
     programmingLanguages: {
       EN: "Programming Languages",
@@ -101,12 +101,12 @@ const Skills = () => {
             {translations.title[activeLanguage]}
           </h1>
           <div className={classes.navContainer}>
-            <nav className={classes.skillsNav}>
-              <ul className={classes.navList}>
+            <nav>
+              <ul>
                 {Object.keys(categories).map((key) => (
                   <li key={key} className={classes.navItem}>
                     <button
-                      className={`${classes.navLink} ${isActive(key)}`}
+                      className={`${isActive(key)}`}
                       onClick={() => changeActiveCategory(key)}
                       tabIndex={0}
                       role="button"
