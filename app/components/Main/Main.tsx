@@ -1,7 +1,9 @@
+import { useState, useEffect } from "react";
 import { useLanguage } from "@/app/context/LanguageContext";
 import classes from "./Main.module.scss";
-import Image from "next/image";
-import mainPicture from "../../public/images/duck-main.png";
+import Image, { StaticImageData } from "next/image";
+import mainPictureDesktop from "../../public/images/duck-main.png";
+import mainPictureMobile from "../../public/images/duck-main-mobile.png";
 import { TranslationsType } from "@/app/types/TranslationsType";
 
 function Main() {
@@ -24,14 +26,52 @@ function Main() {
     },
   };
 
-  return (
-    <section id="main" className={`${classes.mainSection}`}>
+  interface ResponsiveImageProps {
+    srcDesktop: StaticImageData;
+    srcMobile: StaticImageData;
+    alt: string;
+  }
+
+  // Component aiming to display a different image based on the screen size
+  const ResponsiveImage = ({
+    srcDesktop,
+    srcMobile,
+    alt,
+  }: ResponsiveImageProps) => {
+    const [windowWidth, setWindowWidth] = useState<number | null>(null);
+
+    useEffect(() => {
+      // Update the window width state when the window is resized
+      const updateWindowWidth = () => {
+        setWindowWidth(window.innerWidth);
+      };
+
+      window.addEventListener("resize", updateWindowWidth);
+      updateWindowWidth(); // Initialisation
+
+      return () => window.removeEventListener("resize", updateWindowWidth);
+    }, []);
+
+    // Choose the image source based on the window width
+    const src = windowWidth && windowWidth >= 768 ? srcDesktop : srcMobile;
+
+    return (
       <Image
-        src={mainPicture}
-        alt={translations.altPicture[activeLanguage]}
+        src={src}
+        alt={alt}
         className={`${classes.image}`}
         layout="fill"
         objectFit="cover"
+      />
+    );
+  };
+
+  return (
+    <section id="main" className={`${classes.mainSection}`}>
+      <ResponsiveImage
+        srcDesktop={mainPictureDesktop}
+        srcMobile={mainPictureMobile}
+        alt={translations.altPicture[activeLanguage]}
       />
       <div className={`${classes.titleContainer}`}>
         <h1 className={`${classes.title}`}>The Wise Duck Dev</h1>

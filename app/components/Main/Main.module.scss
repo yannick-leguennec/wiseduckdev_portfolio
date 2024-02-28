@@ -18,13 +18,30 @@
   display: flex;
   flex-direction: column;
   align-items: end;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 12%;
+    left: 10%;
+  }
+}
+
+.socialContainer {
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .title {
+  font-weight: 600;
   font-size: 5rem;
 
   @media (max-width: 768px) {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
@@ -33,7 +50,7 @@
   font-weight: 550;
 
   @media (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -42,6 +59,6 @@
   font-weight: 500;
 
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
