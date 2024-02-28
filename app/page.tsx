@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import React, { Suspense } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { LanguageProvider, useLanguage } from "./context/LanguageContext";
 import { TranslationsType } from "./types/TranslationsType";
 import Image, { StaticImageData } from "next/image";
@@ -14,6 +13,7 @@ import Skills from "./components/Skills/Skills";
 import Experience from "./components/Experience/Experience";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 export default function Home() {
   const { activeLanguage } = useLanguage();
@@ -74,6 +74,7 @@ export default function Home() {
         <Portfolio />
         <Contact />
       </main>
+      <Footer />
     </LanguageProvider>
   );
 }

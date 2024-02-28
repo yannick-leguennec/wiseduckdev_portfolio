@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/app/context/LanguageContext";
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../../public/images/fake_logo.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import classes from "./Header.module.scss";
@@ -128,6 +129,14 @@ function Header() {
                 >
                   {translations[key][activeLanguage]}
                 </a>
+                <a
+                  href={`#${key}`}
+                  tabIndex={0}
+                  className={`${classes.navLink} ${isActive(key)}`}
+                  onClick={() => scrollToSection(key)}
+                >
+                  {translations[key][activeLanguage]}
+                </a>
               </li>
             ))}
           </ul>
@@ -141,6 +150,7 @@ function Header() {
             }`}
             onClick={() => toggleLanguage("EN")}
             role="button"
+            aria-label="Change language to English"
           >
             EN
           </button>
@@ -152,6 +162,7 @@ function Header() {
             }`}
             onClick={() => toggleLanguage("FR")}
             role="button"
+            aria-label="Change language to French"
           >
             FR
           </button>
@@ -161,10 +172,11 @@ function Header() {
         role="button"
         tabIndex={0}
         aria-expanded={isMenuOpen ? "true" : "false"}
+        aria-label="Toggle navigation menu"
         className={classes.containerBurger}
         onClick={toggleMenu}
       >
-        <RxHamburgerMenu className={classes.hamburger} />
+        <RxHamburgerMenu className={classes.hamburger} aria-label="" />
       </div>
       {isMenuOpen && (
         <div className={classes.mobileMenu}>
@@ -194,7 +206,10 @@ function Header() {
                   ? classes.activeButton
                   : classes.inactiveButton
               }`}
-              onClick={() => toggleLanguage("EN")}
+              onClick={() => {
+                toggleLanguage("EN");
+                if (isMenuOpen) toggleMenu();
+              }}
               role="button"
             >
               EN
@@ -205,7 +220,10 @@ function Header() {
                   ? classes.activeButton
                   : classes.inactiveButton
               }`}
-              onClick={() => toggleLanguage("FR")}
+              onClick={() => {
+                toggleLanguage("FR");
+                if (isMenuOpen) toggleMenu();
+              }}
               role="button"
             >
               FR

@@ -14,10 +14,19 @@
   display: flex;
   align-items: center;
   margin-left: 4rem;
+
+  @media (max-width: 900px) {
+    margin-left: 2rem;
+  }
 }
 
 .logo {
   margin-right: 1rem;
+
+  @media (max-width: 900px) {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 .containerNav {
