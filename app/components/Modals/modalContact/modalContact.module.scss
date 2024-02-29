@@ -1,4 +1,4 @@
-/* Modal.module.scss */
+// MODAL CONTAINER
 .modalBackdrop {
   position: fixed;
   top: 0;
@@ -11,6 +11,7 @@
   align-items: center;
 }
 
+// MODAL CONTENT CONTAINER
 .modalContent {
   width: 80%;
   background: white;
@@ -23,12 +24,14 @@
   gap: 2rem;
 }
 
+// MESSAGE DESIGN
 .message {
   font-size: 1rem;
   font-weight: 550;
   text-align: center;
 }
 
+// BUTTON DESIGN
 .button {
   font-size: 1rem;
   font-weight: 600;

@@ -1,4 +1,3 @@
-// Contact.tsx
 import React, { useState } from "react";
 import ModalContact from "../Modals/modalContact/modalContact";
 import { useLanguage } from "@/app/context/LanguageContext";
@@ -7,20 +6,15 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import classes from "./Contact.module.scss";
 
-// Composant Contact
 function Contact() {
-  interface formValues {
-    name: string;
-    subject: string;
-    email: string;
-    message: string;
-  }
-
+  // State to manage the modal
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
 
+  // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
 
+  // Object to store the translations
   const translations: TranslationsType = {
     name: {
       EN: "Name",
@@ -84,7 +78,7 @@ function Contact() {
     },
   };
 
-  // Schéma de validation des champs du formulaire
+  // Schema for the form validation
   const ContactSchema = Yup.object().shape({
     name: Yup.string().required(translations.errorName[activeLanguage]),
     subject: Yup.string().required(translations.errorSubject[activeLanguage]),
@@ -99,6 +93,7 @@ function Contact() {
       <div className={classes.containerTitle}>
         <h1 className={classes.title}>Contact</h1>
       </div>
+      {/* Form initial values */}
       <Formik
         initialValues={{
           name: "",
@@ -106,16 +101,18 @@ function Contact() {
           email: "",
           message: "",
         }}
+        // Form validation
         validationSchema={ContactSchema}
+        // Form submission
         onSubmit={(values, { setSubmitting, resetForm }) => {
-          // Préparer les données du formulaire pour l'envoi
+          // Prepare the email data
           const emailData = {
             name: values.name,
             email: values.email,
             text: `Name: ${values.name}\nEmail: ${values.email}\nSubject: ${values.subject}\nMessage: ${values.message}`,
           };
 
-          // Envoyer une requête POST à votre API route pour envoyer l'email
+          // Send the email
           fetch("/api/email", {
             method: "POST",
             headers: {
@@ -123,6 +120,7 @@ function Contact() {
             },
             body: JSON.stringify(emailData),
           })
+            // Handle the response
             .then((response) => {
               if (response.ok) {
                 return response.json();
@@ -131,27 +129,31 @@ function Contact() {
                 "Something went wrong while sending the email. Please try again."
               );
             })
+            // Handle the data from the response, open the modal and reset the form
             .then((data) => {
               console.log("Email sent succesfully: ", data);
               setModalMessage(translations.emailSent[activeLanguage]);
               setModalIsOpen(true);
               resetForm();
             })
+            // Handle the error
             .catch((error) => {
               console.error(
                 "An error occured while sending the email: ",
                 error
               );
+              // Open the modal
               setModalMessage(translations.emailError[activeLanguage]);
               setModalIsOpen(true);
             })
-
+            // Finally, set the submitting state to false
             .finally(() => {
               setSubmitting(false);
             });
         }}
       >
         {({ isSubmitting }) => (
+          // FORM
           <Form className={classes.formContainer}>
             <div className={classes.upFormContainer}>
               <div className={classes.labelContainer}>
@@ -222,6 +224,7 @@ function Contact() {
           </Form>
         )}
       </Formik>
+      {/* MODAL */}
       {modalIsOpen && (
         <ModalContact
           message={modalMessage}

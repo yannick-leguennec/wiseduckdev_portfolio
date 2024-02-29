@@ -1,3 +1,4 @@
+// PORFOLIO SECTION CONTAINER
 .portfolioSection {
   min-height: 94vh;
   max-height: auto;
@@ -6,6 +7,7 @@
   padding: 3rem;
 }
 
+// PORFOLIO SECTION MAIN TITLE
 .title {
   color: rgb(255, 115, 0);
   font-size: 5rem;
@@ -19,6 +21,7 @@
   }
 }
 
+// PORFOLIO PROJECTS CONTAINER
 .articlesContainer {
   width: 80%;
   display: flex;
@@ -32,6 +35,7 @@
   }
 }
 
+// PROJECT MAIN CONTAINER
 .globalContainer {
   width: 100%;
   display: flex;
@@ -39,6 +43,7 @@
   align-items: center;
 }
 
+// IMAGE PROJECT CONTAINER
 // Settings for single article
 .imageContainer {
   width: 40%;
@@ -65,6 +70,7 @@
 //   }
 // }
 
+// IMAGE PROJECT
 .image {
   width: 100%;
   max-width: fit-content;
@@ -85,6 +91,7 @@
   border: 1.5px solid rgb(255, 115, 0);
 }
 
+// DESCRIPTION PROJECT CONTAINER
 // Settings for single article
 .contentContainer {
   width: 65%;
@@ -109,6 +116,7 @@
 //   }
 // }
 
+// DESCRIPTION PROJECT
 .description {
   font-size: 1.2rem;
   font-weight: 550;
@@ -118,12 +126,14 @@
   }
 }
 
+// SKILLS PROJECT CONTAINER
 .itemsContainer {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
+// SKILLS ITEMS USED IN THE PROJECT
 .list {
   display: inline-block;
   background-color: white;
@@ -137,12 +147,14 @@
   }
 }
 
+// BUTTON CONTAINER
 .buttonContainer {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
 }
 
+// BUTTON
 .button {
   font-size: 1.2rem;
   font-weight: 600;

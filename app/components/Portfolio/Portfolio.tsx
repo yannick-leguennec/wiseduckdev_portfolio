@@ -5,8 +5,10 @@ import { TranslationsType } from "@/app/types/TranslationsType";
 import classes from "./Portfolio.module.scss";
 
 function Portfolio() {
+  // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
 
+  // Object to store the translations
   const translations: TranslationsType = {
     subtitle: {
       EN: "My latest project",
@@ -107,7 +109,7 @@ function Portfolio() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <button className={classes.button}>
+                <button className={classes.button} role="button" tabIndex={0}>
                   {translations.button[activeLanguage]}
                 </button>
               </a>

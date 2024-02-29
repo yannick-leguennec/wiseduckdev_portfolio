@@ -1,3 +1,4 @@
+// CONTACT SECTION CONTAINER
 .contactSection {
   min-height: 94vh;
   max-height: fit-content;
@@ -13,6 +14,29 @@
   }
 }
 
+// CONTACT SECTION CONTAINER TITLE
+.containerTitle {
+  width: 50%;
+  display: flex;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    justify-content: center;
+  }
+}
+
+// CONTACT SECTION TITLE
+.title {
+  font-size: 5rem;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    display: block;
+  }
+}
+
+// FORM CONTAINER
 .formContainer {
   width: 100%;
   display: flex;
@@ -26,24 +50,7 @@
   }
 }
 
-.containerTitle {
-  width: 50%;
-  display: flex;
-  // flex-direction: flex-start;
-  margin-bottom: 2rem;
-
-  @media (max-width: 768px) {
-    width: 80%;
-    justify-content: center;
-  }
-}
-
-.containerSubtitle {
-  width: 50%;
-  display: flex;
-  flex-direction: flex-start;
-}
-
+// CONTAINER OF THE UP PART OF FORM
 .upFormContainer {
   display: flex;
   gap: 1rem;
@@ -55,6 +62,15 @@
   }
 }
 
+// CONTAINER OF THE INPUTS NAME AND EMAIL
+.labelContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+// CONTAINER OF THE DOWN PART OF FORM
 .downFormContainer {
   display: flex;
   flex-direction: column;
@@ -67,13 +83,29 @@
   }
 }
 
-.labelContainer {
+// CONTAINER OF THE SUBJECT AND MESSSAGE LABELS (RESPECTIVELY)
+.containerSubtitle {
+  width: 50%;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  width: 100%;
+  flex-direction: flex-start;
 }
 
+// LABELS DESIGN
+.label {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 550;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+// LABELS RED STARS
+.requiredStar {
+  color: red;
+}
+
+// INPUTS DESIGN
 .input {
   border: 2px solid rgb(231, 230, 230);
   border-radius: 15px;
@@ -86,6 +118,7 @@
   }
 }
 
+// TEXTAREA DESIGN
 .textarea {
   border: 2px solid rgb(231, 230, 230);
   border-radius: 15px;
@@ -95,29 +128,7 @@
   padding-top: 1rem;
 }
 
-.title {
-  font-size: 5rem;
-
-  @media (max-width: 768px) {
-    font-size: 3rem;
-    display: block;
-  }
-}
-
-.label {
-  display: flex;
-  font-size: 1.5rem;
-  font-weight: 550;
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
-}
-
-.requiredStar {
-  color: red;
-}
-
+// BUTTON DESIGN
 .button {
   font-size: 1.2rem;
   font-weight: 600;

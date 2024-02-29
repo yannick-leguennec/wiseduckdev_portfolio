@@ -3,13 +3,16 @@ import { useLanguage } from "@/app/context/LanguageContext";
 import { TranslationsType } from "@/app/types/TranslationsType";
 import classes from "./modalContact.module.scss";
 
+// Modal props
 interface ModalProps {
   message: string;
   onClose: () => void;
 }
 
 const ModalContact: React.FC<ModalProps> = ({ message, onClose }) => {
+  // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
+  // Object to store the translations
   const translations: TranslationsType = {
     close: {
       EN: "Close",

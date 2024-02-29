@@ -3,8 +3,10 @@ import nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer";
 
 export async function POST(request: NextRequest) {
+  // Get the email, name and text from the request body
   const { email, name, text } = await request.json();
 
+  // Create a transport object using the nodemailer module
   const transport = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -13,6 +15,7 @@ export async function POST(request: NextRequest) {
     },
   });
 
+  // Create the mail options / parameters
   const mailOptions: Mail.Options = {
     from: process.env.EMAIL_USER,
     to: process.env.EMAIL_USER,
@@ -21,6 +24,7 @@ export async function POST(request: NextRequest) {
     text: text,
   };
 
+  // Create a promise to send the email
   const sendMailPromise = () =>
     new Promise<string>((resolve, reject) => {
       transport.sendMail(mailOptions, function (err) {
@@ -33,8 +37,11 @@ export async function POST(request: NextRequest) {
     });
 
   try {
+    // Send the email
     await sendMailPromise();
+    // Return a response
     return NextResponse.json({ message: "Email sent" });
+    // Catch any errors and return a 500 status code
   } catch (err) {
     return NextResponse.json({ error: err }, { status: 500 });
   }

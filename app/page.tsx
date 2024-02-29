@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect, Suspense } from "react";
 import { LanguageProvider, useLanguage } from "./context/LanguageContext";
 import { TranslationsType } from "./types/TranslationsType";
@@ -16,8 +15,10 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 
 export default function Home() {
+  // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
 
+  // Object to store the translations
   const translation: TranslationsType = {
     altPicture: {
       EN: "AI and Photoshop-crafted image of The Wise Duck Dev in a white suit, embracing innovation and style, seated in a modern couch amidst tropical plants, bridging the Skills and Experience sections with a blend of professionalism and creativity.",
@@ -25,6 +26,7 @@ export default function Home() {
     },
   };
 
+  // Props for the ResponsiveImage component
   interface ResponsiveImageProps {
     srcDesktop: StaticImageData;
     srcMobile: StaticImageData;
@@ -39,8 +41,8 @@ export default function Home() {
   }: ResponsiveImageProps) => {
     const [windowWidth, setWindowWidth] = useState<number | null>(null);
 
+    // Update the window width state when the window is resized
     useEffect(() => {
-      // Update the window width state when the window is resized
       const updateWindowWidth = () => {
         setWindowWidth(window.innerWidth);
       };
@@ -60,8 +62,8 @@ export default function Home() {
   return (
     <LanguageProvider>
       <Suspense fallback={<div>Loading...</div>}></Suspense>
+      <Header />
       <main>
-        <Header />
         <Main />
         <Profil />
         <Skills />
