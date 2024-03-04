@@ -1,7 +1,7 @@
-import { useLanguage } from "@/app/context/LanguageContext";
-import { TranslationsType } from "@/app/types/TranslationsType";
+import { useLanguage } from "@/context/LanguageContext";
+import { TranslationsType } from "@/types/TranslationsType";
 import Image from "next/image";
-import plantPicture from "@/app/public/images/plants.png";
+import plantPicture from "@/public/images/plants.png";
 import classes from "./Experience.module.scss";
 
 function Experience() {

@@ -1,18 +1,19 @@
 "use client";
 import React, { useState, useEffect, Suspense } from "react";
-import { LanguageProvider, useLanguage } from "./context/LanguageContext";
-import { TranslationsType } from "./types/TranslationsType";
+import Head from "next/head";
+import { LanguageProvider, useLanguage } from "../context/LanguageContext";
+import { TranslationsType } from "../types/TranslationsType";
 import Image, { StaticImageData } from "next/image";
-import duckCoachDesktop from "@/app/public/images/duck-coach-desktop.png";
-import duckCoachMobile from "@/app/public/images/duck-coach-mobile.png";
-import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
-import Profil from "./components/Profil/Profil";
-import Skills from "./components/Skills/Skills";
-import Experience from "./components/Experience/Experience";
-import Portfolio from "./components/Portfolio/Portfolio";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
+import duckCoachDesktop from "@/public/images/duck-coach-desktop.png";
+import duckCoachMobile from "@/public/images/duck-coach-mobile.png";
+import Header from "../components/Header/Header";
+import Main from "../components/Main/Main";
+import Profil from "../components/Profil/Profil";
+import Skills from "../components/Skills/Skills";
+import Experience from "../components/Experience/Experience";
+import Portfolio from "../components/Portfolio/Portfolio";
+import Contact from "../components/Contact/Contact";
+import Footer from "../components/Footer/Footer";
 
 export default function Home() {
   // Custom hook to manage the language changes
@@ -60,8 +61,15 @@ export default function Home() {
   };
 
   return (
-    <LanguageProvider>
+    <>
       <Suspense fallback={<div>Loading...</div>}></Suspense>
+      <Head>
+        <title>The Wise Duck Dev</title>
+        <meta
+          name="description"
+          content="The Wise Duck Dev's personal portfolio"
+        />
+      </Head>
       <Header />
       <main>
         <Main />
@@ -76,7 +84,6 @@ export default function Home() {
         <Portfolio />
         <Contact />
       </main>
-      <Footer />
-    </LanguageProvider>
+    </>
   );
 }
