@@ -25,6 +25,10 @@ function NotFound() {
       EN: "Go back",
       FR: "Retourner",
     },
+    alt: {
+      EN: "Certified Full Stack JavaScript Web and Web Mobile Developer specialized in React Wise Duck Dev relaxing with a drink after a productive day",
+      FR: "Développeur certifié web et web mobile Full Stack JavaScript spécialisé en React Wise Duck Dev se relaxant avec une boisson après une journée très productive",
+    },
   };
 
   // Function to go back to the previous page

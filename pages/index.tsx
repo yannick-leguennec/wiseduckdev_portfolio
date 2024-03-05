@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, Suspense } from "react";
 import Head from "next/head";
-import { LanguageProvider, useLanguage } from "../context/LanguageContext";
+import { useLanguage } from "../context/LanguageContext";
 import { TranslationsType } from "../types/TranslationsType";
 import Image, { StaticImageData } from "next/image";
 import duckCoachDesktop from "@/public/images/duck-coach-desktop.png";

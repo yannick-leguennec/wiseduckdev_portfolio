@@ -21,8 +21,8 @@ function Main() {
       FR: "Spécialisé en React",
     },
     altPicture: {
-      EN: "Certified Full Stack JavaScript Web and Web Mobile Developer specialized in React Wise Duck Dev Logo",
-      FR: "Logo du développeur certifié web et web mobile Full Stack JavaScript spécialisé en React Wise Duck Dev",
+      EN: "Certified Full Stack JavaScript Web and Web Mobile Developer specialized in React Wise Duck Dev setting in a chair while coding a new project",
+      FR: "Développeur certifié web et web mobile Full Stack JavaScript spécialisé en React Wise Duck Dev assis sur une chaise en train de coder un nouveau projet",
     },
   };
 
