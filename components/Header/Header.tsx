@@ -1,13 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useLanguage } from "@/app/context/LanguageContext";
+import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../public/images/fake_logo.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import classes from "./Header.module.scss";
-import { TranslationsType } from "@/app/types/TranslationsType";
+import { TranslationsType } from "@/types/TranslationsType";
 
 function Header() {
   // State variable to store the current section

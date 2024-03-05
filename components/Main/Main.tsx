@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { useLanguage } from "@/app/context/LanguageContext";
+import { useLanguage } from "@/context/LanguageContext";
 import classes from "./Main.module.scss";
 import Image, { StaticImageData } from "next/image";
 import mainPictureDesktop from "../../public/images/duck-main.png";
 import mainPictureMobile from "../../public/images/duck-main-mobile.png";
-import { TranslationsType } from "@/app/types/TranslationsType";
+import { TranslationsType } from "@/types/TranslationsType";
 
 function Main() {
   // Custom hook to manage the language changes

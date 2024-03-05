@@ -1,7 +1,7 @@
 import Image from "next/image";
-import picture from "@/app/public/images/projectsPictures/familyDesktop.png";
-import { useLanguage } from "@/app/context/LanguageContext";
-import { TranslationsType } from "@/app/types/TranslationsType";
+import picture from "@/public/images/projectsPictures/familyDesktop.png";
+import { useLanguage } from "@/context/LanguageContext";
+import { TranslationsType } from "@/types/TranslationsType";
 import classes from "./Portfolio.module.scss";
 
 function Portfolio() {
