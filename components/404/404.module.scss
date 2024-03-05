@@ -40,12 +40,15 @@
 }
 
 .title {
+  color: rgb(125, 125, 125);
   font-family: $primery-font;
-  font-size: 5rem;
+  font-size: 10rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 
   @media (max-width: 768px) {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 5rem;
+    margin-bottom: 0;
   }
 }
 
@@ -55,6 +58,7 @@
 
   @media (max-width: 768px) {
     font-size: 1.2rem;
+    text-align: center;
   }
 }
 
@@ -64,6 +68,7 @@
 
   @media (max-width: 768px) {
     font-size: 1rem;
+    margin: 0 0 0.7rem 0;
   }
 }
 
@@ -83,7 +88,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 7%;
+  width: 17%;
   height: 100%;
 
   @media (max-width: 1024px) {

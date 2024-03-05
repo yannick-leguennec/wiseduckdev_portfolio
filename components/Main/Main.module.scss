@@ -22,6 +22,14 @@
   flex-direction: column;
   align-items: end;
 
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 15%;
+    left: 20%;
+  }
+
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -33,7 +41,7 @@
 
 // SUBTITLE CONTAINER
 .subtitleContainer {
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,6 +53,10 @@
   font-weight: 500;
   font-size: 5rem;
 
+  @media (max-width: 1024px) {
+    font-size: 3.5rem;
+  }
+
   @media (max-width: 768px) {
     font-size: 2rem;
   }
@@ -54,6 +66,10 @@
 .subtitle {
   font-size: 2rem;
   font-weight: 550;
+
+  @media (max-width: 1024px) {
+    font-size: 1.7rem;
+  }
 
   @media (max-width: 768px) {
     font-size: 1.2rem;

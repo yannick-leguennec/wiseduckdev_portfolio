@@ -47,6 +47,7 @@ function Portfolio() {
   return (
     <section id="portfolio" className={classes.portfolioSection}>
       <h1 className={classes.title}>Portfolio</h1>
+
       {/* <div className={classes.articlesContainer}> */}
       {/* TODO: TRANSFORMING EACH PROJECT INTOP A COMPONENT AND REARRANGE THE ARCHITECTURE FOR BETTER INTEGRATION */}
       <article className={classes.article}>

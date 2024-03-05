@@ -54,7 +54,7 @@ function Main() {
     }, []);
 
     // Choose the image source based on the window width
-    const src = windowWidth && windowWidth >= 768 ? srcDesktop : srcMobile;
+    const src = windowWidth && windowWidth >= 1025 ? srcDesktop : srcMobile;
 
     return (
       <Image
