@@ -34,16 +34,18 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   const router = useRouter();
   const { locale, defaultLocale } = router;
 
-  // Déterminer la langue active basée sur la locale actuelle de Next.js
+  // Determine the active language based on the current locale
   const activeLanguage: Language = locale === "fr" ? "FR" : "EN";
 
-  // Modifier l'URL pour changer la langue
+  // Modify the active language and update the URL
   const toggleLanguage = (lang: Language) => {
-    const newLocale = lang.toLowerCase(); // 'en' ou 'fr'
-    // Construire le chemin vers lequel naviguer
+    const newLocale = lang.toLowerCase(); // 'en' or 'fr'
+    // Build the new URL
     const path = `${router.pathname}${window.location.hash}`;
-    // Mettre à jour l'URL avec la nouvelle locale sans recharger la page
+    // Update the URL and the locale
     router.push(path, path, { locale: newLocale });
+    // Save the new language in localStorage
+    localStorage.setItem("appLanguage", newLocale.toUpperCase());
   };
 
   useEffect(() => {
