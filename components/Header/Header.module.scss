@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 // HEADER
 .header {
   position: fixed;
@@ -8,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   height: 6vh;
-  background: white;
+  background: $primary-color;
 }
 
 // LOGO
@@ -55,8 +57,8 @@
 }
 
 .activeLink {
-  border-bottom: 2px solid rgb(255, 115, 0);
-  color: rgb(255, 115, 0);
+  border-bottom: 2px solid $navigation-color;
+  color: $navigation-color;
 }
 
 // LANGUAGES BUTTONS

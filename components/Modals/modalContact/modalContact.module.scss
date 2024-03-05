@@ -1,3 +1,5 @@
+@import "../../../styles//variables.scss";
+
 // MODAL CONTAINER
 .modalBackdrop {
   position: fixed;
@@ -36,7 +38,7 @@
   font-size: 1rem;
   font-weight: 600;
   color: white;
-  background-color: rgb(255, 115, 0);
+  background-color: $button-color;
   border-radius: 25px;
   width: fit-content;
   padding: 0.5rem 2rem;

@@ -6,9 +6,11 @@ import photo from "@/public/images/duck_drink.png";
 import { TranslationsType } from "@/types/TranslationsType";
 
 function NotFound() {
+  // Get the active language from local storage or set it to EN
   const activeLanguage = (localStorage.getItem("appLanguage") ||
     "EN") as keyof TranslationsType["title"];
 
+  // Object with translations
   const translations: TranslationsType = {
     text1: {
       EN: "Ooops, I think lost yourself.",
@@ -25,6 +27,7 @@ function NotFound() {
     },
   };
 
+  // Function to go back to the previous page
   const handleBackClick = () => {
     window.history.back();
   };

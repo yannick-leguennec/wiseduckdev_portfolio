@@ -13,3 +13,16 @@
     font-size: 1rem;
   }
 }
+
+@mixin list-item {
+  display: inline-block;
+  background-color: white;
+  color: rgb(255, 115, 0);
+  font-weight: 600;
+  padding: 0.5rem 0.8rem;
+  border-radius: 25px;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+}

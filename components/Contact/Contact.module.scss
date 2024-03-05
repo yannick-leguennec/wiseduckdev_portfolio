@@ -1,9 +1,12 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
 // CONTACT SECTION CONTAINER
 .contactSection {
   min-height: 94vh;
   max-height: fit-content;
   width: 100%;
-  background-color: white;
+  background-color: $primary-color;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -130,15 +133,5 @@
 
 // BUTTON DESIGN
 .button {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: white;
-  background-color: rgb(255, 115, 0);
-  border-radius: 25px;
-  width: fit-content;
-  padding: 0.5rem 2rem;
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
+  @include button-style;
 }

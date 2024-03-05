@@ -1,9 +1,12 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
 // SECTION CONTAINER
 .skillsSection {
   min-height: 94vh;
   max-height: auto;
   width: 100%;
-  background-color: rgb(231, 230, 230);
+  background-color: $secondary-color;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,8 +76,8 @@
 }
 
 .activeLink {
-  border-bottom: 2px solid rgb(255, 115, 0);
-  color: rgb(255, 115, 0);
+  border-bottom: 2px solid $navigation-color;
+  color: $navigation-color;
 }
 
 // MAIN TITLE
@@ -145,16 +148,7 @@
 }
 
 .list {
-  display: inline-block;
-  background-color: white;
-  color: rgb(255, 115, 0);
-  font-weight: 600;
-  padding: 0.5rem 0.8rem;
-  border-radius: 25px;
-
-  @media (max-width: 768px) {
-    font-size: 0.8rem;
-  }
+  @include list-item;
 }
 
 // MANAGE ARTICLES DISPLAY WITH NAV BARRE

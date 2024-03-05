@@ -1,9 +1,11 @@
+@import "../../styles/variables.scss";
+
 // EXPERIENCE CONTAINER
 .experienceSection {
   min-height: 94vh;
   max-height: auto;
   width: 100%;
-  background-color: white;
+  background-color: $primary-color;
 
   display: flex;
   align-items: center;

@@ -1,9 +1,12 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
 // PORFOLIO SECTION CONTAINER
 .portfolioSection {
   min-height: 94vh;
   max-height: auto;
   width: 100%;
-  background-color: rgb(231, 230, 230);
+  background-color: $secondary-color;
   padding: 3rem;
 }
 
@@ -135,16 +138,7 @@
 
 // SKILLS ITEMS USED IN THE PROJECT
 .list {
-  display: inline-block;
-  background-color: white;
-  color: rgb(255, 115, 0);
-  font-weight: 600;
-  padding: 0.5rem 0.8rem;
-  border-radius: 25px;
-
-  @media (max-width: 768px) {
-    font-size: 0.8rem;
-  }
+  @include list-item;
 }
 
 // BUTTON CONTAINER
@@ -156,16 +150,5 @@
 
 // BUTTON
 .button {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: white;
-  background-color: rgb(255, 115, 0);
-  border-radius: 25px;
-  width: fit-content;
-  padding: 0.5rem 2rem;
-  text-align: center;
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
+  @include button-style;
 }
