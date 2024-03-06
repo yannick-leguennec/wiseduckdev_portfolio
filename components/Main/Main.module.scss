@@ -10,7 +10,12 @@
 
 // IMAGE
 .image {
-  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 // TEXT CONTAINER
@@ -20,7 +25,7 @@
   left: 22%;
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
 
   @media (max-width: 1024px) {
     display: flex;

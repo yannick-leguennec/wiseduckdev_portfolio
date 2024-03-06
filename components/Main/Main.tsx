@@ -57,13 +57,7 @@ function Main() {
     const src = windowWidth && windowWidth >= 1025 ? srcDesktop : srcMobile;
 
     return (
-      <Image
-        src={src}
-        alt={alt}
-        className={`${classes.image}`}
-        layout="fill"
-        objectFit="cover"
-      />
+      <Image src={src} alt={alt} className={`${classes.image}`} priority />
     );
   };
 
