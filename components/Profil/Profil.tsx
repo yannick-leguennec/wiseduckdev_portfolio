@@ -46,6 +46,10 @@ function Profil() {
       EN: "Continuous learning",
       FR: "Apprentissage continue",
     },
+    point7: {
+      EN: "AI Enthusiast",
+      FR: "Passionné d'IA",
+    },
     description2: {
       EN: "Looking for a cutting edge web and web developer? Let's connect and chart the course to success in the vast digital landscape.",
       FR: "À la recherche d'un développeur web à la pointe de la technologie ? Faisons connaissance et traçons ensemble la voie du succès dans l'immensité du paysage numérique.",
@@ -85,6 +89,7 @@ function Profil() {
           <li>{translations.point4[activeLanguage]}</li>
           <li>{translations.point5[activeLanguage]}</li>
           <li>{translations.point6[activeLanguage]}</li>
+          <li>{translations.point7[activeLanguage]}</li>
         </ul>
         <p>{translations.description2[activeLanguage]}</p>
       </div>
