@@ -58,6 +58,14 @@ function Profil() {
       EN: "Certified Full Stack JavaScript Web and Web Mobile Developer specialized in React Wise Duck Dev Logo",
       FR: "Logo du développeur certifié web et web mobile Full Stack JavaScript spécialisé en React Wise Duck Dev",
     },
+    button: {
+      EN: "Download my CV",
+      FR: "Télécharger mon CV",
+    },
+    cv: {
+      EN: "/docs/wise_duck_dev_resume_en.pdf",
+      FR: "/docs/wise_duck_dev_cv_fr.pdf",
+    },
   };
 
   return (
@@ -92,6 +100,19 @@ function Profil() {
           <li>{translations.point7[activeLanguage]}</li>
         </ul>
         <p>{translations.description2[activeLanguage]}</p>
+        {/* TO MODIFY IN PRODUCTION MODE */}
+        <div className={`${classes.buttonContainer}`}>
+          <a
+            href={
+              process.env.NEXT_PUBLIC_SITE_URL + translations.cv[activeLanguage]
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${classes.button}`}
+          >
+            {translations.button[activeLanguage]}
+          </a>
+        </div>
       </div>
     </section>
   );

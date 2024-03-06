@@ -1,5 +1,5 @@
 @import "../../styles/variables.scss";
-@import "../../styles/mixin.scss";
+@import "../../styles/mixins.scss";
 
 // PORFOLIO SECTION CONTAINER
 .portfolioSection {
@@ -16,7 +16,7 @@
 
 // PORFOLIO SECTION MAIN TITLE
 .title {
-  width: 80%;
+  width: 78%;
   color: rgb(255, 115, 0);
   font-size: 5rem;
   margin-bottom: 2rem;
