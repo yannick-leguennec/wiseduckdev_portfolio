@@ -1,0 +1,9 @@
+{
+  "short_name": "WiseDuckDev",
+  "name": "The Wise Duck Dev - Full Stack JS Development specialized in React",
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#000000"
+}

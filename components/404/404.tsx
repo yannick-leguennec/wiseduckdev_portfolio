@@ -13,7 +13,7 @@ function NotFound() {
   // Object with translations
   const translations: TranslationsType = {
     text1: {
-      EN: "Ooops, I think lost yourself.",
+      EN: "Ooops, I think you lost yourself.",
       FR: "Oups, je crois que vous vous êtes perdu.",
     },
     text2: {
