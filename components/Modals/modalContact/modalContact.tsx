@@ -1,6 +1,6 @@
 import React from "react";
-import { useLanguage } from "@/context/LanguageContext";
-import { TranslationsType } from "@/types/TranslationsType";
+import { useLanguage } from "../../../context/LanguageContext";
+import { TranslationsType } from "../../../types/TranslationsType";
 import classes from "./modalContact.module.scss";
 
 // Modal props

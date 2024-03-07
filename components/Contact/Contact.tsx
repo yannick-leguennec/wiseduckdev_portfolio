@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ModalContact from "../Modals/modalContact/modalContact";
-import { useLanguage } from "@/context/LanguageContext";
-import { TranslationsType } from "@/types/TranslationsType";
+import { useLanguage } from "../../context/LanguageContext";
+import { TranslationsType } from "../../types/TranslationsType";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import classes from "./Contact.module.scss";

@@ -1,23 +1,34 @@
 "use client";
 import React, { useState, useEffect, Suspense } from "react";
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import { useLanguage } from "../context/LanguageContext";
 import { TranslationsType } from "../types/TranslationsType";
 import Image, { StaticImageData } from "next/image";
-import duckCoachDesktop from "@/public/images/duck-coach-desktop.png";
-import duckCoachMobile from "@/public/images/duck-coach-mobile.png";
+import duckCoachDesktop from "../public/images/duck-coach-desktop.webp";
+import duckCoachMobile from "../public/images/duck-coach-mobile.webp";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
-import Profil from "../components/Profil/Profil";
-import Skills from "../components/Skills/Skills";
-import Experience from "../components/Experience/Experience";
-import Portfolio from "../components/Portfolio/Portfolio";
-import Contact from "../components/Contact/Contact";
-import Footer from "../components/Footer/Footer";
+// import Profil from "../components/Profil/Profil";
+// import Skills from "../components/Skills/Skills";
+// import Experience from "../components/Experience/Experience";
+// import Portfolio from "../components/Portfolio/Portfolio";
+// import Contact from "../components/Contact/Contact";
+const Profil = dynamic(() => import("../components/Profil/Profil"));
+const Skills = dynamic(() => import("../components/Skills/Skills"));
+const Experience = dynamic(() => import("../components/Experience/Experience"));
+const Portfolio = dynamic(() => import("../components/Portfolio/Portfolio"));
+const Contact = dynamic(() => import("../components/Contact/Contact"));
 
 export default function Home() {
   // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
+  // State to manage the initial content loading
+  const [initialContentLoaded, setInitialContentLoaded] = useState(false);
+  // Effect to manage the initial content loading
+  useEffect(() => {
+    setInitialContentLoaded(true);
+  }, []);
 
   // Object to store the translations
   const translation: TranslationsType = {
@@ -72,7 +83,6 @@ export default function Home() {
 
   return (
     <>
-      <Suspense fallback={<div>Loading...</div>}></Suspense>
       <Head>
         <title>The Wise Duck Dev</title>
         <meta
@@ -83,16 +93,22 @@ export default function Home() {
       <Header />
       <main>
         <Main />
-        <Profil />
-        <Skills />
-        <ResponsiveImage
-          srcDesktop={duckCoachDesktop}
-          srcMobile={duckCoachMobile}
-          alt={translation.altPicture[activeLanguage]}
-        />
-        <Experience />
-        <Portfolio />
-        <Contact />
+        <Suspense fallback={<div>Loading more content...</div>}>
+          {initialContentLoaded && (
+            <>
+              <Profil />
+              <Skills />
+              <ResponsiveImage
+                srcDesktop={duckCoachDesktop}
+                srcMobile={duckCoachMobile}
+                alt={translation.altPicture[activeLanguage]}
+              />
+              <Experience />
+              <Portfolio />
+              <Contact />
+            </>
+          )}
+        </Suspense>
       </main>
     </>
   );

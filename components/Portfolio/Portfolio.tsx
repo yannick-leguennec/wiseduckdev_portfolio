@@ -1,7 +1,7 @@
 import Image from "next/image";
-import picture from "@/public/images/projectsPictures/familyflow_square.png";
-import { useLanguage } from "@/context/LanguageContext";
-import { TranslationsType } from "@/types/TranslationsType";
+import picture from "../../public/images/projectsPictures/familyflow_square.webp";
+import { useLanguage } from "../../context/LanguageContext";
+import { TranslationsType } from "../../types/TranslationsType";
 import classes from "./Portfolio.module.scss";
 
 function Portfolio() {

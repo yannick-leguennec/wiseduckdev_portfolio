@@ -152,6 +152,7 @@ class MyDocument extends Document<MyDocumentProps> {
         "Google Console",
       ],
     };
+
     return (
       <Html>
         <Head>
@@ -180,7 +181,7 @@ class MyDocument extends Document<MyDocumentProps> {
           <meta property="og:url" content="https://wiseduckdev.com" />
           <meta
             property="og:image"
-            content="https://wiseduckdev.com/public/images/metadata_profil_picture.png"
+            content="https://wiseduckdev.com/public/images/metadata_profil_picture.webp"
           />
           <meta name="twitter:card" content="summary_large_image" />
 

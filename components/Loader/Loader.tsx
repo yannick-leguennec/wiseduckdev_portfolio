@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { useLanguage } from "@/context/LanguageContext";
-import { TranslationsType } from "@/types/TranslationsType";
+import { useLanguage } from "../../context/LanguageContext";
+import { TranslationsType } from "../../types/TranslationsType";
 import classes from "./Loader.module.scss";
 import logo from "../../public/images/fake_logo.png";
 

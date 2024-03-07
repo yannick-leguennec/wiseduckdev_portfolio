@@ -2,8 +2,8 @@
 
 import classes from "./404.module.scss";
 import Image from "next/image";
-import photo from "@/public/images/duck_drink.png";
-import { TranslationsType } from "@/types/TranslationsType";
+import photo from "../../public/images/duck_drink.png";
+import { TranslationsType } from "../../types/TranslationsType";
 
 function NotFound() {
   // Get the active language from local storage or set it to EN

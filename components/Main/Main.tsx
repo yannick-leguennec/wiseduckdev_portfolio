@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { useLanguage } from "@/context/LanguageContext";
+import { useLanguage } from "../../context/LanguageContext";
 import classes from "./Main.module.scss";
-import Image, { StaticImageData } from "next/image";
-import mainPictureDesktop from "../../public/images/duck-main.png";
-import mainPictureMobile from "../../public/images/duck-main-mobile.png";
-import { TranslationsType } from "@/types/TranslationsType";
+import Image from "next/image";
+import desktopImage from "../../public/images/duck-main.webp";
+import mobileImage from "../../public/images/duck-main-mobile.webp";
+import { TranslationsType } from "../../types/TranslationsType";
 
 function Main() {
   // Custom hook to manage the language changes
@@ -26,48 +26,38 @@ function Main() {
     },
   };
 
-  // Props for the ResponsiveImage component
-  interface ResponsiveImageProps {
-    srcDesktop: StaticImageData;
-    srcMobile: StaticImageData;
-    alt: string;
-  }
-
-  // Component aiming to display a different image based on the screen size
-  const ResponsiveImage = ({
-    srcDesktop,
-    srcMobile,
-    alt,
-  }: ResponsiveImageProps) => {
-    const [windowWidth, setWindowWidth] = useState<number | null>(null);
+  function ResponsiveImageComponent() {
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-      // Update the window width state when the window is resized
-      const updateWindowWidth = () => {
-        setWindowWidth(window.innerWidth);
+      // Function to update the state based on window width
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 1025);
       };
 
-      window.addEventListener("resize", updateWindowWidth);
-      updateWindowWidth(); // Initialisation
+      // Add event listener
+      window.addEventListener("resize", handleResize);
 
-      return () => window.removeEventListener("resize", updateWindowWidth);
+      // Call the function to set the initial state
+      handleResize();
+
+      // Remove event listener on cleanup
+      return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    // Choose the image source based on the window width
-    const src = windowWidth && windowWidth >= 1025 ? srcDesktop : srcMobile;
-
     return (
-      <Image src={src} alt={alt} className={`${classes.image}`} priority />
+      <Image
+        src={isMobile ? mobileImage : desktopImage}
+        alt={translations.altPicture[activeLanguage]}
+        className={`${classes.image}`}
+        priority
+      />
     );
-  };
+  }
 
   return (
     <section id="main" className={`${classes.mainSection}`}>
-      <ResponsiveImage
-        srcDesktop={mainPictureDesktop}
-        srcMobile={mainPictureMobile}
-        alt={translations.altPicture[activeLanguage]}
-      />
+      <ResponsiveImageComponent />
       <div className={`${classes.textContainer}`}>
         <h1 className={`${classes.title}`}>The Wise Duck Dev</h1>
         <div className={`${classes.subtitleContainer}`}>

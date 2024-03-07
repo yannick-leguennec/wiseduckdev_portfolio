@@ -1,6 +1,13 @@
 "use client";
 
-import { createContext, useContext, ReactNode, useEffect } from "react";
+import {
+  createContext,
+  useContext,
+  ReactNode,
+  useEffect,
+  useMemo,
+  useCallback,
+} from "react";
 import { useRouter } from "next/router";
 
 // Language Types
@@ -38,15 +45,15 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   const activeLanguage: Language = locale === "fr" ? "FR" : "EN";
 
   // Modify the active language and update the URL
-  const toggleLanguage = (lang: Language) => {
-    const newLocale = lang.toLowerCase(); // 'en' or 'fr'
-    // Build the new URL
-    const path = `${router.pathname}${window.location.hash}`;
-    // Update the URL and the locale
-    router.push(path, path, { locale: newLocale });
-    // Save the new language in localStorage
-    localStorage.setItem("appLanguage", newLocale.toUpperCase());
-  };
+  const toggleLanguage = useCallback(
+    (lang: Language) => {
+      const newLocale = lang.toLowerCase(); // 'en' or 'fr'
+      const path = `${router.pathname}${window.location.hash}`;
+      router.push(path, path, { locale: newLocale });
+      localStorage.setItem("appLanguage", newLocale.toUpperCase());
+    },
+    [router]
+  );
 
   useEffect(() => {
     // Set the lang attribute on the html element to match the current locale
@@ -56,8 +63,17 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     );
   }, [locale, defaultLocale]);
 
+  // useMemo to memoize context value
+  const value = useMemo(
+    () => ({
+      activeLanguage,
+      toggleLanguage,
+    }),
+    [activeLanguage, toggleLanguage]
+  );
+
   return (
-    <LanguageContext.Provider value={{ activeLanguage, toggleLanguage }}>
+    <LanguageContext.Provider value={value}>
       {children}
     </LanguageContext.Provider>
   );

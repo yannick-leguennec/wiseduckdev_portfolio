@@ -1,7 +1,7 @@
 import { useState } from "react";
 import classes from "./Skills.module.scss";
-import { useLanguage } from "@/context/LanguageContext";
-import { TranslationsType } from "@/types/TranslationsType";
+import { useLanguage } from "../../context/LanguageContext";
+import { TranslationsType } from "../../types/TranslationsType";
 
 const Skills = () => {
   //State variable to store the active category

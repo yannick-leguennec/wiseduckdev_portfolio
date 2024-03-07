@@ -1,8 +1,8 @@
-import { useLanguage } from "@/context/LanguageContext";
-import { TranslationsType } from "@/types/TranslationsType";
+import { useLanguage } from "../../context/LanguageContext";
+import { TranslationsType } from "../../types/TranslationsType";
 import classes from "./Profil.module.scss";
 import Image from "next/image";
-import profilePicture from "../../public/images/profil_picture.png";
+import profilePicture from "../../public/images/profil_picture.webp";
 
 function Profil() {
   // Custom hook to manage the language changes
