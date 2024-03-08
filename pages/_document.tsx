@@ -189,7 +189,7 @@ class MyDocument extends Document<MyDocumentProps> {
           <meta property="og:url" content="https://wiseduckdev.vercel.app" />
           <meta
             property="og:image"
-            content="https://wiseduckdev.vercel.app/public/images/metadata_profil_picture.webp"
+            content="https://wiseduckdev.vercel.app/images/metadata_profil_picture.webp"
           />
           <meta name="twitter:card" content="summary_large_image" />
 
