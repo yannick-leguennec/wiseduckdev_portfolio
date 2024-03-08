@@ -1,0 +1,30 @@
+@import "./variables.scss";
+
+// Mixins for buttons
+@mixin button-style {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  background-color: $button-color; // Utilisation de la variable de couleur principale
+  border-radius: 25px;
+  width: fit-content;
+  padding: 0.5rem 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+// Mixins for list items
+@mixin list-item {
+  display: inline-block;
+  background-color: white;
+  color: rgb(255, 115, 0);
+  font-weight: 900;
+  padding: 0.5rem 0.8rem;
+  border-radius: 25px;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+}

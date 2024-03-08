@@ -1,0 +1,139 @@
+@import "../../styles/variables.scss";
+
+// HEADER
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  height: 6vh;
+  background: $primary-color;
+}
+
+// LOGO
+.containerLogo {
+  display: flex;
+  align-items: center;
+  margin-left: 4rem;
+
+  @media (max-width: 900px) {
+    margin-left: 2rem;
+  }
+
+  &_logo {
+    height: 40px;
+    width: auto;
+    margin-right: 0.4rem;
+
+    @media (max-width: 900px) {
+      height: 25px;
+    }
+  }
+
+  &_logoName {
+    font-size: 1.4rem;
+
+    @media (max-width: 900px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+// NAVIGATION MENU
+.containerNav {
+  display: flex;
+  align-items: center;
+  margin-right: 4rem;
+  gap: 1.5rem;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navLink:focus {
+  outline: none;
+  border-bottom: solid black 1px;
+}
+
+.activeLink {
+  border-bottom: 2px solid $navigation-color;
+  color: $navigation-color;
+}
+
+// LANGUAGES BUTTONS
+.buttonsContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  @media (max-width: 900px) {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+}
+
+.buttonLang:focus {
+  outline: none;
+  border-bottom: solid black 1px;
+}
+
+.activeButton {
+  padding: 3px 4px;
+  background: black;
+  color: white;
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+.inactiveButton {
+  background: white;
+  color: black;
+}
+
+// BURGER MENU
+.containerBurger {
+  display: none;
+
+  @media (max-width: 900px) {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+  }
+
+  &_.hamburger {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+// MOBILE MENU
+.mobileMenu {
+  position: fixed;
+  margin-top: 6vh;
+  min-height: 94vh;
+  max-height: 94vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigationMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}

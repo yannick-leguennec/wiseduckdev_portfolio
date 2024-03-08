@@ -1,0 +1,49 @@
+@import "../../../styles//variables.scss";
+
+// MODAL CONTAINER
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// MODAL CONTENT CONTAINER
+.modalContent {
+  width: 45%;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+}
+
+// MESSAGE DESIGN
+.message {
+  font-size: 1rem;
+  font-weight: 550;
+  text-align: center;
+}
+
+// BUTTON DESIGN
+.button {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: $button-color;
+  border-radius: 25px;
+  width: fit-content;
+  padding: 0.5rem 2rem;
+}
