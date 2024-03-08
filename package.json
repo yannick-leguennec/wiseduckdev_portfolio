@@ -2,10 +2,11 @@
   "name": "wiseduck_porfolio_website",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "ts-node scripts/generate-sitemap.ts",
+    "postbuild": "node scripts/generate-sitemap.js",
     "start": "next start",
     "lint": "next lint"
   },
@@ -33,7 +34,6 @@
     "postcss": "^8.4.35",
     "sass": "^1.71.1",
     "tailwindcss": "^3.4.1",
-    "ts-node": "^10.9.2",
     "typescript": "^5.4.2"
   }
 }
