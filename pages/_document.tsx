@@ -161,6 +161,10 @@ class MyDocument extends Document<MyDocumentProps> {
       <Html>
         <Head>
           <meta
+            name="google-site-verification"
+            content="CHxu9HsWoMtZjbPsvHICvOlOyRv_hFYZk5uhVLxXo7o"
+          />
+          <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
