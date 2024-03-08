@@ -14,6 +14,7 @@ const Skills = dynamic(() => import("../components/Skills/Skills"));
 const Experience = dynamic(() => import("../components/Experience/Experience"));
 const Portfolio = dynamic(() => import("../components/Portfolio/Portfolio"));
 const Contact = dynamic(() => import("../components/Contact/Contact"));
+const Footer = dynamic(() => import("../components/Footer/Footer"));
 
 export default function Home() {
   // Custom hook to manage the language changes
@@ -111,6 +112,7 @@ export default function Home() {
               <Experience />
               <Portfolio />
               <Contact />
+              <Footer />
             </>
           )}
         </Suspense>

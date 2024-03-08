@@ -106,9 +106,7 @@ function Profil() {
         <p>{translations.description2[activeLanguage]}</p>
         <div className={`${classes.buttonContainer}`}>
           <a
-            href={
-              process.env.NEXT_PUBLIC_SITE_URL + translations.cv[activeLanguage]
-            }
+            href={translations.cv[activeLanguage]}
             target="_blank"
             rel="noopener noreferrer"
             className={`${classes.button}`}
