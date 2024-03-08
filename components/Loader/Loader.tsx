@@ -24,6 +24,7 @@ function Loader() {
         src={logo}
         alt={translations.altLogo[activeLanguage]}
         className={classes.image}
+        priority
       />
       <h1 className={classes.text1}>{translations.text1[activeLanguage]}</h1>
       <h2 className={classes.text2}>

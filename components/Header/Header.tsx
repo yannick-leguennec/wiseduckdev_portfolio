@@ -106,6 +106,7 @@ function Header() {
           src={logo}
           alt={translationAlt.altLogo[activeLanguage]}
           className={classes.containerLogo_logo}
+          priority
         />
         <h1 className={classes.containerLogo_logoName}>
           the <strong>wise</strong>duck<strong>dev</strong>

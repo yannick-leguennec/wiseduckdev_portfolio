@@ -22,7 +22,7 @@
 .textContainer {
   position: absolute;
   top: 20%;
-  left: 22%;
+  left: 24%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -55,7 +55,6 @@
 
 // MAIN TITLE
 .title {
-  font-weight: 500;
   font-size: 5rem;
 
   @media (max-width: 1024px) {
