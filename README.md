@@ -31,7 +31,7 @@ Discover my innovative approach to web development through my portfolio with for
 
 ### Contact Me
 
-- **Website**: [wiseduckdev.com](https://wiseduckdev.com)
+- **Website**: [wiseduckdev.com](https://wiseduckdev.vercel.app)
 - **GitHub**: [yannick-leguennec](https://github.com/yannick-leguennec)
 - **Email**: [wiseduckdev@gmail.com](mailto:wiseduckdev@gmail.com)
 
