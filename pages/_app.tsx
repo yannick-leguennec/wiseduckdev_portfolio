@@ -9,12 +9,12 @@ import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   // State to manage the loading of the app
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Loading the app for 2 seconds at the beginning
   useEffect(() => {
     setTimeout(() => {
-      setIsLoading(false);
+      setIsLoading(true);
     }, 2000);
   }, []);
 
