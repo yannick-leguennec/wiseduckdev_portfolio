@@ -186,10 +186,10 @@ class MyDocument extends Document<MyDocumentProps> {
             property="og:description"
             content="The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React."
           />
-          <meta property="og:url" content="https://wiseduckdev.com" />
+          <meta property="og:url" content="https://wiseduckdev.vercel.app" />
           <meta
             property="og:image"
-            content="https://wiseduckdev.com/public/images/metadata_profil_picture.webp"
+            content="https://wiseduckdev.vercel.app/public/images/metadata_profil_picture.webp"
           />
           <meta name="twitter:card" content="summary_large_image" />
 
@@ -210,7 +210,7 @@ class MyDocument extends Document<MyDocumentProps> {
 
           <link
             rel="canonical"
-            href={`https://www.wiseduckdev.com${this.props.__NEXT_DATA__.page}`}
+            href={`https://www.wiseduckdev.vercel.app${this.props.__NEXT_DATA__.page}`}
           />
           <link rel="icon" href="/favicons/favicon.ico" sizes="any" />
           <link
