@@ -19,7 +19,7 @@
 // LOGO
 .image {
   width: auto;
-  height: 150px;
+  height: 100px;
   margin-bottom: 2rem;
 
   @media (max-width: 768px) {
@@ -32,7 +32,6 @@
 .text1 {
   font-size: 2rem;
   font-weight: 400;
-  margin-bottom: 1rem;
 
   @media (max-width: 768px) {
     font-size: 1.5rem;
@@ -40,7 +39,7 @@
 }
 
 .text2 {
-  font-size: 3.5rem;
+  font-size: 3rem;
 
   margin-bottom: 3rem;
 
