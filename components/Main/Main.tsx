@@ -26,6 +26,7 @@ function Main() {
     },
   };
 
+  // Component to display the image based on the window width (Deskop vs Mobile)
   function ResponsiveImageComponent() {
     const [isMobile, setIsMobile] = useState(false);
 

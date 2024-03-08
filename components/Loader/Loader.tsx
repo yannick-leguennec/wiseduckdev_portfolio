@@ -2,19 +2,16 @@ import Image from "next/image";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
 import classes from "./Loader.module.scss";
-import logo from "../../public/images/fake_logo.png";
+import logo from "../../public/images/simple_logo.png";
 
 function Loader() {
+  // Get the active language from the context
   const { activeLanguage } = useLanguage();
-
+  // Object containing translations
   const translations: TranslationsType = {
     text1: {
       EN: "Welcome to",
       FR: "Bienvenue sur",
-    },
-    text2: {
-      EN: "The Wise Duck Dev",
-      FR: "The Wise Duck Dev",
     },
     altLogo: {
       EN: "Certified Full Stack JavaScript Web and Web Mobile Developer specialized in React Wise Duck Dev Logo",
@@ -29,7 +26,9 @@ function Loader() {
         className={classes.image}
       />
       <h1 className={classes.text1}>{translations.text1[activeLanguage]}</h1>
-      <h2 className={classes.text2}>{translations.text2[activeLanguage]}</h2>
+      <h2 className={classes.text2}>
+        the <strong>wise</strong>duck<strong>dev</strong>
+      </h2>
       <div className={classes.loaderCircle}></div>
     </div>
   );

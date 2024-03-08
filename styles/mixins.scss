@@ -1,5 +1,6 @@
 @import "./variables.scss";
 
+// Mixins for buttons
 @mixin button-style {
   font-size: 1.2rem;
   font-weight: 600;
@@ -14,6 +15,7 @@
   }
 }
 
+// Mixins for list items
 @mixin list-item {
   display: inline-block;
   background-color: white;

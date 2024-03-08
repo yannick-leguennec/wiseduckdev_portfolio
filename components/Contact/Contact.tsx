@@ -162,12 +162,18 @@ function Contact() {
                   <span className={classes.requiredStar}>*</span>
                 </label>
                 <Field
+                  id="name"
                   type="text"
                   name="name"
+                  autoComplete="name"
                   placeholder={translations.placeholderName[activeLanguage]}
                   className={classes.input}
                 />
-                <ErrorMessage name="name" component="div" />
+                <ErrorMessage
+                  name="name"
+                  component="div"
+                  className={classes.errorMessage}
+                />
               </div>
 
               <div className={classes.labelContainer}>
@@ -175,28 +181,39 @@ function Contact() {
                   Email <span className={classes.requiredStar}>*</span>
                 </label>
                 <Field
+                  id="email"
                   type="email"
                   name="email"
+                  autoComplete="email"
                   placeholder={translations.placeholderEmail[activeLanguage]}
                   className={classes.input}
                 />
-                <ErrorMessage name="email" component="div" />
+                <ErrorMessage
+                  name="email"
+                  component="div"
+                  className={classes.errorMessage}
+                />
               </div>
             </div>
             <div className={classes.downFormContainer}>
               <div className={classes.containerSubtitle}>
-                <label className={classes.label} htmlFor="sujet">
+                <label className={classes.label} htmlFor="subject">
                   {translations.subject[activeLanguage]}{" "}
                   <span className={classes.requiredStar}>*</span>
                 </label>
               </div>
               <Field
+                id="subject"
                 type="text"
                 name="subject"
                 placeholder={translations.placeholderSubject[activeLanguage]}
                 className={classes.input}
               />
-              <ErrorMessage name="subject" component="div" />
+              <ErrorMessage
+                name="subject"
+                component="div"
+                className={classes.errorMessage}
+              />
 
               <div className={classes.containerSubtitle}>
                 <label className={classes.label} htmlFor="message">
@@ -205,13 +222,18 @@ function Contact() {
                 </label>
               </div>
               <Field
+                id="message"
                 as="textarea"
                 name="message"
                 rows="5"
                 placeholder={translations.placeholderMessage[activeLanguage]}
                 className={classes.textarea}
               />
-              <ErrorMessage name="message" component="div" />
+              <ErrorMessage
+                name="message"
+                component="div"
+                className={classes.errorMessage}
+              />
             </div>
 
             <button

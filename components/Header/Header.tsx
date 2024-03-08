@@ -3,8 +3,7 @@
 import { useState, useEffect } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import Image from "next/image";
-import Link from "next/link";
-import logo from "../../public/images/fake_logo.png";
+import logo from "../../public/images/simple_logo.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import classes from "./Header.module.scss";
 import { TranslationsType } from "../../types/TranslationsType";
@@ -106,11 +105,11 @@ function Header() {
         <Image
           src={logo}
           alt={translationAlt.altLogo[activeLanguage]}
-          width={50}
-          height={50}
           className={classes.containerLogo_logo}
         />
-        <h1 className={classes.logoName}>The Wise Duck Dev</h1>
+        <h1 className={classes.containerLogo_logoName}>
+          the <strong>wise</strong>duck<strong>dev</strong>
+        </h1>
       </a>
       <div className={classes.containerNav}>
         <nav

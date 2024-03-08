@@ -9,11 +9,6 @@ import duckCoachDesktop from "../public/images/duck-coach-desktop.webp";
 import duckCoachMobile from "../public/images/duck-coach-mobile.webp";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
-// import Profil from "../components/Profil/Profil";
-// import Skills from "../components/Skills/Skills";
-// import Experience from "../components/Experience/Experience";
-// import Portfolio from "../components/Portfolio/Portfolio";
-// import Contact from "../components/Contact/Contact";
 const Profil = dynamic(() => import("../components/Profil/Profil"));
 const Skills = dynamic(() => import("../components/Skills/Skills"));
 const Experience = dynamic(() => import("../components/Experience/Experience"));
@@ -39,6 +34,14 @@ export default function Home() {
     logText: {
       EN: "🚀 Driven by a passion for web and mobile development with a specialization in React, I turn creative ideas into captivating digital realities. If you're seeking to bring your projects to life with a dedicated and innovative developer, feel free to reach out to explore fruitful collaborations together. Let's take a step towards the future of technology together! 🌐✨",
       FR: "🚀 Passionné par le développement web et mobile avec une expertise en React, je transforme les idées en réalités numériques captivantes. Si vous cherchez à donner vie à vos projets avec un développeur dédié et innovant, n'hésitez pas à me contacter pour explorer ensemble des collaborations fructueuses. Faisons ensemble un pas vers l'avenir de la technologie ! 🌐✨",
+    },
+    pageDescription: {
+      EN: "Meet The Wise Duck Dev : A creative & innovative Full Stack JS Developer specializing in React. Dive into a world of cutting-edge web & mobile solutions. Let's craft the future of tech together!",
+      FR: "Rencontrez The Wise Duck Dev : un développeur Full Stack JS créatif et innovant spécialisé en React. Plongez dans un monde de solutions web et mobile de pointe. Créons ensemble l'avenir de la technologie !",
+    },
+    loadingContent: {
+      EN: "Loading more content...",
+      FR: "Chargement du contenu en cours...",
     },
   };
 
@@ -87,13 +90,15 @@ export default function Home() {
         <title>The Wise Duck Dev</title>
         <meta
           name="description"
-          content="The Wise Duck Dev's personal portfolio"
+          content={translation.pageDescription[activeLanguage]}
         />
       </Head>
       <Header />
       <main>
         <Main />
-        <Suspense fallback={<div>Loading more content...</div>}>
+        <Suspense
+          fallback={<div>{translation.loadingContent[activeLanguage]}</div>}
+        >
           {initialContentLoaded && (
             <>
               <Profil />

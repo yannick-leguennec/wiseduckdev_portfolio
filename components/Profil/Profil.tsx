@@ -66,6 +66,10 @@ function Profil() {
       EN: "/docs/wise_duck_dev_resume_en.pdf",
       FR: "/docs/wise_duck_dev_cv_fr.pdf",
     },
+    aria: {
+      EN: "Download my CV in English",
+      FR: "Télécharger mon CV en Français",
+    },
   };
 
   return (
@@ -100,7 +104,6 @@ function Profil() {
           <li>{translations.point7[activeLanguage]}</li>
         </ul>
         <p>{translations.description2[activeLanguage]}</p>
-        {/* TO MODIFY IN PRODUCTION MODE */}
         <div className={`${classes.buttonContainer}`}>
           <a
             href={
@@ -109,6 +112,7 @@ function Profil() {
             target="_blank"
             rel="noopener noreferrer"
             className={`${classes.button}`}
+            aria-label={translations.aria[activeLanguage]}
           >
             {translations.button[activeLanguage]}
           </a>

@@ -2,7 +2,7 @@
 
 import classes from "./404.module.scss";
 import Image from "next/image";
-import photo from "../../public/images/duck_drink.png";
+import photo from "../../public/images/duck_drink.webp";
 import { TranslationsType } from "../../types/TranslationsType";
 
 function NotFound() {
@@ -46,7 +46,12 @@ function NotFound() {
         </button>
       </div>
       <div className={classes.imageContainer}>
-        <Image src={photo} alt="duck with wine" className={classes.image} />
+        <Image
+          src={photo}
+          alt="duck with wine"
+          className={classes.image}
+          priority
+        />
       </div>
     </div>
   );

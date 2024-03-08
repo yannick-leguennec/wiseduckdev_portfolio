@@ -24,11 +24,20 @@
   }
 
   &_logo {
-    margin-right: 1rem;
+    height: 40px;
+    width: auto;
+    margin-right: 0.4rem;
 
     @media (max-width: 900px) {
-      width: 2rem;
-      height: 2rem;
+      height: 25px;
+    }
+  }
+
+  &_logoName {
+    font-size: 1.4rem;
+
+    @media (max-width: 900px) {
+      font-size: 1rem;
     }
   }
 }
