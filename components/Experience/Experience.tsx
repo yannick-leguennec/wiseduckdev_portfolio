@@ -36,7 +36,7 @@ function Experience() {
     },
     point3: {
       EN: "Graduated from HEC Montréal in entrepreneurship and from the O'clock school in web/mobile development, I have developed advanced expertise in teleworking and virtual collaboration. My distance learning has made me particularly autonomous and competent in the management of virtual teams, qualifying me as an agile full stack developer adapted to the innovative digital projects of modern companies.",
-      FR: "Diplômé de HEC Montréal en entrepreneuriat et de l'école O'clock en développement web/mobile, j'ai développé une expertise avancée en télétravail et en collaboration virtuelle. Mes formations à distance m'a rendu particulièrement autonome et compétent dans la gestion d'équipes virtuelles, me qualifiant comme un développeur full stack agile adapté aux projets numériques innovants des entreprises modernes.",
+      FR: "Diplômé de HEC Montréal en entrepreneuriat et de l'école O'clock en développement web/mobile, j'ai développé une expertise avancée en télétravail et en collaboration virtuelle. Mes formations à distance m'ont rendu particulièrement autonome et compétent dans la gestion d'équipes virtuelles, me qualifiant comme un développeur full stack agile adapté aux projets numériques innovants des entreprises modernes.",
     },
     subtitle3: {
       EN: "Expertise in Remote Work and Virtual Collaboration",

@@ -4,6 +4,7 @@ import indexSchema from "../public/schemas/indexSchema";
 import React, { useState, useEffect, Suspense } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useLanguage } from "../context/LanguageContext";
 import { TranslationsType } from "../types/TranslationsType";
 import Image, { StaticImageData } from "next/image";
@@ -123,6 +124,7 @@ export default function Home() {
           )}
         </Suspense>
       </main>
+      <SpeedInsights />
     </>
   );
 }
