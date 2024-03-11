@@ -31,7 +31,7 @@ async function generateSitemap() {
 
   await fs.writeFile(
     path.join(process.cwd(), "public", "sitemap.xml"),
-    sitemap
+    sitemap.trim()
   );
 }
 
