@@ -15,13 +15,13 @@ async function generateSitemap() {
     <?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
-        <loc>${baseUrl}</loc>
+        <loc>https://${baseUrl}</loc>
         <lastmod>${currentDate}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
-        <loc>${baseUrl}/fr</loc>
+        <loc>https://${baseUrl}/fr</loc>
         <lastmod>${currentDate}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
