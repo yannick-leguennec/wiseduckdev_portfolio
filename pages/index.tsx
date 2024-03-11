@@ -1,4 +1,6 @@
 "use client";
+
+import indexSchema from "../public/schemas/indexSchema";
 import React, { useState, useEffect, Suspense } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
@@ -93,6 +95,10 @@ export default function Home() {
         <meta
           name="description"
           content={translation.pageDescription[activeLanguage]}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(indexSchema) }}
         />
       </Head>
       <Header />
