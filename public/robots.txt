@@ -1,2 +1,3 @@
 User-agent: *
 Disallow: /app/api/
+Sitemap: https://wiseduckdev.vercel.app/sitemap.xml
