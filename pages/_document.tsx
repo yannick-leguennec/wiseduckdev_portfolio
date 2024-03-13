@@ -60,7 +60,21 @@ class MyDocument extends Document<MyDocumentProps> {
             property="og:image"
             content={`https://${siteUrl}/images/metadata_profil_picture.webp`}
           />
+
           <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@wiseduckedv" />
+          <meta
+            name="twitter:title"
+            content="The Wise Duck Dev - Full Stack JS Developer specialized in React"
+          />
+          <meta
+            name="twitter:description"
+            content="The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React."
+          />
+          <meta
+            name="twitter:image"
+            content="URL_to_image_which_represents_content_of_the_page"
+          />
 
           {siteUrl && (
             <>
@@ -80,6 +94,22 @@ class MyDocument extends Document<MyDocumentProps> {
           <link
             rel="canonical"
             href={`https://${siteUrl}${this.props.__NEXT_DATA__.page}`}
+          />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href={`https://${siteUrl}/favicons/apple-touch-icon.png`}
+          <link
+            rel="icon"
+            href={`https://${siteUrl}/favicons/favicon-chrome-192x192.png`}
+            type="image/png"
+            sizes="192x192"
+          />
+          <link
+            rel="icon"
+            href={`https://${siteUrl}/favicons/favicon-chrome-96x96.png`}
+            type="image/png"
+            sizes="96x96"
           />
           <link
             rel="icon"
@@ -104,6 +134,22 @@ class MyDocument extends Document<MyDocumentProps> {
             type="image/png"
             sizes="16x16"
           />
+          <link
+            rel="android-chrome"
+            sizes="192x192"
+            type="image/png"
+            href={`https://${siteUrl}/favicons/android-chrome-192x192.png`}
+            />
+            <link
+            rel="android-chrome"
+            sizes="512x512"
+            type="image/png"
+            href={`https://${siteUrl}/favicons/android-chrome-512x512.png`}
+            />
+            <link rel="apple-touch-icon" sizes="180x180" type="image/png" href={`https://${siteUrl}/favicons/apple-icon-180x180.png`} />
+            <link rel="apple-touch-icon" sizes="152x152" type="image/png" href={`https://${siteUrl}/favicons/apple-icon-152x152.png`} />
+            <link rel="apple-touch-icon" sizes="120x120" type="image/png" href={`https://${siteUrl}/favicons/apple-icon-120x120.png`} />
+            <link rel="apple-touch-icon" sizes="76x76" type="image/png" href={`https://${siteUrl}/favicons/apple-icon-76x76.png`} />
           <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
           <link rel="manifest" href="/site.webmanifest" />
           <link
