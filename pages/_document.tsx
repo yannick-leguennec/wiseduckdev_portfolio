@@ -99,6 +99,7 @@ class MyDocument extends Document<MyDocumentProps> {
             rel="apple-touch-icon"
             sizes="180x180"
             href={`https://${siteUrl}/favicons/apple-touch-icon.png`}
+          />
           <link
             rel="icon"
             href={`https://${siteUrl}/favicons/favicon-chrome-192x192.png`}
@@ -139,17 +140,37 @@ class MyDocument extends Document<MyDocumentProps> {
             sizes="192x192"
             type="image/png"
             href={`https://${siteUrl}/favicons/android-chrome-192x192.png`}
-            />
-            <link
+          />
+          <link
             rel="android-chrome"
             sizes="512x512"
             type="image/png"
             href={`https://${siteUrl}/favicons/android-chrome-512x512.png`}
-            />
-            <link rel="apple-touch-icon" sizes="180x180" type="image/png" href={`https://${siteUrl}/favicons/apple-icon-180x180.png`} />
-            <link rel="apple-touch-icon" sizes="152x152" type="image/png" href={`https://${siteUrl}/favicons/apple-icon-152x152.png`} />
-            <link rel="apple-touch-icon" sizes="120x120" type="image/png" href={`https://${siteUrl}/favicons/apple-icon-120x120.png`} />
-            <link rel="apple-touch-icon" sizes="76x76" type="image/png" href={`https://${siteUrl}/favicons/apple-icon-76x76.png`} />
+          />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            type="image/png"
+            href={`https://${siteUrl}/favicons/apple-icon-180x180.png`}
+          />
+          <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            type="image/png"
+            href={`https://${siteUrl}/favicons/apple-icon-152x152.png`}
+          />
+          <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            type="image/png"
+            href={`https://${siteUrl}/favicons/apple-icon-120x120.png`}
+          />
+          <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            type="image/png"
+            href={`https://${siteUrl}/favicons/apple-icon-76x76.png`}
+          />
           <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
           <link rel="manifest" href="/site.webmanifest" />
           <link
