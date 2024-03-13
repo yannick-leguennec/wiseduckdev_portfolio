@@ -83,7 +83,7 @@ class MyDocument extends Document<MyDocumentProps> {
           />
           <link
             rel="icon"
-            href="/favicons/favicon-chrome-48x48.png"
+            href={`https://${siteUrl}/favicons/favicon-chrome-48x48.png`}
             sizes="any"
           />
           <link
