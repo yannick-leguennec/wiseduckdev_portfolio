@@ -2,22 +2,31 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
 const indexSchema = {
   "@context": "http://schema.org",
-  "@type": "Person",
+  "@type": "Organization",
   name: "The Wise Duck Dev",
-  jobTitle: "Full Stack JavaScript Developer Specialized in React",
-  email: "wiseduckdev@gmail.com",
   url: `${siteUrl}`,
-  image: `https://${siteUrl}/images/main_logo1.png`,
   logo: `https://${siteUrl}/images/simple_logo.png`,
-  alumniOf: ["O'clock", "HEC Montreal"],
-  memberOf: {
-    "@type": "Organization",
-    name: "The Wise Duck Dev",
-    description:
-      "Innovative full stack JS web and mobile development solutions, specializing in React.",
-    url: `${siteUrl}`,
-    logo: `https://${siteUrl}/images/main_logo1.png`,
-    sameAs: ["https://github.com/yannick-leguennec"],
+  email: "wiseduckdev@gmail.com",
+  member: [
+    {
+      "@type": "Person",
+      name: "The Wise Duck Dev",
+      jobTitle: "Full Stack JavaScript Developer Specialized in React",
+      alumniOf: ["O'clock", "HEC Montreal"],
+      email: "wiseduckdev@gmail.com",
+      url: `${siteUrl}`,
+      image: `https://${siteUrl}/images/metadata_profil_picture.webp`,
+    },
+  ],
+  description:
+    "Innovative full stack JS web and mobile development solutions, specializing in React.",
+  brand: {
+    "@type": "Brand",
+    logo: `https://${siteUrl}/images/simple_logo.png`,
+    sameAs: [
+      "https://github.com/yannick-leguennec",
+      "https://twitter.com/wiseduckdev",
+    ],
   },
   knowsAbout: [
     "Web Development",
@@ -90,13 +99,12 @@ const indexSchema = {
     "Make",
     "Zapier",
   ],
-  knowsLanguage: ["French", "English", "Spanish"],
   hasCredential: [
     {
       "@type": "EducationalOccupationalCredential",
-      name: "Professional title in web and web mobile development",
-      educationalLevel: "Professional title",
       credentialCategory: "Professional",
+      educationalLevel: "Professional title",
+      name: "Professional title in web and web mobile development",
       recognizedBy: {
         "@type": "GovernmentOrganization",
         name: "Ministry in charge of Employment, DGEFP",
@@ -104,9 +112,9 @@ const indexSchema = {
     },
     {
       "@type": "EducationalOccupationalCredential",
-      name: "HEC Montréal Diploma in Entrepreneurship and Business Creation",
-      educationalLevel: "Diploma",
       credentialCategory: "Certificate",
+      educationalLevel: "Diploma",
+      name: "HEC Montréal Diploma in Entrepreneurship and Business Creation",
       award: "First of its promotion",
       recognizedBy: {
         "@type": "EducationalOrganization",
@@ -114,6 +122,25 @@ const indexSchema = {
       },
     },
   ],
+  knowsLanguage: [
+    {
+      "@type": "Language",
+      name: "French",
+    },
+    {
+      "@type": "Language",
+      name: "English",
+    },
+    {
+      "@type": "Language",
+      name: "Spanish",
+    },
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer support",
+    email: "wiseduckdev@gmail.com",
+  },
 };
 
 export default indexSchema;

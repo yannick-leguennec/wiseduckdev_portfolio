@@ -81,7 +81,11 @@ class MyDocument extends Document<MyDocumentProps> {
             rel="canonical"
             href={`https://${siteUrl}${this.props.__NEXT_DATA__.page}`}
           />
-          <link rel="icon" href="/favicons/favicon.ico" sizes="any" />
+          <link
+            rel="icon"
+            href="/favicons/favicon-chrome-48x48.png"
+            sizes="any"
+          />
           <link
             rel="icon"
             href="/favicons/favicon-32x32.png"
