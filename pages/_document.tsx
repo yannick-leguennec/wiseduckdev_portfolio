@@ -30,6 +30,10 @@ class MyDocument extends Document<MyDocumentProps> {
             content="CHxu9HsWoMtZjbPsvHICvOlOyRv_hFYZk5uhVLxXo7o"
           />
           <meta
+            name="msvalidate.01"
+            content="9C11EB658145B51F44EA72C0B64FEA80"
+          />
+          <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
