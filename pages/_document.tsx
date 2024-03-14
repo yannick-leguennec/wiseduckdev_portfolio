@@ -35,10 +35,6 @@ class MyDocument extends Document<MyDocumentProps> {
           />
           <meta charSet="UTF-8" />
           <meta
-            name="description"
-            content="The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React."
-          />
-          <meta
             name="keywords"
             content="The Wise Duck Dev, Full Stack JS Developer, JavaScript, React Developer, Web Mobile Developer, Next.js, TypeScript, Web Development Canada, Web Development USA, React Development, Full Stack JS Solutions, Innovative Web Solutions"
           />
