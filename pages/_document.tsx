@@ -76,12 +76,12 @@ class MyDocument extends Document<MyDocumentProps> {
               <link
                 rel="alternate"
                 hrefLang="en"
-                href={`${siteUrl}${this.props.__NEXT_DATA__.page}`}
+                href={`https://${siteUrl}${this.props.__NEXT_DATA__.page}`}
               />
               <link
                 rel="alternate"
                 hrefLang="fr"
-                href={`${siteUrl}/fr${this.props.__NEXT_DATA__.page}`}
+                href={`https://${siteUrl}/fr${this.props.__NEXT_DATA__.page}`}
               />
             </>
           )}
