@@ -95,7 +95,6 @@ class MyDocument extends Document<MyDocumentProps> {
             sizes="180x180"
             href={`https://${siteUrl}/favicons/apple-touch-icon.png`}
           />
-          VSC
           <link
             rel="icon"
             href={`https://${siteUrl}/favicons/favicon-chrome-192x192.png`}
