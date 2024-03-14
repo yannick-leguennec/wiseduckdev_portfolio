@@ -35,10 +35,6 @@ class MyDocument extends Document<MyDocumentProps> {
           />
           <meta charSet="UTF-8" />
           <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
-          />
-          <meta
             name="description"
             content="The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React."
           />
@@ -93,7 +89,7 @@ class MyDocument extends Document<MyDocumentProps> {
             rel="canonical"
             href={`https://${siteUrl}${this.props.__NEXT_DATA__.page}`}
           />
-          <meta http-equiv="Content-Language" content="en" />.
+          <meta httpEquiv="Content-Language" content="en" />.
           <link
             rel="apple-touch-icon"
             sizes="180x180"
