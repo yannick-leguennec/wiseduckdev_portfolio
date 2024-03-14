@@ -8,7 +8,6 @@ const indexSchema = {
   email: "wiseduckdev@gmail.com",
   url: `${siteUrl}`,
   image: `https://${siteUrl}/images/main_logo1.png`,
-  logo: `https://${siteUrl}/images/simple_logo.png`,
   alumniOf: ["O'clock", "HEC Montreal"],
   memberOf: {
     "@type": "Organization",

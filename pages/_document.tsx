@@ -33,6 +33,7 @@ class MyDocument extends Document<MyDocumentProps> {
             name="msvalidate.01"
             content="9C11EB658145B51F44EA72C0B64FEA80"
           />
+          <meta charSet="UTF-8" />
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
@@ -60,7 +61,6 @@ class MyDocument extends Document<MyDocumentProps> {
             property="og:image"
             content={`https://${siteUrl}/images/metadata_profil_picture.webp`}
           />
-
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@wiseduckedv" />
           <meta
@@ -73,9 +73,8 @@ class MyDocument extends Document<MyDocumentProps> {
           />
           <meta
             name="twitter:image"
-            content="URL_to_image_which_represents_content_of_the_page"
+            content={`https://${siteUrl}/images/metadata_profil_picture.webp`}
           />
-
           {siteUrl && (
             <>
               <link
@@ -90,16 +89,17 @@ class MyDocument extends Document<MyDocumentProps> {
               />
             </>
           )}
-
           <link
             rel="canonical"
             href={`https://${siteUrl}${this.props.__NEXT_DATA__.page}`}
           />
+          <meta http-equiv="Content-Language" content="en" />.
           <link
             rel="apple-touch-icon"
             sizes="180x180"
             href={`https://${siteUrl}/favicons/apple-touch-icon.png`}
           />
+          VSC
           <link
             rel="icon"
             href={`https://${siteUrl}/favicons/favicon-chrome-192x192.png`}
