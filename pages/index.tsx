@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import indexSchema from "../public/schemas/indexSchema";
 import React, { useState, useEffect, Suspense } from "react";
