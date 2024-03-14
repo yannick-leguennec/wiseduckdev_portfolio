@@ -1,5 +1,4 @@
-// "use client";
-
+import { GetServerSideProps } from "next";
 import indexSchema from "../public/schemas/indexSchema";
 import React, { useState, useEffect, Suspense } from "react";
 import Head from "next/head";
@@ -96,6 +95,7 @@ export default function Home() {
           name="description"
           content={translation.pageDescription[activeLanguage]}
         />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(indexSchema) }}
@@ -128,3 +128,9 @@ export default function Home() {
     </>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  return {
+    props: {},
+  };
+};
