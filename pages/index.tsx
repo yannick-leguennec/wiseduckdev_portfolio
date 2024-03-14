@@ -9,6 +9,7 @@ import { TranslationsType } from "../types/TranslationsType";
 import Image, { StaticImageData } from "next/image";
 import duckCoachDesktop from "../public/images/duck-coach-desktop.webp";
 import duckCoachMobile from "../public/images/duck-coach-mobile.webp";
+import Loader from "../components/Loader/Loader";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
 const Profil = dynamic(() => import("../components/Profil/Profil"));
@@ -19,10 +20,19 @@ const Contact = dynamic(() => import("../components/Contact/Contact"));
 const Footer = dynamic(() => import("../components/Footer/Footer"));
 
 export default function Home() {
+  // State to manage the loading of the app
+  const [isLoading, setIsLoading] = useState(true);
   // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
   // State to manage the initial content loading
   const [initialContentLoaded, setInitialContentLoaded] = useState(false);
+  // Loading the page for 2 seconds at the beginning
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
   // Effect to manage the initial content loading
   useEffect(() => {
     setInitialContentLoaded(true);
@@ -101,29 +111,35 @@ export default function Home() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(indexSchema) }}
         />
       </Head>
-      <Header />
-      <main>
-        <Main />
-        <Suspense
-          fallback={<div>{translation.loadingContent[activeLanguage]}</div>}
-        >
-          {initialContentLoaded && (
-            <>
-              <Profil />
-              <Skills />
-              <ResponsiveImage
-                srcDesktop={duckCoachDesktop}
-                srcMobile={duckCoachMobile}
-                alt={translation.altPicture[activeLanguage]}
-              />
-              <Experience />
-              <Portfolio />
-              <Contact />
-              <Footer />
-            </>
-          )}
-        </Suspense>
-      </main>
+      {!isLoading ? (
+        <>
+          <Header />
+          <main>
+            <Main />
+            <Suspense
+              fallback={<div>{translation.loadingContent[activeLanguage]}</div>}
+            >
+              {initialContentLoaded && (
+                <>
+                  <Profil />
+                  <Skills />
+                  <ResponsiveImage
+                    srcDesktop={duckCoachDesktop}
+                    srcMobile={duckCoachMobile}
+                    alt={translation.altPicture[activeLanguage]}
+                  />
+                  <Experience />
+                  <Portfolio />
+                  <Contact />
+                  <Footer />
+                </>
+              )}
+            </Suspense>
+          </main>
+        </>
+      ) : (
+        <Loader />
+      )}
       <SpeedInsights />
     </>
   );
