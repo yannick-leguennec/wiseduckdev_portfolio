@@ -20,12 +20,6 @@ async function generateSitemap() {
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
       </url>
-      <url>
-        <loc>https://${baseUrl}/fr</loc>
-        <lastmod>${currentDate}</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-      </url>
     </urlset>
   `;
 
