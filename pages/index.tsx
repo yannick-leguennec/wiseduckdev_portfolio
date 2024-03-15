@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import indexSchema from "../public/schemas/indexSchema";
 import React, { useState, useEffect, Suspense } from "react";
 import Head from "next/head";
@@ -145,7 +145,7 @@ export default function Home() {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaGetStaticProps: GetStaticProps = async () => {
   return {
     props: {},
   };
