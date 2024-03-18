@@ -7,8 +7,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useLanguage } from "../context/LanguageContext";
 import { TranslationsType } from "../types/TranslationsType";
 import Image, { StaticImageData } from "next/image";
-import duckCoachDesktop from "../public/images/duck-coach-desktop.webp";
-import duckCoachMobile from "../public/images/duck-coach-mobile.webp";
+import duckCoachDesktop from "../public/images/index/duck-coach-desktop.webp";
+import duckCoachMobile from "../public/images/index/duck-coach-mobile.webp";
 import Loader from "../components/Loader/Loader";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
@@ -111,7 +111,6 @@ export default function Home() {
           name="keywords"
           content="The Wise Duck Dev, Full Stack JS Developer, JavaScript, React Developer, Web Mobile Developer, Next.js, TypeScript, Web Development Canada, Web Development USA, React Development, Full Stack JS Solutions, Innovative Web Solutions"
         />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -142,22 +141,15 @@ export default function Home() {
         />
         {siteUrl && (
           <>
-            <link
-              rel="alternate"
-              hrefLang="en"
-              href={`https://${siteUrl}${this.props.__NEXT_DATA__.page}`}
-            />
+            <link rel="alternate" hrefLang="en" href={`https://${siteUrl}`} />
             <link
               rel="alternate"
               hrefLang="fr"
-              href={`https://${siteUrl}/fr${this.props.__NEXT_DATA__.page}`}
+              href={`https://${siteUrl}/fr`}
             />
           </>
         )}
-        <link
-          rel="canonical"
-          href={`https://${siteUrl}${this.props.__NEXT_DATA__.page}`}
-        />
+        <link rel="canonical" href={`https://${siteUrl}`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(indexSchema) }}

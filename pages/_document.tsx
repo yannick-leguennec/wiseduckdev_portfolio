@@ -34,46 +34,50 @@ class MyDocument extends Document<MyDocumentProps> {
             content="9C11EB658145B51F44EA72C0B64FEA80"
           />
           <meta charSet="UTF-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          />
+
           <meta name="author" content="The Wise Duck Dev" />
-          <meta httpEquiv="Content-Language" content="en" />
-          <link rel="icon" href={`https://${siteUrl}/favicons/favicon.ico`} />
+          <link rel="icon" href="/favicon.ico" />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href={`https://${siteUrl}/favicons/apple-touch-icon.png`}
+            href={`https://${siteUrl}/images/favicons/apple-touch-icon.png`}
           />
           <link
             rel="icon"
-            href={`https://${siteUrl}/favicons/favicon-chrome-192x192.png`}
+            href={`https://${siteUrl}/images/favicons/favicon-chrome-192x192.png`}
             type="image/png"
             sizes="192x192"
           />
           <link
             rel="icon"
-            href={`https://${siteUrl}/favicons/favicon-chrome-96x96.png`}
+            href={`https://${siteUrl}/images/favicons/favicon-chrome-96x96.png`}
             type="image/png"
             sizes="96x96"
           />
           <link
             rel="icon"
-            href={`https://${siteUrl}/favicons/favicon-chrome-48x48.png`}
+            href={`https://${siteUrl}/images/favicons/favicon-chrome-48x48.png`}
             type="image/png"
             sizes="48x48"
           />
           <link
             rel="shortcut icon"
-            href={`https://${siteUrl}/favicons/favicon-chrome-48x48.png`}
+            href={`https://${siteUrl}/images/favicons/favicon-chrome-48x48.png`}
             type="image/png"
           />
           <link
             rel="icon"
-            href={`https://${siteUrl}/favicons/favicon-32x32.png`}
+            href={`https://${siteUrl}/images/favicons/favicon-32x32.png`}
             type="image/png"
             sizes="32x32"
           />
           <link
             rel="icon"
-            href={`https://${siteUrl}/favicons/favicon-16x16.png`}
+            href={`https://${siteUrl}/images/favicons/favicon-16x16.png`}
             type="image/png"
             sizes="16x16"
           />
@@ -81,37 +85,37 @@ class MyDocument extends Document<MyDocumentProps> {
             rel="android-chrome"
             sizes="192x192"
             type="image/png"
-            href={`https://${siteUrl}/favicons/android-chrome-192x192.png`}
+            href={`https://${siteUrl}/images/favicons/android-chrome-192x192.png`}
           />
           <link
             rel="android-chrome"
             sizes="512x512"
             type="image/png"
-            href={`https://${siteUrl}/favicons/android-chrome-512x512.png`}
+            href={`https://${siteUrl}/images/favicons/android-chrome-512x512.png`}
           />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
             type="image/png"
-            href={`https://${siteUrl}/favicons/apple-icon-180x180.png`}
+            href={`https://${siteUrl}/images/favicons/apple-icon-180x180.png`}
           />
           <link
             rel="apple-touch-icon"
             sizes="152x152"
             type="image/png"
-            href={`https://${siteUrl}/favicons/apple-icon-152x152.png`}
+            href={`https://${siteUrl}/images/favicons/apple-icon-152x152.png`}
           />
           <link
             rel="apple-touch-icon"
             sizes="120x120"
             type="image/png"
-            href={`https://${siteUrl}/favicons/apple-icon-120x120.png`}
+            href={`https://${siteUrl}/images/favicons/apple-icon-120x120.png`}
           />
           <link
             rel="apple-touch-icon"
             sizes="76x76"
             type="image/png"
-            href={`https://${siteUrl}/favicons/apple-icon-76x76.png`}
+            href={`https://${siteUrl}/images/favicons/apple-icon-76x76.png`}
           />
           <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
           <link rel="manifest" href="/site.webmanifest" />

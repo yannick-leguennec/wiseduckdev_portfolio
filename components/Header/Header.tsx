@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import Image from "next/image";
-import logo from "../../public/images/simple_logo.png";
+import logo from "../../public/images/logos/simple_logo.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import classes from "./Header.module.scss";
 import { TranslationsType } from "../../types/TranslationsType";
