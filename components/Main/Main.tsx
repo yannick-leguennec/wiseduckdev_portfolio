@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import classes from "./Main.module.scss";
 import Image from "next/image";
-import desktopImage from "../../public/images/duck-main.webp";
-import mobileImage from "../../public/images/duck-main-mobile.webp";
+import desktopImage from "../../public/images/index/duck-main.webp";
+import mobileImage from "../../public/images/index/duck-main-mobile.webp";
 import { TranslationsType } from "../../types/TranslationsType";
 
 function Main() {

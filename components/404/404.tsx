@@ -2,7 +2,7 @@
 
 import classes from "./404.module.scss";
 import Image from "next/image";
-import photo from "../../public/images/duck_drink.webp";
+import photo from "../../public/images/404/duck_drink.webp";
 import { TranslationsType } from "../../types/TranslationsType";
 
 function NotFound() {

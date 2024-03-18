@@ -1,0 +1,184 @@
+{
+  "1": {
+    "EN": {
+      "id": 1,
+      "name": "SEO Mastermind",
+      "category": "optimization",
+      "image": "/images/gpts/seo-mastermind.webp",
+      "short": "SEO Mastermind: Elevate your digital presence with AI-powered SEO insights tailored for every skill level.",
+      "description": "Dive into the world of SEO Mastermind, your ultimate AI companion in the vast and ever-changing landscape of Search Engine Optimization. Crafted with cutting-edge technology and enriched with the latest SEO knowledge, SEO Mastermind is not just a tool; it's your pathway to mastering digital visibility. Whether you're a budding developer, a curious marketer, or an SEO expert, it's designed to elevate your online presence. Its intuitive interface and adaptive learning capabilities make complex SEO strategies accessible and actionable. Embrace the power of SEO Mastermind and transform the way you navigate the digital world.",
+      "modes": {
+        "/general": "Your go-to for broad SEO queries. Ask anything, from basics to trends.",
+        "/developer": "Tailored for developers, this mode addresses your technical SEO questions.",
+        "/improve": "Share your website's URL for personalized SEO enhancement tips.",
+        "/social": "Focus on leveraging social media to boost your SEO efforts."
+      }
+    },
+    "FR": {
+      "id": 1,
+      "name": "SEO Mastermind",
+      "category": "optimization",
+      "image": "/images/gpts/seo-mastermind.webp",
+      "short": "SEO Mastermind: Élevez votre présence numérique avec des informations SEO alimentées par l'IA adaptées à tous les niveaux de compétence.",
+      "description": "Plongez dans l'univers de SEO Mastermind, votre compagnon AI ultime dans le vaste paysage en perpétuelle évolution de l'Optimisation pour les Moteurs de Recherche. Conçu avec la technologie de pointe et enrichi des dernières connaissances en SEO, SEO Mastermind n'est pas juste un outil ; c'est votre chemin vers la maîtrise de la visibilité digitale. Que vous soyez un développeur en herbe, un marketeur curieux ou un expert en SEO, il est conçu pour élever votre présence en ligne. Son interface intuitive et ses capacités d'apprentissage adaptatif rendent les stratégies SEO complexes accessibles et applicables. Embrassez la puissance de SEO Mastermind et transformez votre manière de naviguer dans le monde digital.",
+      "modes": {
+        "/general": "Votre référence pour les requêtes SEO générales. Posez toutes vos questions, des bases aux tendances.",
+        "/developer": "Adapté aux développeurs, ce mode répond à vos questions techniques sur le SEO.",
+        "/improve": "Partagez l'URL de votre site Web pour obtenir des conseils personnalisés d'amélioration du SEO.",
+        "/social": "Concentrez-vous sur l'utilisation des médias sociaux pour renforcer vos efforts de SEO."
+      }
+    }
+  },
+  "2": {
+    "EN": {
+      "id": 2,
+      "name": "Vite Copilot",
+      "category": "frontend",
+      "image": "/images/gpts/vite-copilot.webp",
+      "short": "Vite Copilot: Streamline your web development with AI-driven insights and optimizations for the Vite Framework.",
+      "description": "Step into the realm of Vite Copilot, your AI-powered guide through the intricacies of modern web development using the Vite Framework. Designed for developers by developers, this assistant harnesses the latest in AI technology to provide real-time, actionable insights tailored to your specific project needs. From speeding up your development process with hot module replacement to optimizing your final build for production, the Vite Copilot is your all-encompassing tool. Its user-friendly interface and deep integration with the Vite ecosystem empower you to push the boundaries of web performance and innovation.",
+      "modes": {
+        "/general": "Get an overview and essential insights into using the Vite Framework.",
+        "/solution": "Seek specific solutions to your Vite Framework development challenges.",
+        "/debug": "Diagnose and troubleshoot issues within your Vite projects efficiently.",
+        "/explain": "Understand complex Vite concepts in simple, easy-to-grasp explanations."
+      }
+    },
+    "FR": {
+      "id": 2,
+      "name": "Vite Copilot",
+      "category": "frontend",
+      "image": "/images/gpts/vite-copilot.webp",
+      "short": "Vite Copilot : Optimisez votre développement web avec des insights et optimisations pilotés par IA pour le Cadre Vite.",
+      "description": "Plongez dans l'univers de Vite Copilot, votre guide alimenté par IA à travers les complexités du développement web moderne en utilisant le Cadre Vite. Conçu pour les développeurs par des développeurs, cet assistant utilise la dernière technologie IA pour fournir des insights actionnables en temps réel, adaptés aux besoins spécifiques de votre projet. De l'accélération de votre processus de développement avec le remplacement de module à chaud à l'optimisation de votre build final pour la production, Vite Coptilot est votre outil tout-en-un. Son interface conviviale et son intégration profonde avec l'écosystème Vite vous permettent de repousser les limites de la performance et de l'innovation web.",
+      "modes": {
+        "/general": "Obtenez un aperçu et des insights essentiels sur l'utilisation du Cadre Vite.",
+        "/solution": "Recherchez des solutions spécifiques à vos défis de développement avec le Cadre Vite.",
+        "/debug": "Diagnostiquez et résolvez efficacement les problèmes au sein de vos projets Vite.",
+        "/explain": "Comprenez les concepts complexes de Vite dans des explications simples et faciles à saisir."
+      }
+    }
+  },
+  "3": {
+    "EN": {
+      "id": 3,
+      "name": "React Copilot",
+      "category": "frontend",
+      "image": "/images/gpts/react-copilot.webp",
+      "short": "React Copilot: Unleash the full potential of React, Redux, and TypeScript with tailored AI assistance.",
+      "description": "Step into the realm of React Copilot, your AI-powered guide in mastering React, Redux, and TypeScript for front-end development. Designed to bridge the gap between theory and practice, React Copilot offers an unparalleled learning experience. From beginners to seasoned developers, it provides actionable insights, personalized advice, and in-depth knowledge to enhance your web applications. Its intuitive interface and interactive problem-solving approach empower you to tackle challenges, refine your skills, and innovate with confidence.",
+      "modes": {
+        "/general": "Gain a comprehensive understanding of React, Redux, and TypeScript fundamentals and best practices.",
+        "/solution": "Receive customized advice and strategies to overcome your project-specific challenges.",
+        "/debug": "Diagnose and resolve issues with step-by-step guidance tailored to your development needs.",
+        "/explain": "Break down complex concepts into understandable insights, improving your coding proficiency."
+      }
+    },
+    "FR": {
+      "id": 3,
+      "name": "React Copilot",
+      "category": "frontend",
+      "image": "/images/gpts/react-copilot.webp",
+      "short": "React Copilot : Libérez le plein potentiel de React, Redux et TypeScript avec une assistance IA sur mesure.",
+      "description": "Entrez dans le domaine de React Copilot, votre guide alimenté par l'IA pour maîtriser React, Redux et TypeScript en développement front-end. Conçu pour combler le fossé entre théorie et pratique, React Copilot offre une expérience d'apprentissage sans pareil. Des débutants aux développeurs expérimentés, il fournit des aperçus actionnables, des conseils personnalisés et une connaissance approfondie pour améliorer vos applications web. Son interface intuitive et son approche de résolution de problèmes interactive vous permettent de relever les défis, de perfectionner vos compétences et d'innover en toute confiance.",
+      "modes": {
+        "/general": "Acquérir une compréhension complète des fondamentaux et des meilleures pratiques de React, Redux et TypeScript.",
+        "/solution": "Recevez des conseils personnalisés et des stratégies pour surmonter les défis spécifiques à votre projet.",
+        "/debug": "Diagnostiquer et résoudre les problèmes avec une orientation étape par étape adaptée à vos besoins de développement.",
+        "/explain": "Démystifiez les concepts complexes en aperçus compréhensibles, améliorant votre compétence en codage."
+      }
+    }
+  },
+  "4": {
+    "EN": {
+      "id": 4,
+      "name": "Vitest Copilot",
+      "category": "testing",
+      "image": "/images/gpts/vitest-copilot.webp",
+      "short": "Vitest Copilot: Harness the power of Vitest for streamlined JavaScript testing.",
+      "description": "Vitest Copilot is your premier AI-driven companion designed to navigate the complexities of the Vitest testing framework, making testing a breeze. This tool is the bridge between you and advanced, efficient testing methods, turning intricate test scenarios into manageable, straightforward tasks. Whether you're a novice or a seasoned developer, Vitest Copilot guides you through unit, integration, and e2e tests with ease, ensuring your code's reliability and performance.",
+      "modes": {
+        "/unit": "Focuses on testing individual functions or components for expected outcomes, ensuring they perform correctly in isolation.",
+        "/integration": "Examines the interactions between multiple components or systems to verify they work together seamlessly.",
+        "/e2e": "Simulates user scenarios to test the complete application flow, ensuring the overall system functions as intended.",
+        "/debug": "Provides targeted assistance for identifying and resolving issues within your tests, improving test accuracy and reliability."
+      }
+    },
+    "FR": {
+      "id": 4,
+      "name": "Vitest Copilot",
+      "category": "testing",
+      "image": "/images/gpts/vitest-copilot.webp",
+      "short": "Vitest Copilot : Exploitez la puissance de Vitest pour des tests JavaScript rationalisés.",
+      "description": "Vitest Copilot est votre compagnon AI de premier plan conçu pour naviguer dans les complexités du framework de test Vitest, rendant les tests un jeu d'enfant. Cet outil est le pont entre vous et des méthodes de test avancées et efficaces, transformant des scénarios de test complexes en tâches gérables et simples. Que vous soyez un novice ou un développeur expérimenté, Vitest Copilot vous guide à travers les tests unitaires, d'intégration et e2e avec facilité, assurant la fiabilité et la performance de votre code.",
+      "modes": {
+        "/unit": "Se concentre sur le test de fonctions ou de composants individuels pour des résultats attendus, garantissant leur bon fonctionnement en isolation.",
+        "/integration": "Examine les interactions entre plusieurs composants ou systèmes pour vérifier qu'ils fonctionnent ensemble de manière transparente.",
+        "/e2e": "Simule des scénarios utilisateurs pour tester le flux complet de l'application, assurant que le système global fonctionne comme prévu.",
+        "/debug": "Fournit une assistance ciblée pour identifier et résoudre les problèmes au sein de vos tests, améliorant l'exactitude et la fiabilité des tests."
+      }
+    }
+  },
+  "5": {
+    "EN": {
+      "id": 5,
+      "name": "Web & Mobile App Project Manager",
+      "category": "project management",
+      "image": "/images/gpts/project-manager.webp",
+      "short": "The Web & Mobile App Project Manager: A pinnacle of project management expertise, optimizing web and mobile app development.",
+      "description": "Embark on a journey with the Web & Mobile App Project Manager, your premier AI guide through the intricacies of web and mobile application development. With an unmatched blend of professionalism, optimization, and perfection, it is not merely a tool but a transformative partner. Through its comprehensive modes, it offers tailored support for every phase of your project, from initial conception to final completion. Its interactive problem-solving and feedback integration ensure continuous improvement, making it an indispensable ally in achieving your development goals.",
+      "modes": {
+        "/general": "The foundational mode for overarching project management guidance, ideal for initial project scoping and broad queries.",
+        "/stories": "Focuses on crafting compelling user stories, crucial for aligning project goals with user needs and expectations.",
+        "/schedule": "Aids in constructing optimal schedules and task allocations, maximizing efficiency and adherence to timelines.",
+        "/specifications": "Dedicated to defining clear, detailed project specifications, ensuring all project aspects are meticulously planned.",
+        "/design": "Converts conceptual design visions into tangible, aligned project outcomes, facilitating creativity within project constraints."
+      }
+    },
+    "FR": {
+      "id": 5,
+      "name": "Web & Mobile App Project Manager",
+      "category": "gestion de projet",
+      "image": "/images/gpts/project-manager.webp",
+      "short": "Web & Mobile App Project Manager : Un sommet d'expertise en gestion de projet, optimisant le développement d'applications web et mobile.",
+      "description": "Embarquez dans un voyage avec l'Web & Mobile App Project Manager, votre guide AI de premier choix à travers les complexités du développement d'applications web et mobile. Avec un mélange inégalé de professionnalisme, d'optimisation et de perfection, ce n'est pas simplement un outil mais un partenaire transformateur. À travers ses modes complets, il offre un soutien sur mesure pour chaque phase de votre projet, de la conception initiale à l'achèvement final. Son problème résolution interactive et l'intégration de retours assurent une amélioration continue, le rendant un allié indispensable pour atteindre vos objectifs de développement.",
+      "modes": {
+        "/general": "Le mode fondamental pour une orientation globale en gestion de projet, idéal pour le cadrage initial du projet et les requêtes larges.",
+        "/stories": "Se concentre sur la création d'histoires d'utilisateurs captivantes, cruciales pour aligner les objectifs du projet avec les besoins et attentes des utilisateurs.",
+        "/schedule": "Aide à construire des plannings optimaux et des allocations de tâches, maximisant l'efficience et l'adhérence aux délais.",
+        "/specifications": "Dédié à la définition de spécifications de projet claires et détaillées, assurant que tous les aspects du projet sont méticuleusement planifiés.",
+        "/design": "Transforme les visions de conception conceptuelles en résultats de projet tangibles et alignés, facilitant la créativité dans les contraintes du projet."
+      }
+    }
+  },
+  "6": {
+    "EN": {
+      "id": 6,
+      "name": "Docker & Kubernetes Copilot",
+      "category": "optimization",
+      "image": "/images/gpts/docker-copilot.webp",
+      "short": "Docker & Kubernetes Copilot: Your expert companion for mastering Docker containers and Kubernetes orchestration.",
+      "description": "Embark on a transformative journey with Docker & Kubernetes Copilot, your trusted companion in the realm of containerization and orchestration. Whether you're a novice exploring the possibilities or a seasoned professional seeking optimization, our commitment remains unwavering—to empower you with the knowledge, skills, and confidence to navigate the intricate landscapes of Docker and Kubernetes effortlessly. Together, let's propel your projects to new heights of scalability, reliability, and innovation. With Docker & Kubernetes Copilot by your side, the horizon of possibilities in container technologies knows no bounds.",
+      "modes": {
+        "/general": "Get comprehensive insights and guidance on Docker and Kubernetes fundamentals.",
+        "/solution": "Share your challenges and goals to receive tailored solutions and best practices.",
+        "/debug": "Describe issues or bugs for a step-by-step troubleshooting process in your containerized environment.",
+        "/explain": "Gain clarity on complex Docker and Kubernetes concepts through simplified explanations and examples."
+      }
+    },
+    "FR": {
+      "id": 6,
+      "name": "Docker & Kubernetes Copilot",
+      "category": "optimization",
+      "image": "/images/gpts/docker-copilot.webp",
+      "short": "Docker & Kubernetes Copilot : Votre compagnon expert pour maîtriser les conteneurs Docker et l'orchestration Kubernetes.",
+      "description": "Embarquez dans un voyage transformateur avec Docker & Kubernetes Copilot, votre compagnon de confiance dans le domaine de la conteneurisation et de l'orchestration. Que vous soyez novice à la découverte des possibilités ou professionnel chevronné cherchant à optimiser, notre engagement reste inébranlable : vous doter des connaissances, des compétences et de la confiance pour naviguer sans effort dans les paysages complexes de Docker et Kubernetes. Ensemble, propulsons vos projets vers de nouveaux sommets de scalabilité, de fiabilité et d'innovation. Avec Docker & Kubernetes Copilot à vos côtés, l'horizon des possibilités dans les technologies de conteneurs ne connaît aucune limite.",
+      "modes": {
+        "/general": "Obtenez des informations et des conseils complets sur les fondamentaux de Docker et Kubernetes.",
+        "/solution": "Partagez vos défis et vos objectifs pour recevoir des solutions personnalisées et les meilleures pratiques.",
+        "/debug": "Décrivez les problèmes ou les bogues pour un processus de dépannage étape par étape dans votre environnement conteneurisé.",
+        "/explain": "Obtenez une clarification sur les concepts complexes de Docker et Kubernetes grâce à des explications simplifiées et des exemples."
+      }
+    }
+  }
+}

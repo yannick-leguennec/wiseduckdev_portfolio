@@ -7,8 +7,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useLanguage } from "../context/LanguageContext";
 import { TranslationsType } from "../types/TranslationsType";
 import Image, { StaticImageData } from "next/image";
-import duckCoachDesktop from "../public/images/duck-coach-desktop.webp";
-import duckCoachMobile from "../public/images/duck-coach-mobile.webp";
+import duckCoachDesktop from "../public/images/index/duck-coach-desktop.webp";
+import duckCoachMobile from "../public/images/index/duck-coach-mobile.webp";
 import Loader from "../components/Loader/Loader";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
@@ -26,6 +26,8 @@ export default function Home() {
   const { activeLanguage } = useLanguage();
   // State to manage the initial content loading
   const [initialContentLoaded, setInitialContentLoaded] = useState(false);
+  // Site URL
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
   // Loading the page for 2 seconds at the beginning
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -105,7 +107,49 @@ export default function Home() {
           name="description"
           content={translation.pageDescription[activeLanguage]}
         />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="keywords"
+          content="The Wise Duck Dev, Full Stack JS Developer, JavaScript, React Developer, Web Mobile Developer, Next.js, TypeScript, Web Development Canada, Web Development USA, React Development, Full Stack JS Solutions, Innovative Web Solutions"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="The Wise Duck Dev - Full Stack JS Developer specialized in React"
+        />
+        <meta
+          property="og:description"
+          content="The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React."
+        />
+        <meta property="og:url" content={`https://${siteUrl}`} />
+        <meta
+          property="og:image"
+          content={`https://${siteUrl}/images/metadata_profil_picture.webp`}
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@wiseduckedv" />
+        <meta
+          name="twitter:title"
+          content="The Wise Duck Dev - Full Stack JS Developer specialized in React"
+        />
+        <meta
+          name="twitter:description"
+          content="The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React."
+        />
+        <meta
+          name="twitter:image"
+          content={`https://${siteUrl}/images/metadata_profil_picture.webp`}
+        />
+        {siteUrl && (
+          <>
+            <link rel="alternate" hrefLang="en" href={`https://${siteUrl}`} />
+            <link
+              rel="alternate"
+              hrefLang="fr"
+              href={`https://${siteUrl}/fr`}
+            />
+          </>
+        )}
+        <link rel="canonical" href={`https://${siteUrl}`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(indexSchema) }}

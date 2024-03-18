@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
 import classes from "./Loader.module.scss";
-import logo from "../../public/images/simple_logo.png";
+import logo from "../../public/images/logos/simple_logo.png";
 
 function Loader() {
   // Get the active language from the context
