@@ -34,58 +34,9 @@ class MyDocument extends Document<MyDocumentProps> {
             content="9C11EB658145B51F44EA72C0B64FEA80"
           />
           <meta charSet="UTF-8" />
-          <meta
-            name="keywords"
-            content="The Wise Duck Dev, Full Stack JS Developer, JavaScript, React Developer, Web Mobile Developer, Next.js, TypeScript, Web Development Canada, Web Development USA, React Development, Full Stack JS Solutions, Innovative Web Solutions"
-          />
           <meta name="author" content="The Wise Duck Dev" />
-          <meta property="og:type" content="website" />
-          <meta
-            property="og:title"
-            content="The Wise Duck Dev - Full Stack JS Developer specialized in React"
-          />
-          <meta
-            property="og:description"
-            content="The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React."
-          />
-          <meta property="og:url" content={`https://${siteUrl}`} />
-          <meta
-            property="og:image"
-            content={`https://${siteUrl}/images/metadata_profil_picture.webp`}
-          />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@wiseduckedv" />
-          <meta
-            name="twitter:title"
-            content="The Wise Duck Dev - Full Stack JS Developer specialized in React"
-          />
-          <meta
-            name="twitter:description"
-            content="The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React."
-          />
-          <meta
-            name="twitter:image"
-            content={`https://${siteUrl}/images/metadata_profil_picture.webp`}
-          />
-          {siteUrl && (
-            <>
-              <link
-                rel="alternate"
-                hrefLang="en"
-                href={`https://${siteUrl}${this.props.__NEXT_DATA__.page}`}
-              />
-              <link
-                rel="alternate"
-                hrefLang="fr"
-                href={`https://${siteUrl}/fr${this.props.__NEXT_DATA__.page}`}
-              />
-            </>
-          )}
-          <link
-            rel="canonical"
-            href={`https://${siteUrl}${this.props.__NEXT_DATA__.page}`}
-          />
-          <meta httpEquiv="Content-Language" content="en" />.
+          <meta httpEquiv="Content-Language" content="en" />
+          <link rel="icon" href={`https://${siteUrl}/favicons/favicon.ico`} />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
