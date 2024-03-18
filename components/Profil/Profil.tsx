@@ -11,8 +11,7 @@ function Profil() {
   // Site URL
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
   // Determine the GPTs link based on the active language
-  const gptsLink =
-    activeLanguage === "FR" ? `${siteUrl}/fr/gpts` : `${siteUrl}/gpts`;
+  const gptsLink = activeLanguage === "FR" ? `/fr/gpts` : `/gpts`;
 
   // Object to store the translations
   const translations: TranslationsType = {
