@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
 import classes from "./Profil.module.scss";
@@ -7,6 +8,11 @@ import profilePicture from "../../public/images/index/profil_picture.webp";
 function Profil() {
   // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
+  // Site URL
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  // Determine the GPTs link based on the active language
+  const gptsLink =
+    activeLanguage === "FR" ? `${siteUrl}/fr/gpts` : `${siteUrl}/gpts`;
 
   // Object to store the translations
   const translations: TranslationsType = {
@@ -47,8 +53,8 @@ function Profil() {
       FR: "Apprentissage continue",
     },
     point7: {
-      EN: "AI Enthusiast",
-      FR: "Passionné d'IA",
+      EN: "AI Enthusiast (Discover my GPTs ",
+      FR: "Passionné d'IA (Découvrez mes GPTs ",
     },
     description2: {
       EN: "Looking for a cutting edge web and web developer? Let's connect and chart the course to success in the vast digital landscape.",
@@ -101,7 +107,13 @@ function Profil() {
           <li>{translations.point4[activeLanguage]}</li>
           <li>{translations.point5[activeLanguage]}</li>
           <li>{translations.point6[activeLanguage]}</li>
-          <li>{translations.point7[activeLanguage]}</li>
+          <li>
+            {translations.point7[activeLanguage]}
+            <Link href={gptsLink} className={`${classes.gptsLinkOrange}`}>
+              {activeLanguage === "FR" ? "ici" : "here"}
+            </Link>
+            {")"}
+          </li>
         </ul>
         <p>{translations.description2[activeLanguage]}</p>
         <div className={`${classes.buttonContainer}`}>

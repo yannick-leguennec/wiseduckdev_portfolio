@@ -2,8 +2,12 @@ import classes from "./Footer.module.scss";
 import { FaGithub } from "react-icons/fa";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
+import { FaRobot } from "react-icons/fa";
 
 function Footer() {
+  // Site URL
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
   return (
     <footer className={classes.footer}>
       <div className={classes.linksContainer}>
