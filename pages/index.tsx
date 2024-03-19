@@ -120,11 +120,11 @@ export default function Home() {
           property="og:description"
           content="The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React."
         />
-        <meta property="og:url" content={`https://${siteUrl}`} />
         <meta
           property="og:image"
-          content={`https://${siteUrl}/images/metadata_profil_picture.webp`}
+          content={`https://${siteUrl}/images/index/metadata_profil_picture.webp`}
         />
+        <meta property="og:url" content={`https://${siteUrl}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@wiseduckedv" />
         <meta
@@ -137,7 +137,7 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content={`https://${siteUrl}/images/metadata_profil_picture.webp`}
+          content={`https://${siteUrl}/images/index/metadata_profil_picture.webp`}
         />
         {siteUrl && (
           <>
