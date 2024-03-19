@@ -7,6 +7,7 @@ import { TranslationsType } from "../../types/TranslationsType";
 import main_picture from "../../public/images/gpts/duck-mib-main.webp";
 import Header from "../../components/Header/Header";
 import Main_GPTs from "../../components/Main_GPTs/Main_GPTs";
+import GPTs from "../../components/GPTs/GPTs";
 import Footer from "../../components/Footer/Footer";
 
 export default function GPTS() {
@@ -14,6 +15,7 @@ export default function GPTS() {
     <>
       <Header />
       <Main_GPTs />
+      <GPTs />
       <Footer />
     </>
   );

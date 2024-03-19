@@ -16,7 +16,7 @@ function Main_GPTs() {
     },
     subtitle: {
       EN: "Unlocking Web Development Potential: Specialized GPTs for Every Developer's Need",
-      FR: "Relâchez votre potentiel de développer: GPTs spécialisés en développement web et mobile",
+      FR: "Relâchez votre potentiel de développeur: GPTs spécialisés en développement web et mobile",
     },
     subtitle2: {
       EN: "Specialized GPTs for Every Developer's Need",
@@ -27,8 +27,8 @@ function Main_GPTs() {
       FR: "Bienvenue dans le futur du développement web et web mobile avec les GPTs de The Wise Duck Dev. Que vous amélioriez vos compétences en frontend, que vous vous plongiez dans les complexités du backend ou que vous exploriez de nouveaux frameworks et la technologie blockchain, nos GPTs spécialisés sont conçus pour élever votre productivité et votre créativité. Plongez dans notre suite complète d'outils alimentés par l'IA conçus pour les développeurs et les programmeurs dans divers domaines, y compris la gestion de bases de données, l'optimisation de la conception, l'automatisation, et plus encore. Rejoignez-nous pour révolutionner les flux de travail de développement et repousser les limites de ce qui est possible.",
     },
     alt: {
-      EN: "Main picture of the GPTs project",
-      FR: "Imagen principal del proyecto GPTs",
+      EN: "Certified Full-Stack Developer Wise Duck Dev in Men in Black Attire, Expert in React and AI-Enhanced Web Technologies - Creator of GPTs specialized in coding for web and mobile development",
+      FR: "Développeur Full-Stack certifié Wise Duck Dev habillé comme un Men in Black, expert en React et en technologies web améliorées par l'IA - Créateur de GPTs spécialisés pour le développement web et mobile",
     },
     button: {
       EN: "Discover the GPTs",
@@ -36,36 +36,54 @@ function Main_GPTs() {
     },
   };
 
-  return (
-    <>
-      <main className={classes.main}>
-        <div className={classes.textContainer}>
-          <h1 className={classes.title}>
-            The Wise Duck Dev <span className={classes.span}>GPTs</span>
-          </h1>
-          <h2 className={classes.subtitle}>
-            {translation.subtitle[activeLanguage]}
-          </h2>
+  // Function to scroll to the GPTs section
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const elementPosition =
+        element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - window.innerHeight * (6 / 100);
 
-          <p className={classes.description}>
-            {translation.description[activeLanguage]}
-          </p>
-          <div className={classes.buttonContainer}>
-            <button className={classes.button}>
-              {translation.button[activeLanguage]}
-            </button>
-          </div>
+      requestAnimationFrame(() => {
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      });
+    }
+  };
+
+  return (
+    <section id="main_gpts" className={classes.main}>
+      <div className={classes.textContainer}>
+        <h1 className={classes.title}>
+          The Wise Duck Dev <span className={classes.span}>GPTs</span>
+        </h1>
+        <h2 className={classes.subtitle}>
+          {translation.subtitle[activeLanguage]}
+        </h2>
+
+        <p className={classes.description}>
+          {translation.description[activeLanguage]}
+        </p>
+        <div className={classes.buttonContainer}>
+          <button
+            onClick={() => scrollToSection("gpts")}
+            className={classes.button}
+          >
+            {translation.button[activeLanguage]}
+          </button>
         </div>
-        <div className={classes.imageContainer}>
-          <Image
-            src={main_picture}
-            alt={translation.alt[activeLanguage]}
-            className={classes.image}
-            priority
-          />
-        </div>
-      </main>
-    </>
+      </div>
+      <div className={classes.imageContainer}>
+        <Image
+          src={main_picture}
+          alt={translation.alt[activeLanguage]}
+          className={classes.image}
+          priority
+        />
+      </div>
+    </section>
   );
 }
 

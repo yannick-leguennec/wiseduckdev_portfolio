@@ -5,8 +5,10 @@
 
 // Main Container
 .main {
+  position: relative;
   margin-top: 6vh;
   min-height: 94vh;
+  max-height: 94vh;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -17,10 +19,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 4rem;
-  }
-
-  @media (max-width: 768px) {
-    padding-top: 2rem;
+    max-height: 100%;
   }
 }
 
@@ -43,7 +42,7 @@
 .textContainer {
   position: absolute;
   width: 45%;
-  top: 20%;
+  top: 17%;
   right: 45%;
 
   @media (max-width: 1024px) {
@@ -55,7 +54,7 @@
   }
 
   @media (max-width: 768px) {
-    width: 90%;
+    width: 87%;
   }
 }
 
@@ -102,7 +101,7 @@
 
 // Description
 .description {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
 
   @media (max-width: 1024px) {
