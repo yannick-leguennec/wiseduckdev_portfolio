@@ -1,0 +1,123 @@
+// VARIABLES
+@import "variables";
+// MIXINS
+@import "mixins";
+
+// Main Container
+.main {
+  margin-top: 6vh;
+  min-height: 94vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: $gpts-background-page-color;
+
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 2rem;
+  }
+}
+
+// Image Container
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 65%;
+
+  @media (max-width: 1024px) {
+    position: relative;
+    width: 100%;
+    margin-top: 4rem;
+  }
+}
+
+// Text Container
+.textContainer {
+  position: absolute;
+  width: 45%;
+  top: 20%;
+  right: 45%;
+
+  @media (max-width: 1024px) {
+    position: relative;
+    width: 80%;
+    top: 0%;
+    right: 0%;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+}
+
+// Title
+.title {
+  font-size: 4rem;
+
+  @media (max-width: 1024px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.span {
+  font-size: 4rem;
+  font-family: "Caramel", sans-serif;
+
+  @media (max-width: 1024px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.9rem;
+  }
+}
+
+// Subtitle
+.subtitle {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 1024px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+// Description
+.description {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 1024px) {
+    font-size: 1rem;
+  }
+}
+
+// Button Container
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  @include button-style;
+  text-align: center;
+}

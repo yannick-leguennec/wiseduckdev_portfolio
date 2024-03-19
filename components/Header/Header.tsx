@@ -96,7 +96,7 @@ function Header() {
   // New navigation items for GPTs and Blog pages
   const newNavItems = [
     {
-      name: "Portfolio",
+      name: "Portfolio Dev",
       path: locale === "fr" ? "/fr" : "/",
       key: "portfolio",
     },
