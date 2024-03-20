@@ -87,9 +87,25 @@
   background-color: transparent;
 }
 
+// BUTTONS CONTAINER
+.buttonsContainer {
+  width: auto;
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+
+  @media (max-width: 1024px) {
+    width: 70%;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+}
+
 // GPTs Cards CONTAINER
 .cardsContainer {
-  width: 50%;
+  width: 60%;
   padding: 2rem;
   display: flex;
   flex-wrap: wrap;

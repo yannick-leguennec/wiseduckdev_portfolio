@@ -44,12 +44,22 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   // Determine the active language based on the current locale
   const activeLanguage: Language = locale === "fr" ? "FR" : "EN";
 
-  // Modify the active language and update the URL
   const toggleLanguage = useCallback(
     (lang: Language) => {
+      // Store current scroll position before changing the language
+      localStorage.setItem("scrollPosition", window.scrollY.toString());
+
       const newLocale = lang.toLowerCase(); // 'en' or 'fr'
       const path = `${router.pathname}${window.location.hash}`;
-      router.push(path, path, { locale: newLocale });
+      router.push(path, path, { locale: newLocale }).then(() => {
+        // Restore the scroll position after the page has updated
+        const savedPosition = localStorage.getItem("scrollPosition");
+        if (savedPosition) {
+          window.scrollTo(0, parseInt(savedPosition, 10));
+          localStorage.removeItem("scrollPosition"); // Clean up
+        }
+      });
+
       localStorage.setItem("appLanguage", newLocale.toUpperCase());
     },
     [router]

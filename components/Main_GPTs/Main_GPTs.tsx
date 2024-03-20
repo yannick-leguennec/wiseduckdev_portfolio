@@ -10,10 +10,6 @@ function Main_GPTs() {
 
   // Object to store the translations for the alt attribute of the main picture
   const translation: TranslationsType = {
-    title: {
-      EN: "Main picture of the GPTs project",
-      FR: "Imagen principal del proyecto GPTs",
-    },
     subtitle: {
       EN: "Unlocking Web Development Potential: Specialized GPTs for Every Developer's Need",
       FR: "Relâchez votre potentiel de développeur: GPTs spécialisés en développement web et mobile",
