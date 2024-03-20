@@ -5,7 +5,22 @@
   font-size: 1.2rem;
   font-weight: 600;
   color: white;
-  background-color: $button-color; // Utilisation de la variable de couleur principale
+  background-color: $button-color;
+  border-radius: 25px;
+  width: fit-content;
+  padding: 0.5rem 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+@mixin button-style-reverted {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $button-color;
+  background-color: rgb(252, 250, 243);
+  border: 1px solid black;
   border-radius: 25px;
   width: fit-content;
   padding: 0.5rem 2rem;

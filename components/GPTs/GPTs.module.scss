@@ -1,5 +1,7 @@
 // VARIABLES
 @import "variables";
+// MIXINS
+@import "mixins";
 
 // MAIN CONTAINER
 .mainContainer {
@@ -49,6 +51,22 @@
   }
 }
 
+// COLLECTIONS TITLE
+.collectionTitle {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-top: 2rem;
+
+  @media (max-width: 1024px) {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+  }
+}
+
 // SEARCH BARRE
 .searchContainer {
   display: flex;
@@ -60,6 +78,7 @@
   border-radius: 25px;
 
   @media (max-width: 1024px) {
+    height: 3.5rem;
     width: 70%;
   }
 
@@ -73,6 +92,10 @@
   width: auto;
   margin: 0 1rem;
   color: #bcc5c2;
+
+  @media (max-width: 1024px) {
+    height: 30px;
+  }
 }
 
 .searchInput {
@@ -85,12 +108,17 @@
   border-radius: 25px;
   padding: 0 1rem;
   background-color: transparent;
+
+  @media (max-width: 1024px) {
+    font-size: 1rem;
+  }
 }
 
 // BUTTONS CONTAINER
 .buttonsContainer {
   width: auto;
   display: flex;
+  justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
 
@@ -99,8 +127,25 @@
   }
 
   @media (max-width: 768px) {
+    gap: 1rem;
     width: 90%;
   }
+}
+
+// BUTTON
+.button {
+  @include button-style;
+}
+
+.buttonReverted {
+  @include button-style-reverted;
+}
+
+// Results infos
+.resultsInfo {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 // GPTs Cards CONTAINER

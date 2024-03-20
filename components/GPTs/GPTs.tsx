@@ -21,6 +21,8 @@ const GPTs = () => {
   const [filteredCategories, setFilteredCategories] = useState([]);
   //   State to store the search term
   const [searchTerm, setSearchTerm] = useState("");
+  //  State to store if the search has been executed
+  const [searchExecuted, setSearchExecuted] = useState(false);
 
   // Fetch the GPTs categories data from the JSON file
   useEffect(() => {
@@ -51,36 +53,32 @@ const GPTs = () => {
     return array;
   }
 
-  //  Fetch the GPTs data from the JSON file
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/docs/GPTs/gpts_test.json");
-        const data = await response.json();
-        if (data) {
-          setGptsData(data[activeLanguage]);
-          setFilteredGPTs(data[activeLanguage]);
-        }
-      } catch (error) {
-        console.error("Failed to fetch GPTs data:", error);
+  const executeSearch = async () => {
+    if (!searchTerm.trim()) return; // Avoid searching with an empty or whitespace-only term
+
+    setSearchExecuted(false); // Optionally, indicate search is in progress by resetting the flag
+    setFilteredGPTs([]); // Clear previous search results before executing a new search
+
+    try {
+      const response = await fetch("/docs/GPTs/gpts_test.json");
+      const data = await response.json();
+      if (data) {
+        const value = searchTerm.toLowerCase();
+        const filteredData = data[activeLanguage].filter(
+          (gpt: GPTs_Card_Type) =>
+            gpt.name.toLowerCase().includes(value) ||
+            gpt.category?.toLowerCase().includes(value)
+        );
+        setFilteredGPTs(filteredData);
       }
-    };
-
-    fetchData();
-  }, [activeLanguage]);
-
-  const executeSearch = () => {
-    const value = searchTerm.toLowerCase();
-    const filteredData = gptsData.filter(
-      (gpt: GPTs_Card_Type) =>
-        gpt.name.toLowerCase().includes(value) ||
-        gpt.category?.toLowerCase().includes(value)
-    );
-    setFilteredGPTs(filteredData);
+    } catch (error) {
+      console.error("Failed to fetch GPTs data:", error);
+    }
+    setSearchExecuted(true); // Indicate that a search has been executed
   };
 
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(event.target.value);
+  const handleSearchClick = () => {
+    executeSearch();
   };
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -89,13 +87,15 @@ const GPTs = () => {
     }
   };
 
+  // Use this function to reset the search state and clear results
   const resetSearch = () => {
     setSearchTerm("");
-    setFilteredGPTs(gptsData);
+    setFilteredGPTs([]);
+    setSearchExecuted(false);
   };
 
-  const handleSearchClick = () => {
-    executeSearch();
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
   };
 
   //   Object to store the translations for the title and subtitle
@@ -120,6 +120,10 @@ const GPTs = () => {
       EN: "No results found matching your search.",
       FR: "Aucun résultat trouvé correspondant à votre recherche.",
     },
+    collection: {
+      EN: "GPTs Collections",
+      FR: "Collections de GPTs",
+    },
   };
 
   return (
@@ -140,14 +144,25 @@ const GPTs = () => {
         />
       </div>
       <div className={classes.buttonsContainer}>
-        <button onClick={resetSearch}>Reset</button>
-        <button onClick={handleSearchClick}>Search</button>
+        <button onClick={resetSearch} className={classes.buttonReverted}>
+          Reset
+        </button>
+        <button onClick={handleSearchClick} className={classes.button}>
+          Search
+        </button>
       </div>
-      <div className={classes.resultsInfo}>
-        {filteredGPTs.length > 0
-          ? `${filteredGPTs.length} ${translations.results[activeLanguage]}`
-          : `${translations.noResults[activeLanguage]}`}
-      </div>
+
+      {searchExecuted ? (
+        <div className={classes.resultsInfo}>
+          {filteredGPTs.length > 0
+            ? `${filteredGPTs.length} ${translations.results[activeLanguage]}`
+            : `${translations.noResults[activeLanguage]}`}
+        </div>
+      ) : (
+        <h2 className={classes.collectionTitle}>
+          {translations.collection[activeLanguage]}
+        </h2>
+      )}
 
       <div className={classes.cardsContainer}>
         {searchTerm === "" || (searchTerm !== "" && filteredGPTs.length === 0)
