@@ -2,7 +2,7 @@ import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
 import classes from "./Profil.module.scss";
 import Image from "next/image";
-import profilePicture from "../../public/images/index/profil_picture.webp";
+import profilePicture from "../../public/images/index/full-stack-react-wise-duck-developer-profile.webp";
 
 function Profil() {
   // Custom hook to manage the language changes
@@ -55,8 +55,8 @@ function Profil() {
       FR: "À la recherche d'un développeur web à la pointe de la technologie ? Faisons connaissance et traçons ensemble la voie du succès dans l'immensité du paysage numérique.",
     },
     altPicture: {
-      EN: "Certified Full Stack JavaScript Web and Web Mobile Developer specialized in React Wise Duck Dev Logo",
-      FR: "Logo du développeur certifié web et web mobile Full Stack JavaScript spécialisé en React Wise Duck Dev",
+      EN: "Profile picture of the Full Stack JavaScript Developer Wise Duck Dev, specialized in React, dressed in a professional white suit",
+      FR: "Photo de profil du Développeur Full Stack JavaScript Wise Duck Dev, spécialisé en React, habillé d'un costume blanc professionnel",
     },
     button: {
       EN: "Download my CV",

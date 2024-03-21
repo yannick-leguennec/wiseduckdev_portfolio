@@ -7,7 +7,7 @@ const indexSchema = {
   jobTitle: "Full Stack JavaScript Developer Specialized in React",
   email: "wiseduckdev@gmail.com",
   url: `${siteUrl}`,
-  image: `https://${siteUrl}/images/main_logo1.png`,
+  image: `https://${siteUrl}/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp`,
   alumniOf: ["O'clock", "HEC Montreal"],
   memberOf: {
     "@type": "Organization",
@@ -15,7 +15,7 @@ const indexSchema = {
     description:
       "Innovative full stack JS web and mobile development solutions, specializing in React.",
     url: `${siteUrl}`,
-    logo: `https://${siteUrl}/images/main_logo1.png`,
+    logo: `https://${siteUrl}/images/logos/main_logo1.png`,
     sameAs: ["https://github.com/yannick-leguennec"],
   },
   knowsAbout: [

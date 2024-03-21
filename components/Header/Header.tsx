@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import Image from "next/image";
-import logo from "../../public/images/logos/simple_logo.png";
+import logo from "../../public/images/logos/wise-duck-dev-full-stack-js-logo.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import classes from "./Header.module.scss";
 import { TranslationsType } from "../../types/TranslationsType";
@@ -89,8 +89,8 @@ function Header() {
   // Object to store the translations for the alt attribute of the logo
   const translationAlt: TranslationsType = {
     altLogo: {
-      EN: "Certified Full Stack JavaScript Web and Web Mobile Developer specialized in React Wise Duck Dev Logo",
-      FR: "Logo du développeur certifié web et web mobile Full Stack JavaScript spécialisé en React Wise Duck Dev",
+      EN: "Logo of The Wise Duck Dev, certified Full Stack JavaScript and React Developer",
+      FR: "Logo du développeur certifié Full Stack JavaScript et React The Wise Duck Dev",
     },
   };
 
