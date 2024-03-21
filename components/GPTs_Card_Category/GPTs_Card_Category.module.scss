@@ -45,11 +45,21 @@
 }
 
 .image {
-  object-fit: fill;
-  border-radius: 100%;
+  object-fit: cover;
 }
 
 // TEXTS
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 70%;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+}
 .title {
   font-size: 1.4rem;
   font-weight: bolder;
