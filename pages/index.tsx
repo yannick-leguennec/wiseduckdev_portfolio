@@ -126,7 +126,7 @@ export default function Home() {
           content={`https://${siteUrl}/images/metadata_profil_picture.webp`}
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@wiseduckedv" />
+        <meta name="twitter:site" content="@wiseduckdev" />
         <meta
           name="twitter:title"
           content="The Wise Duck Dev - Full Stack JS Developer specialized in React"

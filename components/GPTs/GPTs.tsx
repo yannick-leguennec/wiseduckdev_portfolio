@@ -11,8 +11,6 @@ import classes from "./GPTs.module.scss";
 const GPTs = () => {
   // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
-  //   State to store the data of the GPTs
-  const [gptsData, setGptsData] = useState([]);
   //   State to store the filtered GPTs by languages
   const [filteredGPTs, setFilteredGPTs] = useState([]);
   //  State to store the GPTs categories data
@@ -31,10 +29,9 @@ const GPTs = () => {
         const response = await fetch("/docs/GPTs/gpts_categories.json");
         const data = await response.json();
         if (data) {
-          // Shuffle the categories before setting them
-          const shuffledCategories = shuffleArray([...data[activeLanguage]]);
-          setGptsCategories(shuffledCategories);
-          setFilteredCategories(shuffledCategories);
+          const orderedCategories = data[activeLanguage];
+          setGptsCategories(orderedCategories);
+          setFilteredCategories(orderedCategories);
         }
       } catch (error) {
         console.error("Failed to fetch GPTs categories data:", error);
@@ -43,15 +40,6 @@ const GPTs = () => {
 
     fetchData();
   }, [activeLanguage]);
-
-  //  Shuffle the categories to display them randomly
-  function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]]; // ES6 array destructuring syntax to swap elements
-    }
-    return array;
-  }
 
   const executeSearch = async () => {
     if (!searchTerm.trim()) return; // Avoid searching with an empty or whitespace-only term
@@ -154,9 +142,17 @@ const GPTs = () => {
 
       {searchExecuted ? (
         <div className={classes.resultsInfo}>
-          {filteredGPTs.length > 0
-            ? `${filteredGPTs.length} ${translations.results[activeLanguage]}`
-            : `${translations.noResults[activeLanguage]}`}
+          {filteredGPTs.length > 0 ? (
+            `${filteredGPTs.length} ${translations.results[activeLanguage]}`
+          ) : (
+            <>
+              {" "}
+              <p>{translations.noResults[activeLanguage]}</p>{" "}
+              <h2 className={classes.collectionTitle}>
+                {translations.collection[activeLanguage]}
+              </h2>{" "}
+            </>
+          )}
         </div>
       ) : (
         <h2 className={classes.collectionTitle}>

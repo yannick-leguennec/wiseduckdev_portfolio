@@ -2,7 +2,7 @@ import classes from "./Main_GPTs.module.scss";
 import Image from "next/image";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
-import main_picture from "../../public/images/gpts/duck-mib-main.webp";
+import main_picture from "../../public/images/index_gpts/the-wise-duck-dev-gpt-expert-men-in-black-style.webp";
 
 function Main_GPTs() {
   // Custom hook to manage the language changes
@@ -23,8 +23,8 @@ function Main_GPTs() {
       FR: "Bienvenue dans le futur du développement web et web mobile avec les GPTs de The Wise Duck Dev. Que vous amélioriez vos compétences en frontend, que vous vous plongiez dans les complexités du backend ou que vous exploriez de nouveaux frameworks et la technologie blockchain, nos GPTs spécialisés sont conçus pour élever votre productivité et votre créativité. Plongez dans notre suite complète d'outils alimentés par l'IA conçus pour les développeurs et les programmeurs dans divers domaines, y compris la gestion de bases de données, l'optimisation de la conception, l'automatisation, et plus encore. Rejoignez-nous pour révolutionner les flux de travail de développement et repousser les limites de ce qui est possible.",
     },
     alt: {
-      EN: "Certified Full-Stack Developer Wise Duck Dev in Men in Black Attire, Expert in React and AI-Enhanced Web Technologies - Creator of GPTs specialized in coding for web and mobile development",
-      FR: "Développeur Full-Stack certifié Wise Duck Dev habillé comme un Men in Black, expert en React et en technologies web améliorées par l'IA - Créateur de GPTs spécialisés pour le développement web et mobile",
+      EN: "The Wise Duck Dev emanates a suave and professional demeanor, dressed in a Men In Black style suit, symbolizing a sleek approach to GPT development and expertise.",
+      FR: "Le Wise Duck Dev dégage une allure élégante et professionnelle, vêtu d'un costume de style Men In Black, symbolisant une approche élégante du développement et de l'expertise en GPT.",
     },
     button: {
       EN: "Discover the GPTs",
