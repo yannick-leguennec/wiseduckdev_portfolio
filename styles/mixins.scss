@@ -1,6 +1,5 @@
 @import "./variables.scss";
 
-// Mixins for buttons
 @mixin button-style {
   font-size: 1.2rem;
   font-weight: 600;
@@ -12,6 +11,13 @@
 
   @media (max-width: 768px) {
     font-size: 1rem;
+  }
+
+  &:hover {
+    background-color: darken(
+      $button-color,
+      5%
+    ); // Darken the background color by 10% on hover
   }
 }
 
@@ -27,6 +33,13 @@
 
   @media (max-width: 768px) {
     font-size: 1rem;
+  }
+
+  &:hover {
+    background-color: darken(
+      rgb(252, 250, 243),
+      5%
+    ); // Darken the background color by 10% on hover
   }
 }
 

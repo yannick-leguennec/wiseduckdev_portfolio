@@ -102,13 +102,171 @@ export default function GPTsSlug() {
       EN: "All GPTs",
       FR: "Tous les GPTs",
     },
+    buttonRun: {
+      EN: "Run",
+      FR: "Exécuter",
+    },
+  };
+
+  const categoriesSchemaTemplate = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    url: `https://${siteUrl}/gpts/${pageData.category?.category}`,
+    name: pageData.category?.meta_title_page
+      ? pageData.category.meta_title_page
+      : "",
+    description: pageData.category?.meta_description_page
+      ? pageData.category.meta_description_page
+      : "",
+    inLanguage: "en-US",
+    isPartOf: {
+      "@type": "WebSite",
+      name: "The Wise Duck Dev GPTs",
+      url: `https://${siteUrl}`,
+    },
   };
 
   // Render the page based on the fetched data
   return (
     <>
+      {/* HEAD TAG CATEGORIES */}
+      {pageData.type === "category" && pageData.category && (
+        <Head>
+          <title>{pageData.category.meta_title_page}</title>
+          <meta
+            name="description"
+            content={pageData.category.meta_description_page}
+          />
+          <meta name="keywords" content={pageData.category.meta_keywords} />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content={pageData.category.og_title} />
+          <meta
+            property="og:description"
+            content={pageData.category.og_description}
+          />
+          <meta
+            property="og:url"
+            content={`https://${siteUrl}/gpts/${pageData.category.category}}`}
+          />
+          <meta
+            property="og:image"
+            content={`https://${siteUrl}${pageData.category.image}`}
+          />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@wiseduckdev" />
+          <meta
+            name="twitter:title"
+            content={pageData.category.twitter_title}
+          />
+          <meta
+            name="twitter:description"
+            content={pageData.category.twitter_description}
+          />
+          <meta
+            name="twitter:image"
+            content={`https://${siteUrl}${pageData.category.image}`}
+          />
+          {siteUrl && (
+            <>
+              <link
+                rel="alternate"
+                hrefLang="en"
+                href={`https://${siteUrl}/gpts/${pageData.category.category}`}
+              />
+              <link
+                rel="alternate"
+                hrefLang="fr"
+                href={`https://${siteUrl}/fr/gpts/${pageData.category.category}`}
+              />
+            </>
+          )}
+          <link rel="canonical" href={`https://${siteUrl}`} />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(categoriesSchemaTemplate),
+            }}
+          />
+        </Head>
+      )}
+      {/* HEAD TAG GPT */}
+      {pageData.type === "gpt" && pageData.gpt && (
+        <Head>
+          <title>
+            The Wise Duck Dev GPTs | Explore Leading GPT Categories for Web and
+            Mobile Development
+          </title>
+          <meta
+            name="description"
+            content="Discover The Wise Duck Dev's curated GPTs, specializing in frontend, backend, database, design, framework, productivity, blockchain, cybersecurity, CMS, and automation. Elevate your web development with our tailored GPT expertise."
+          />
+          <meta
+            name="keywords"
+            content="GPT, The Wise Duck Dev, Frontend Development, Backend Solutions, Database Management, Design Integration, Development Frameworks, Productivity Enhancement, Blockchain Innovation, Cybersecurity, Content Management Systems, Automation, Web Development, AI Integration, Technology Solutions"
+          />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:title"
+            content="The Wise Duck Dev GPTs | Gateway to Specialized GPT Development"
+          />
+          <meta
+            property="og:description"
+            content="Step into the world of specialized GPT development with The Wise Duck Dev. Explore categories from frontend to blockchain and automation. Tailored AI solutions for robust web development."
+          />
+          <meta property="og:url" content={`https://${siteUrl}/gpts`} />
+          <meta
+            property="og:image"
+            content={`https://${siteUrl}/images/index_gpts/the-wise-duck-dev-gpt-expert-men-in-black-style-profile.webp`}
+          />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@wiseduckdev" />
+          <meta
+            name="twitter:title"
+            content="The Wise Duck Dev GPTs | Specialized GPT Development"
+          />
+          <meta
+            name="twitter:description"
+            content="Join The Wise Duck Dev in exploring specialized GPTs for every development need, from frontend to CMS and beyond. Dive into a world where AI meets innovation in web development."
+          />
+          <meta
+            name="twitter:image"
+            content={`https://${siteUrl}/images/index_gpts/the-wise-duck-dev-gpt-expert-men-in-black-style-profile.webp`}
+          />
+          {siteUrl && (
+            <>
+              <link
+                rel="alternate"
+                hrefLang="en"
+                href={`https://${siteUrl}/gpts`}
+              />
+              <link
+                rel="alternate"
+                hrefLang="fr"
+                href={`https://${siteUrl}/fr/gpts`}
+              />
+            </>
+          )}
+          <link rel="canonical" href={`https://${siteUrl}`} />
+          {/* <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(indexSchemaGPTs),
+            }}
+          /> */}
+        </Head>
+      )}
+
       <Header />
 
+      {/* CATEGORIES PAGE TEMPLATE */}
       {pageData.type === "category" && pageData.category && (
         <main className={classes.mainContainer}>
           <section className={classes.topContainer}>
@@ -131,7 +289,13 @@ export default function GPTsSlug() {
 
           <section className={classes.gptsContainer}>
             <h2 className={classes.subtitleBold}>GPTs</h2>
-            <div className={classes.cardsContainer}>
+            <div
+              className={
+                pageData.gpts?.length === 1
+                  ? classes.cardsContainer2
+                  : classes.cardsContainer
+              }
+            >
               {pageData.gpts &&
                 pageData.gpts.map((gpt) => (
                   <GPTs_Card
@@ -142,6 +306,7 @@ export default function GPTsSlug() {
                     path={gpt.path}
                     card_description={gpt.card_description}
                     category={gpt.category}
+                    results={pageData.gpts?.length ?? 0}
                   />
                 ))}
             </div>
@@ -153,7 +318,7 @@ export default function GPTsSlug() {
           </section>
         </main>
       )}
-
+      {/* GPTS PAGE TEMPLATE */}
       {pageData.type === "gpt" && pageData.gpt && (
         <main className={classes.mainContainer}>
           <div className={classes.topContainer}>
@@ -189,6 +354,12 @@ export default function GPTsSlug() {
           <div className={classes.buttonContainer}>
             <button onClick={handleReturnPageGPTs} className={classes.button}>
               {translation.button[activeLanguage]}
+            </button>
+            <button
+              onClick={handleReturnPageGPTs}
+              className={classes.buttonRun}
+            >
+              {translation.buttonRun[activeLanguage]}
             </button>
           </div>
         </main>
