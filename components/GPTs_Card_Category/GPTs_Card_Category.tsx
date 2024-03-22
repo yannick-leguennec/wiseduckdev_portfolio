@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import classes from "./GPTs_Card_Category.module.scss";
 import GPTs_Card_Category_Type from "../../types/GPTs_Card_Category";
@@ -12,14 +11,7 @@ const GPTs_Card_Category = (props: GPTs_Card_Category_Type) => {
     >
       <div className={classes.imageContainer}>
         <div className={classes.imageContainer}>
-          <Image
-            src={props.image}
-            alt={props.alt}
-            layout="fill"
-            objectFit="cover"
-            sizes="(max-width: 768px) 80px, 100px"
-            className={classes.image}
-          />
+          <img src={props.image} alt={props.alt} className={classes.image} />
         </div>
       </div>
       <div className={classes.textContainer}>

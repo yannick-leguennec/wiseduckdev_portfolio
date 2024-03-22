@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 import React, { useEffect, useState } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
@@ -165,7 +166,7 @@ const GPTs = () => {
           ? // Display categories when no search or search has no results
             gptsCategories.map((category: GPTS_Card_Category_Type) => (
               <GPTs_Card_Category
-                key={category.id}
+                key={uuidv4()}
                 id={category.id}
                 card_title={category.card_title}
                 card_description={category.card_description}
@@ -177,7 +178,7 @@ const GPTs = () => {
           : // Display GPTs when search has results
             filteredGPTs.map((gpt: GPTs_Card_Type) => (
               <GPTs_Card
-                key={gpt.id}
+                key={uuidv4()}
                 id={gpt.id}
                 name={gpt.name}
                 image={gpt.image}
