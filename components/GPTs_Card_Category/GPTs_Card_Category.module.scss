@@ -32,6 +32,7 @@
 
 // IMAGE
 .imageContainer {
+  position: relative;
   width: 100px;
   height: 100px;
   display: flex;
@@ -44,9 +45,9 @@
   }
 }
 
-.image {
-  object-fit: cover;
-}
+// .image {
+//   object-fit: cover;
+// }
 
 // TEXTS
 .textContainer {

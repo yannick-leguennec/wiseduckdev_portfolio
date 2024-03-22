@@ -11,13 +11,16 @@ const GPTs_Card_Category = (props: GPTs_Card_Category_Type) => {
       className={[classes.link, classes.cardContainer].join(" ")}
     >
       <div className={classes.imageContainer}>
-        <Image
-          src={props.image}
-          alt={props.alt}
-          className={classes.image}
-          width={100}
-          height={100}
-        />
+        <div className={classes.imageContainer}>
+          <Image
+            src={props.image}
+            alt={props.alt}
+            layout="fill"
+            objectFit="cover"
+            sizes="(max-width: 768px) 80px, 100px"
+            className={classes.image}
+          />
+        </div>
       </div>
       <div className={classes.textContainer}>
         <h3 className={classes.title}>{props.card_title}</h3>

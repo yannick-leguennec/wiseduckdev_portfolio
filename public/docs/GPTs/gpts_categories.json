@@ -223,7 +223,7 @@
 
   "FR": [
     {
-      "id:": "1",
+      "id:": 1,
       "category": "frontend",
       "link": "/frontend",
       "card_title": "Collection Frontend",

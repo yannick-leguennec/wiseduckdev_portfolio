@@ -1,12 +1,14 @@
-import React, { useState, useEffect, Suspense } from "react";
+import { GetStaticProps } from "next";
+import React from "react";
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
 import Header from "../../components/Header/Header";
 import Main_GPTs from "../../components/Main_GPTs/Main_GPTs";
-import GPTs from "../../components/GPTs/GPTs";
-import Footer from "../../components/Footer/Footer";
+const GPTs = dynamic(() => import("../../components/GPTs/GPTs"));
+const Footer = dynamic(() => import("../../components/Footer/Footer"));
 import indexSchemaGPTs from "../../public/schemas/indexSchemaGPTs";
 
 export default function GPTS() {
@@ -20,7 +22,18 @@ export default function GPTS() {
       EN: "The Wise Duck Dev - GPTs",
       FR: "The Wise Duck Dev - GPTs",
     },
+    logText: {
+      EN: "👨‍💻🚀 Hello there! As a Full Stack JS developer with a zest for React and a deep passion for AI innovations, I specialize in crafting bespoke GPTs that streamline workflows and supercharge development processes. If your company seeks to embrace AI's transformative power or if you're a recruiter looking for a developer who blends creativity with technology, let's chat! Together, we can create GPT solutions tailored to your unique needs, driving efficiency and excellence in every project. Let's innovate and elevate your operations with custom AI! 🤖✨",
+      FR: "👨‍💻🚀 Bonjour ! En tant que développeur Full Stack JS passionné par React et les innovations en IA, je me spécialise dans la création de GPT sur mesure qui optimisent les flux de travail et dynamisent les processus de développement. Si votre entreprise souhaite exploiter la puissance transformatrice de l'IA, ou si vous êtes un recruteur à la recherche d'un développeur qui allie créativité et technologie, parlons-en ! Ensemble, nous pouvons développer des solutions GPT adaptées à vos besoins spécifiques, favorisant l'efficacité et l'excellence dans chaque projet. Innovons et élevons vos opérations avec l'IA personnalisée ! 🤖✨",
+    },
   };
+
+  // Custom console message for companies and recruiters
+  console.log(
+    `%c ${translation.logText[activeLanguage]}`,
+    "background: #ff7300; color: #fafafa; font-size: 14px; padding: 10px; border-radius: 5px; font-weight: bold;"
+  );
+
   return (
     <>
       <Head>
@@ -35,6 +48,10 @@ export default function GPTS() {
         <meta
           name="keywords"
           content="GPT, The Wise Duck Dev, Frontend Development, Backend Solutions, Database Management, Design Integration, Development Frameworks, Productivity Enhancement, Blockchain Innovation, Cybersecurity, Content Management Systems, Automation, Web Development, AI Integration, Technology Solutions"
+        />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <meta property="og:type" content="website" />
         <meta
@@ -93,3 +110,9 @@ export default function GPTS() {
     </>
   );
 }
+
+export const getStaGetStaticProps: GetStaticProps = async () => {
+  return {
+    props: {},
+  };
+};
