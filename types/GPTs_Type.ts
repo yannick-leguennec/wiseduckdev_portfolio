@@ -9,7 +9,7 @@ export default interface GPTs_Type {
   openAi_link: string;
   card_description: string;
   page_description: string;
-  mode: {
+  modes: {
     [key: string]: string;
   };
   meta_title_page: string;
