@@ -26,7 +26,22 @@
   }
 }
 
+.cardContainer2 {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  background-color: $gpts-background-card-color;
+  margin: 0.5rem;
+  padding: 1rem 1rem;
+  border-radius: 10px;
+}
+
 .cardContainer:hover {
+  background-color: #d7e1dd;
+}
+
+.cardContainer2:hover {
   background-color: #d7e1dd;
 }
 

@@ -6,7 +6,11 @@ const GPTs_Card = (props: GPTs_Card_Type) => {
   return (
     <a
       href={props.path}
-      className={[classes.link, classes.cardContainer].join(" ")}
+      className={
+        props.results === 1
+          ? [classes.link, classes.cardContainer2].join(" ")
+          : [classes.link, classes.cardContainer].join(" ")
+      }
     >
       <div className={classes.imageContainer}>
         <Image

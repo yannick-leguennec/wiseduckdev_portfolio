@@ -161,7 +161,13 @@ const GPTs = () => {
         </h2>
       )}
 
-      <div className={classes.cardsContainer}>
+      <div
+        className={
+          filteredGPTs.length === 1
+            ? classes.cardsContainer2
+            : classes.cardsContainer
+        }
+      >
         {searchTerm === "" || (searchTerm !== "" && filteredGPTs.length === 0)
           ? // Display categories when no search or search has no results
             gptsCategories.map((category: GPTS_Card_Category_Type) => (
@@ -185,6 +191,7 @@ const GPTs = () => {
                 path={gpt.path}
                 card_description={gpt.card_description}
                 category={gpt.category}
+                results={filteredGPTs.length}
               />
             ))}
       </div>

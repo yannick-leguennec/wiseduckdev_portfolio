@@ -6,4 +6,5 @@ export default interface GPTS_Card_Type {
   path: string;
   card_description: string;
   category: string;
+  results: number;
 }
