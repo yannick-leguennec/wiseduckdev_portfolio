@@ -141,6 +141,7 @@ export default function GPTsSlug() {
                     alt={gpt.alt}
                     path={gpt.path}
                     card_description={gpt.card_description}
+                    category={gpt.category}
                   />
                 ))}
             </div>

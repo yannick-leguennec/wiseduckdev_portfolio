@@ -5,4 +5,5 @@ export default interface GPTS_Card_Type {
   alt: string;
   path: string;
   card_description: string;
+  category: string;
 }

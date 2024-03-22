@@ -55,7 +55,7 @@ const GPTs = () => {
         const value = searchTerm.toLowerCase();
         const filteredData = data[activeLanguage].filter(
           (gpt: GPTs_Card_Type) =>
-            gpt.name.toLowerCase().includes(value) ||
+            gpt.title.toLowerCase().includes(value) ||
             gpt.category?.toLowerCase().includes(value)
         );
         setFilteredGPTs(filteredData);
@@ -184,6 +184,7 @@ const GPTs = () => {
                 alt={gpt.alt}
                 path={gpt.path}
                 card_description={gpt.card_description}
+                category={gpt.category}
               />
             ))}
       </div>
