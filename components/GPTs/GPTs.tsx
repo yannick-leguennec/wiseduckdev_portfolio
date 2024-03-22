@@ -179,13 +179,11 @@ const GPTs = () => {
             filteredGPTs.map((gpt: GPTs_Card_Type) => (
               <GPTs_Card
                 key={uuidv4()}
-                id={gpt.id}
-                name={gpt.name}
+                title={gpt.title}
                 image={gpt.image}
                 alt={gpt.alt}
-                link={gpt.link}
-                short={gpt.short}
-                category={gpt.category}
+                path={gpt.path}
+                card_description={gpt.card_description}
               />
             ))}
       </div>

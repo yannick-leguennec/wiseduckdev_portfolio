@@ -113,6 +113,7 @@
     {
       "id": 6,
       "category": "cms",
+      "link": "/cms",
       "card_title": "CMS Collection",
       "card_description": "Enhancing CMS with GPT: Innovative solutions for content and management.",
       "title": "The Wise Duck Dev CMS GPTs: Streamlining Content Management",
@@ -335,6 +336,7 @@
     {
       "id": 6,
       "category": "cms",
+      "link": "/cms",
       "card_title": "Collection CMS",
       "card_description": "Maîtrisez les CMS avec ces GPTs : Des solutions innovantes pour le contenu et la gestion.",
       "title": "Les GPTs de Wise Duck Dev pour CMS : Rationaliser la Gestion de Contenu",

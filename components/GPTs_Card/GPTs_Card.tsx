@@ -5,9 +5,7 @@ import GPTs_Card_Type from "../../types/GPTs_Card_Type";
 const GPTs_Card = (props: GPTs_Card_Type) => {
   return (
     <a
-      href={props.link}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={props.path}
       className={[classes.link, classes.cardContainer].join(" ")}
     >
       <div className={classes.imageContainer}>
@@ -20,8 +18,8 @@ const GPTs_Card = (props: GPTs_Card_Type) => {
         />
       </div>
       <div className={classes.textContainer}>
-        <h3 className={classes.title}>{props.name}</h3>
-        <p className={classes.description}>{props.short}</p>
+        <h3 className={classes.title}>{props.title}</h3>
+        <p className={classes.description}>{props.card_description}</p>
       </div>
     </a>
   );

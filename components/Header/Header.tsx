@@ -83,6 +83,13 @@ function Header() {
     }
   };
 
+  // Prevent the default anchor tag behavior and use Next.js router for navigation
+  const handleLogoClick = (e) => {
+    e.preventDefault(); // Prevent the default anchor action
+    const homepagePath = activeLanguage === "FR" ? "/fr" : "/";
+    router.push(homepagePath);
+  };
+
   // Object to store the translations
   const translations: TranslationsType = {
     main: { EN: "Main", FR: "Accueil" },
@@ -141,9 +148,9 @@ function Header() {
   return (
     <header className={classes.header} role="banner">
       <a
-        href="#main"
+        href={activeLanguage === "FR" ? "/fr" : "/"}
         tabIndex={0}
-        onClick={() => scrollToSection("main")}
+        onClick={handleLogoClick}
         className={`${classes.containerLogo}`}
       >
         <Image
@@ -157,6 +164,7 @@ function Header() {
           {spanContent && <span className={spanClass}> {spanContent}</span>}
         </h1>
       </a>
+
       <div className={classes.containerNav}>
         <nav
           className={classes.navigation}
