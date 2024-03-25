@@ -3,7 +3,7 @@ export default interface GPTs_Card_Category_Type {
   id: number;
   card_title: string;
   card_description: string;
-  link: string;
+  path: string;
   image: string;
   alt: string;
 }

@@ -23,6 +23,8 @@ const GPTs = () => {
   //  State to store if the search has been executed
   const [searchExecuted, setSearchExecuted] = useState(false);
 
+  console.log("filterredCategories", filteredCategories);
+
   // Fetch the GPTs categories data from the JSON file
   useEffect(() => {
     const fetchData = async () => {
@@ -178,7 +180,7 @@ const GPTs = () => {
                 card_description={category.card_description}
                 image={category.image}
                 alt={category.alt}
-                link={category.link}
+                path={category.path}
               />
             ))
           : // Display GPTs when search has results

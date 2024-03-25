@@ -1,6 +1,7 @@
 export default interface GPTs_Type {
   key: number;
   id: number;
+  category: string[];
   title: string;
   subtitle: string;
   image: string;
@@ -22,4 +23,5 @@ export default interface GPTs_Type {
   twitter_title: string;
   twitter_description: string;
   twitter_image: string;
+  twitter_image_alt: string;
 }

@@ -5,7 +5,7 @@ import GPTs_Card_Type from "../../types/GPTs_Card_Type";
 const GPTs_Card = (props: GPTs_Card_Type) => {
   return (
     <a
-      href={props.path}
+      href={`/gpts${props.path}`}
       className={
         props.results === 1
           ? [classes.link, classes.cardContainer2].join(" ")

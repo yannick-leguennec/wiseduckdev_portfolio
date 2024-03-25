@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { GetStaticProps } from "next";
+import { GetStaticProps, GetStaticPaths } from "next";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Head from "next/head";
@@ -16,6 +16,13 @@ import GPTS_Card_Type from "../../types/GPTs_Card_Type";
 const Footer = dynamic(() => import("../../components/Footer/Footer"));
 import classes from "./slug.module.scss";
 
+interface initialPageData {
+  type: "category" | "gpt";
+  category?: GPTs_Categories_Type;
+  gpts?: GPTS_Card_Type[];
+  gpt?: GPTs_Type;
+}
+
 interface PageData {
   type: "category" | "gpt";
   category?: GPTs_Categories_Type;
@@ -23,19 +30,36 @@ interface PageData {
   gpt?: GPTs_Type;
 }
 
-export default function GPTsSlug() {
+// Define the expected structure for your paths
+interface StaticPath {
+  params: {
+    slug: string[];
+  };
+  locale: string;
+}
+
+// Props type
+interface GPTsSlugProps {
+  initialPageData: initialPageData;
+}
+
+type Language = "EN" | "FR";
+// This is a helper to read JSON files
+const readJsonFile = (filePath) => {
+  const json = fs.readFileSync(filePath, "utf8");
+  return JSON.parse(json);
+};
+
+export default function GPTsSlug({ initialPageData }) {
   const router = useRouter();
   const { slug } = router.query;
   const { activeLanguage } = useLanguage();
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
   const [categoryData, setCategoryData] = useState<GPTS_Card_Type[]>([]);
   const [gptsData, setGptsData] = useState<GPTS_Card_Type[]>([]);
-  const [pageData, setPageData] = useState<PageData | null>(null);
+  const [pageData, setPageData] = useState<PageData | null>(initialPageData);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  console.log("pageData", pageData);
-  console.log("Active Language:", activeLanguage);
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -51,7 +75,7 @@ export default function GPTsSlug() {
       if (slug.length === 1) {
         // Fetching category data based on slug
         const categoryData = languageData.find((category) =>
-          category.link.endsWith(slug[0])
+          category.path.endsWith(slug[0])
         );
 
         if (!categoryData) {
@@ -87,9 +111,6 @@ export default function GPTsSlug() {
 
     fetchData();
   }, [slug, activeLanguage]); // Include activeLanguage in the dependency array
-
-  if (!pageData) return <div>Loading...</div>;
-
   // Prevent the default anchor tag behavior and use Next.js router for navigation
   const handleReturnPageGPTs = (e) => {
     e.preventDefault(); // Prevent the default anchor action
@@ -111,12 +132,38 @@ export default function GPTsSlug() {
   const categoriesSchemaTemplate = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    url: `https://${siteUrl}/gpts/${pageData.category?.category}`,
-    name: pageData.category?.meta_title_page
+    url: `https://${siteUrl}/gpts/${pageData?.category?.category}`,
+    name: pageData?.category?.meta_title_page
       ? pageData.category.meta_title_page
       : "",
-    description: pageData.category?.meta_description_page
+    description: pageData?.category?.meta_description_page
       ? pageData.category.meta_description_page
+      : "",
+    inLanguage: "en-US",
+    isPartOf: {
+      "@type": "WebSite",
+      name: "The Wise Duck Dev GPTs",
+      url: `https://${siteUrl}`,
+    },
+    about: {
+      "@type": "ItemList",
+      itemListElement: [
+        pageData?.gpts?.map((gpt, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          item: { "@type": "Thing", name: gpt.title },
+        })),
+      ],
+    },
+  };
+
+  const gptSchemaTemplate = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    url: `https://${siteUrl}${pageData?.gpt?.path}`,
+    name: pageData?.gpt?.meta_title_page ? pageData.gpt.meta_title_page : "",
+    description: pageData?.gpt?.meta_description_page
+      ? pageData.gpt.meta_description_page
       : "",
     inLanguage: "en-US",
     isPartOf: {
@@ -130,7 +177,7 @@ export default function GPTsSlug() {
   return (
     <>
       {/* HEAD TAG CATEGORIES */}
-      {pageData.type === "category" && pageData.category && (
+      {pageData?.type === "category" && pageData.category && (
         <Head>
           <title>{pageData.category.meta_title_page}</title>
           <meta
@@ -150,7 +197,7 @@ export default function GPTsSlug() {
           />
           <meta
             property="og:url"
-            content={`https://${siteUrl}/gpts/${pageData.category.category}}`}
+            content={`https://${siteUrl}/gpts/${pageData.category.category}`}
           />
           <meta
             property="og:image"
@@ -194,80 +241,75 @@ export default function GPTsSlug() {
         </Head>
       )}
       {/* HEAD TAG GPT */}
-      {pageData.type === "gpt" && pageData.gpt && (
+      {pageData?.type === "gpt" && pageData.gpt && (
         <Head>
-          <title>
-            The Wise Duck Dev GPTs | Explore Leading GPT Categories for Web and
-            Mobile Development
-          </title>
+          <title>{pageData.gpt.meta_title_page}</title>
           <meta
             name="description"
-            content="Discover The Wise Duck Dev's curated GPTs, specializing in frontend, backend, database, design, framework, productivity, blockchain, cybersecurity, CMS, and automation. Elevate your web development with our tailored GPT expertise."
+            content={pageData.gpt.meta_description_page}
           />
-          <meta
-            name="keywords"
-            content="GPT, The Wise Duck Dev, Frontend Development, Backend Solutions, Database Management, Design Integration, Development Frameworks, Productivity Enhancement, Blockchain Innovation, Cybersecurity, Content Management Systems, Automation, Web Development, AI Integration, Technology Solutions"
-          />
+          <meta name="keywords" content={pageData.gpt.meta_keywords} />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           <meta property="og:type" content="website" />
-          <meta
-            property="og:title"
-            content="The Wise Duck Dev GPTs | Gateway to Specialized GPT Development"
-          />
+          <meta property="og:title" content={pageData.gpt.og_title} />
           <meta
             property="og:description"
-            content="Step into the world of specialized GPT development with The Wise Duck Dev. Explore categories from frontend to blockchain and automation. Tailored AI solutions for robust web development."
+            content={pageData.gpt.og_description}
           />
-          <meta property="og:url" content={`https://${siteUrl}/gpts`} />
+          <meta
+            property="og:url"
+            content={`https://${siteUrl}/gpts/${pageData.gpt.og_url}`}
+          />
           <meta
             property="og:image"
-            content={`https://${siteUrl}/images/index_gpts/the-wise-duck-dev-gpt-expert-men-in-black-style-profile.webp`}
+            content={`https://${siteUrl}${pageData.gpt.og_image}`}
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@wiseduckdev" />
-          <meta
-            name="twitter:title"
-            content="The Wise Duck Dev GPTs | Specialized GPT Development"
-          />
+          <meta name="twitter:title" content={pageData.gpt.twitter_title} />
           <meta
             name="twitter:description"
-            content="Join The Wise Duck Dev in exploring specialized GPTs for every development need, from frontend to CMS and beyond. Dive into a world where AI meets innovation in web development."
+            content={pageData.gpt.twitter_description}
           />
           <meta
             name="twitter:image"
-            content={`https://${siteUrl}/images/index_gpts/the-wise-duck-dev-gpt-expert-men-in-black-style-profile.webp`}
+            content={`https://${siteUrl}${pageData.gpt.twitter_image}`}
+          />
+          <meta
+            name="twitter:image:alt"
+            content={pageData.gpt.twitter_image_alt}
           />
           {siteUrl && (
             <>
               <link
                 rel="alternate"
                 hrefLang="en"
-                href={`https://${siteUrl}/gpts`}
+                href={`https://${siteUrl}${pageData.gpt.path}`}
               />
               <link
                 rel="alternate"
                 hrefLang="fr"
-                href={`https://${siteUrl}/fr/gpts`}
+                href={`https://${siteUrl}/fr${pageData.gpt.path}`}
               />
             </>
           )}
           <link rel="canonical" href={`https://${siteUrl}`} />
-          {/* <script
+          <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
-              __html: JSON.stringify(indexSchemaGPTs),
+              __html: JSON.stringify(gptSchemaTemplate),
             }}
-          /> */}
+          />
         </Head>
       )}
 
       <Header />
 
       {/* CATEGORIES PAGE TEMPLATE */}
-      {pageData.type === "category" && pageData.category && (
+      {pageData?.type === "category" && pageData.category && (
         <main className={classes.mainContainer}>
           <section className={classes.topContainer}>
             <div className={classes.textContainer}>
@@ -319,7 +361,7 @@ export default function GPTsSlug() {
         </main>
       )}
       {/* GPTS PAGE TEMPLATE */}
-      {pageData.type === "gpt" && pageData.gpt && (
+      {pageData?.type === "gpt" && pageData.gpt && (
         <main className={classes.mainContainer}>
           <div className={classes.topContainer}>
             <div className={classes.textContainer}>
@@ -335,7 +377,7 @@ export default function GPTsSlug() {
                   {Object.entries(pageData.gpt.modes).map(
                     ([key, description]) => (
                       <li key={key}>
-                        <strong>{key}: </strong> {description}
+                        <strong>{key}: </strong> {String(description)}
                       </li>
                     )
                   )}
@@ -369,3 +411,122 @@ export default function GPTsSlug() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps<GPTsSlugProps> = async ({
+  params,
+  locale,
+}) => {
+  const fs = require("fs");
+  const path = require("path");
+  // Ensure slug is treated as string[]
+  const slug = params?.slug as string[];
+  // Convert the locale to your Language type
+  const lang: Language = locale === "fr" ? "FR" : "EN";
+
+  // Define the path to your JSON files
+  const basePath = path.join(process.cwd(), "public/docs/GPTs");
+  const categoriesFilePath = path.join(basePath, "gpts_categories.json");
+  const gptsFilePath = path.join(basePath, "gpts_test.json");
+
+  // Function to read and parse JSON files
+  const readJson = (filePath: string) =>
+    JSON.parse(fs.readFileSync(filePath, "utf8"));
+
+  // Read and parse the JSON files
+  const categoriesData = readJson(categoriesFilePath)[lang];
+  const gptsData = readJson(gptsFilePath)[lang];
+
+  let initialPageData: PageData = {
+    type: slug.length === 1 ? "category" : "gpt",
+  };
+
+  if (slug.length === 1) {
+    // Logic for category pages
+    const categoryData = categoriesData.find((category) =>
+      category.path.endsWith(slug[0])
+    );
+    if (!categoryData) {
+      return { notFound: true };
+    }
+    const relatedGpts = gptsData.filter((gpt) =>
+      gpt.category.includes(slug[0])
+    );
+    initialPageData = {
+      type: "category",
+      category: categoryData,
+      gpts: relatedGpts,
+    };
+  } else {
+    // Logic for item pages
+    const gptData = gptsData.find((gpt) =>
+      gpt.path.endsWith(`${slug[0]}/${slug[1]}`)
+    );
+    if (!gptData) {
+      return { notFound: true };
+    }
+    initialPageData = { type: "gpt", gpt: gptData };
+  }
+
+  return { props: { initialPageData } };
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const fs = require("fs");
+  const path = require("path");
+
+  // Paths to JSON data
+  const basePath = path.join(process.cwd(), "public/docs/GPTs");
+  const categoriesFilePath = path.join(basePath, "gpts_categories.json");
+  const itemsFilePath = path.join(basePath, "gpts_test.json"); // Assuming this is your items file
+
+  // Function to read and parse JSON files
+  const readJson = (filePath) => JSON.parse(fs.readFileSync(filePath, "utf8"));
+
+  // Reading JSON data
+  const categoriesData = readJson(categoriesFilePath);
+  const itemsData = readJson(itemsFilePath);
+
+  const paths: StaticPath[] = [];
+
+  // Generate paths for categories
+  Object.keys(categoriesData).forEach((localeKey) => {
+    const locale = localeKey.toLowerCase(); // Convert locale key to lowercase ('en' or 'fr')
+    categoriesData[localeKey].forEach((category) => {
+      const cleanPath = category.path.startsWith("/")
+        ? category.path.slice(1)
+        : category.path;
+      paths.push({
+        params: { slug: [cleanPath] },
+        locale,
+      });
+    });
+  });
+
+  // Generate paths for items
+  Object.keys(itemsData).forEach((localeKey) => {
+    const locale = localeKey.toLowerCase(); // Convert locale key to lowercase ('en' or 'fr')
+    itemsData[localeKey].forEach((item) => {
+      item.category.forEach((category) => {
+        // Assuming item.path is relative to the category, and not absolute
+        const itemPathSegments = item.path.startsWith("/")
+          ? item.path.slice(1).split("/")
+          : item.path.split("/");
+        const slug =
+          itemPathSegments.length > 1
+            ? itemPathSegments
+            : [category, itemPathSegments[0]];
+        paths.push({
+          params: { slug },
+          locale,
+        });
+      });
+    });
+  });
+
+  console.log(JSON.stringify(paths, null, 2)); // For debugging
+
+  return {
+    paths,
+    fallback: "blocking", // or false if you prefer to return a 404 for missing paths
+  };
+};

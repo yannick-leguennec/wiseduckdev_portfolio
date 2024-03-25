@@ -25,12 +25,6 @@ class MyDocument extends Document<MyDocumentProps> {
     return (
       <Html>
         <Head>
-          {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Caramel&family=Raleway:ital,wght@0,100..900;1,100..900&family=Special+Elite&display=swap"
-            rel="stylesheet"
-          /> */}
           <meta
             name="google-site-verification"
             content="CHxu9HsWoMtZjbPsvHICvOlOyRv_hFYZk5uhVLxXo7o"

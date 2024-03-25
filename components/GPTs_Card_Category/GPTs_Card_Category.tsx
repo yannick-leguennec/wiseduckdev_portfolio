@@ -5,7 +5,7 @@ import GPTs_Card_Category_Type from "../../types/GPTs_Card_Category";
 const GPTs_Card_Category = (props: GPTs_Card_Category_Type) => {
   return (
     <Link
-      href={`/gpts${props.link}`}
+      href={`/gpts/${props.path}`}
       passHref
       className={[classes.link, classes.cardContainer].join(" ")}
     >

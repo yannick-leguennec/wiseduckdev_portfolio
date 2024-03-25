@@ -3,7 +3,7 @@
     {
       "id": 1,
       "category": "frontend",
-      "link": "/frontend",
+      "path": "frontend",
       "card_title": "Frontend Collection",
       "card_description": "Unlock GPT's power for cutting-edge frontend development insights and tools.",
       "title": "The Wise Duck Dev Frontend GPTs: Reach Client-Side Excellence",
@@ -25,7 +25,7 @@
     {
       "id": 2,
       "category": "design",
-      "link": "/design",
+      "path": "design",
       "card_title": "Design Collection",
       "card_description": "Fusing GPT with design for groundbreaking insights and tools for designers.",
       "title": "The Wise Duck Dev Design GPTs: Crafting Digital Aesthetics",
@@ -47,7 +47,7 @@
     {
       "id": 3,
       "category": "backend",
-      "link": "/backend",
+      "path": "backend",
       "card_title": "Backend Collection",
       "card_description": "Explore GPT's transformative insights and tools for backend development.",
       "title": "The Wise Duck Dev Backend GPTs: Powering Server-Side Excellence",
@@ -69,7 +69,7 @@
     {
       "id": 4,
       "category": "database",
-      "link": "/database",
+      "path": "database",
       "card_title": "Database Collection",
       "card_description": "GPT's key insights for database management: From SQL to data security.",
       "title": "The Wise Duck Dev Database GPTs: Revolutionizing Data Management",
@@ -91,7 +91,7 @@
     {
       "id": 5,
       "category": "framework",
-      "link": "/framework",
+      "path": "framework",
       "card_title": "Framework Collection",
       "card_description": "Discover GPT's synergy with frameworks for more efficient development.",
       "title": "The Wise Duck Dev Framework GPTs: Harnessing Framework Power",
@@ -113,7 +113,7 @@
     {
       "id": 6,
       "category": "cms",
-      "link": "/cms",
+      "path": "cms",
       "card_title": "CMS Collection",
       "card_description": "Enhancing CMS with GPT: Innovative solutions for content and management.",
       "title": "The Wise Duck Dev CMS GPTs: Streamlining Content Management",
@@ -135,7 +135,7 @@
     {
       "id": 7,
       "category": "productivity",
-      "link": "/productivity",
+      "path": "productivity",
       "card_title": "Productivity Collection",
       "card_description": "Boost development workflow efficiency with GPT's productivity tools.",
       "title": "The Wise Duck Dev Productivity GPTs: Maximizing Efficiency",
@@ -157,7 +157,7 @@
     {
       "id": 8,
       "category": "blockchain",
-      "link": "/blockchain",
+      "path": "blockchain",
       "card_title": "Blockchain Collection",
       "card_description": "Revolutionizing blockchain with GPT: Advanced insights and tools for developers.",
       "title": "The Wise Duck Dev Blockchain GPTs: Pioneering Decentralized Solutions",
@@ -179,7 +179,7 @@
     {
       "id": 9,
       "category": "automation",
-      "link": "/automation",
+      "path": "automation",
       "card_title": "Automation Collection",
       "card_description": "Maximize development efficiency with GPT's automation capabilities.",
       "title": "The Wise Duck Dev Automation GPTs: Streamlining Development Workflows",
@@ -201,7 +201,7 @@
     {
       "id": 10,
       "category": "cybersecurity",
-      "link": "/cybersecurity",
+      "path": "cybersecurity",
       "card_title": "Cybersecurity Collection",
       "card_description": "GPT insights for stronger cybersecurity and developer tools.",
       "title": "The Wise Duck Dev Cybersecurity GPTs: Fortifying Digital Assets",
@@ -226,7 +226,7 @@
     {
       "id:": 1,
       "category": "frontend",
-      "link": "/frontend",
+      "path": "frontend",
       "card_title": "Collection Frontend",
       "card_description": "Découvrez la puissance des GPTs pour un développement frontend de pointe et optimal.",
       "title": "Les GPTs Frontend de The Wise Duck Dev",
@@ -248,7 +248,7 @@
     {
       "id": 2,
       "category": "design",
-      "link": "/design",
+      "path": "design",
       "card_title": "Collection Design",
       "card_description": "Fusionnez l'intelligence artificielle et le design pour créer des sites web et des applications mobiles innovantes.",
       "title": "Les GPTs de Design de The Wise Duck Dev : Façonner l'Esthétique Numérique",
@@ -270,7 +270,7 @@
     {
       "id": 3,
       "category": "backend",
-      "link": "/backend",
+      "path": "backend",
       "card_title": "Collection Backend",
       "card_description": "Revolutionnez le développement backend avec ces GPTs opimisés et spécialisés pour des solutions robustes.",
       "title": "Les GPTs Backend de The Wise Duck Dev : Dynamiser l'excellence côté serveur",
@@ -292,7 +292,7 @@
     {
       "id": 4,
       "category": "database",
-      "link": "/database",
+      "path": "database",
       "card_title": "Collection Base de Données",
       "card_description": "Des GPTs pour la gestion de base de données : De SQL à la sécurité des données.",
       "title": "Les GPTs de Base de Données de The Wise Duck Dev : Révolutionner la Gestion des Données",
@@ -314,7 +314,7 @@
     {
       "id": 5,
       "category": "framework",
-      "link": "/framework",
+      "path": "framework",
       "card_title": "Collection Framework",
       "card_description": "Découvrez la synergie de ces GPTs avec les frameworks pour un développement plus efficace.",
       "title": "Les GPTs de Framework de The Wise Duck Dev : Exploiter la Puissance des Frameworks",
@@ -336,7 +336,7 @@
     {
       "id": 6,
       "category": "cms",
-      "link": "/cms",
+      "path": "cms",
       "card_title": "Collection CMS",
       "card_description": "Maîtrisez les CMS avec ces GPTs : Des solutions innovantes pour le contenu et la gestion.",
       "title": "Les GPTs de Wise Duck Dev pour CMS : Rationaliser la Gestion de Contenu",
@@ -358,7 +358,7 @@
     {
       "id": 7,
       "category": "productivity",
-      "link": "/productivity",
+      "path": "productivity",
       "card_title": "Collection Productivité",
       "card_description": "Boostez l'efficacité de votre flux de travail avec des GPTs centrés sur la productivité.",
       "title": "Les GPTs de Productivité de Wise Duck Dev : Maximiser l'Efficiency",
@@ -380,7 +380,7 @@
     {
       "id": 8,
       "category": "blockchain",
-      "link": "/blockchain",
+      "path": "blockchain",
       "card_title": "Collection Blockchain",
       "card_description": "Explorez la révolution du développement blockchain avec des GPTs avancés et spécialisés pour les développeurs.",
       "title": "Les GPTs Blockchain de Wise Duck Dev : Pionnier des Solutions Décentralisées",
@@ -402,7 +402,7 @@
     {
       "id": 9,
       "category": "automation",
-      "link": "/automation",
+      "path": "automation",
       "card_title": "Collection Automatisation",
       "card_description": "Optimisez vos tâches quotidiennes avec ces GPTs spécialisés dans l'automatisation des processus.",
       "title": "Les GPTs d'Automatisation de Wise Duck Dev : Rationaliser les Flux de Travail de Développement",
@@ -424,7 +424,7 @@
     {
       "id": 10,
       "category": "cybersecurity",
-      "link": "/cybersecurity",
+      "path": "cybersecurity",
       "card_title": "Collection Cybersécurité",
       "card_description": "GPTs spécialisés dans la cybersécurité, offrant des solutions avancées pour les développeurs.",
       "title": "Les GPTs Cybersécurité de Wise Duck Dev : Renforcer les Actifs Numériques",

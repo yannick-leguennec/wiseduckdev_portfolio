@@ -1,7 +1,7 @@
 export default interface GPTs_Categories_Type {
   id: number;
   category: [string];
-  link: string;
+  path: string;
   card_title: string;
   card_description: string;
   title: string;
