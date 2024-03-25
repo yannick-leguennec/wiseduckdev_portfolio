@@ -486,6 +486,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const categoriesData = readJson(categoriesFilePath);
   const itemsData = readJson(itemsFilePath);
 
+  const uniquePaths = new Set<string>();
   const paths: StaticPath[] = [];
 
   // Generate paths for categories
@@ -502,12 +503,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
     });
   });
 
-  // Generate paths for items
   Object.keys(itemsData).forEach((localeKey) => {
-    const locale = localeKey.toLowerCase(); // Convert locale key to lowercase ('en' or 'fr')
+    const locale = localeKey.toLowerCase();
     itemsData[localeKey].forEach((item) => {
       item.category.forEach((category) => {
-        // Assuming item.path is relative to the category, and not absolute
         const itemPathSegments = item.path.startsWith("/")
           ? item.path.slice(1).split("/")
           : item.path.split("/");
@@ -515,10 +514,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
           itemPathSegments.length > 1
             ? itemPathSegments
             : [category, itemPathSegments[0]];
-        paths.push({
-          params: { slug },
-          locale,
-        });
+        const pathKey = `${locale}-${slug.join("/")}`;
+
+        if (!uniquePaths.has(pathKey)) {
+          uniquePaths.add(pathKey);
+          paths.push({
+            params: { slug },
+            locale,
+          });
+        }
       });
     });
   });
