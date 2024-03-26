@@ -27,7 +27,7 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    padding: 4rem 2rem 4rem 2rem;
+    padding: 4rem 2rem 2rem 2rem;
     max-height: 100%;
   }
 }
@@ -123,6 +123,13 @@
   }
 }
 
+.modesContainer {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
 // Social Buttons Container
 .socialButtonContainer {
   width: 100%;
@@ -207,6 +214,10 @@
   justify-content: center;
   margin: 1rem 0 2rem 0;
   gap: 2rem;
+
+  @media (max-width: 1024px) {
+    margin: 1rem 0 4rem 0;
+  }
 }
 
 .button {

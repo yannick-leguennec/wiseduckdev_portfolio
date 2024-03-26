@@ -460,17 +460,70 @@ export default function GPTsSlug({ initialPageData }) {
                 {pageData.gpt.page_description}
               </p>
               <h2 className={classes.subtitleBold}>Modes</h2>
-              {pageData.gpt && (
-                <ul>
-                  {Object.entries(pageData.gpt.modes).map(
-                    ([key, description]) => (
-                      <li key={key}>
-                        <strong>{key}: </strong> {String(description)}
-                      </li>
-                    )
-                  )}
-                </ul>
-              )}
+              <div className={classes.modesContainer}>
+                {pageData.gpt && (
+                  <ul>
+                    {Object.entries(pageData.gpt.modes).map(
+                      ([key, description]) => (
+                        <li key={key}>
+                          <strong>{key}: </strong> {String(description)}
+                        </li>
+                      )
+                    )}
+                  </ul>
+                )}
+              </div>
+              <div className={classes.socialButtonContainer}>
+                <h2 className={[classes.subtitleBold, classes.hide].join(" ")}>
+                  {translation.share[activeLanguage]}
+                </h2>
+                <FacebookShareButton
+                  url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                  quote={pageData.gpt.meta_description_page}
+                  hashtag={pageData.gpt.hashtag}
+                >
+                  <FacebookIcon size={32} round />
+                </FacebookShareButton>
+                <FacebookMessengerShareButton
+                  url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                  appId={""}
+                >
+                  <FacebookMessengerIcon size={32} round />
+                </FacebookMessengerShareButton>
+                <WhatsappShareButton
+                  url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                  title={pageData.gpt.meta_title_page}
+                  separator=":: "
+                >
+                  <WhatsappIcon size={32} round />
+                </WhatsappShareButton>
+                <TwitterShareButton
+                  url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                  title={pageData.gpt.twitter_description}
+                >
+                  <TwitterIcon size={32} round />
+                </TwitterShareButton>
+
+                <LinkedinShareButton
+                  url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                >
+                  <LinkedinIcon size={32} round />
+                </LinkedinShareButton>
+                <TelegramShareButton
+                  url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                  title={pageData.gpt.meta_title_page}
+                >
+                  <TelegramIcon size={32} round />
+                </TelegramShareButton>
+
+                <EmailShareButton
+                  url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                  subject={pageData.gpt.meta_title_page}
+                  body={pageData.gpt.meta_description_page}
+                >
+                  <EmailIcon size={32} round />
+                </EmailShareButton>
+              </div>
             </div>
             <div className={classes.imageContainer}>
               <img
