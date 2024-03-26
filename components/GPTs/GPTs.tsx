@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
@@ -22,6 +23,8 @@ const GPTs = () => {
   const [searchTerm, setSearchTerm] = useState("");
   //  State to store if the search has been executed
   const [searchExecuted, setSearchExecuted] = useState(false);
+  // Determine the GPTs link based on the active language
+  const portfolioLink = activeLanguage === "FR" ? `/fr` : `/`;
 
   console.log("filterredCategories", filteredCategories);
 
@@ -115,6 +118,10 @@ const GPTs = () => {
       EN: "GPTs Collections",
       FR: "Collections de GPTs",
     },
+    promo: {
+      EN: "Want to know more about The Wise Duck Dev ? Click ",
+      FR: "Vous voulez en savoir plus sur The Wise Duck Dev ? Cliquez ",
+    },
   };
 
   return (
@@ -197,6 +204,13 @@ const GPTs = () => {
               />
             ))}
       </div>
+      <p className={classes.promoText}>
+        {translations.promo[activeLanguage]}{" "}
+        <Link href={portfolioLink} className={`${classes.portfolioLinkOrange}`}>
+          {" "}
+          {activeLanguage === "FR" ? "ici" : "here"}
+        </Link>{" "}
+      </p>
     </section>
   );
 };

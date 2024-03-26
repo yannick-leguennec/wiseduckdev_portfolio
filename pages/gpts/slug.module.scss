@@ -20,7 +20,7 @@
   height: auto;
   display: flex;
   justify-content: flex-end;
-  padding: 2rem 4rem 0rem 4rem;
+  padding: 4rem 5rem 0rem 5rem;
 
   @media (max-width: 1024px) {
     display: flex;
@@ -57,7 +57,7 @@
 // Text Container
 .textContainer {
   position: relative;
-  width: 69%;
+  width: 60%;
 
   @media (max-width: 1024px) {
     position: relative;
@@ -134,8 +134,11 @@
 .socialButtonContainer {
   width: 100%;
   display: flex;
-  justify-content: center;
   gap: 0.8rem;
+
+  @media (max-width: 1024px) {
+    justify-content: center;
+  }
 }
 
 .hide {
@@ -228,4 +231,49 @@
 .buttonRun {
   @include button-style;
   margin-right: 1rem;
+}
+
+// Promotional text
+
+.promoText {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+
+  @media (max-width: 1024px) {
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+.portfolioLinkOrange {
+  font-weight: 900;
+  color: $navigation-color;
+}
+
+// TIPS SECTION
+.tipsContainer {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 4rem 2rem 4rem;
+
+  @media (max-width: 1024px) {
+    padding: 2rem 1rem;
+  }
+}
+
+.itemsContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0 4rem 0;
 }

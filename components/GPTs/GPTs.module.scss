@@ -196,3 +196,26 @@
     flex-wrap: nowrap;
   }
 }
+
+// Promotional text
+
+.promoText {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+
+  @media (max-width: 1024px) {
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+.portfolioLinkOrange {
+  font-weight: 900;
+  color: $navigation-color;
+}

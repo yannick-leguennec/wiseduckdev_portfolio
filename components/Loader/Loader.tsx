@@ -10,7 +10,7 @@ function Loader() {
   // Object containing translations
   const translations: TranslationsType = {
     text1: {
-      EN: "Loading of",
+      EN: "Loading",
       FR: "Chargement de",
     },
     altLogo: {

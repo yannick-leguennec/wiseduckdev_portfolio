@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 import { GetStaticProps, GetStaticPaths } from "next";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Head from "next/head";
@@ -78,6 +79,8 @@ export default function GPTsSlug({ initialPageData }) {
   const [pageData, setPageData] = useState<PageData | null>(initialPageData);
   // Site URL
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  // Determine the GPTs link based on the active language
+  const portfolioLink = activeLanguage === "FR" ? `/fr` : `/`;
 
   // Set loading to false when the component mounts
   useEffect(() => {
@@ -160,6 +163,10 @@ export default function GPTsSlug({ initialPageData }) {
     share: {
       EN: "Share ",
       FR: "Partager ",
+    },
+    promo: {
+      EN: "Want to know more about The Wise Duck Dev ? Click ",
+      FR: "Vous voulez en savoir plus sur The Wise Duck Dev ? Cliquez ",
     },
   };
 
@@ -445,6 +452,16 @@ export default function GPTsSlug({ initialPageData }) {
                 {translation.button[activeLanguage]}
               </button>
             </div>
+            <p className={classes.promoText}>
+              {translation.promo[activeLanguage]}{" "}
+              <Link
+                href={portfolioLink}
+                className={`${classes.portfolioLinkOrange}`}
+              >
+                {" "}
+                {activeLanguage === "FR" ? "ici" : "here"}
+              </Link>{" "}
+            </p>
           </section>
         </main>
       )}
