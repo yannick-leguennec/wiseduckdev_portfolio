@@ -24,4 +24,5 @@ export default interface GPTs_Type {
   twitter_description: string;
   twitter_image: string;
   twitter_image_alt: string;
+  hashtags: string;
 }

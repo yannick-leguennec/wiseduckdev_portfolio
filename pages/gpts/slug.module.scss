@@ -24,9 +24,10 @@
 
   @media (max-width: 1024px) {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
-    padding-top: 4rem;
+    justify-content: center;
+    padding: 4rem 2rem 4rem 2rem;
     max-height: 100%;
   }
 }
@@ -43,7 +44,7 @@
   @media (max-width: 1024px) {
     position: relative;
     width: 100%;
-    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 }
 
@@ -67,7 +68,7 @@
   }
 
   @media (max-width: 768px) {
-    width: 87%;
+    width: 100%;
   }
 }
 
@@ -120,6 +121,18 @@
   @media (max-width: 1024px) {
     font-size: 1rem;
   }
+}
+
+// Social Buttons Container
+.socialButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.hide {
+  display: none;
 }
 
 // GPTs Container

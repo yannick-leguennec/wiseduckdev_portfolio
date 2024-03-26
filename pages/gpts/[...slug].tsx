@@ -14,6 +14,16 @@ import Header from "../../components/Header/Header";
 import GPTs_Card from "../../components/GPTs_Card/GPTs_Card";
 import GPTS_Card_Type from "../../types/GPTs_Card_Type";
 const Footer = dynamic(() => import("../../components/Footer/Footer"));
+import { FacebookShareButton, FacebookIcon } from "next-share";
+import { TwitterShareButton, TwitterIcon } from "next-share";
+import { WhatsappShareButton, WhatsappIcon } from "next-share";
+import { LinkedinShareButton, LinkedinIcon } from "next-share";
+import {
+  FacebookMessengerShareButton,
+  FacebookMessengerIcon,
+} from "next-share";
+import { EmailShareButton, EmailIcon } from "next-share";
+import { TelegramShareButton, TelegramIcon } from "next-share";
 import classes from "./slug.module.scss";
 
 // Define the expected structure for the initial data uploaded
@@ -146,6 +156,10 @@ export default function GPTsSlug({ initialPageData }) {
     buttonRun: {
       EN: "Run",
       FR: "Exécuter",
+    },
+    share: {
+      EN: "Share ",
+      FR: "Partager ",
     },
   };
 
@@ -341,6 +355,58 @@ export default function GPTsSlug({ initialPageData }) {
               <p className={classes.description}>
                 {pageData.category.description}
               </p>
+
+              <div className={classes.socialButtonContainer}>
+                <h2 className={[classes.subtitleBold, classes.hide].join(" ")}>
+                  {translation.share[activeLanguage]}
+                </h2>
+                <FacebookShareButton
+                  url={`https://${siteUrl}/gpts/${pageData.category.category}`}
+                  quote={pageData.category.meta_description_page}
+                  hashtag={pageData.category.hashtag}
+                >
+                  <FacebookIcon size={32} round />
+                </FacebookShareButton>
+                <FacebookMessengerShareButton
+                  url={`https://${siteUrl}/gpts/${pageData.category.category}`}
+                  appId={""}
+                >
+                  <FacebookMessengerIcon size={32} round />
+                </FacebookMessengerShareButton>
+                <WhatsappShareButton
+                  url={`https://${siteUrl}/gpts/${pageData.category.category}`}
+                  title={pageData.category.meta_title_page}
+                  separator=":: "
+                >
+                  <WhatsappIcon size={32} round />
+                </WhatsappShareButton>
+                <TwitterShareButton
+                  url={`https://${siteUrl}/gpts/${pageData.category.category}`}
+                  title={pageData.category.twitter_description}
+                >
+                  <TwitterIcon size={32} round />
+                </TwitterShareButton>
+
+                <LinkedinShareButton
+                  url={`https://${siteUrl}/gpts/${pageData.category.category}`}
+                >
+                  <LinkedinIcon size={32} round />
+                </LinkedinShareButton>
+                <TelegramShareButton
+                  url={`https://${siteUrl}/gpts/${pageData.category.category}`}
+                  title={pageData.category.meta_title_page}
+                >
+                  <TelegramIcon size={32} round />
+                </TelegramShareButton>
+
+                <EmailShareButton
+                  url={`https://${siteUrl}/gpts/${pageData.category.category}`}
+                  subject={pageData.category.meta_title_page}
+                  body={pageData.category.meta_description_page}
+                >
+                  <EmailIcon size={32} round />
+                </EmailShareButton>
+              </div>
             </div>
             <div className={classes.imageContainer}>
               <img
