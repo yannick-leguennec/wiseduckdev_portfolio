@@ -10,8 +10,8 @@ function Loader() {
   // Object containing translations
   const translations: TranslationsType = {
     text1: {
-      EN: "Welcome to",
-      FR: "Bienvenue sur",
+      EN: "Loading of",
+      FR: "Chargement de",
     },
     altLogo: {
       EN: "Certified Full Stack JavaScript Web and Web Mobile Developer specialized in React Wise Duck Dev Logo",

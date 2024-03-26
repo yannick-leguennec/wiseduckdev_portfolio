@@ -1,8 +1,9 @@
 import { GetStaticProps } from "next";
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { useLoader } from "../../context/LoaderContext";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
 import Header from "../../components/Header/Header";
@@ -12,11 +13,19 @@ const Footer = dynamic(() => import("../../components/Footer/Footer"));
 import indexSchemaGPTs from "../../public/schemas/indexSchemaGPTs";
 
 export default function GPTS() {
+  // Custom hook to manage the loading state
+  const { setLoading } = useLoader();
   // Custom hook to manage the language state
   const { activeLanguage } = useLanguage();
   // Site URL
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
+  // Set the loading state to false after the component mounts
+  useEffect(() => {
+    setLoading(false);
+  }, [setLoading]);
+
+  // Translations object
   const translation: TranslationsType = {
     pageDescription: {
       EN: "The Wise Duck Dev - GPTs",

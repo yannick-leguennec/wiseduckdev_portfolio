@@ -4,12 +4,12 @@ import React, { useState, useEffect, Suspense } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { useLoader } from "../context/LoaderContext";
 import { useLanguage } from "../context/LanguageContext";
 import { TranslationsType } from "../types/TranslationsType";
 import Image, { StaticImageData } from "next/image";
 import duckCoachDesktop from "../public/images/index/duck-coach-desktop.webp";
 import duckCoachMobile from "../public/images/index/duck-coach-mobile.webp";
-import Loader from "../components/Loader/Loader";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
 const Profil = dynamic(() => import("../components/Profil/Profil"));
@@ -20,25 +20,24 @@ const Contact = dynamic(() => import("../components/Contact/Contact"));
 const Footer = dynamic(() => import("../components/Footer/Footer"));
 
 export default function Home() {
-  // State to manage the loading of the app
-  const [isLoading, setIsLoading] = useState(true);
+  // Custom hook to manage the loading state
+  const { loading, setLoading } = useLoader();
   // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
   // State to manage the initial content loading
   const [initialContentLoaded, setInitialContentLoaded] = useState(false);
   // Site URL
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  // Loading the page for 2 seconds at the beginning
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
+
   // Effect to manage the initial content loading
   useEffect(() => {
     setInitialContentLoaded(true);
   }, []);
+
+  // Effect to manage the loading state and turn it off when the content is loaded
+  useEffect(() => {
+    setLoading(false);
+  }, [setLoading]);
 
   // Object to store the translations
   const translation: TranslationsType = {
@@ -102,7 +101,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>The Wise Duck Dev</title>
+        <title>The Wise Duck Dev | Portfolio</title>
         <meta
           name="description"
           content={translation.pageDescription[activeLanguage]}
@@ -159,35 +158,29 @@ export default function Home() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(indexSchema) }}
         />
       </Head>
-      {!isLoading ? (
-        <>
-          <Header />
-          <main>
-            <Main />
-            <Suspense
-              fallback={<div>{translation.loadingContent[activeLanguage]}</div>}
-            >
-              {initialContentLoaded && (
-                <>
-                  <Profil />
-                  <Skills />
-                  <ResponsiveImage
-                    srcDesktop={duckCoachDesktop}
-                    srcMobile={duckCoachMobile}
-                    alt={translation.altPicture[activeLanguage]}
-                  />
-                  <Experience />
-                  <Portfolio />
-                  <Contact />
-                  <Footer />
-                </>
-              )}
-            </Suspense>
-          </main>
-        </>
-      ) : (
-        <Loader />
-      )}
+      <Header />
+      <main>
+        <Main />
+        <Suspense
+          fallback={<div>{translation.loadingContent[activeLanguage]}</div>}
+        >
+          {initialContentLoaded && (
+            <>
+              <Profil />
+              <Skills />
+              <ResponsiveImage
+                srcDesktop={duckCoachDesktop}
+                srcMobile={duckCoachMobile}
+                alt={translation.altPicture[activeLanguage]}
+              />
+              <Experience />
+              <Portfolio />
+              <Contact />
+              <Footer />
+            </>
+          )}
+        </Suspense>
+      </main>
       <SpeedInsights />
     </>
   );

@@ -3,9 +3,9 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import dynamic from "next/dynamic";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { useLoader } from "../../context/LoaderContext";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
 import GPTs_Categories_Type from "../../types/GPTs_Categories_Type";
@@ -16,6 +16,7 @@ import GPTS_Card_Type from "../../types/GPTs_Card_Type";
 const Footer = dynamic(() => import("../../components/Footer/Footer"));
 import classes from "./slug.module.scss";
 
+// Define the expected structure for the initial data uploaded
 interface initialPageData {
   type: "category" | "gpt";
   category?: GPTs_Categories_Type;
@@ -23,6 +24,7 @@ interface initialPageData {
   gpt?: GPTs_Type;
 }
 
+// Define the expected structure for the page data
 interface PageData {
   type: "category" | "gpt";
   category?: GPTs_Categories_Type;
@@ -43,24 +45,36 @@ interface GPTsSlugProps {
   initialPageData: initialPageData;
 }
 
+// Define the Language type
 type Language = "EN" | "FR";
+
 // This is a helper to read JSON files
 const readJsonFile = (filePath) => {
   const json = fs.readFileSync(filePath, "utf8");
   return JSON.parse(json);
 };
 
+// Define the expected structure for the initial data uploaded
 export default function GPTsSlug({ initialPageData }) {
+  // Custom hook to manage the loading state
+  const { setLoading } = useLoader();
+  // router hook
   const router = useRouter();
+  //  Recover the slug from the router
   const { slug } = router.query;
+  // Custom hook to manage the language state
   const { activeLanguage } = useLanguage();
-  const [categoryData, setCategoryData] = useState<GPTS_Card_Type[]>([]);
-  const [gptsData, setGptsData] = useState<GPTS_Card_Type[]>([]);
+  // State to manage the page data
   const [pageData, setPageData] = useState<PageData | null>(initialPageData);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  // Site URL
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
+  // Set loading to false when the component mounts
+  useEffect(() => {
+    setLoading(false);
+  }, [setLoading]);
+
+  // Fetch data when the slug or activeLanguage changes
   useEffect(() => {
     const fetchData = async () => {
       if (!slug || !Array.isArray(slug) || !activeLanguage) return;
@@ -69,8 +83,8 @@ export default function GPTsSlug({ initialPageData }) {
       // Use activeLanguage to determine which part of the JSON to fetch
       const categoriesRes = await fetch(`${basePath}gpts_categories.json`);
       const categoriesJson = await categoriesRes.json();
-
-      const languageData = categoriesJson[activeLanguage]; // Access data using activeLanguage ('EN' or 'FR')
+      // Access data using activeLanguage ('EN' or 'FR')
+      const languageData = categoriesJson[activeLanguage];
 
       if (slug.length === 1) {
         // Fetching category data based on slug
@@ -83,12 +97,14 @@ export default function GPTsSlug({ initialPageData }) {
           return;
         }
 
+        // Fetching related GPTs based on category
         const gptsRes = await fetch(`${basePath}gpts_test.json`);
         const gptsJson = await gptsRes.json();
         const relatedGpts = gptsJson[activeLanguage].filter((gpt) =>
           gpt.category.includes(slug[0])
         );
 
+        // Update the page data
         setPageData({
           type: "category",
           category: categoryData,
@@ -102,6 +118,7 @@ export default function GPTsSlug({ initialPageData }) {
           gpt.path.endsWith(`${slug[0]}/${slug[1]}`)
         );
 
+        // Update the page data
         setPageData({
           type: "gpt",
           gpt: gptData,
@@ -109,8 +126,10 @@ export default function GPTsSlug({ initialPageData }) {
       }
     };
 
+    // Call the fetchData function
     fetchData();
-  }, [slug, activeLanguage]); // Include activeLanguage in the dependency array
+  }, [slug, activeLanguage]);
+
   // Prevent the default anchor tag behavior and use Next.js router for navigation
   const handleReturnPageGPTs = (e) => {
     e.preventDefault(); // Prevent the default anchor action
@@ -118,6 +137,7 @@ export default function GPTsSlug({ initialPageData }) {
     router.push(homepagePath);
   };
 
+  // Define the translations
   const translation: TranslationsType = {
     button: {
       EN: "All GPTs",
@@ -129,6 +149,7 @@ export default function GPTsSlug({ initialPageData }) {
     },
   };
 
+  // Define the schema templates for categories page
   const categoriesSchemaTemplate = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -157,6 +178,7 @@ export default function GPTsSlug({ initialPageData }) {
     },
   };
 
+  // Define the schema templates for GPT page
   const gptSchemaTemplate = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -408,6 +430,7 @@ export default function GPTsSlug({ initialPageData }) {
       )}
 
       <Footer />
+      <SpeedInsights />
     </>
   );
 }
