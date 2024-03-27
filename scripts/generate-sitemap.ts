@@ -31,6 +31,7 @@ async function generateSitemap() {
     console.error("Error reading or processing gpts_categories.json:", error);
   }
 
+  // ! CHANGE THE FILE NAME BEFORE DEPLOYMENT
   // Read and process the gpts_test.json file
   try {
     const gptsPath = path.join(

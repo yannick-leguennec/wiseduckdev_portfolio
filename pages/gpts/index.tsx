@@ -35,6 +35,34 @@ export default function GPTS() {
       EN: "👨‍💻🚀 Hello there! As a Full Stack JS developer with a zest for React and a deep passion for AI innovations, I specialize in crafting bespoke GPTs that streamline workflows and supercharge development processes. If your company seeks to embrace AI's transformative power or if you're a recruiter looking for a developer who blends creativity with technology, let's chat! Together, we can create GPT solutions tailored to your unique needs, driving efficiency and excellence in every project. Let's innovate and elevate your operations with custom AI! 🤖✨",
       FR: "👨‍💻🚀 Bonjour ! En tant que développeur Full Stack JS passionné par React et les innovations en IA, je me spécialise dans la création de GPT sur mesure qui optimisent les flux de travail et dynamisent les processus de développement. Si votre entreprise souhaite exploiter la puissance transformatrice de l'IA, ou si vous êtes un recruteur à la recherche d'un développeur qui allie créativité et technologie, parlons-en ! Ensemble, nous pouvons développer des solutions GPT adaptées à vos besoins spécifiques, favorisant l'efficacité et l'excellence dans chaque projet. Innovons et élevons vos opérations avec l'IA personnalisée ! 🤖✨",
     },
+    title: {
+      EN: "The Wise Duck Dev GPTs | Explore Leading GPT Categories for Web and Mobile Development",
+      FR: "GPT de The Wise Duck Dev | Explorez les principales catégories de GPT pour le développement Web et Mobile",
+    },
+    description: {
+      EN: "Discover The Wise Duck Dev's curated GPTs, specializing in frontend, backend, database, design, framework, productivity, blockchain, cybersecurity, CMS, and automation. Elevate your web development with our tailored GPT expertise.",
+      FR: "",
+    },
+    alt: {
+      EN: "The Wise Duck Dev emanates a suave and professional demeanor, dressed in a Men In Black style suit, symbolizing a sleek approach to GPT development and expertise.",
+      FR: "Le Wise Duck Dev dégage une allure élégante et professionnelle, vêtu d'un costume de style Men In Black, symbolisant une approche élégante du développement et de l'expertise en GPT.",
+    },
+    og_title: {
+      EN: "The Wise Duck Dev GPTs | Gateway to Specialized GPT Development",
+      FR: "",
+    },
+    og_description: {
+      EN: "Step into the world of specialized GPT development with The Wise Duck Dev. Explore categories from frontend to blockchain and automation. Tailored AI solutions for robust web development.",
+      FR: "",
+    },
+    twitter_description: {
+      EN: "Join The Wise Duck Dev in exploring specialized GPTs for every development need, from frontend to CMS and beyond. Dive into a world where AI meets innovation in web development.",
+      FR: "",
+    },
+    twitter_image_alt: {
+      EN: "The Wise Duck Dev emanates a suave and professional demeanor, dressed in a Men In Black style suit, symbolizing a sleek approach to GPT development and expertise.",
+      FR: "",
+    },
   };
 
   // Custom console message for companies and recruiters
@@ -46,13 +74,10 @@ export default function GPTS() {
   return (
     <>
       <Head>
-        <title>
-          The Wise Duck Dev GPTs | Explore Leading GPT Categories for Web and
-          Mobile Development
-        </title>
+        <title>{translation.title[activeLanguage]}</title>
         <meta
           name="description"
-          content="Discover The Wise Duck Dev's curated GPTs, specializing in frontend, backend, database, design, framework, productivity, blockchain, cybersecurity, CMS, and automation. Elevate your web development with our tailored GPT expertise."
+          content={translation.description[activeLanguage]}
         />
         <meta
           name="keywords"
@@ -65,11 +90,11 @@ export default function GPTS() {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="The Wise Duck Dev GPTs | Gateway to Specialized GPT Development"
+          content={translation.og_title[activeLanguage]}
         />
         <meta
           property="og:description"
-          content="Step into the world of specialized GPT development with The Wise Duck Dev. Explore categories from frontend to blockchain and automation. Tailored AI solutions for robust web development."
+          content={translation.og_description[activeLanguage]}
         />
         <meta property="og:url" content={`https://${siteUrl}/gpts`} />
         <meta
@@ -80,15 +105,19 @@ export default function GPTS() {
         <meta name="twitter:site" content="@wiseduckdev" />
         <meta
           name="twitter:title"
-          content="The Wise Duck Dev GPTs | Specialized GPT Development"
+          content={translation.og_title[activeLanguage]}
         />
         <meta
           name="twitter:description"
-          content="Join The Wise Duck Dev in exploring specialized GPTs for every development need, from frontend to CMS and beyond. Dive into a world where AI meets innovation in web development."
+          content={translation.twitter_description[activeLanguage]}
         />
         <meta
           name="twitter:image"
           content={`https://${siteUrl}/images/index_gpts/the-wise-duck-dev-gpt-expert-men-in-black-style-profile.webp`}
+        />
+        <meta
+          name="twitter:image:alt"
+          content={translation.twitter_image_alt[activeLanguage]}
         />
         {siteUrl && (
           <>

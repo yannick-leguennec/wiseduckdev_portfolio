@@ -1,6 +1,8 @@
 import React from "react";
+import Image from "next/image";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
+import image from "../../public/images/index_gpts/the-wise-duck-dev-educational-tips-for-gpt-web-mobile-blockchain-development.webp";
 import classes from "./Tips.module.scss";
 
 function Tips() {
@@ -8,6 +10,10 @@ function Tips() {
 
   // Define the translations
   const translation: TranslationsType = {
+    alt: {
+      EN: "The Wise Duck Dev dresses as a teacher, offering educational tips for using custom GPTs in web, mobile and blockchain develpopment",
+      FR: "",
+    },
     promptTitle: {
       EN: "Prompting Tips",
       FR: "Conseils d'utilisation",
@@ -103,24 +109,33 @@ function Tips() {
   };
 
   return (
-    <div className={classes.tipsContainer}>
-      <h1 className={classes.subtitleBold}>
-        {translation.promptTitle[activeLanguage]}
-      </h1>
+    <div className={classes.contentContainer}>
+      <div className={classes.imageContainer}>
+        <Image
+          src={image}
+          alt={translation.alt[activeLanguage]}
+          className={classes.image}
+        />
+      </div>
+      <div className={classes.tipsContainer}>
+        <h1 className={classes.title}>
+          {translation.promptTitle[activeLanguage]}
+        </h1>
 
-      <ul className={classes.itemsContainer}>
-        {Array.from({ length: 11 }, (_, i) => i + 1).map((index) => {
-          const titleKey = `promptTitle${index}`;
-          const pointKey = `point${index}`;
-          if (!translation[titleKey] || !translation[pointKey]) return null;
-          return (
-            <li key={titleKey} className={classes.tipsItem}>
-              <strong>{translation[titleKey][activeLanguage]}</strong>:{" "}
-              {translation[pointKey][activeLanguage]}
-            </li>
-          );
-        })}
-      </ul>
+        <ul className={classes.itemsContainer}>
+          {Array.from({ length: 11 }, (_, i) => i + 1).map((index) => {
+            const titleKey = `promptTitle${index}`;
+            const pointKey = `point${index}`;
+            if (!translation[titleKey] || !translation[pointKey]) return null;
+            return (
+              <li key={titleKey} className={classes.tipsItem}>
+                <strong>{translation[titleKey][activeLanguage]}</strong>:{" "}
+                {translation[pointKey][activeLanguage]}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 }
