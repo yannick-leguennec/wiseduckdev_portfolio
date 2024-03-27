@@ -82,7 +82,11 @@
   font-weight: bolder;
 
   @media (max-width: 768px) {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 0.8rem;
   }
 }
 
@@ -92,5 +96,9 @@
 
   @media (max-width: 768px) {
     font-size: 0.8rem;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 0.6rem;
   }
 }

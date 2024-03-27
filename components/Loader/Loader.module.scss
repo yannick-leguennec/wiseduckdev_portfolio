@@ -19,7 +19,7 @@
 // LOGO
 .image {
   width: auto;
-  height: 100px;
+  height: 80px;
   margin-bottom: 2rem;
 
   @media (max-width: 768px) {
@@ -31,28 +31,28 @@
 
 // LOADER TEXT
 .text1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
 
   @media (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
 .text2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 
   @media (max-width: 768px) {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 
 // LOADER CIRCLE
 .loaderCircle {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background: radial-gradient(farthest-side, #000000 94%, #0000) top/8px 8px
       no-repeat,
@@ -62,8 +62,8 @@
   animation: s3 1s infinite linear;
 
   @media (max-width: 768px) {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
 }
 

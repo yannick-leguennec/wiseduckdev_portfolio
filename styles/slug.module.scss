@@ -43,8 +43,16 @@
 
   @media (max-width: 1024px) {
     position: relative;
+    width: 60%;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 70%;
+  }
+
+  @media (max-width: 540px) {
     width: 100%;
-    margin-bottom: 4rem;
   }
 }
 
@@ -83,6 +91,7 @@
   @media (max-width: 768px) {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
+    line-height: 33px;
   }
 }
 
@@ -217,7 +226,7 @@
   @media (max-width: 820px) {
     width: 95%;
     padding: 0;
-    margin: 2rem 0;
+    margin: 0.8rem 0 2rem 0;
   }
 
   @media (max-width: 540px) {
@@ -274,6 +283,10 @@
   @media (max-width: 1024px) {
     margin: 1rem 0 2rem 0;
   }
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
 }
 
 .button {
@@ -291,16 +304,20 @@
 .promoText {
   font-size: 1.2rem;
   font-weight: 500;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   @media (max-width: 1024px) {
-    margin-top: 2rem;
     font-size: 1rem;
+    margin-bottom: 2rem;
   }
 
   @media (max-width: 768px) {
     text-align: center;
     font-size: 0.9rem;
+  }
+
+  @media (max-width: 540px) {
+    margin: 0 1rem 1rem 1rem;
   }
 }
 
