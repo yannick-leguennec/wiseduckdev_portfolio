@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
@@ -7,6 +8,20 @@ import classes from "./Tips.module.scss";
 
 function Tips() {
   const { activeLanguage } = useLanguage();
+
+  // Button component bringing the user to the search section
+  const RedirectToSearchSectionButton = () => {
+    return (
+      <Link href="/gpts#search" passHref className={classes.button}>
+        {translation.button[activeLanguage]}
+      </Link>
+    );
+  };
+
+  // Function to go back to the previous page
+  const handleBackClick = () => {
+    window.history.back();
+  };
 
   // Define the translations
   const translation: TranslationsType = {
@@ -106,6 +121,14 @@ function Tips() {
       EN: "In a rapidly evolving field like web, mobile, and blockchain development,and considering that the information used by the GPTs stop in march 2023, access to up-to-date information is indispensable. Explicitly indicate when you need the GPT to perform online searches to ensure that the advice received is based on the latest trends and technologies, thus ensuring that your projects remain at the forefront of innovation.",
       FR: "Dans un domaine en évolution rapide comme le développement web, mobile et blockchain, et compte tenu du fait que les informations utilisées par les GPTs s'arrêtent en mars 2023, l'accès à des informations à jour est indispensable. Indiquez explicitement quand vous avez besoin que le GPT effectue des recherches en ligne pour vous assurer que les conseils reçus sont basés sur les dernières tendances et technologies, garantissant ainsi que vos projets restent à la pointe de l'innovation.",
     },
+    button: {
+      EN: "All GPTs",
+      FR: "Tous les GPTs",
+    },
+    buttonReturn: {
+      EN: "Go back",
+      FR: "Retour",
+    },
   };
 
   return (
@@ -129,12 +152,21 @@ function Tips() {
             if (!translation[titleKey] || !translation[pointKey]) return null;
             return (
               <li key={titleKey} className={classes.tipsItem}>
-                <strong>{translation[titleKey][activeLanguage]}</strong>:{" "}
+                <strong className={classes.strong}>
+                  {translation[titleKey][activeLanguage]}
+                </strong>
+                <br />
                 {translation[pointKey][activeLanguage]}
               </li>
             );
           })}
         </ul>
+      </div>
+      <div className={classes.buttonsContainer}>
+        <button onClick={handleBackClick} className={classes.buttonRevert}>
+          {translation.buttonReturn[activeLanguage]}
+        </button>
+        <RedirectToSearchSectionButton />
       </div>
     </div>
   );
