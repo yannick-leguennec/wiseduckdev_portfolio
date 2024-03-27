@@ -369,7 +369,7 @@ export default function GPTsSlug({ initialPageData }) {
                 {pageData.category.description}
               </p>
 
-              <div className={classes.socialButtonContainer}>
+              <div className={classes.socialButtonContainerCategories}>
                 <h2 className={[classes.subtitleBold, classes.hide].join(" ")}>
                   {translation.share[activeLanguage]}
                 </h2>
@@ -440,18 +440,20 @@ export default function GPTsSlug({ initialPageData }) {
               }
             >
               {pageData.gpts &&
-                pageData.gpts.map((gpt) => (
-                  <GPTs_Card
-                    key={uuidv4()}
-                    title={gpt.title}
-                    image={gpt.image}
-                    alt={gpt.alt}
-                    path={gpt.path}
-                    card_description={gpt.card_description}
-                    category={gpt.category}
-                    results={pageData.gpts?.length ?? 0}
-                  />
-                ))}
+                pageData.gpts
+                  .sort((a, b) => a.title.localeCompare(b.title))
+                  .map((gpt) => (
+                    <GPTs_Card
+                      key={uuidv4()}
+                      title={gpt.title}
+                      image={gpt.image}
+                      alt={gpt.alt}
+                      path={gpt.path}
+                      card_description={gpt.card_description}
+                      category={gpt.category}
+                      results={pageData.gpts?.length ?? 0}
+                    />
+                  ))}
             </div>
             <div className={classes.buttonContainer}>
               <RedirectToSearchSectionButton />
@@ -513,7 +515,7 @@ export default function GPTsSlug({ initialPageData }) {
             </div>
           </div>
           <div className={classes.downContainer}>
-            <div className={classes.socialButtonContainer}>
+            <div className={classes.socialButtonContainerGPTs}>
               <h2 className={[classes.subtitleBold, classes.hide].join(" ")}>
                 {translation.share[activeLanguage]}
               </h2>

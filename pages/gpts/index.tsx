@@ -8,7 +8,7 @@ import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
 import Header from "../../components/Header/Header";
 import Main_GPTs from "../../components/Main_GPTs/Main_GPTs";
-const GPTs = dynamic(() => import("../../components/GPTs/GPTs"));
+import GPTs from "../../components/GPTs/GPTs";
 const Footer = dynamic(() => import("../../components/Footer/Footer"));
 import indexSchemaGPTs from "../../public/schemas/indexSchemaGPTs";
 
