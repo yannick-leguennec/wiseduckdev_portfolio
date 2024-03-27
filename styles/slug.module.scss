@@ -27,7 +27,7 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    padding: 4rem 2rem 2rem 2rem;
+    padding: 4rem 2rem 0 2rem;
     max-height: 100%;
   }
 }
@@ -123,22 +123,39 @@
   }
 }
 
+// Modes Container
 .modesContainer {
   width: 100%;
   display: flex;
+  flex-direction: column;
   gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-// Social Buttons Container
-.socialButtonContainer {
-  width: 100%;
-  display: flex;
-  gap: 0.8rem;
+  margin-bottom: 3rem;
 
   @media (max-width: 1024px) {
-    justify-content: center;
+    margin-bottom: 2rem;
   }
+}
+
+// TIPS SECTION
+.tipsContainer {
+  width: auto;
+  display: flex;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// Tips Text
+.tipsText {
+  text-align: center;
+  font-weight: 600;
+  width: 280px;
+  border-radius: 25px;
+  background-color: rgb(225, 224, 224);
+  padding: 0.5rem;
+  margin-top: 1rem;
 }
 
 .hide {
@@ -210,6 +227,30 @@
   }
 }
 
+.downContainer {
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+// Social Buttons Container
+.socialButtonContainer {
+  width: 100%;
+  display: flex;
+  gap: 0.8rem;
+  padding-left: 5rem;
+
+  @media (max-width: 1024px) {
+    justify-content: center;
+    padding-left: 0;
+    padding: 1.5rem 0;
+  }
+}
+
 // Button Container
 .buttonContainer {
   width: 100%;
@@ -219,7 +260,7 @@
   gap: 2rem;
 
   @media (max-width: 1024px) {
-    margin: 1rem 0 4rem 0;
+    margin: 1rem 0 2rem 0;
   }
 }
 
@@ -254,19 +295,6 @@
 .portfolioLinkOrange {
   font-weight: 900;
   color: $navigation-color;
-}
-
-// TIPS SECTION
-.tipsContainer {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 4rem 2rem 4rem;
-
-  @media (max-width: 1024px) {
-    padding: 2rem 1rem;
-  }
 }
 
 .itemsContainer {

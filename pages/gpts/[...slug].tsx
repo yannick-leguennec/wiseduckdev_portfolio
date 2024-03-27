@@ -25,7 +25,7 @@ import {
 } from "next-share";
 import { EmailShareButton, EmailIcon } from "next-share";
 import { TelegramShareButton, TelegramIcon } from "next-share";
-import classes from "./slug.module.scss";
+import classes from "../../styles/slug.module.scss";
 
 // Define the expected structure for the initial data uploaded
 interface initialPageData {
@@ -143,11 +143,13 @@ export default function GPTsSlug({ initialPageData }) {
     fetchData();
   }, [slug, activeLanguage]);
 
-  // Prevent the default anchor tag behavior and use Next.js router for navigation
-  const handleReturnPageGPTs = (e) => {
-    e.preventDefault(); // Prevent the default anchor action
-    const homepagePath = activeLanguage === "FR" ? "/fr/gpts" : "/gpts";
-    router.push(homepagePath);
+  // Button component bringing the user to the search section
+  const RedirectToSearchSectionButton = () => {
+    return (
+      <Link href="/gpts#search" passHref className={classes.button}>
+        {translation.button[activeLanguage]}
+      </Link>
+    );
   };
 
   // Define the translations
@@ -167,6 +169,10 @@ export default function GPTsSlug({ initialPageData }) {
     promo: {
       EN: "Want to know more about The Wise Duck Dev ? Click ",
       FR: "Vous voulez en savoir plus sur The Wise Duck Dev ? Cliquez ",
+    },
+    tips: {
+      EN: "Need some prompting tips ?",
+      FR: "Besoin de quelques conseils pour vos prompts ?",
     },
   };
 
@@ -448,9 +454,7 @@ export default function GPTsSlug({ initialPageData }) {
                 ))}
             </div>
             <div className={classes.buttonContainer}>
-              <button onClick={handleReturnPageGPTs} className={classes.button}>
-                {translation.button[activeLanguage]}
-              </button>
+              <RedirectToSearchSectionButton />
             </div>
             <p className={classes.promoText}>
               {translation.promo[activeLanguage]}{" "}
@@ -489,57 +493,15 @@ export default function GPTsSlug({ initialPageData }) {
                     )}
                   </ul>
                 )}
-              </div>
-              <div className={classes.socialButtonContainer}>
-                <h2 className={[classes.subtitleBold, classes.hide].join(" ")}>
-                  {translation.share[activeLanguage]}
-                </h2>
-                <FacebookShareButton
-                  url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
-                  quote={pageData.gpt.meta_description_page}
-                  hashtag={pageData.gpt.hashtag}
-                >
-                  <FacebookIcon size={32} round />
-                </FacebookShareButton>
-                <FacebookMessengerShareButton
-                  url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
-                  appId={""}
-                >
-                  <FacebookMessengerIcon size={32} round />
-                </FacebookMessengerShareButton>
-                <WhatsappShareButton
-                  url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
-                  title={pageData.gpt.meta_title_page}
-                  separator=":: "
-                >
-                  <WhatsappIcon size={32} round />
-                </WhatsappShareButton>
-                <TwitterShareButton
-                  url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
-                  title={pageData.gpt.twitter_description}
-                >
-                  <TwitterIcon size={32} round />
-                </TwitterShareButton>
-
-                <LinkedinShareButton
-                  url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
-                >
-                  <LinkedinIcon size={32} round />
-                </LinkedinShareButton>
-                <TelegramShareButton
-                  url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
-                  title={pageData.gpt.meta_title_page}
-                >
-                  <TelegramIcon size={32} round />
-                </TelegramShareButton>
-
-                <EmailShareButton
-                  url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
-                  subject={pageData.gpt.meta_title_page}
-                  body={pageData.gpt.meta_description_page}
-                >
-                  <EmailIcon size={32} round />
-                </EmailShareButton>
+                <div className={classes.tipsContainer}>
+                  <Link
+                    href={`/gpts/prompting-tips`}
+                    className={classes.tipsText}
+                  >
+                    {" "}
+                    {translation.tips[activeLanguage]}
+                  </Link>
+                </div>
               </div>
             </div>
             <div className={classes.imageContainer}>
@@ -550,18 +512,81 @@ export default function GPTsSlug({ initialPageData }) {
               />
             </div>
           </div>
+          <div className={classes.downContainer}>
+            <div className={classes.socialButtonContainer}>
+              <h2 className={[classes.subtitleBold, classes.hide].join(" ")}>
+                {translation.share[activeLanguage]}
+              </h2>
+              <FacebookShareButton
+                url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                quote={pageData.gpt.meta_description_page}
+                hashtag={pageData.gpt.hashtag}
+              >
+                <FacebookIcon size={32} round />
+              </FacebookShareButton>
+              <FacebookMessengerShareButton
+                url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                appId={""}
+              >
+                <FacebookMessengerIcon size={32} round />
+              </FacebookMessengerShareButton>
+              <WhatsappShareButton
+                url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                title={pageData.gpt.meta_title_page}
+                separator=":: "
+              >
+                <WhatsappIcon size={32} round />
+              </WhatsappShareButton>
+              <TwitterShareButton
+                url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                title={pageData.gpt.twitter_description}
+              >
+                <TwitterIcon size={32} round />
+              </TwitterShareButton>
 
-          <div className={classes.buttonContainer}>
-            <button onClick={handleReturnPageGPTs} className={classes.button}>
-              {translation.button[activeLanguage]}
-            </button>
-            <button
-              onClick={handleReturnPageGPTs}
-              className={classes.buttonRun}
-            >
-              {translation.buttonRun[activeLanguage]}
-            </button>
+              <LinkedinShareButton
+                url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+              >
+                <LinkedinIcon size={32} round />
+              </LinkedinShareButton>
+              <TelegramShareButton
+                url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                title={pageData.gpt.meta_title_page}
+              >
+                <TelegramIcon size={32} round />
+              </TelegramShareButton>
+
+              <EmailShareButton
+                url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                subject={pageData.gpt.meta_title_page}
+                body={pageData.gpt.meta_description_page}
+              >
+                <EmailIcon size={32} round />
+              </EmailShareButton>
+            </div>
+            <div className={classes.buttonContainer}>
+              <RedirectToSearchSectionButton />
+              <Link
+                href={pageData.gpt.openAi_link}
+                passHref
+                className={classes.buttonRun}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {translation.buttonRun[activeLanguage]}
+              </Link>
+            </div>
           </div>
+          <p className={classes.promoText}>
+            {translation.promo[activeLanguage]}{" "}
+            <Link
+              href={portfolioLink}
+              className={`${classes.portfolioLinkOrange}`}
+            >
+              {" "}
+              {activeLanguage === "FR" ? "ici" : "here"}
+            </Link>{" "}
+          </p>
         </main>
       )}
 

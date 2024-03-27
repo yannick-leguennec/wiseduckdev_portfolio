@@ -19,7 +19,8 @@ function Footer() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
   // Logic to determine if we are on the homepage or GPTs page
   const isHomePage = pathname === "/" || pathname === "/fr";
-  const isGptsPage = pathname === "/gpts" || pathname === "/fr/gpts";
+  const isGptsPage =
+    pathname.startsWith("/gpts") || pathname.startsWith("/fr/gpts");
   // Determine the GPTs link based on the active language
   const gptsLink = activeLanguage === "FR" ? `/fr/gpts` : `/gpts`;
   const mainLink = activeLanguage === "FR" ? `/fr` : `/`;

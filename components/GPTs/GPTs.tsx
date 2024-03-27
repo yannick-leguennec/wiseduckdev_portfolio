@@ -125,7 +125,7 @@ const GPTs = () => {
   };
 
   return (
-    <section id="gpts" className={classes.mainContainer}>
+    <section id="search" className={classes.mainContainer}>
       <h1 className={classes.title}>{translations.title[activeLanguage]}</h1>
       <h2 className={classes.subtitle}>
         {translations.subtitle[activeLanguage]}

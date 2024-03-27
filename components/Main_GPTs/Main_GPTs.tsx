@@ -64,7 +64,7 @@ function Main_GPTs() {
         </p>
         <div className={classes.buttonContainer}>
           <button
-            onClick={() => scrollToSection("gpts")}
+            onClick={() => scrollToSection("search")}
             className={classes.button}
           >
             {translation.button[activeLanguage]}
