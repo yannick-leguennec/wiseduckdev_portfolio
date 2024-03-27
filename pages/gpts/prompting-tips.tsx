@@ -1,3 +1,4 @@
+import { GetStaticProps } from "next";
 import React, { useEffect } from "react";
 import Head from "next/head";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -7,7 +8,8 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Tips from "../../components/Tips/Tips";
 import { useLoader } from "../../context/LoaderContext";
-import classes from "../../styles/prompting-tips.module.scss"
+import schema from "../../public/schemas/promptingTipsSchema";
+import classes from "../../styles/prompting-tips.module.scss";
 
 const PromptingTips = () => {
   // Custom hook to manage the loading state
@@ -24,32 +26,32 @@ const PromptingTips = () => {
 
   const translation: TranslationsType = {
     alt: {
-      EN: "The Wise Duck Dev dresses as a teacher, offering educational tips for using custom GPTs in web, mobile and blockchain develpopment",
-      FR: "",
+      EN: "The Wise Duck Dev dresses as a teacher, offering educational tips for using custom GPTs in web, mobile and blockchain development",
+      FR: "Le Wise Duck Dev se présente comme un enseignant, offrant des conseils pédagogiques pour utiliser des GPT personnalisés dans le développement web, mobile et blockchain",
     },
     title: {
       EN: "Mastering Wise Duck Dev GPTs: Expert Prompting Tips for Devs in Web, Mobile & Blokchain",
-      FR: "",
+      FR: "Maîtriser les GPTs de Wise Duck Dev : Conseils d'expert en incitation pour les développeurs web, mobiles et blockchain",
     },
     description: {
       EN: "Unlock the full potential of over 100 specialized GPTs for web, mobile and blockchain development with the Wise Duck Dev's expert prompting tips. Dive into our comprehensive guide to enhance your development workflow and command GPTs with precision for groundbreaking innovation and efficiency. Start crafting effective prompts today!",
-      FR: "",
+      FR: "Débloquez tout le potentiel de plus de 100 GPT spécialisés pour le développement web, mobile et blockchain avec les conseils d'expert en incitation de Wise Duck Dev. Plongez dans notre guide complet pour améliorer votre flux de travail de développement et maîtriser les GPT avec précision pour des innovations révolutionnaires et une efficacité accrue. Commencez dès aujourd'hui à créer des incitations efficaces !",
     },
     og_title: {
       EN: "Unleash Dev Genius with GPT: Exclusive Prompting Tips | The Wise Duck Dev",
-      FR: "",
+      FR: "Libérez le génie du développement avec GPT : Conseils exclusifs en incitation | Le Wise Duck Dev",
     },
     og_description: {
-      EN: "Step into the realm of The Wise Duck Dev and master over 100 custom GPTs. Elevate your web, mobile and blockchain projetcs witu our insider prompting techniques and revolutionize your development process.",
-      FR: "",
+      EN: "Step into the realm of The Wise Duck Dev and master over 100 custom GPTs. Elevate your web, mobile and blockchain projects with our insider prompting techniques and revolutionize your development process.",
+      FR: "Entrez dans le domaine du Wise Duck Dev et maîtrisez plus de 100 GPT personnalisés. Élevez vos projets web, mobiles et blockchain avec nos techniques d'incitation exclusives et révolutionnez votre processus de développement.",
     },
     twitter_title: {
       EN: "MasterThe Wise Duck Dev GPTs: Exclusive Prompting Tips for optimal results",
-      FR: "",
+      FR: "Maîtrisez les GPTs de Wise Duck Dev : Conseils exclusifs en incitation pour des résultats optimaux",
     },
     twitter_description: {
       EN: "Dive into specialized GPTs for devs! Get exclusive prompting techniques for web, mobile, and blockchain development from The Wise Duck Dev. #wiseduckdevgpts #customGPTs #GPT #DevTools #BlockchainDev",
-      FR: "",
+      FR: "Plongez dans les GPT spécialisés pour les développeurs ! Obtenez des techniques d'incitation exclusives pour le développement web, mobile et blockchain du Wise Duck Dev. #wiseduckdevgpts #customGPTs #GPT #DevTools #BlockchainDev",
     },
   };
 
@@ -119,10 +121,10 @@ const PromptingTips = () => {
           </>
         )}
         <link rel="canonical" href={`https://${siteUrl}`} />
-        {/* <script
+        <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(indexSchemaGPTs) }}
-        /> */}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
       </Head>
       <Header />
       <main className={classes.mainContainer}>
@@ -135,3 +137,9 @@ const PromptingTips = () => {
 };
 
 export default PromptingTips;
+
+export const getStaGetStaticProps: GetStaticProps = async () => {
+  return {
+    props: {},
+  };
+};

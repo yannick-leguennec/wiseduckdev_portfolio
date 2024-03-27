@@ -49,19 +49,19 @@ export default function GPTS() {
     },
     og_title: {
       EN: "The Wise Duck Dev GPTs | Gateway to Specialized GPT Development",
-      FR: "",
+      FR: "Les GPT de Wise Duck Dev | Porte d'entrée vers le développement spécialisé en GPT",
     },
     og_description: {
       EN: "Step into the world of specialized GPT development with The Wise Duck Dev. Explore categories from frontend to blockchain and automation. Tailored AI solutions for robust web development.",
-      FR: "",
+      FR: "Plongez dans le monde du développement spécialisé en GPT avec Wise Duck Dev. Explorez des catégories du frontend à la blockchain et à l'automatisation. Des solutions d'IA sur mesure pour un développement web robuste.",
     },
     twitter_description: {
       EN: "Join The Wise Duck Dev in exploring specialized GPTs for every development need, from frontend to CMS and beyond. Dive into a world where AI meets innovation in web development.",
-      FR: "",
+      FR: "Rejoignez Wise Duck Dev pour explorer des GPT spécialisés pour chaque besoin de développement, du frontend aux CMS et au-delà. Plongez dans un monde où l'IA rencontre l'innovation dans le développement web.",
     },
     twitter_image_alt: {
       EN: "The Wise Duck Dev emanates a suave and professional demeanor, dressed in a Men In Black style suit, symbolizing a sleek approach to GPT development and expertise.",
-      FR: "",
+      FR: "Wise Duck Dev dégage une attitude suave et professionnelle, vêtu d'un costume de style Men In Black, symbolisant une approche élégante du développement et de l'expertise en GPT.",
     },
   };
 
