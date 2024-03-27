@@ -58,12 +58,17 @@ const GPTs = () => {
       const data = await response.json();
       if (data) {
         const value = searchTerm.toLowerCase();
-        const filteredData = data[activeLanguage].filter(
-          (gpt: GPTs_Card_Type) =>
-            gpt.title.toLowerCase().includes(value) ||
-            gpt.category?.toLowerCase().includes(value)
-        );
-        setFilteredGPTs(filteredData);
+        // First, filter the data based on the search term
+        const filteredData = data[activeLanguage]
+          .filter(
+            (gpt: GPTs_Card_Type) =>
+              gpt.title.toLowerCase().includes(value) ||
+              gpt.category?.toLowerCase().includes(value)
+          )
+          // Then, sort the filtered data alphabetically by title
+          .sort((a, b) => a.title.localeCompare(b.title));
+
+        setFilteredGPTs(filteredData); // Set the sorted and filtered data
       }
     } catch (error) {
       console.error("Failed to fetch GPTs data:", error);
