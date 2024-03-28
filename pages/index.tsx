@@ -57,6 +57,14 @@ export default function Home() {
       EN: "Loading more content...",
       FR: "Chargement du contenu en cours...",
     },
+    og_title: {
+      EN: "The Wise Duck Dev - Full Stack JS Developer specialized in React",
+      FR: "The Wise Duck Dev - Développeur Full Stack JS spécialisé en React",
+    },
+    og_description: {
+      EN: "The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React.",
+      FR: "The Wise Duck Dev est votre destination de prédilection pour des solutions innovantes de développement web et mobile Full Stack JS, spécialisé en React.",
+    },
   };
 
   // Custom console message for companies and recruiters
@@ -117,11 +125,11 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="The Wise Duck Dev - Full Stack JS Developer specialized in React"
+          content={translation.og_title[activeLanguage]}
         />
         <meta
           property="og:description"
-          content="The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React."
+          content={translation.og_description[activeLanguage]}
         />
         <meta
           property="og:image"
@@ -130,18 +138,24 @@ export default function Home() {
         <meta property="og:url" content={`https://${siteUrl}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@wiseduckdev" />
+        <meta name="twitter:creator" content="@wiseduckdev" />
         <meta
           name="twitter:title"
-          content="The Wise Duck Dev - Full Stack JS Developer specialized in React"
+          content={translation.og_title[activeLanguage]}
         />
         <meta
           name="twitter:description"
-          content="The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React."
+          content={translation.og_description[activeLanguage]}
         />
         <meta
           name="twitter:image"
           content={`https://${siteUrl}/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp`}
         />
+        <meta
+          name="twitter:image:alt"
+          content={translation.altPicture[activeLanguage]}
+        />
+
         {siteUrl && (
           <>
             <link rel="alternate" hrefLang="en" href={`https://${siteUrl}`} />

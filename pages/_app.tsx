@@ -36,11 +36,6 @@ const ComponentWithLoader: React.FC<AppProps> = ({
     // Function to handle the route change complete
     const handleRouteChangeComplete = () => setLoading(false);
 
-    // const handleRouteChangeStart = (url) =>
-    //   url !== router.asPath && setLoading(true);
-    // const handleRouteChangeComplete = (url) =>
-    //   url === router.asPath && setLoading(false);
-
     // Event listeners for route changes
     Router.events.on("routeChangeStart", handleRouteChangeStart);
     Router.events.on("routeChangeComplete", handleRouteChangeComplete);

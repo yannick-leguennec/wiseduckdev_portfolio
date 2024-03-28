@@ -26,8 +26,6 @@ const GPTs = () => {
   // Determine the GPTs link based on the active language
   const portfolioLink = activeLanguage === "FR" ? `/fr` : `/`;
 
-  console.log("filterredCategories", filteredCategories);
-
   // Fetch the GPTs categories data from the JSON file
   useEffect(() => {
     const fetchData = async () => {

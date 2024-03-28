@@ -254,6 +254,7 @@ export default function GPTsSlug({ initialPageData }) {
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@wiseduckdev" />
+          <meta name="twitter:creator" content="@wiseduckdev" />
           <meta
             name="twitter:title"
             content={pageData.category.twitter_title}
@@ -265,6 +266,10 @@ export default function GPTsSlug({ initialPageData }) {
           <meta
             name="twitter:image"
             content={`https://${siteUrl}${pageData.category.image}`}
+          />
+          <meta
+            name="twitter:image:alt"
+            content={pageData.category.twitter_image_alt}
           />
           {siteUrl && (
             <>
@@ -606,7 +611,7 @@ export const getStaticProps: GetStaticProps<GPTsSlugProps> = async ({
   const path = require("path");
   // Ensure slug is treated as string[]
   const slug = params?.slug as string[];
-  // Convert the locale to your Language type
+  // Convert the locale to the active language
   const lang: Language = locale === "fr" ? "FR" : "EN";
 
   // Define the path to your JSON files
@@ -622,6 +627,7 @@ export const getStaticProps: GetStaticProps<GPTsSlugProps> = async ({
   const categoriesData = readJson(categoriesFilePath)[lang];
   const gptsData = readJson(gptsFilePath)[lang];
 
+  // Define the initial page data
   let initialPageData: PageData = {
     type: slug.length === 1 ? "category" : "gpt",
   };
@@ -643,7 +649,7 @@ export const getStaticProps: GetStaticProps<GPTsSlugProps> = async ({
       gpts: relatedGpts,
     };
   } else {
-    // Logic for item pages
+    // Logic for gpt pages
     const gptData = gptsData.find((gpt) =>
       gpt.path.endsWith(`${slug[0]}/${slug[1]}`)
     );
@@ -663,7 +669,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   // Paths to JSON data
   const basePath = path.join(process.cwd(), "public/docs/GPTs");
   const categoriesFilePath = path.join(basePath, "gpts_categories.json");
-  const itemsFilePath = path.join(basePath, "gpts_test.json"); // Assuming this is your items file
+  const itemsFilePath = path.join(basePath, "gpts_test.json");
 
   // Function to read and parse JSON files
   const readJson = (filePath) => JSON.parse(fs.readFileSync(filePath, "utf8"));
@@ -677,7 +683,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   // Generate paths for categories
   Object.keys(categoriesData).forEach((localeKey) => {
-    const locale = localeKey.toLowerCase(); // Convert locale key to lowercase ('en' or 'fr')
+    const locale = localeKey.toLowerCase();
     categoriesData[localeKey].forEach((category) => {
       const cleanPath = category.path.startsWith("/")
         ? category.path.slice(1)
@@ -689,6 +695,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     });
   });
 
+  // Generate paths for GPTs
   Object.keys(itemsData).forEach((localeKey) => {
     const locale = localeKey.toLowerCase();
     itemsData[localeKey].forEach((item) => {
@@ -713,10 +720,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
     });
   });
 
-  console.log(JSON.stringify(paths, null, 2)); // For debugging
-
   return {
     paths,
-    fallback: "blocking", // or false if you prefer to return a 404 for missing paths
+    fallback: "false",
   };
 };

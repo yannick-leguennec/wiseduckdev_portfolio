@@ -24,6 +24,7 @@ const PromptingTips = () => {
     setLoading(false);
   }, [setLoading]);
 
+  // Translations object
   const translation: TranslationsType = {
     alt: {
       EN: "The Wise Duck Dev dresses as a teacher, offering educational tips for using custom GPTs in web, mobile and blockchain development",
@@ -90,6 +91,7 @@ const PromptingTips = () => {
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@wiseduckdev" />
+        <meta name="twitter:creator" content="@wiseduckdev" />
         <meta
           name="twitter:title"
           content={translation.twitter_title[activeLanguage]}
@@ -138,6 +140,7 @@ const PromptingTips = () => {
 
 export default PromptingTips;
 
+// Static props
 export const getStaGetStaticProps: GetStaticProps = async () => {
   return {
     props: {},

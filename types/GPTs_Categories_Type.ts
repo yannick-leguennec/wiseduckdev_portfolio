@@ -19,5 +19,6 @@ export default interface GPTs_Categories_Type {
   twitter_title: string;
   twitter_description: string;
   twitter_image: string;
+  twitter_image_alt: string;
   hashtag: string;
 }

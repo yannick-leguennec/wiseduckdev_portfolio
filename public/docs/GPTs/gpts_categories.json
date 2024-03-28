@@ -21,6 +21,7 @@
       "twitter_title": "The Wise Duck Dev Frontend GPTs",
       "twitter_description": "Join The Wise Duck Dev in harnessing the power of GPT for cutting-edge frontend development.",
       "twitter_image": "/images/gpts_categories/frontend-technologies-gpt-js-react-ai-expert.webp",
+      "twitter_image_alt": "The Wise Duck Dev dressed as a soldier, embodying the spirit of front-end technology mastery, with a focus on JavaScript, React, and AI-enhanced web development through specialized GPTs.",
       "hashtag": "#FrontendGPTs #FrontendExcellence #ReactGPT #JavaScriptAI #TypeScriptInnovation #wiseduckdevgpts"
     },
     {
@@ -44,6 +45,7 @@
       "twitter_title": "Elevating Design with The Wise Duck Dev's GPTs",
       "twitter_description": "Step into the future of digital design with The Wise Duck Dev, where GPT meets creativity for transformative design solutions.",
       "twitter_image": "/images/gpts_categories/design-gpt-expert-duck-stylish.webp",
+      "twitter_image_alt": "The Wise Duck Dev sporting chic star-shaped sunglasses, embodying the creative and stylish essence of design in GPT-enhanced UI/UX development.",
       "hashtag": "#DigitalDesignGPTs #CreativeUIUX #DesignInnovation #AIDesignTools #wiseduckdevgpts"
     },
     {
@@ -67,6 +69,7 @@
       "twitter_title": "The Wise Duck Dev Backend GPTs",
       "twitter_description": "Join The Wise Duck Dev in leveraging the power of GPT for state-of-the-art backend development.",
       "twitter_image": "/images/gpts_categories/backend-technologies-gpt-expert-duck-adventurer.webp",
+      "twitter_image_alt": "The Wise Duck Dev as a seasoned adventurer, symbolizing backend technology expertise, skilled in server-side development and API REST.",
       "hashtag": "#BackendGPTs #ServerSideSolutions #NodejsAI #APIRestExpertise #wiseduckdevgpts"
     },
     {
@@ -90,6 +93,7 @@
       "twitter_title": "The Wise Duck Dev Database GPTs",
       "twitter_description": "Embrace the future of database management with The Wise Duck Dev's GPT-powered tools and insights.",
       "twitter_image": "/images/gpts_categories/database-gpt-expert-duck-surgeon.webp",
+      "twitter_image_alt": "The Wise Duck Dev clad as a meticulous surgeon, representing precision and expertise in database technologies and data management for GPTs.",
       "hashtag": "#DatabaseGPTs #SQLAI #DataSecurityGPT #ManagementInnovation #wiseduckdevgpts"
     },
     {
@@ -113,6 +117,7 @@
       "twitter_title": "Mastering Frameworks with The Wise Duck Dev's GPTs",
       "twitter_description": "Dive into the future of framework development with The Wise Duck Dev, where GPT meets advanced framework strategies.",
       "twitter_image": "/images/gpts_categories/frameworks-gpt-expert-duck-pilot.webp",
+      "twitter_image_alt": "The Wise Duck Dev adorned as an astute pilot, representing mastery over various development frameworks and the ability to navigate complex GPT-enhanced software projects.",
       "hashtag": "#FrameworkGPTs #NextJsExpert #VueJSExpert #AngularInsights #WebDevelopmentFrameworks #wiseduckdevgpts"
     },
     {
@@ -136,6 +141,7 @@
       "twitter_title": "Elevate Your CMS with The Wise Duck Dev's GPTs",
       "twitter_description": "Transform your content management strategy with The Wise Duck Dev, where GPT meets CMS for groundbreaking content solutions.",
       "twitter_image": "/images/gpts_categories/cms-gpt-expert-duck-yogi.webp",
+      "twitter_image_alt": "The Wise Duck Dev styled as a yogi, evoking the mindful organization and seamless content management capabilities of GPT-integrated CMS platforms.",
       "hashtag": "#CMSGPTs #CMSInnovation #ContentManagerGPT #WordPressAI #DrupalGPT #wiseduckdevgpts"
     },
     {
@@ -159,6 +165,7 @@
       "twitter_title": "Boost Your Coding Efficiency with The Wise Duck Dev's GPTs",
       "twitter_description": "Join The Wise Duck Dev in leveraging GPT for a more productive and efficient development process.",
       "twitter_image": "/images/gpts_categories/productivity-gpt-expert-duck-rockstar.webp",
+      "twitter_image_alt": "The Wise Duck Dev exudes a rockstar attitude, equipped for peak productivity in GPT-powered project management and efficient workflows.",
       "hashtag": "#DevProductivityGPTs #DevProductivity #CodingEfficiency #AIProductivityTools #ProjectManagementGPT #wiseduckdevgpts"
     },
     {
@@ -182,6 +189,7 @@
       "twitter_title": "Revolutionizing Blockchain with The Wise Duck Dev's GPTs",
       "twitter_description": "Step into the future of decentralized technology with The Wise Duck Dev, where GPT meets blockchain for transformative development.",
       "twitter_image": "/images/gpts_categories/blockchain-gpt-expert-duck-astronaut.webp",
+      "twitter_image_alt": "The Wise Duck Dev suited up as an astronaut, reflecting the trailblazing exploration and advanced security of blockchain technology in GPT applications.",
       "hashtag": "#BlockchainGPTs #DecentralizedSolutions #SmartContractAI #dAppDevelopment #wiseduckdevgpts"
     },
     {
@@ -205,6 +213,7 @@
       "twitter_title": "Automating Development with The Wise Duck Dev's GPTs",
       "twitter_description": "Step into efficient development with The Wise Duck Dev, where GPT meets automation for transformative workflow solutions.",
       "twitter_image": "/images/gpts_categories/automation-gpt-expert-duck-scifi-commander.webp",
+      "twitter_image_alt": "The Wise Duck Dev dons as a Starfleet commander outfit, signifying the control and efficiency of automation in GPT-driven systems and processes.",
       "hashtag": "#AutomationGPTs #EfficientWorkflow #AutomatedCoding #ContinuousIntegrationAI #wiseduckdevgpts"
     },
     {
@@ -228,6 +237,7 @@
       "twitter_title": "Elevating Cybersecurity with The Wise Duck Dev's GPTs",
       "twitter_description": "Step into the future of cybersecurity with The Wise Duck Dev, where GPT meets advanced security strategies.",
       "twitter_image": "/images/gpts_categories/cybersecurity-gpt-expert-duck-boxer.webp",
+      "twitter_image_alt": "The Wise Duck Dev geared up as a boxer, symbolizing the strength and resilience required for cybersecurity in protecting GPT-enhanced systems.",
       "hashtag": "#CybersecurityGPT #DigitalSecurityAI #SecureCoding #ThreatDetectionGPT #wiseduckdevgpts"
     }
   ],
@@ -254,6 +264,7 @@
       "twitter_title": "Les GPTs Frontend de The Wise Duck Dev",
       "twitter_description": "Rejoignez The Wise Duck Dev pour exploiter la puissance de GPT pour le développement frontend de pointe.",
       "twitter_image": "/images/gpts_categories/frontend-technologies-gpt-js-react-ai-expert.webp",
+      "twitter_image_alt": "Le Wise Duck Dev habillé en soldat, incarnant l'esprit de maîtrise de la technologie frontend, avec un accent sur JavaScript, React et le développement web amélioré par l'IA grâce à des GPT spécialisés.",
       "hashtag": "#FrontendGPTs #FrontendExcellence #ReactGPT #JavaScriptAI #TypeScriptInnovation #wiseduckdevgpts"
     },
     {
@@ -277,6 +288,7 @@
       "twitter_title": "Élever le Design avec les GPTs de The Wise Duck Dev",
       "twitter_description": "Plongez dans l'avenir du design numérique avec The Wise Duck Dev, où le GPT rencontre la créativité pour des solutions de design transformatrices.",
       "twitter_image": "/images/gpts_categories/design-gpt-expert-duck-stylish.webp",
+      "twitter_image_alt": "Le Wise Duck Dev arborant des lunettes de soleil chic en forme d'étoile, incarnant l'essence créative et élégante du design dans le développement UI/UX amélioré par GPT.",
       "hashtag": "#DigitalDesignGPTs #CreativeUIUX #DesignInnovation #AIDesignTools #wiseduckdevgpts"
     },
     {
@@ -300,6 +312,7 @@
       "twitter_title": "Les GPTs Backend de The Wise Duck Dev",
       "twitter_description": "Rejoignez The Wise Duck Dev pour exploiter la puissance de GPT pour un développement backend à la pointe de la technologie.",
       "twitter_image": "/images/gpts_categories/backend-technologies-gpt-expert-duck-adventurer.webp",
+      "twitter_image_alt": "Le Wise Duck Dev en tant qu'aventurier chevronné, symbolisant l'expertise en technologie backend, compétent en développement côté serveur et d'API REST.",
       "hashtag": "#BackendGPTs #ServerSideSolutions #NodejsAI #APIRestExpertise #wiseduckdevgpts"
     },
     {
@@ -323,6 +336,7 @@
       "twitter_title": "Les GPTs de Base de Données de The Wise Duck Dev",
       "twitter_description": "Embrassez l'avenir de la gestion de base de données avec les outils et insights propulsés par GPT de The Wise Duck Dev.",
       "twitter_image": "/images/gpts_categories/database-gpt-expert-duck-surgeon.webp",
+      "twitter_image_alt": "Le Wise Duck Dev habillé en chirurgien méticuleux, représentant la précision et l'expertise en technologies de bases de données et en gestion des données pour les GPTs.",
       "hashtag": "#DatabaseGPTs #SQLAI #SécuritéDesDonnéesGPT #InnovationDeGestion #wiseduckdevgpts"
     },
     {
@@ -346,6 +360,7 @@
       "twitter_title": "Maîtriser les Frameworks avec les GPTs de The Wise Duck Dev",
       "twitter_description": "Plongez dans l'avenir du développement de framework avec The Wise Duck Dev, où le GPT rencontre des stratégies de framework avancées.",
       "twitter_image": "/images/gpts_categories/frameworks-gpt-expert-duck-pilot.webp",
+      "twitter_image_alt": "Le Wise Duck Dev paré en pilote astucieux, représentant la maîtrise des différents frameworks de développement et la capacité à naviguer dans des projets logiciels complexes améliorés par GPT.",
       "hashtag": "#FrameworkGPTs #NextJsExpert #VueJSExpert #AngularInsights #WebDevelopmentFrameworks #wiseduckdevgpts"
     },
     {
@@ -369,6 +384,7 @@
       "twitter_title": "Élevez Votre CMS avec les GPTs de Wise Duck Dev",
       "twitter_description": "Transformez votre stratégie de gestion de contenu avec Wise Duck Dev, là où GPT rencontre CMS pour des solutions de contenu révolutionnaires.",
       "twitter_image": "/images/gpts_categories/cms-gpt-expert-duck-yogi.webp",
+      "twitter_image_alt": "Le Wise Duck Dev habillé en yogi, évoquant l'organisation consciente et les capacités de gestion de contenu fluides des plateformes CMS intégrant GPT.",
       "hashtag": "#CMSGPTs #CMSInnovation #ContentManagerGPT #WordPressAI #DrupalGPT #wiseduckdevgpts"
     },
     {
@@ -392,6 +408,7 @@
       "twitter_title": "Augmentez Votre Efficacité de Codage avec les GPTs de Wise Duck Dev",
       "twitter_description": "Rejoignez Wise Duck Dev pour exploiter les GPTs et rendre le processus de développement plus productif et efficace.",
       "twitter_image": "/images/gpts_categories/productivity-gpt-expert-duck-rockstar.webp",
+      "twitter_image_alt": "Le Wise Duck Dev dégage une attitude de rockstar, équipé pour une productivité maximale dans la gestion de projet alimentée grâce aux GPTs et un flux de travail efficaces.",
       "hashtag": "#DevProductivityGPTs #DevProductivity #CodingEfficiency #AIProductivityTools #ProjectManagementGPT #wiseduckdevgpts"
     },
     {
@@ -415,6 +432,7 @@
       "twitter_title": "Révolutionner la Blockchain avec les GPTs de Wise Duck Dev",
       "twitter_description": "Plongez dans l'avenir de la technologie décentralisée avec Wise Duck Dev, où les GPT rencontrent la blockchain pour un développement transformateur.",
       "twitter_image": "/images/gpts_categories/blockchain-gpt-expert-duck-astronaut.webp",
+      "twitter_image_alt": "Le Wise Duck Dev vêtu en astronaute, reflétant l'exploration pionnière et la sécurité avancée de la technologie blockchain dans les applications GPT.",
       "hashtag": "#BlockchainGPTs #SolutionsDécentralisées #ContratsIntelligentsAI #DéveloppementdApp #wiseduckdevgpts"
     },
     {
@@ -438,6 +456,7 @@
       "twitter_title": "Automatiser le Développement avec les GPTs de Wise Duck Dev",
       "twitter_description": "Plongez dans un développement efficace avec Wise Duck Dev, où les GPT rencontrent l'automatisation pour des solutions de flux de travail transformatrices.",
       "twitter_image": "/images/gpts_categories/automation-gpt-expert-duck-scifi-commander.webp",
+      "twitter_image_alt": "Le Wise Duck Dev revêt l'uniforme d'un commandant de Starfleet, symbolisant le contrôle et l'efficacité de l'automatisation dans les systèmes et processus pilotés par GPT.",
       "hashtag": "#AutomatisationGPTs #EfficacitéDuFluxDeTravail #CodageAutomatisé #IntégrationContinueAI #wiseduckdevgpts"
     },
     {
@@ -461,6 +480,7 @@
       "twitter_title": "Élever la Cybersécurité avec les GPTs de Wise Duck Dev",
       "twitter_description": "Plongez dans l'avenir de la cybersécurité avec Wise Duck Dev, où les GPT rencontrent des stratégies de sécurité avancées.",
       "twitter_image": "/images/gpts_categories/cybersecurity-gpt-expert-duck-boxer.webp",
+      "twitter_image_alt": "Le Wise Duck Dev équipé comme un boxeur, symbolisant la force et la résilience nécessaires pour la cybersécurité dans la protection des systèmes améliorés par GPT.",
       "hashtag": "#CybersécuritéGPT #SécuritéNumériqueAI #CodageSécurisé #DétectionDeMenacesGPT #wiseduckdevgpts"
     }
   ]

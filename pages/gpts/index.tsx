@@ -103,6 +103,7 @@ export default function GPTS() {
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@wiseduckdev" />
+        <meta name="twitter:creator" content="@wiseduckdev" />
         <meta
           name="twitter:title"
           content={translation.og_title[activeLanguage]}
