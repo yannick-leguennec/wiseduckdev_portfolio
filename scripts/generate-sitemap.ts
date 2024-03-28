@@ -10,66 +10,118 @@ async function generateSitemap() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
   const currentDate = new Date().toISOString().split("T")[0];
 
-  // Initial paths array with specified paths
-  let paths = ["/", "/gpts", "/gpts/prompting-tips"];
+  // Specific <url> blocks as strings for '/','/gpts', and '/gpts/prompting-tips'
+  const indexUrlBlock = `
+  <url>
+  <loc>https://${baseUrl}</loc>
+  <image:image>
+<image:loc>https://${baseUrl}/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://${baseUrl}/images/index/full-stack-react-wise-duck-developer-profile.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://${baseUrl}/images/index/professional-wise-duck-developer-coding-laptop-office.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://${baseUrl}/images/index/professional-wise-duck-developer-mobile-coding-office.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://${baseUrl}/images/index/innovative-developer-wise-duck-dev-white-suit-couch-tropical-plants-mobile.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://${baseUrl}/images/logos/wise-duck-dev-full-stack-js-logo-vertical.png</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://${baseUrl}/images/logos/wise-duck-dev-full-stack-js-logo-horizontal.png</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://${baseUrl}/images/logos/wise-duck-dev-full-stack-js-logo.png</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://${baseUrl}/images/projectsPictures/family-flow-project-management-lead-developer.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://${baseUrl}/images/404/innovative-developer-wise-duck-dev-relaxing-drink-404-page.webp</image:loc>
+</image:image>
+  <lastmod>${currentDate}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>`;
 
-  // Read and process the gpts_categories.json file
+  const gptsUrlBlock = `
+  <url>
+  <loc>https://${baseUrl}/gpts</loc>
+  <image:image>
+<image:loc>https://${baseUrl}/images/index_gpts/the-wise-duck-dev-gpt-expert-men-in-black-style-profile.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://${baseUrl}/images/index_gpts/the-wise-duck-dev-gpt-expert-men-in-black-style.webp</image:loc>
+</image:image>
+</url>`;
+
+  const promptingTipsUrlBlock = `
+  <url>
+  <loc>https://${baseUrl}/gpts/prompting-tips</loc>
+  <image:image>
+<image:loc>https://${baseUrl}/images/index_gpts/the-wise-duck-dev-educational-tips-for-gpt-web-mobile-blockchain-development.webp</image:loc>
+</image:image>
+</url>
+`;
+
+  // Initialize urlEntries with specific blocks
+  let urlEntries = `${indexUrlBlock}${gptsUrlBlock}${promptingTipsUrlBlock}`;
+
+  // Process the gpts_categories.json and gpts_test.json files
   try {
-    const categoriesPath = path.join(
-      process.cwd(),
-      "/public/docs/GPTs/gpts_categories.json"
+    // Categories
+    const categoriesData = await fs.readFile(
+      path.join(process.cwd(), "/public/docs/GPTs/gpts_categories.json"),
+      "utf8"
     );
-    const categoriesData = await fs.readFile(categoriesPath, "utf8");
     const categories = JSON.parse(categoriesData).EN;
 
-    // Extract paths from categories, prefix with '/gpts/', and add to paths array
-    const categoryPaths = categories.map(
-      (category) => `/gpts/${category.path}`
-    );
-    paths = [...paths, ...categoryPaths];
-  } catch (error) {
-    console.error("Error reading or processing gpts_categories.json:", error);
-  }
+    categories.forEach((category) => {
+      urlEntries += `
+        <url>
+          <loc>https://${baseUrl}/gpts/${category.path}</loc>
+          <image:image><image:loc>https://${baseUrl}${category.image}</image:loc></image:image>
+          <lastmod>${currentDate}</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>`;
+    });
 
-  // ! CHANGE THE FILE NAME BEFORE DEPLOYMENT
-  // Read and process the gpts_test.json file
-  try {
-    const gptsPath = path.join(
-      process.cwd(),
-      "/public/docs/GPTs/gpts_test.json"
+    // ! MODIFY THE FILE PATH BEFORE DEPLOYING
+    // GPTs
+    const gptsData = await fs.readFile(
+      path.join(process.cwd(), "/public/docs/GPTs/gpts_test.json"),
+      "utf8"
     );
-    const gptsData = await fs.readFile(gptsPath, "utf8");
     const gpts = JSON.parse(gptsData).EN;
 
-    // Extract paths from categories, prefix with '/gpts/', and add to paths array
-    const gptPaths = gpts.map((gpt) => `/gpts${gpt.path}`);
-    paths = [...paths, ...gptPaths];
+    gpts.forEach((gpt) => {
+      urlEntries += `
+        <url>
+          <loc>https://${baseUrl}/gpts${gpt.path}</loc>
+          <image:image><image:loc>https://${baseUrl}${gpt.image}</image:loc></image:image>
+          <lastmod>${currentDate}</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>`;
+    });
   } catch (error) {
-    console.error("Error reading or processing gpts_test.json:", error);
+    console.error("Error processing JSON files:", error);
   }
-
-  // Generate url entries for each path
-  const urlEntries = paths
-    .map(
-      (path) => `
-    <url>
-      <loc>https://${baseUrl}${path}</loc>
-      <lastmod>${currentDate}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-    </url>
-  `
-    )
-    .join("");
 
   const sitemap = `
     <?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
       ${urlEntries}
     </urlset>
   `;
 
-  // Write the sitemap.xml file
   await fs.writeFile(
     path.join(process.cwd(), "public", "sitemap.xml"),
     sitemap.trim()

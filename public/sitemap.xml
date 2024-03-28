@@ -1,102 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
       
-    <url>
-      <loc>https://localhost:3000/</loc>
-      <lastmod>2024-03-27</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-    </url>
-  
-    <url>
-      <loc>https://localhost:3000/gpts</loc>
-      <lastmod>2024-03-27</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-    </url>
-  
-    <url>
-      <loc>https://localhost:3000/gpts/prompting-tips</loc>
-      <lastmod>2024-03-27</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-    </url>
-  
-    <url>
-      <loc>https://localhost:3000/gpts/frontend</loc>
-      <lastmod>2024-03-27</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-    </url>
-  
-    <url>
-      <loc>https://localhost:3000/gpts/design</loc>
-      <lastmod>2024-03-27</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-    </url>
-  
-    <url>
-      <loc>https://localhost:3000/gpts/backend</loc>
-      <lastmod>2024-03-27</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-    </url>
-  
-    <url>
-      <loc>https://localhost:3000/gpts/database</loc>
-      <lastmod>2024-03-27</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-    </url>
-  
-    <url>
-      <loc>https://localhost:3000/gpts/framework</loc>
-      <lastmod>2024-03-27</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-    </url>
-  
-    <url>
-      <loc>https://localhost:3000/gpts/cms</loc>
-      <lastmod>2024-03-27</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-    </url>
-  
-    <url>
-      <loc>https://localhost:3000/gpts/productivity</loc>
-      <lastmod>2024-03-27</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-    </url>
-  
-    <url>
-      <loc>https://localhost:3000/gpts/blockchain</loc>
-      <lastmod>2024-03-27</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-    </url>
-  
-    <url>
-      <loc>https://localhost:3000/gpts/automation</loc>
-      <lastmod>2024-03-27</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-    </url>
-  
-    <url>
-      <loc>https://localhost:3000/gpts/cybersecurity</loc>
-      <lastmod>2024-03-27</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-    </url>
-  
-    <url>
-      <loc>https://localhost:3000/gpts/productivity/seo-mastermind</loc>
-      <lastmod>2024-03-27</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-    </url>
-  
+  <url>
+  <loc>https://localhost:3000</loc>
+  <image:image>
+<image:loc>https://localhost:3000/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://localhost:3000/images/index/full-stack-react-wise-duck-developer-profile.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://localhost:3000/images/index/professional-wise-duck-developer-coding-laptop-office.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://localhost:3000/images/index/professional-wise-duck-developer-mobile-coding-office.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://localhost:3000/images/index/innovative-developer-wise-duck-dev-white-suit-couch-tropical-plants-mobile.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://localhost:3000/images/logos/wise-duck-dev-full-stack-js-logo-vertical.png</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://localhost:3000/images/logos/wise-duck-dev-full-stack-js-logo-horizontal.png</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://localhost:3000/images/logos/wise-duck-dev-full-stack-js-logo.png</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://localhost:3000/images/projectsPictures/family-flow-project-management-lead-developer.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://localhost:3000/images/404/innovative-developer-wise-duck-dev-relaxing-drink-404-page.webp</image:loc>
+</image:image>
+  <lastmod>2024-03-28</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
+  <url>
+  <loc>https://localhost:3000/gpts</loc>
+  <image:image>
+<image:loc>https://localhost:3000/images/index_gpts/the-wise-duck-dev-gpt-expert-men-in-black-style-profile.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://localhost:3000/images/index_gpts/the-wise-duck-dev-gpt-expert-men-in-black-style.webp</image:loc>
+</image:image>
+</url>
+  <url>
+  <loc>https://localhost:3000/gpts/prompting-tips</loc>
+  <image:image>
+<image:loc>https://localhost:3000/images/index_gpts/the-wise-duck-dev-educational-tips-for-gpt-web-mobile-blockchain-development.webp</image:loc>
+</image:image>
+</url>
+
+        <url>
+          <loc>https://localhost:3000/gpts/frontend</loc>
+          <image:image><image:loc>https://localhost:3000/images/gpts_categories/frontend-technologies-gpt-js-react-ai-expert.webp</image:loc></image:image>
+          <lastmod>2024-03-28</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://localhost:3000/gpts/design</loc>
+          <image:image><image:loc>https://localhost:3000/images/gpts_categories/design-gpt-expert-duck-stylish.webp</image:loc></image:image>
+          <lastmod>2024-03-28</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://localhost:3000/gpts/backend</loc>
+          <image:image><image:loc>https://localhost:3000/images/gpts_categories/backend-technologies-gpt-expert-duck-adventurer.webp</image:loc></image:image>
+          <lastmod>2024-03-28</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://localhost:3000/gpts/database</loc>
+          <image:image><image:loc>https://localhost:3000/images/gpts_categories/database-gpt-expert-duck-surgeon.webp</image:loc></image:image>
+          <lastmod>2024-03-28</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://localhost:3000/gpts/framework</loc>
+          <image:image><image:loc>https://localhost:3000/images/gpts_categories/frameworks-gpt-expert-duck-pilot.webp</image:loc></image:image>
+          <lastmod>2024-03-28</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://localhost:3000/gpts/cms</loc>
+          <image:image><image:loc>https://localhost:3000/images/gpts_categories/cms-gpt-expert-duck-yogi.webp</image:loc></image:image>
+          <lastmod>2024-03-28</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://localhost:3000/gpts/productivity</loc>
+          <image:image><image:loc>https://localhost:3000/images/gpts_categories/productivity-gpt-expert-duck-rockstar.webp</image:loc></image:image>
+          <lastmod>2024-03-28</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://localhost:3000/gpts/blockchain</loc>
+          <image:image><image:loc>https://localhost:3000/images/gpts_categories/blockchain-gpt-expert-duck-astronaut.webp</image:loc></image:image>
+          <lastmod>2024-03-28</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://localhost:3000/gpts/automation</loc>
+          <image:image><image:loc>https://localhost:3000/images/gpts_categories/automation-gpt-expert-duck-scifi-commander.webp</image:loc></image:image>
+          <lastmod>2024-03-28</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://localhost:3000/gpts/cybersecurity</loc>
+          <image:image><image:loc>https://localhost:3000/images/gpts_categories/cybersecurity-gpt-expert-duck-boxer.webp</image:loc></image:image>
+          <lastmod>2024-03-28</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
+        <url>
+          <loc>https://localhost:3000/gpts/productivity/seo-mastermind</loc>
+          <image:image><image:loc>https://localhost:3000/images/gpts/seo-mastermind.webp</image:loc></image:image>
+          <lastmod>2024-03-28</lastmod>
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        </url>
     </urlset>
