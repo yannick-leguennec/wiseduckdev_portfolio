@@ -35,7 +35,11 @@ class MyDocument extends Document<MyDocumentProps> {
           />
           <meta charSet="UTF-8" />
           <meta name="author" content="The Wise Duck Dev" />
-          <link rel="icon" href="/favicon.ico" />
+          <link
+            rel="icon"
+            href={`https://${siteUrl}/favicon.ico`}
+            type="image/x-icon"
+          />
           <link
             rel="apple-touch-icon"
             sizes="180x180"

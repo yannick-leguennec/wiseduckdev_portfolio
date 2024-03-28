@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import classes from "./Main.module.scss";
 import Image from "next/image";
-import desktopImage from "../../public/images/index/duck-main.webp";
-import mobileImage from "../../public/images/index/duck-main-mobile.webp";
+import desktopImage from "../../public/images/index/professional-wise-duck-developer-coding-laptop-office.webp";
+import mobileImage from "../../public/images/index/professional-wise-duck-developer-mobile-coding-office.webp.webp";
 import { TranslationsType } from "../../types/TranslationsType";
 
 function Main() {
@@ -21,8 +21,12 @@ function Main() {
       FR: "Spécialisé en React",
     },
     altPicture: {
-      EN: "Certified Full Stack JavaScript Web and Web Mobile Developer specialized in React Wise Duck Dev setting in a chair while coding a new project",
-      FR: "Développeur certifié web et web mobile Full Stack JavaScript spécialisé en React Wise Duck Dev assis sur une chaise en train de coder un nouveau projet",
+      EN: "Certified Full Stack JavaScript Web and Web Mobile Developer Wise Duck Dev, specialized in React, coding on laptop in modern office setup with green plants",
+      FR: "Développeur Web et Web Mobile Full Stack JavaScript certifié Wise Duck Dev, spécialisé en React, codant sur un ordinateur portable dans un bureau moderne avec des plantes vertes",
+    },
+    altMobilePicture: {
+      EN: "Mobile view Certified Full Stack JavaScript Web and Web Mobile Developer Wise Duck Dev, specialized in React, coding on mobile device in modern office setup with green plants",
+      FR: "Vue mobile Développeur Web et Web Mobile Full Stack JavaScript certifié Wise Duck Dev, spécialisé en React, codant sur un appareil mobile dans un bureau moderne avec des plantes vertes",
     },
   };
 
@@ -49,7 +53,11 @@ function Main() {
     return (
       <Image
         src={isMobile ? mobileImage : desktopImage}
-        alt={translations.altPicture[activeLanguage]}
+        alt={
+          isMobile
+            ? translations.altMobilePicture[activeLanguage]
+            : translations.altPicture[activeLanguage]
+        }
         className={`${classes.image}`}
         priority
       />

@@ -15,7 +15,7 @@ const indexSchema = {
       alumniOf: ["O'clock", "HEC Montreal"],
       email: "wiseduckdev@gmail.com",
       url: `${siteUrl}`,
-      image: `https://${siteUrl}/images/metadata_profil_picture.webp`,
+      image: `https://${siteUrl}/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp`,
     },
   ],
   description:

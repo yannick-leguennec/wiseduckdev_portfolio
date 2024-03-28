@@ -1,5 +1,5 @@
 import Image from "next/image";
-import picture from "../../public/images/projectsPictures/familyflow_square.webp";
+import picture from "../../public/images/projectsPictures/family-flow-project-management-lead-developer.webp";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
 import classes from "./Portfolio.module.scss";
@@ -31,8 +31,8 @@ function Portfolio() {
       FR: "Family Flow est une application web innovante destinée à simplifier la coordination et la communication des activités familiales, en permettant à chaque membre de participer activement à la vie de famille, quelle que soit leur localisation.",
     },
     alt: {
-      EN: "Interface of Family Flow, my latest family coordination project, developed with React, TypeScript, and Mantine UI, illustrating my role as Product Manager and Lead Front-end Developer.",
-      FR: "Interface de Family Flow, mon dernier projet de coordination familiale, développé avec React, TypeScript, et Mantine UI, illustrant mon rôle de Product Manager et Lead Front-end Developer.",
+      EN: "Screenshot of Family Flow app interface, showcasing my family coordination project utilizing React, TypeScript, and Mantine UI, highlighting my expertise as Product Manager and Lead Front-End Developer.",
+      FR: "Capture d'écran de l'interface de l'application Family Flow, mettant en valeur mon projet de coordination familiale utilisant React, TypeScript et Mantine UI, soulignant mon expertise en tant que Product Manager et Lead Front-End Developer.",
     },
     github: {
       EN: "Github link: ",

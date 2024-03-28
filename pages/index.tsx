@@ -8,8 +8,8 @@ import { useLoader } from "../context/LoaderContext";
 import { useLanguage } from "../context/LanguageContext";
 import { TranslationsType } from "../types/TranslationsType";
 import Image, { StaticImageData } from "next/image";
-import duckCoachDesktop from "../public/images/index/duck-coach-desktop.webp";
-import duckCoachMobile from "../public/images/index/duck-coach-mobile.webp";
+import duckCoachDesktop from "../public/images/index/innovative-developer-wise-duck-dev-white-suit-couch-tropical-plants.webp";
+import duckCoachMobile from "../public/images/index/innovative-developer-wise-duck-dev-white-suit-couch-tropical-plants-mobile.webp";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
 const Profil = dynamic(() => import("../components/Profil/Profil"));
@@ -42,7 +42,7 @@ export default function Home() {
   // Object to store the translations
   const translation: TranslationsType = {
     altPicture: {
-      EN: "AI and Photoshop-crafted image of The Wise Duck Dev in a white suit, embracing innovation and style, seated in a modern couch amidst tropical plants, bridging the Skills and Experience sections with a blend of professionalism and creativity.",
+      EN: "AI and Photoshop-crafted image of The Wise Duck Dev in a white suit, embracing innovation and style, seating in a modern couch amidst tropical plants, bridging the Skills and Experience sections with a blend of professionalism and creativity.",
       FR: "Image du Wise Duck Dev en costume blanc, créée par IA et optimisée avec Photoshop, évoquant l'innovation avec style, assis dans un canapé moderne entouré de plantes tropicales, faisant le lien entre les sections 'Compétences' et 'Expérience' avec un mélange de professionnalisme et de créativité.",
     },
     logText: {
@@ -123,11 +123,11 @@ export default function Home() {
           property="og:description"
           content="The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React."
         />
-        <meta property="og:url" content={`https://${siteUrl}`} />
         <meta
           property="og:image"
-          content={`https://${siteUrl}/images/metadata_profil_picture.webp`}
+          content={`https://${siteUrl}/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp`}
         />
+        <meta property="og:url" content={`https://${siteUrl}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@wiseduckdev" />
         <meta
@@ -140,7 +140,7 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content={`https://${siteUrl}/images/metadata_profil_picture.webp`}
+          content={`https://${siteUrl}/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp`}
         />
         {siteUrl && (
           <>

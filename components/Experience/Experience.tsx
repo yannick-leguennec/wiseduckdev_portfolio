@@ -1,7 +1,7 @@
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
 import Image from "next/image";
-import plantPicture from "../../public/images/index/plants.webp";
+import plantPicture from "../../public/images/index/tropical-plants-assortment-growth-innovation.webp";
 import classes from "./Experience.module.scss";
 
 function Experience() {
@@ -11,8 +11,8 @@ function Experience() {
   // Object containing the translations for the Experience component
   const translation: TranslationsType = {
     altPicture: {
-      EN: "AI-generated vibrant green plant symbolizing growth and innovation in my professional web and mobile development experience.",
-      FR: "Plante verte vibrante générée par IA symbolisant la croissance et l'innovation dans mon expérience professionnelle en développement web et mobile.",
+      EN: "AI-generated vibrant assortment of tropical plants symbolizing growth and innovation, echoing the dynamic evolution in web and mobile development.",
+      FR: "Assortiment de plantes tropicales vibrant généré par IA symbolisant la croissance et l'innovation, faisant écho à l'évolution dynamique dans le développement web et mobile.",
     },
     title: {
       EN: "Experience",
