@@ -52,7 +52,7 @@ const GPTs = () => {
     setFilteredGPTs([]); // Clear previous search results before executing a new search
 
     try {
-      const response = await fetch("/docs/GPTs/gpts_test.json");
+      const response = await fetch("/docs/GPTs/gpts.json");
       const data = await response.json();
       if (data) {
         const value = searchTerm.toLowerCase();
@@ -61,7 +61,8 @@ const GPTs = () => {
           .filter(
             (gpt: GPTs_Card_Type) =>
               gpt.title.toLowerCase().includes(value) ||
-              gpt.category?.toLowerCase().includes(value)
+              (Array.isArray(gpt.category) &&
+                gpt.category.some((cat) => cat.toLowerCase().includes(value)))
           )
           // Then, sort the filtered data alphabetically by title
           .sort((a, b) => a.title.localeCompare(b.title));

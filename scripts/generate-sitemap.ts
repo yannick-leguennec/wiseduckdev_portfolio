@@ -95,7 +95,7 @@ async function generateSitemap() {
     // ! MODIFY THE FILE PATH BEFORE DEPLOYING
     // GPTs
     const gptsData = await fs.readFile(
-      path.join(process.cwd(), "/public/docs/GPTs/gpts_test.json"),
+      path.join(process.cwd(), "/public/docs/GPTs/gpts.json"),
       "utf8"
     );
     const gpts = JSON.parse(gptsData).EN;

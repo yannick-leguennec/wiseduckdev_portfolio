@@ -111,7 +111,7 @@ export default function GPTsSlug({ initialPageData }) {
         }
 
         // Fetching related GPTs based on category
-        const gptsRes = await fetch(`${basePath}gpts_test.json`);
+        const gptsRes = await fetch(`${basePath}gpts.json`);
         const gptsJson = await gptsRes.json();
         const relatedGpts = gptsJson[activeLanguage].filter((gpt) =>
           gpt.category.includes(slug[0])
@@ -125,7 +125,7 @@ export default function GPTsSlug({ initialPageData }) {
         });
       } else {
         // Fetching specific GPT data
-        const gptsRes = await fetch(`${basePath}gpts_test.json`);
+        const gptsRes = await fetch(`${basePath}gpts.json`);
         const gptsJson = await gptsRes.json();
         const gptData = gptsJson[activeLanguage].find((gpt) =>
           gpt.path.endsWith(`${slug[0]}/${slug[1]}`)
@@ -172,7 +172,7 @@ export default function GPTsSlug({ initialPageData }) {
     },
     tips: {
       EN: "Need some prompting tips ?",
-      FR: "Besoin de quelques conseils pour vos prompts ?",
+      FR: "Des astuces pour vos prompts ?",
     },
   };
 
@@ -617,7 +617,7 @@ export const getStaticProps: GetStaticProps<GPTsSlugProps> = async ({
   // Define the path to your JSON files
   const basePath = path.join(process.cwd(), "public/docs/GPTs");
   const categoriesFilePath = path.join(basePath, "gpts_categories.json");
-  const gptsFilePath = path.join(basePath, "gpts_test.json");
+  const gptsFilePath = path.join(basePath, "gpts.json");
 
   // Function to read and parse JSON files
   const readJson = (filePath: string) =>
@@ -669,7 +669,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   // Paths to JSON data
   const basePath = path.join(process.cwd(), "public/docs/GPTs");
   const categoriesFilePath = path.join(basePath, "gpts_categories.json");
-  const itemsFilePath = path.join(basePath, "gpts_test.json");
+  const itemsFilePath = path.join(basePath, "gpts.json");
 
   // Function to read and parse JSON files
   const readJson = (filePath) => JSON.parse(fs.readFileSync(filePath, "utf8"));

@@ -47,7 +47,7 @@ function Tips() {
     },
     point2: {
       EN: "Choosing the appropriate mode is essential for optimizing your interaction with the GPT. Whether you opt for '/general' for broad inquiries or another specialized mode for a more technical queries, each mode is specifically designed to facilitate your work. Activating the suitable mode enriches the assistance provided by the GPT, making it more relevant and useful for your particular context. All you have to is to tap the '/mode' at the beginning of your prompt to activate it. Finally you swith back to the 'general' mode by typing '/general' at the beginning of your prompt or any other modes that you may need.",
-      FR: "Choisir le mode approprié est essentiel pour optimiser votre interaction avec le GPT. Que vous optiez pour '/general' pour des questions générales ou un autre mode spécialisé pour des requêtes plus techniques, chaque mode est spécifiquement conçu pour faciliter votre travail. L'activation du mode adéquat enrichit l'assistance fournie par le GPT, la rendant plus pertinente et utile pour votre contexte particulier. Tout ce que vous avez à faire est de taper le '/mode' au début de votre invite pour l'activer. Enfin, vous revenez au mode 'général' en tapant '/general' au début de votre invite ou tout autre mode dont vous pourriez avoir besoin.",
+      FR: "Choisir le mode approprié est essentiel pour optimiser votre interaction avec le GPT. Que vous optiez pour '/general' pour des questions générales ou un autre mode spécialisé pour des requêtes plus techniques, chaque mode est spécifiquement conçu pour faciliter votre travail. L'activation du mode adéquat enrichit l'assistance fournie par le GPT, la rendant plus pertinente et utile pour votre contexte particulier. Tout ce que vous avez à faire est de taper le '/mode' au début de votre prompt pour l'activer. Enfin, vous pourrez revenir au mode 'général' en tapant '/general' au début de votre prompt ou tout simplement entrer tout autre mode dont vous pourriez avoir besoin.",
     },
     promptTitle3: {
       EN: "Clarify your Objectives",
@@ -70,8 +70,8 @@ function Tips() {
       FR: "Soyez précis dans vos demandes",
     },
     point5: {
-      EN: "The more specific your questions, the more relevant the GPT's responses will be. Detailing the technical aspects and specific goals of your project directs the GPT to focus its advice more effectively, resulting in more precise and applicable suggestions for your situation.",
-      FR: "Plus vos questions sont spécifiques, plus les réponses du GPT seront pertinentes. Détaillez les aspects",
+      EN: "The more specific your questions or requests are, the more relevant the GPT's responses will be. Detailing the technical aspects and specific goals of your project directs the GPT to focus its advice more effectively, resulting in more precise and applicable suggestions for your situation.",
+      FR: "Plus vos questions ou demandes sont spécifiques, plus les réponses du GPT seront pertinentes. Détaillez les aspects techniques et les objectifs spécifiques de votre projet permet au GPT de concentrer ses conseils de manière plus efficace, ce qui se traduit par des suggestions plus précises et applicables à votre situation.",
     },
     promptTitle6: {
       EN: "Fill the customs instructions",
@@ -79,7 +79,7 @@ function Tips() {
     },
     point6: {
       EN: "Sharing personalized information significantly enriches the quality of the GPT's responses. Providing details about your role, specialties, programming languages mastered, work environment (operating system, machine, IDE), and current project refines the GPT's advice to be highly relevant and suited to your specific professional context.",
-      FR: "Partager ses informations dans les 'customs instrcutions' enrichit considérablement la qualité des réponses du GPT. Fournir des détails sur votre rôle, vos spécialités, les langages de programmation maîtrisés, votre environnement de travail (système d'exploitation, machine, IDE) et le projet en cours affine les conseils du GPT pour qu'il soit plus pertinent et adapté à votre contexte professionnel spécifique.",
+      FR: "Partager ses informations dans les 'customs instructions' enrichit considérablement la qualité des réponses du GPT. Fournir des détails sur votre rôle, vos spécialités, les langages de programmation maîtrisés, votre environnement de travail (système d'exploitation, machine, IDE) et le projet en cours affine les conseils du GPT pour qu'il soit plus pertinent et adapté à votre contexte professionnel spécifique.",
     },
     promptTitle7: {
       EN: "Use the GPT as an assitant",
