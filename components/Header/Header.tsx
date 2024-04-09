@@ -80,6 +80,7 @@ function Header() {
           behavior: "smooth",
         });
       });
+      if (isMenuOpen) toggleMenu();
     }
   };
 
