@@ -92,7 +92,7 @@
     },
     {
       "id": 4,
-      "category": ["frontend"],
+      "category": ["frontend", "programming"],
       "title": "React & Redux Copilot",
       "subtitle": "Elevate Front-End Development with React & Redux Copilot's Expertise",
       "image": "/images/gpts/react-redux-copilot-gpt-logo-wise-duck-dev.webp",
@@ -274,7 +274,7 @@
     },
     {
       "id": 10,
-      "category": ["frontend", "backend"],
+      "category": ["frontend", "backend", "programming"],
       "title": "TypeScript Titan GPT",
       "subtitle": "Unlock TypeScript mastery with our intelligent GPT, amplifying your development capabilities.",
       "image": "/images/gpts/typescript-titan-gpt-wise-duck-devs.webp",
@@ -514,7 +514,7 @@
     },
     {
       "id": 18,
-      "category": ["frontend", "backend"],
+      "category": ["frontend", "backend", "programming"],
       "title": "Swift Savant AI",
       "subtitle": "Unleash your Swift programming potential with Swift Savant AI's masterful guidance.",
       "image": "/images/gpts/swift-savant-ai-wise-duck-dev-gpt-logo.webp",
@@ -671,7 +671,7 @@
       "alt": "Logo of Websocket Ninja AI, an AI-powered tool dissolving complex webocket technology into easy steps",
       "path": "/frontend/websocket-ninja-ai",
       "openAi_link": "https://chat.openai.com/g/g-evGqHCnV5-websocket-ninja-ai",
-      "card_description": "Boost your Websocket skills with Websocket Ninja AI, your reliable companion in navigating Websocket complexities",
+      "card_description": "Boost your Websocket skills with Websocket Ninja AI, your guide to real-time application mastery.",
       "page_description": "Websocket Ninja AI paves the way for mastery in Websocket technology. A game-changer AI, it goes beyond basic assistance, offering insight into deep-dive tactics, strategies, and techniques for real-time, efficient application building. It converts principles into implementations, clearing the way towards understanding, designing, and debugging websocket solutions.",
       "modes": {
         "/general": "Explore environs of Websocket technology with general mode and gather insights for unique solutions",
@@ -694,7 +694,7 @@
     },
     {
       "id": 24,
-      "category": ["backend", "blockchain"],
+      "category": ["backend", "blockchain", "programming"],
       "title": "Python Genius AI",
       "subtitle": "Leverage Python Genius AI for Optimal Python Programming Guidance & Support",
       "image": "/images/gpts/python-genius-ai-wise-duck-dev-gpts.webp",
@@ -724,7 +724,7 @@
     },
     {
       "id": 25,
-      "category": ["backend", "blockchain"],
+      "category": ["backend", "blockchain", "programming"],
       "title": "Java Byte AI",
       "subtitle": "Buddy for Mastery in Java Programming with In-depth Solutions & Recommendations",
       "image": "/images/gpts/java-byte-ai-gpt-wise-duck-dev-gpts.webp",
@@ -754,7 +754,7 @@
     },
     {
       "id": 26,
-      "category": ["backend"],
+      "category": ["backend", "programming"],
       "title": "Ruby Realm AI",
       "subtitle": "Master your Ruby coding skills with our cutting-edge AI assistance.",
       "image": "/images/gpts/ruby-realm-ai-wise-duck-dev-gpt-logo.webp",
@@ -784,7 +784,7 @@
     },
     {
       "id": 27,
-      "category": ["backend"],
+      "category": ["backend", "programming"],
       "title": "PHP Pioneer AI",
       "subtitle": "Experience innovative, tailored PHP development guidance that transforms your prowess.",
       "image": "/images/gpts/php-pioneer-ai-gpt-logo-by-wise-duck-dev.webp",
@@ -814,7 +814,7 @@
     },
     {
       "id": 28,
-      "category": ["backend", "blockchain"],
+      "category": ["backend", "blockchain", "programming"],
       "title": "C++ Ranger AI",
       "subtitle": "Revolutionizing C++ programming with AI-powered knowledge and guidance",
       "image": "/images/gpts/cpp-ranger-ai-wise-duck-dev-gpt-logo.webp",
@@ -844,7 +844,7 @@
     },
     {
       "id": 29,
-      "category": ["backend"],
+      "category": ["backend", "programming"],
       "title": "C# Code Crafter",
       "subtitle": "Master C# Development with our Bleeding Edge Tech GPT, the C# Code Crafter",
       "image": "/images/gpts/csharp-code-crafter-gpt-wise-duck-dev.webp",
@@ -874,7 +874,7 @@
     },
     {
       "id": 30,
-      "category": ["backend"],
+      "category": ["backend", "programming"],
       "title": "Go Genius GPT",
       "subtitle": "Master Go programming with our AI assistant, Go Genius GPT.",
       "image": "/images/gpts/go-genius-gpt-wise-duck-dev-gpt-web.webp",
@@ -904,7 +904,7 @@
     },
     {
       "id": 31,
-      "category": ["backend", "blockchain"],
+      "category": ["backend", "blockchain", "programming"],
       "title": "Rust Optimal AI",
       "subtitle": "Rust Optimal AI: Your ultimate guide to proficient Rust programming.",
       "image": "/images/gpts/rust-optimal-ai-gpt-logo-wise-duck-dev-webp.webp",
@@ -934,7 +934,7 @@
     },
     {
       "id": 32,
-      "category": ["backend"],
+      "category": ["backend", "programming"],
       "title": "Elixir Empower AI",
       "subtitle": "Unlock advancements in Elixir programming with our AI powered guidance!",
       "image": "/images/gpts/elixir-empower-ai-gpt-wise-duck-dev.webp",
@@ -964,7 +964,7 @@
     },
     {
       "id": 33,
-      "category": ["backend"],
+      "category": ["backend", "programming"],
       "title": "Kotlin Konscious AI",
       "subtitle": "Advance your Kotlin programming skills with Kotlin Konscious AI.",
       "image": "/images/gpts/kotlin-konscious-ai-wise-duck-dev-gpts.webp",
@@ -1324,7 +1324,7 @@
     },
     {
       "id": 45,
-      "category": ["database"],
+      "category": ["database", "programming"],
       "title": "SQL Wizard AI",
       "subtitle": "Expand your SQL expertise with precision advice from SQL Wizard AI.",
       "image": "/images/gpts/sql-wizard-ai-gpt-wise-duck-dev.webp",
@@ -4034,7 +4034,7 @@
     },
     {
       "id": 135,
-      "category": ["blockchain"],
+      "category": ["blockchain", "programming"],
       "title": "Solidity Scribe GPT",
       "subtitle": "Advance your blockchain development skills with our Solidity Scribe GPT.",
       "image": "/images/gpts/solidity-scribe-gpt-wise-duck-dev-gpts-logo.webp",
@@ -4221,7 +4221,7 @@
       "alt": "Logo of React Test Library Tactician GPT, one of the powerful AI-powered GPTs by The Wise Duck Dev designed to aid in web, mobile, and Blockchain development.",
       "path": "/productivity/react-test-library-tactician-gpt",
       "openAi_link": "https://chat.openai.com/g/g-VuIGvMX6K-react-test-library-tactician-gpt",
-      "card_description": "A powerful AI for React Test Library simplifies complex testing strategy. Precise, actionable, comprehensive assistance.",
+      "card_description": "A powerful AI for the React testing library, streamlining the creation of optimized and efficient tests.",
       "page_description": "The React Test Library Tactician GPT is an ultimate tool for developers looking to make the most out of the React Testing Library. Its primary focus is to provide accurate, comprehensive, and actionable assistance. For both budding and experienced developers, it offers practical strategies, preparing you for efficient project execution with high precision and innovation. Feature-rich with a wide range of solutions from foundational aspects to complex testing strategies, systematic debugging, and explanatory break-down of complex issues, positioning it as an absolute go-to resource.",
       "modes": {
         "/general": "Explore concepts and techniques pertinent to the React Testing Library.",
@@ -4311,7 +4311,7 @@
       "alt": "Logo of EJS Mastermind AI, an intricate part of The Wise Duck Dev GPTs, exhibiting pioneering GPT technology for breakthrough web, mobile and blockchain development.",
       "path": "/frontend/EJS-Mastermind-AI-Wise-Duck-Dev",
       "openAi_link": "https://chat.openai.com/g/g-Ck24gM4fW-ejs-mastermind-ai",
-      "card_description": "EJS Mastermind AI: Pioneering GPT technology for breakthrough web, mobile and blockchain development.",
+      "card_description": "EJS Mastermind AI: Pioneering GPT technology for breakthrough web development.",
       "page_description": "EJS Mastermind AI represents the pinnacle of programming innovation in EJS, meticulously tailored to guide users through targeted, actionable, and insightful advice. It encapsulates an ideal resource for both novice developers and experienced professionals, simplifying complex EJS concepts into understandable and actionable insights that elevate your projects to unprecedented heights. The GPT's innovative approach includes interactive problem-solving and continuous improvement based on user feedback.",
       "modes": {
         "/general": "Offers guidance on a wide range of EJS concepts and techniques.",
@@ -4395,7 +4395,7 @@
     {
       "id": 147,
       "category": ["cybersecurity", "frontend"],
-      "title": "Frontend Cybersecurity GoldenEye",
+      "title": "Frontend Cybersecurity",
       "subtitle": "Delivering supreme frontline defence for secure web applications.",
       "image": "/images/gpts/frontend-cybersecurity-goldeneye-gpt-wise-duck-dev-gpts.webp",
       "alt": "Logo of Frontend Cybersecurity GoldenEye GPT, one of the many innovative tools from The Wise Duck Dev GPTs series, assisting developers in web, mobile and blockchain development.",
@@ -6014,7 +6014,7 @@
     },
     {
       "id": 201,
-      "category": ["frontend", "backend", "programming"],
+      "category": ["frontend", "backend", "programming", "framework"],
       "title": "SwiftUI Pioneer AI",
       "subtitle": "Revolutionizing iOS app development with groundbreaking SwiftUI instruction.",
       "image": "/images/gpts/swiftui-pioneer-ai-gpt-wise-duck-dev-gpts-logo.webp",
@@ -7486,7 +7486,7 @@
     },
     {
       "id": 4,
-      "category": ["frontend"],
+      "category": ["frontend", "programming"],
       "title": "React & Redux Copilot",
       "subtitle": "Élevez le développement Front-End avec l'expertise de React Copilot",
       "image": "/images/gpts/react-redux-copilot-gpt-logo-wise-duck-dev.webp",
@@ -7668,7 +7668,7 @@
     },
     {
       "id": 10,
-      "category": ["frontend", "backend"],
+      "category": ["frontend", "backend", "programming"],
       "title": "TypeScript Titan GPT",
       "subtitle": "Débloquez la maîtrise de TypeScript avec notre GPT intelligent, amplifiant vos capacités de développement.",
       "image": "/images/gpts/typescript-titan-gpt-wise-duck-devs.webp",
@@ -7908,7 +7908,7 @@
     },
     {
       "id": 18,
-      "category": ["frontend", "backend"],
+      "category": ["frontend", "backend", "programming"],
       "title": "Swift Savant AI",
       "subtitle": "Libérez votre potentiel de programmation Swift avec l'orientation magistrale de Swift Savant AI.",
       "image": "/images/gpts/swift-savant-ai-wise-duck-dev-gpt-logo.webp",
@@ -7945,7 +7945,7 @@
       "alt": "Logo de PWA Pathfinder AI, un GPT complet fourni par la suite de GPT de The Wise Duck Dev pour une assistance innovante dans le développement web, mobile et blockchain.",
       "path": "/frontend/pwa-pathfinder-ai",
       "openAi_link": "https://chat.openai.com/g/g-NGuYRvUI9-pwa-pathfinder-ai",
-      "card_description": "Révolutionnez votre apprentissage avec PWA Pathfinder AI, votre guide de premier plan pour exceller dans les applications Web progressives.",
+      "card_description": "Révolutionnez votre apprentissage avec PWA Pathfinder AI, votre guide pour les applications Web progressives.",
       "page_description": "PWA Pathfinder AI est votre aide avisée pour les Applications Web Progressives. La plateforme fusionne les aspects essentiels et avancés de PWA, les travailleurs de service et App Manifest en un seul GPT intuitif. Idéale pour les novices comme pour les vétérans du développement web, les utilisateurs seront emmenés dans un voyage de connaissance qui comprend une navigation fluide, la résolution interactive de problèmes et l'intégration continue de retour pour l'amélioration. Vivez une apprentissage complet avec des stratégies innovantes, un débogage pas à pas, et la simplicité de compréhension.",
       "modes": {
         "/general": "Une passerelle de connaissance complète vers les aspects essentiels et avancés du développement d'Applications Web progressives.",
@@ -8065,7 +8065,7 @@
       "alt": "Logo de Websocket Ninja AI, un outil alimenté par IA qui simplifie la technologie complexe de websocket en étapes faciles",
       "path": "/frontend/websocket-ninja-ai",
       "openAi_link": "https://chat.openai.com/g/g-evGqHCnV5-websocket-ninja-ai",
-      "card_description": "Améliorez vos compétences en Websocket avec Websocket Ninja AI, votre compagnon fiable pour naviguer dans les complexités de Websocket",
+      "card_description": "Maîtrisez les connexions Websocket avec Websocket Ninja AI, un guide IA pour les applications en temps réel.",
       "page_description": "Websocket Ninja AI ouvre la voie à la maîtrise de la technologie Websocket. Une IA qui change la donne, elle va au-delà de l'assistance de base, offrant un aperçu des tactiques, stratégies et techniques d'immersion pour la construction d'applications efficaces en temps réel. Il convertit les principes en mises en œuvre, dégageant la voie vers la compréhension, la conception et le débogage des solutions websocket.",
       "modes": {
         "/general": "Explorez les environs de la technologie Websocket avec le mode général et recueillez des informations pour des solutions uniques",
@@ -8088,7 +8088,7 @@
     },
     {
       "id": 24,
-      "category": ["backend", "blockchain"],
+      "category": ["backend", "blockchain", "programming"],
       "title": "Python Genius AI",
       "subtitle": "Exploitez Python Genius AI pour un guidage et un soutien en programmation Python optimal",
       "image": "/images/gpts/python-genius-ai-wise-duck-dev-gpts.webp",
@@ -8118,7 +8118,7 @@
     },
     {
       "id": 25,
-      "category": ["backend", "blockchain"],
+      "category": ["backend", "blockchain", "programming"],
       "title": "Java Byte AI",
       "subtitle": "Compagnon pour la maîtrise de la programmation Java avec des solutions approfondies et des recommandations",
       "image": "/images/gpts/java-byte-ai-gpt-wise-duck-dev-gpts.webp",
@@ -8148,7 +8148,7 @@
     },
     {
       "id": 26,
-      "category": ["backend"],
+      "category": ["backend", "programming"],
       "title": "Ruby Realm AI",
       "subtitle": "Maîtrisez vos compétences en codage Ruby avec notre assistance AI de pointe.",
       "image": "/images/gpts/ruby-realm-ai-wise-duck-dev-gpt-logo.webp",
@@ -8178,7 +8178,7 @@
     },
     {
       "id": 27,
-      "category": ["backend"],
+      "category": ["backend", "programming"],
       "title": "PHP Pioneer AI",
       "subtitle": "Découvrez des conseils innovants et personnalisés pour le développement PHP qui transforment votre maîtrise.",
       "image": "/images/gpts/php-pioneer-ai-gpt-logo-by-wise-duck-dev.webp",
@@ -8208,7 +8208,7 @@
     },
     {
       "id": 28,
-      "category": ["backend", "blockchain"],
+      "category": ["backend", "blockchain", "programming"],
       "title": "C++ Ranger AI",
       "sous-titre": "Révolutionner la programmation C++ avec des connaissances et des conseils alimentés par AI",
       "image": "/images/gpts/cpp-ranger-ai-wise-duck-dev-gpt-logo.webp",
@@ -8238,7 +8238,7 @@
     },
     {
       "id": 29,
-      "category": ["backend"],
+      "category": ["backend", "programming"],
       "title": "C# Code Crafter",
       "subtitle": "Maîtrisez le développement en C# avec notre technologie de pointe GPT, le C# Code Crafter",
       "image": "/images/gpts/csharp-code-crafter-gpt-wise-duck-dev.webp",
@@ -8268,7 +8268,7 @@
     },
     {
       "id": 30,
-      "category": ["backend"],
+      "category": ["backend", "programming"],
       "title": "Go Genius GPT",
       "sous-titre": "Maîtrisez la programmation Go avec notre assistant IA, Go Genius GPT.",
       "image": "/images/gpts/go-genius-gpt-wise-duck-dev-gpt-web.webp",
@@ -8298,7 +8298,7 @@
     },
     {
       "id": 31,
-      "category": ["backend", "blockchain"],
+      "category": ["backend", "blockchain", "programming"],
       "title": "Rust Optimal AI",
       "sous-titre": "Rust Optimal AI: Votre guide ultime pour une programmation Rust compétente.",
       "image": "/images/gpts/rust-optimal-ai-gpt-logo-wise-duck-dev-webp.webp",
@@ -8328,7 +8328,7 @@
     },
     {
       "id": 32,
-      "category": ["backend"],
+      "category": ["backend", "programming"],
       "title": "Elixir Empower AI",
       "sous-titre": "Découvrez les avancées en programmation Elixir avec notre guide alimenté par l'IA !",
       "image": "/images/gpts/elixir-empower-ai-gpt-wise-duck-dev.webp",
@@ -8358,7 +8358,7 @@
     },
     {
       "id": 33,
-      "category": ["backend"],
+      "category": ["backend", "programming"],
       "title": "Kotlin Konscious AI",
       "sous-titre": "Améliorez vos compétences en programmation Kotlin avec Kotlin Konscious AI.",
       "image": "/images/gpts/kotlin-konscious-ai-wise-duck-dev-gpts.webp",
@@ -8718,7 +8718,7 @@
     },
     {
       "id": 45,
-      "category": ["database"],
+      "category": ["database", "programming"],
       "title": "SQL Wizard AI",
       "subtitle": "Élargissez votre expertise SQL avec des conseils précis de SQL Wizard AI.",
       "image": "/images/gpts/sql-wizard-ai-gpt-wise-duck-dev.webp",
@@ -11426,7 +11426,7 @@
     },
     {
       "id": 135,
-      "category": ["blockchain"],
+      "category": ["blockchain", "programming"],
       "title": "Solidity Scribe GPT",
       "sous-titre": "Développez vos compétences en développement de blockchain avec notre Solidity Scribe GPT.",
       "image": "/images/gpts/solidity-scribe-gpt-wise-duck-dev-gpts-logo.webp",
@@ -11613,7 +11613,7 @@
       "alt": "Logo de React Test Library Tactician GPT, l'un des puissants GPT alimentés par IA de The Wise Duck Dev conçu pour aider au développement web, mobile et Blockchain.",
       "path": "/productivity/react-test-library-tactician-gpt",
       "openAi_link": "https://chat.openai.com/g/g-VuIGvMX6K-react-test-library-tactician-gpt",
-      "card_description": "Une IA puissante pour la bibliothèque de tests React simplifie la stratégie de test complexe. Assistance précise, actionable et complète.",
+      "card_description": "Une IA puissante pour la bibliothèque de tests React, simplifiant la création de tests optimisés et performant.",
       "page_description": "Le React Test Library Tactician GPT est l'outil ultime pour les développeurs cherchant à tirer le meilleur parti de la bibliothèque de tests React. Son objectif principal est de fournir une assistance précise, complète et actionable. Pour les développeurs débutants et expérimentés, il offre des stratégies pratiques, vous préparant à une exécution de projet efficace avec une grande précision et innovation. Riche en fonctionnalités avec une large gamme de solutions allant des aspects fondamentaux aux stratégies de test complexes, au débogage systématique et à la décomposition explicative des problèmes complexes, le positionnant comme une ressource incontournable.",
       "modes": {
         "/general": "Explorez les concepts et techniques pertinents à la bibliothèque de tests React.",
@@ -11703,7 +11703,7 @@
       "alt": "Logo de EJS Mastermind AI, une partie intrinsèque des GPTs de The Wise Duck Dev, présentant une technologie GPT pionnière pour un développement web, mobile et blockchain révolutionnaire.",
       "path": "/frontend/EJS-Mastermind-AI-Wise-Duck-Dev",
       "openAi_link": "https://chat.openai.com/g/g-Ck24gM4fW-ejs-mastermind-ai",
-      "card_description": "EJS Mastermind AI : Technologie GPT pionnière pour un développement révolutionnaire du web, du mobile et de la blockchain.",
+      "card_description": "EJS Mastermind AI : Technologie GPT pionnière pour un développement révolutionnaire du web.",
       "page_description": "EJS Mastermind AI représente le sommet de l'innovation en programmation en EJS, minutieusement adapté pour guider les utilisateurs à travers des conseils ciblés, actionnables et perspicaces. Il encapsule une ressource idéale pour les développeurs novices et les professionnels expérimentés, simplifiant les concepts EJS complexes en perceptions compréhensibles et actionnables qui élèvent vos projets à des hauteurs sans précédent. L'approche innovante du GPT comprend la résolution de problèmes interactifs et l'amélioration continue basée sur les retours des utilisateurs.",
       "modes": {
         "/general": "Offre des conseils sur une large gamme de concepts et de techniques EJS.",
@@ -11787,7 +11787,7 @@
     {
       "id": 147,
       "category": ["cybersecurity", "frontend"],
-      "title": "Frontend Cybersecurity GoldenEye",
+      "title": "Frontend Cybersecurity",
       "subtitle": "Fournissant une défense de première ligne suprême pour des applications web sécurisées.",
       "image": "/images/gpts/frontend-cybersecurity-goldeneye-gpt-wise-duck-dev-gpts.webp",
       "alt": "Logo du Frontend CyberSecurity GoldenEye GPT, l'un des nombreux outils innovants de la série The Wise Duck Dev GPTs, aidant les développeurs dans le développement web, mobile et blockchain.",
@@ -13406,7 +13406,7 @@
     },
     {
       "id": 201,
-      "category": ["frontend", "backend", "programming"],
+      "category": ["frontend", "backend", "programming", "framework"],
       "title": "SwiftUI Pioneer AI",
       "subtitle": "Révolution de dévelopment d'applications iOS avec des instructions innovantes SwiftUI.",
       "image": "/images/gpts/swiftui-pioneer-ai-gpt-wise-duck-dev-gpts-logo.webp",
