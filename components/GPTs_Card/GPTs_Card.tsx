@@ -1,11 +1,17 @@
 import Image from "next/image";
 import classes from "./GPTs_Card.module.scss";
 import GPTs_Card_Type from "../../types/GPTs_Card_Type";
+import { useLanguage } from "../../context/LanguageContext";
 
 const GPTs_Card = (props: GPTs_Card_Type) => {
+  // Custom hook to manage the language changes
+  const { activeLanguage } = useLanguage();
+
   return (
     <a
-      href={`/gpts${props.path}`}
+      href={
+        activeLanguage === "FR" ? `/fr/gpts${props.path}` : `/gpts${props.path}`
+      }
       className={
         props.results === 1
           ? [classes.link, classes.cardContainer2].join(" ")
