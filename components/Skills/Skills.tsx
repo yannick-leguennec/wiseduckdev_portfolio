@@ -196,6 +196,7 @@ const Skills = () => {
               <div className={classes.list}>GitHub</div>
               <div className={classes.list}>Docker</div>
               <div className={classes.list}>WordPress</div>
+              <div className={classes.list}>Linux</div>
             </div>
           </article>
           <article

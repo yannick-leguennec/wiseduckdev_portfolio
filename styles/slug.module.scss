@@ -82,15 +82,18 @@
 
 // Title
 .title {
-  font-size: 4rem;
+  font-size: 3.5rem;
+  line-height: 75px;
+  margin-bottom: 2rem;
 
   @media (max-width: 1024px) {
     font-size: 2.5rem;
+    line-height: 55px;
   }
 
   @media (max-width: 768px) {
     font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+
     line-height: 33px;
   }
 }
@@ -99,13 +102,16 @@
 .subtitle {
   font-size: 2.2rem;
   margin-bottom: 2rem;
+  line-height: 45px;
 
   @media (max-width: 1024px) {
     font-size: 1.5rem;
+    line-height: 35px;
   }
 
   @media (max-width: 768px) {
     font-size: 1.2rem;
+    line-height: 25px;
   }
 }
 

@@ -75,7 +75,6 @@ export default function GPTsSlug({ initialPageData }) {
   const { slug } = router.query;
   // Custom hook to manage the language state
   const { activeLanguage } = useLanguage();
-  console.log("activeLanguage", activeLanguage);
   // State to manage the page data
   const [pageData, setPageData] = useState<PageData | null>(initialPageData);
   // Site URL
