@@ -58,6 +58,9 @@ async function generateSitemap() {
 <image:image>
 <image:loc>https://${baseUrl}/images/index_gpts/the-wise-duck-dev-gpt-expert-men-in-black-style.webp</image:loc>
 </image:image>
+<lastmod>${currentDate}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
 </url>`;
 
   const promptingTipsUrlBlock = `
@@ -66,6 +69,9 @@ async function generateSitemap() {
   <image:image>
 <image:loc>https://${baseUrl}/images/index_gpts/the-wise-duck-dev-educational-tips-for-gpt-web-mobile-blockchain-development.webp</image:loc>
 </image:image>
+<lastmod>${currentDate}</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
 </url>
 `;
 
@@ -88,7 +94,7 @@ async function generateSitemap() {
           <image:image><image:loc>https://${baseUrl}${category.image}</image:loc></image:image>
           <lastmod>${currentDate}</lastmod>
           <changefreq>weekly</changefreq>
-          <priority>0.8</priority>
+          <priority>0.9</priority>
         </url>`;
     });
 
