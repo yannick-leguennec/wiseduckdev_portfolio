@@ -7,7 +7,8 @@
     "build": "next build && pnpm ts-node scripts/generate-sitemap.ts",
     "start": "next start",
     "build-start": "next build && next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "control_data": "ts-node scripts/gpts_data_controler.ts"
   },
   "dependencies": {
     "@vercel/speed-insights": "^1.0.10",
