@@ -174,6 +174,10 @@ export default function GPTsSlug({ initialPageData }) {
       EN: "Need some prompting tips ?",
       FR: "Des astuces pour vos prompts ?",
     },
+    aria_label_run: {
+      EN: "Run the GPT on OpenAI website",
+      FR: "Exécuter le GPT sur le site OpenAI",
+    },
   };
 
   // Define the schema templates for categories page
@@ -579,6 +583,7 @@ export default function GPTsSlug({ initialPageData }) {
                 className={classes.buttonRun}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={translation.aria_label_run[activeLanguage]}
               >
                 {translation.buttonRun[activeLanguage]}
               </Link>

@@ -126,6 +126,10 @@ const GPTs = () => {
       EN: "Want to know more about The Wise Duck Dev ? Click ",
       FR: "Vous voulez en savoir plus sur The Wise Duck Dev ? Cliquez ",
     },
+    search_aria_label: {
+      EN: "Search GPTs on the site",
+      FR: "Rechercher des GPTs sur le site",
+    },
   };
 
   return (
@@ -134,7 +138,7 @@ const GPTs = () => {
       <h2 className={classes.subtitle}>
         {translations.subtitle[activeLanguage]}
       </h2>
-      <div className={classes.searchContainer}>
+      <div className={classes.searchContainer} role="search">
         <CiSearch className={classes.searchIcon} /> {/* Style this as needed */}
         <input
           type="text"
@@ -142,7 +146,8 @@ const GPTs = () => {
           onChange={handleSearchChange}
           onKeyDown={handleKeyDown}
           placeholder={translations.placeholder[activeLanguage]}
-          className={classes.searchInput} // Apply styles to position the input correctly
+          className={classes.searchInput}
+          aria-label={translations.search_aria_label[activeLanguage]}
         />
       </div>
       <div className={classes.buttonsContainer}>
