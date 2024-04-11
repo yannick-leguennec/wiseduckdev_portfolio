@@ -41,14 +41,14 @@
 // Text Container
 .textContainer {
   position: absolute;
-  width: 45%;
-  top: 17%;
+  width: 47%;
   right: 45%;
+  margin-top: 5rem;
 
   @media (max-width: 1024px) {
     position: relative;
     width: 80%;
-    top: 0%;
+    margin-top: 0;
     right: 0%;
     text-align: center;
   }

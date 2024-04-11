@@ -55,7 +55,6 @@ const checkObjects = (objects: any[], language: string) => {
   });
 };
 
-// Main function to execute the script
 // Main function to execute the script asynchronously
 const main = async () => {
   const filePath = "./public/docs/GPTs/gpts.json"; // Update the path to your JSON file

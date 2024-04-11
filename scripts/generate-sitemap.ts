@@ -98,7 +98,6 @@ async function generateSitemap() {
         </url>`;
     });
 
-    // ! MODIFY THE FILE PATH BEFORE DEPLOYING
     // GPTs
     const gptsData = await fs.readFile(
       path.join(process.cwd(), "/public/docs/GPTs/gpts.json"),

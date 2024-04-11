@@ -40,8 +40,8 @@ export default function GPTS() {
       FR: "GPT de The Wise Duck Dev | Explorez les principales catégories de GPT pour le développement Web et Mobile",
     },
     description: {
-      EN: "Discover The Wise Duck Dev's curated GPTs, specializing in frontend, backend, database, design, framework, productivity, blockchain, cybersecurity, CMS, and automation. Elevate your web development with our tailored GPT expertise.",
-      FR: "",
+      EN: "Explore the world's largest library of custom GPTs at The Wise Duck Dev GPTs, catering to all developer needs in web, mobile, AI, and blockchain. With over 200 GPTs across 12 categories including frontend, backend, design, and more, elevate your development projects to new heights.",
+      FR: "Explorez la plus grande bibliothèque de GPT personnalisés au monde chez The Wise Duck Dev GPTs, répondant à tous les besoins des développeurs en matière de web, mobile, IA et blockchain. Avec plus de 200 GPT répartis dans 12 catégories, dont le frontend, le backend, le design et plus encore, élevez vos projets de développement à de nouveaux sommets.",
     },
     alt: {
       EN: "The Wise Duck Dev emanates a suave and professional demeanor, dressed in a Men In Black style suit, symbolizing a sleek approach to GPT development and expertise.",
