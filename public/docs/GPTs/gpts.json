@@ -7705,7 +7705,7 @@
       "alt": "Un logo démontrant la puissance du Next JS Genius AI GPT par The Wise Duck Dev.",
       "path": "/framework/next-js-genius-ai",
       "openAi_link": "https://chat.openai.com/g/g-jHIR4GKgy-next-js-genius-ai",
-      "card_description": "Améliorez votre savoir-faire en développement web avec notre Next JS Genius AI - Construisons l'avenir ensemble !",
+      "card_description": "Améliorez votre savoir-faire en développement web avec notre Next JS Genius AI. Construisons l'avenir ensemble !",
       "page_description": "Découvrez le Next JS Genius AI, le phare du développement web moderne concentré sur le cadre Next.js. Il se présente comme une ressource de premier ordre, démystifiant les principes complexes et préparant le terrain pour votre prochain projet révolutionnaire. Devenez compétent en créant des applications web réactives, rapides, SEO-friendly, et universellement accessibles avec nos quatre modes complets : /general, /solution, /debug, et /explain.",
       "modes": {
         "/general": "Faites un plongeon dans le cadre Next.js, offrant des conseils allant des méthodologies de base à avancées.",
@@ -9842,7 +9842,7 @@
       "alt": "Logo représentant Laravel Legend GPT, l'un des GPTs de The Wise Duck Dev spécialisés dans le développement web, mobile et blockchain.",
       "path": "/framework/laravel-legend-gpt",
       "openAi_link": "https://chat.openai.com/g/g-VnzbJWYMS-laravel-legend-gpt",
-      "card_description": "Découvrez Laravel Legend GPT, une ressource pour les programmeurs et les experts Laravel aidant au développement web.",
+      "card_description": "Découvrez Laravel Legend GPT, une ressource pour les programmeurs et les experts dans la framework Laravel",
       "page_description": "Laravel Legend GPT, votre allié fiable, aide à acquérir une compréhension approfondie et l'expertise nécessaire dans le développement Laravel. Essentiel pour décoder les principes complexes de Laravel, les transformant en une stratégie compréhensible et exploitable qui élève vos projets de bons à extraordinaires. Expérimentez des applications web robustes, évolutives et sécurisées avec Laravel Legend GPT.",
       "modes": {
         "/general": "Offre une orientation s'étendant de la connaissance de base aux techniques avancées de Laravel.",
@@ -10382,7 +10382,7 @@
       "alt": "Image du logo du NativeScript Navigator AI par The Wise Duck Dev pour les développeurs web, mobiles et blockchain",
       "path": "/framework/NativeScript-Navigator-AI",
       "openAi_link": "https://chat.openai.com/g/g-mlRJ7SqNe-nativescript-navigator-ai",
-      "card_description": "Un élément de transformation pour les développeurs visant le développement d'applications mobiles en utilisant le cadre NativeScript.",
+      "card_description": "Un catalyseur pour les développeurs dans la création d'applications mobiles avec NativeScript.",
       "page_description": "NativeScript Navigator AI apporte une révolution dans le développement d'applications mobiles avec des compétences spécifiques dans le cadre NativeScript. Conçu méticuleusement, il fournit aux développeurs des conseils complets qui simplifient les défis complexes du développement mobile. Des conseils généraux à l'assistance au débogage, NativeScript Navigator AI fournit une direction étape par étape qui vous permet de faire évoluer vos projets du niveau de base à robuste. Préparez-vous à créer des applications efficaces et performantes qui font écho à l'innovation.",
       "modes": {
         "/general": "Explorez le domaine NativeScript et le développement mobile avec des conseils allant des principes de base aux principes avancés.",
@@ -10623,7 +10623,7 @@
       "alt": "Logo du Hapi.dev Mastermind AI, l'un des GPT innovants sélectionnés par The Wise Duck Dev pour la communauté des développeurs",
       "path": "/framework/hapi-dev-mastermind-ai",
       "openAi_link": "https://chat.openai.com/g/g-IQu1h90wE-hapi-mastermind-ai",
-      "card_description": "Habiliter les développeurs grâce à une compréhension robuste de Hapi.dev à travers des conseils interactifs guidés par IA.",
+      "card_description": "Votre IA pour vous aider à maîtriser le framework Hapi.dev et créer des applications web robustes.",
       "page_description": "Le Hapi.dev Mastermind AI, une solution AI de pointe, aide les développeurs à naviguer dans le cadre JavaScript sophistiqué de Hapi.dev. Exemplifiant plus qu'une simple assistance, il favorise une compréhension expansive, permettant aux développeurs de créer des applications web fiables, sécurisées et extensibles qui s'adaptent harmonieusement à l'environnement numérique dynamique. Indépendamment de la complexité, cette IA internalise vos préoccupations et les transforme en instructions compréhensibles et actionnables, rendant vos projets de développement une réalité sans faille.",
       "modes": {
         "/general": "Mode d'assistance complète répondant aux fonctionnalités de base à avancées de Hapi.dev",
@@ -12423,7 +12423,7 @@
       "alt": "Logo de Sylius Genius AI pour de meilleures solutions de développement web et blockchain",
       "path": "/framework/Sylius-Genius",
       "openAi_link": "https://chat.openai.com/g/g-KC5mcZZu7-sylius-genius-ai",
-      "card_description": "Outil optimisé fournissant une connaissance approfondie du développement du commerce électronique Sylius",
+      "card_description": "Outil optimisé offrant une expertise approfondie du développement e-commerce avec Sylius.",
       "page_description": "Sylius Genius AI se distingue comme un phare d'expertise avancée dans le développement et l'architecture de commerce électronique Sylius. Visant à améliorer l'efficacité et l'innovation, c'est la convergence ultime de la connaissance du développement de commerce électronique, d'une compréhension basique à des stratégies spécialisées. Offrant une expérience interactive enrichissante adaptée pour équiper les utilisateurs avec compétence et confiance. Vos retours nous permettent d'affiner constamment Sylius Genius AI.",
       "modes": {
         "/general": "Un guide complet de la compréhension de base à avancée de Sylius eCommerce",
