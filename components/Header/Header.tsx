@@ -87,8 +87,17 @@ function Header() {
   // Prevent the default anchor tag behavior and use Next.js router for navigation
   const handleLogoClick = (e) => {
     e.preventDefault(); // Prevent the default anchor action
-    const homepagePath = activeLanguage === "FR" ? "/fr" : "/";
-    router.push(homepagePath);
+
+    // Determine the base path depending on whether the user is within the GPTs section
+    let basePath;
+    if (pathname.startsWith("/gpts")) {
+      basePath = activeLanguage === "FR" ? "/fr/gpts" : "/gpts";
+    } else {
+      basePath = activeLanguage === "FR" ? "/fr" : "/";
+    }
+
+    // Navigate to the determined path
+    router.push(basePath);
   };
 
   // Object to store the translations
