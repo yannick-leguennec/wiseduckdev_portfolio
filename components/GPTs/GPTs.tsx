@@ -281,7 +281,7 @@ const GPTs = () => {
               </div>
               <div className={classes.donationOption}>
                 <p className={classes.donationText}>
-                  {translations.BTH[activeLanguage]}
+                  {translations.BTC[activeLanguage]}
                 </p>
                 <div className={classes.donationCopy}>
                   <p className={classes.donationInfos}>
