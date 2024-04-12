@@ -11,6 +11,7 @@
 
   @media (max-width: 768px) {
     font-size: 1rem;
+    padding: 0.5rem 1rem;
   }
 
   &:hover {
@@ -33,6 +34,7 @@
 
   @media (max-width: 768px) {
     font-size: 1rem;
+    padding: 0.5rem 1rem;
   }
 
   &:hover {
@@ -47,6 +49,20 @@
 @mixin list-item {
   display: inline-block;
   background-color: white;
+  color: rgb(255, 115, 0);
+  font-weight: 900;
+  padding: 0.5rem 0.8rem;
+  border-radius: 25px;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+}
+
+// Mixins for list technology in modal project
+@mixin list-technology {
+  display: inline-block;
+  background-color: rgb(254, 230, 202);
   color: rgb(255, 115, 0);
   font-weight: 900;
   padding: 0.5rem 0.8rem;

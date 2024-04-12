@@ -23,14 +23,16 @@ function Portfolio() {
 
   console.log(projects);
 
-  // Function to handle image click
   const handleImageClick = (project) => {
     setSelectedProject(project);
+    // Prevent scrolling on the background
+    document.body.style.overflow = "hidden";
   };
 
-  // Function to close the modal
   const handleCloseModal = () => {
     setSelectedProject(null);
+    // Re-enable scrolling when the modal closes
+    document.body.style.overflow = "auto";
   };
 
   return (
@@ -48,6 +50,9 @@ function Portfolio() {
               onClick={() => handleImageClick(project)}
               tabIndex={0}
             />
+            <div className={classes.projectTitleContainer} tabIndex={1}>
+              <h2 className={classes.projectTitle}>{project.project_title}</h2>
+            </div>
           </div>
         ))}
       </div>

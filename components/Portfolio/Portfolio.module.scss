@@ -42,15 +42,22 @@
   align-items: center;
   width: 100%;
   gap: 4rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 // Settings for single article
 .imageContainer {
+  position: relative;
   display: flex;
   justify-content: center;
   width: 35%;
   height: auto;
   margin-bottom: 2rem;
+  border-radius: 25px;
 
   @media (max-width: 1024px) {
     width: 65%;
@@ -60,9 +67,17 @@
   }
 
   @media (max-width: 768px) {
-    width: 100%;
     margin: 1rem 0 1.5rem 0;
   }
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}
+
+.imageContainer:hover {
+  transform: scale(1.05);
+  transition: all 0.1s ease;
 }
 
 // IMAGE PROJECT
@@ -70,12 +85,10 @@
   width: 100%;
   max-width: fit-content;
   border: 1px solid black;
-  border-radius: 15px;
+  border-radius: 25px;
 }
 
 .image:hover {
-  transform: scale(1.05);
-  transition: all 0.1s ease;
   border: 1.5px solid rgb(255, 115, 0);
 }
 
@@ -84,4 +97,34 @@
   transform: scale(1.05);
   transition: all 0.1s ease;
   border: 1.5px solid rgb(255, 115, 0);
+}
+
+.projectTitleContainer {
+  position: absolute; // Absolutely position this within the imageContainer
+  bottom: 0; // Align it to the bottom
+  left: 0; // Align it to the left
+  width: 100%; // Span the entire width of the container
+  background: rgba(0, 0, 0, 0.6); // Semi-transparent dark background
+  backdrop-filter: blur(5px); // Blur effect for the background
+  color: white; // Text color
+  text-align: center; // Center-align the text
+  padding: 10px 0;
+  border-radius: 0 0 25px 25px;
+}
+
+.projectTitle {
+  margin: 0; // Remove default margin from h2
+  padding: 0.5rem; // Add some padding
+  font-size: 1.1rem; // Choose a font size that fits well
+  font-weight: bold;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+    padding: 0.3rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.7rem;
+    padding: 0.2rem;
+  }
 }
