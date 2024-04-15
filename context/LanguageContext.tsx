@@ -44,13 +44,38 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   // Determine the active language based on the current locale
   const activeLanguage: Language = locale === "fr" ? "FR" : "EN";
 
-  // Modify the active language and update the URL
   const toggleLanguage = useCallback(
     (lang: Language) => {
+      localStorage.setItem("scrollPosition", window.scrollY.toString());
+
+      // Determine the new locale and construct the newPath conditionally
       const newLocale = lang.toLowerCase(); // 'en' or 'fr'
-      const path = `${router.pathname}${window.location.hash}`;
-      router.push(path, path, { locale: newLocale });
-      localStorage.setItem("appLanguage", newLocale.toUpperCase());
+      const isFrench = newLocale === "fr";
+
+      // If the current language is French and switching to English,
+      // or if it's English and switching to French, update the path accordingly.
+      let newPath = router.asPath;
+      if (isFrench) {
+        // When switching to French, ensure "/fr" is prepended
+        if (!newPath.startsWith("/fr")) {
+          newPath = `/fr${newPath}`;
+        }
+      } else {
+        // When switching to English, remove the "/fr" prefix if present
+        newPath = newPath.replace(/^\/fr/, "");
+      }
+
+      router
+        .push(router.pathname, newPath, { locale: newLocale, shallow: true })
+        .then(() => {
+          const savedPosition = localStorage.getItem("scrollPosition");
+          if (savedPosition) {
+            window.scrollTo(0, parseInt(savedPosition, 10));
+            localStorage.removeItem("scrollPosition");
+          }
+        });
+
+      localStorage.setItem("appLanguage", lang);
     },
     [router]
   );

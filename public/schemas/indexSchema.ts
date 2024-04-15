@@ -1,7 +1,7 @@
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
 const indexSchema = {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": "Person",
   name: "The Wise Duck Dev",
   jobTitle: "Full Stack JavaScript Developer Specialized in React",

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { useLanguage } from "../../context/LanguageContext";
 import Image from "next/image";
 import logo from "../../public/images/logos/wise-duck-dev-full-stack-js-logo.png";
@@ -17,6 +18,11 @@ function Header() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   // Custom hook to manage the language changes
   const { activeLanguage, toggleLanguage } = useLanguage();
+  // Router
+  const router = useRouter();
+  const { pathname, locale } = router;
+  // Site URL
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
   // Allow to detect the current section when the user scrolls
   useEffect(() => {
@@ -74,7 +80,24 @@ function Header() {
           behavior: "smooth",
         });
       });
+      if (isMenuOpen) toggleMenu();
     }
+  };
+
+  // Prevent the default anchor tag behavior and use Next.js router for navigation
+  const handleLogoClick = (e) => {
+    e.preventDefault(); // Prevent the default anchor action
+
+    // Determine the base path depending on whether the user is within the GPTs section
+    let basePath;
+    if (pathname.startsWith("/gpts")) {
+      basePath = activeLanguage === "FR" ? "/fr/gpts" : "/gpts";
+    } else {
+      basePath = activeLanguage === "FR" ? "/fr" : "/";
+    }
+
+    // Navigate to the determined path
+    router.push(basePath);
   };
 
   // Object to store the translations
@@ -86,6 +109,44 @@ function Header() {
     portfolio: { EN: "Portfolio", FR: "Portfolio" },
     contact: { EN: "Contact", FR: "Contact" },
   };
+
+  // New navigation items for GPTs and Blog pages
+  const newNavItems = [
+    {
+      name: "Portfolio Dev",
+      path: locale === "fr" ? "/fr" : "/",
+      key: "portfolio",
+    },
+    {
+      name: "GPTs",
+      path: locale === "fr" ? "/fr/gpts" : "/gpts",
+      key: "gpts",
+      active: pathname.includes("gpts"),
+    },
+    // ! Blog is not ready yet
+    // {
+    //   name: "Blog",
+    //   path: locale === "fr" ? "/fr/blog" : "/blog",
+    //   key: "blog",
+    //   active: pathname.includes("blog"),
+    // },
+  ];
+
+  // Determine the content and font style based on the path
+  let spanContent = "";
+  let spanClass = "";
+
+  if (pathname.includes("/gpts")) {
+    spanContent = "GPTs";
+    spanClass = classes.containerLogo_fontCaramel; // Make sure your classes object is correctly imported/defined
+  } else if (pathname.includes("/blog")) {
+    spanContent = "Blog";
+    spanClass = classes.containerLogo_fontSpecialElite;
+  }
+
+  // Determine if we're on the homepage
+  const isHomePage = pathname === "/" || pathname === "/fr";
+
   // Object to store the translations for the alt attribute of the logo
   const translationAlt: TranslationsType = {
     altLogo: {
@@ -97,9 +158,9 @@ function Header() {
   return (
     <header className={classes.header} role="banner">
       <a
-        href="#main"
+        href={activeLanguage === "FR" ? "/fr" : "/"}
         tabIndex={0}
-        onClick={() => scrollToSection("main")}
+        onClick={handleLogoClick}
         className={`${classes.containerLogo}`}
       >
         <Image
@@ -109,9 +170,11 @@ function Header() {
           priority
         />
         <h1 className={classes.containerLogo_logoName}>
-          the <strong>wise</strong>duck<strong>dev</strong>
+          the <strong>wise</strong>duck<strong>dev</strong>{" "}
+          {spanContent && <span className={spanClass}> {spanContent}</span>}
         </h1>
       </a>
+
       <div className={classes.containerNav}>
         <nav
           className={classes.navigation}
@@ -119,18 +182,32 @@ function Header() {
           aria-label="Main navigation"
         >
           <ul className={classes.navList}>
-            {Object.keys(translations).map((key: string) => (
-              <li key={key} className={classes.navItem}>
-                <a
-                  href={`#${key}`}
-                  tabIndex={0}
-                  className={`${classes.navLink} ${isActive(key)}`}
-                  onClick={() => scrollToSection(key)}
-                >
-                  {translations[key][activeLanguage]}
-                </a>
-              </li>
-            ))}
+            {isHomePage
+              ? Object.keys(translations).map((key: string) => (
+                  <li key={key} className={classes.navItem}>
+                    <a
+                      href={`#${key}`}
+                      tabIndex={0}
+                      className={`${classes.navLink} ${isActive(key)}`}
+                      onClick={() => scrollToSection(key)}
+                    >
+                      {translations[key][activeLanguage]}
+                    </a>
+                  </li>
+                ))
+              : newNavItems.map(({ name, path, key, active }) => (
+                  <li key={key} className={classes.navItem}>
+                    <a
+                      href={path}
+                      tabIndex={0}
+                      className={`${classes.navLink} ${
+                        active ? classes.activeLink : ""
+                      }`}
+                    >
+                      {name}
+                    </a>
+                  </li>
+                ))}
           </ul>
         </nav>
         <div className={classes.buttonsContainer}>
@@ -178,20 +255,32 @@ function Header() {
           {" "}
           <nav role="navigation">
             <ul className={classes.navigationMobile}>
-              {Object.keys(translations).map((key) => (
-                <li key={key} className={classes.navItem}>
-                  <a
-                    href={`#${key}`}
-                    onClick={() => {
-                      scrollToSection(key);
-                      toggleMenu();
-                    }}
-                    className={`${classes.navLink} ${isActive(key)}`}
-                  >
-                    {translations[key][activeLanguage]}
-                  </a>
-                </li>
-              ))}
+              {isHomePage
+                ? Object.keys(translations).map((key: string) => (
+                    <li key={key} className={classes.navItem}>
+                      <a
+                        href={`#${key}`}
+                        tabIndex={0}
+                        className={`${classes.navLink} ${isActive(key)}`}
+                        onClick={() => scrollToSection(key)}
+                      >
+                        {translations[key][activeLanguage]}
+                      </a>
+                    </li>
+                  ))
+                : newNavItems.map(({ name, path, key, active }) => (
+                    <li key={key} className={classes.navItem}>
+                      <a
+                        href={path}
+                        tabIndex={0}
+                        className={`${classes.navLink} ${
+                          active ? classes.activeLink : ""
+                        }`}
+                      >
+                        {name}
+                      </a>
+                    </li>
+                  ))}
             </ul>
           </nav>
           <div className={classes.buttonsContainer}>

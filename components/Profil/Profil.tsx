@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
 import classes from "./Profil.module.scss";
@@ -7,6 +8,10 @@ import profilePicture from "../../public/images/index/full-stack-react-wise-duck
 function Profil() {
   // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
+  // Site URL
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  // Determine the GPTs link based on the active language
+  const gptsLink = activeLanguage === "FR" ? `/fr/gpts` : `/gpts`;
 
   // Object to store the translations
   const translations: TranslationsType = {
@@ -47,8 +52,12 @@ function Profil() {
       FR: "Apprentissage continue",
     },
     point7: {
-      EN: "AI Enthusiast",
-      FR: "Passionné d'IA",
+      EN: "AI Enthusiast (Discover my GPTs specialized in wev, mobile, AI and blockchain developement ",
+      FR: "Passionné d'IA (Découvrez mes GPTs spécialisés en développement web, mobile, IA et blockchain ",
+    },
+    point8: {
+      EN: "Skilled in automation technologies and optimization",
+      FR: "Féru de processus d'automatisation et d'optimisation",
     },
     description2: {
       EN: "Looking for a cutting edge web and web developer? Let's connect and chart the course to success in the vast digital landscape.",
@@ -101,7 +110,16 @@ function Profil() {
           <li>{translations.point4[activeLanguage]}</li>
           <li>{translations.point5[activeLanguage]}</li>
           <li>{translations.point6[activeLanguage]}</li>
-          <li>{translations.point7[activeLanguage]}</li>
+          <li>
+            <Link href={gptsLink}>
+              {translations.point7[activeLanguage]}
+              <span className={`${classes.gptsLinkOrange}`}>
+                {activeLanguage === "FR" ? "ici" : "here"}
+              </span>
+            </Link>
+            {")"}
+          </li>
+          <li>{translations.point8[activeLanguage]}</li>
         </ul>
         <p>{translations.description2[activeLanguage]}</p>
         <div className={`${classes.buttonContainer}`}>

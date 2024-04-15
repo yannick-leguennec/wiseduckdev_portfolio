@@ -4,12 +4,12 @@ import React, { useState, useEffect, Suspense } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { useLoader } from "../context/LoaderContext";
 import { useLanguage } from "../context/LanguageContext";
 import { TranslationsType } from "../types/TranslationsType";
 import Image, { StaticImageData } from "next/image";
 import duckCoachDesktop from "../public/images/index/innovative-developer-wise-duck-dev-white-suit-couch-tropical-plants.webp";
 import duckCoachMobile from "../public/images/index/innovative-developer-wise-duck-dev-white-suit-couch-tropical-plants-mobile.webp";
-import Loader from "../components/Loader/Loader";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
 const Profil = dynamic(() => import("../components/Profil/Profil"));
@@ -20,25 +20,24 @@ const Contact = dynamic(() => import("../components/Contact/Contact"));
 const Footer = dynamic(() => import("../components/Footer/Footer"));
 
 export default function Home() {
-  // State to manage the loading of the app
-  const [isLoading, setIsLoading] = useState(true);
+  // Custom hook to manage the loading state
+  const { loading, setLoading } = useLoader();
   // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
   // State to manage the initial content loading
   const [initialContentLoaded, setInitialContentLoaded] = useState(false);
   // Site URL
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  // Loading the page for 2 seconds at the beginning
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
+
   // Effect to manage the initial content loading
   useEffect(() => {
     setInitialContentLoaded(true);
   }, []);
+
+  // Effect to manage the loading state and turn it off when the content is loaded
+  useEffect(() => {
+    setLoading(false);
+  }, [setLoading]);
 
   // Object to store the translations
   const translation: TranslationsType = {
@@ -57,6 +56,14 @@ export default function Home() {
     loadingContent: {
       EN: "Loading more content...",
       FR: "Chargement du contenu en cours...",
+    },
+    og_title: {
+      EN: "The Wise Duck Dev - Full Stack JS Developer specialized in React",
+      FR: "The Wise Duck Dev - Développeur Full Stack JS spécialisé en React",
+    },
+    og_description: {
+      EN: "The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React.",
+      FR: "The Wise Duck Dev est votre destination de prédilection pour des solutions innovantes de développement web et mobile Full Stack JS, spécialisé en React.",
     },
   };
 
@@ -102,7 +109,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>The Wise Duck Dev</title>
+        <title>The Wise Duck Dev | Portfolio</title>
         <meta
           name="description"
           content={translation.pageDescription[activeLanguage]}
@@ -111,14 +118,18 @@ export default function Home() {
           name="keywords"
           content="The Wise Duck Dev, Full Stack JS Developer, JavaScript, React Developer, Web Mobile Developer, Next.js, TypeScript, Web Development Canada, Web Development USA, React Development, Full Stack JS Solutions, Innovative Web Solutions"
         />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="The Wise Duck Dev - Full Stack JS Developer specialized in React"
+          content={translation.og_title[activeLanguage]}
         />
         <meta
           property="og:description"
-          content="The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React."
+          content={translation.og_description[activeLanguage]}
         />
         <meta
           property="og:image"
@@ -126,19 +137,25 @@ export default function Home() {
         />
         <meta property="og:url" content={`https://${siteUrl}`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@wiseduckedv" />
+        <meta name="twitter:site" content="@wiseduckdev" />
+        <meta name="twitter:creator" content="@wiseduckdev" />
         <meta
           name="twitter:title"
-          content="The Wise Duck Dev - Full Stack JS Developer specialized in React"
+          content={translation.og_title[activeLanguage]}
         />
         <meta
           name="twitter:description"
-          content="The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React."
+          content={translation.og_description[activeLanguage]}
         />
         <meta
           name="twitter:image"
           content={`https://${siteUrl}/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp`}
         />
+        <meta
+          name="twitter:image:alt"
+          content={translation.altPicture[activeLanguage]}
+        />
+
         {siteUrl && (
           <>
             <link rel="alternate" hrefLang="en" href={`https://${siteUrl}`} />
@@ -155,35 +172,29 @@ export default function Home() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(indexSchema) }}
         />
       </Head>
-      {!isLoading ? (
-        <>
-          <Header />
-          <main>
-            <Main />
-            <Suspense
-              fallback={<div>{translation.loadingContent[activeLanguage]}</div>}
-            >
-              {initialContentLoaded && (
-                <>
-                  <Profil />
-                  <Skills />
-                  <ResponsiveImage
-                    srcDesktop={duckCoachDesktop}
-                    srcMobile={duckCoachMobile}
-                    alt={translation.altPicture[activeLanguage]}
-                  />
-                  <Experience />
-                  <Portfolio />
-                  <Contact />
-                  <Footer />
-                </>
-              )}
-            </Suspense>
-          </main>
-        </>
-      ) : (
-        <Loader />
-      )}
+      <Header />
+      <main>
+        <Main />
+        <Suspense
+          fallback={<div>{translation.loadingContent[activeLanguage]}</div>}
+        >
+          {initialContentLoaded && (
+            <>
+              <Profil />
+              <Skills />
+              <ResponsiveImage
+                srcDesktop={duckCoachDesktop}
+                srcMobile={duckCoachMobile}
+                alt={translation.altPicture[activeLanguage]}
+              />
+              <Experience />
+              <Portfolio />
+              <Contact />
+              <Footer />
+            </>
+          )}
+        </Suspense>
+      </main>
       <SpeedInsights />
     </>
   );

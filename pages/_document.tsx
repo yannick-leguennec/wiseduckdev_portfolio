@@ -34,11 +34,6 @@ class MyDocument extends Document<MyDocumentProps> {
             content="9C11EB658145B51F44EA72C0B64FEA80"
           />
           <meta charSet="UTF-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          />
-
           <meta name="author" content="The Wise Duck Dev" />
           <link
             rel="icon"

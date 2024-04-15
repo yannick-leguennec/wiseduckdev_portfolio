@@ -40,6 +40,24 @@
       font-size: 1rem;
     }
   }
+
+  &_fontCaramel {
+    font-family: "Caramel", sans-serif;
+    font-size: 1.8rem;
+
+    @media (max-width: 900px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &_fontSpecialElite {
+    font-family: "Special Elite", sans-serif;
+    font-size: 1.8rem;
+
+    @media (max-width: 900px) {
+      font-size: 1.5rem;
+    }
+  }
 }
 
 // NAVIGATION MENU

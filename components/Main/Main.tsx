@@ -30,31 +30,42 @@ function Main() {
     },
   };
 
-  // Component to display the image based on the window width (Deskop vs Mobile)
+  // Component to display the image based on the screen orientation
   function ResponsiveImageComponent() {
-    const [isMobile, setIsMobile] = useState(false);
+    const [isPortrait, setIsPortrait] = useState(false);
 
     useEffect(() => {
-      // Function to update the state based on window width
-      const handleResize = () => {
-        setIsMobile(window.innerWidth < 1025);
+      const handleOrientationChange = () => {
+        // Check if the screen is in portrait orientation
+        const matchPortrait = window.matchMedia(
+          "(orientation: portrait)"
+        ).matches;
+        setIsPortrait(matchPortrait);
       };
 
-      // Add event listener
-      window.addEventListener("resize", handleResize);
+      // Add event listener for orientation changes
+      window.addEventListener("orientationchange", handleOrientationChange);
+      // Also check on resize in case of devices that do not support orientationchange
+      window.addEventListener("resize", handleOrientationChange);
 
-      // Call the function to set the initial state
-      handleResize();
+      // Initial check
+      handleOrientationChange();
 
       // Remove event listener on cleanup
-      return () => window.removeEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener(
+          "orientationchange",
+          handleOrientationChange
+        );
+        window.removeEventListener("resize", handleOrientationChange);
+      };
     }, []);
 
     return (
       <Image
-        src={isMobile ? mobileImage : desktopImage}
+        src={isPortrait ? mobileImage : desktopImage}
         alt={
-          isMobile
+          isPortrait
             ? translations.altMobilePicture[activeLanguage]
             : translations.altPicture[activeLanguage]
         }
