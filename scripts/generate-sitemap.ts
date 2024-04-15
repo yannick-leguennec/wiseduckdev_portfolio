@@ -70,7 +70,7 @@ async function generateSitemap() {
 <image:loc>https://${baseUrl}/images/index_gpts/the-wise-duck-dev-educational-tips-for-gpt-web-mobile-blockchain-development.webp</image:loc>
 </image:image>
 <lastmod>${currentDate}</lastmod>
-  <changefreq>monthly</changefreq>
+  <changefreq>Monthly</changefreq>
   <priority>0.8</priority>
 </url>
 `;
@@ -93,7 +93,7 @@ async function generateSitemap() {
           <loc>https://${baseUrl}/gpts/${category.path}</loc>
           <image:image><image:loc>https://${baseUrl}${category.image}</image:loc></image:image>
           <lastmod>${currentDate}</lastmod>
-          <changefreq>weekly</changefreq>
+          <changefreq>Monthly</changefreq>
           <priority>0.9</priority>
         </url>`;
     });
@@ -111,7 +111,7 @@ async function generateSitemap() {
           <loc>https://${baseUrl}/gpts${gpt.path}</loc>
           <image:image><image:loc>https://${baseUrl}${gpt.image}</image:loc></image:image>
           <lastmod>${currentDate}</lastmod>
-          <changefreq>weekly</changefreq>
+          <changefreq>Monthly</changefreq>
           <priority>0.8</priority>
         </url>`;
     });
