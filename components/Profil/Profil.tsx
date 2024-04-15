@@ -52,8 +52,12 @@ function Profil() {
       FR: "Apprentissage continue",
     },
     point7: {
-      EN: "AI Enthusiast (Discover my GPTs ",
-      FR: "Passionné d'IA (Découvrez mes GPTs ",
+      EN: "AI Enthusiast (Discover my GPTs specialized in wev, mobile, AI and blockchain developement ",
+      FR: "Passionné d'IA (Découvrez mes GPTs spécialisés en développement web, mobile, IA et blockchain ",
+    },
+    point8: {
+      EN: "Skilled in automation technologies and optimization",
+      FR: "Féru de processus d'automatisation et d'optimisation",
     },
     description2: {
       EN: "Looking for a cutting edge web and web developer? Let's connect and chart the course to success in the vast digital landscape.",
@@ -107,12 +111,15 @@ function Profil() {
           <li>{translations.point5[activeLanguage]}</li>
           <li>{translations.point6[activeLanguage]}</li>
           <li>
-            {translations.point7[activeLanguage]}
-            <Link href={gptsLink} className={`${classes.gptsLinkOrange}`}>
-              {activeLanguage === "FR" ? "ici" : "here"}
+            <Link href={gptsLink}>
+              {translations.point7[activeLanguage]}
+              <span className={`${classes.gptsLinkOrange}`}>
+                {activeLanguage === "FR" ? "ici" : "here"}
+              </span>
             </Link>
             {")"}
           </li>
+          <li>{translations.point8[activeLanguage]}</li>
         </ul>
         <p>{translations.description2[activeLanguage]}</p>
         <div className={`${classes.buttonContainer}`}>

@@ -20,6 +20,10 @@ const ModalProject = ({ project, onClose }) => {
       EN: "Technologies used: ",
       FR: "Technologies utilisées :",
     },
+    creation_year: {
+      EN: "Year: ",
+      FR: "Année: ",
+    },
     return: {
       EN: "Return",
       FR: "Retour",
@@ -74,6 +78,10 @@ const ModalProject = ({ project, onClose }) => {
             </div>
           ))}
         </div>
+        <p className={classes.modalDescriptionYear}>
+          <strong>{translations.creation_year[activeLanguage]}</strong>
+          {project.project_creation_year}
+        </p>
         <div className={classes.buttonContainer}>
           <button onClick={onClose} className={classes.buttonReverted}>
             {translations.return[activeLanguage]}

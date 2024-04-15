@@ -6,6 +6,7 @@
       "project_title": "Family Flow",
       "project_subtitle": "A mobile application that helps families to manage their daily tasks and activities.",
       "project_role": "Product Manager, Scrum Master, Git Master and Lead Front-end developer",
+      "project_creation_year": "2023",
       "project_technologies_list": [
         "React",
         "React-router-dom",
@@ -27,6 +28,7 @@
       "project_title": "The Wise Duck Dev GPTs",
       "project_subtitle": "The largest library of custom GPTs for web, mobile, ai and blockchain developers in the  world.",
       "project_role": "Product Manager, Scrum Master, Git Master and Lead developer",
+      "project_creation_year": "2024",
       "project_technologies_list": [
         "Next.js",
         "TypeScript",
@@ -50,6 +52,7 @@
       "project_title": "Family Flow",
       "project_subtitle": "Une application mobile qui aide les familles à gérer leurs tâches et activités quotidiennes.",
       "project_role": "Chef de produit, Scrum Master, Git Master et Développeur Front-end principal",
+      "project_creation_year": "2023",
       "project_technologies_list": [
         "React",
         "React-router-dom",
@@ -69,8 +72,9 @@
       "project_id": 2,
       "project_link": "https://wiseduckdev.vercel.app/gpts",
       "project_title": "The Wise Duck Dev GPTs",
-      "project_subtitle": "La plus grande bibliothèque de GPTs personnalisés pour les développeurs web, mobiles, IA et blockchain dans le monde.",
+      "project_subtitle": "La plus grande bibliothèque de GPTs personnalisés pour les développeurs web, mobiles, IA et blockchain au monde.",
       "project_role": "Chef de produit, Scrum Master, Git Master et Développeur principal",
+      "project_creation_year": "2024",
       "project_technologies_list": [
         "Next.js",
         "TypeScript",
@@ -81,7 +85,7 @@
         "Midjourney",
         "Figma"
       ],
-      "project_description": "Découvrez The Wise Duck Dev GPTs - la resource ultime pour les développeurs web, mobiles, IA et blockchain. Cette plateforme innovante propose plus de 200 GPT personnalisés répartis dans 12 catégories, conçus pour améliorer les compétences et rationaliser les processus de développement. Développée dans un but philanthropique, cette ressource permet aux développeurs novices et vétérans de relever des défis complexes avec des outils avancés conçus pour la productivité et l'innovation. Rejoignez notre communauté et révolutionnez votre approche du développement avec The Wise Duck Dev GPTs.",
+      "project_description": "Découvrez The Wise Duck Dev GPTs - la resource ultime pour les développeurs web, mobiles, IA et blockchain. Cette plateforme innovante propose plus de 200 GPTs personnalisés répartis dans 12 catégories, conçus pour améliorer les compétences et rationaliser les processus de développement. Développée dans un but philanthropique, cette ressource permet aux développeurs novices et vétérans de relever des défis complexes avec des outils avancés conçus pour la productivité et l'innovation. Rejoignez notre communauté et révolutionnez votre approche du développement avec The Wise Duck Dev GPTs.",
       "project_github_repo": "https://github.com/yannick-leguennec/wiseduck_porfolio_website",
       "project_image": "/images/projectsPictures/the-wise-duck-dev-gpts-library.webp",
       "project_image_alt": "La plateforme The Wise Duck Dev GPTs présentant une bibliothèque diversifiée de plus de 200 GPTs personnalisés pour le développement web, mobile, IA et blockchain, organisés dans 12 catégories clés."

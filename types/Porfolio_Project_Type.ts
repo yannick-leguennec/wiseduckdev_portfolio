@@ -4,6 +4,7 @@ interface PortfolioProjectType {
   project_title: string;
   project_subtitle: string;
   project_role: string;
+  project_creation_year: string;
   project_technologies_list: string[];
   project_description: string;
   project_github_repo: string;

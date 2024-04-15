@@ -398,7 +398,7 @@
       "title": "JavaScript Jedi AI",
       "subtitle": "Master web development with JavaScript Jedi AI, your ultimate coding guide.",
       "image": "/images/gpts/javascript-jedi-ai-gpt-wise-duck-dev-gpts-logo.webp",
-      "alt": "Logo for JavaScript Jedi AI GPT - part of The Wise Duck Dev GPTs collection for web, mobile and blockchain development.",
+      "alt": "Logo for JavaScript Jedi AI GPT - part of The Wise Duck Dev GPTs collection for web, mobile, AI and blockchain development.",
       "path": "/frontend/JavaScript-Jedi-AI",
       "openAi_link": "https://chat.openai.com/g/g-0Ibp6C2ax-javascript-jedi-ai",
       "card_description": "Reach new heights in web development with our cutting-edge JavaScript Jedi AI!",
@@ -419,7 +419,7 @@
       "twitter_title": "JavaScript Jedi AI | The Wise Duck Dev GPTs",
       "twitter_description": "Introducing JavaScript Jedi AI - your ultimate guide for mastering JavaScript and web development.",
       "twitter_image": "/images/gpts/javascript-jedi-ai-gpt-wise-duck-dev-gpts-logo.webp",
-      "twitter_image_alt": "Logo for JavaScript Jedi AI GPT - part of The Wise Duck Dev GPTs collection for web, mobile and blockchain development.",
+      "twitter_image_alt": "Logo for JavaScript Jedi AI GPT - part of The Wise Duck Dev GPTs collection for web, mobile, AI and blockchain development.",
       "hashtag": "#wiseduckdevgpts, #JavaScriptJediAI, #webdevelopment, #coding, #frontend, #backend, #blockchain, #AI, #gpts, #TheWiseDuckDevGPTs"
     },
     {
@@ -428,7 +428,7 @@
       "title": "React Native Ranger AI",
       "subtitle": "Experience cutting-edge mobile app development support with our React Native Ranger AI.",
       "image": "/images/gpts/react-native-ranger-ai-gpt-logo-by-wise-duck-dev.webp",
-      "alt": "Logo of React Native Ranger AI GPT, part of The Wise Duck Dev GPTs series, aiding in web, mobile and blockchain development.",
+      "alt": "Logo of React Native Ranger AI GPT, part of The Wise Duck Dev GPTs series, aiding in web, mobile, AI and blockchain development.",
       "path": "/frontend/react-native-ranger-ai",
       "openAi_link": "https://chat.openai.com/g/g-8IYL7ByHc-react-native-ranger-ai",
       "card_description": "Unlock innovative mobile development solutions with React Native Ranger AI.",
@@ -449,7 +449,7 @@
       "twitter_title": "React Native Ranger AI | The Wise Duck Dev GPTs",
       "twitter_description": "Dive into modern application development process enhanced by React Native Ranger AI.",
       "twitter_image": "/images/gpts/react-native-ranger-ai-gpt-logo-by-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo of React Native Ranger AI GPT, part of The Wise Duck Dev GPTs series, aiding in web, mobile and blockchain development.",
+      "twitter_image_alt": "Logo of React Native Ranger AI GPT, part of The Wise Duck Dev GPTs series, aiding in web, ai mobile and blockchain development.",
       "hashtag": "#wiseduckdevgpts, #gpts, #reactnative, #mobileapp, #development, #code, #programming, #technology, #webdevelopment, #javascript"
     },
     {
@@ -758,7 +758,7 @@
       "title": "Ruby Realm AI",
       "subtitle": "Master your Ruby coding skills with our cutting-edge AI assistance.",
       "image": "/images/gpts/ruby-realm-ai-wise-duck-dev-gpt-logo.webp",
-      "alt": "Logo of Ruby Realm AI, one of The Wise Duck Dev's specialised GPTs for web, mobile and blockchain development.",
+      "alt": "Logo of Ruby Realm AI, one of The Wise Duck Dev's specialised GPTs for web, mobile, AI and blockchain development.",
       "path": "/backend/ruby-realm-ai",
       "openAi_link": "https://chat.openai.com/g/g-yqgktIy7b-ruby-realm-ai",
       "card_description": "Boost your Ruby programming skills with Ruby Realm AI; your invaluable coding companion.",
@@ -779,7 +779,7 @@
       "twitter_title": "Ruby Realm AI | The Wise Duck Dev GPTs",
       "twitter_description": "Experience next-level Ruby programming guidance with our exclusive Ruby Realm AI.",
       "twitter_image": "/images/gpts/ruby-realm-ai-wise-duck-dev-gpt-logo.webp",
-      "twitter_image_alt": "Logo of Ruby Realm AI, one of The Wise Duck Dev's specialised GPTs for web, mobile and blockchain development.",
+      "twitter_image_alt": "Logo of Ruby Realm AI, one of The Wise Duck Dev's specialised GPTs for web, mobile, AI and blockchain development.",
       "hashtag": "#wiseduckdevgpts, #rubyrealmai, #ruby, #ai, #webdevelopment, #codingassist, #backend, #programming, #webapplications, #gpt3"
     },
     {
@@ -848,7 +848,7 @@
       "title": "C# Code Crafter",
       "subtitle": "Master C# Development with our Bleeding Edge Tech GPT, the C# Code Crafter",
       "image": "/images/gpts/csharp-code-crafter-gpt-wise-duck-dev.webp",
-      "alt": "Logo of C# Code Crafter, an advanced GPT by The Wise Duck Dev GPTs, specializing in web, mobile and blockchain development solutions.",
+      "alt": "Logo of C# Code Crafter, an advanced GPT by The Wise Duck Dev GPTs, specializing in web, mobile,  and blockchain development solutions.",
       "path": "/backend/csharp-code-crafter",
       "openAi_link": "https://chat.openai.com/g/g-7pKPWBNsL-c-code-crafter",
       "card_description": "Learn, develop & master C# with the C# Code Crafter GPT. Empowering the dev community!",
@@ -1349,7 +1349,7 @@
       "twitter_title": "SQL Wizard AI | The Wise Duck Dev GPTs",
       "twitter_description": "Experience the power of supreme SQL expertise with SQL Wizard AI. Revolutionize your SQL endeavors today.",
       "twitter_image": "/images/gpts/sql-wizard-ai-gpt-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo of SQL Wizard AI, the advanced GPT created by The Wise Duck Dev GPTs, specifically designed for web, mobile and blockchain development.",
+      "twitter_image_alt": "Logo of SQL Wizard AI, the advanced GPT created by The Wise Duck Dev GPTs, specifically designed for web, mobile,  and blockchain development.",
       "hashtag": "#wiseduckdevgpts, #gpts, #sqlassistance, #sqlwizardai, #sqltool, #sqladvice, #expertsql, #database, #webdevelopment, #blockchain"
     },
     {
@@ -1658,7 +1658,7 @@
       "title": "Prometheus Mind AI",
       "subtitle": "Advanced AI technology for optimal Prometheus database operations.",
       "image": "/images/gpts/prometheus-mind-ai-wise-duck-dev-gpts-logo.webp",
-      "alt": "Logo of Prometheus Mind AI, a Wise Duck Dev GPTs specialized in web, mobile and blockchain development.",
+      "alt": "Logo of Prometheus Mind AI, a Wise Duck Dev GPTs specialized in web, mobile, AI and blockchain development.",
       "path": "/database/prometheus-mind-ai",
       "openAi_link": "https://chat.openai.com/g/g-WJcsACOWW-prometheus-mind-ai",
       "card_description": "Maximize your database efficiency with Prometheus Mind AI.",
@@ -1679,7 +1679,7 @@
       "twitter_title": "Prometheus Mind AI | The Wise Duck Dev GPTs",
       "twitter_description": "Enhance your database tasks with the advanced functionality of Prometheus Mind AI.",
       "twitter_image": "/images/gpts/prometheus-mind-ai-wise-duck-dev-gpts-logo.webp",
-      "twitter_image_alt": "Logo of Prometheus Mind AI, a Wise Duck Dev GPTs specialized in web, mobile and blockchain development.",
+      "twitter_image_alt": "Logo of Prometheus Mind AI, a Wise Duck Dev GPTs specialized in web, mobile, AI and blockchain development.",
       "hashtag": "#wiseduckdevgpts, #gpts, #ai, #prometheusmind, #database, #webdevelopment, #blockchaindevelopment, #technology, #mobedevelopment, #datamanagement"
     },
     {
@@ -1755,7 +1755,7 @@
       "title": "pgModeler Mentor AI",
       "subtitle": "Comprehensive Guide for Database Creation &amp; Editing using pgModeler",
       "image": "/images/gpts/pgmodeler-mentor-ai-gpt-wise-duck-dev-gpts.webp",
-      "alt": "Logo of pgModeler Mentor AI, a GPT developed by The Wise Duck Dev GPTs aiming to support web, mobile and blockchain development",
+      "alt": "Logo of pgModeler Mentor AI, a GPT developed by The Wise Duck Dev GPTs aiming to support web, mobile,ai and blockchain development",
       "path": "/database/pgmodeler-mentor-ai",
       "openAi_link": "https://chat.openai.com/g/g-obVQDTezC-pgmodeler-mentor-ai",
       "card_description": "Advanced guide for creating and editing databases using pgModeler",
@@ -1776,7 +1776,7 @@
       "twitter_title": "pgModeler Mentor AI | The Wise Duck Dev GPTs",
       "twitter_description": "Upgrade your database modeling skills with pgModeler Mentor AI, a comprehensive guide for both beginners and pros.",
       "twitter_image": "/images/gpts/pgmodeler-mentor-ai-gpt-wise-duck-dev-gpts.webp",
-      "twitter_image_alt": "Logo of pgModeler Mentor AI, a GPT developed by The Wise Duck Dev GPTs aiming to support web, mobile and blockchain development",
+      "twitter_image_alt": "Logo of pgModeler Mentor AI, a GPT developed by The Wise Duck Dev GPTs aiming to support web, mobile, AI and blockchain development",
       "hashtag": "#wiseduckdevgpts, #gpts, #pgmodeler, #ai, #database, #webdevelopment, #blockchain, #mobiledevelopment, #aiassistance, #devcommunity"
     },
     {
@@ -2025,7 +2025,7 @@
       "title": "Material Design Master GPT",
       "subtitle": "Discover the cutting-edge of Material Design with our specialized GPT tool.",
       "image": "/images/gpts/material-design-mastermind-gpt-wise-duck-dev-gpts-logo.webp",
-      "alt": "Logo of Material Design Mastermind GPT, one of the Wise Duck Dev GPTs specializing in comprehensive web, mobile and blockchain development technologies.",
+      "alt": "Logo of Material Design Mastermind GPT, one of the Wise Duck Dev GPTs specializing in comprehensive web, mobile, AI and blockchain development technologies.",
       "path": "/design/material-design-mastermind-gpt",
       "openAi_link": "https://chat.openai.com/g/g-fVEYZGuTH-material-design-mastermind-gpt",
       "card_description": "Delving into Material Design principles and practice to deliver actionable insights.",
@@ -2046,7 +2046,7 @@
       "twitter_title": "Material Design Mastermind GPT | The Wise Duck Dev GPTs",
       "twitter_description": "Get expert Material Design guidance with the Material Design Mastermind GPT to transform complex principles into understandable strategies.",
       "twitter_image": "/images/gpts/material-design-mastermind-gpt-wise-duck-dev-gpts-logo.webp",
-      "twitter_image_alt": "Logo of Material Design Mastermind GPT, one of the Wise Duck Dev GPTs specializing in comprehensive web, mobile and blockchain development technologies.",
+      "twitter_image_alt": "Logo of Material Design Mastermind GPT, one of the Wise Duck Dev GPTs specializing in comprehensive web, mobile, AI and blockchain development technologies.",
       "hashtag": "#wiseduckdevgpts, #gpts, #materialdesign, #development, #webdevelopment, #blockchaintechnologies, #mobiledevelopment, #designprinciples, #designstrategies, #problemsolving"
     },
     {
@@ -2055,7 +2055,7 @@
       "title": "Webflow Whizard AI",
       "subtitle": "Revolutionize your Webflow experience with our cutting-edge AI.",
       "image": "/images/gpts/webflow-whizard-ai-logo-gpt-wise-duck-dev.webp",
-      "alt": "Logo image for Webflow Whizard AI, a GPT developed by Wise Duck Dev GPTs, aiding in web, mobile and blockchain development.",
+      "alt": "Logo image for Webflow Whizard AI, a GPT developed by Wise Duck Dev GPTs, aiding in web, mobile, AI and blockchain development.",
       "path": "/design/webflow-whizard-ai",
       "openAi_link": "https://chat.openai.com/g/g-iZRilMC3S-webflow-whizard-ai",
       "card_description": "Webflow Whizard AI - Delivering expertise in Webflow and modern web development.",
@@ -2076,7 +2076,7 @@
       "twitter_title": "Webflow Whizard AI | The Wise Duck Dev GPTs",
       "twitter_description": "Webflow Whizard AI - Transforming your Webflow experience through innovative AI.",
       "twitter_image": "/images/gpts/webflow-whizard-ai-logo-gpt-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo image for Webflow Whizard AI, a GPT developed by Wise Duck Dev GPTs, aiding in web, mobile and blockchain development.",
+      "twitter_image_alt": "Logo image for Webflow Whizard AI, a GPT developed by Wise Duck Dev GPTs, aiding in web, mobile, AI and blockchain development.",
       "hashtag": "#wiseduckdevgpts, #gpts, #AI, #webdevelopment, #webflow, #WebflowWizard, #design, #webdesign, #webdev, #blockchain"
     },
     {
@@ -2085,7 +2085,7 @@
       "title": "Radix UI Ranger AI",
       "subtitle": "Become a proficient Radix UI developer with the Radix UI Ranger AI tool.",
       "image": "/images/gpts/radix-ui-ranger-ai-gpt-seo-wise-duck-dev-gpts.webp",
-      "alt": "Logo of Radix UI Ranger AI, a GPT developed by The Wise Duck Dev GPTs, specialized in web, mobile and blockchain development.",
+      "alt": "Logo of Radix UI Ranger AI, a GPT developed by The Wise Duck Dev GPTs, specialized in web, mobile,ai and blockchain development.",
       "path": "/design/radix-ui-ranger-ai",
       "openAi_link": "https://chat.openai.com/g/g-QDDaEAn9f-radix-ui-ranger-ai",
       "card_description": "Explore Radix UI development with precision using Radix UI Ranger AI.",
@@ -2097,7 +2097,7 @@
         "/explain": "Breaks down intricate Radix UI commands or principles into easily understandable explanations."
       },
       "meta_title_page": "Radix UI Ranger AI | The Wise Duck Dev GPTs",
-      "meta_description_page": "Master Radix UI development with precise guidance from The Wise Duck's Radix UI Ranger AI, revolutionizing web, mobile and blockchain development.",
+      "meta_description_page": "Master Radix UI development with precise guidance from The Wise Duck's Radix UI Ranger AI, revolutionizing web, mobile,ai and blockchain development.",
       "meta_keywords": "Radix UI, AI, Development, Web, Mobile, Blockchain, Wise Duck, Ranger AI, GPT, Technology",
       "og_title": "Radix UI Ranger AI | The Wise Duck Dev GPTs",
       "og_description": "Empower your Radix UI Development skills with Radix UI Ranger AI. Navigate Radix UI with precision.",
@@ -2106,7 +2106,7 @@
       "twitter_title": "Radix UI Ranger AI | The Wise Duck Dev GPTs",
       "twitter_description": "Navigate Radix UI with precision using Radix UI Ranger AI, developed by The Wise Ducks.",
       "twitter_image": "/images/gpts/radix-ui-ranger-ai-gpt-seo-wise-duck-dev-gpts.webp",
-      "twitter_image_alt": "Logo of Radix UI Ranger AI, a GPT developed by The Wise Duck Dev GPTs, specialized in web, mobile and blockchain development.",
+      "twitter_image_alt": "Logo of Radix UI Ranger AI, a GPT developed by The Wise Duck Dev GPTs, specialized in web, mobile, AI and blockchain development.",
       "hashtag": "#wiseduckdevgpts, #gpts, #AI, #WebDevelopment, #MobileDevelopment, #BlockchainDevelopment, #RadixUI, #UIDesign, #UIGuidance, #UIMastery"
     },
     {
@@ -2475,7 +2475,7 @@
       "title": ".NET Prophet AI",
       "subtitle": "Revolutionizing .NET development - Empowering through Insightful AI Guidance",
       "image": "/images/gpts/net-prophet-ai-gpt-logo-wise-duck-dev.webp",
-      "alt": "Logo of .NET Prophet AI, a GPT created by The Wise Duck Dev GPTs, revolutionizing web, mobile and blockchain development.",
+      "alt": "Logo of .NET Prophet AI, a GPT created by The Wise Duck Dev GPTs, revolutionizing web, mobile,ai and blockchain development.",
       "path": "/framework/net-prophet-ai",
       "openAi_link": "https://chat.openai.com/g/g-hT8OPZRTR-net-prophet-ai",
       "card_description": "In-depth Guidance for ASP.NET Development via .NET Prophet AI.",
@@ -2496,7 +2496,7 @@
       "twitter_title": ".NET Prophet AI | The Wise Duck Dev GPTs",
       "twitter_description": "Dive into the world of ASP.NET with an AI companion guiding you from basics to mastery.",
       "twitter_image": "/images/gpts/net-prophet-ai-gpt-logo-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo of .NET Prophet AI, a GPT created by The Wise Duck Dev GPTs, revolutionizing web, mobile and blockchain development.",
+      "twitter_image_alt": "Logo of .NET Prophet AI, a GPT created by The Wise Duck Dev GPTs, revolutionizing web, mobile, AI and blockchain development.",
       "hashtag": "#wiseduckdevgpts, #gpts, #NetProphetAI, #ASPNET, #WebDevelopment, #AIguidance, #framework, #programming, #debug, #solution"
     },
     {
@@ -2715,7 +2715,7 @@
       "title": "Nest Navigator AI",
       "subtitle": "Supercharge your understanding and mastery of the NestJS Framework with Nest Navigator AI.",
       "image": "/images/gpts/nest-navigator-ai-gpt-wise-duck-dev-gpts-logo.webp",
-      "alt": "Logo of Nest Navigator AI from the Wise Duck Dev GPTs collection for web, mobile and blockchain development.",
+      "alt": "Logo of Nest Navigator AI from the Wise Duck Dev GPTs collection for web, mobile, AI and blockchain development.",
       "path": "/framework/nest-navigator-ai",
       "openAi_link": "https://chat.openai.com/g/g-t4fNtaMx3-nest-navigator-ai",
       "card_description": "Gain in-depth insight into NestJS Framework with precise, actionable guidance from Nest Navigator AI.",
@@ -2736,7 +2736,7 @@
       "twitter_title": "Nest Navigator AI | The Wise Duck Dev GPTs",
       "twitter_description": "Delve into the depths of the NestJS framework with Nest Navigator AI. Enhance your application development skills with our comprehensive guide.",
       "twitter_image": "/images/gpts/nest-navigator-ai-gpt-wise-duck-dev-gpts-logo.webp",
-      "twitter_image_alt": "Logo of Nest Navigator AI from the Wise Duck Dev GPTs collection for web, mobile and blockchain development.",
+      "twitter_image_alt": "Logo of Nest Navigator AI from the Wise Duck Dev GPTs collection for web, mobile, AI and blockchain development.",
       "hashtag": "#wiseduckdevgpts, #gpts, #nestjs, #framework, #webdevelopment, #mobiledevelopment, #blockchaindevelopment, #debugging, #problemsolving, #interactivelearning"
     },
     {
@@ -2775,7 +2775,7 @@
       "title": "Bun Bard AI",
       "subtitle": "Master Bun framework with our expert AI tool: Bun Bard AI.",
       "image": "/images/gpts/bun-bard-ai-gpt-wise-duck-dev.webp",
-      "alt": "Logo of Bun Bard AI; a major GPT from The Wise Duck Dev GPTs collection. A crucial tool for web, mobile and blockchain development.",
+      "alt": "Logo of Bun Bard AI; a major GPT from The Wise Duck Dev GPTs collection. A crucial tool for web, mobile, AI and blockchain development.",
       "path": "/framework/Bun-Bard-AI-tool",
       "openAi_link": "https://chat.openai.com/g/g-TuNYzHOX5-bun-bard-ai",
       "card_description": "Explore Bun framework software development with Bun Bard AI.",
@@ -2799,7 +2799,7 @@
       "twitter_title": "Bun Bard AI | The Wise Duck Dev GPTs",
       "twitter_description": "Supercharge your Bun framework projects with Bun Bard AI.",
       "twitter_image": "/images/gpts/bun-bard-ai-gpt-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo of Bun Bard AI; a major GPT from The Wise Duck Dev GPTs collection. A crucial tool for web, mobile and blockchain development.",
+      "twitter_image_alt": "Logo of Bun Bard AI; a major GPT from The Wise Duck Dev GPTs collection. A crucial tool for web, mobile, AI and blockchain development.",
       "hashtag": "#wiseduckdevgpts, #bunbardai, #GPT, #AItools, #webdevelopment, #mobiledevelopment, #blockchaindevelopment, #framework, #hub, #guidance"
     },
     {
@@ -2988,7 +2988,7 @@
       "title": "NativeScript Navigator AI",
       "subtitle": "Elevate your mobile development journey with our NativeScript Navigator AI!",
       "image": "/images/gpts/nativescript-navigator-ai-wise-duck-dev-gpt-logo.webp",
-      "alt": "Image of the NativeScript Navigator AI logo by The Wise Duck Dev for web, mobile and blockchain developers",
+      "alt": "Image of the NativeScript Navigator AI logo by The Wise Duck Dev for web, mobile, AI and blockchain developers",
       "path": "/framework/NativeScript-Navigator-AI",
       "openAi_link": "https://chat.openai.com/g/g-mlRJ7SqNe-nativescript-navigator-ai",
       "card_description": "A game-changer for developers targeting mobile app development using the NativeScript framework.",
@@ -3009,7 +3009,7 @@
       "twitter_title": "NativeScript Navigator AI | The Wise Duck Dev GPTs",
       "twitter_description": "Master NativeScript mobile app development with NativeScript Navigator AI. Dive into the world of seamless & efficient mobile app development.",
       "twitter_image": "/images/gpts/nativescript-navigator-ai-wise-duck-dev-gpt-logo.webp",
-      "twitter_image_alt": "Image of the NativeScript Navigator AI logo by The Wise Duck Dev for web, mobile and blockchain developers",
+      "twitter_image_alt": "Image of the NativeScript Navigator AI logo by The Wise Duck Dev for web, mobile, AI and blockchain developers",
       "hashtag": "#wiseduckdevgpts, #NativeScriptNavigatorAI, #MobileApps, #AppDevelopmentGPT, #WiseDuck, #gpts, #MobileDevelopment, #NativeScript, #AIConsultant, #AppDevelopment"
     },
     {
@@ -3018,7 +3018,7 @@
       "title": "Apache Cordova Copilot",
       "subtitle": "Master hybrid mobile app development with Apache Cordova Copilot",
       "image": "/images/gpts/apache-cordova-copilot-wise-duck-dev-gpt-logo.webp",
-      "alt": "Logo of Apache Cordova Copilot, a resourceful GPT by The Wise Duck Dev GPTs, aiding in web, mobile and blockchain development.",
+      "alt": "Logo of Apache Cordova Copilot, a resourceful GPT by The Wise Duck Dev GPTs, aiding in web, mobile, AI and blockchain development.",
       "path": "/framework/apache-cordova-copilot",
       "openAi_link": "https://chat.openai.com/g/g-5IdSiUQJ9-apache-cordova-copilot",
       "card_description": "An intelligent assistant rich with knowledge to guide development with Apache Cordova.",
@@ -3138,7 +3138,7 @@
       "title": "Astro Genius GPT",
       "subtitle": "Unlock the potential of Astro framework with the Astro Genius GPT tool.",
       "image": "/images/gpts/astro-genius-gpt-logo-wise-duck-dev-gpts.webp",
-      "alt": "Logo of Astro Genius GPT, a key technology amongst The Wise Duck Dev GPTs focused on web, mobile and blockchain development.",
+      "alt": "Logo of Astro Genius GPT, a key technology amongst The Wise Duck Dev GPTs focused on web, mobile, AI and blockchain development.",
       "path": "/framework/astro-genius-gpt",
       "openAi_link": "https://chat.openai.com/g/g-JH7GNUtCL-astro-genius-gpt",
       "card_description": "Immerse in Astro Genius GPT's expert crafted guidance on Astro Framework development.",
@@ -3159,7 +3159,7 @@
       "twitter_title": "Astro Genius GPT | The Wise Duck Dev GPTs",
       "twitter_description": "Astro Genius GPT, your ultimate companion in the world of Astro Framework development.",
       "twitter_image": "/images/gpts/astro-genius-gpt-logo-wise-duck-dev-gpts.webp",
-      "twitter_image_alt": "Logo of Astro Genius GPT, a key technology amongst The Wise Duck Dev GPTs focused on web, mobile and blockchain development.",
+      "twitter_image_alt": "Logo of Astro Genius GPT, a key technology amongst The Wise Duck Dev GPTs focused on web, mobile, AI and blockchain development.",
       "hashtag": "#wiseduckdevgpts, #astrogeniusgpt, #astrowebframework, #webdevelopmentgpt, #mobiledevelopmentgpt, #blockchaindevelopmentgpt, #gpttool, #devcommunity, #codersofinstagram, #webdeveloper"
     },
     {
@@ -3288,7 +3288,7 @@
       "title": "Dart Master AI",
       "subtitle": "Dart Master AI: Your Ultimate Guide to Mastering the Dart Programming Language.",
       "image": "/images/gpts/dart-master-ai-gpt-logo-wise-duck-dev-gpts.webp",
-      "alt": "Logo of Dart Master AI - one of the Wise Duck Dev GPTs, contributing to advanced web, mobile and blockchain development.",
+      "alt": "Logo of Dart Master AI - one of the Wise Duck Dev GPTs, contributing to advanced web, mobile, AI and blockchain development.",
       "path": "/frontend/dart-master-ai",
       "openAi_link": "https://chat.openai.com/g/g-njxUPGPMS-dart-master-ai",
       "card_description": "Discover Dart Master AI, your ultimate guide to mastering Dart programming.",
@@ -3309,7 +3309,7 @@
       "twitter_title": "Dart Master AI | The Wise Duck Dev GPTs",
       "twitter_description": "Start your journey to Dart language proficiency with the guidance of Dart Master AI, a dedicated GPT.",
       "twitter_image": "/images/gpts/dart-master-ai-gpt-logo-wise-duck-dev-gpts.webp",
-      "twitter_image_alt": "Logo of Dart Master AI - one of the Wise Duck Dev GPTs, contributing to advanced web, mobile and blockchain development.",
+      "twitter_image_alt": "Logo of Dart Master AI - one of the Wise Duck Dev GPTs, contributing to advanced web, mobile, AI and blockchain development.",
       "hashtag": "#wiseduckdevgpts, #gpts, #dartprogramming, #dartmasterai, #frontend, #programming, #developer, #webdevelopment, #blockchain, #mobiledevelopment"
     },
     {
@@ -3408,7 +3408,7 @@
       "title": "Google Business Sensei GPT",
       "subtitle": "Pinnacle of Google Business, SEO, SEM expertise: Be outstanding online.",
       "image": "/images/gpts/google-business-sensei-gpt-logo-wise-duck-dev.webp",
-      "alt": "Logo of Google Business Sensei GPT, one of The Wise Duck Dev GPTs used to aid web, mobile and blockchain development.",
+      "alt": "Logo of Google Business Sensei GPT, one of The Wise Duck Dev GPTs used to aid web, mobile, AI and blockchain development.",
       "path": "/productivity/google-business-sensei-gpt",
       "openAi_link": "https://chat.openai.com/g/g-nxp4qAkGE-gooogle-business-sensei-gpt",
       "card_description": "Google Business Sensei GPT: Your go-to tool for global business competitiveness.",
@@ -3468,7 +3468,7 @@
       "title": "Google Cloud Pathfinder AI",
       "subtitle": "Empowering Developers with Actionable Insights on the Google Cloud Platform",
       "image": "/images/gpts/google-cloud-pathfinder-ai-gpt-wise-duck-dev.webp",
-      "alt": "Logo of Google Cloud Pathfinder AI GPT, part of The Wise Duck Dev GPTs collection, used in web, mobile and blockchain development assistance.",
+      "alt": "Logo of Google Cloud Pathfinder AI GPT, part of The Wise Duck Dev GPTs collection, used in web, mobile, AI and blockchain development assistance.",
       "path": "/productivity/Google-Cloud-Pathfinder-AI",
       "openAi_link": "https://chat.openai.com/g/g-IM4lGoQsz-gooogle-cloud-pathfinder-ai",
       "card_description": "Expert insights and refined guidance on Google Cloud - Pathfinder AI",
@@ -3708,7 +3708,7 @@
       "title": "Feature Flags Assistant AI",
       "subtitle": "Maximizing productivity in software development through the Feature Flags Assistant AI.",
       "image": "/images/gpts/feature-flags-assistant-ai-gpt-wise-duck-dev.webp",
-      "alt": "Logo of Feature Flags Assistant AI, one of The Wise Duck Dev GPTs, a tool for web, mobile and blockchain development.",
+      "alt": "Logo of Feature Flags Assistant AI, one of The Wise Duck Dev GPTs, a tool for web, mobile, AI and blockchain development.",
       "path": "/productivity/feature-flags-assistant-ai",
       "openAi_link": "https://chat.openai.com/g/g-Tws8MEWD4-feature-flags-assistant-ai",
       "card_description": "Solving complex software development issues with Feature Flags Assistant AI.",
@@ -3729,7 +3729,7 @@
       "twitter_title": "Feature Flags Assistant AI | The Wise Duck Dev GPTs",
       "twitter_description": "Increase your productivity in software development using Feature Flags Assistant AI.",
       "twitter_image": "/images/gpts/feature-flags-assistant-ai-gpt-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo of Feature Flags Assistant AI, one of The Wise Duck Dev GPTs, a tool for web, mobile and blockchain development.",
+      "twitter_image_alt": "Logo of Feature Flags Assistant AI, one of The Wise Duck Dev GPTs, a tool for web, mobile, AI and blockchain development.",
       "hashtag": "#wiseduckdevgpts, #gpts, #FeatureFlagsAssistantAI, #softwaredevelopment, #webdevelopment, #mobiledevelopment, #blockchaindevelopment, #AI, #programmingassistant, #TheWiseDuckDevGPTs"
     },
     {
@@ -3888,7 +3888,7 @@
       "title": "K8s Lens Mastermind AI",
       "subtitle": "Mastering Kubernetes Practices with K8s Lens Mastermind AI",
       "image": "/images/gpts/k8s-lens-mastermind-ai-wise-duck-dev-gpts-logo.webp",
-      "alt": "Logo of K8s Lens Mastermind AI, a notable GPT in The Wise Duck Dev GPTs collection for web, mobile and blockchain development",
+      "alt": "Logo of K8s Lens Mastermind AI, a notable GPT in The Wise Duck Dev GPTs collection for web, mobile, AI and blockchain development",
       "path": "/productivity/k8s-lens-mastermind-ai",
       "openAi_link": "https://chat.openai.com/g/g-iOvEUma8j-k8s-lens-mastermind-ai",
       "card_description": "Unleash the power of Kubernetes with K8s Lens Mastermind AI",
@@ -3909,7 +3909,7 @@
       "twitter_title": "K8s Lens Mastermind AI | The Wise Duck Dev GPTs",
       "twitter_description": "Navigate through Kubernetes with ease and build secure, universally accessible digital experiences with K8s Lens Mastermind AI.",
       "twitter_image": "/images/gpts/k8s-lens-mastermind-ai-wise-duck-dev-gpts-logo.webp",
-      "twitter_image_alt": "Logo of K8s Lens Mastermind AI, a notable GPT in The Wise Duck Dev GPTs collection for web, mobile and blockchain development",
+      "twitter_image_alt": "Logo of K8s Lens Mastermind AI, a notable GPT in The Wise Duck Dev GPTs collection for web, mobile, AI and blockchain development",
       "hashtag": "#wiseduckdevgpts, #k8slens, #mastermindAI, #Kubernetes, #webdevelopment, #blockchain, #mobiledevelopment, #productivity, #gpts, #AItools "
     },
     {
@@ -4308,7 +4308,7 @@
       "title": "EJS Mastermind AI",
       "subtitle": "Revolutionize your coding skills with EJS Mastermind AI at The Wise Duck Dev",
       "image": "/images/gpts/ejs-mastermind-ai-gpt-wise-duck-dev-logos.webp",
-      "alt": "Logo of EJS Mastermind AI, an intricate part of The Wise Duck Dev GPTs, exhibiting pioneering GPT technology for breakthrough web, mobile and blockchain development.",
+      "alt": "Logo of EJS Mastermind AI, an intricate part of The Wise Duck Dev GPTs, exhibiting pioneering GPT technology for breakthrough web, mobile, AI and blockchain development.",
       "path": "/frontend/EJS-Mastermind-AI-Wise-Duck-Dev",
       "openAi_link": "https://chat.openai.com/g/g-Ck24gM4fW-ejs-mastermind-ai",
       "card_description": "EJS Mastermind AI: Pioneering GPT technology for breakthrough web development.",
@@ -4398,7 +4398,7 @@
       "title": "Frontend Cybersecurity",
       "subtitle": "Delivering supreme frontline defence for secure web applications.",
       "image": "/images/gpts/frontend-cybersecurity-goldeneye-gpt-wise-duck-dev-gpts.webp",
-      "alt": "Logo of Frontend Cybersecurity GoldenEye GPT, one of the many innovative tools from The Wise Duck Dev GPTs series, assisting developers in web, mobile and blockchain development.",
+      "alt": "Logo of Frontend Cybersecurity GoldenEye GPT, one of the many innovative tools from The Wise Duck Dev GPTs series, assisting developers in web, mobile, AI and blockchain development.",
       "path": "/cybersecurity/frontend-cybersecurity-goldeneye",
       "openAi_link": "https://chat.openai.com/g/g-h9wEvq5QR-frontend-cybersecurity-goldeneye",
       "card_description": "Frontend Cybersecurity GoldenEye: A comprehensive tool for optimal frontend cybersecurity practices.",
@@ -4419,7 +4419,7 @@
       "twitter_title": "Frontend Cybersecurity GoldenEye | The Wise Duck Dev GPTs",
       "twitter_description": "Experience a revolution in web development with Frontend Cybersecurity GoldenEye, the comprehensive, security-first tool for all your frontend needs.",
       "twitter_image": "/images/gpts/frontend-cybersecurity-goldeneye-gpt-wise-duck-dev-gpts.webp",
-      "twitter_image_alt": "Logo of Frontend Cybersecurity GoldenEye GPT, one of the many innovative tools from The Wise Duck Dev GPTs series, assisting developers in web, mobile and blockchain development.",
+      "twitter_image_alt": "Logo of Frontend Cybersecurity GoldenEye GPT, one of the many innovative tools from The Wise Duck Dev GPTs series, assisting developers in web, mobile, AI and blockchain development.",
       "hashtag": "#wiseduckdevgpts, #gpts, #FrontendCybersecurity, #GoldenEye, #websecurity, #frontenddevelopment, #webapplications, #cyberdefense, #vulnerabilityanalysis, #securityarchitecture"
     },
     {
@@ -4818,7 +4818,7 @@
       "title": "Drupal Ranger AI",
       "subtitle": "Unlock the full potential of Drupal CMS with our AI-centric Drupal Ranger.",
       "image": "/images/gpts/drupal-ranger-ai-gpt-wise-duck-dev.webp",
-      "alt": "Image of Drupal Ranger AI, a GPT by The Wise Duck Dev GPTs for web, mobile and blockchain development.",
+      "alt": "Image of Drupal Ranger AI, a GPT by The Wise Duck Dev GPTs for web, mobile, AI and blockchain development.",
       "path": "/cms/drupal-ranger-ai",
       "openAi_link": "https://chat.openai.com/g/g-I52zaHQH9-drupal-ranger-ai",
       "card_description": "Leverage the power of Drupal CMS using Drupal Ranger AI, an innovative tool.",
@@ -4837,9 +4837,9 @@
       "og_url": "cms/drupal-ranger-ai",
       "og_image": "/images/gpts/drupal-ranger-ai-gpt-wise-duck-dev.webp",
       "twitter_title": "Drupal Ranger AI | The Wise Duck Dev GPTs",
-      "twitter_description": "Learn Drupal CMS with Drupal Ranger AI and uplift your web, mobile and blockchain development skills.",
+      "twitter_description": "Learn Drupal CMS with Drupal Ranger AI and uplift your web development skills and create bleeding edge websites.",
       "twitter_image": "/images/gpts/drupal-ranger-ai-gpt-wise-duck-dev.webp",
-      "twitter_image_alt": "Image of Drupal Ranger AI, a GPT by The Wise Duck Dev GPTs for web, mobile and blockchain development.",
+      "twitter_image_alt": "Image of Drupal Ranger AI, a GPT by The Wise Duck Dev GPTs for web, mobile, AI and blockchain development.",
       "hashtag": "#wiseduckdevgpts, #DrupalRangerAI, #GPTs, #WebDevelopment, #MobileDevelopment, #BlockchainDevelopment, #DrupalCMS, #AI, #Tech, #TheWiseDuckDev"
     },
     {
@@ -5328,7 +5328,7 @@
       "title": "Fortran Copilot",
       "subtitle": "Fortran Copilot: Your ultimate guide to master Fortran Programming",
       "image": "/images/gpts/fortran-copilot-gpt-wise-duck-dev-gpts.webp",
-      "alt": "Logo of Fortran Copilot GPT - one of the high-quality Wise Duck Dev GPTs for web, mobile and blockchain development community",
+      "alt": "Logo of Fortran Copilot GPT - one of the high-quality Wise Duck Dev GPTs for web, mobile, AI and blockchain development community",
       "path": "/programming/fortran-copilot",
       "openAi_link": "https://chat.openai.com/g/g-9CB8x4bWx-fortran-copilot",
       "card_description": "Comprehensive Fortran programming guidance empowered by Fortran Copilot GPT project",
@@ -5448,7 +5448,7 @@
       "title": "Clojure Oracle AI",
       "subtitle": "The ultimate guide for Clojure programming - Clojure Oracle AI.",
       "image": "/images/gpts/clojure-oracle-ai-gpt-wise-duck-dev-webp.webp",
-      "alt": "Logo of Clojure Oracle AI, a cutting-edge GPT by The Wise Duck Dev GPTs – aiding web, mobile and blockchain development.",
+      "alt": "Logo of Clojure Oracle AI, a cutting-edge GPT by The Wise Duck Dev GPTs – aiding web, mobile, AI and blockchain development.",
       "path": "/programming/clojure-oracle-ai",
       "openAi_link": "https://chat.openai.com/g/g-7q9OHl6gB-clojure-oracle-ai",
       "card_description": "Harness the power of Clojure language with Clojure Oracle AI!",
@@ -5469,7 +5469,7 @@
       "twitter_title": "Clojure Oracle AI | The Wise Duck Dev GPTs",
       "twitter_description": "Jumpstart your Clojure coding journey with Clojure Oracle AI – the ultimate GPT for developers!",
       "twitter_image": "/images/gpts/clojure-oracle-ai-gpt-wise-duck-dev-webp.webp",
-      "twitter_image_alt": "Logo of Clojure Oracle AI, a cutting-edge GPT by The Wise Duck Dev GPTs – aiding web, mobile and blockchain development.",
+      "twitter_image_alt": "Logo of Clojure Oracle AI, a cutting-edge GPT by The Wise Duck Dev GPTs – aiding web, mobile, AI and blockchain development.",
       "hashtag": "#wiseduckdevgpts, #clojureoracleai, #gpts, #programming, #clojure, #ai, #oracle, #development, #guide, #debugging"
     },
     {
@@ -5688,7 +5688,7 @@
       "title": "Assembly Avenger AI",
       "subtitle": "Revolutionizing Assembly language learning and problem-solving",
       "image": "/images/gpts/assembly-avenger-ai-logo-wise-duck-dev-gpts.webp",
-      "alt": "Assembly Avenger AI logo, a GPT from The Wise Duck Dev GPTs used for advanced web, mobile and blockchain development.",
+      "alt": "Assembly Avenger AI logo, a GPT from The Wise Duck Dev GPTs used for advanced web, mobile, AI and blockchain development.",
       "path": "/programming/assembly-avenger-ai",
       "openAi_link": "https://chat.openai.com/g/g-N3CjLthK2-assembly-avenger-ai",
       "card_description": "Master Assembly language with Assembly Avenger AI, your ultimate programming partner.",
@@ -5898,7 +5898,7 @@
       "title": "VBA Scribe GPT",
       "subtitle": "Boost your VBA programming skills with our interactive, problem-solving GPT!",
       "image": "/images/gpts/vba-scribe-gpt-logo-wise-duck-dev-gpts.webp",
-      "alt": "Logo of VBA Scribe GPT, one of the specialized GPTs by The Wise Duck Dev for web, mobile and blockchain development.",
+      "alt": "Logo of VBA Scribe GPT, one of the specialized GPTs by The Wise Duck Dev for web, mobile, AI and blockchain development.",
       "path": "/programming/vba-scribe-gpt",
       "openAi_link": "https://chat.openai.com/g/g-H3eQa8t6X-vbaa-scribe-gpt",
       "card_description": "Experience the ultimate VBA assistance with our VBA Scribe GPT, providing cutting-edge, insightful tips.",
@@ -5919,7 +5919,7 @@
       "twitter_title": "VBA Scribe GPT | The Wise Duck Dev GPTs",
       "twitter_description": "Uncover the power of VBA Scribe GPT, your guide to understanding and applying VBA principles effectively.",
       "twitter_image": "/images/gpts/vba-scribe-gpt-logo-wise-duck-dev-gpts.webp",
-      "twitter_image_alt": "Logo of VBA Scribe GPT, one of the specialized GPTs offered by The Wise Duck Dev for web, mobile and blockchain development.",
+      "twitter_image_alt": "Logo of VBA Scribe GPT, one of the specialized GPTs offered by The Wise Duck Dev for web, mobile, AI and blockchain development.",
       "hashtag": "#wiseduckdevgpts, #VBA, #VBAProgramming, #VBAScribeGPT, #GPTs, #WebDevelopment, #TheWiseDuckDev, #Debugging, #VBASolutions, #AdvancedVBA"
     },
     {
@@ -5958,7 +5958,7 @@
       "title": "DAO Pro GPT",
       "subtitle": "Unleash the power of Blockchain with the ultimate DAO development tool.",
       "image": "/images/gpts/dao-pro-gpt-logo-wise-duck-dev-tools.webp",
-      "alt": "Logo of DAO Pro GPT, a powerful GPT tool in The Wise Duck Dev GPTs collection for web, mobile and blockchain development.",
+      "alt": "Logo of DAO Pro GPT, a powerful GPT tool in The Wise Duck Dev GPTs collection for web, mobile, AI and blockchain development.",
       "path": "/productivity/dao-pro-gpt",
       "openAi_link": "https://chat.openai.com/g/g-4YjgcYFLT-dao-pro-gpt",
       "card_description": "Unlock the potential of DAO development with the premier expert tool - DAO Pro GPT.",
@@ -6078,7 +6078,7 @@
       "title": "Cython Cypher AI",
       "subtitle": "Programming mentorship taken to a new level - meet Cython Cypher AI for web and mobile devs.",
       "image": "/images/gpts/cython-cypher-ai-gpt-wise-duck-dev.webp",
-      "alt": "Logo of Cython Cypher AI, a GPT created by The Wise Duck Dev GPTs for advanced web, mobile and blockchain development support.",
+      "alt": "Logo of Cython Cypher AI, a GPT created by The Wise Duck Dev GPTs for advanced web, mobile, AI and blockchain development support.",
       "path": "/programming/cython-cypher-ai",
       "openAi_link": "https://chat.openai.com/g/g-DIJczTUcF-cython-cypher-ai",
       "card_description": "Unravel the complexity of Python and C extensions with Cython Cypher AI, your web and mobile guide.",
@@ -6099,7 +6099,7 @@
       "twitter_title": "Cython Cypher AI | The Wise Duck Dev GPTs",
       "twitter_description": "Ascend in your programming career with Cython Cypher AI, your mentor in Python and C extensions.",
       "twitter_image": "/images/gpts/cython-cypher-ai-gpt-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo of Cython Cypher AI, an AI GPT assisting web, mobile and blockchain development.",
+      "twitter_image_alt": "Logo of Cython Cypher AI, an AI GPT assisting web, mobile, AI and blockchain development.",
       "hashtag": "#wiseduckdevgpts, #cythoncypheraigpt, #cythonprogramming, #pythonextensions, #programmersguide, #aicodinghelp, #webdevsupport, #mobiledevsupport, #blockchaindevsupport, #codingai"
     },
     {
@@ -7813,7 +7813,7 @@
       "twitter_title": "JavaScript Jedi AI | The Wise Duck Dev GPTs",
       "twitter_description": "Présentation de JavaScript Jedi AI - votre guide ultime pour maîtriser JavaScript et le développement web.",
       "twitter_image": "/images/gpts/javascript-jedi-ai-gpt-wise-duck-dev-gpts-logo.webp",
-      "twitter_image_alt": "Logo pour JavaScript Jedi AI GPT - partie de la collection The Wise Duck Dev GPTs pour le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo pour JavaScript Jedi AI GPT - partie de la collection The Wise Duck Dev GPTs pour le développement web, mobile, IA et blockchain.",
       "hashtag": "#wiseduckdevgpts, #JavaScriptJediAI, #webdevelopment, #coding, #frontend, #backend, #blockchain, #AI, #gpts, #TheWiseDuckDevGPTs"
     },
     {
@@ -7822,7 +7822,7 @@
       "title": "React Native Ranger AI",
       "subtitle": "Expérimentez le support de développement d'applications mobiles à la pointe de la technologie avec notre React Native Ranger AI.",
       "image": "/images/gpts/react-native-ranger-ai-gpt-logo-by-wise-duck-dev.webp",
-      "alt": "Logo de React Native Ranger AI GPT, faisant partie de la série The Wise Duck Dev GPTs, aidant dans le développement web, mobile et blockchain.",
+      "alt": "Logo de React Native Ranger AI GPT, faisant partie de la série The Wise Duck Dev GPTs, aidant dans le développement web, mobile, IA et blockchain.",
       "path": "/frontend/react-native-ranger-ai",
       "openAi_link": "https://chat.openai.com/g/g-8IYL7ByHc-react-native-ranger-ai",
       "card_description": "Découvrez des solutions innovantes de développement mobile avec React Native Ranger AI.",
@@ -7843,7 +7843,7 @@
       "twitter_title": "React Native Ranger AI | The Wise Duck Dev GPTs",
       "twitter_description": "Plongez-vous dans le processus moderne de développement d'applications amélioré par React Native Ranger AI.",
       "twitter_image": "/images/gpts/react-native-ranger-ai-gpt-logo-by-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo de React Native Ranger AI GPT, faisant partie de la série The Wise Duck Dev GPTs, aidant dans le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de React Native Ranger AI GPT, faisant partie de la série The Wise Duck Dev GPTs, aidant dans le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #gpts, #reactnative, #mobileapp, #development, #code, #programming, #technology, #webdevelopment, #javascript"
     },
     {
@@ -7912,7 +7912,7 @@
       "title": "Swift Savant AI",
       "subtitle": "Libérez votre potentiel de programmation Swift avec l'orientation magistrale de Swift Savant AI.",
       "image": "/images/gpts/swift-savant-ai-wise-duck-dev-gpt-logo.webp",
-      "alt": "Logo de Swift Savant AI, l'un des GPTs de Wise Duck Dev conçu pour assister dans le développement web, mobile et blockchain.",
+      "alt": "Logo de Swift Savant AI, l'un des GPTs de Wise Duck Dev conçu pour assister dans le développement web, mobile, IA  et blockchain.",
       "path": "/frontend/swift-savant-ai",
       "openAi_link": "https://chat.openai.com/g/g-8qgCw73eB-swift-savant-ai",
       "card_description": "Un outil innovant pour faire évoluer les connaissances et solutions en programmation Swift.",
@@ -7933,7 +7933,7 @@
       "twitter_title": "Swift Savant AI | The Wise Duck Dev GPTs",
       "twitter_description": "Swift Savant AI offre des conseils d'expert pour la programmation Swift. Renforcez vos compétences en codage Swift avec cet outil innovant de Wise Duck Dev GPTs.",
       "twitter_image": "/images/gpts/swift-savant-ai-wise-duck-dev-gpt-logo.webp",
-      "twitter_image_alt": "Logo de Swift Savant AI, l'un des GPTs de Wise Duck Dev conçu pour assister dans le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de Swift Savant AI, l'un des GPTs de Wise Duck Dev conçu pour assister dans le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #gpts, #swiftprogramming, #swiftsavantai, #codingtool, #debugging, #problemsolving, #codingsolutions, #codingguide, #codingexpert"
     },
     {
@@ -7942,7 +7942,7 @@
       "title": "PWA Pathfinder AI",
       "subtitle": "Guidance innovante de PWA par The Wise Duck Dev pour une expérience d'apprentissage de premier ordre.",
       "image": "/images/gpts/pwa-pathfinder-ai-gpt-wise-duck-devs-seo-logo.webp",
-      "alt": "Logo de PWA Pathfinder AI, un GPT complet fourni par la suite de GPT de The Wise Duck Dev pour une assistance innovante dans le développement web, mobile et blockchain.",
+      "alt": "Logo de PWA Pathfinder AI, un GPT complet fourni par la suite de GPT de The Wise Duck Dev pour une assistance innovante dans le développement web, mobile, IA  et blockchain.",
       "path": "/frontend/pwa-pathfinder-ai",
       "openAi_link": "https://chat.openai.com/g/g-NGuYRvUI9-pwa-pathfinder-ai",
       "card_description": "Révolutionnez votre apprentissage avec PWA Pathfinder AI, votre guide pour les applications Web progressives.",
@@ -7963,7 +7963,7 @@
       "twitter_title": "PWA Pathfinder AI | The Wise Duck Dev GPTs",
       "twitter_description": "Enhancez vos connaissances en Applications Web Progressives avec PWA Pathfinder AI et embarquez pour un voyage d'apprentissage enrichissant.",
       "twitter_image": "/images/gpts/pwa-pathfinder-ai-gpt-wise-duck-devs-seo-logo.webp",
-      "twitter_image_alt": "Logo de PWA Pathfinder AI, un GPT complet fourni par la suite de GPT de The Wise Duck Dev pour une assistance innovante dans le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de PWA Pathfinder AI, un GPT complet fourni par la suite de GPT de The Wise Duck Dev pour une assistance innovante dans le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #gpts, #webdevelopment, #pwa, #frontend, #progessivewebapps, #guidedlearning, #debugging, #appmanifest, #webapplicationservices"
     },
     {
@@ -8152,7 +8152,7 @@
       "title": "Ruby Realm AI",
       "subtitle": "Maîtrisez vos compétences en codage Ruby avec notre assistance AI de pointe.",
       "image": "/images/gpts/ruby-realm-ai-wise-duck-dev-gpt-logo.webp",
-      "alt": "Logo de Ruby Realm AI, l'un des GPTs spécialisés de The Wise Duck Dev pour le développement web, mobile et blockchain.",
+      "alt": "Logo de Ruby Realm AI, l'un des GPTs spécialisés de The Wise Duck Dev pour le développement web, mobile, IA  et blockchain.",
       "path": "/backend/ruby-realm-ai",
       "openAi_link": "https://chat.openai.com/g/g-yqgktIy7b-ruby-realm-ai",
       "card_description": "Améliorez vos compétences en programmation Ruby avec Ruby Realm AI; votre précieux compagnon de codage.",
@@ -8173,7 +8173,7 @@
       "twitter_title": "Ruby Realm AI | The Wise Duck Dev GPTs",
       "twitter_description": "Découvrez des conseils de programmation Ruby de niveau supérieur avec notre exclusive Ruby Realm AI.",
       "twitter_image": "/images/gpts/ruby-realm-ai-wise-duck-dev-gpt-logo.webp",
-      "twitter_image_alt": "Logo de Ruby Realm AI, l'un des GPTs spécialisés de The Wise Duck Dev pour le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de Ruby Realm AI, l'un des GPTs spécialisés de The Wise Duck Dev pour le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #rubyrealmai, #ruby, #ai, #webdevelopment, #codingassist, #backend, #programming, #webapplications, #gpt3"
     },
     {
@@ -8242,7 +8242,7 @@
       "title": "C# Code Crafter",
       "subtitle": "Maîtrisez le développement en C# avec notre technologie de pointe GPT, le C# Code Crafter",
       "image": "/images/gpts/csharp-code-crafter-gpt-wise-duck-dev.webp",
-      "alt": "Logo de C# Code Crafter, un GPT avancé par The Wise Duck Dev GPTs, spécialisé dans les solutions de développement web, mobile et blockchain.",
+      "alt": "Logo de C# Code Crafter, un GPT avancé par The Wise Duck Dev GPTs, spécialisé dans les solutions de développement web, mobile, IA  et blockchain.",
       "path": "/backend/csharp-code-crafter",
       "openAi_link": "https://chat.openai.com/g/g-7pKPWBNsL-c-code-crafter",
       "card_description": "Maîtrisez le C# avec GPT C# Code Crafter. Donnez du pouvoir à la communauté des développeurs !",
@@ -8362,7 +8362,7 @@
       "title": "Kotlin Konscious AI",
       "subtitle": "Améliorez vos compétences en programmation Kotlin avec Kotlin Konscious AI.",
       "image": "/images/gpts/kotlin-konscious-ai-wise-duck-dev-gpts.webp",
-      "alt": "Logo de Kotlin Konscious AI, un GPT de The Wise Duck Dev GPTs, utilisé pour aider au développement web, mobile et blockchain.",
+      "alt": "Logo de Kotlin Konscious AI, un GPT de The Wise Duck Dev GPTs, utilisé pour aider au développement web, mobile, IA  et blockchain.",
       "path": "/backend/kotlin-konscious-ai",
       "openAi_link": "https://chat.openai.com/g/g-vgLMdCfJP-kotlin-konscious-ai",
       "card_description": "Améliorez votre parcours Kotlin avec l'aide de Kotlin Konscious AI!",
@@ -8383,7 +8383,7 @@
       "twitter_title": "Kotlin Konscious AI | The Wise Duck Dev GPTs",
       "twitter_description": "Rencontrez Kotlin Konscious AI, votre guide de programmation Kotlin. Parcourez les fondamentaux jusqu'aux techniques avancées en toute simplicité.",
       "twitter_image": "/images/gpts/kotlin-konscious-ai-wise-duck-dev-gpts.webp",
-      "twitter_image_alt": "Logo de Kotlin Konscious AI, un GPT de The Wise Duck Dev GPTs, utilisé pour aider au développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de Kotlin Konscious AI, un GPT de The Wise Duck Dev GPTs, utilisé pour aider au développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #KotlinKonsciousAI, #Programming, #BlockchainDevelopment, #MobileAppDevelopment, #FullStackDevelopment, #Kotlin, #WebDevelopment, #GPT3, #ArtificialIntelligence"
     },
     {
@@ -8452,7 +8452,7 @@
       "title": "Apache Alchemy AI",
       "subtitle": "Améliorez votre projet Apache HTTP Server avec Apache Alchemy AI",
       "image": "/images/gpts/apache-alchemy-ai-wise-duck-dev-gpts.webp",
-      "alt": "Logo d'Apache Alchemy AI, l'un des GPT innovants offerts par The Wise Duck Dev pour les développeurs en technologie web, mobile et blockchain.",
+      "alt": "Logo d'Apache Alchemy AI, l'un des GPT innovants offerts par The Wise Duck Dev pour les développeurs en technologie web, mobile, IA  et blockchain.",
       "path": "/backend/apache-alchemy-ai",
       "openAi_link": "https://chat.openai.com/g/g-YujWnDuul-apache-alchemy-ai",
       "card_description": "Renforcez vos compétences de développeur avec Apache Alchemy AI, dédié à la maîtrise du serveur Apache.",
@@ -8473,7 +8473,7 @@
       "twitter_title": "Apache Alchemy AI | Les GPT de The Wise Duck Dev",
       "twitter_description": "Explorez Apache Alchemy AI - Une révolution dans la maîtrise du serveur HTTP Apache! Découvrez un apprentissage sans limites avec nos modes et notre assistant d'IA",
       "twitter_image": "/images/gpts/apache-alchemy-ai-wise-duck-dev-gpts.webp",
-      "twitter_image_alt": "Logo d'Apache Alchemy AI, l'un des GPT innovants offerts par The Wise Duck Dev pour les développeurs en technologie web, mobile et blockchain.",
+      "twitter_image_alt": "Logo d'Apache Alchemy AI, l'un des GPT innovants offerts par The Wise Duck Dev pour les développeurs en technologie web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #apacheAlchemyAI, #webdevelopment, #AIassistant, #backend, #AItool, #ApacheHTTPServer, #WiseDuckDev, #GPTs, #developer"
     },
     {
@@ -8512,7 +8512,7 @@
       "title": "Caddy Server Copilot",
       "subtitle": "Habiliter les développeurs avec une gestion de serveur de pointe et un service d'applications Web sécurisé.",
       "image": "/images/gpts/caddy-server-copilot-gpt-wise-duck-dev-gpts.webp",
-      "alt": "Logo de Caddy Server Copilot, un parmi la gamme de GPTs progressifs de Wise Duck Dev spécialisé dans le développement web, mobile et blockchain.",
+      "alt": "Logo de Caddy Server Copilot, un parmi la gamme de GPTs progressifs de Wise Duck Dev spécialisé dans le développement web, mobile, IA  et blockchain.",
       "path": "/backend/caddy-server-copilot",
       "openAi_link": "https://chat.openai.com/g/g-z1NpqsAgU-caddy-server-copilot",
       "card_description": "Un GPT de pointe offrant un soutien insight en gestion de serveur et service d'applications Web sécurisées.",
@@ -8533,7 +8533,7 @@
       "twitter_title": "Caddy Server Copilot | Les GPT de Wise Duck Dev",
       "twitter_description": "Explorez le Caddy Server Copilot innovant alimenté par AI de Wise Duck Dev dans le domaine de la gestion de serveur et du service d'applications Web.",
       "twitter_image": "/images/gpts/caddy-server-copilot-gpt-wise-duck-dev-gpts.webp",
-      "twitter_image_alt": "Logo de Caddy Server Copilot, un parmi la gamme de GPTs progressifs de Wise Duck Dev spécialisé dans le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de Caddy Server Copilot, un parmi la gamme de GPTs progressifs de Wise Duck Dev spécialisé dans le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #gpts, #caddyserver, #backenddevelopment, #webservices, #servermanagement, #AIsupport, #webapplications, #serverservicing, #networksecurity"
     },
     {
@@ -8602,7 +8602,7 @@
       "title": "Prisma Prodigy GPT",
       "subtitle": "Maîtrisez l'art de l'ORM avec Prisma Prodigy GPT. Construisez des applications évolutives !",
       "image": "/images/gpts/prisma-prodigy-gpt-logo-wise-duck-dev-gpts.webp",
-      "alt": "Logo de Prisma Prodigy GPT, l'un des GPTs les plus en vue développé par The Wise Duck Dev pour le développement web, mobile et blockchain avancé.",
+      "alt": "Logo de Prisma Prodigy GPT, l'un des GPTs les plus en vue développé par The Wise Duck Dev pour le développement web, mobile, IA  et blockchain avancé.",
       "path": "/backend/prisma-prodigy-gpt",
       "openAi_link": "https://chat.openai.com/g/g-du33yso0U-prisma-prodigy-gpt",
       "card_description": "Exploitez Prisma ORM avec Prisma Prodigy GPT pour créer des applications robustes dès maintenant !",
@@ -8635,8 +8635,8 @@
       "alt": "Logo du tRPC Thinker AI, un GPT créé par The Wise Duck Dev GPTs, présentant la technologie AI de pointe.",
       "path": "/backend/tRPC-Thinker-AI",
       "openAi_link": "https://chat.openai.com/g/g-iEZBvVZoG-trpc-thinker-ai",
-      "card_description": "Améliorez vos compétences de dev avec tRPC Thinker AI, offrant des conseils complets en web, mobile et blockchain.",
-      "page_description": "Bienvenue sur tRPC Thinker AI, une application conçue pour répondre aux questions, déboguer, proposer des solutions et expliquer des concepts techniques liés à tRPC dans le développement web, mobile et blockchain. Cet outil est une incarnation de connaissances approfondies et d'expertise conçues pour transférer des connaissances et doter la communauté des développeurs de technologies de pointe. Explorez nos quatre modes distincts : /general, /solution, /debug et /explain pour la résolution de problèmes, des conseils complets et bien plus encore.",
+      "card_description": "Améliorez vos compétences de dev avec tRPC Thinker AI, offrant des conseils complets en web, mobile, IA  et blockchain.",
+      "page_description": "Bienvenue sur tRPC Thinker AI, une application conçue pour répondre aux questions, déboguer, proposer des solutions et expliquer des concepts techniques liés à tRPC dans le développement web, mobile, IA  et blockchain. Cet outil est une incarnation de connaissances approfondies et d'expertise conçues pour transférer des connaissances et doter la communauté des développeurs de technologies de pointe. Explorez nos quatre modes distincts : /general, /solution, /debug et /explain pour la résolution de problèmes, des conseils complets et bien plus encore.",
       "modes": {
         "/general": "Fournit des conseils pour l'application tRPC allant de la compréhension de base aux pratiques avancées.",
         "/solution": "Élabore des solutions alignées sur vos objectifs, obstacles ou aspirations.",
@@ -8644,7 +8644,7 @@
         "/explain": "Simplifie des principes et concepts tRPC complexes."
       },
       "meta_title_page": "tRPC Thinker AI | The Wise Duck Dev GPTs",
-      "meta_description_page": "Découvrez tRPC Thinker AI pour obtenir des conseils et des solutions d'experts dans le développement web, mobile et blockchain en utilisant tRPC.",
+      "meta_description_page": "Découvrez tRPC Thinker AI pour obtenir des conseils et des solutions d'experts dans le développement web, mobile, IA  et blockchain en utilisant tRPC.",
       "meta_keywords": "tRPC Thinker AI, développement blockchain, développement web, développement mobile, The Wise Duck Dev GPTs, Debugging, Solution, General, Explain",
       "og_title": "tRPC Thinker AI | The Wise Duck Dev GPTs",
       "og_description": "Rendez votre parcours de développement extraordinaire avec le tRPC Thinker AI, qui offre une assistance experte tRPC.",
@@ -8722,7 +8722,7 @@
       "title": "SQL Wizard AI",
       "subtitle": "Élargissez votre expertise SQL avec des conseils précis de SQL Wizard AI.",
       "image": "/images/gpts/sql-wizard-ai-gpt-wise-duck-dev.webp",
-      "alt": "Logo de SQL Wizard AI, un GPT avancé créé par The Wise Duck Dev GPTs pour le développement web, mobile et blockchain.",
+      "alt": "Logo de SQL Wizard AI, un GPT avancé créé par The Wise Duck Dev GPTs pour le développement web, mobile, IA  et blockchain.",
       "path": "/database/sql-wizard-ai",
       "openAi_link": "https://chat.openai.com/g/g-2Wlj9DyXA-sql-wizard-ai",
       "card_description": "Améliorez vos compétences de résolution de problèmes SQL avec des conseils de SQL Wizard AI.",
@@ -8743,7 +8743,7 @@
       "twitter_title": "SQL Wizard AI | The Wise Duck Dev GPTs",
       "twitter_description": "Expérimentez la puissance d'une expertise SQL suprême avec SQL Wizard AI. Révolutionnez vos efforts SQL dès aujourd'hui.",
       "twitter_image": "/images/gpts/sql-wizard-ai-gpt-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo de SQL Wizard AI, le GPT avancé créé par The Wise Duck Dev GPTs, spécialement conçu pour le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de SQL Wizard AI, le GPT avancé créé par The Wise Duck Dev GPTs, spécialement conçu pour le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #gpts, #sqlassistance, #sqlwizardai, #sqltool, #sqladvice, #expertsql, #database, #webdevelopment, #blockchain"
     },
     {
@@ -8902,7 +8902,7 @@
       "title": "Cassandra DB Copilot",
       "subtitle": "Boostez votre expertise Apache Cassandra avec notre nouveau GPT, le Cassandra DB Copilot.",
       "image": "/images/gpts/cassandra-db-copilot-gpt-wise-duck-dev-webp.webp",
-      "alt": "Logo de Cassandra DB Copilot, un GPT développé par Les GPTs du Canard Sage, spécialisé dans le développement web, mobile et blockchain.",
+      "alt": "Logo de Cassandra DB Copilot, un GPT développé par Les GPTs du Canard Sage, spécialisé dans le développement web, mobile, IA  et blockchain.",
       "path": "/database/Cassandra-DB-Copilot",
       "openAi_link": "https://chat.openai.com/g/g-KWFi10bWr-cassandra-db-copilot",
       "card_description": "Cassandra DB Copilot fournit des conseils pratiques pour gérer Apache Cassandra avec compétence.",
@@ -8923,7 +8923,7 @@
       "twitter_title": "Cassandra DB Copilot | Les GPTs du Canard Sage",
       "twitter_description": "Améliorez vos compétences en Apache Cassandra avec Cassandra DB Copilot GPT. Un pas vers le monde de la gestion facile de la base de données.",
       "twitter_image": "/images/gpts/cassandra-db-copilot-gpt-wise-duck-dev-webp.webp",
-      "twitter_image_alt": "Logo de Cassandra DB Copilot, un GPT développé par Les GPTs du Canard Sage, spécialisé en développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de Cassandra DB Copilot, un GPT développé par Les GPTs du Canard Sage, spécialisé en développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #gpts, #CassandraDB, #DatabaseManagement, #ApacheCassandra, #BlockChainDevelopment, #WebDevelopment, #MobileDevelopment, #CassandraDBCopilotGPT, #DataAnalysis"
     },
     {
@@ -8992,7 +8992,7 @@
       "title": "Amazon Neptune Oracle AI",
       "subtitle": "Maîtrisez la gestion de la base de données AWS Neptune avec notre outil spécialisé",
       "image": "/images/gpts/amazon-neptune-oracle-ai-gpt-wise-duck-dev.webp",
-      "alt": "Logo de Amazon Neptune Oracle AI GPT, un des outils avancés de la série The Wise Duck Dev GPTs, conçu pour le développement web, mobile et blockchain.",
+      "alt": "Logo de Amazon Neptune Oracle AI GPT, un des outils avancés de la série The Wise Duck Dev GPTs, conçu pour le développement web, mobile, IA  et blockchain.",
       "path": "/database/amazon-neptune-oracle-ai",
       "openAi_link": "https://chat.openai.com/g/g-JJE1Cwbix-amazonn-neptune-oracle-ai",
       "card_description": "Outil IA avancé pour une gestion efficace et sécurisée de la base de données AWS Neptune.",
@@ -9013,7 +9013,7 @@
       "twitter_title": "Amazon Neptune Oracle AI | The Wise Duck Dev GPTs",
       "twitter_description": "Débloquez le potentiel de la base de données AWS Neptune avec Amazon Neptune Oracle AI.",
       "twitter_image": "/images/gpts/amazon-neptune-oracle-ai-gpt-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo de Amazon Neptune Oracle AI GPT, un des outils avancés de la série The Wise Duck Dev GPTs, conçu pour le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de Amazon Neptune Oracle AI GPT, un des outils avancés de la série The Wise Duck Dev GPTs, conçu pour le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #gpts, #AI, #AmazonNeptune, #AWS, #NeptuneDatabase, #DatabaseManagement, #OracleAI, #WebDevelopment, #BlockchainDevelopment"
     },
     {
@@ -9052,7 +9052,7 @@
       "title": "Prometheus Mind AI",
       "subtitle": "Technologie AI avancée pour des opérations de base de données Prometheus optimales.",
       "image": "/images/gpts/prometheus-mind-ai-wise-duck-dev-gpts-logo.webp",
-      "alt": "Logo de Prometheus Mind AI, un Wise Duck Dev GPTs spécialisé dans le développement web, mobile et de la blockchain.",
+      "alt": "Logo de Prometheus Mind AI, un Wise Duck Dev GPTs spécialisé dans le développement web, mobile, IA  et de la blockchain.",
       "path": "/database/prometheus-mind-ai",
       "openAi_link": "https://chat.openai.com/g/g-WJcsACOWW-prometheus-mind-ai",
       "card_description": "Maximisez l'efficacité de votre base de données avec Prometheus Mind AI.",
@@ -9073,7 +9073,7 @@
       "twitter_title": "Prometheus Mind AI | Les Wise Duck Dev GPTs",
       "twitter_description": "Améliorez vos tâches de base de données avec la fonctionnalité avancée de Prometheus Mind AI.",
       "twitter_image": "/images/gpts/prometheus-mind-ai-wise-duck-dev-gpts-logo.webp",
-      "twitter_image_alt": "Logo de Prometheus Mind AI, un Wise Duck Dev GPTs spécialisé dans le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de Prometheus Mind AI, un Wise Duck Dev GPTs spécialisé dans le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #gpts, #ai, #prometheusmind, #database, #webdevelopment, #blockchaindevelopment, #technology, #mobedevelopment, #datamanagement"
     },
     {
@@ -9149,7 +9149,7 @@
       "title": "pgModeler Mentor AI",
       "subtitle": "Guide complet pour la création et l'édition de bases de données à l'aide de pgModeler",
       "image": "/images/gpts/pgmodeler-mentor-ai-gpt-wise-duck-dev-gpts.webp",
-      "alt": "Logo de pgModeler Mentor AI, un GPT développé par The Wise Duck Dev GPTs visant à soutenir le développement web, mobile et blockchain",
+      "alt": "Logo de pgModeler Mentor AI, un GPT développé par The Wise Duck Dev GPTs visant à soutenir le développement web, mobile, IA  et blockchain",
       "path": "/database/pgmodeler-mentor-ai",
       "openAi_link": "https://chat.openai.com/g/g-obVQDTezC-pgmodeler-mentor-ai",
       "card_description": "Guide avancé pour créer et modifier des bases de données à l'aide de pgModeler",
@@ -9170,7 +9170,7 @@
       "twitter_title": "pgModeler Mentor AI | The Wise Duck Dev GPTs",
       "twitter_description": "Améliorez vos compétences en modélisation de bases de données avec pgModeler Mentor AI, un guide complet pour les débutants et les pros.",
       "twitter_image": "/images/gpts/pgmodeler-mentor-ai-gpt-wise-duck-dev-gpts.webp",
-      "twitter_image_alt": "Logo de pgModeler Mentor AI, un GPT développé par The Wise Duck Dev GPTs visant à soutenir le développement web, mobile et blockchain",
+      "twitter_image_alt": "Logo de pgModeler Mentor AI, un GPT développé par The Wise Duck Dev GPTs visant à soutenir le développement web, mobile, IA  et blockchain",
       "hashtag": "#wiseduckdevgpts, #gpts, #pgmodeler, #ai, #database, #webdevelopment, #blockchain, #mobiledevelopment, #aiassistance, #devcommunity"
     },
     {
@@ -9209,7 +9209,7 @@
       "title": "Mantine UI Maestro GPT",
       "subtitle": "Spécialisé en composants React et Mantine UI, ce GPT éclaire votre parcours de conception d'interface utilisateur.",
       "image": "/images/gpts/mantine-ui-maestro-gpt-wise-duck-dev-gpts-logo.webp",
-      "alt": "Logo du Mantine UI Maestro GPT, l'un des GPTs de The Wise Duck Dev spécialisés dans le développement web, mobile et blockchain.",
+      "alt": "Logo du Mantine UI Maestro GPT, l'un des GPTs de The Wise Duck Dev spécialisés dans le développement web, mobile, IA  et blockchain.",
       "path": "/design/mantine-ui-maestro-gpt",
       "openAi_link": "https://chat.openai.com/g/g-Eosj8eTtY-mantine-ui-maestro-gpt",
       "card_description": "Libérez votre parcours de conception d'interface utilisateur avec le Mantine UI Maestro GPT.",
@@ -9230,7 +9230,7 @@
       "twitter_title": "Mantine UI Maestro GPT | The Wise Duck Dev GPTs",
       "twitter_description": "Amenez votre design d'interface utilisateur en React au niveau supérieur avec Mantine UI Maestro GPT.",
       "twitter_image": "/images/gpts/mantine-ui-maestro-gpt-wise-duck-dev-gpts-logo.webp",
-      "twitter_image_alt": "Logo du Mantine UI Maestro GPT, l'un des GPTs de The Wise Duck Dev spécialisés dans le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo du Mantine UI Maestro GPT, l'un des GPTs de The Wise Duck Dev spécialisés dans le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #mantineui, #react, #uidesign, #gpts, #webdevelopment, #debugging, #webdesign, #blockchaindevelopment, #mobiledesign"
     },
     {
@@ -9239,7 +9239,7 @@
       "title": "Tailwind CSS Oracle AI",
       "subtitle": "Maîtrisez les cadres CSS axés sur l'utilité avec Tailwind CSS Oracle AI, un chef-d'œuvre du développement web moderne.",
       "image": "/images/gpts/tailwind-css-gpt-wise-duck-dev.webp",
-      "alt": "Logo de Tailwind CSS GPT, partie des GPTs Wise Duck Dev pour le développement web, mobile et blockchain",
+      "alt": "Logo de Tailwind CSS GPT, partie des GPTs Wise Duck Dev pour le développement web, mobile, IA  et blockchain",
       "path": "/design/tailwind-css-oracle-aid",
       "openAi_link": "https://chat.openai.com/g/g-r8AvWSEv3-tailwind-css-oracle-ai",
       "card_description": "Améliorez vos compétences en développement web avec Tailwind CSS Oracle AI, un guide expert en Tailwind CSS.",
@@ -9260,7 +9260,7 @@
       "twitter_title": "Tailwind CSS Oracle AI | The Wise Duck Dev GPTs",
       "twitter_description": "Adoptez le développement web moderne avec Tailwind CSS Oracle AI, offrant une expertise en Tailwind CSS aux développeurs.",
       "twitter_image": "/images/gpts/tailwind-css-gpt-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo de Tailwind CSS GPT, partie des GPTs Wise Duck Dev pour le développement web, mobile et blockchain",
+      "twitter_image_alt": "Logo de Tailwind CSS GPT, partie des GPTs Wise Duck Dev pour le développement web, mobile, IA  et blockchain",
       "hashtag": "#wiseduckdevgpts, #tailwindcss, #webdevelopment, #gpt, #devtools, #coding, #cssframework, #development, #design, #cssoracleaid"
     },
     {
@@ -9419,7 +9419,7 @@
       "title": "Material Design Master GPT",
       "subtitle": "Découvrez la pointe du design matériel avec notre outil GPT spécialisé.",
       "image": "/images/gpts/material-design-mastermind-gpt-wise-duck-dev-gpts-logo.webp",
-      "alt": "Logo du Material Design Mastermind GPT, l'un des GPTs de Wise Duck Dev spécialisés dans les technologies complètes de développement web, mobile et blockchain.",
+      "alt": "Logo du Material Design Mastermind GPT, l'un des GPTs de Wise Duck Dev spécialisés dans les technologies complètes de développement web, mobile, IA  et blockchain.",
       "path": "/design/material-design-mastermind-gpt",
       "openAi_link": "https://chat.openai.com/g/g-fVEYZGuTH-material-design-mastermind-gpt",
       "card_description": "Approfondissement des principes et de la pratique du Material Design pour fournir des perspectives exploitables.",
@@ -9440,7 +9440,7 @@
       "twitter_title": "Material Design Mastermind GPT | The Wise Duck Dev GPTs",
       "twitter_description": "Obtenez une orientation experte sur le Material Design avec le Material Design Mastermind GPT pour transformer les principes complexes en stratégies compréhensibles.",
       "twitter_image": "/images/gpts/material-design-mastermind-gpt-wise-duck-dev-gpts-logo.webp",
-      "twitter_image_alt": "Logo du Material Design Mastermind GPT, l'un des GPTs de Wise Duck Dev spécialisés dans les technologies complètes de développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo du Material Design Mastermind GPT, l'un des GPTs de Wise Duck Dev spécialisés dans les technologies complètes de développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #gpts, #materialdesign, #development, #webdevelopment, #blockchaintechnologies, #mobiledevelopment, #designprinciples, #designstrategies, #problemsolving"
     },
     {
@@ -9449,7 +9449,7 @@
       "title": "Webflow Whizard AI",
       "subtitle": "Révolutionnez votre expérience Webflow avec notre IA de pointe.",
       "image": "/images/gpts/webflow-whizard-ai-logo-gpt-wise-duck-dev.webp",
-      "alt": "Image logo pour Webflow Whizard AI, un GPT développé par Wise Duck Dev GPTs, aidant dans le développement web, mobile et blockchain.",
+      "alt": "Image logo pour Webflow Whizard AI, un GPT développé par Wise Duck Dev GPTs, aidant dans le développement web, mobile, IA  et blockchain.",
       "path": "/design/webflow-whizard-ai",
       "openAi_link": "https://chat.openai.com/g/g-iZRilMC3S-webflow-whizard-ai",
       "card_description": "Webflow Whizard AI - Fournissant une expertise en Webflow et développement web moderne.",
@@ -9470,7 +9470,7 @@
       "twitter_title": "Webflow Whizard AI | Les GPTs de Wise Duck Dev",
       "twitter_description": "Webflow Whizard AI - Transformez votre expérience Webflow grâce à une IA innovante.",
       "twitter_image": "/images/gpts/webflow-whizard-ai-logo-gpt-wise-duck-dev.webp",
-      "twitter_image_alt": "Image logo pour Webflow Whizard AI, un GPT développé par Wise Duck Dev GPTs, aidant dans le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Image logo pour Webflow Whizard AI, un GPT développé par Wise Duck Dev GPTs, aidant dans le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #gpts, #AI, #webdevelopment, #webflow, #WebflowWizard, #design, #webdesign, #webdev, #blockchain"
     },
     {
@@ -9479,7 +9479,7 @@
       "title": "Radix UI Ranger AI",
       "subtitle": "Devenez un développeur Radix UI compétent avec l'outil Radix UI Ranger AI.",
       "image": "/images/gpts/radix-ui-ranger-ai-gpt-seo-wise-duck-dev-gpts.webp",
-      "alt": "Logo de Radix UI Ranger AI, un GPT développé par The Wise Duck Dev GPTs, spécialisé dans le développement web, mobile et blockchain.",
+      "alt": "Logo de Radix UI Ranger AI, un GPT développé par The Wise Duck Dev GPTs, spécialisé dans le développement web, mobile, IA  et blockchain.",
       "path": "/design/radix-ui-ranger-ai",
       "openAi_link": "https://chat.openai.com/g/g-QDDaEAn9f-radix-ui-ranger-ai",
       "card_description": "Explorez le développement de Radix UI avec précision en utilisant Radix UI Ranger AI.",
@@ -9491,7 +9491,7 @@
         "/explain": "Démystifie les commandes ou principes complexes de Radix UI en explications facilement compréhensibles."
       },
       "meta_title_page": "Radix UI Ranger AI | The Wise Duck Dev GPTs",
-      "meta_description_page": "Maîtrisez le développement de Radix UI avec des conseils précis de Radix UI Ranger AI de Wise Duck, révolutionnant le développement web, mobile et blockchain.",
+      "meta_description_page": "Maîtrisez le développement de Radix UI avec des conseils précis de Radix UI Ranger AI de Wise Duck, révolutionnant le développement web, mobile, IA  et blockchain.",
       "meta_keywords": "Radix UI, AI, Development, Web, Mobile, Blockchain, Wise Duck, Ranger AI, GPT, Technology",
       "og_title": "Radix UI Ranger AI | The Wise Duck Dev GPTs",
       "og_description": "Améliorez vos compétences en développement Radix UI avec Radix UI Ranger AI. Naviguez dans Radix UI avec précision.",
@@ -9500,7 +9500,7 @@
       "twitter_title": "Radix UI Ranger AI | The Wise Duck Dev GPTs",
       "twitter_description": "Naviguez dans Radix UI avec précision en utilisant Radix UI Ranger AI, développé par The Wise Ducks.",
       "twitter_image": "/images/gpts/radix-ui-ranger-ai-gpt-seo-wise-duck-dev-gpts.webp",
-      "twitter_image_alt": "Logo de Radix UI Ranger AI, un GPT développé par The Wise Duck Dev GPTs, spécialisé dans le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de Radix UI Ranger AI, un GPT développé par The Wise Duck Dev GPTs, spécialisé dans le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #gpts, #AI, #WebDevelopment, #MobileDevelopment, #BlockchainDevelopment, #RadixUI, #UIDesign, #UIGuidance, #UIMastery"
     },
     {
@@ -9749,7 +9749,7 @@
       "title": "Adobe XD Genius AI",
       "subtitle": "Révolution du design web et d'applications avec Adobe XD Genius AI pour les développeurs.",
       "image": "/images/gpts/adobe-xd-genius-ai-gpt-wise-duck-dev-gpts-logo.webp",
-      "alt": "Logo d'Adobe XD Genius AI, un GPT créé par The Wise Duck Dev GPTs, pour aider au développement web, mobile et blockchain.",
+      "alt": "Logo d'Adobe XD Genius AI, un GPT créé par The Wise Duck Dev GPTs, pour aider au développement web, mobile, IA  et blockchain.",
       "path": "/design/adobe-xd-genius-ai",
       "openAi_link": "https://chat.openai.com/g/g-tRAf5RDWO-adobee-xd-genius-ai",
       "card_description": "Vivez une expérience d'apprentissage avancée avec Adobe XD Genius AI.",
@@ -9770,7 +9770,7 @@
       "twitter_title": "Adobe XD Genius AI | The Wise Duck Dev GPTs",
       "twitter_description": "Découvrez Adobe XD Genius AI, votre ressource pour maîtriser Adobe XD avec une connaissance complète et des conseils perspicaces.",
       "twitter_image": "/images/gpts/adobe-xd-genius-ai-gpt-wise-duck-dev-gpts-logo.webp",
-      "twitter_image_alt": "Logo d'Adobe XD Genius AI, un GPT créé par The Wise Duck Dev GPTs, pour aider au développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo d'Adobe XD Genius AI, un GPT créé par The Wise Duck Dev GPTs, pour aider au développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #adobexd, #webdesign, #mobileappdesign, #gpt, #geniusai, #uxdesign, #aidesigntools, #blockchaindev, #aiassist"
     },
     {
@@ -9839,7 +9839,7 @@
       "title": "Laravel Legend GPT",
       "subtitle": "Améliorez votre parcours de développement Laravel avec Laravel Legend GPT, votre allié dans la création d'applications web.",
       "image": "/images/gpts/laravel-legend-gpt-wise-duck-dev-webp.webp",
-      "alt": "Logo représentant Laravel Legend GPT, l'un des GPTs de The Wise Duck Dev spécialisés dans le développement web, mobile et blockchain.",
+      "alt": "Logo représentant Laravel Legend GPT, l'un des GPTs de The Wise Duck Dev spécialisés dans le développement web, mobile, IA  et blockchain.",
       "path": "/framework/laravel-legend-gpt",
       "openAi_link": "https://chat.openai.com/g/g-VnzbJWYMS-laravel-legend-gpt",
       "card_description": "Découvrez Laravel Legend GPT, une ressource pour les programmeurs et les experts dans la framework Laravel",
@@ -9860,7 +9860,7 @@
       "twitter_title": "Laravel Legend GPT | Les GPTs de The Wise Duck Dev",
       "twitter_description": "Expérimentez Laravel comme jamais auparavant avec Laravel Legend GPT. Votre chemin vers la maîtrise de Laravel commence ici.",
       "twitter_image": "/images/gpts/laravel-legend-gpt-wise-duck-dev-webp.webp",
-      "twitter_image_alt": "Logo représentant Laravel Legend GPT, l'un des GPTs de The Wise Duck Dev spécialisés dans le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo représentant Laravel Legend GPT, l'un des GPTs de The Wise Duck Dev spécialisés dans le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #GPT, #WebDevelopment, #Laravel, #PHP, #LaravelLegendGPT, #Blockchain, #ApplicationDevelopment, #Programming, #Framework"
     },
     {
@@ -9869,7 +9869,7 @@
       "title": ".NET Prophet AI",
       "subtitle": "Révolutionner le développement .NET - Autonomisation grâce à des conseils perspicaces de l'IA",
       "image": "/images/gpts/net-prophet-ai-gpt-logo-wise-duck-dev.webp",
-      "alt": "Logo de .NET Prophet AI, un GPT créé par The Wise Duck Dev GPTs, révolutionnant le développement web, mobile et blockchain.",
+      "alt": "Logo de .NET Prophet AI, un GPT créé par The Wise Duck Dev GPTs, révolutionnant le développement web, mobile, IA  et blockchain.",
       "path": "/framework/net-prophet-ai",
       "openAi_link": "https://chat.openai.com/g/g-hT8OPZRTR-net-prophet-ai",
       "card_description": "Conseils approfondis pour le développement ASP.NET grâce à .NET Prophet AI.",
@@ -9890,7 +9890,7 @@
       "twitter_title": ".NET Prophet AI | The Wise Duck Dev GPTs",
       "twitter_description": "Plongez dans le monde de ASP.NET avec un compagnon IA vous guidant des bases à la maîtrise.",
       "twitter_image": "/images/gpts/net-prophet-ai-gpt-logo-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo de .NET Prophet AI, un GPT créé par The Wise Duck Dev GPTs, révolutionnant le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de .NET Prophet AI, un GPT créé par The Wise Duck Dev GPTs, révolutionnant le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #gpts, #NetProphetAI, #ASPNET, #WebDevelopment, #AIguidance, #framework, #programming, #debug, #solution"
     },
     {
@@ -9899,7 +9899,7 @@
       "title": "Flask Forge AI",
       "subtitle": "Flask Forge AI : Guidage des développeurs Python à travers le développement d'applications web Flask.",
       "image": "/images/gpts/flask-forge-ai-the-wise-duck-dev-gpt.webp",
-      "alt": "Logo de Flask Forge AI, l'un des GPTs de The Wise Duck Dev spécialisés dans le développement web, mobile et blockchain",
+      "alt": "Logo de Flask Forge AI, l'un des GPTs de The Wise Duck Dev spécialisés dans le développement web, mobile, IA  et blockchain",
       "path": "/framework/flask-forge-ai",
       "openAi_link": "https://chat.openai.com/g/g-kaUcvlBep-flask-forge-ai",
       "card_description": "Naviguez à travers le développement Flask guidé par Flask Forge AI, le GPT de The Wise Duck Dev.",
@@ -9920,7 +9920,7 @@
       "twitter_title": "Flask Forge AI | The Wise Duck Dev GPTs",
       "twitter_description": "Flask Forge AI - Rendant le développement web Flask accessible aux développeurs de tous les niveaux de compétence.",
       "twitter_image": "/images/gpts/flask-forge-ai-the-wise-duck-dev-gpt.webp",
-      "twitter_image_alt": "Logo de Flask Forge AI, l'un des GPTs de The Wise Duck Dev spécialisés dans le développement web, mobile et blockchain",
+      "twitter_image_alt": "Logo de Flask Forge AI, l'un des GPTs de The Wise Duck Dev spécialisés dans le développement web, mobile, IA  et blockchain",
       "hashtag": "#wiseduckdevgpts, #flaskforgeai, #flaskdevelopment, #webdevelopment, #python, #artificialintelligence, #developers, #theswiseduckdev, #gpts, #grosintelligence"
     },
     {
@@ -10019,7 +10019,7 @@
       "title": "Qwik Quest GPT",
       "subtitle": "Maîtrisez le framework Qwik avec le Qwik Quest GPT de Wise Duck Dev.",
       "image": "/images/gpts/qwik-quest-gpt-wise-duck-dev-webp.webp",
-      "alt": "Logo du Qwik Quest GPT, l'un des GPTs puissants créés par The Wise Duck Dev pour la communauté de développement web, mobile et blockchain.",
+      "alt": "Logo du Qwik Quest GPT, l'un des GPTs puissants créés par The Wise Duck Dev pour la communauté de développement web, mobile, IA  et blockchain.",
       "path": "/framework/Qwik-Quest-GPT",
       "openAi_link": "https://chat.openai.com/g/g-5IhjIZo16-qwik-quest-gpt",
       "card_description": "Apprenez et améliorez vos compétences en framework Qwik avec le Qwik Quest GPT de The Wise Duck Dev.",
@@ -10040,7 +10040,7 @@
       "twitter_title": "Qwik Quest GPT | Les GPTs de The Wise Duck Dev",
       "twitter_description": "Élargissez vos horizons de développement web avec le Qwik Quest GPT de The Wise Duck Dev",
       "twitter_image": "/images/gpts/qwik-quest-gpt-wise-duck-dev-webp.webp",
-      "twitter_image_alt": "Logo du Qwik Quest GPT, l'un des GPTs puissants créés par The Wise Duck Dev pour la communauté de développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo du Qwik Quest GPT, l'un des GPTs puissants créés par The Wise Duck Dev pour la communauté de développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #qwikquestgpt, #gpts, #developer, #webdevelopment, #framework, #coding, #programming, #learn, #improvement"
     },
     {
@@ -10109,7 +10109,7 @@
       "title": "Nest Navigator AI",
       "subtitle": "Boostez votre compréhension et maîtrise du framework NestJS avec Nest Navigator AI.",
       "image": "/images/gpts/nest-navigator-ai-gpt-wise-duck-dev-gpts-logo.webp",
-      "alt": "Logo de Nest Navigator AI de la collection Wise Duck Dev GPTs pour le développement web, mobile et blockchain.",
+      "alt": "Logo de Nest Navigator AI de la collection Wise Duck Dev GPTs pour le développement web, mobile, IA  et blockchain.",
       "path": "/framework/nest-navigator-ai",
       "openAi_link": "https://chat.openai.com/g/g-t4fNtaMx3-nest-navigator-ai",
       "card_description": "Obtenez une connaissance approfondie du framework NestJS avec des conseils précis et exploitables de Nest Navigator AI.",
@@ -10130,7 +10130,7 @@
       "twitter_title": "Nest Navigator AI | The Wise Duck Dev GPTs",
       "twitter_description": "Plongez dans les profondeurs du framework NestJS avec Nest Navigator AI. Améliorez vos compétences en développement d'applications avec notre guide complet.",
       "twitter_image": "/images/gpts/nest-navigator-ai-gpt-wise-duck-dev-gpts-logo.webp",
-      "twitter_image_alt": "Logo de Nest Navigator AI de la collection Wise Duck Dev GPTs pour le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de Nest Navigator AI de la collection Wise Duck Dev GPTs pour le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #gpts, #nestjs, #framework, #webdevelopment, #mobiledevelopment, #blockchaindevelopment, #debugging, #problemsolving, #interactivelearning"
     },
     {
@@ -10169,7 +10169,7 @@
       "title": "Bun Bard AI",
       "subtitle": "Maîtrisez le cadre Bun avec notre outil AI expert : Bun Bard AI.",
       "image": "/images/gpts/bun-bard-ai-gpt-wise-duck-dev.webp",
-      "alt": "Logo de Bun Bard AI; un GPT majeur de la collection GPTs de The Wise Duck Dev. Un outil essentiel pour le développement web, mobile et blockchain.",
+      "alt": "Logo de Bun Bard AI; un GPT majeur de la collection GPTs de The Wise Duck Dev. Un outil essentiel pour le développement web, mobile, IA  et blockchain.",
       "path": "/framework/Bun-Bard-AI-tool",
       "openAi_link": "https://chat.openai.com/g/g-TuNYzHOX5-bun-bard-ai",
       "card_description": "Explorez le développement de logiciels avec le framework Bun avec Bun Bard AI.",
@@ -10190,7 +10190,7 @@
       "twitter_title": "Bun Bard AI | Les GPTs de The Wise Duck Dev",
       "twitter_description": "Boostez vos projets avec le framework Bun avec Bun Bard AI.",
       "twitter_image": "/images/gpt3/bun-bard-ai-gpt-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo de Bun Bard AI; un GPT majeur de la collection GPTs de The Wise Duck Dev. Un outil essentiel pour le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de Bun Bard AI; un GPT majeur de la collection GPTs de The Wise Duck Dev. Un outil essentiel pour le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #bunbardai, #GPT, #AItools, #webdevelopment, #mobiledevelopment, #blockchaindevelopment, #framework, #hub, #guidance"
     },
     {
@@ -10229,7 +10229,7 @@
       "title": "Angular Alchemist AI",
       "subtitle": "Explorez la maîtrise d'Angular avec Angular Alchemist AI par The Wise Duck Dev.",
       "image": "/images/gpts/angular-alchemist-ai-the-wise-duck-dev-gpts-logo.webp",
-      "alt": "Logo d'Angular Alchemist AI, l'un des GPTs de The Wise Duck Dev pour le développement web, mobile et blockchain.",
+      "alt": "Logo d'Angular Alchemist AI, l'un des GPTs de The Wise Duck Dev pour le développement web, mobile, IA  et blockchain.",
       "path": "/framework/angular-alchemist-ai",
       "openAi_link": "https://chat.openai.com/g/g-fnOYkMaUQ-angular-alchemist-ai",
       "card_description": "Dominez Angular avec Angular Alchemist AI, votre compagnon fidèle dans le développement web.",
@@ -10250,7 +10250,7 @@
       "twitter_title": "Angular Alchemist AI | Les GPTs de The Wise Duck Dev",
       "twitter_description": "Angular Alchemist AI, votre pas vers la maîtrise d'Angular!",
       "twitter_image": "/images/gpts/angular-alchemist-ai-the-wise-duck-dev-gpts-logo.webp",
-      "twitter_image_alt": "Logo d'Angular Alchemist AI, l'un des GPTs de The Wise Duck Dev pour le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo d'Angular Alchemist AI, l'un des GPTs de The Wise Duck Dev pour le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #AngularAlchemistAI, #Angular, #webdevelopment, #LesGPTsdeTheWiseduckDev, #GuideAngular, #LearnAngular, #FrameworkAngular, #TechniquesAngular, #MaîtriseAngular"
     },
     {
@@ -10349,7 +10349,7 @@
       "title": "Ember JS Oracle AI",
       "subtitle": "Le guide d'IA complet pour les développeurs Ember.js. Acquérir des connaissances et des compétences.",
       "image": "/images/gpts/emberjs-oracle-ai-gpt-wise-duck-dev.webp",
-      "alt": "Logo Ember JS Oracle AI présentant Les canards sages GPTs pour le développement web, mobile et blockchain.",
+      "alt": "Logo Ember JS Oracle AI présentant Les canards sages GPTs pour le développement web, mobile, IA  et blockchain.",
       "path": "/framework/ember-js-oracle-ai",
       "openAi_link": "https://chat.openai.com/g/g-1nZSHFgsE-ember-js-oracle-ai",
       "card_description": "Révolutionnez votre parcours de développement : Ember JS Oracle AI GPT - votre voie vers la maîtrise d'Ember.js.",
@@ -10370,7 +10370,7 @@
       "twitter_title": "Ember JS Oracle AI | Les canards sages GPTs",
       "twitter_description": "Votre compagnon de confiance pour maîtriser Ember.js : Ember JS Oracle AI.",
       "twitter_image": "/images/gpts/emberjs-oracle-ai-gpt-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo Ember JS Oracle AI présentant Les canards sages GPTs pour le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo Ember JS Oracle AI présentant Les canards sages GPTs pour le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #EmberJS, #AIGuide, #WebDevelopment, #DeveloperResources, #OracleAI, #EmberMastery, #JavaScript, #AI, #Coding"
     },
     {
@@ -10409,7 +10409,7 @@
       "title": "Apache Cordova Copilot",
       "subtitle": "Maîtrisez le développement d'applications mobiles hybrides avec Apache Cordova Copilot",
       "image": "/images/gpts/apache-cordova-copilot-wise-duck-dev-gpt-logo.webp",
-      "alt": "Logo d'Apache Cordova Copilot, un GPT ingénieux par The Wise Duck Dev GPTs, aidant dans le développement web, mobile et blockchain.",
+      "alt": "Logo d'Apache Cordova Copilot, un GPT ingénieux par The Wise Duck Dev GPTs, aidant dans le développement web, mobile, IA  et blockchain.",
       "path": "/framework/apache-cordova-copilot",
       "openAi_link": "https://chat.openai.com/g/g-5IdSiUQJ9-apache-cordova-copilot",
       "card_description": "Un assistant intelligent riche en connaissances pour guider le développement avec Apache Cordova.",
@@ -10470,7 +10470,7 @@
       "title": "Sensei Symfony GPT",
       "subtitle": "Maîtrise du développement Symfony, Plan d'Application Web Efficiente et Innovante",
       "image": "/images/gpts/symfony-sensei-gpt-wise-duck-dev-gpts-logo.webp",
-      "alt": "Logo du Sensei Symfony GPT, faisant partie de la collection Wise Duck Dev GPTs axée sur le développement web, mobile et blockchain.",
+      "alt": "Logo du Sensei Symfony GPT, faisant partie de la collection Wise Duck Dev GPTs axée sur le développement web, mobile, IA  et blockchain.",
       "path": "/framework/symfony-sensei-gpt",
       "openAi_link": "https://chat.openai.com/g/g-10nqqsU9m-symfony-sensei-gpt",
       "card_description": "Atteignez la maîtrise dans le développement web Symfony avec Sensei Symfony GPT.",
@@ -10530,7 +10530,7 @@
       "title": "Astro Genius GPT",
       "subtitle": "Débloquez le potentiel du cadre Astro avec l'outil Astro Genius GPT.",
       "image": "/images/gpts/astro-genius-gpt-logo-wise-duck-dev-gpts.webp",
-      "alt": "Logo d'Astro Genius GPT, une technologie clé parmi les GPTs de The Wise Duck Dev, axées sur le développement web, mobile et blockchain.",
+      "alt": "Logo d'Astro Genius GPT, une technologie clé parmi les GPTs de The Wise Duck Dev, axées sur le développement web, mobile, IA  et blockchain.",
       "path": "/framework/astro-genius-gpt",
       "openAi_link": "https://chat.openai.com/g/g-JH7GNUtCL-astro-genius-gpt",
       "card_description": "Plongez dans les recommandations expertes de l'Astro Genius GPT sur le développement du cadre Astro.",
@@ -10551,7 +10551,7 @@
       "twitter_title": "Astro Genius GPT | The Wise Duck Dev GPTs",
       "twitter_description": "Astro Genius GPT, votre compagnon ultime dans le monde du développement du cadre Astro.",
       "twitter_image": "/images/gpts/astro-genius-gpt-logo-wise-duck-dev-gpts.webp",
-      "twitter_image_alt": "Logo d'Astro Genius GPT, une technologie clé parmi les GPTs de The Wise Duck Dev axées sur le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo d'Astro Genius GPT, une technologie clé parmi les GPTs de The Wise Duck Dev axées sur le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #astrogeniusgpt, #astrowebframework, #webdevelopmentgpt, #mobiledevelopmentgpt, #blockchaindevelopmentgpt, #gpttool, #devcommunity, #codersofinstagram, #webdeveloper"
     },
     {
@@ -10560,7 +10560,7 @@
       "title": "Fastify Focus AI",
       "subtitle": "Découvrez des principes Fastify complexes avec les conseils de Fastify Focus AI.",
       "image": "/images/gpts/fastify-focus-ai-gpt-wise-duck-dev.webp",
-      "alt": "Logo de Fastify Focus AI, un outil GPT parmi les GPTs The Wise Duck Dev pour le développement web, mobile et blockchain.",
+      "alt": "Logo de Fastify Focus AI, un outil GPT parmi les GPTs The Wise Duck Dev pour le développement web, mobile, IA  et blockchain.",
       "path": "/framework/fastify-focus-ai",
       "openAi_link": "https://chat.openai.com/g/g-kBb8PwQA8-fastify-focus-ai",
       "card_description": "Fastify Focus AI - Votre compagnon pour maîtriser le cadre web Fastify.",
@@ -10581,7 +10581,7 @@
       "twitter_title": "Fastify Focus AI | The Wise Duck Dev GPTs",
       "twitter_description": "Libérez le potentiel complet du cadre Web Fastify avec Fastify Focus AI.",
       "twitter_image": "/images/gpts/fastify-focus-ai-gpt-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo de Fastify Focus AI, un outil GPT parmi les GPTs The Wise Duck Dev pour le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de Fastify Focus AI, un outil GPT parmi les GPTs The Wise Duck Dev pour le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #FastifyFocusAI, #webdevelopment, #Fastify, #AI, #NodeJS, #GPTs, #Coding, #Debugging, #WebFramework, #appdevelopment"
     },
     {
@@ -10590,11 +10590,11 @@
       "title": "Meteor Mentor GPT",
       "subtitle": "Libérez votre potentiel de développement avec Meteor Mentor GPT - Votre guide essentiel du framework Meteor",
       "image": "/images/gpts/meteor-mentor-gpt-logo-wise-duck-dev-gpts.webp",
-      "alt": "Logo du Meteor Mentor GPT, l'un des GPTs de The Wise Duck Dev pour le développement web, mobile et blockchain.",
+      "alt": "Logo du Meteor Mentor GPT, l'un des GPTs de The Wise Duck Dev pour le développement web, mobile, IA  et blockchain.",
       "path": "/framework/meteor-mentor-gpt",
       "openAi_link": "https://chat.openai.com/g/g-SOfxCX7kT-meteor-mentor-gpt",
       "card_description": "Meteor Mentor GPT - Votre clé pour un développement compétent et orienté résultats avec le framework Meteor.",
-      "page_description": "Meteor Mentor GPT est un outil d'apprentissage personnalisé conçu pour aider les développeurs de tous niveaux à naviguer à travers les complexités du framework Meteor. Il simplifie les principes complexes de Meteor en une stratégie facile à comprendre qui augmentera significativement l'efficacité de vos projets. Le GPT offre non seulement des techniques de résolution de problèmes, mais aussi une compréhension complète de comment utiliser de manière optimale la plateforme Meteor pour développer des applications web, mobile et desktop à grande échelle. Avec Meteor Mentor GPT, faites l'expérience d'une visite guidée pour propulser votre expertise et votre ensemble de compétences dans les projets basés sur Meteor.",
+      "page_description": "Meteor Mentor GPT est un outil d'apprentissage personnalisé conçu pour aider les développeurs de tous niveaux à naviguer à travers les complexités du framework Meteor. Il simplifie les principes complexes de Meteor en une stratégie facile à comprendre qui augmentera significativement l'efficacité de vos projets. Le GPT offre non seulement des techniques de résolution de problèmes, mais aussi une compréhension complète de comment utiliser de manière optimale la plateforme Meteor pour développer des applications web, mobile, IA  et desktop à grande échelle. Avec Meteor Mentor GPT, faites l'expérience d'une visite guidée pour propulser votre expertise et votre ensemble de compétences dans les projets basés sur Meteor.",
       "modes": {
         "/general": "Comprenez de manière générale le framework Meteor, applicable à la fois aux niveaux de base et avancés.",
         "/solution": "Analysez les visions et les défis de votre projet pour développer des stratégies appropriées et des solutions créatives impliquant Meteor.",
@@ -10800,7 +10800,7 @@
       "title": "Google Business Sensei GPT",
       "subtitle": "Sommet de Google Business, SEO, SEM expertise: Soyez exceptionnel en ligne.",
       "image": "/images/gpts/google-business-sensei-gpt-logo-wise-duck-dev.webp",
-      "alt": "Logo de Google Business Sensei GPT, l'un des GPT de Wise Duck Dev utilisés pour aider au développement web, mobile et blockchain.",
+      "alt": "Logo de Google Business Sensei GPT, l'un des GPT de Wise Duck Dev utilisés pour aider au développement web, mobile, IA  et blockchain.",
       "path": "/productivity/google-business-sensei-gpt",
       "openAi_link": "https://chat.openai.com/g/g-nxp4qAkGE-gooogle-business-sensei-gpt",
       "card_description": "Google Business Sensei GPT: Votre outil de référence pour la compétitivité commerciale mondiale.",
@@ -10860,7 +10860,7 @@
       "title": "Google Cloud Pathfinder AI",
       "subtitle": "Habiliter les développeurs avec des idées exploitables sur la plateforme Google Cloud",
       "image": "/images/gpts/google-cloud-pathfinder-ai-gpt-wise-duck-dev.webp",
-      "alt": "Logo de Google Cloud Pathfinder AI GPT, faisant partie de la collection The Wise Duck Dev GPTs, utilisé dans l'assistance au développement web, mobile et blockchain.",
+      "alt": "Logo de Google Cloud Pathfinder AI GPT, faisant partie de la collection The Wise Duck Dev GPTs, utilisé dans l'assistance au développement web, mobile, IA  et blockchain.",
       "path": "/productivity/Google-Cloud-Pathfinder-AI",
       "openAi_link": "https://chat.openai.com/g/g-IM4lGoQsz-gooogle-cloud-pathfinder-ai",
       "card_description": "Idées expertes et conseils affinés sur Google Cloud - Pathfinder AI",
@@ -11100,7 +11100,7 @@
       "title": "Feature Flags Assistant AI",
       "subtitle": "Maximiser la productivité dans le développement de logiciels grâce à l'Assistant AI de Feature Flags.",
       "image": "/images/gpts/feature-flags-assistant-ai-gpt-wise-duck-dev.webp",
-      "alt": "Logo de l'Assistant AI de Feature Flags, l'un des GPTs de The Wise Duck Dev, un outil pour le développement web, mobile et blockchain.",
+      "alt": "Logo de l'Assistant AI de Feature Flags, l'un des GPTs de The Wise Duck Dev, un outil pour le développement web, mobile, IA  et blockchain.",
       "path": "/productivity/feature-flags-assistant-ai",
       "openAi_link": "https://chat.openai.com/g/g-Tws8MEWD4-feature-flags-assistant-ai",
       "card_description": "Résoudre les problèmes complexes de développement de logiciels avec l'Assistant AI de Feature Flags.",
@@ -11121,7 +11121,7 @@
       "twitter_title": "Feature Flags Assistant AI | Les GPTs de The Wise Duck Dev",
       "twitter_description": "Augmentez votre productivité dans le développement de logiciels à l'aide de l'Assistant AI de Feature Flags.",
       "twitter_image": "/images/gpts/feature-flags-assistant-ai-gpt-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo de l'Assistant AI de Feature Flags, l'un des GPTs de The Wise Duck Dev, un outil pour le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de l'Assistant AI de Feature Flags, l'un des GPTs de The Wise Duck Dev, un outil pour le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #gpts, #FeatureFlagsAssistantAI, #softwaredevelopment, #webdevelopment, #mobiledevelopment, #blockchaindevelopment, #AI, #programmingassistant, #TheWiseDuckDevGPTs"
     },
     {
@@ -11130,7 +11130,7 @@
       "title": "VSC Wizard AI",
       "subtitle": "Révolutionnez votre programmation avec notre outil de conseils Visual Studio - VSC Wizard AI.",
       "image": "/images/gpts/vsc-wizard-ai-gpt-logo-wise-duck-dev.webp",
-      "alt": "Logo du VSC Wizard AI, un GPT développé par The Wise Duck Dev GPTs spécialisé dans le développement web, mobile et blockchain.",
+      "alt": "Logo du VSC Wizard AI, un GPT développé par The Wise Duck Dev GPTs spécialisé dans le développement web, mobile, IA  et blockchain.",
       "path": "/productivity/vsc-wizard-ai",
       "openAi_link": "https://chat.openai.com/g/g-ggnle8j6Z-vsc-wizard-ai",
       "card_description": "Guidance optimisée de Visual Studio Code pour augmenter l'efficacité de codage avec VSC Wizard AI.",
@@ -11151,7 +11151,7 @@
       "twitter_title": "VSC Wizard AI | The Wise Duck Dev GPTs",
       "twitter_description": "Améliorez l'efficacité et la compréhension du codage avec notre guide Visual Studio Code, VSC Wizard AI.",
       "twitter_image": "/images/gpts/vsc-wizard-ai-gpt-logo-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo du VSC Wizard AI, un GPT développé par The Wise Duck Dev GPTs spécialisé dans le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo du VSC Wizard AI, un GPT développé par The Wise Duck Dev GPTs spécialisé dans le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #VSCWizardAI, #VisualStudioGuide, #CodeGuidance, #codingtools, #developers, #codinghelp, #programming, #webdevelopment, #VSCode"
     },
     {
@@ -11280,7 +11280,7 @@
       "title": "K8s Lens Mastermind AI",
       "subtitle": "Maîtriser les pratiques de Kubernetes avec K8s Lens Mastermind AI",
       "image": "/images/gpts/k8s-lens-mastermind-ai-wise-duck-dev-gpts-logo.webp",
-      "alt": "Logo de K8s Lens Mastermind AI, un GPT notable dans la collection Wise Duck Dev GPTs pour le développement web, mobile et blockchain",
+      "alt": "Logo de K8s Lens Mastermind AI, un GPT notable dans la collection Wise Duck Dev GPTs pour le développement web, mobile, IA  et blockchain",
       "path": "/productivity/k8s-lens-mastermind-ai",
       "openAi_link": "https://chat.openai.com/g/g-iOvEUma8j-k8s-lens-mastermind-ai",
       "card_description": "Libérez le pouvoir de Kubernetes avec K8s Lens Mastermind AI",
@@ -11301,7 +11301,7 @@
       "twitter_title": "K8s Lens Mastermind AI | The Wise Duck Dev GPTs",
       "twitter_description": "Naviguez à travers Kubernetes avec facilité et construisez des expériences numériques sécurisées, universellement accessibles avec K8s Lens Mastermind AI.",
       "twitter_image": "/images/gpts/k8s-lens-mastermind-ai-wise-duck-dev-gpts-logo.webp",
-      "twitter_image_alt": "Logo de K8s Lens Mastermind AI, un GPT notable dans la collection Wise Duck Dev GPTs pour le développement web, mobile et blockchain",
+      "twitter_image_alt": "Logo de K8s Lens Mastermind AI, un GPT notable dans la collection Wise Duck Dev GPTs pour le développement web, mobile, IA  et blockchain",
       "hashtag": "#wiseduckdevgpts, #k8slens, #mastermindAI, #Kubernetes, #webdevelopment, #blockchain, #mobiledevelopment, #productivity, #gpts, #AItools "
     },
     {
@@ -11430,7 +11430,7 @@
       "title": "Solidity Scribe GPT",
       "subtitle": "Développez vos compétences en développement de blockchain avec notre Solidity Scribe GPT.",
       "image": "/images/gpts/solidity-scribe-gpt-wise-duck-dev-gpts-logo.webp",
-      "alt": "Logo de Solidity Scribe GPT, l'un des outils spécialisés pour les développeurs de la collection Wise Duck Dev GPT, utilisé pour le développement web, mobile et blockchain.",
+      "alt": "Logo de Solidity Scribe GPT, l'un des outils spécialisés pour les développeurs de la collection Wise Duck Dev GPT, utilisé pour le développement web, mobile, IA  et blockchain.",
       "path": "/blockchain/solidity-scribe-gpt",
       "openAi_link": "https://chat.openai.com/g/g-BZMLJuEHj-solidity-scribe-gpt",
       "card_description": "Libérez votre potentiel dans le développement de blockchain avec notre Solidity Scribe GPT.",
@@ -11451,7 +11451,7 @@
       "twitter_title": "Solidity Scribe GPT | The Wise Duck Dev GPTs",
       "twitter_description": "Solidity Scribe GPT, votre guide ultime pour vous frayer un chemin dans le développement de blockchain et la programmation Solidity.",
       "twitter_image": "/images/gpts/solidity-scribe-gpt-wise-duck-dev-gpts-logo.webp",
-      "twitter_image_alt": "Logo de Solidity Scribe GPT, l'un des outils spécialisés pour les développeurs de la collection Wise Duck Dev GPT, utilisé pour le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de Solidity Scribe GPT, l'un des outils spécialisés pour les développeurs de la collection Wise Duck Dev GPT, utilisé pour le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #gpts, #developmenttools, #SolidityScribeGPT, #blockchain, #ethereum, #Solidity, #dApps, #programming, #development"
     },
     {
@@ -11610,7 +11610,7 @@
       "title": "React Test Library GPT",
       "subtitle": "Un outil puissant pour les développeurs visant à optimiser l'utilisation de la bibliothèque de tests React.",
       "image": "/images/gpts/react-test-library-tactician-gpt-logo-wise-duck-dev-gpts.webp",
-      "alt": "Logo de React Test Library Tactician GPT, l'un des puissants GPT alimentés par IA de The Wise Duck Dev conçu pour aider au développement web, mobile et Blockchain.",
+      "alt": "Logo de React Test Library Tactician GPT, l'un des puissants GPT alimentés par IA de The Wise Duck Dev conçu pour aider au développement web, mobile, IA  et Blockchain.",
       "path": "/productivity/react-test-library-tactician-gpt",
       "openAi_link": "https://chat.openai.com/g/g-VuIGvMX6K-react-test-library-tactician-gpt",
       "card_description": "Une IA puissante pour la bibliothèque de tests React, simplifiant la création de tests optimisés et performant.",
@@ -11640,7 +11640,7 @@
       "title": "Google Colaboratory Oracle",
       "subtitle": "Maximiser la productivité avec le pinacle de l'IA pour Google Colaboratory.",
       "image": "/images/gpts/google-colaboratory-oracle-ai-gpt-wise-duck-dev.webp",
-      "alt": "Logo de l'outil GPTs de Wise Duck Dev, Google Colaboratory Oracle AI, un GPT spécialisé dans le développement efficace du web, mobile et blockchain.",
+      "alt": "Logo de l'outil GPTs de Wise Duck Dev, Google Colaboratory Oracle AI, un GPT spécialisé dans le développement efficace du web, mobile, IA  et blockchain.",
       "path": "/productivity/google-colaboratory-oracle-ai",
       "openAi_link": "https://chat.openai.com/g/g-CL03uVkFe-gooogle-colaboratory-oracle-ai",
       "card_description": "Révolutionnez le travail avec l'IA pour Google Colaboratory, votre guide vers un développement efficace.",
@@ -11670,7 +11670,7 @@
       "title": "Eslint Expert AI",
       "subtitle": "Une solution de linting JavaScript aidant les codeurs à fournir des codes propres et optimisés.",
       "image": "/images/gpts/eslint-expert-ai-gpt-wise-duck-dev-logo.webp",
-      "alt": "Logo de Eslint Expert AI, un GPT développé par The Wise Duck Dev GPTs, bénéfique pour les développeurs web, mobile et blockchain.",
+      "alt": "Logo de Eslint Expert AI, un GPT développé par The Wise Duck Dev GPTs, bénéfique pour les développeurs web, mobile, IA  et blockchain.",
       "path": "/productivity/eslint-expert-ai",
       "openAi_link": "https://chat.openai.com/g/g-nwe1fgv04-eslint-expert-ai",
       "card_description": "Clarifiez les complexités des pratiques de codage avec Eslint Expert AI.",
@@ -11700,7 +11700,7 @@
       "title": "EJS Mastermind AI",
       "subtitle": "Révolutionnez vos compétences en codage avec EJS Mastermind AI chez The Wise Duck Dev",
       "image": "/images/gpts/ejs-mastermind-ai-gpt-wise-duck-dev-logos.webp",
-      "alt": "Logo de EJS Mastermind AI, une partie intrinsèque des GPTs de The Wise Duck Dev, présentant une technologie GPT pionnière pour un développement web, mobile et blockchain révolutionnaire.",
+      "alt": "Logo de EJS Mastermind AI, une partie intrinsèque des GPTs de The Wise Duck Dev, présentant une technologie GPT pionnière pour un développement web, mobile, IA  et blockchain révolutionnaire.",
       "path": "/frontend/EJS-Mastermind-AI-Wise-Duck-Dev",
       "openAi_link": "https://chat.openai.com/g/g-Ck24gM4fW-ejs-mastermind-ai",
       "card_description": "EJS Mastermind AI : Technologie GPT pionnière pour un développement révolutionnaire du web.",
@@ -11790,7 +11790,7 @@
       "title": "Frontend Cybersecurity",
       "subtitle": "Fournissant une défense de première ligne suprême pour des applications web sécurisées.",
       "image": "/images/gpts/frontend-cybersecurity-goldeneye-gpt-wise-duck-dev-gpts.webp",
-      "alt": "Logo du Frontend CyberSecurity GoldenEye GPT, l'un des nombreux outils innovants de la série The Wise Duck Dev GPTs, aidant les développeurs dans le développement web, mobile et blockchain.",
+      "alt": "Logo du Frontend CyberSecurity GoldenEye GPT, l'un des nombreux outils innovants de la série The Wise Duck Dev GPTs, aidant les développeurs dans le développement web, mobile, IA  et blockchain.",
       "path": "/cybersecurity/frontend-cybersecurity-goldeneye",
       "openAi_link": "https://chat.openai.com/g/g-h9wEvq5QR-frontend-cybersecurity-goldeneye",
       "card_description": "Frontend Cybersecurity GoldenEye : Un outil complet pour des pratiques de cybersécurité optimales dans le front.",
@@ -11811,7 +11811,7 @@
       "twitter_title": "Frontend Cybersecurity GoldenEye | The Wise Duck Dev GPTs",
       "twitter_description": "Expérimentez une révolution dans le développement web avec Frontend Cybersecurity GoldenEye, l'outil complet axé sur la sécurité pour tous vos besoins frontend.",
       "twitter_image": "/images/gpts/frontend-cybersecurity-goldeneye-gpt-wise-duck-dev-gpts.webp",
-      "twitter_image_alt": "Logo du Frontend Cybersecurity GoldenEye GPT, l'un des nombreux outils innovants de la série The Wise Duck Dev GPTs, aidant les développeurs dans le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo du Frontend Cybersecurity GoldenEye GPT, l'un des nombreux outils innovants de la série The Wise Duck Dev GPTs, aidant les développeurs dans le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #gpts, #FrontendCybersecurity, #GoldenEye, #websecurity, #frontenddevelopment, #webapplications, #cyberdefense, #vulnerabilityanalysis, #securityarchitecture"
     },
     {
@@ -11850,7 +11850,7 @@
       "title": "API Secured Oracle AI",
       "subtitle": "Maîtrisez la cybersécurité des API avec des insights de sécurité optimisés par l'IA en temps réel.",
       "image": "/images/gpts/api-secured-oracle-ai-gpt-wise-duck-dev.webp",
-      "alt": "Logo de l'innovant API Secured Oracle AI GPT, faisant partie de la collection The Wise Duck Dev GPTs, aidant au développement avancé du web, mobile et blockchain.",
+      "alt": "Logo de l'innovant API Secured Oracle AI GPT, faisant partie de la collection The Wise Duck Dev GPTs, aidant au développement avancé du web, mobile, IA  et blockchain.",
       "path": "/cybersecurity/api-secured-oracle-ai",
       "openAi_link": "https://chat.openai.com/g/g-7aYhAnuAC-api-secured-oracle-ai",
       "card_description": "Sécurité assurée avec API Oracle AI : Votre partenaire en cybersécurité pour des API fiables et sécurisées.",
@@ -12000,7 +12000,7 @@
       "title": "LLM Wizard AI",
       "subtitle": "LLM Wizard AI alimente les conseils critiques avec des insights avancés du modèle linguistique.",
       "image": "/images/gpts/llm-wizard-ai-wise-duck-dev-gpts.webp",
-      "alt": "Logo de LLM Wizard AI, un GPT de pointe de la série The Wise Duck Dev GPTs, spécialisé dans le développement web, mobile et blockchain.",
+      "alt": "Logo de LLM Wizard AI, un GPT de pointe de la série The Wise Duck Dev GPTs, spécialisé dans le développement web, mobile, IA  et blockchain.",
       "path": "/automation/llm-wizard-ai",
       "openAi_link": "https://chat.openai.com/g/g-1YR92lc0u-llm-wizard-ai",
       "card_description": "Faites progresser vos projets avec les conseils tactiques de LLM Wizard AI pour les modèles linguistiques.",
@@ -12210,7 +12210,7 @@
       "title": "Drupal Ranger AI",
       "subtitle": "Découvrez tout le potentiel du CMS Drupal avec notre Drupal Ranger centré sur l'IA.",
       "image": "/images/gpts/drupal-ranger-ai-gpt-wise-duck-dev.webp",
-      "alt": "Image du Drupal Ranger AI, un GPT de The Wise Duck Dev GPTs pour le développement web, mobile et blockchain.",
+      "alt": "Image du Drupal Ranger AI, un GPT de The Wise Duck Dev GPTs pour le développement web, mobile, IA  et blockchain.",
       "path": "/cms/drupal-ranger-ai",
       "openAi_link": "https://chat.openai.com/g/g-I52zaHQH9-drupal-ranger-ai",
       "card_description": "Exploitez la puissance du CMS Drupal en utilisant Drupal Ranger AI, un outil innovant.",
@@ -12229,9 +12229,9 @@
       "og_url": "cms/drupal-ranger-ai",
       "og_image": "/images/gpts/drupal-ranger-ai-gpt-wise-duck-dev.webp",
       "twitter_title": "Drupal Ranger AI | The Wise Duck Dev GPTs",
-      "twitter_description": "Apprenez le CMS Drupal avec Drupal Ranger AI et améliorez vos compétences en développement web, mobile et blockchain.",
+      "twitter_description": "Apprenez le CMS Drupal avec Drupal Ranger AI et améliorez vos compétences en développement web, mobil, IA e et blockchain.",
       "twitter_image": "/images/gpts/drupal-ranger-ai-gpt-wise-duck-dev.webp",
-      "twitter_image_alt": "Image du Drupal Ranger AI, un GPT de The Wise Duck Dev GPTs pour le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Image du Drupal Ranger AI, un GPT de The Wise Duck Dev GPTs pour le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #DrupalRangerAI, #GPTs, #WebDevelopment, #MobileDevelopment, #BlockchainDevelopment, #DrupalCMS, #AI, #Tech, #TheWiseDuckDev"
     },
     {
@@ -12300,7 +12300,7 @@
       "title": "Ghost Expert AI",
       "subtitle": "Maîtrisez Ghost CMS en toute simplicité grâce à Ghost Expert AI, votre assistant personnel.",
       "image": "/images/gpts/ghost-expert-ai-gpt-wise-duck-dev-seo-optimized.webp",
-      "alt": "Logo de Ghost Expert AI, un GPT développé par The Wise Duck Dev GPTs visant à aider dans le développement web, mobile et blockchain.",
+      "alt": "Logo de Ghost Expert AI, un GPT développé par The Wise Duck Dev GPTs visant à aider dans le développement web, mobile, IA  et blockchain.",
       "path": "/cms/ghost-expert-ai",
       "openAi_link": "https://chat.openai.com/g/g-A6pVTVfU1-ghost-expert-ai",
       "card_description": "Ghost Expert AI : Votre guide pour maîtriser Ghost CMS. Un précieux allié pour tous niveaux.",
@@ -12321,7 +12321,7 @@
       "twitter_title": "Ghost Expert AI | The Wise Duck Dev GPTs",
       "twitter_description": "Apprenez, explorez et maîtrisez la technologie Ghost CMS avec Ghost Expert AI de The Wise Duck Dev GPTs.",
       "twitter_image": "/images/gpts/ghost-expert-ai-gpt-wise-duck-dev-seo-optimized.webp",
-      "twitter_image_alt": "Logo de Ghost Expert AI, un GPT développé par The Wise Duck Dev GPTs visant à aider dans le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de Ghost Expert AI, un GPT développé par The Wise Duck Dev GPTs visant à aider dans le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #ghostexpertai, #gpt3, #webdevelopment, #ghostcms, #cms, #webdev, #ai, #blockchaindevelopment, #mobiledevelopment"
     },
     {
@@ -12394,7 +12394,7 @@
       "path": "/cms/sanity-brain-ai",
       "openAi_link": "https://chat.openai.com/g/g-p2eTPdDnu-sanity-brain-ai",
       "card_description": "Ressource IA experte pour les développeurs web, mobiles et blockchain déployant Sanity CMS.",
-      "page_description": "Sanity Brain AI est conçu pour fournir des conseils détaillés et une expertise inégalée pour les développeurs travaillant avec Sanity CMS. Sa mission est de simplifier les principes complexes associés à Sanity CMS et de transformer les expériences des développeurs en offrant une expertise complète, prête à l'emploi pour les scénarios de développement web, mobile et blockchain. Ce GPT ressource simplifie votre parcours avec Sanity CMS, aide à rationaliser vos processus de développement.",
+      "page_description": "Sanity Brain AI est conçu pour fournir des conseils détaillés et une expertise inégalée pour les développeurs travaillant avec Sanity CMS. Sa mission est de simplifier les principes complexes associés à Sanity CMS et de transformer les expériences des développeurs en offrant une expertise complète, prête à l'emploi pour les scénarios de développement web, mobile, IA  et blockchain. Ce GPT ressource simplifie votre parcours avec Sanity CMS, aide à rationaliser vos processus de développement.",
       "modes": {
         "/general": "Plongez dans la granularité de Sanity CMS, en absorbant la sagesse sur des sujets variés.",
         "/solution": "Partagez votre vision, les obstacles ou les ambitions et recevez des stratégies parfaitement alignées.",
@@ -12450,7 +12450,7 @@
       "title": "Markdown Master AI",
       "subtitle": "Guide de programmation approfondi - Amplifiez votre développement technique sans faille.",
       "image": "/images/gpts/markdown-master-ai-gpt-wise-duck-dev-gpts.webp",
-      "alt": "Logo de Markdown Master AI, un GPT en vue de la collection Wise Duck Dev GPTs, spécialisé dans les solutions de développement web, mobile et blockchain.",
+      "alt": "Logo de Markdown Master AI, un GPT en vue de la collection Wise Duck Dev GPTs, spécialisé dans les solutions de développement web, mobile, IA  et blockchain.",
       "path": "/productivity/markdown-master-ai",
       "openAi_link": "https://chat.openai.com/g/g-zDPyhpmo5-markdown-master-ai",
       "card_description": "Révolutionnez votre compréhension de Markdown avec Markdown Master AI.",
@@ -12471,7 +12471,7 @@
       "twitter_title": "Markdown Master AI | The Wise Duck Dev GPTs",
       "twitter_description": "Entrez dans le domaine de la maîtrise de Markdown avec notre GPT spécialisé. Regardez vos projets de développement prendre un tournant remarquable.",
       "twitter_image": "/images/gpts/markdown-master-ai-gpt-wise-duck-dev-gpts.webp",
-      "twitter_image_alt": "Logo de Markdown Master AI, un GPT en vue de la collection Wise Duck Dev GPTs, spécialisé dans les solutions de développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de Markdown Master AI, un GPT en vue de la collection Wise Duck Dev GPTs, spécialisé dans les solutions de développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts #markdownmasterai #GPTs #markdown #AI #webdevelopment #blockchain #devtools #codingtutorial #programming"
     },
     {
@@ -12484,7 +12484,7 @@
       "path": "/productivity/enterprise-innovator-gpt",
       "openAi_link": "https://chat.openai.com/g/g-it9ANvRgu-enterprise-innovator-gpt",
       "card_description": "Révolutionnez la génération d'idées d'affaires avec l'Enterprise Innovator GPT.",
-      "page_description": "L'Enterprise Innovator GPT est votre partenaire stratégique pour se lancer dans des idées d'affaires rentables. Il s'adresse particulièrement aux secteurs du développement Web, mobile et blockchain, et vous mène à des opportunités de marché inexploitées tout en optimisant votre parcours entrepreneurial. Sa méthodologie interactive comprend la sélection du mode, l'assistance spécifique au mode, la résolution de problèmes en collaboration et l'amélioration continue en fonction de vos commentaires.",
+      "page_description": "L'Enterprise Innovator GPT est votre partenaire stratégique pour se lancer dans des idées d'affaires rentables. Il s'adresse particulièrement aux secteurs du développement Web, mobile, IA  et blockchain, et vous mène à des opportunités de marché inexploitées tout en optimisant votre parcours entrepreneurial. Sa méthodologie interactive comprend la sélection du mode, l'assistance spécifique au mode, la résolution de problèmes en collaboration et l'amélioration continue en fonction de vos commentaires.",
       "modes": {
         "/brainstorm": "Générer des idées d'affaires innovantes dans l'industrie technologique pour des projets réussis.",
         "/validate": "Évaluer la viabilité de vos idées en fonction des tendances du marché et des analyses.",
@@ -12570,7 +12570,7 @@
       "title": "Plugin WP Creator",
       "subtitle": "Maîtrisez le développement de plugins WordPress avec Plugin WP Creator GPT.",
       "image": "/images/gpts/plugin-wp-creator-gpt-wise-duck-dev-gpts-logo.webp",
-      "alt": "Logo de Plugin WP Creator GPT, l'un des Wise Duck Dev GPTs dédiés à aider les développeurs en développement web, mobile et blockchain.",
+      "alt": "Logo de Plugin WP Creator GPT, l'un des Wise Duck Dev GPTs dédiés à aider les développeurs en développement web, mobile, IA  et blockchain.",
       "path": "/cms/Plugin-WP-Creator",
       "openAi_link": "https://chat.openai.com/g/g-66HtRB697-plugin-wp-creator",
       "card_description": "Plugin WP Creator GPT - votre guide vers une simplification du développement de plugins WordPress.",
@@ -12591,7 +12591,7 @@
       "twitter_title": "Plugin WP Creator | Les  Wise Duck Dev GPTs",
       "twitter_description": "Maîtrisez le développement de plugins WordPress avec Plugin WP Creator GPT. Expérimentez la simplicité dans le développement !",
       "twitter_image": "/images/gpts/plugin-wp-creator-gpt-wise-duck-dev-gpts-logo.webp",
-      "twitter_image_alt": "Logo de Plugin WP Creator GPT, l'un des Wise Duck Dev GPTs dédiés à aider les développeurs en développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de Plugin WP Creator GPT, l'un des Wise Duck Dev GPTs dédiés à aider les développeurs en développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #gpts, #PluginWPCreator, #WordPress, #JavaScript, #PHP, #WordPressCore, #LearnWordPress, #deboguerWordPress, #solutionWordPress"
     },
     {
@@ -12600,7 +12600,7 @@
       "title": "Perl Mentor AI",
       "subtitle": "Améliorez vos compétences en programmation Perl avec notre rigoureux Perl Mentor AI GPT.",
       "image": "/images/gpts/perl-mentor-ai-wise-duck-dev-gpts-logo.webp",
-      "alt": "Logo de Perl Mentor AI, l'un des GPT phares développés par The Wise Duck Dev pour un développement web, mobile et blockchain efficace.",
+      "alt": "Logo de Perl Mentor AI, l'un des GPT phares développés par The Wise Duck Dev pour un développement web, mobile, IA  et blockchain efficace.",
       "path": "/backend/perl-mentor-ai",
       "openAi_link": "https://chat.openai.com/g/g-0SmUlKMgY-perl-mentor-ai",
       "card_description": "Libérez votre potentiel de programmation Perl avec l'aide du GPT Perl Mentor AI.",
@@ -12621,7 +12621,7 @@
       "twitter_title": "Perl Mentor AI | The Wise Duck Dev GPTs",
       "twitter_description": "Boostez vos projets de programmation Perl de l'ordinaire à l'extraordinaire avec Perl Mentor AI.",
       "twitter_image": "/images/gpts/perl-mentor-ai-wise-duck-dev-gpts-logo.webp",
-      "twitter_image_alt": "Logo de Perl Mentor AI, l'un des GPT phares développés par The Wise Duck Dev pour un développement web, mobile et blockchain efficace.",
+      "twitter_image_alt": "Logo de Perl Mentor AI, l'un des GPT phares développés par The Wise Duck Dev pour un développement web, mobile, IA  et blockchain efficace.",
       "hashtag": "#wiseduckdevgpts, #gpts, #PerlMentorAI, #PerlProgramming, #OpenAI, #ProgrammingGuide, #BackendProgramming, #WiseDuckDevGPTs, #AI, #Perl"
     },
     {
@@ -12720,7 +12720,7 @@
       "title": "Fortran Copilot",
       "subtitle": "Fortran Copilot: Votre guide ultime pour maîtriser la programmation Fortran",
       "image": "/images/gpts/fortran-copilot-gpt-wise-duck-dev-gpts.webp",
-      "alt": "Logo de Fortran Copilot GPT - l'un des GPTs de haute qualité de Wise Duck Dev pour la communauté de développement web, mobile et blockchain",
+      "alt": "Logo de Fortran Copilot GPT - l'un des GPTs de haute qualité de Wise Duck Dev pour la communauté de développement web, mobile, IA  et blockchain",
       "path": "/programming/fortran-copilot",
       "openAi_link": "https://chat.openai.com/g/g-9CB8x4bWx-fortran-copilot",
       "card_description": "Guidance complète sur la programmation Fortran alimentée par le projet Fortran Copilot GPT",
@@ -12840,7 +12840,7 @@
       "title": "Clojure Oracle AI",
       "subtitle": "Le guide ultime pour la programmation Clojure - Clojure Oracle AI.",
       "image": "/images/gpts/clojure-oracle-ai-gpt-wise-duck-dev-webp.webp",
-      "alt": "Logo de Clojure Oracle AI, un GPT de pointe de The Wise Duck Dev GPTs – aidant le développement web, mobile et blockchain.",
+      "alt": "Logo de Clojure Oracle AI, un GPT de pointe de The Wise Duck Dev GPTs – aidant le développement web, mobile, IA  et blockchain.",
       "path": "/programming/clojure-oracle-ai",
       "openAi_link": "https://chat.openai.com/g/g-7q9OHl6gB-clojure-oracle-ai",
       "card_description": "Exploitez la puissance du langage Clojure avec Clojure Oracle AI !",
@@ -12861,7 +12861,7 @@
       "twitter_title": "Clojure Oracle AI | The Wise Duck Dev GPTs",
       "twitter_description": "Commencez votre voyage de codage Clojure avec Clojure Oracle AI – le GPT ultime pour les développeurs !",
       "twitter_image": "/images/gpts/clojure-oracle-ai-gpt-wise-duck-dev-webp.webp",
-      "twitter_image_alt": "Logo de Clojure Oracle AI, un GPT de pointe de The Wise Duck Dev GPTs – aidant le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de Clojure Oracle AI, un GPT de pointe de The Wise Duck Dev GPTs – aidant le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #clojureoracleai, #gpts, #programming, #clojure, #ai, #oracle, #development, #guide, #debugging"
     },
     {
@@ -12930,7 +12930,7 @@
       "title": "Erlang Prophet AI",
       "subtitle": "Assistance de pointe Erlang augmentant la compétence à travers l'écosystème.",
       "image": "/images/gpts/erland-prophet-ai-wise-duck-dev-gpt-logo.webp",
-      "alt": "Logo d'Erland Prophet AI, l'un des Wise Duck Dev GPTs spécialisés dans le développement web, mobile et blockchain avancé.",
+      "alt": "Logo d'Erland Prophet AI, l'un des Wise Duck Dev GPTs spécialisés dans le développement web, mobile, IA  et blockchain avancé.",
       "path": "/programming/erland-prophet-ai-wise-duck-dev-gpt-logo.webp",
       "openAi_link": "https://chat.openai.com/g/g-I6badgVBI-erlang-prophet-ai",
       "card_description": "Libérez le potentiel d'Erlang avec notre compagnon tout-en-un - Erlang Prophet AI.",
@@ -12951,7 +12951,7 @@
       "twitter_title": "Erlang Prophet AI | Les Wise Duck Dev GPTs",
       "twitter_description": "Dévoilant Erlang Prophet AI, votre compagnon définitif dans le domaine de la programmation Erlang.",
       "twitter_image": "/images/gpt/erland-prophet-ai-wise-duck-dev-gpt-logo.webp",
-      "twitter_image_alt": "Logo d'Erland Prophet AI, l'un des Wise Duck Dev GPTs spécialisés dans le développement web, mobile et blockchain avancé.",
+      "twitter_image_alt": "Logo d'Erland Prophet AI, l'un des Wise Duck Dev GPTs spécialisés dans le développement web, mobile, IA  et blockchain avancé.",
       "hashtag": "#wiseduckdevgpts, #gpts, #programming, #erlandprophetai, #webdevelopment, #blockchain, #ai, #guidance, #professional, #debug"
     },
     {
@@ -13080,7 +13080,7 @@
       "title": "Assembly Avenger AI",
       "subtitle": "Révolutionner l'apprentissage et la résolution de problèmes en langage Assembly",
       "image": "/images/gpts/assembly-avenger-ai-logo-wise-duck-dev-gpts.webp",
-      "alt": "Logo d'Assembly Avenger AI, un GPT de The Wise Duck Dev GPTs utilisé pour le développement avancé web, mobile et blockchain.",
+      "alt": "Logo d'Assembly Avenger AI, un GPT de The Wise Duck Dev GPTs utilisé pour le développement avancé web, mobile, IA  et blockchain.",
       "path": "/programming/assembly-avenger-ai",
       "openAi_link": "https://chat.openai.com/g/g-N3CjLthK2-assembly-avenger-ai",
       "card_description": "Maîtrisez le langage Assembly avec Assembly Avenger AI, votre partenaire de programmation ultime.",
@@ -13101,7 +13101,7 @@
       "twitter_title": "Assembly Avenger AI | The Wise Duck Dev GPTs",
       "twitter_description": "Découvrez la puissance de la programmation en langage Assembly basée sur l'IA avec Assembly Avenger AI - votre guide ultime pour maîtriser l'Assembly.",
       "twitter_image": "/images/gpts/assembly-avenger-ai-logo-wise-duck-dev-gpts.webp",
-      "twitter_image_alt": "Logo d'Assembly Avenger AI, un GPT de The Wise Duck Dev GPTs utilisé pour le développement avancé web, mobile et blockchain.",
+      "twitter_image_alt": "Logo d'Assembly Avenger AI, un GPT de The Wise Duck Dev GPTs utilisé pour le développement avancé web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #AssemblyAvengerAI, #ProgrammingAI, #AssemblyLanguage, #CodingGuidance, #AIForProgramming, #LearningAssembly, #CodeDebugging, #AIInEducation, #WiseDuck"
     },
     {
@@ -13170,7 +13170,7 @@
       "title": "Prolog Ninja AI",
       "subtitle": "IA sur mesure pour maîtriser la programmation en langage Prolog. Des conseils éclairants pour les développeurs.",
       "image": "/images/gpts/prolog-ninja-ai-gpt-wise-duck-dev-gpts-logo.webp",
-      "alt": "Logo de Prolog Ninja AI, l'un des GPTs de Wise Duck Dev spécialisés dans le développement web, mobile et blockchain",
+      "alt": "Logo de Prolog Ninja AI, l'un des GPTs de Wise Duck Dev spécialisés dans le développement web, mobile, IA  et blockchain",
       "path": "/programming/prolog-ninja-ai",
       "openAi_link": "https://chat.openai.com/g/g-wzMrRyUSK-prolog-ninja-ai",
       "card_description": "Prolog Ninja AI - Votre guide IA pour maîtriser la programmation en langage Prolog.",
@@ -13191,7 +13191,7 @@
       "twitter_title": "Prolog Ninja AI | Les GPTs de Wise Duck Dev",
       "twitter_description": "Prolog Ninja AI - Votre guide IA pour exceller dans la programmation Prolog.",
       "twitter_image": "/images/gpts/prolog-ninja-ai-gpt-wise-duck-dev-gpts-logo.webp",
-      "twitter_image_alt": "Logo de Prolog Ninja AI, l'un des GPTs de Wise Duck Dev spécialisés dans le développement web, mobile et blockchain",
+      "twitter_image_alt": "Logo de Prolog Ninja AI, l'un des GPTs de Wise Duck Dev spécialisés dans le développement web, mobile, IA  et blockchain",
       "hashtag": "#wiseduckdevgpts, #gpts, #prolog, #programming, #ai, #ninja, #software, #artificialintelligence, #developers, #logicprogramming"
     },
     {
@@ -13230,7 +13230,7 @@
       "title": "Ada Expert AI",
       "subtitle": "Maîtrisez la programmation Ada avec Ada Expert AI. Améliorez vos projets et réalisez l'innovation",
       "image": "/images/gpts/ada-expert-ai-gpt-wise-duck-dev.webp",
-      "alt": "Logo de Ada Expert AI GPT, faisant partie de la série The Wise Duck Dev de GPT destinée au développement web, mobile et blockchain",
+      "alt": "Logo de Ada Expert AI GPT, faisant partie de la série The Wise Duck Dev de GPT destinée au développement web, mobile, IA  et blockchain",
       "path": "/programming/ada-expert-ai",
       "openAi_link": "https://chat.openai.com/g/g-6y4noYAdU-ada-expert-ai",
       "card_description": "Outil révolutionnaire pour la maîtrise de la programmation Ada. Un allié inégalé dans votre parcours Ada",
@@ -13251,7 +13251,7 @@
       "twitter_title": "Ada Expert AI | The Wise Duck Dev GPTs",
       "twitter_description": "Renforcez vos projets Ada avec Ada Expert AI. Décodez les principes Ada complexes",
       "twitter_image": "/images/gpts/ada-expert-ai-gpt-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo de Ada Expert AI GPT, faisant partie de The Wise Duck Dev série de GPT destinée au développement web, mobile et blockchain",
+      "twitter_image_alt": "Logo de Ada Expert AI GPT, faisant partie de The Wise Duck Dev série de GPT destinée au développement web, mobile, IA  et blockchain",
       "hashtag": "#wiseduckdevgpts, #gpts, #adaexpertai, #adaprogramming, #devtools, #ai, #programming, #development, #webdevelopment, #mobiledevelopment, #blockchaindevelopment"
     },
     {
@@ -13260,7 +13260,7 @@
       "title": "COBOL Copilot",
       "subtitle": "Découvrez la maîtrise de la programmation COBOL avec notre outil intelligent, COBOL Copilot.",
       "image": "/images/gpts/cobol-copilot-wise-duck-dev-gpts.webp",
-      "alt": "Logo de COBOL Copilot, l'un des GPTs proposés par The Wise Duck Dev pour améliorer le développement web, mobile et blockchain.",
+      "alt": "Logo de COBOL Copilot, l'un des GPTs proposés par The Wise Duck Dev pour améliorer le développement web, mobile, IA  et blockchain.",
       "path": "/programming/cobol-copilot",
       "openAi_link": "https://chat.openai.com/g/g-LTBX65n6F-cobol-copilot",
       "card_description": "Découvrez les secrets de la programmation COBOL avec COBOL Copilot.",
@@ -13290,7 +13290,7 @@
       "title": "VBA Scribe GPT",
       "subtitle": "Améliorez vos compétences en programmation VBA avec notre GPT interactif, axé sur la résolution de problèmes!",
       "image": "/images/gpts/vba-scribe-gpt-logo-wise-duck-dev-gpts.webp",
-      "alt": "Logo de VBA Scribe GPT, l'un des GPTs spécialisés par The Wise Duck Dev pour le développement web, mobile et blockchain.",
+      "alt": "Logo de VBA Scribe GPT, l'un des GPTs spécialisés par The Wise Duck Dev pour le développement web, mobile, IA  et blockchain.",
       "path": "/programming/vba-scribe-gpt",
       "openAi_link": "https://chat.openai.com/g/g-H3eQa8t6X-vbaa-scribe-gpt",
       "card_description": "Expérimentez l'assistance VBA ultime avec notre VBA Scribe GPT, fournissant des astuces de pointe et perspicaces.",
@@ -13311,7 +13311,7 @@
       "twitter_title": "VBA Scribe GPT | Les GPTs de Wise Duck Dev",
       "twitter_description": "Découvrez la puissance du VBA Scribe GPT, votre guide pour comprendre et appliquer efficacement les principes de VBA.",
       "twitter_image": "/images/gpts/vba-scribe-gpt-logo-wise-duck-dev-gpts.webp",
-      "twitter_image_alt": "Logo de VBA Scribe GPT, l'un des GPTs spécialisés offerts par The Wise Duck Dev pour le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de VBA Scribe GPT, l'un des GPTs spécialisés offerts par The Wise Duck Dev pour le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #VBA, #VBAProgramming, #VBAScribeGPT, #GPTs, #WebDevelopment, #TheWiseDuckDev, #Debugging, #VBASolutions, #AdvancedVBA"
     },
     {
@@ -13320,7 +13320,7 @@
       "title": "VHDL Pathfinder AI",
       "subtitle": "Découvrez l'excellence en programmation VHDL avec VHDL Pathfinder AI",
       "image": "/images/gpts/vhdl-pathfinder-ai-wise-duck-dev-gpt-logo.webp",
-      "alt": "Logo de VHDL Pathfinder AI, l'un des GPTs Wise Duck Dev spécialisés dans le développement web, mobile et blockchain.",
+      "alt": "Logo de VHDL Pathfinder AI, l'un des GPTs Wise Duck Dev spécialisés dans le développement web, mobile, IA  et blockchain.",
       "path": "/programming/Pathfinder-AI-VHDL-programming",
       "openAi_link": "https://chat.openai.com/g/g-xe0RnF6uo-vhdl-pathfinder-ai",
       "card_description": "VHDL Pathfinder AI : Votre ressource essentielle pour réussir en programmation VHDL.",
@@ -13341,7 +13341,7 @@
       "twitter_title": "VHDL Pathfinder AI | Le Wise Duck Dev GPTs",
       "twitter_description": "Découvrez l'excellence en programmation VHDL avec VHDL Pathfinder AI, votre mentor virtuel.",
       "twitter_image": "/images/gpts/vhdl-pathfinder-ai-wise-duck-dev-gpt-logo.webp",
-      "twitter_image_alt": "Logo de VHDL Pathfinder AI, l'un des GPTs Wise Duck Dev spécialisés dans le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de VHDL Pathfinder AI, l'un des GPTs Wise Duck Dev spécialisés dans le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #gpts, #VHDL, #PathfinderAI, #Programming, #Debugging, #VHDLProgramming, #HardwareDescriptions, #developers, #webdevelopment"
     },
     {
@@ -13350,7 +13350,7 @@
       "title": "DAO Pro GPT",
       "subtitle": "Libérez la puissance de la Blockchain avec l'outil ultime de développement DAO.",
       "image": "/images/gpts/dao-pro-gpt-logo-wise-duck-dev-tools.webp",
-      "alt": "Logo de DAO Pro GPT, un outil GPT puissant de la collection Wise Duck Dev GPTs pour le développement web, mobile et blockchain.",
+      "alt": "Logo de DAO Pro GPT, un outil GPT puissant de la collection Wise Duck Dev GPTs pour le développement web, mobile, IA  et blockchain.",
       "path": "/productivity/dao-pro-gpt",
       "openAi_link": "https://chat.openai.com/g/g-4YjgcYFLT-dao-pro-gpt",
       "card_description": "Découvrez le potentiel du développement DAO avec l'outil expert de premier plan - DAO Pro GPT.",
@@ -13470,7 +13470,7 @@
       "title": "Cython Cypher AI",
       "subtitle": "Mentorat en programmation à un autre niveau - découvrez Cython Cypher AI pour les développeurs web et mobiles.",
       "image": "/images/gpts/cython-cypher-ai-gpt-wise-duck-dev.webp",
-      "alt": "Logo de Cython Cypher AI, un GPT créé par The Wise Duck Dev GPTs pour un soutien avancé en développement web, mobile et blockchain.",
+      "alt": "Logo de Cython Cypher AI, un GPT créé par The Wise Duck Dev GPTs pour un soutien avancé en développement web, mobile, IA  et blockchain.",
       "path": "/programming/cython-cypher-ai",
       "openAi_link": "https://chat.openai.com/g/g-DIJczTUcF-cython-cypher-ai",
       "card_description": "Démêlez la complexité de Python et des extensions C avec Cython Cypher AI, votre guide web et mobile.",
@@ -13491,7 +13491,7 @@
       "twitter_title": "Cython Cypher AI | The Wise Duck Dev GPTs",
       "twitter_description": "Montez dans votre carrière de programmation avec Cython Cypher AI, votre mentor en extensions Python et C.",
       "twitter_image": "/images/gpts/cython-cypher-ai-gpt-wise-duck-dev.webp",
-      "twitter_image_alt": "Logo de Cython Cypher AI, un AI GPT aidant le développement web, mobile et blockchain.",
+      "twitter_image_alt": "Logo de Cython Cypher AI, un AI GPT aidant le développement web, mobile, IA  et blockchain.",
       "hashtag": "#wiseduckdevgpts, #cythoncypheraigpt, #cythonprogramming, #pythonextensions, #programmersguide, #aicodinghelp, #webdevsupport, #mobiledevsupport, #blockchaindevsupport, #codingai"
     },
     {
