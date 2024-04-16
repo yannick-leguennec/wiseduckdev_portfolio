@@ -1,3 +1,5 @@
 User-agent: *
 Disallow: /app/api/
+Disallow: /gpts/
 Sitemap: https://wiseduckdev.vercel.app/sitemap.xml
+
