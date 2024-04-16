@@ -1,7 +1,7 @@
 @import "./variables.scss";
 
 @mixin button-style {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   color: white;
   background-color: $button-color;
@@ -10,7 +10,7 @@
   padding: 0.5rem 2rem;
 
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 0.5rem 1rem;
   }
 
@@ -23,7 +23,7 @@
 }
 
 @mixin button-style-reverted {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   color: $button-color;
   background-color: rgb(252, 250, 243);
@@ -33,7 +33,7 @@
   padding: 0.5rem 2rem;
 
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 0.5rem 1rem;
   }
 

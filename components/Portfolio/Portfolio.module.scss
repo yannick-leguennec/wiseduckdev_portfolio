@@ -12,6 +12,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 1024px) {
+    min-height: fit-content;
+    padding: 2rem;
+  }
 }
 
 // PORFOLIO SECTION MAIN TITLE
@@ -23,7 +28,6 @@
 
   @media (max-width: 1024px) {
     display: block;
-    text-align: center;
     margin-left: 0;
   }
 
