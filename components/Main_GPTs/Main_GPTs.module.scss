@@ -8,7 +8,6 @@
   position: relative;
   margin-top: 6vh;
   min-height: 94vh;
-  max-height: 94vh;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -21,6 +20,14 @@
     padding-top: 4rem;
     max-height: 100%;
   }
+
+  @media (max-width: 768px) {
+    padding-top: 2rem;
+  }
+
+  @media (max-width: 540px) {
+    padding-top: 1rem;
+  }
 }
 
 // Image Container
@@ -29,46 +36,72 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
-  width: 65%;
+  width: 40%;
 
   @media (max-width: 1024px) {
-    position: relative;
     width: 100%;
     margin-top: 4rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 540px) {
+    margin-top: 1rem;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+
+  @media (max-width: 1024px) {
+    width: 50%;
+  }
+
+  @media (max-width: 768px) {
+    width: 60%;
   }
 }
 
 // Text Container
 .textContainer {
-  position: absolute;
-  width: 47%;
-  right: 45%;
-  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 60%;
+  padding: 3rem;
 
   @media (max-width: 1024px) {
-    position: relative;
     width: 80%;
-    margin-top: 0;
-    right: 0%;
-    text-align: center;
+    align-items: center;
   }
 
-  @media (max-width: 768px) {
-    width: 87%;
+  @media (max-width: 540px) {
+    width: 100%;
+    padding: 2rem;
   }
 }
 
 // Title
 .title {
-  font-size: 4rem;
+  font-size: 3rem;
 
   @media (max-width: 1024px) {
     font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
 
   @media (max-width: 768px) {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 1.5rem;
   }
 }
 
@@ -83,11 +116,15 @@
   @media (max-width: 768px) {
     font-size: 1.9rem;
   }
+
+  @media (max-width: 540px) {
+    font-size: 1.6rem;
+  }
 }
 
 // Subtitle
 .subtitle {
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
 
   @media (max-width: 1024px) {
@@ -96,6 +133,11 @@
 
   @media (max-width: 768px) {
     font-size: 1.2rem;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 1rem;
+    text-align: center;
   }
 }
 
@@ -106,6 +148,10 @@
 
   @media (max-width: 1024px) {
     font-size: 1rem;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 0.9rem;
   }
 }
 
