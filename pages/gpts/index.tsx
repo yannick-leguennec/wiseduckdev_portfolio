@@ -99,7 +99,7 @@ export default function GPTS() {
         <meta property="og:url" content={`https://${siteUrl}/gpts`} />
         <meta
           property="og:image"
-          content={`https://${siteUrl}/images/index_gpts/the-wise-duck-dev-gpt-expert-men-in-black-style-profile.webp`}
+          content={`https://${siteUrl}/images/index_gpts/the-wise-duck-dev-gpt-expert-men-in-black-style-facebook.webp`}
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@wiseduckdev" />
@@ -114,7 +114,7 @@ export default function GPTS() {
         />
         <meta
           name="twitter:image"
-          content={`https://${siteUrl}/images/index_gpts/the-wise-duck-dev-gpt-expert-men-in-black-style-profile.webp`}
+          content={`https://${siteUrl}/images/index_gpts/the-wise-duck-dev-gpt-expert-men-in-black-style-twitter.webp`}
         />
         <meta
           name="twitter:image:alt"
