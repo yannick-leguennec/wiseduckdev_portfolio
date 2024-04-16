@@ -25,8 +25,7 @@ import {
 } from "next-share";
 import { EmailShareButton, EmailIcon } from "next-share";
 import { TelegramShareButton, TelegramIcon } from "next-share";
-import { BsCopy } from "react-icons/bs";
-import classes from "../../styles/slug.module.scss";
+import classes from "../../styles/gptsSlug.module.scss";
 
 // Define the expected structure for the initial data uploaded
 interface initialPageData {
