@@ -21,8 +21,6 @@ function Portfolio() {
     loadProjects();
   }, [activeLanguage]);
 
-  console.log(projects);
-
   const handleImageClick = (project) => {
     setSelectedProject(project);
     // Prevent scrolling on the background

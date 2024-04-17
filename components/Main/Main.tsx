@@ -2,8 +2,11 @@ import { useState, useEffect } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import classes from "./Main.module.scss";
 import Image from "next/image";
-import desktopImage from "../../public/images/index/professional-wise-duck-developer-coding-laptop-office.webp";
-import mobileImage from "../../public/images/index/professional-wise-duck-developer-mobile-coding-office.webp.webp";
+import mainPictureFR from "../../public/images/index/professional-wise-duck-developer-coding-laptop-office-FR.webp";
+import mainPictureEN from "../../public/images/index/professional-wise-duck-developer-coding-laptop-office-EN.webp";
+import mainMobilePictureFR from "../../public/images/index/professional-wise-duck-developer-mobile-coding-office-FR.webp";
+import mainMobilePictureEN from "../../public/images/index/professional-wise-duck-developer-mobile-coding-office-EN.webp";
+
 import { TranslationsType } from "../../types/TranslationsType";
 
 function Main() {
@@ -61,16 +64,26 @@ function Main() {
       };
     }, []);
 
+    // Determine the correct image path based on screen orientation and active language
+    const getImagePath = (): string => {
+      if (isPortrait) {
+        return activeLanguage === "FR"
+          ? mainMobilePictureFR.src
+          : mainMobilePictureEN.src;
+      } else {
+        return activeLanguage === "FR" ? mainPictureFR.src : mainPictureEN.src;
+      }
+    };
+
     return (
-      <Image
-        src={isPortrait ? mobileImage : desktopImage}
+      <img
+        src={getImagePath()}
         alt={
           isPortrait
             ? translations.altMobilePicture[activeLanguage]
             : translations.altPicture[activeLanguage]
         }
         className={`${classes.image}`}
-        priority
       />
     );
   }
