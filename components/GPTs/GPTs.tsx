@@ -266,7 +266,7 @@ const GPTs = () => {
         </FacebookShareButton>
         <FacebookMessengerShareButton
           url={`https://${siteUrl}/gpts`}
-          appId={""}
+          appId={"837080061562973"}
         >
           <FacebookMessengerIcon size={32} round />
         </FacebookMessengerShareButton>

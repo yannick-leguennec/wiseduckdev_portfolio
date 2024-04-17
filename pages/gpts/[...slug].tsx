@@ -391,7 +391,7 @@ export default function GPTsSlug({ initialPageData }) {
                 </FacebookShareButton>
                 <FacebookMessengerShareButton
                   url={`https://${siteUrl}/gpts/${pageData.category.category}`}
-                  appId={""}
+                  appId={"837080061562973"}
                 >
                   <FacebookMessengerIcon size={32} round />
                 </FacebookMessengerShareButton>
@@ -533,7 +533,7 @@ export default function GPTsSlug({ initialPageData }) {
               </FacebookShareButton>
               <FacebookMessengerShareButton
                 url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
-                appId={""}
+                appId={"837080061562973"}
               >
                 <FacebookMessengerIcon size={32} round />
               </FacebookMessengerShareButton>
