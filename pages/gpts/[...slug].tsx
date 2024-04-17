@@ -15,7 +15,7 @@ import Header from "../../components/Header/Header";
 import GPTs_Card from "../../components/GPTs_Card/GPTs_Card";
 import GPTS_Card_Type from "../../types/GPTs_Card_Type";
 const Footer = dynamic(() => import("../../components/Footer/Footer"));
-import { FacebookShareButton, FacebookIcon } from "next-share";
+import { FaFacebook } from "react-icons/fa";
 import { TwitterShareButton, TwitterIcon } from "next-share";
 import { WhatsappShareButton, WhatsappIcon } from "next-share";
 import { LinkedinShareButton, LinkedinIcon } from "next-share";
@@ -150,6 +150,28 @@ export default function GPTsSlug({ initialPageData }) {
         {translation.button[activeLanguage]}
       </Link>
     );
+  };
+
+  // Allow sharing on Facebook
+  const shareOnFacebook = () => {
+    if (typeof FB !== "undefined") {
+      const currentUrl = window.location.href; // Gets the current page URL
+      FB.ui(
+        {
+          method: "share",
+          href: currentUrl, // Uses the current page URL
+        },
+        function (response) {
+          if (response && !response.error_message) {
+            // alert("Sharing succeeded");
+          } else {
+            // alert("Error while sharing");
+          }
+        }
+      );
+    } else {
+      // console.log("FB not loaded");
+    }
   };
 
   // Define the translations
@@ -382,16 +404,12 @@ export default function GPTsSlug({ initialPageData }) {
                 <h2 className={[classes.subtitleBold, classes.hide].join(" ")}>
                   {translation.share[activeLanguage]}
                 </h2>
-                <FacebookShareButton
-                  url={`https://${siteUrl}/gpts/${pageData.category.category}`}
-                  quote={pageData.category.meta_description_page}
-                  hashtag={pageData.category.hashtag}
-                >
-                  <FacebookIcon size={32} round />
-                </FacebookShareButton>
+                <button onClick={shareOnFacebook} style={{ cursor: "pointer" }}>
+                  <FaFacebook className={classes.socialButtonFacebook} />
+                </button>
                 <FacebookMessengerShareButton
                   url={`https://${siteUrl}/gpts/${pageData.category.category}`}
-                  appId={"837080061562973"}
+                  appId={"455393620257745"}
                 >
                   <FacebookMessengerIcon size={32} round />
                 </FacebookMessengerShareButton>
@@ -524,16 +542,12 @@ export default function GPTsSlug({ initialPageData }) {
               <h2 className={[classes.subtitleBold, classes.hide].join(" ")}>
                 {translation.share[activeLanguage]}
               </h2>
-              <FacebookShareButton
-                url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
-                quote={pageData.gpt.meta_description_page}
-                hashtag={pageData.gpt.hashtag}
-              >
-                <FacebookIcon size={32} round />
-              </FacebookShareButton>
+              <button onClick={shareOnFacebook} style={{ cursor: "pointer" }}>
+                <FaFacebook className={classes.socialButtonFacebook} />
+              </button>
               <FacebookMessengerShareButton
                 url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
-                appId={"837080061562973"}
+                appId={"455393620257745"}
               >
                 <FacebookMessengerIcon size={32} round />
               </FacebookMessengerShareButton>

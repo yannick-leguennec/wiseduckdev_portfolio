@@ -1,5 +1,6 @@
 "use client";
 
+import Script from "next/script";
 import { useEffect } from "react";
 import { AppProps } from "next/app";
 import { LanguageProvider } from "../context/LanguageContext";
@@ -9,16 +10,44 @@ import Router from "next/router";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
+  useEffect(() => {
+    // This check ensures TypeScript knows `FB` could be undefined initially
+    if (typeof FB !== "undefined") {
+      FB.init({
+        appId: "455393620257745",
+        autoLogAppEvents: true,
+        xfbml: true,
+        version: "v14.0",
+      });
+    }
+  }, []);
+
   return (
-    <LanguageProvider>
-      <LoaderProvider>
-        <ComponentWithLoader
-          Component={Component}
-          pageProps={pageProps}
-          router={router}
-        />
-      </LoaderProvider>
-    </LanguageProvider>
+    <>
+      <Script
+        src="https://connect.facebook.net/en_US/sdk.js"
+        strategy="afterInteractive"
+        onLoad={() => {
+          if (typeof FB !== "undefined") {
+            FB.init({
+              appId: "455393620257745",
+              autoLogAppEvents: true,
+              xfbml: true,
+              version: "v14.0",
+            });
+          }
+        }}
+      />
+      <LanguageProvider>
+        <LoaderProvider>
+          <ComponentWithLoader
+            Component={Component}
+            pageProps={pageProps}
+            router={router}
+          />
+        </LoaderProvider>
+      </LanguageProvider>
+    </>
   );
 }
 

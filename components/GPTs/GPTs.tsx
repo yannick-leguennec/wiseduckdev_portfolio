@@ -8,7 +8,7 @@ import GPTs_Card_Category from "../GPTs_Card_Category/GPTs_Card_Category";
 import GPTs_Card_Type from "../../types/GPTs_Card_Type";
 import GPTS_Card_Category_Type from "../../types/GPTs_Card_Category";
 import { CiSearch } from "react-icons/ci";
-import { FacebookShareButton, FacebookIcon } from "next-share";
+import { FaFacebook } from "react-icons/fa";
 import { TwitterShareButton, TwitterIcon } from "next-share";
 import { WhatsappShareButton, WhatsappIcon } from "next-share";
 import { LinkedinShareButton, LinkedinIcon } from "next-share";
@@ -107,6 +107,27 @@ const GPTs = () => {
   // Function to handle the search change
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
+  };
+
+  // Allow sharing on Facebook
+  const shareOnFacebook = () => {
+    if (typeof FB !== "undefined") {
+      FB.ui(
+        {
+          method: "share",
+          href: `https://${siteUrl}/gpts`, // Change this to the URL you want to share
+        },
+        function (response) {
+          if (response && !response.error_message) {
+            // alert("Sharing succeeded");
+          } else {
+            // alert("Error while sharing");
+          }
+        }
+      );
+    } else {
+      // console.log("FB not loaded");
+    }
   };
 
   //   Object to store the translations for the title and subtitle
@@ -257,16 +278,12 @@ const GPTs = () => {
             ))}
       </div>
       <div className={classes.socialButtonContainerGPTs}>
-        <FacebookShareButton
-          url={`https://${siteUrl}/gpts`}
-          quote={translations.facebookDescription[activeLanguage]}
-          hashtag={translations.hashtags[activeLanguage]}
-        >
-          <FacebookIcon size={32} round />
-        </FacebookShareButton>
+        <button onClick={shareOnFacebook} style={{ cursor: "pointer" }}>
+          <FaFacebook className={classes.socialButtonFacebook} />
+        </button>
         <FacebookMessengerShareButton
           url={`https://${siteUrl}/gpts`}
-          appId={"837080061562973"}
+          appId={"455393620257745"}
         >
           <FacebookMessengerIcon size={32} round />
         </FacebookMessengerShareButton>
