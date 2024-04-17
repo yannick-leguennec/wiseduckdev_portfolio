@@ -12,10 +12,7 @@ import { FaFacebook } from "react-icons/fa";
 import { TwitterShareButton, TwitterIcon } from "next-share";
 import { WhatsappShareButton, WhatsappIcon } from "next-share";
 import { LinkedinShareButton, LinkedinIcon } from "next-share";
-import {
-  FacebookMessengerShareButton,
-  FacebookMessengerIcon,
-} from "next-share";
+import { BsMessenger } from "react-icons/bs";
 import { EmailShareButton, EmailIcon } from "next-share";
 import { TelegramShareButton, TelegramIcon } from "next-share";
 import classes from "./GPTs.module.scss";
@@ -115,7 +112,28 @@ const GPTs = () => {
       FB.ui(
         {
           method: "share",
-          href: `https://${siteUrl}/gpts`, // Change this to the URL you want to share
+          href: `https://${siteUrl}/gpts`,
+        },
+        function (response) {
+          if (response && !response.error_message) {
+            // alert("Sharing succeeded");
+          } else {
+            // alert("Error while sharing");
+          }
+        }
+      );
+    } else {
+      // console.log("FB not loaded");
+    }
+  };
+
+  // Allow sharing on Messenger
+  const shareOnMessenger = () => {
+    if (typeof FB !== "undefined") {
+      FB.ui(
+        {
+          method: "send",
+          link: `https://${siteUrl}/gpts`,
         },
         function (response) {
           if (response && !response.error_message) {
@@ -281,12 +299,14 @@ const GPTs = () => {
         <button onClick={shareOnFacebook} style={{ cursor: "pointer" }}>
           <FaFacebook className={classes.socialButtonFacebook} />
         </button>
-        <FacebookMessengerShareButton
-          url={`https://${siteUrl}/gpts`}
-          appId={"455393620257745"}
+        <button
+          onClick={shareOnMessenger}
+          style={{
+            cursor: "pointer",
+          }}
         >
-          <FacebookMessengerIcon size={32} round />
-        </FacebookMessengerShareButton>
+          <BsMessenger className={classes.socialButtonMessenger} />
+        </button>
         <WhatsappShareButton
           url={`https://${siteUrl}/gpts`}
           title={translations.metaTitle[activeLanguage]}

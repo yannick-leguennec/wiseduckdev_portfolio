@@ -10,7 +10,8 @@ declare namespace FB {
   function ui(
     params: {
       method: string;
-      href: string;
+      href?: string;
+      link?: string;
     },
     callback: (response?: any) => void
   ): void;

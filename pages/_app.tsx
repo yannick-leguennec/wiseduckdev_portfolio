@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     // This check ensures TypeScript knows `FB` could be undefined initially
     if (typeof FB !== "undefined") {
       FB.init({
-        appId: "455393620257745",
+        appId: process.env.FACEBOOK_APP_ID || "",
         autoLogAppEvents: true,
         xfbml: true,
         version: "v14.0",
@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         onLoad={() => {
           if (typeof FB !== "undefined") {
             FB.init({
-              appId: "455393620257745",
+              appId: process.env.FACEBOOK_APP_ID || "",
               autoLogAppEvents: true,
               xfbml: true,
               version: "v14.0",

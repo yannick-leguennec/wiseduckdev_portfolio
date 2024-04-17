@@ -19,10 +19,7 @@ import { FaFacebook } from "react-icons/fa";
 import { TwitterShareButton, TwitterIcon } from "next-share";
 import { WhatsappShareButton, WhatsappIcon } from "next-share";
 import { LinkedinShareButton, LinkedinIcon } from "next-share";
-import {
-  FacebookMessengerShareButton,
-  FacebookMessengerIcon,
-} from "next-share";
+import { BsMessenger } from "react-icons/bs";
 import { EmailShareButton, EmailIcon } from "next-share";
 import { TelegramShareButton, TelegramIcon } from "next-share";
 import classes from "../../styles/gptsSlug.module.scss";
@@ -160,6 +157,28 @@ export default function GPTsSlug({ initialPageData }) {
         {
           method: "share",
           href: currentUrl, // Uses the current page URL
+        },
+        function (response) {
+          if (response && !response.error_message) {
+            // alert("Sharing succeeded");
+          } else {
+            // alert("Error while sharing");
+          }
+        }
+      );
+    } else {
+      // console.log("FB not loaded");
+    }
+  };
+
+  // Allow sharing on Messenger
+  const shareOnMessenger = () => {
+    if (typeof FB !== "undefined") {
+      const currentUrl = window.location.href; // Gets the current page URL
+      FB.ui(
+        {
+          method: "send",
+          link: currentUrl,
         },
         function (response) {
           if (response && !response.error_message) {
@@ -407,12 +426,14 @@ export default function GPTsSlug({ initialPageData }) {
                 <button onClick={shareOnFacebook} style={{ cursor: "pointer" }}>
                   <FaFacebook className={classes.socialButtonFacebook} />
                 </button>
-                <FacebookMessengerShareButton
-                  url={`https://${siteUrl}/gpts/${pageData.category.category}`}
-                  appId={"455393620257745"}
+                <button
+                  onClick={shareOnMessenger}
+                  style={{
+                    cursor: "pointer",
+                  }}
                 >
-                  <FacebookMessengerIcon size={32} round />
-                </FacebookMessengerShareButton>
+                  <BsMessenger className={classes.socialButtonMessenger} />
+                </button>
                 <WhatsappShareButton
                   url={`https://${siteUrl}/gpts/${pageData.category.category}`}
                   title={pageData.category.meta_title_page}
@@ -545,12 +566,14 @@ export default function GPTsSlug({ initialPageData }) {
               <button onClick={shareOnFacebook} style={{ cursor: "pointer" }}>
                 <FaFacebook className={classes.socialButtonFacebook} />
               </button>
-              <FacebookMessengerShareButton
-                url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
-                appId={"455393620257745"}
+              <button
+                onClick={shareOnMessenger}
+                style={{
+                  cursor: "pointer",
+                }}
               >
-                <FacebookMessengerIcon size={32} round />
-              </FacebookMessengerShareButton>
+                <BsMessenger className={classes.socialButtonMessenger} />
+              </button>
               <WhatsappShareButton
                 url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
                 title={pageData.gpt.meta_title_page}
