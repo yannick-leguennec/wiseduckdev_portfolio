@@ -8,6 +8,16 @@ import GPTs_Card_Category from "../GPTs_Card_Category/GPTs_Card_Category";
 import GPTs_Card_Type from "../../types/GPTs_Card_Type";
 import GPTS_Card_Category_Type from "../../types/GPTs_Card_Category";
 import { CiSearch } from "react-icons/ci";
+import { FacebookShareButton, FacebookIcon } from "next-share";
+import { TwitterShareButton, TwitterIcon } from "next-share";
+import { WhatsappShareButton, WhatsappIcon } from "next-share";
+import { LinkedinShareButton, LinkedinIcon } from "next-share";
+import {
+  FacebookMessengerShareButton,
+  FacebookMessengerIcon,
+} from "next-share";
+import { EmailShareButton, EmailIcon } from "next-share";
+import { TelegramShareButton, TelegramIcon } from "next-share";
 import classes from "./GPTs.module.scss";
 
 const GPTs = () => {
@@ -25,6 +35,8 @@ const GPTs = () => {
   const [searchExecuted, setSearchExecuted] = useState(false);
   // Determine the GPTs link based on the active language
   const portfolioLink = activeLanguage === "FR" ? `/fr` : `/`;
+  // Site URL
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
   // Fetch the GPTs categories data from the JSON file
   useEffect(() => {
@@ -139,6 +151,30 @@ const GPTs = () => {
       EN: "Search",
       FR: "Chercher",
     },
+    share: {
+      EN: "Share ",
+      FR: "Partager ",
+    },
+    facebookDescription: {
+      EN: "Explore the future of development with The Wise Duck Dev GPTs! 🚀 Dive into our extensive collection of over 200 custom GPTs tailored for web, mobile, AI, and blockchain technologies. Whether you're refining frontend skills, tackling backend complexities, or pioneering in blockchain and AI innovations, our platform is designed to boost your creativity, streamline workflows, and elevate productivity. Join a community dedicated to reshaping development practices and pushing the boundaries of technology. Start transforming your development journey today!",
+      FR: "Explorez l'avenir du développement avec les GPTs de The Wise Duck Dev! 🚀 Plongez dans notre vaste collection de plus de 200 GPTs personnalisés conçus pour les technologies web, mobile, IA et blockchain. Que vous perfectionniez vos compétences en frontend, que vous vous attaquiez à des complexités backend ou que vous soyez un pionnier dans les innovations en matière de blockchain et d'IA, notre plateforme est conçue pour stimuler votre créativité, rationaliser vos flux de travail et augmenter votre productivité. Rejoignez une communauté dédiée à remodeler les pratiques de développement et à repousser les limites de la technologie. Commencez à transformer votre parcours de développement dès aujourd'hui!",
+    },
+    twitterDescription: {
+      EN: "Dive into the future of development with The Wise Duck Dev GPTs! 🔥 Over 200 custom GPTs for web, mobile, AI, and blockchain await. Elevate your dev skills and push the boundaries of what's possible. Join our tech revolution! #Developer #Innovation",
+      FR: "Plongez dans l'avenir du développement avec les GPTs de The Wise Duck Dev! 🔥 Plus de 200 GPTs personnalisés pour le web, le mobile, l'IA et la blockchain vous attendent. Repoussez les limites de ce qui est possible",
+    },
+    mailMessage: {
+      EN: "Hi, I'm excited to invite you to explore The Wise Duck Dev GPTs, a groundbreaking platform designed exclusively for developers like you, who are ready to push the limits of technology. With over 200 custom GPTs covering essential areas from web and mobile development to AI and blockchain innovations, our platform is tailor-made to enhance your skills, increase productivity, and inspire creativity. Whether you're mastering database management, seeking design perfection, or integrating cutting-edge cybersecurity measures, The Wise Duck Dev GPTs is your ultimate partner in redefining development practices. Join us to shape the future of technology together!",
+      FR: "Bonjour, je suis ravi de vous inviter à explorer les GPTs de The Wise Duck Dev, une plateforme révolutionnaire conçue exclusivement pour les développeurs comme vous, prêts à repousser les limites de la technologie. Avec plus de 200 GPTs personnalisés couvrant des domaines essentiels du développement web et mobile aux innovations en matière d'IA et de blockchain, notre plateforme est conçue sur mesure pour améliorer vos compétences, augmenter votre productivité et inspirer votre créativité. Que vous maîtrisiez la gestion de bases de données, recherchiez la perfection en matière de design ou intégriez des mesures de cybersécurité de pointe, les GPTs de The Wise Duck Dev sont votre partenaire ultime pour redéfinir les pratiques de développement. Rejoignez-nous pour façonner ensemble l'avenir de la technologie!",
+    },
+    hashtags: {
+      EN: "#developer #innovation #TechRevolution #TheWiseDuckDev #TheWiseDuckDevGPTS #GPTs #AI #Blockchain #WebDev #MobileDev #Frontend #Backend #Database #Cybersecurity #Design #Innovation #Technology #FutureTech #TechCommunity #TechInnovations",
+      FR: "#developer #innovation #TechRevolution #TheWiseDuckDev #TheWiseDuckDevGPTS #GPTs #AI #Blockchain #WebDev #MobileDev #Frontend #Backend #Database #Cybersecurity #Design #Innovation #Technology #FutureTech #TechCommunity #TechInnovations",
+    },
+    metaTitle: {
+      EN: "The Wise Duck Dev GPTs - Explore the Future of Development",
+      FR: "The Wise Duck Dev GPTs - Explorez l'avenir du développement",
+    },
   };
 
   return (
@@ -220,6 +256,53 @@ const GPTs = () => {
               />
             ))}
       </div>
+      <div className={classes.socialButtonContainerGPTs}>
+        <FacebookShareButton
+          url={`https://${siteUrl}/gpts`}
+          quote={translations.facebookDescription[activeLanguage]}
+          hashtag={translations.hashtags[activeLanguage]}
+        >
+          <FacebookIcon size={32} round />
+        </FacebookShareButton>
+        <FacebookMessengerShareButton
+          url={`https://${siteUrl}/gpts`}
+          appId={""}
+        >
+          <FacebookMessengerIcon size={32} round />
+        </FacebookMessengerShareButton>
+        <WhatsappShareButton
+          url={`https://${siteUrl}/gpts`}
+          title={translations.metaTitle[activeLanguage]}
+          separator=":: "
+        >
+          <WhatsappIcon size={32} round />
+        </WhatsappShareButton>
+        <TwitterShareButton
+          url={`https://${siteUrl}/gpts`}
+          title={translations.twitterDescription[activeLanguage]}
+        >
+          <TwitterIcon size={32} round />
+        </TwitterShareButton>
+
+        <LinkedinShareButton url={`https://${siteUrl}/gpts`}>
+          <LinkedinIcon size={32} round />
+        </LinkedinShareButton>
+        <TelegramShareButton
+          url={`https://${siteUrl}/gpts`}
+          title={translations.metaTitle[activeLanguage]}
+        >
+          <TelegramIcon size={32} round />
+        </TelegramShareButton>
+
+        <EmailShareButton
+          url={`https://${siteUrl}/gpts`}
+          subject={translations.metaTitle[activeLanguage]}
+          body={translations.mailMessage[activeLanguage]}
+        >
+          <EmailIcon size={32} round />
+        </EmailShareButton>
+      </div>
+
       <Link href={portfolioLink} className={classes.promoText}>
         {translations.promo[activeLanguage]}{" "}
         <span className={classes.portfolioLinkOrange}>
