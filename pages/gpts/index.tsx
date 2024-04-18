@@ -63,6 +63,10 @@ export default function GPTS() {
       EN: "The Wise Duck Dev emanates a suave and professional demeanor, dressed in a Men In Black style suit, symbolizing a sleek approach to GPT development and expertise.",
       FR: "Wise Duck Dev dégage une attitude suave et professionnelle, vêtu d'un costume de style Men In Black, symbolisant une approche élégante du développement et de l'expertise en GPT.",
     },
+    og_locale: {
+      EN: "en_US",
+      FR: "fr_FR",
+    },
   };
 
   // Custom console message for companies and recruiters
@@ -100,6 +104,10 @@ export default function GPTS() {
         <meta
           property="og:image"
           content={`https://${siteUrl}/images/index_gpts/the-wise-duck-dev-gpt-expert-men-in-black-style-facebook.webp`}
+        />
+        <meta
+          property="og:locale"
+          content={translation.og_locale[activeLanguage]}
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@wiseduckdev" />

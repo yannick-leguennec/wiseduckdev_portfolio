@@ -65,6 +65,10 @@ export default function Home() {
       EN: "The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React.",
       FR: "The Wise Duck Dev est votre destination de prédilection pour des solutions innovantes de développement web et mobile Full Stack JS, spécialisé en React.",
     },
+    og_locale: {
+      EN: "en_US",
+      FR: "fr_FR",
+    },
   };
 
   // Custom console message for companies and recruiters
@@ -136,6 +140,10 @@ export default function Home() {
           content={`https://${siteUrl}/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp`}
         />
         <meta property="og:url" content={`https://${siteUrl}`} />
+        <meta
+          property="og:locale"
+          content={translation.og_locale[activeLanguage]}
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@wiseduckdev" />
         <meta name="twitter:creator" content="@wiseduckdev" />

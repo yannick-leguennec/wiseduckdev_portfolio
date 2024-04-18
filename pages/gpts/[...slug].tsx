@@ -187,6 +187,10 @@ export default function GPTsSlug({ initialPageData }) {
       EN: "Run the GPT on OpenAI website",
       FR: "Exécuter le GPT sur le site OpenAI",
     },
+    og_locale: {
+      EN: "en_US",
+      FR: "fr_FR",
+    },
   };
 
   // Define the schema templates for categories page
@@ -265,6 +269,10 @@ export default function GPTsSlug({ initialPageData }) {
             property="og:image"
             content={`https://${siteUrl}${pageData.category.og_image}`}
           />
+          <meta
+            property="og:locale"
+            content={translation.og_locale[activeLanguage]}
+          />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@wiseduckdev" />
           <meta name="twitter:creator" content="@wiseduckdev" />
@@ -333,6 +341,10 @@ export default function GPTsSlug({ initialPageData }) {
           <meta
             property="og:image"
             content={`https://${siteUrl}${pageData.gpt.og_image}`}
+          />
+          <meta
+            property="og:locale"
+            content={translation.og_locale[activeLanguage]}
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@wiseduckdev" />
