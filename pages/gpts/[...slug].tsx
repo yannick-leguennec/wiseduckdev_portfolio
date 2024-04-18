@@ -295,7 +295,7 @@ export default function GPTsSlug({ initialPageData }) {
           />
           <meta
             property="og:image"
-            content={`https://${siteUrl}${pageData.category.image}`}
+            content={`https://${siteUrl}${pageData.category.og_image}`}
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@wiseduckdev" />
@@ -310,7 +310,7 @@ export default function GPTsSlug({ initialPageData }) {
           />
           <meta
             name="twitter:image"
-            content={`https://${siteUrl}${pageData.category.image}`}
+            content={`https://${siteUrl}${pageData.category.twitter_image}`}
           />
           <meta
             name="twitter:image:alt"

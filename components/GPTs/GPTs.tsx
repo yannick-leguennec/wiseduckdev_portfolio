@@ -35,6 +35,7 @@ const GPTs = () => {
   const portfolioLink = activeLanguage === "FR" ? `/fr` : `/`;
   // Site URL
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  console.log("site URL:", siteUrl);
 
   // Fetch the GPTs categories data from the JSON file
   useEffect(() => {
