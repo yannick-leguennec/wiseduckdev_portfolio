@@ -8,14 +8,63 @@ import GPTs_Card_Category from "../GPTs_Card_Category/GPTs_Card_Category";
 import GPTs_Card_Type from "../../types/GPTs_Card_Type";
 import GPTS_Card_Category_Type from "../../types/GPTs_Card_Category";
 import { CiSearch } from "react-icons/ci";
-import { FaFacebook } from "react-icons/fa";
-import { FacebookShareButton, FacebookIcon } from "next-share";
-import { TwitterShareButton, TwitterIcon } from "next-share";
-import { WhatsappShareButton, WhatsappIcon } from "next-share";
-import { LinkedinShareButton, LinkedinIcon } from "next-share";
-import { BsMessenger } from "react-icons/bs";
-import { EmailShareButton, EmailIcon } from "next-share";
-import { TelegramShareButton, TelegramIcon } from "next-share";
+// import { FaFacebook } from "react-icons/fa";
+// import { FacebookShareButton, FacebookIcon } from "next-share";
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  FacebookMessengerShareButton,
+  GabShareButton,
+  HatenaShareButton,
+  InstapaperShareButton,
+  LineShareButton,
+  LinkedinShareButton,
+  LivejournalShareButton,
+  MailruShareButton,
+  OKShareButton,
+  PinterestShareButton,
+  PocketShareButton,
+  RedditShareButton,
+  TelegramShareButton,
+  TumblrShareButton,
+  TwitterShareButton,
+  ViberShareButton,
+  VKShareButton,
+  WhatsappShareButton,
+  WorkplaceShareButton,
+} from "react-share";
+
+import {
+  EmailIcon,
+  FacebookIcon,
+  FacebookMessengerIcon,
+  GabIcon,
+  HatenaIcon,
+  InstapaperIcon,
+  LineIcon,
+  LinkedinIcon,
+  LivejournalIcon,
+  MailruIcon,
+  OKIcon,
+  PinterestIcon,
+  PocketIcon,
+  RedditIcon,
+  TelegramIcon,
+  TumblrIcon,
+  TwitterIcon,
+  ViberIcon,
+  VKIcon,
+  WeiboIcon,
+  WhatsappIcon,
+  WorkplaceIcon,
+  XIcon,
+} from "react-share";
+// import { TwitterShareButton, TwitterIcon } from "next-share";
+// import { WhatsappShareButton, WhatsappIcon } from "next-share";
+// import { LinkedinShareButton, LinkedinIcon } from "next-share";
+// import { BsMessenger } from "react-icons/bs";
+// import { EmailShareButton, EmailIcon } from "next-share";
+// import { TelegramShareButton, TelegramIcon } from "next-share";
 import classes from "./GPTs.module.scss";
 
 const GPTs = () => {
@@ -300,6 +349,12 @@ const GPTs = () => {
       <div className={classes.socialButtonContainerGPTs}>
         <FacebookShareButton
           url={`https://${siteUrl}/gpts`}
+          hashtag={translations.hashtags[activeLanguage]}
+        >
+          <FacebookIcon size={32} round />
+        </FacebookShareButton>
+        {/* <FacebookShareButton
+          url={`https://${siteUrl}/gpts`}
           quote={translations.facebookDescription[activeLanguage]}
           hashtag={translations.hashtags[activeLanguage]}
         >
@@ -346,7 +401,7 @@ const GPTs = () => {
           body={translations.mailMessage[activeLanguage]}
         >
           <EmailIcon size={32} round />
-        </EmailShareButton>
+        </EmailShareButton> */}
       </div>
 
       <Link href={portfolioLink} className={classes.promoText}>

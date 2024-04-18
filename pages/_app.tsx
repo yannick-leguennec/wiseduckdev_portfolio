@@ -10,44 +10,16 @@ import Router from "next/router";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
-  useEffect(() => {
-    // This check ensures TypeScript knows `FB` could be undefined initially
-    if (typeof FB !== "undefined") {
-      FB.init({
-        appId: process.env.FACEBOOK_APP_ID || "",
-        autoLogAppEvents: true,
-        xfbml: true,
-        version: "v14.0",
-      });
-    }
-  }, []);
-
   return (
-    <>
-      <Script
-        src="https://connect.facebook.net/en_US/sdk.js"
-        strategy="afterInteractive"
-        onLoad={() => {
-          if (typeof FB !== "undefined") {
-            FB.init({
-              appId: process.env.FACEBOOK_APP_ID || "",
-              autoLogAppEvents: true,
-              xfbml: true,
-              version: "v14.0",
-            });
-          }
-        }}
-      />
-      <LanguageProvider>
-        <LoaderProvider>
-          <ComponentWithLoader
-            Component={Component}
-            pageProps={pageProps}
-            router={router}
-          />
-        </LoaderProvider>
-      </LanguageProvider>
-    </>
+    <LanguageProvider>
+      <LoaderProvider>
+        <ComponentWithLoader
+          Component={Component}
+          pageProps={pageProps}
+          router={router}
+        />
+      </LoaderProvider>
+    </LanguageProvider>
   );
 }
 
