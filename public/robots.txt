@@ -1,5 +1,10 @@
 User-agent: *
 Disallow: /app/api/
 Disallow: /gpts/
+
+User-agent: Facebookbot
+Allow: /gpts/
+
 Sitemap: https://wiseduckdev.vercel.app/sitemap.xml
+
 

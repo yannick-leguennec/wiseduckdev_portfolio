@@ -266,16 +266,16 @@ const GPTs = () => {
         <FacebookShareButton url={`https://${siteUrl}/gpts`}>
           <FacebookIcon size={32} round />
         </FacebookShareButton>
-        <FacebookMessengerShareButton
+        {/* <FacebookMessengerShareButton
           url={`https://${siteUrl}/gpts`}
           appId="451991680722269"
         >
           <FacebookMessengerIcon size={32} round />
-        </FacebookMessengerShareButton>
+        </FacebookMessengerShareButton> */}
         <WhatsappShareButton
           url={`https://${siteUrl}/gpts`}
           title={translations.metaTitle[activeLanguage]}
-          separator=":: "
+          separator=": "
         >
           <WhatsappIcon size={32} round />
         </WhatsappShareButton>
