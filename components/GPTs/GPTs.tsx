@@ -8,13 +8,25 @@ import GPTs_Card_Category from "../GPTs_Card_Category/GPTs_Card_Category";
 import GPTs_Card_Type from "../../types/GPTs_Card_Type";
 import GPTS_Card_Category_Type from "../../types/GPTs_Card_Category";
 import { CiSearch } from "react-icons/ci";
-import { FaFacebook } from "react-icons/fa";
-import { TwitterShareButton, TwitterIcon } from "next-share";
-import { WhatsappShareButton, WhatsappIcon } from "next-share";
-import { LinkedinShareButton, LinkedinIcon } from "next-share";
-import { BsMessenger } from "react-icons/bs";
-import { EmailShareButton, EmailIcon } from "next-share";
-import { TelegramShareButton, TelegramIcon } from "next-share";
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  FacebookMessengerShareButton,
+  LinkedinShareButton,
+  TelegramShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+} from "react-share";
+
+import {
+  EmailIcon,
+  FacebookIcon,
+  FacebookMessengerIcon,
+  LinkedinIcon,
+  TelegramIcon,
+  WhatsappIcon,
+} from "react-share";
+import { TwitterIcon } from "next-share";
 import classes from "./GPTs.module.scss";
 
 const GPTs = () => {
@@ -34,6 +46,7 @@ const GPTs = () => {
   const portfolioLink = activeLanguage === "FR" ? `/fr` : `/`;
   // Site URL
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  console.log("site URL:", siteUrl);
 
   // Fetch the GPTs categories data from the JSON file
   useEffect(() => {
@@ -106,48 +119,6 @@ const GPTs = () => {
     setSearchTerm(event.target.value);
   };
 
-  // Allow sharing on Facebook
-  const shareOnFacebook = () => {
-    if (typeof FB !== "undefined") {
-      FB.ui(
-        {
-          method: "share",
-          href: `https://${siteUrl}/gpts`,
-        },
-        function (response) {
-          if (response && !response.error_message) {
-            // alert("Sharing succeeded");
-          } else {
-            // alert("Error while sharing");
-          }
-        }
-      );
-    } else {
-      // console.log("FB not loaded");
-    }
-  };
-
-  // Allow sharing on Messenger
-  const shareOnMessenger = () => {
-    if (typeof FB !== "undefined") {
-      FB.ui(
-        {
-          method: "send",
-          link: `https://${siteUrl}/gpts`,
-        },
-        function (response) {
-          if (response && !response.error_message) {
-            // alert("Sharing succeeded");
-          } else {
-            // alert("Error while sharing");
-          }
-        }
-      );
-    } else {
-      // console.log("FB not loaded");
-    }
-  };
-
   //   Object to store the translations for the title and subtitle
   const translations: TranslationsType = {
     title: {
@@ -189,10 +160,6 @@ const GPTs = () => {
     buttonSearch: {
       EN: "Search",
       FR: "Chercher",
-    },
-    share: {
-      EN: "Share ",
-      FR: "Partager ",
     },
     facebookDescription: {
       EN: "Explore the future of development with The Wise Duck Dev GPTs! 🚀 Dive into our extensive collection of over 200 custom GPTs tailored for web, mobile, AI, and blockchain technologies. Whether you're refining frontend skills, tackling backend complexities, or pioneering in blockchain and AI innovations, our platform is designed to boost your creativity, streamline workflows, and elevate productivity. Join a community dedicated to reshaping development practices and pushing the boundaries of technology. Start transforming your development journey today!",
@@ -296,17 +263,15 @@ const GPTs = () => {
             ))}
       </div>
       <div className={classes.socialButtonContainerGPTs}>
-        <button onClick={shareOnFacebook} style={{ cursor: "pointer" }}>
-          <FaFacebook className={classes.socialButtonFacebook} />
-        </button>
-        <button
-          onClick={shareOnMessenger}
-          style={{
-            cursor: "pointer",
-          }}
+        <FacebookShareButton url={`https://${siteUrl}/gpts`}>
+          <FacebookIcon size={32} round />
+        </FacebookShareButton>
+        <FacebookMessengerShareButton
+          url={`https://${siteUrl}/gpts`}
+          appId="451991680722269"
         >
-          <BsMessenger className={classes.socialButtonMessenger} />
-        </button>
+          <FacebookMessengerIcon size={32} round />
+        </FacebookMessengerShareButton>
         <WhatsappShareButton
           url={`https://${siteUrl}/gpts`}
           title={translations.metaTitle[activeLanguage]}
@@ -320,7 +285,6 @@ const GPTs = () => {
         >
           <TwitterIcon size={32} round />
         </TwitterShareButton>
-
         <LinkedinShareButton url={`https://${siteUrl}/gpts`}>
           <LinkedinIcon size={32} round />
         </LinkedinShareButton>
@@ -330,7 +294,6 @@ const GPTs = () => {
         >
           <TelegramIcon size={32} round />
         </TelegramShareButton>
-
         <EmailShareButton
           url={`https://${siteUrl}/gpts`}
           subject={translations.metaTitle[activeLanguage]}

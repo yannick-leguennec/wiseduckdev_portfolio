@@ -55,15 +55,69 @@ const checkObjects = (objects: any[], language: string) => {
   });
 };
 
+// Function to validate the path key for each object
+const validatePath = (objects, language) => {
+  objects.forEach((obj) => {
+    const expectedStart = `/${obj.category[0]}`;
+    if (!obj.path.startsWith(expectedStart)) {
+      console.log(
+        `Path discrepancy found in ${language} object with ID ${obj.id}: Expected path to start with '${expectedStart}' but found '${obj.path}'`
+      );
+    }
+  });
+};
+
+// Function to validate image and og_image keys for each object
+const validateImages = (objects, language) => {
+  objects.forEach((obj) => {
+    const expectedPrefix = "/images/gpts/";
+    if (
+      !obj.image.startsWith(expectedPrefix) ||
+      !obj.og_image.startsWith(expectedPrefix) ||
+      !obj.twitter_image.startsWith(expectedPrefix)
+    ) {
+      console.log(
+        `Image path discrepancy found in ${language} object with ID ${obj.id}: Check 'image', 'og_image' and 'twitter_image'  paths for compliance with '${expectedPrefix}'`
+      );
+    }
+  });
+};
+
+// Function to validate the og_url for each object
+const validateOgUrl = (objects, language) => {
+  objects.forEach((obj) => {
+    const expectedPrefix = obj.category[0];
+    // Check if og_url starts with the correct category prefix
+    if (!obj.og_url.startsWith(expectedPrefix)) {
+      console.log(
+        `URL discrepancy found in ${language} object with ID ${obj.id}: Expected og_url to start with '${expectedPrefix}' but found '${obj.og_url}'`
+      );
+    }
+    // Check if og_url starts with a forward slash
+    if (obj.og_url.startsWith("/")) {
+      console.log(
+        `URL format error in ${language} object with ID ${obj.id}: og_url starts with '/', which is incorrect.`
+      );
+    }
+  });
+};
+
 // Main function to execute the script asynchronously
 const main = async () => {
   const filePath = "./public/docs/GPTs/gpts.json"; // Update the path to your JSON file
   try {
     const data = await readJsonFile(filePath);
 
-    // Check the objects in both the EN and FR arrays
+    // Check and validate the objects in both the EN and FR arrays
     checkObjects(data.EN, "EN");
+    validateOgUrl(data.EN, "EN");
+    validatePath(data.EN, "EN");
+    validateImages(data.EN, "EN");
+
     checkObjects(data.FR, "FR");
+    validateOgUrl(data.FR, "FR");
+    validatePath(data.FR, "FR");
+    validateImages(data.FR, "FR");
   } catch (error) {
     console.error("Error reading or processing file:", error);
   }
