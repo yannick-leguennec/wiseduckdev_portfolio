@@ -9,6 +9,7 @@ import GPTs_Card_Type from "../../types/GPTs_Card_Type";
 import GPTS_Card_Category_Type from "../../types/GPTs_Card_Category";
 import { CiSearch } from "react-icons/ci";
 import { FaFacebook } from "react-icons/fa";
+import { FacebookShareButton, FacebookIcon } from "next-share";
 import { TwitterShareButton, TwitterIcon } from "next-share";
 import { WhatsappShareButton, WhatsappIcon } from "next-share";
 import { LinkedinShareButton, LinkedinIcon } from "next-share";
@@ -296,6 +297,13 @@ const GPTs = () => {
             ))}
       </div>
       <div className={classes.socialButtonContainerGPTs}>
+        <FacebookShareButton
+          url={`https://${siteUrl}/gpts`}
+          quote={translations.facebookDescription[activeLanguage]}
+          hashtag={translations.hashtags[activeLanguage]}
+        >
+          <FacebookIcon size={32} round />
+        </FacebookShareButton>
         <button onClick={shareOnFacebook} style={{ cursor: "pointer" }}>
           <FaFacebook className={classes.socialButtonFacebook} />
         </button>
