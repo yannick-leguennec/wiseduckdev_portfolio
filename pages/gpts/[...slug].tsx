@@ -15,13 +15,25 @@ import Header from "../../components/Header/Header";
 import GPTs_Card from "../../components/GPTs_Card/GPTs_Card";
 import GPTS_Card_Type from "../../types/GPTs_Card_Type";
 const Footer = dynamic(() => import("../../components/Footer/Footer"));
-import { FaFacebook } from "react-icons/fa";
-import { TwitterShareButton, TwitterIcon } from "next-share";
-import { WhatsappShareButton, WhatsappIcon } from "next-share";
-import { LinkedinShareButton, LinkedinIcon } from "next-share";
-import { BsMessenger } from "react-icons/bs";
-import { EmailShareButton, EmailIcon } from "next-share";
-import { TelegramShareButton, TelegramIcon } from "next-share";
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  FacebookMessengerShareButton,
+  LinkedinShareButton,
+  TelegramShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+} from "react-share";
+
+import {
+  EmailIcon,
+  FacebookIcon,
+  FacebookMessengerIcon,
+  LinkedinIcon,
+  TelegramIcon,
+  WhatsappIcon,
+} from "react-share";
+import { TwitterIcon } from "next-share";
 import classes from "../../styles/gptsSlug.module.scss";
 
 // Define the expected structure for the initial data uploaded
@@ -147,50 +159,6 @@ export default function GPTsSlug({ initialPageData }) {
         {translation.button[activeLanguage]}
       </Link>
     );
-  };
-
-  // Allow sharing on Facebook
-  const shareOnFacebook = () => {
-    if (typeof FB !== "undefined") {
-      const currentUrl = window.location.href; // Gets the current page URL
-      FB.ui(
-        {
-          method: "share",
-          href: currentUrl, // Uses the current page URL
-        },
-        function (response) {
-          if (response && !response.error_message) {
-            // alert("Sharing succeeded");
-          } else {
-            // alert("Error while sharing");
-          }
-        }
-      );
-    } else {
-      // console.log("FB not loaded");
-    }
-  };
-
-  // Allow sharing on Messenger
-  const shareOnMessenger = () => {
-    if (typeof FB !== "undefined") {
-      const currentUrl = window.location.href; // Gets the current page URL
-      FB.ui(
-        {
-          method: "send",
-          link: currentUrl,
-        },
-        function (response) {
-          if (response && !response.error_message) {
-            // alert("Sharing succeeded");
-          } else {
-            // alert("Error while sharing");
-          }
-        }
-      );
-    } else {
-      // console.log("FB not loaded");
-    }
   };
 
   // Define the translations
@@ -423,17 +391,17 @@ export default function GPTsSlug({ initialPageData }) {
                 <h2 className={[classes.subtitleBold, classes.hide].join(" ")}>
                   {translation.share[activeLanguage]}
                 </h2>
-                <button onClick={shareOnFacebook} style={{ cursor: "pointer" }}>
-                  <FaFacebook className={classes.socialButtonFacebook} />
-                </button>
-                <button
-                  onClick={shareOnMessenger}
-                  style={{
-                    cursor: "pointer",
-                  }}
+                <FacebookShareButton
+                  url={`https://${siteUrl}/gpts/${pageData.category.category}`}
                 >
-                  <BsMessenger className={classes.socialButtonMessenger} />
-                </button>
+                  <FacebookIcon size={32} round />
+                </FacebookShareButton>
+                <FacebookMessengerShareButton
+                  url={`https://${siteUrl}/gpts/${pageData.category.category}`}
+                  appId="451991680722269"
+                >
+                  <FacebookMessengerIcon size={32} round />
+                </FacebookMessengerShareButton>
                 <WhatsappShareButton
                   url={`https://${siteUrl}/gpts/${pageData.category.category}`}
                   title={pageData.category.meta_title_page}
@@ -447,7 +415,6 @@ export default function GPTsSlug({ initialPageData }) {
                 >
                   <TwitterIcon size={32} round />
                 </TwitterShareButton>
-
                 <LinkedinShareButton
                   url={`https://${siteUrl}/gpts/${pageData.category.category}`}
                 >
@@ -459,7 +426,6 @@ export default function GPTsSlug({ initialPageData }) {
                 >
                   <TelegramIcon size={32} round />
                 </TelegramShareButton>
-
                 <EmailShareButton
                   url={`https://${siteUrl}/gpts/${pageData.category.category}`}
                   subject={pageData.category.meta_title_page}
@@ -563,17 +529,17 @@ export default function GPTsSlug({ initialPageData }) {
               <h2 className={[classes.subtitleBold, classes.hide].join(" ")}>
                 {translation.share[activeLanguage]}
               </h2>
-              <button onClick={shareOnFacebook} style={{ cursor: "pointer" }}>
-                <FaFacebook className={classes.socialButtonFacebook} />
-              </button>
-              <button
-                onClick={shareOnMessenger}
-                style={{
-                  cursor: "pointer",
-                }}
+              <FacebookShareButton
+                url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
               >
-                <BsMessenger className={classes.socialButtonMessenger} />
-              </button>
+                <FacebookIcon size={32} round />
+              </FacebookShareButton>
+              <FacebookMessengerShareButton
+                url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                appId="451991680722269"
+              >
+                <FacebookMessengerIcon size={32} round />
+              </FacebookMessengerShareButton>
               <WhatsappShareButton
                 url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
                 title={pageData.gpt.meta_title_page}
@@ -587,7 +553,6 @@ export default function GPTsSlug({ initialPageData }) {
               >
                 <TwitterIcon size={32} round />
               </TwitterShareButton>
-
               <LinkedinShareButton
                 url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
               >
@@ -599,7 +564,6 @@ export default function GPTsSlug({ initialPageData }) {
               >
                 <TelegramIcon size={32} round />
               </TelegramShareButton>
-
               <EmailShareButton
                 url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
                 subject={pageData.gpt.meta_title_page}
