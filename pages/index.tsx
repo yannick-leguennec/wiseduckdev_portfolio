@@ -143,7 +143,14 @@ export default function Home() {
               : `https://${siteUrl}/images/index/professional-wise-duck-developer-coding-laptop-office-Facebook-EN.webp`
           }
         />
-        <meta property="og:url" content={`https://${siteUrl}`} />
+        <meta
+          property="og:url"
+          content={
+            activeLanguage === "FR"
+              ? `https://${siteUrl}/fr`
+              : `https://${siteUrl}`
+          }
+        />
         <meta
           property="og:locale"
           content={translation.og_locale[activeLanguage]}

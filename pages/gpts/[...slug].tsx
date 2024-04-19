@@ -263,7 +263,11 @@ export default function GPTsSlug({ initialPageData }) {
           />
           <meta
             property="og:url"
-            content={`https://${siteUrl}/gpts/${pageData.category.category}`}
+            content={
+              activeLanguage === "FR"
+                ? `https://${siteUrl}/fr/gpts/${pageData.category.category}`
+                : `https://${siteUrl}/gpts/${pageData.category.category}`
+            }
           />
           <meta
             property="og:image"
@@ -336,7 +340,11 @@ export default function GPTsSlug({ initialPageData }) {
           />
           <meta
             property="og:url"
-            content={`https://${siteUrl}/gpts/${pageData.gpt.og_url}`}
+            content={
+              activeLanguage === "FR"
+                ? `https://${siteUrl}/fr/gpts/${pageData.gpt.og_url}`
+                : `https://${siteUrl}/gpts/${pageData.gpt.og_url}`
+            }
           />
           <meta
             property="og:image"
