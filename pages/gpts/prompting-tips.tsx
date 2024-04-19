@@ -83,7 +83,11 @@ const PromptingTips = () => {
         />
         <meta
           property="og:url"
-          content={`https://${siteUrl}/gpts/prompting-tips`}
+          content={
+            activeLanguage === "FR"
+              ? `https://${siteUrl}/fr/gpts/prompting-tips`
+              : `https://${siteUrl}/gpts/prompting-tips`
+          }
         />
         <meta
           property="og:image"

@@ -25,6 +25,7 @@ class MyDocument extends Document<MyDocumentProps> {
     return (
       <Html>
         <Head>
+          <meta property="fb:app_id" content="451991680722269" />
           <meta
             name="google-site-verification"
             content="CHxu9HsWoMtZjbPsvHICvOlOyRv_hFYZk5uhVLxXo7o"

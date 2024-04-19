@@ -100,7 +100,14 @@ export default function GPTS() {
           property="og:description"
           content={translation.og_description[activeLanguage]}
         />
-        <meta property="og:url" content={`https://${siteUrl}/gpts`} />
+        <meta
+          property="og:url"
+          content={
+            activeLanguage === "FR"
+              ? `https://${siteUrl}/fr/gpts`
+              : `https://${siteUrl}/gpts`
+          }
+        />
         <meta
           property="og:image"
           content={`https://${siteUrl}/images/index_gpts/the-wise-duck-dev-gpt-expert-men-in-black-style-facebook.webp`}
