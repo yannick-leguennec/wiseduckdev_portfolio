@@ -137,7 +137,11 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content={`https://${siteUrl}/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp`}
+          content={
+            activeLanguage === "FR"
+              ? `https://${siteUrl}/images/index/professional-wise-duck-developer-coding-laptop-office-Facebook-FR.webp`
+              : `https://${siteUrl}/images/index/professional-wise-duck-developer-coding-laptop-office-Facebook-EN.webp`
+          }
         />
         <meta property="og:url" content={`https://${siteUrl}`} />
         <meta
@@ -157,7 +161,11 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content={`https://${siteUrl}/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp`}
+          content={
+            activeLanguage === "FR"
+              ? `https://${siteUrl}/images/index/professional-wise-duck-developer-coding-laptop-office-Twitter-FR.webp`
+              : `https://${siteUrl}/images/index/professional-wise-duck-developer-coding-laptop-office-Twitter-EN.webp`
+          }
         />
         <meta
           name="twitter:image:alt"

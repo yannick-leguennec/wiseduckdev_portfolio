@@ -1,9 +1,11 @@
 User-agent: *
 Disallow: /app/api/
-Disallow: /gpts/
 
-User-agent: Facebookbot
-Allow: /gpts/
+User-agent: Googlebot
+Disallow: /gpts
+
+User-agent: Bingbot
+Disallow: /gpts
 
 Sitemap: https://wiseduckdev.vercel.app/sitemap.xml
 

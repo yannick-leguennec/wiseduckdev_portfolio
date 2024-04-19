@@ -1,6 +1,6 @@
 const fs = require("fs").promises;
 const path = require("path");
-// const dotenv = require("dotenv");
+const dotenv = require("dotenv");
 
 // Load environment variables from .env file
 dotenv.config();

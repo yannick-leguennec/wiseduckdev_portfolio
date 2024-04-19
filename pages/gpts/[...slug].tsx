@@ -408,12 +408,12 @@ export default function GPTsSlug({ initialPageData }) {
                 >
                   <FacebookIcon size={32} round />
                 </FacebookShareButton>
-                {/* <FacebookMessengerShareButton
+                <FacebookMessengerShareButton
                   url={`https://${siteUrl}/gpts/${pageData.category.category}`}
                   appId="451991680722269"
                 >
                   <FacebookMessengerIcon size={32} round />
-                </FacebookMessengerShareButton> */}
+                </FacebookMessengerShareButton>
                 <WhatsappShareButton
                   url={`https://${siteUrl}/gpts/${pageData.category.category}`}
                   title={pageData.category.meta_title_page}
@@ -546,12 +546,12 @@ export default function GPTsSlug({ initialPageData }) {
               >
                 <FacebookIcon size={32} round />
               </FacebookShareButton>
-              {/* <FacebookMessengerShareButton
+              <FacebookMessengerShareButton
                 url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
                 appId="451991680722269"
               >
                 <FacebookMessengerIcon size={32} round />
-              </FacebookMessengerShareButton> */}
+              </FacebookMessengerShareButton>
               <WhatsappShareButton
                 url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
                 title={pageData.gpt.meta_title_page}
