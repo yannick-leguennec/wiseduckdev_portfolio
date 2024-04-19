@@ -187,6 +187,10 @@ export default function GPTsSlug({ initialPageData }) {
       EN: "Run the GPT on OpenAI website",
       FR: "Exécuter le GPT sur le site OpenAI",
     },
+    og_locale: {
+      EN: "en_US",
+      FR: "fr_FR",
+    },
   };
 
   // Define the schema templates for categories page
@@ -265,6 +269,10 @@ export default function GPTsSlug({ initialPageData }) {
             property="og:image"
             content={`https://${siteUrl}${pageData.category.og_image}`}
           />
+          <meta
+            property="og:locale"
+            content={translation.og_locale[activeLanguage]}
+          />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@wiseduckdev" />
           <meta name="twitter:creator" content="@wiseduckdev" />
@@ -334,6 +342,10 @@ export default function GPTsSlug({ initialPageData }) {
             property="og:image"
             content={`https://${siteUrl}${pageData.gpt.og_image}`}
           />
+          <meta
+            property="og:locale"
+            content={translation.og_locale[activeLanguage]}
+          />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@wiseduckdev" />
           <meta name="twitter:title" content={pageData.gpt.twitter_title} />
@@ -396,12 +408,12 @@ export default function GPTsSlug({ initialPageData }) {
                 >
                   <FacebookIcon size={32} round />
                 </FacebookShareButton>
-                {/* <FacebookMessengerShareButton
+                <FacebookMessengerShareButton
                   url={`https://${siteUrl}/gpts/${pageData.category.category}`}
                   appId="451991680722269"
                 >
                   <FacebookMessengerIcon size={32} round />
-                </FacebookMessengerShareButton> */}
+                </FacebookMessengerShareButton>
                 <WhatsappShareButton
                   url={`https://${siteUrl}/gpts/${pageData.category.category}`}
                   title={pageData.category.meta_title_page}
@@ -534,12 +546,12 @@ export default function GPTsSlug({ initialPageData }) {
               >
                 <FacebookIcon size={32} round />
               </FacebookShareButton>
-              {/* <FacebookMessengerShareButton
+              <FacebookMessengerShareButton
                 url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
                 appId="451991680722269"
               >
                 <FacebookMessengerIcon size={32} round />
-              </FacebookMessengerShareButton> */}
+              </FacebookMessengerShareButton>
               <WhatsappShareButton
                 url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
                 title={pageData.gpt.meta_title_page}

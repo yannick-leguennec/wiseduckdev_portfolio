@@ -8,10 +8,12 @@
     "start": "next start",
     "build-start": "next build && next start",
     "lint": "next lint",
-    "control_data": "ts-node scripts/gpts_data_controler.ts"
+    "control_data": "ts-node scripts/gpts_data_controler.ts",
+    "facebook_metadata": "ts-node scripts/facebook_graph.ts"
   },
   "dependencies": {
     "@vercel/speed-insights": "^1.0.10",
+    "axios": "^1.6.8",
     "date-fns": "^3.3.1",
     "dotenv": "^16.4.5",
     "formik": "^2.4.5",
@@ -24,6 +26,7 @@
     "react-share": "^5.1.0",
     "sharp": "^0.33.2",
     "uuid": "^9.0.1",
+    "xml2js": "^0.6.2",
     "yup": "^1.4.0"
   },
   "devDependencies": {

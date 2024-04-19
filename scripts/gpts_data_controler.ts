@@ -102,6 +102,37 @@ const validateOgUrl = (objects, language) => {
   });
 };
 
+// Function to validate title and description lengths
+const validateLengths = (objects, language) => {
+  objects.forEach((obj) => {
+    if (obj.og_title && obj.og_title.length > 70) {
+      console.log(
+        `og:title exceeds limit in ${language} object with ID ${obj.id}`
+      );
+    }
+    if (obj.og_description && obj.og_description.length > 200) {
+      console.log(
+        `og:description exceeds limit in ${language} object with ID ${obj.id}`
+      );
+    }
+    if (obj.twitter_title && obj.twitter_title.length > 70) {
+      console.log(
+        `twitter:title exceeds limit in ${language} object with ID ${obj.id}`
+      );
+    }
+    if (obj.twitter_description && obj.twitter_description.length > 200) {
+      console.log(
+        `twitter:description exceeds limit in ${language} object with ID ${obj.id}`
+      );
+    }
+    if (obj.meta_description_page && obj.meta_description_page.length > 160) {
+      console.log(
+        `meta_description_page exceeds limit in ${language} object with ID ${obj.id}`
+      );
+    }
+  });
+};
+
 // Main function to execute the script asynchronously
 const main = async () => {
   const filePath = "./public/docs/GPTs/gpts.json"; // Update the path to your JSON file
@@ -113,11 +144,13 @@ const main = async () => {
     validateOgUrl(data.EN, "EN");
     validatePath(data.EN, "EN");
     validateImages(data.EN, "EN");
+    validateLengths(data.EN, "EN");
 
     checkObjects(data.FR, "FR");
     validateOgUrl(data.FR, "FR");
     validatePath(data.FR, "FR");
     validateImages(data.FR, "FR");
+    validateLengths(data.FR, "FR");
   } catch (error) {
     console.error("Error reading or processing file:", error);
   }

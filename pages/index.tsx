@@ -65,6 +65,10 @@ export default function Home() {
       EN: "The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React.",
       FR: "The Wise Duck Dev est votre destination de prédilection pour des solutions innovantes de développement web et mobile Full Stack JS, spécialisé en React.",
     },
+    og_locale: {
+      EN: "en_US",
+      FR: "fr_FR",
+    },
   };
 
   // Custom console message for companies and recruiters
@@ -133,9 +137,17 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content={`https://${siteUrl}/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp`}
+          content={
+            activeLanguage === "FR"
+              ? `https://${siteUrl}/images/index/professional-wise-duck-developer-coding-laptop-office-Facebook-FR.webp`
+              : `https://${siteUrl}/images/index/professional-wise-duck-developer-coding-laptop-office-Facebook-EN.webp`
+          }
         />
         <meta property="og:url" content={`https://${siteUrl}`} />
+        <meta
+          property="og:locale"
+          content={translation.og_locale[activeLanguage]}
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@wiseduckdev" />
         <meta name="twitter:creator" content="@wiseduckdev" />
@@ -149,7 +161,11 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content={`https://${siteUrl}/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp`}
+          content={
+            activeLanguage === "FR"
+              ? `https://${siteUrl}/images/index/professional-wise-duck-developer-coding-laptop-office-Twitter-FR.webp`
+              : `https://${siteUrl}/images/index/professional-wise-duck-developer-coding-laptop-office-Twitter-EN.webp`
+          }
         />
         <meta
           name="twitter:image:alt"
