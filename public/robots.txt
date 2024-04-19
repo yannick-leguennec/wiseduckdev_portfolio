@@ -7,6 +7,9 @@ Disallow: /gpts
 User-agent: Bingbot
 Disallow: /gpts
 
+User-agent: facebookexternalhit
+Allow: /
+
 Sitemap: https://wiseduckdev.vercel.app/sitemap.xml
 
 
