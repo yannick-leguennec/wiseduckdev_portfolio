@@ -48,8 +48,8 @@ export default function GPTS() {
       FR: "Le Wise Duck Dev dégage une allure élégante et professionnelle, vêtu d'un costume de style Men In Black, symbolisant une approche élégante du développement et de l'expertise en GPT.",
     },
     og_title: {
-      EN: "The Wise Duck Dev GPTs | Gateway to Specialized GPT Development",
-      FR: "Les GPT de Wise Duck Dev | Porte d'entrée vers le développement spécialisé en GPT",
+      EN: "The Wise Duck Dev GPTs | Gateway to Specialized GPT for Developer",
+      FR: "Les GPT de Wise Duck Dev | GPTS spécialisés pour les développeurs",
     },
     og_description: {
       EN: "Step into the world of specialized GPT development with The Wise Duck Dev. Explore categories from frontend to blockchain and automation. Tailored AI solutions for robust web development.",
