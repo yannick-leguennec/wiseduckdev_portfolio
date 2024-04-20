@@ -126,7 +126,7 @@ const PromptingTips = () => {
             />
           </>
         )}
-        <link rel="canonical" href={`https://${siteUrl}`} />
+        <link rel="canonical" href={`https://${siteUrl}/gpts/prompting-tips`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
