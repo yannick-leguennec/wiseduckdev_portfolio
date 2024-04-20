@@ -310,7 +310,10 @@ export default function GPTsSlug({ initialPageData }) {
               />
             </>
           )}
-          <link rel="canonical" href={`https://${siteUrl}`} />
+          <link
+            rel="canonical"
+            href={`https://${siteUrl}/gpts/${pageData.category.category}`}
+          />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -383,7 +386,10 @@ export default function GPTsSlug({ initialPageData }) {
               />
             </>
           )}
-          <link rel="canonical" href={`https://${siteUrl}`} />
+          <link
+            rel="canonical"
+            href={`https://${siteUrl}/gpts/${pageData.gpt.og_url}`}
+          />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{

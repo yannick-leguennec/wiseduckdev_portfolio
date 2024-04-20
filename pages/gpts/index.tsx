@@ -149,7 +149,7 @@ export default function GPTS() {
             />
           </>
         )}
-        <link rel="canonical" href={`https://${siteUrl}`} />
+        <link rel="canonical" href={`https://${siteUrl}/gpts`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(indexSchemaGPTs) }}
