@@ -1,4 +1,4 @@
-import { GetStaticProps } from "next";
+import UAParser from "ua-parser-js";
 import React, { useEffect } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
@@ -11,8 +11,9 @@ import Main_GPTs from "../../components/Main_GPTs/Main_GPTs";
 import GPTs from "../../components/GPTs/GPTs";
 const Footer = dynamic(() => import("../../components/Footer/Footer"));
 import indexSchemaGPTs from "../../public/schemas/indexSchemaGPTs";
+import { string } from "yup";
 
-export default function GPTS() {
+export default function GPTS({ deviceType }) {
   // Custom hook to manage the loading state
   const { setLoading } = useLoader();
   // Custom hook to manage the language state
@@ -158,15 +159,25 @@ export default function GPTS() {
 
       <Header />
       <Main_GPTs />
-      <GPTs />
+      <GPTs deviceType={deviceType} />
+      {/* ! ONLY FOR TEST PURPOSES */}
+      <p>Detected device type: {deviceType}</p>
       <Footer />
       <SpeedInsights />
     </>
   );
 }
 
-export const getStaGetStaticProps: GetStaticProps = async () => {
+export async function getServerSideProps(context) {
+  const parser = new UAParser(context.req.headers["user-agent"]);
+  const result = parser.getResult();
+  const deviceType: string = result.device.type || "desktop"; // Fallback to 'desktop' if no type is determined
+
+  // Log the full result or just the device type
+  console.log("Detected device type:", deviceType);
+  console.log("Full UA parser result:", result);
+
   return {
-    props: {},
+    props: { deviceType },
   };
-};
+}

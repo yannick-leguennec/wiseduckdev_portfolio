@@ -29,7 +29,11 @@ import {
 import { TwitterIcon } from "next-share";
 import classes from "./GPTs.module.scss";
 
-const GPTs = () => {
+interface GPTsProps {
+  deviceType: string;
+}
+
+const GPTs = (deviceType: GPTsProps) => {
   // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
   //   State to store the filtered GPTs by languages
