@@ -27,9 +27,14 @@ import {
   WhatsappIcon,
 } from "react-share";
 import { TwitterIcon } from "next-share";
+import { IoMdShareAlt } from "react-icons/io";
 import classes from "./GPTs.module.scss";
 
-const GPTs = () => {
+interface GPTsProps {
+  deviceType: string;
+}
+
+const GPTs = ({ deviceType }: GPTsProps) => {
   // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
   //   State to store the filtered GPTs by languages
@@ -46,7 +51,6 @@ const GPTs = () => {
   const portfolioLink = activeLanguage === "FR" ? `/fr` : `/`;
   // Site URL
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  console.log("site URL:", siteUrl);
 
   // Fetch the GPTs categories data from the JSON file
   useEffect(() => {
@@ -119,6 +123,28 @@ const GPTs = () => {
     setSearchTerm(event.target.value);
   };
 
+  // Function to handle sharing
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: translations.shareTitle[activeLanguage],
+          url:
+            activeLanguage === "FR"
+              ? `https://${siteUrl}/fr/gpts`
+              : `https://${siteUrl}/gpts`,
+        })
+        .then(() => {
+          console.log("Thanks for sharing!");
+        })
+        .catch((error) => {
+          console.error("Error sharing:", error);
+        });
+    } else {
+      alert("Your browser doesn't support the Share API");
+    }
+  };
+
   //   Object to store the translations for the title and subtitle
   const translations: TranslationsType = {
     title: {
@@ -180,6 +206,14 @@ const GPTs = () => {
     metaTitle: {
       EN: "The Wise Duck Dev GPTs - Explore the Future of Development",
       FR: "The Wise Duck Dev GPTs - Explorez l'avenir du développement",
+    },
+    shareButton: {
+      EN: "Share",
+      FR: "Partagez",
+    },
+    shareTitle: {
+      EN: "Explore and share The Wise Duck Dev GPTs with your network! The leading Library in custom GPTs for Web, Mobile, Blockchain, and AI Development",
+      FR: "Explore et partage les GPTs de The Wise Duck Dev! La plus grande bibliothèque de GPTs personnalisés pour le développement Web, Mobile, Blockchain et IA",
     },
   };
 
@@ -263,44 +297,53 @@ const GPTs = () => {
             ))}
       </div>
       <div className={classes.socialButtonContainerGPTs}>
-        <FacebookShareButton url={`https://${siteUrl}/gpts`}>
-          <FacebookIcon size={32} round />
-        </FacebookShareButton>
-        <FacebookMessengerShareButton
-          url={`https://${siteUrl}/gpts`}
-          appId="451991680722269"
-        >
-          <FacebookMessengerIcon size={32} round />
-        </FacebookMessengerShareButton>
-        <WhatsappShareButton
-          url={`https://${siteUrl}/gpts`}
-          title={translations.metaTitle[activeLanguage]}
-          separator=": "
-        >
-          <WhatsappIcon size={32} round />
-        </WhatsappShareButton>
-        <TwitterShareButton
-          url={`https://${siteUrl}/gpts`}
-          title={translations.twitterDescription[activeLanguage]}
-        >
-          <TwitterIcon size={32} round />
-        </TwitterShareButton>
-        <LinkedinShareButton url={`https://${siteUrl}/gpts`}>
-          <LinkedinIcon size={32} round />
-        </LinkedinShareButton>
-        <TelegramShareButton
-          url={`https://${siteUrl}/gpts`}
-          title={translations.metaTitle[activeLanguage]}
-        >
-          <TelegramIcon size={32} round />
-        </TelegramShareButton>
-        <EmailShareButton
-          url={`https://${siteUrl}/gpts`}
-          subject={translations.metaTitle[activeLanguage]}
-          body={translations.mailMessage[activeLanguage]}
-        >
-          <EmailIcon size={32} round />
-        </EmailShareButton>
+        {deviceType === "desktop" && (
+          <>
+            <FacebookShareButton url={`https://${siteUrl}/gpts`}>
+              <FacebookIcon size={32} round />
+            </FacebookShareButton>
+            <FacebookMessengerShareButton
+              url={`https://${siteUrl}/gpts`}
+              appId="451991680722269"
+            >
+              <FacebookMessengerIcon size={32} round />
+            </FacebookMessengerShareButton>
+            <WhatsappShareButton
+              url={`https://${siteUrl}/gpts`}
+              title={translations.metaTitle[activeLanguage]}
+              separator=": "
+            >
+              <WhatsappIcon size={32} round />
+            </WhatsappShareButton>
+            <TwitterShareButton
+              url={`https://${siteUrl}/gpts`}
+              title={translations.twitterDescription[activeLanguage]}
+            >
+              <TwitterIcon size={32} round />
+            </TwitterShareButton>
+            <LinkedinShareButton url={`https://${siteUrl}/gpts`}>
+              <LinkedinIcon size={32} round />
+            </LinkedinShareButton>
+            <TelegramShareButton
+              url={`https://${siteUrl}/gpts`}
+              title={translations.metaTitle[activeLanguage]}
+            >
+              <TelegramIcon size={32} round />
+            </TelegramShareButton>
+            <EmailShareButton
+              url={`https://${siteUrl}/gpts`}
+              subject={translations.metaTitle[activeLanguage]}
+              body={translations.mailMessage[activeLanguage]}
+            >
+              <EmailIcon size={32} round />
+            </EmailShareButton>
+          </>
+        )}
+        {(deviceType === "mobile" || deviceType === "tablet") && (
+          <button onClick={handleShare} className={classes.shareButton}>
+            {translations.shareButton[activeLanguage]} <IoMdShareAlt />
+          </button>
+        )}
       </div>
 
       <Link href={portfolioLink} className={classes.promoText}>

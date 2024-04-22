@@ -1,4 +1,4 @@
-import { GetStaticProps } from "next";
+import UAParser from "ua-parser-js";
 import React, { useEffect } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
@@ -12,7 +12,7 @@ import GPTs from "../../components/GPTs/GPTs";
 const Footer = dynamic(() => import("../../components/Footer/Footer"));
 import indexSchemaGPTs from "../../public/schemas/indexSchemaGPTs";
 
-export default function GPTS() {
+export default function GPTS({ deviceType }) {
   // Custom hook to manage the loading state
   const { setLoading } = useLoader();
   // Custom hook to manage the language state
@@ -36,8 +36,8 @@ export default function GPTS() {
       FR: "👨‍💻🚀 Bonjour ! En tant que développeur Full Stack JS passionné par React et les innovations en IA, je me spécialise dans la création de GPT sur mesure qui optimisent les flux de travail et dynamisent les processus de développement. Si votre entreprise souhaite exploiter la puissance transformatrice de l'IA, ou si vous êtes un recruteur à la recherche d'un développeur qui allie créativité et technologie, parlons-en ! Ensemble, nous pouvons développer des solutions GPT adaptées à vos besoins spécifiques, favorisant l'efficacité et l'excellence dans chaque projet. Innovons et élevons vos opérations avec l'IA personnalisée ! 🤖✨",
     },
     title: {
-      EN: "The Wise Duck Dev GPTs | Explore Leading GPT Categories for Web and Mobile Development",
-      FR: "GPT de The Wise Duck Dev | Explorez les principales catégories de GPT pour le développement Web et Mobile",
+      EN: "The Wise Duck Dev GPTs | Explore Leading GPTs Categories for Web and Mobile Development",
+      FR: "The Wise Duck Dev GPTs | Explorez les principales catégories de GPTs pour le développement Web et Mobile",
     },
     description: {
       EN: "Explore the world's largest library of custom GPTs at The Wise Duck Dev GPTs, catering to all developer needs in web, mobile, AI, and blockchain. With over 200 GPTs across 12 categories including frontend, backend, design, and more, elevate your development projects to new heights.",
@@ -48,7 +48,7 @@ export default function GPTS() {
       FR: "Le Wise Duck Dev dégage une allure élégante et professionnelle, vêtu d'un costume de style Men In Black, symbolisant une approche élégante du développement et de l'expertise en GPT.",
     },
     og_title: {
-      EN: "The Wise Duck Dev GPTs | Gateway to Specialized GPT for Developer",
+      EN: "The Wise Duck Dev GPTs | Gateway to Specialized GPTs for Developer",
       FR: "Les GPT de Wise Duck Dev | GPTS spécialisés pour les développeurs",
     },
     og_description: {
@@ -158,15 +158,19 @@ export default function GPTS() {
 
       <Header />
       <Main_GPTs />
-      <GPTs />
+      <GPTs deviceType={deviceType} />
       <Footer />
       <SpeedInsights />
     </>
   );
 }
 
-export const getStaGetStaticProps: GetStaticProps = async () => {
+export async function getServerSideProps(context) {
+  const parser = new UAParser(context.req.headers["user-agent"]);
+  const result = parser.getResult();
+  const deviceType: string = result.device.type || "desktop"; // Fallback to 'desktop' if no device type is found
+
   return {
-    props: {},
+    props: { deviceType },
   };
-};
+}

@@ -142,6 +142,10 @@
   @include button-style-reverted;
 }
 
+.shareButton {
+  @include button-style-social;
+}
+
 // Results infos
 .resultsInfo {
   margin-top: 2rem;
@@ -207,6 +211,10 @@
   @media (max-width: 1024px) {
     margin-top: 2rem;
     font-size: 1rem;
+  }
+
+  @media (max-width: 820px) {
+    margin: 1rem 0;
   }
 
   @media (max-width: 768px) {
@@ -370,16 +378,9 @@
     padding-left: 0;
     padding: 1.5rem 0;
   }
-}
 
-.socialButtonFacebook {
-  width: 32px;
-  height: 32px;
-  color: #1877f2;
-}
-
-.socialButtonMessenger {
-  width: 32px;
-  height: 32px;
-  color: #2196f3;
+  @media (max-width: 820px) {
+    margin-bottom: 0;
+    margin-top: 1rem;
+  }
 }

@@ -177,8 +177,9 @@
   margin-top: 1rem;
 }
 
-.hide {
-  display: none;
+.tipsText:hover {
+  cursor: pointer;
+  background-color: rgb(210, 210, 210);
 }
 
 // GPTs Container
@@ -282,18 +283,6 @@
   }
 }
 
-.socialButtonFacebook {
-  width: 32px;
-  height: 32px;
-  color: #1877f2;
-}
-
-.socialButtonMessenger {
-  width: 32px;
-  height: 32px;
-  color: #2196f3;
-}
-
 // Button Container
 .buttonContainer {
   width: 100%;
@@ -303,7 +292,7 @@
   gap: 2rem;
 
   @media (max-width: 1024px) {
-    margin: 1rem 0 2rem 0;
+    margin: 1rem 0 1rem 0;
   }
 
   @media (max-width: 768px) {
@@ -319,6 +308,10 @@
 .buttonRun {
   @include button-style;
   margin-right: 1rem;
+}
+
+.shareButton {
+  @include button-style-social;
 }
 
 // Promotional text
