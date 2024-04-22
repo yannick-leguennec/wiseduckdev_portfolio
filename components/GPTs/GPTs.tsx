@@ -208,8 +208,8 @@ const GPTs = ({ deviceType }: GPTsProps) => {
       FR: "The Wise Duck Dev GPTs - Explorez l'avenir du développement",
     },
     shareButton: {
-      EN: "Share the Innovation",
-      FR: "Partage l'innovation",
+      EN: "Share",
+      FR: "Partagez",
     },
     shareTitle: {
       EN: "Explore and share The Wise Duck Dev GPTs with your network! The leading Library in custom GPTs for Web, Mobile, Blockchain, and AI Development",

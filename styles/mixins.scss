@@ -27,7 +27,7 @@
   font-weight: 600;
   color: $button-color;
   background-color: rgb(252, 250, 243);
-  border: 1px solid black;
+  border: 1px solid $button-color;
   border-radius: 25px;
   width: fit-content;
   padding: 0.5rem 2rem;
@@ -51,9 +51,13 @@
   gap: 0.3rem;
   font-size: 1rem;
   font-weight: 600;
-  color: rgb(255, 115, 0);
-  background-color: rgb(254, 230, 202);
-  border: 1px solid rgb(255, 115, 0);
+  color: white;
+  background: rgb(255, 112, 43);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 112, 43, 0.9337046529968455) 0%,
+    rgba(255, 158, 77, 0.8990043375394322) 100%
+  );
   border-radius: 25px;
   width: fit-content;
   padding: 0.5rem 1rem;
@@ -61,13 +65,6 @@
   @media (max-width: 768px) {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
-  }
-
-  &:hover {
-    background-color: darken(
-      rgb(252, 220, 184),
-      5%
-    ); // Darken the background color by 10% on hover
   }
 }
 
