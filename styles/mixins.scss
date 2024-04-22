@@ -45,6 +45,32 @@
   }
 }
 
+@mixin button-style-social {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(255, 115, 0);
+  background-color: rgb(254, 230, 202);
+  border: 1px solid rgb(255, 115, 0);
+  border-radius: 25px;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  &:hover {
+    background-color: darken(
+      rgb(252, 220, 184),
+      5%
+    ); // Darken the background color by 10% on hover
+  }
+}
+
 // Mixins for list items
 @mixin list-item {
   display: inline-block;

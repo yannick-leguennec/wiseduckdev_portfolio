@@ -11,9 +11,8 @@ import Main_GPTs from "../../components/Main_GPTs/Main_GPTs";
 import GPTs from "../../components/GPTs/GPTs";
 const Footer = dynamic(() => import("../../components/Footer/Footer"));
 import indexSchemaGPTs from "../../public/schemas/indexSchemaGPTs";
-import { string } from "yup";
 
-export default function GPTS({ deviceType, browserName }) {
+export default function GPTS({ deviceType }) {
   // Custom hook to manage the loading state
   const { setLoading } = useLoader();
   // Custom hook to manage the language state
@@ -37,8 +36,8 @@ export default function GPTS({ deviceType, browserName }) {
       FR: "👨‍💻🚀 Bonjour ! En tant que développeur Full Stack JS passionné par React et les innovations en IA, je me spécialise dans la création de GPT sur mesure qui optimisent les flux de travail et dynamisent les processus de développement. Si votre entreprise souhaite exploiter la puissance transformatrice de l'IA, ou si vous êtes un recruteur à la recherche d'un développeur qui allie créativité et technologie, parlons-en ! Ensemble, nous pouvons développer des solutions GPT adaptées à vos besoins spécifiques, favorisant l'efficacité et l'excellence dans chaque projet. Innovons et élevons vos opérations avec l'IA personnalisée ! 🤖✨",
     },
     title: {
-      EN: "The Wise Duck Dev GPTs | Explore Leading GPT Categories for Web and Mobile Development",
-      FR: "The Wise Duck Dev GPTs | Explorez les principales catégories de GPT pour le développement Web et Mobile",
+      EN: "The Wise Duck Dev GPTs | Explore Leading GPTs Categories for Web and Mobile Development",
+      FR: "The Wise Duck Dev GPTs | Explorez les principales catégories de GPTs pour le développement Web et Mobile",
     },
     description: {
       EN: "Explore the world's largest library of custom GPTs at The Wise Duck Dev GPTs, catering to all developer needs in web, mobile, AI, and blockchain. With over 200 GPTs across 12 categories including frontend, backend, design, and more, elevate your development projects to new heights.",
@@ -159,7 +158,7 @@ export default function GPTS({ deviceType, browserName }) {
 
       <Header />
       <Main_GPTs />
-      <GPTs deviceType={deviceType} browserName={browserName} />
+      <GPTs deviceType={deviceType} />
       <Footer />
       <SpeedInsights />
     </>
@@ -169,14 +168,9 @@ export default function GPTS({ deviceType, browserName }) {
 export async function getServerSideProps(context) {
   const parser = new UAParser(context.req.headers["user-agent"]);
   const result = parser.getResult();
-  const deviceType: string = result.device.type || "desktop"; // Fallback to 'desktop' if no type is determined
-  const browserName: string = result.browser.name;
-
-  // Log the full result or just the device type
-  console.log("Detected device type:", deviceType);
-  console.log("Full UA parser result:", result);
+  const deviceType: string = result.device.type || "desktop"; // Fallback to 'desktop' if no device type is found
 
   return {
-    props: { deviceType, browserName },
+    props: { deviceType },
   };
 }

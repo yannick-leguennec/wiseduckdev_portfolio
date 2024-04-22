@@ -27,11 +27,11 @@ import {
   WhatsappIcon,
 } from "react-share";
 import { TwitterIcon } from "next-share";
+import { IoMdShareAlt } from "react-icons/io";
 import classes from "./GPTs.module.scss";
 
 interface GPTsProps {
   deviceType: string;
-  browserName: string;
 }
 
 const GPTs = ({ deviceType }: GPTsProps) => {
@@ -128,7 +128,7 @@ const GPTs = ({ deviceType }: GPTsProps) => {
     if (navigator.share) {
       navigator
         .share({
-          title: "Check this out!",
+          title: translations.shareTitle[activeLanguage],
           url:
             activeLanguage === "FR"
               ? `https://${siteUrl}/fr/gpts`
@@ -206,6 +206,14 @@ const GPTs = ({ deviceType }: GPTsProps) => {
     metaTitle: {
       EN: "The Wise Duck Dev GPTs - Explore the Future of Development",
       FR: "The Wise Duck Dev GPTs - Explorez l'avenir du développement",
+    },
+    shareButton: {
+      EN: "Share the Innovation",
+      FR: "Partage l'innovation",
+    },
+    shareTitle: {
+      EN: "Explore and share The Wise Duck Dev GPTs with your network! The leading Library in custom GPTs for Web, Mobile, Blockchain, and AI Development",
+      FR: "Explore et partage les GPTs de The Wise Duck Dev! La plus grande bibliothèque de GPTs personnalisés pour le développement Web, Mobile, Blockchain et IA",
     },
   };
 
@@ -332,7 +340,9 @@ const GPTs = ({ deviceType }: GPTsProps) => {
           </>
         )}
         {(deviceType === "mobile" || deviceType === "tablet") && (
-          <button onClick={handleShare}>Share it!</button>
+          <button onClick={handleShare} className={classes.shareButton}>
+            {translations.shareButton[activeLanguage]} <IoMdShareAlt />
+          </button>
         )}
       </div>
 

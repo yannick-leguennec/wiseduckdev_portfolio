@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
-import { GetStaticProps, GetStaticPaths } from "next";
+import UAParser from "ua-parser-js";
+import { GetServerSideProps } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
@@ -34,7 +35,9 @@ import {
   WhatsappIcon,
 } from "react-share";
 import { TwitterIcon } from "next-share";
+import { IoMdShareAlt } from "react-icons/io";
 import classes from "../../styles/gptsSlug.module.scss";
+import path from "path";
 
 // Define the expected structure for the initial data uploaded
 interface initialPageData {
@@ -52,30 +55,8 @@ interface PageData {
   gpt?: GPTs_Type;
 }
 
-// Define the expected structure for your paths
-interface StaticPath {
-  params: {
-    slug: string[];
-  };
-  locale: string;
-}
-
-// Props type
-interface GPTsSlugProps {
-  initialPageData: initialPageData;
-}
-
-// Define the Language type
-type Language = "EN" | "FR";
-
-// This is a helper to read JSON files
-const readJsonFile = (filePath) => {
-  const json = fs.readFileSync(filePath, "utf8");
-  return JSON.parse(json);
-};
-
 // Define the expected structure for the initial data uploaded
-export default function GPTsSlug({ initialPageData }) {
+export default function GPTsSlug({ initialPageData, deviceType }) {
   // Custom hook to manage the loading state
   const { setLoading } = useLoader();
   // router hook
@@ -161,6 +142,25 @@ export default function GPTsSlug({ initialPageData }) {
     );
   };
 
+  // Function to handle sharing
+  const handleShare = (infos) => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: infos.title,
+          url: infos.url,
+        })
+        .then(() => {
+          console.log("Thanks for sharing!");
+        })
+        .catch((error) => {
+          console.error("Error sharing:", error);
+        });
+    } else {
+      alert("Your browser doesn't support the Share API");
+    }
+  };
+
   // Define the translations
   const translation: TranslationsType = {
     button: {
@@ -190,6 +190,22 @@ export default function GPTsSlug({ initialPageData }) {
     og_locale: {
       EN: "en_US",
       FR: "fr_FR",
+    },
+    buttonCategories: {
+      EN: "Spread the Knowledge",
+      FR: "Partage la Connaissance",
+    },
+    aria_label_button_categories: {
+      EN: "Share this GPT's category by clicking on this button",
+      FR: "Partage cette catégorie de GPT en cliquant sur ce bouton",
+    },
+    buttonGPTs: {
+      EN: "Share this GPT",
+      FR: "Partage ce GPT",
+    },
+    aria_label_button_gpts: {
+      EN: "Share this GPT by clicking on this button",
+      FR: "Partage ce GPT en cliquant sur ce bouton",
     },
   };
 
@@ -414,51 +430,69 @@ export default function GPTsSlug({ initialPageData }) {
               </p>
 
               <div className={classes.socialButtonContainerCategories}>
-                <h2 className={[classes.subtitleBold, classes.hide].join(" ")}>
-                  {translation.share[activeLanguage]}
-                </h2>
-                <FacebookShareButton
-                  url={`https://${siteUrl}/gpts/${pageData.category.category}`}
-                >
-                  <FacebookIcon size={32} round />
-                </FacebookShareButton>
-                <FacebookMessengerShareButton
-                  url={`https://${siteUrl}/gpts/${pageData.category.category}`}
-                  appId="451991680722269"
-                >
-                  <FacebookMessengerIcon size={32} round />
-                </FacebookMessengerShareButton>
-                <WhatsappShareButton
-                  url={`https://${siteUrl}/gpts/${pageData.category.category}`}
-                  title={pageData.category.meta_title_page}
-                  separator=": "
-                >
-                  <WhatsappIcon size={32} round />
-                </WhatsappShareButton>
-                <TwitterShareButton
-                  url={`https://${siteUrl}/gpts/${pageData.category.category}`}
-                  title={pageData.category.twitter_description}
-                >
-                  <TwitterIcon size={32} round />
-                </TwitterShareButton>
-                <LinkedinShareButton
-                  url={`https://${siteUrl}/gpts/${pageData.category.category}`}
-                >
-                  <LinkedinIcon size={32} round />
-                </LinkedinShareButton>
-                <TelegramShareButton
-                  url={`https://${siteUrl}/gpts/${pageData.category.category}`}
-                  title={pageData.category.meta_title_page}
-                >
-                  <TelegramIcon size={32} round />
-                </TelegramShareButton>
-                <EmailShareButton
-                  url={`https://${siteUrl}/gpts/${pageData.category.category}`}
-                  subject={pageData.category.meta_title_page}
-                  body={pageData.category.meta_description_page}
-                >
-                  <EmailIcon size={32} round />
-                </EmailShareButton>
+                {deviceType === "desktop" && (
+                  <>
+                    <FacebookShareButton
+                      url={`https://${siteUrl}/gpts/${pageData.category.category}`}
+                    >
+                      <FacebookIcon size={32} round />
+                    </FacebookShareButton>
+                    <FacebookMessengerShareButton
+                      url={`https://${siteUrl}/gpts/${pageData.category.category}`}
+                      appId="451991680722269"
+                    >
+                      <FacebookMessengerIcon size={32} round />
+                    </FacebookMessengerShareButton>
+                    <WhatsappShareButton
+                      url={`https://${siteUrl}/gpts/${pageData.category.category}`}
+                      title={pageData.category.meta_title_page}
+                      separator=": "
+                    >
+                      <WhatsappIcon size={32} round />
+                    </WhatsappShareButton>
+                    <TwitterShareButton
+                      url={`https://${siteUrl}/gpts/${pageData.category.category}`}
+                      title={pageData.category.twitter_description}
+                    >
+                      <TwitterIcon size={32} round />
+                    </TwitterShareButton>
+                    <LinkedinShareButton
+                      url={`https://${siteUrl}/gpts/${pageData.category.category}`}
+                    >
+                      <LinkedinIcon size={32} round />
+                    </LinkedinShareButton>
+                    <TelegramShareButton
+                      url={`https://${siteUrl}/gpts/${pageData.category.category}`}
+                      title={pageData.category.meta_title_page}
+                    >
+                      <TelegramIcon size={32} round />
+                    </TelegramShareButton>
+                    <EmailShareButton
+                      url={`https://${siteUrl}/gpts/${pageData.category.category}`}
+                      subject={pageData.category.meta_title_page}
+                      body={pageData.category.meta_description_page}
+                    >
+                      <EmailIcon size={32} round />
+                    </EmailShareButton>
+                  </>
+                )}
+                {(deviceType === "mobile" || deviceType === "tablet") && (
+                  <button
+                    onClick={() =>
+                      handleShare({
+                        title: pageData.category?.description,
+                        url: `https://${siteUrl}/gpts/${pageData.category?.category}`,
+                      })
+                    }
+                    className={classes.shareButton}
+                    aria-label={
+                      translation.aria_label_button_categories[activeLanguage]
+                    }
+                  >
+                    {translation.buttonCategories[activeLanguage]}{" "}
+                    <IoMdShareAlt />
+                  </button>
+                )}
               </div>
             </div>
             <div className={classes.imageContainer}>
@@ -552,51 +586,65 @@ export default function GPTsSlug({ initialPageData }) {
           </div>
           <div className={classes.downContainer}>
             <div className={classes.socialButtonContainerGPTs}>
-              <h2 className={[classes.subtitleBold, classes.hide].join(" ")}>
-                {translation.share[activeLanguage]}
-              </h2>
-              <FacebookShareButton
-                url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
-              >
-                <FacebookIcon size={32} round />
-              </FacebookShareButton>
-              <FacebookMessengerShareButton
-                url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
-                appId="451991680722269"
-              >
-                <FacebookMessengerIcon size={32} round />
-              </FacebookMessengerShareButton>
-              <WhatsappShareButton
-                url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
-                title={pageData.gpt.meta_title_page}
-                separator=": "
-              >
-                <WhatsappIcon size={32} round />
-              </WhatsappShareButton>
-              <TwitterShareButton
-                url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
-                title={pageData.gpt.twitter_description}
-              >
-                <TwitterIcon size={32} round />
-              </TwitterShareButton>
-              <LinkedinShareButton
-                url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
-              >
-                <LinkedinIcon size={32} round />
-              </LinkedinShareButton>
-              <TelegramShareButton
-                url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
-                title={pageData.gpt.meta_title_page}
-              >
-                <TelegramIcon size={32} round />
-              </TelegramShareButton>
-              <EmailShareButton
-                url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
-                subject={pageData.gpt.meta_title_page}
-                body={pageData.gpt.meta_description_page}
-              >
-                <EmailIcon size={32} round />
-              </EmailShareButton>
+              {deviceType === "desktop" && (
+                <>
+                  <FacebookShareButton
+                    url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                  >
+                    <FacebookIcon size={32} round />
+                  </FacebookShareButton>
+                  <FacebookMessengerShareButton
+                    url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                    appId="451991680722269"
+                  >
+                    <FacebookMessengerIcon size={32} round />
+                  </FacebookMessengerShareButton>
+                  <WhatsappShareButton
+                    url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                    title={pageData.gpt.meta_title_page}
+                    separator=": "
+                  >
+                    <WhatsappIcon size={32} round />
+                  </WhatsappShareButton>
+                  <TwitterShareButton
+                    url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                    title={pageData.gpt.twitter_description}
+                  >
+                    <TwitterIcon size={32} round />
+                  </TwitterShareButton>
+                  <LinkedinShareButton
+                    url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                  >
+                    <LinkedinIcon size={32} round />
+                  </LinkedinShareButton>
+                  <TelegramShareButton
+                    url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                    title={pageData.gpt.meta_title_page}
+                  >
+                    <TelegramIcon size={32} round />
+                  </TelegramShareButton>
+                  <EmailShareButton
+                    url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                    subject={pageData.gpt.meta_title_page}
+                    body={pageData.gpt.meta_description_page}
+                  >
+                    <EmailIcon size={32} round />
+                  </EmailShareButton>
+                </>
+              )}
+              {(deviceType === "mobile" || deviceType === "tablet") && (
+                <button
+                  onClick={() =>
+                    handleShare({
+                      title: pageData.gpt?.meta_description_page,
+                      url: `https://${siteUrl}/gpts${pageData.gpt?.path}`,
+                    })
+                  }
+                  className={classes.shareButton}
+                >
+                  {translation.buttonGPTs[activeLanguage]} <IoMdShareAlt />
+                </button>
+              )}
             </div>
             <div className={classes.buttonContainer}>
               <RedirectToSearchSectionButton />
@@ -627,16 +675,18 @@ export default function GPTsSlug({ initialPageData }) {
   );
 }
 
-export const getStaticProps: GetStaticProps<GPTsSlugProps> = async ({
-  params,
-  locale,
-}) => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const { params, locale } = context;
   const fs = require("fs");
-  const path = require("path");
+
+  const parser = new UAParser(context.req.headers["user-agent"]);
+  const result = parser.getResult();
+  const deviceType: string = result.device.type || "desktop"; // Fallback to 'desktop' if no device type is found
+
   // Ensure slug is treated as string[]
   const slug = params?.slug as string[];
   // Convert the locale to the active language
-  const lang: Language = locale === "fr" ? "FR" : "EN";
+  const lang = locale === "fr" ? "FR" : "EN";
 
   // Define the path to your JSON files
   const basePath = path.join(process.cwd(), "public/docs/GPTs");
@@ -647,105 +697,173 @@ export const getStaticProps: GetStaticProps<GPTsSlugProps> = async ({
   const readJson = (filePath: string) =>
     JSON.parse(fs.readFileSync(filePath, "utf8"));
 
-  // Read and parse the JSON files
-  const categoriesData = readJson(categoriesFilePath)[lang];
-  const gptsData = readJson(gptsFilePath)[lang];
+  try {
+    // Read and parse the JSON files
+    const categoriesData = readJson(categoriesFilePath)[lang];
+    const gptsData = readJson(gptsFilePath)[lang];
 
-  // Define the initial page data
-  let initialPageData: PageData = {
-    type: slug.length === 1 ? "category" : "gpt",
-  };
+    let initialPageData: initialPageData;
 
-  if (slug.length === 1) {
-    // Logic for category pages
-    const categoryData = categoriesData.find((category) =>
-      category.path.endsWith(slug[0])
-    );
-    if (!categoryData) {
-      return { notFound: true };
+    if (slug.length === 1) {
+      const categoryData = categoriesData.find((category) =>
+        category.path.endsWith(slug[0])
+      );
+      if (!categoryData) {
+        return { notFound: true };
+      }
+      const relatedGpts = gptsData.filter((gpt) =>
+        gpt.category.includes(slug[0])
+      );
+      initialPageData = {
+        type: "category",
+        category: categoryData,
+        gpts: relatedGpts,
+      };
+    } else {
+      const gptData = gptsData.find((gpt) =>
+        gpt.path.endsWith(`${slug[0]}/${slug[1]}`)
+      );
+      if (!gptData) {
+        return { notFound: true };
+      }
+      initialPageData = { type: "gpt", gpt: gptData };
     }
-    const relatedGpts = gptsData.filter((gpt) =>
-      gpt.category.includes(slug[0])
-    );
-    initialPageData = {
-      type: "category",
-      category: categoryData,
-      gpts: relatedGpts,
+
+    return {
+      props: {
+        initialPageData,
+        deviceType,
+      },
     };
-  } else {
-    // Logic for gpt pages
-    const gptData = gptsData.find((gpt) =>
-      gpt.path.endsWith(`${slug[0]}/${slug[1]}`)
-    );
-    if (!gptData) {
-      return { notFound: true };
-    }
-    initialPageData = { type: "gpt", gpt: gptData };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    // Ensure the return of a valid object even in the error case
+    return {
+      props: {}, // You might want to pass some default error props
+      notFound: true, // Optionally use this or redirect depending on error handling strategy
+    };
   }
-
-  return { props: { initialPageData } };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const fs = require("fs");
-  const path = require("path");
+// export const getStaticProps: GetStaticProps<GPTsSlugProps> = async ({
+//   params,
+//   locale,
+// }) => {
+//   const fs = require("fs");
+//   const path = require("path");
+//   // Ensure slug is treated as string[]
+//   const slug = params?.slug as string[];
+//   // Convert the locale to the active language
+//   const lang: Language = locale === "fr" ? "FR" : "EN";
 
-  // Paths to JSON data
-  const basePath = path.join(process.cwd(), "public/docs/GPTs");
-  const categoriesFilePath = path.join(basePath, "gpts_categories.json");
-  const itemsFilePath = path.join(basePath, "gpts.json");
+//   // Define the path to your JSON files
+//   const basePath = path.join(process.cwd(), "public/docs/GPTs");
+//   const categoriesFilePath = path.join(basePath, "gpts_categories.json");
+//   const gptsFilePath = path.join(basePath, "gpts.json");
 
-  // Function to read and parse JSON files
-  const readJson = (filePath) => JSON.parse(fs.readFileSync(filePath, "utf8"));
+//   // Function to read and parse JSON files
+//   const readJson = (filePath: string) =>
+//     JSON.parse(fs.readFileSync(filePath, "utf8"));
 
-  // Reading JSON data
-  const categoriesData = readJson(categoriesFilePath);
-  const itemsData = readJson(itemsFilePath);
+//   // Read and parse the JSON files
+//   const categoriesData = readJson(categoriesFilePath)[lang];
+//   const gptsData = readJson(gptsFilePath)[lang];
 
-  const uniquePaths = new Set<string>();
-  const paths: StaticPath[] = [];
+//   // Define the initial page data
+//   let initialPageData: PageData = {
+//     type: slug.length === 1 ? "category" : "gpt",
+//   };
 
-  // Generate paths for categories
-  Object.keys(categoriesData).forEach((localeKey) => {
-    const locale = localeKey.toLowerCase();
-    categoriesData[localeKey].forEach((category) => {
-      const cleanPath = category.path.startsWith("/")
-        ? category.path.slice(1)
-        : category.path;
-      paths.push({
-        params: { slug: [cleanPath] },
-        locale,
-      });
-    });
-  });
+//   if (slug.length === 1) {
+//     // Logic for category pages
+//     const categoryData = categoriesData.find((category) =>
+//       category.path.endsWith(slug[0])
+//     );
+//     if (!categoryData) {
+//       return { notFound: true };
+//     }
+//     const relatedGpts = gptsData.filter((gpt) =>
+//       gpt.category.includes(slug[0])
+//     );
+//     initialPageData = {
+//       type: "category",
+//       category: categoryData,
+//       gpts: relatedGpts,
+//     };
+//   } else {
+//     // Logic for gpt pages
+//     const gptData = gptsData.find((gpt) =>
+//       gpt.path.endsWith(`${slug[0]}/${slug[1]}`)
+//     );
+//     if (!gptData) {
+//       return { notFound: true };
+//     }
+//     initialPageData = { type: "gpt", gpt: gptData };
+//   }
 
-  // Generate paths for GPTs
-  Object.keys(itemsData).forEach((localeKey) => {
-    const locale = localeKey.toLowerCase();
-    itemsData[localeKey].forEach((item) => {
-      item.category.forEach((category) => {
-        const itemPathSegments = item.path.startsWith("/")
-          ? item.path.slice(1).split("/")
-          : item.path.split("/");
-        const slug =
-          itemPathSegments.length > 1
-            ? itemPathSegments
-            : [category, itemPathSegments[0]];
-        const pathKey = `${locale}-${slug.join("/")}`;
+//   return { props: { initialPageData } };
+// };
 
-        if (!uniquePaths.has(pathKey)) {
-          uniquePaths.add(pathKey);
-          paths.push({
-            params: { slug },
-            locale,
-          });
-        }
-      });
-    });
-  });
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const fs = require("fs");
+//   const path = require("path");
 
-  return {
-    paths,
-    fallback: false,
-  };
-};
+//   // Paths to JSON data
+//   const basePath = path.join(process.cwd(), "public/docs/GPTs");
+//   const categoriesFilePath = path.join(basePath, "gpts_categories.json");
+//   const itemsFilePath = path.join(basePath, "gpts.json");
+
+//   // Function to read and parse JSON files
+//   const readJson = (filePath) => JSON.parse(fs.readFileSync(filePath, "utf8"));
+
+//   // Reading JSON data
+//   const categoriesData = readJson(categoriesFilePath);
+//   const itemsData = readJson(itemsFilePath);
+
+//   const uniquePaths = new Set<string>();
+//   const paths: StaticPath[] = [];
+
+//   // Generate paths for categories
+//   Object.keys(categoriesData).forEach((localeKey) => {
+//     const locale = localeKey.toLowerCase();
+//     categoriesData[localeKey].forEach((category) => {
+//       const cleanPath = category.path.startsWith("/")
+//         ? category.path.slice(1)
+//         : category.path;
+//       paths.push({
+//         params: { slug: [cleanPath] },
+//         locale,
+//       });
+//     });
+//   });
+
+//   // Generate paths for GPTs
+//   Object.keys(itemsData).forEach((localeKey) => {
+//     const locale = localeKey.toLowerCase();
+//     itemsData[localeKey].forEach((item) => {
+//       item.category.forEach((category) => {
+//         const itemPathSegments = item.path.startsWith("/")
+//           ? item.path.slice(1).split("/")
+//           : item.path.split("/");
+//         const slug =
+//           itemPathSegments.length > 1
+//             ? itemPathSegments
+//             : [category, itemPathSegments[0]];
+//         const pathKey = `${locale}-${slug.join("/")}`;
+
+//         if (!uniquePaths.has(pathKey)) {
+//           uniquePaths.add(pathKey);
+//           paths.push({
+//             params: { slug },
+//             locale,
+//           });
+//         }
+//       });
+//     });
+//   });
+
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };

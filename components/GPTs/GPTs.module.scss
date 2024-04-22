@@ -142,6 +142,10 @@
   @include button-style-reverted;
 }
 
+.shareButton {
+  @include button-style-social;
+}
+
 // Results infos
 .resultsInfo {
   margin-top: 2rem;
