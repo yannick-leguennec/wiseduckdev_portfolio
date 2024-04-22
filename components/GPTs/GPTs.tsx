@@ -129,7 +129,10 @@ const GPTs = ({ deviceType }: GPTsProps) => {
       navigator
         .share({
           title: "Check this out!",
-          url: window.location.href,
+          url:
+            activeLanguage === "FR"
+              ? `https://${siteUrl}/fr/gpts`
+              : `https://${siteUrl}/gpts`,
         })
         .then(() => {
           console.log("Thanks for sharing!");
