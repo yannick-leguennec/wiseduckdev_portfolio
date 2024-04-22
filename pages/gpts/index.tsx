@@ -13,7 +13,7 @@ const Footer = dynamic(() => import("../../components/Footer/Footer"));
 import indexSchemaGPTs from "../../public/schemas/indexSchemaGPTs";
 import { string } from "yup";
 
-export default function GPTS({ deviceType }) {
+export default function GPTS({ deviceType, browserName }) {
   // Custom hook to manage the loading state
   const { setLoading } = useLoader();
   // Custom hook to manage the language state
@@ -38,7 +38,7 @@ export default function GPTS({ deviceType }) {
     },
     title: {
       EN: "The Wise Duck Dev GPTs | Explore Leading GPT Categories for Web and Mobile Development",
-      FR: "GPT de The Wise Duck Dev | Explorez les principales catégories de GPT pour le développement Web et Mobile",
+      FR: "The Wise Duck Dev GPTs | Explorez les principales catégories de GPT pour le développement Web et Mobile",
     },
     description: {
       EN: "Explore the world's largest library of custom GPTs at The Wise Duck Dev GPTs, catering to all developer needs in web, mobile, AI, and blockchain. With over 200 GPTs across 12 categories including frontend, backend, design, and more, elevate your development projects to new heights.",
@@ -49,7 +49,7 @@ export default function GPTS({ deviceType }) {
       FR: "Le Wise Duck Dev dégage une allure élégante et professionnelle, vêtu d'un costume de style Men In Black, symbolisant une approche élégante du développement et de l'expertise en GPT.",
     },
     og_title: {
-      EN: "The Wise Duck Dev GPTs | Gateway to Specialized GPT for Developer",
+      EN: "The Wise Duck Dev GPTs | Gateway to Specialized GPTs for Developer",
       FR: "Les GPT de Wise Duck Dev | GPTS spécialisés pour les développeurs",
     },
     og_description: {
@@ -159,9 +159,7 @@ export default function GPTS({ deviceType }) {
 
       <Header />
       <Main_GPTs />
-      <GPTs deviceType={deviceType} />
-      {/* ! ONLY FOR TEST PURPOSES */}
-      <p>Detected device type: {deviceType}</p>
+      <GPTs deviceType={deviceType} browserName={browserName} />
       <Footer />
       <SpeedInsights />
     </>
@@ -172,12 +170,13 @@ export async function getServerSideProps(context) {
   const parser = new UAParser(context.req.headers["user-agent"]);
   const result = parser.getResult();
   const deviceType: string = result.device.type || "desktop"; // Fallback to 'desktop' if no type is determined
+  const browserName: string = result.browser.name;
 
   // Log the full result or just the device type
   console.log("Detected device type:", deviceType);
   console.log("Full UA parser result:", result);
 
   return {
-    props: { deviceType },
+    props: { deviceType, browserName },
   };
 }

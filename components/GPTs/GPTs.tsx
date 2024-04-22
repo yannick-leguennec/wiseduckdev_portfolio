@@ -31,9 +31,10 @@ import classes from "./GPTs.module.scss";
 
 interface GPTsProps {
   deviceType: string;
+  browserName: string;
 }
 
-const GPTs = (deviceType: GPTsProps) => {
+const GPTs = ({ deviceType }: GPTsProps) => {
   // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
   //   State to store the filtered GPTs by languages
@@ -50,7 +51,6 @@ const GPTs = (deviceType: GPTsProps) => {
   const portfolioLink = activeLanguage === "FR" ? `/fr` : `/`;
   // Site URL
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  console.log("site URL:", siteUrl);
 
   // Fetch the GPTs categories data from the JSON file
   useEffect(() => {
@@ -121,6 +121,25 @@ const GPTs = (deviceType: GPTsProps) => {
   // Function to handle the search change
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
+  };
+
+  // Function to handle sharing
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "Check this out!",
+          url: window.location.href,
+        })
+        .then(() => {
+          console.log("Thanks for sharing!");
+        })
+        .catch((error) => {
+          console.error("Error sharing:", error);
+        });
+    } else {
+      alert("Your browser doesn't support the Share API");
+    }
   };
 
   //   Object to store the translations for the title and subtitle
@@ -267,44 +286,51 @@ const GPTs = (deviceType: GPTsProps) => {
             ))}
       </div>
       <div className={classes.socialButtonContainerGPTs}>
-        <FacebookShareButton url={`https://${siteUrl}/gpts`}>
-          <FacebookIcon size={32} round />
-        </FacebookShareButton>
-        <FacebookMessengerShareButton
-          url={`https://${siteUrl}/gpts`}
-          appId="451991680722269"
-        >
-          <FacebookMessengerIcon size={32} round />
-        </FacebookMessengerShareButton>
-        <WhatsappShareButton
-          url={`https://${siteUrl}/gpts`}
-          title={translations.metaTitle[activeLanguage]}
-          separator=": "
-        >
-          <WhatsappIcon size={32} round />
-        </WhatsappShareButton>
-        <TwitterShareButton
-          url={`https://${siteUrl}/gpts`}
-          title={translations.twitterDescription[activeLanguage]}
-        >
-          <TwitterIcon size={32} round />
-        </TwitterShareButton>
-        <LinkedinShareButton url={`https://${siteUrl}/gpts`}>
-          <LinkedinIcon size={32} round />
-        </LinkedinShareButton>
-        <TelegramShareButton
-          url={`https://${siteUrl}/gpts`}
-          title={translations.metaTitle[activeLanguage]}
-        >
-          <TelegramIcon size={32} round />
-        </TelegramShareButton>
-        <EmailShareButton
-          url={`https://${siteUrl}/gpts`}
-          subject={translations.metaTitle[activeLanguage]}
-          body={translations.mailMessage[activeLanguage]}
-        >
-          <EmailIcon size={32} round />
-        </EmailShareButton>
+        {deviceType === "desktop" && (
+          <>
+            <FacebookShareButton url={`https://${siteUrl}/gpts`}>
+              <FacebookIcon size={32} round />
+            </FacebookShareButton>
+            <FacebookMessengerShareButton
+              url={`https://${siteUrl}/gpts`}
+              appId="451991680722269"
+            >
+              <FacebookMessengerIcon size={32} round />
+            </FacebookMessengerShareButton>
+            <WhatsappShareButton
+              url={`https://${siteUrl}/gpts`}
+              title={translations.metaTitle[activeLanguage]}
+              separator=": "
+            >
+              <WhatsappIcon size={32} round />
+            </WhatsappShareButton>
+            <TwitterShareButton
+              url={`https://${siteUrl}/gpts`}
+              title={translations.twitterDescription[activeLanguage]}
+            >
+              <TwitterIcon size={32} round />
+            </TwitterShareButton>
+            <LinkedinShareButton url={`https://${siteUrl}/gpts`}>
+              <LinkedinIcon size={32} round />
+            </LinkedinShareButton>
+            <TelegramShareButton
+              url={`https://${siteUrl}/gpts`}
+              title={translations.metaTitle[activeLanguage]}
+            >
+              <TelegramIcon size={32} round />
+            </TelegramShareButton>
+            <EmailShareButton
+              url={`https://${siteUrl}/gpts`}
+              subject={translations.metaTitle[activeLanguage]}
+              body={translations.mailMessage[activeLanguage]}
+            >
+              <EmailIcon size={32} round />
+            </EmailShareButton>
+          </>
+        )}
+        {(deviceType === "mobile" || deviceType === "tablet") && (
+          <button onClick={handleShare}>Share it!</button>
+        )}
       </div>
 
       <Link href={portfolioLink} className={classes.promoText}>
