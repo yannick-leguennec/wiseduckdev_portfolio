@@ -196,7 +196,7 @@ function Header() {
                   </li>
                 ))
               : newNavItems.map(({ name, path, key, active }) => (
-                  <li key={key} className={classes.navItem}>
+                  <li key={key}>
                     <a
                       href={path}
                       tabIndex={0}
@@ -208,6 +208,17 @@ function Header() {
                     </a>
                   </li>
                 ))}
+            {isHomePage && (
+              <li>
+                <a
+                  href={activeLanguage === "FR" ? "/fr/gpts" : "/gpts"}
+                  tabIndex={0}
+                  className={classes.navLinkGPTs}
+                >
+                  GPTs
+                </a>
+              </li>
+            )}
           </ul>
         </nav>
         <div className={classes.buttonsContainer}>
@@ -281,6 +292,17 @@ function Header() {
                       </a>
                     </li>
                   ))}
+              {isHomePage && (
+                <li>
+                  <a
+                    href={activeLanguage === "FR" ? "/fr/gpts" : "/gpts"}
+                    tabIndex={0}
+                    className={classes.navLinkGPTs}
+                  >
+                    GPTs
+                  </a>
+                </li>
+              )}
             </ul>
           </nav>
           <div className={classes.buttonsContainer}>
