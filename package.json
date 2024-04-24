@@ -10,7 +10,9 @@
     "lint": "next lint",
     "control_data": "ts-node scripts/gpts_data_controler.ts",
     "facebook_metadata": "ts-node scripts/facebook_graph.ts",
-    "diamond_data": "ts-node scripts/diamond_data.ts"
+    "diamond_gpts_data": "ts-node scripts/diamond_gpts_data.ts",
+    "diamond_random_data": "ts-node scripts/diamond_random_data_for_digital_marketing.ts",
+    "diamond_categories_data": "ts-node scripts/diamond_categories_data.ts"
   },
   "dependencies": {
     "@vercel/speed-insights": "^1.0.10",
