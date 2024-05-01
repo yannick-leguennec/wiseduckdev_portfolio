@@ -13,6 +13,10 @@
   gap: 1.5rem;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 390px) {
+    gap: 1rem;
+  }
 }
 
 // SOCIAL LINKS CONTAINER
@@ -26,6 +30,10 @@
   @media (max-width: 478px) {
     gap: 1rem;
     margin-left: 2rem;
+  }
+
+  @media (max-width: 390px) {
+    margin-left: 1.5rem;
   }
 }
 
@@ -47,6 +55,13 @@
   @media (max-width: 478px) {
     margin-right: 2rem;
     font-size: 0.9rem;
+  }
+
+  @media (max-width: 390px) {
+    font-size: 0.8rem;
+    @media (max-width: 390px) {
+      margin-right: 1.5rem;
+    }
   }
 }
 

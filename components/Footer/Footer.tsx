@@ -7,6 +7,7 @@ import { FaGithub } from "react-icons/fa";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaRobot } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import Image from "next/image";
 import logo from "../../public/images/logos/simple_logo_white.png";
 import { BsCopy } from "react-icons/bs";
@@ -172,6 +173,13 @@ function Footer() {
             target="_blank"
           >
             <FaXTwitter className={classes.logo} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/wise-duck-dev/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <FaLinkedinIn className={classes.logo} />
           </a>
           {isHomePage && (
             <a href={gptsLink} rel="noopener noreferrer">
