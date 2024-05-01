@@ -1,13 +1,13 @@
-const axios = require("axios");
-const xml2js = require("xml2js");
+// const axios = require("axios");
+// const xml2js = require("xml2js");
 // ! Need to be able to access the .env file
 // const dotenv = require("dotenv");
 
 // Initialize dotenv to load the .env file variables into process.env
-dotenv.config();
+// dotenv.config();
 
-const accessToken = process.env.FACEBOOK_ACCESS_TOKEN;
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
+// const accessToken = process.env.FACEBOOK_ACCESS_TOKEN;
+// const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
 // // const sitemapUrl = `https://${baseUrl}/sitemap.xml`;
 // const sitemapUrl = `https://wiseduckdev.com/sitemap.xml`;
@@ -58,22 +58,22 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
 // // Start the process
 // fetchSitemapAndScrape();
 
-// To try individual URLs, use the fetchFacebookData function
-async function fetchFacebookDataIndividual(url) {
-  const endpoint = `https://graph.facebook.com/v12.0/?id=${encodeURIComponent(
-    url
-  )}&scrape=true&access_token=${accessToken}`;
-  console.log("Request URL:", endpoint); // Log the constructed request URL to verify it
-  try {
-    const response = await axios.post(endpoint);
-    console.log("Response:", response.data);
-  } catch (error) {
-    console.error(
-      "Failed to scrape:",
-      error.response ? error.response.data : error.message
-    );
-  }
-}
+//! To try individual URLs, use the fetchFacebookData function
+// async function fetchFacebookDataIndividual(url) {
+//   const endpoint = `https://graph.facebook.com/v12.0/?id=${encodeURIComponent(
+//     url
+//   )}&scrape=true&access_token=${accessToken}`;
+//   console.log("Request URL:", endpoint); // Log the constructed request URL to verify it
+//   try {
+//     const response = await axios.post(endpoint);
+//     console.log("Response:", response.data);
+//   } catch (error) {
+//     console.error(
+//       "Failed to scrape:",
+//       error.response ? error.response.data : error.message
+//     );
+//   }
+// }
 
 // Example URL to scrape
-fetchFacebookDataIndividual("https://wiseduckdev.com/");
+// fetchFacebookDataIndividual("https://wiseduckdev.com/");

@@ -12,7 +12,8 @@
     "facebook_metadata": "ts-node scripts/facebook_graph.ts",
     "diamond_gpts_data": "ts-node scripts/diamond_gpts_data.ts",
     "diamond_random_data": "ts-node scripts/diamond_random_data_for_digital_marketing.ts",
-    "diamond_categories_data": "ts-node scripts/diamond_categories_data.ts"
+    "diamond_categories_data": "ts-node scripts/diamond_categories_data.ts",
+    "index_now": "ts-node scripts/bing_index_now.ts"
   },
   "dependencies": {
     "@vercel/speed-insights": "^1.0.10",
