@@ -95,12 +95,12 @@ const GPTs = ({ deviceType }: GPTsProps) => {
 
         setFilteredGPTs(filteredData); // Set the sorted and filtered data
 
-        // GA4 Event for tracking search
-        gtag("event", "search", {
-          event_category: "Site Search",
-          event_label: value,
-          search_term: value, // Sending the actual search term used
-        });
+        //   // GA4 Event for tracking search
+        //   gtag("event", "search", {
+        //     event_category: "Site Search",
+        //     event_label: value,
+        //     search_term: value, // Sending the actual search term used
+        //   });
       }
     } catch (error) {
       console.error("Failed to fetch GPTs data:", error);
