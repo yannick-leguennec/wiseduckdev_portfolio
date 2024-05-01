@@ -10,7 +10,7 @@ const accessToken = process.env.FACEBOOK_ACCESS_TOKEN;
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
 // // const sitemapUrl = `https://${baseUrl}/sitemap.xml`;
-// const sitemapUrl = `https://wiseduckdev.vercel.app/sitemap.xml`;
+// const sitemapUrl = `https://wiseduckdev.com/sitemap.xml`;
 
 // async function fetchSitemapAndScrape() {
 //   try {
@@ -76,4 +76,4 @@ async function fetchFacebookDataIndividual(url) {
 }
 
 // Example URL to scrape
-fetchFacebookDataIndividual("https://wiseduckdev.vercel.app/");
+fetchFacebookDataIndividual("https://wiseduckdev.com/");

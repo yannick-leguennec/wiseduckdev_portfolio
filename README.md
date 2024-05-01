@@ -1,4 +1,4 @@
-![AI and Photoshop-crafted image of The Wise Duck Dev in a white suit, embracing innovation and style, seating in a modern couch amidst tropical plants, bridging the Skills and Experience sections with a blend of professionalism and creativity.](public/images/index/innovative-developer-wise-duck-dev-white-suit-couch-tropical-plants-mobile.webp) 
+![AI and Photoshop-crafted image of The Wise Duck Dev in a white suit, embracing innovation and style, seating in a modern couch amidst tropical plants, bridging the Skills and Experience sections with a blend of professionalism and creativity.](public/images/index/innovative-developer-wise-duck-dev-white-suit-couch-tropical-plants-mobile.webp)
 
 # Welcome to The Wise Duck Dev 🦆
 
@@ -17,11 +17,12 @@ Hello there! I'm Yannick Le Guennec, the visionary force behind The Wise Duck De
 
 In the latest evolution of The Wise Duck Dev, I'm thrilled to introduce the Wise Duck Dev GPTs Library — the largest specialized GPT library in the world for web, mobile, AI, and blockchain development. This extensive library features over 200 specialized GPTs, carefully categorized into 12 distinct areas including frontend, backend, design, database, frameworks, CMS, productivity, cybersecurity, automation, AI, blockchain, and programming.
 
-🔗 **Explore the GPTs Library**: [Wise Duck Dev GPTs Library](https://wiseduckdev.vercel.app/gpts)
+🔗 **Explore the GPTs Library**: [Wise Duck Dev GPTs Library](https://wiseduckdev.com/gpts)
 
 This resource is crafted to serve as a pivotal tool for developers, providing tailored GPTs that enhance productivity and foster innovation across various domains. Each GPT is designed with a deep understanding of its specific field, ensuring that users receive highly accurate and relevant assistance. Whether you're developing a complex blockchain solution, designing an interactive web application, or integrating AI into your projects, the Wise Duck Dev GPTs Library offers the tools you need to succeed.
 
 **Highlights of the GPTs Library**:
+
 - 🛠️ **Comprehensive Coverage**: From essential web technologies to cutting-edge blockchain applications, each category is equipped with GPTs designed to address specific development needs.
 - 🚀 **Ease of Use**: The library is organized to facilitate easy access to the tools you need, saving time and enhancing your workflow.
 - 🔄 **Regular Updates and Additions**: The library is continually updated to include the latest advancements in technology, ensuring you have access to the most current tools.
@@ -48,7 +49,7 @@ Discover my innovative approach to web development through my portfolio with for
 
 ### Contact Me 📧
 
-- **Website**: [wiseduckdev.vercel.app](https://wiseduckdev.vercel.app)
+- **Website**: [wiseduckdev.com](https://wiseduckdev.com)
 - **GitHub**: [yannick-leguennec](https://github.com/yannick-leguennec)
 - **Email**: [wiseduckdev@gmail.com](mailto:wiseduckdev@gmail.com)
 
