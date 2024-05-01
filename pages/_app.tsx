@@ -55,6 +55,22 @@ const ComponentWithLoader: React.FC<AppProps> = ({
     <>
       {/* The loader appears only if the laoding variable is true */}
       {loading && <Loader />}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-433NXG83KC"
+        strategy="afterInteractive"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-433NXG83KC');
+          `,
+        }}
+      />
       <Component {...pageProps} />
     </>
   );

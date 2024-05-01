@@ -29,7 +29,7 @@
 //     return;
 //   }
 
-//   const endpoint = "https://api.indexnow.org/IndexNow";
+//   const endpoint = "https://api.indexnow.org";
 //   const body = {
 //     host: "wiseduckdev.com",
 //     key: apiKey,
