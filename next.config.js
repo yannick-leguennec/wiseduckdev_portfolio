@@ -8,14 +8,20 @@ module.exports = {
     locales: ["en", "fr"],
     defaultLocale: "en",
   },
-  // ! TO ACTIVATE WHEN SWITCHING DOMAIN
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: '/:path*',
-  //       destination: 'https://wiseduckdev.com/:path*',
-  //       permanent: true, // Indicates a 301 redirect
-  //     },
-  //   ];
-  // },
+
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "wiseduckdev.vercel.app",
+          },
+        ],
+        destination: "https://wiseduckdev.com/:path*",
+        permanent: true, // Indicates a 301 redirect
+      },
+    ];
+  },
 };
