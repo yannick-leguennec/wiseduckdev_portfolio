@@ -1,18 +1,18 @@
-// import axios from "axios";
-// import { parseStringPromise } from "xml2js";
-// import { readFile } from "fs/promises";
-// import * as dotenv from "dotenv";
+// const axios = require("axios");
+// const xml2js = require("xml2js");
+// const fs = require("fs").promises;
+// const dotenv = require("dotenv");
 
 // dotenv.config();
 
 // async function loadUrlsFromSitemap(filePath: string): Promise<string[]> {
 //   try {
-//     const data = await readFile(filePath, "utf8");
-//     const result = await parseStringPromise(data);
+//     const data = await fs.readFile(filePath, "utf8");
+//     const result = await xml2js.parseStringPromise(data);
 //     const urls: string[] = result.urlset.url.map((u: any) => u.loc[0]);
 //     return urls.filter(
 //       (url) =>
-//         url.startsWith("https://wiseduckdev.com/") &&
+//         url.startsWith("https://wiseduckdev.com") &&
 //         !url.startsWith("https://wiseduckdev.com/fr")
 //     );
 //   } catch (error) {
