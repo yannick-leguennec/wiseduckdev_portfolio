@@ -124,6 +124,7 @@ function Profil() {
         <p>{translations.description2[activeLanguage]}</p>
         <div className={`${classes.buttonContainer}`}>
           <a
+            id="downloadResumeButton"
             href={translations.cv[activeLanguage]}
             target="_blank"
             rel="noopener noreferrer"
