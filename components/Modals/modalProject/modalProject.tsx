@@ -90,6 +90,13 @@ const ModalProject = ({ project, onClose }) => {
             href={project.project_link}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              if (window.gtag)
+                window.gtag("event", "navigation_click", {
+                  event_category: "Navigations",
+                  event_navigation: `Open project ${project.project_title}`,
+                });
+            }}
           >
             <button className={classes.buttonRun}>
               {translations.project[activeLanguage]}

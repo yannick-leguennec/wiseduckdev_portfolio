@@ -8,6 +8,14 @@ const GPTs_Card_Category = (props: GPTs_Card_Category_Type) => {
       href={`/gpts/${props.path}`}
       passHref
       className={[classes.link, classes.cardContainer].join(" ")}
+      onClick={() => {
+        if (window.gtag) {
+          window.gtag("event", "navigation_click", {
+            event_category: "Navigation",
+            event_navigation: `${props.card_title} card was clicked`,
+          });
+        }
+      }}
     >
       <div className={classes.imageContainer}>
         <div className={classes.imageContainer}>

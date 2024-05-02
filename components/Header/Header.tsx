@@ -98,6 +98,13 @@ function Header() {
 
     // Navigate to the determined path
     router.push(basePath);
+
+    if (window.gtag) {
+      window.gtag("event", "navigation_click", {
+        event_category: "Navigation",
+        event_navigation: `Clicked on Logo from Header to ${basePath}`,
+      });
+    }
   };
 
   // Object to store the translations
@@ -189,7 +196,15 @@ function Header() {
                       href={`#${key}`}
                       tabIndex={0}
                       className={`${classes.navLink} ${isActive(key)}`}
-                      onClick={() => scrollToSection(key)}
+                      onClick={() => {
+                        scrollToSection(key);
+                        if (window.gtag) {
+                          window.gtag("event", "navigation_click", {
+                            event_category: "Navigation",
+                            event_navigation: `${key} from Header`,
+                          });
+                        }
+                      }}
                     >
                       {translations[key][activeLanguage]}
                     </a>
@@ -203,6 +218,14 @@ function Header() {
                       className={`${classes.navLink} ${
                         active ? classes.activeLink : ""
                       }`}
+                      onClick={() => {
+                        if (window.gtag) {
+                          window.gtag("event", "navigation_click", {
+                            event_category: "Navigation",
+                            event_navigation: `${name} from GPTs Header`,
+                          });
+                        }
+                      }}
                     >
                       {name}
                     </a>
@@ -214,6 +237,14 @@ function Header() {
                   href={activeLanguage === "FR" ? "/fr/gpts" : "/gpts"}
                   tabIndex={0}
                   className={classes.navLinkGPTs}
+                  onClick={() => {
+                    if (window.gtag) {
+                      window.gtag("event", "navigation_click", {
+                        event_category: "Navigation",
+                        event_navigation: "Portofolio to GPTs from Header",
+                      });
+                    }
+                  }}
                 >
                   GPTs
                 </a>
@@ -228,7 +259,15 @@ function Header() {
                 ? classes.activeButton
                 : classes.inactiveButton
             }`}
-            onClick={() => toggleLanguage("EN")}
+            onClick={() => {
+              toggleLanguage("EN");
+              if (window.gtag) {
+                window.gtag("event", "language_change", {
+                  event_category: "Language",
+                  event_navigation: "EN from Header",
+                });
+              }
+            }}
             role="button"
             aria-label="Change language to English"
           >
@@ -240,7 +279,15 @@ function Header() {
                 ? classes.activeButton
                 : classes.inactiveButton
             }`}
-            onClick={() => toggleLanguage("FR")}
+            onClick={() => {
+              toggleLanguage("FR");
+              if (window.gtag) {
+                window.gtag("event", "language_change", {
+                  event_category: "Language",
+                  event_navigation: "FR from Header",
+                });
+              }
+            }}
             role="button"
             aria-label="Change language to French"
           >
@@ -273,7 +320,15 @@ function Header() {
                         href={`#${key}`}
                         tabIndex={0}
                         className={`${classes.navLink} ${isActive(key)}`}
-                        onClick={() => scrollToSection(key)}
+                        onClick={() => {
+                          scrollToSection(key);
+                          if (window.gtag) {
+                            window.gtag("event", "navigation_click", {
+                              event_category: "Navigation",
+                              event_navigation: `${key} from Hamburger Menu`,
+                            });
+                          }
+                        }}
                       >
                         {translations[key][activeLanguage]}
                       </a>
@@ -287,6 +342,14 @@ function Header() {
                         className={`${classes.navLink} ${
                           active ? classes.activeLink : ""
                         }`}
+                        onClick={() => {
+                          if (window.gtag) {
+                            window.gtag("event", "navigation_click", {
+                              event_category: "Navigation",
+                              event_navigation: `${name} from Hamburger Menu`,
+                            });
+                          }
+                        }}
                       >
                         {name}
                       </a>
@@ -298,6 +361,15 @@ function Header() {
                     href={activeLanguage === "FR" ? "/fr/gpts" : "/gpts"}
                     tabIndex={0}
                     className={classes.navLinkGPTs}
+                    onClick={() => {
+                      if (window.gtag) {
+                        window.gtag("event", "navigation_click", {
+                          event_category: "Navigation",
+                          event_navigation:
+                            "Portofolio to GPTs from Hambuger Menu",
+                        });
+                      }
+                    }}
                   >
                     GPTs
                   </a>
@@ -315,6 +387,12 @@ function Header() {
               onClick={() => {
                 toggleLanguage("EN");
                 if (isMenuOpen) toggleMenu();
+                if (window.gtag) {
+                  window.gtag("event", "language_change", {
+                    event_category: "Language",
+                    event_navigation: "EN from Hamburger Menu",
+                  });
+                }
               }}
               role="button"
             >
@@ -329,6 +407,12 @@ function Header() {
               onClick={() => {
                 toggleLanguage("FR");
                 if (isMenuOpen) toggleMenu();
+                if (window.gtag) {
+                  window.gtag("event", "language_change", {
+                    event_category: "Language",
+                    event_navigation: "FR from Hamburger Menu",
+                  });
+                }
               }}
               role="button"
             >
