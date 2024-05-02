@@ -45,7 +45,14 @@ function Portfolio() {
               className={classes.image}
               src={project.project_image}
               alt={project.project_image_alt}
-              onClick={() => handleImageClick(project)}
+              onClick={() => {
+                handleImageClick(project);
+                if (window.gtag)
+                  window.gtag("event", "navigation_click", {
+                    event_category: "Navigations",
+                    event_navigation: `Open modal of the ${project.project_title} project`,
+                  });
+              }}
               tabIndex={0}
             />
             <div className={classes.projectTitleContainer} tabIndex={1}>

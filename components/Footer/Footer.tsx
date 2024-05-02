@@ -76,7 +76,15 @@ function Footer() {
       {isGptsPage && (
         <div className={classes.donationBanner}>
           <button
-            onClick={() => setShowModal(true)}
+            onClick={() => {
+              setShowModal(true);
+              if (window.gtag) {
+                window.gtag("event", "navigation_click", {
+                  event_category: "Navigation",
+                  event_navigation: "Donation Banner Clicked",
+                });
+              }
+            }}
             className={classes.clickHere}
           >
             {translations.donationBanner[activeLanguage]}
@@ -96,7 +104,17 @@ function Footer() {
                 <p className={classes.donationText}>Paypal: </p>
                 <div className={classes.donationCopy}>
                   <p className={classes.donationInfos}>@wiseduckdev</p>
-                  <button onClick={() => handleCopy("@wiseduckdev")}>
+                  <button
+                    onClick={() => {
+                      handleCopy("@wiseduckdev");
+                      if (window.gtag) {
+                        window.gtag("event", "navigation_click", {
+                          event_category: "Navigation",
+                          event_navigation: "Paypal Copy Clicked",
+                        });
+                      }
+                    }}
+                  >
                     <BsCopy />
                   </button>
                 </div>
@@ -110,9 +128,15 @@ function Footer() {
                     bc1qjalnp6rhvalxeyclcwfcp0madsmghcfzmylxf4
                   </p>
                   <button
-                    onClick={() =>
-                      handleCopy("bc1qjalnp6rhvalxeyclcwfcp0madsmghcfzmylxf4")
-                    }
+                    onClick={() => {
+                      handleCopy("bc1qjalnp6rhvalxeyclcwfcp0madsmghcfzmylxf4");
+                      if (window.gtag) {
+                        window.gtag("event", "navigation_click", {
+                          event_category: "Navigation",
+                          event_navigation: "BTC Copy Clicked",
+                        });
+                      }
+                    }}
                   >
                     <BsCopy />
                   </button>
@@ -127,9 +151,15 @@ function Footer() {
                     0x97553A534aD05fb7D67aFa8fd4d8BCC8C990b477
                   </p>
                   <button
-                    onClick={() =>
-                      handleCopy("0x97553A534aD05fb7D67aFa8fd4d8BCC8C990b477")
-                    }
+                    onClick={() => {
+                      handleCopy("0x97553A534aD05fb7D67aFa8fd4d8BCC8C990b477");
+                      if (window.gtag) {
+                        window.gtag("event", "navigation_click", {
+                          event_category: "Navigation",
+                          event_navigation: "ETH Copy Clicked",
+                        });
+                      }
+                    }}
                   >
                     <BsCopy />
                   </button>
@@ -155,6 +185,14 @@ function Footer() {
             href="mailto:wiseduckdev@gmail.com"
             rel="noopener noreferrer"
             target="_blank"
+            onClick={() => {
+              if (window.gtag) {
+                window.gtag("event", "navigation_click", {
+                  event_category: "Navigation",
+                  event_navigation: "Footer Email Clicked",
+                });
+              }
+            }}
           >
             <MdOutlineAlternateEmail className={classes.logo} />
           </a>
@@ -163,6 +201,14 @@ function Footer() {
             href="https://github.com/yannick-leguennec"
             rel="noopener noreferrer"
             target="_blank"
+            onClick={() => {
+              if (window.gtag) {
+                window.gtag("event", "navigation_click", {
+                  event_category: "Navigation",
+                  event_navigation: "Footer GitHub Clicked",
+                });
+              }
+            }}
           >
             <FaGithub className={classes.logo} />
           </a>
@@ -171,6 +217,14 @@ function Footer() {
             href="https://twitter.com/wiseduckdev"
             rel="noopener noreferrer"
             target="_blank"
+            onClick={() => {
+              if (window.gtag) {
+                window.gtag("event", "navigation_click", {
+                  event_category: "Navigation",
+                  event_navigation: "Footer Twitter Clicked",
+                });
+              }
+            }}
           >
             <FaXTwitter className={classes.logo} />
           </a>
@@ -178,16 +232,46 @@ function Footer() {
             href="https://www.linkedin.com/in/wise-duck-dev/"
             rel="noopener noreferrer"
             target="_blank"
+            onClick={() => {
+              if (window.gtag) {
+                window.gtag("event", "navigation_click", {
+                  event_category: "Navigation",
+                  event_navigation: "Footer LinkedIn Clicked",
+                });
+              }
+            }}
           >
             <FaLinkedinIn className={classes.logo} />
           </a>
           {isHomePage && (
-            <a href={gptsLink} rel="noopener noreferrer">
+            <a
+              href={gptsLink}
+              rel="noopener noreferrer"
+              onClick={() => {
+                if (window.gtag) {
+                  window.gtag("event", "navigation_click", {
+                    event_category: "Navigation",
+                    event_navigation: "Footer GPTs Clicked",
+                  });
+                }
+              }}
+            >
               <FaRobot className={classes.logo} />
             </a>
           )}
           {isGptsPage && (
-            <a href={mainLink} rel="noopener noreferrer">
+            <a
+              href={mainLink}
+              rel="noopener noreferrer"
+              onClick={() => {
+                if (window.gtag) {
+                  window.gtag("event", "navigation_click", {
+                    event_category: "Navigation",
+                    event_navigation: "Footer Portfolio Clicked",
+                  });
+                }
+              }}
+            >
               <Image
                 src={logo}
                 alt={translations.altLogo[activeLanguage]}

@@ -152,6 +152,12 @@ export default function GPTsSlug({ initialPageData, deviceType }) {
         })
         .then(() => {
           console.log("Thanks for sharing!");
+          if (window.gtag) {
+            window.gtag("event", "social_share", {
+              event_category: "Social",
+              event_share: `${infos.title} was shared via Web Share API`,
+            });
+          }
         })
         .catch((error) => {
           console.error("Error sharing:", error);
@@ -434,12 +440,28 @@ export default function GPTsSlug({ initialPageData, deviceType }) {
                   <>
                     <FacebookShareButton
                       url={`https://${siteUrl}/gpts/${pageData.category.category}`}
+                      onClick={() => {
+                        if (window.gtag) {
+                          window.gtag("event", "social_share", {
+                            event_category: "Social",
+                            event_share: `${pageData.category?.card_title} was shared on Facebook`,
+                          });
+                        }
+                      }}
                     >
                       <FacebookIcon size={32} round />
                     </FacebookShareButton>
                     <FacebookMessengerShareButton
                       url={`https://${siteUrl}/gpts/${pageData.category.category}`}
                       appId="451991680722269"
+                      onClick={() => {
+                        if (window.gtag) {
+                          window.gtag("event", "social_share", {
+                            event_category: "Social",
+                            event_share: `${pageData.category?.card_title} was shared on Facebook Messenger`,
+                          });
+                        }
+                      }}
                     >
                       <FacebookMessengerIcon size={32} round />
                     </FacebookMessengerShareButton>
@@ -447,23 +469,55 @@ export default function GPTsSlug({ initialPageData, deviceType }) {
                       url={`https://${siteUrl}/gpts/${pageData.category.category}`}
                       title={pageData.category.meta_title_page}
                       separator=": "
+                      onClick={() => {
+                        if (window.gtag) {
+                          window.gtag("event", "social_share", {
+                            event_category: "Social",
+                            event_share: `${pageData.category?.card_title} was shared on Whatsapp`,
+                          });
+                        }
+                      }}
                     >
                       <WhatsappIcon size={32} round />
                     </WhatsappShareButton>
                     <TwitterShareButton
                       url={`https://${siteUrl}/gpts/${pageData.category.category}`}
                       title={pageData.category.twitter_description}
+                      onClick={() => {
+                        if (window.gtag) {
+                          window.gtag("event", "social_share", {
+                            event_category: "Social",
+                            event_share: `${pageData.category?.card_title} was shared on Twitter`,
+                          });
+                        }
+                      }}
                     >
                       <TwitterIcon size={32} round />
                     </TwitterShareButton>
                     <LinkedinShareButton
                       url={`https://${siteUrl}/gpts/${pageData.category.category}`}
+                      onClick={() => {
+                        if (window.gtag) {
+                          window.gtag("event", "social_share", {
+                            event_category: "Social",
+                            event_share: `${pageData.category?.card_title} was shared on Linkedin`,
+                          });
+                        }
+                      }}
                     >
                       <LinkedinIcon size={32} round />
                     </LinkedinShareButton>
                     <TelegramShareButton
                       url={`https://${siteUrl}/gpts/${pageData.category.category}`}
                       title={pageData.category.meta_title_page}
+                      onClick={() => {
+                        if (window.gtag) {
+                          window.gtag("event", "social_share", {
+                            event_category: "Social",
+                            event_share: `${pageData.category?.card_title} was shared on Telegram`,
+                          });
+                        }
+                      }}
                     >
                       <TelegramIcon size={32} round />
                     </TelegramShareButton>
@@ -471,6 +525,14 @@ export default function GPTsSlug({ initialPageData, deviceType }) {
                       url={`https://${siteUrl}/gpts/${pageData.category.category}`}
                       subject={pageData.category.meta_title_page}
                       body={pageData.category.meta_description_page}
+                      onClick={() => {
+                        if (window.gtag) {
+                          window.gtag("event", "social_share", {
+                            event_category: "Social",
+                            event_share: `${pageData.category?.card_title} was shared on Email`,
+                          });
+                        }
+                      }}
                     >
                       <EmailIcon size={32} round />
                     </EmailShareButton>
@@ -532,7 +594,18 @@ export default function GPTsSlug({ initialPageData, deviceType }) {
             <div className={classes.buttonContainer}>
               <RedirectToSearchSectionButton />
             </div>
-            <Link href={portfolioLink} className={classes.promoText}>
+            <Link
+              href={portfolioLink}
+              className={classes.promoText}
+              onClick={() => {
+                if (window.gtag) {
+                  window.gtag("event", "navigation_click", {
+                    event_category: "Navigation",
+                    event_navigation: `Portfolio was accessed from a Category page`,
+                  });
+                }
+              }}
+            >
               {translation.promo[activeLanguage]}{" "}
               <span className={classes.portfolioLinkOrange}>
                 {activeLanguage === "FR" ? "ici" : "here"}
@@ -569,6 +642,14 @@ export default function GPTsSlug({ initialPageData, deviceType }) {
                   <Link
                     href={`/gpts/prompting-tips`}
                     className={classes.tipsText}
+                    onClick={() => {
+                      if (window.gtag) {
+                        window.gtag("event", "prompting_tips", {
+                          event_category: "PROMPTING_TIPS",
+                          event_tips: `Prompting tips were accessed from ${pageData.gpt?.title} page`,
+                        });
+                      }
+                    }}
                   >
                     {" "}
                     {translation.tips[activeLanguage]}
@@ -590,12 +671,28 @@ export default function GPTsSlug({ initialPageData, deviceType }) {
                 <>
                   <FacebookShareButton
                     url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                    onClick={() => {
+                      if (window.gtag) {
+                        window.gtag("event", "social_share", {
+                          event_category: "Social",
+                          event_share: `${pageData.gpt?.title} was shared on Facebook`,
+                        });
+                      }
+                    }}
                   >
                     <FacebookIcon size={32} round />
                   </FacebookShareButton>
                   <FacebookMessengerShareButton
                     url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
                     appId="451991680722269"
+                    onClick={() => {
+                      if (window.gtag) {
+                        window.gtag("event", "social_share", {
+                          event_category: "Social",
+                          event_share: `${pageData.gpt?.title} was shared on Facebook Messenger`,
+                        });
+                      }
+                    }}
                   >
                     <FacebookMessengerIcon size={32} round />
                   </FacebookMessengerShareButton>
@@ -603,23 +700,55 @@ export default function GPTsSlug({ initialPageData, deviceType }) {
                     url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
                     title={pageData.gpt.meta_title_page}
                     separator=": "
+                    onClick={() => {
+                      if (window.gtag) {
+                        window.gtag("event", "social_share", {
+                          event_category: "Social",
+                          event_share: `${pageData.gpt?.title} was shared on Whatsapp`,
+                        });
+                      }
+                    }}
                   >
                     <WhatsappIcon size={32} round />
                   </WhatsappShareButton>
                   <TwitterShareButton
                     url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
                     title={pageData.gpt.twitter_description}
+                    onClick={() => {
+                      if (window.gtag) {
+                        window.gtag("event", "social_share", {
+                          event_category: "Social",
+                          event_share: `${pageData.gpt?.title} was shared on Twitter`,
+                        });
+                      }
+                    }}
                   >
                     <TwitterIcon size={32} round />
                   </TwitterShareButton>
                   <LinkedinShareButton
                     url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
+                    onClick={() => {
+                      if (window.gtag) {
+                        window.gtag("event", "social_share", {
+                          event_category: "Social",
+                          event_share: `${pageData.gpt?.title} was shared on Linkedin`,
+                        });
+                      }
+                    }}
                   >
                     <LinkedinIcon size={32} round />
                   </LinkedinShareButton>
                   <TelegramShareButton
                     url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
                     title={pageData.gpt.meta_title_page}
+                    onClick={() => {
+                      if (window.gtag) {
+                        window.gtag("event", "social_share", {
+                          event_category: "Social",
+                          event_share: `${pageData.gpt?.title} was shared on Telegram`,
+                        });
+                      }
+                    }}
                   >
                     <TelegramIcon size={32} round />
                   </TelegramShareButton>
@@ -627,6 +756,14 @@ export default function GPTsSlug({ initialPageData, deviceType }) {
                     url={`https://${siteUrl}/gpts${pageData.gpt.path}`}
                     subject={pageData.gpt.meta_title_page}
                     body={pageData.gpt.meta_description_page}
+                    onClick={() => {
+                      if (window.gtag) {
+                        window.gtag("event", "social_share", {
+                          event_category: "Social",
+                          event_share: `${pageData.gpt?.title} was shared on Email`,
+                        });
+                      }
+                    }}
                   >
                     <EmailIcon size={32} round />
                   </EmailShareButton>
@@ -655,12 +792,31 @@ export default function GPTsSlug({ initialPageData, deviceType }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={translation.aria_label_run[activeLanguage]}
+                onClick={() => {
+                  if (window.gtag) {
+                    window.gtag("event", "run_gpt", {
+                      event_category: "RUN_GPT",
+                      event_run: `${pageData.gpt?.title} was run`,
+                    });
+                  }
+                }}
               >
                 {translation.buttonRun[activeLanguage]}
               </Link>
             </div>
           </div>
-          <Link href={portfolioLink} className={classes.promoText}>
+          <Link
+            href={portfolioLink}
+            className={classes.promoText}
+            onClick={() => {
+              if (window.gtag) {
+                window.gtag("event", "navigation_click", {
+                  event_category: "Navigation",
+                  event_navigation: `Portfolio was accessed from a GPT page`,
+                });
+              }
+            }}
+          >
             {translation.promo[activeLanguage]}{" "}
             <span className={classes.portfolioLinkOrange}>
               {activeLanguage === "FR" ? "ici" : "here"}

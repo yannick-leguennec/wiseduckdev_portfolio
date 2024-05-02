@@ -17,6 +17,14 @@ const GPTs_Card = (props: GPTs_Card_Type) => {
           ? [classes.link, classes.cardContainer2].join(" ")
           : [classes.link, classes.cardContainer].join(" ")
       }
+      onClick={() => {
+        if (window.gtag) {
+          window.gtag("event", "navigation_click", {
+            event_category: "Navigation",
+            event_navigation: `${props.title} card was clicked`,
+          });
+        }
+      }}
     >
       <div className={classes.imageContainer}>
         <Image

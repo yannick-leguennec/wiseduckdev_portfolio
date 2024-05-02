@@ -68,8 +68,8 @@ function Profil() {
       FR: "Photo de profil du Développeur Full Stack JavaScript Wise Duck Dev, spécialisé en React, habillé d'un costume blanc professionnel",
     },
     button: {
-      EN: "Download my CV",
-      FR: "Télécharger mon CV",
+      EN: "Check Out My Resume",
+      FR: "Consultez Mon CV",
     },
     cv: {
       EN: "/docs/wise_duck_dev_resume_en.pdf",
@@ -111,7 +111,17 @@ function Profil() {
           <li>{translations.point5[activeLanguage]}</li>
           <li>{translations.point6[activeLanguage]}</li>
           <li>
-            <Link href={gptsLink}>
+            <Link
+              href={gptsLink}
+              onClick={() => {
+                if (window.gtag)
+                  window.gtag("event", "navigation_click", {
+                    event_category: "Navigations",
+                    event_navigation: "Portfolio to GPTs from Profil",
+                  });
+              }}
+            >
+              {activeLanguage === "FR" ? "IA" : "AI"}{" "}
               {translations.point7[activeLanguage]}
               <span className={`${classes.gptsLinkOrange}`}>
                 {activeLanguage === "FR" ? "ici" : "here"}
@@ -130,6 +140,13 @@ function Profil() {
             rel="noopener noreferrer"
             className={`${classes.button}`}
             aria-label={translations.aria[activeLanguage]}
+            onClick={() => {
+              if (window.gtag)
+                window.gtag("event", "navigation_click", {
+                  event_category: "Navigations",
+                  event_navigation: `See the resume in ${activeLanguage} from Profil`,
+                });
+            }}
           >
             {translations.button[activeLanguage]}
           </a>

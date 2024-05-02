@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useLanguage } from "../../context/LanguageContext";
@@ -51,6 +52,8 @@ const GPTs = ({ deviceType }: GPTsProps) => {
   const portfolioLink = activeLanguage === "FR" ? `/fr` : `/`;
   // Site URL
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  // Router
+  const router = useRouter();
 
   // Fetch the GPTs categories data from the JSON file
   useEffect(() => {
@@ -74,38 +77,45 @@ const GPTs = ({ deviceType }: GPTsProps) => {
   const executeSearch = async () => {
     if (!searchTerm.trim()) return; // Avoid searching with an empty or whitespace-only term
 
-    setSearchExecuted(false); // Optionally, indicate search is in progress by resetting the flag
-    setFilteredGPTs([]); // Clear previous search results before executing a new search
+    setSearchExecuted(false);
+    setFilteredGPTs([]);
 
     try {
       const response = await fetch("/docs/GPTs/gpts.json");
       const data = await response.json();
       if (data) {
         const value = searchTerm.toLowerCase();
-        // First, filter the data based on the search term
         const filteredData = data[activeLanguage]
           .filter(
-            (gpt: GPTs_Card_Type) =>
+            (gpt) =>
               gpt.title.toLowerCase().includes(value) ||
               (Array.isArray(gpt.category) &&
                 gpt.category.some((cat) => cat.toLowerCase().includes(value)))
           )
-          // Then, sort the filtered data alphabetically by title
           .sort((a, b) => a.title.localeCompare(b.title));
 
-        setFilteredGPTs(filteredData); // Set the sorted and filtered data
+        setFilteredGPTs(filteredData);
+
+        // Update URL with search term
+        router.push(
+          {
+            pathname: router.pathname,
+            query: { ...router.query, query: value }, // Update the query parameter
+          },
+          undefined,
+          { shallow: true }
+        );
 
         // GA4 Event for tracking search
         window.gtag?.("event", "search", {
           event_category: "Site Search",
-          event_label: value,
-          search_term: value, // Sending the actual search term used
+          search_term: value,
         });
       }
     } catch (error) {
       console.error("Failed to fetch GPTs data:", error);
     }
-    setSearchExecuted(true); // Indicate that a search has been executed
+    setSearchExecuted(true);
   };
 
   const handleSearchClick = () => {
@@ -143,6 +153,13 @@ const GPTs = ({ deviceType }: GPTsProps) => {
         })
         .then(() => {
           console.log("Thanks for sharing!");
+          if (window.gtag) {
+            window.gtag("event", "social_share", {
+              event_category: "Social",
+              event_share:
+                "GPTs main page shared via Web Share API (Mobile & Tablet)",
+            });
+          }
         })
         .catch((error) => {
           console.error("Error sharing:", error);
@@ -306,12 +323,30 @@ const GPTs = ({ deviceType }: GPTsProps) => {
       <div className={classes.socialButtonContainerGPTs}>
         {deviceType === "desktop" && (
           <>
-            <FacebookShareButton url={`https://${siteUrl}/gpts`}>
+            <FacebookShareButton
+              url={`https://${siteUrl}/gpts`}
+              onClick={() => {
+                if (window.gtag) {
+                  window.gtag("event", "social_share", {
+                    event_category: "Social",
+                    event_share: "GPTs main page shared on Facebook",
+                  });
+                }
+              }}
+            >
               <FacebookIcon size={32} round />
             </FacebookShareButton>
             <FacebookMessengerShareButton
               url={`https://${siteUrl}/gpts`}
               appId="451991680722269"
+              onClick={() => {
+                if (window.gtag) {
+                  window.gtag("event", "social_share", {
+                    event_category: "Social",
+                    event_share: "GPTs main page shared on Facebook Messenger",
+                  });
+                }
+              }}
             >
               <FacebookMessengerIcon size={32} round />
             </FacebookMessengerShareButton>
@@ -319,21 +354,55 @@ const GPTs = ({ deviceType }: GPTsProps) => {
               url={`https://${siteUrl}/gpts`}
               title={translations.metaTitle[activeLanguage]}
               separator=": "
+              onClick={() => {
+                if (window.gtag) {
+                  window.gtag("event", "social_share", {
+                    event_category: "Social",
+                    event_share: "GPTs main page shared on Whatsapp",
+                  });
+                }
+              }}
             >
               <WhatsappIcon size={32} round />
             </WhatsappShareButton>
             <TwitterShareButton
               url={`https://${siteUrl}/gpts`}
               title={translations.twitterDescription[activeLanguage]}
+              onClick={() => {
+                if (window.gtag) {
+                  window.gtag("event", "social_share", {
+                    event_category: "Social",
+                    event_share: "GPTs main page shared on Twitter",
+                  });
+                }
+              }}
             >
               <TwitterIcon size={32} round />
             </TwitterShareButton>
-            <LinkedinShareButton url={`https://${siteUrl}/gpts`}>
+            <LinkedinShareButton
+              url={`https://${siteUrl}/gpts`}
+              onClick={() => {
+                if (window.gtag) {
+                  window.gtag("event", "social_share", {
+                    event_category: "Social",
+                    event_share: "GPTs main page shared on LinkedIn",
+                  });
+                }
+              }}
+            >
               <LinkedinIcon size={32} round />
             </LinkedinShareButton>
             <TelegramShareButton
               url={`https://${siteUrl}/gpts`}
               title={translations.metaTitle[activeLanguage]}
+              onClick={() => {
+                if (window.gtag) {
+                  window.gtag("event", "social_share", {
+                    event_category: "Social",
+                    event_share: "GPTs main page shared on Telegram",
+                  });
+                }
+              }}
             >
               <TelegramIcon size={32} round />
             </TelegramShareButton>
@@ -341,6 +410,14 @@ const GPTs = ({ deviceType }: GPTsProps) => {
               url={`https://${siteUrl}/gpts`}
               subject={translations.metaTitle[activeLanguage]}
               body={translations.mailMessage[activeLanguage]}
+              onClick={() => {
+                if (window.gtag) {
+                  window.gtag("event", "social_share", {
+                    event_category: "Social",
+                    event_share: "GPTs main page shared via Email",
+                  });
+                }
+              }}
             >
               <EmailIcon size={32} round />
             </EmailShareButton>
