@@ -40,6 +40,7 @@ class MyDocument extends Document<MyDocumentProps> {
             rel="icon"
             href={`https://${siteUrl}/favicon.ico`}
             type="image/x-icon"
+            sizes="48x48"
           />
           <link
             rel="apple-touch-icon"
