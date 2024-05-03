@@ -50,15 +50,22 @@
 
 // TEXT CONTAINER
 .textContainer {
+  display: flex;
+  gap: 2rem;
   margin-right: 4rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
 
   @media (max-width: 478px) {
     margin-right: 2rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   @media (max-width: 390px) {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     @media (max-width: 390px) {
       margin-right: 1.5rem;
     }
