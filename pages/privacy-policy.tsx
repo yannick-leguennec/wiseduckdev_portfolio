@@ -556,10 +556,149 @@ export default function PrivacyPolicy() {
       EN: "Go back",
       FR: "Retourner",
     },
+    metaTitle: {
+      EN: "Privacy Policy - The Wise Duck Dev",
+      FR: "Politique de confidentialité - The Wise Duck Dev",
+    },
+    metaDescription: {
+      EN: "The Wise Duck Dev Privacy Policy. Last updated: May 1th, 2024.",
+      FR: "Politique de confidentialité de The Wise Duck Dev. Dernière mise à jour : 1er mai 2024.",
+    },
+    og_locale: {
+      EN: "en_US",
+      FR: "fr_FR",
+    },
+  };
+
+  // Define the schema templates
+  const policySchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    url: `https://${siteUrl}/privacy-policy`,
+    name: translation.metaTitle[activeLanguage],
+    description: translation.metaDescription[activeLanguage],
+    dateModified: "2024-05-01",
+    inLanguage: translation.og_locale[activeLanguage],
+    isPartOf: {
+      "@type": "WebSite",
+      name: "The Wise Duck Dev",
+      url: `https://${siteUrl}`,
+    },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          item: {
+            "@id": `https://${siteUrl}`,
+            name: "Home",
+          },
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          item: {
+            "@id": `https://${siteUrl}/privacy-policy`,
+            name: "Privacy Policy",
+          },
+        },
+      ],
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "The Wise Duck Dev",
+      logo: {
+        "@type": "ImageObject",
+        url: `https://${siteUrl}/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp`,
+      },
+    },
   };
 
   return (
     <>
+      <Head>
+        <title>{translation.metaTitle[activeLanguage]}</title>
+        <meta
+          name="description"
+          content={translation.metaDescription[activeLanguage]}
+        />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content={translation.metaTitle[activeLanguage]}
+        />
+        <meta
+          property="og:description"
+          content={translation.metaDescription[activeLanguage]}
+        />
+        <meta
+          property="og:image"
+          content={
+            activeLanguage === "FR"
+              ? `https://${siteUrl}/images/policy_privacy/privacy-policy-page-secure-data-protection-wise-duck-dev-og-FR`
+              : `https://${siteUrl}/images/policy_privacy/privacy-policy-page-secure-data-protection-wise-duck-dev-og-EN`
+          }
+        />
+        <meta
+          property="og:url"
+          content={
+            activeLanguage === "FR"
+              ? `https://${siteUrl}/fr/privacy-policy`
+              : `https://${siteUrl}/privacy-policy`
+          }
+        />
+        <meta
+          property="og:locale"
+          content={translation.og_locale[activeLanguage]}
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@wiseduckdev" />
+        <meta name="twitter:creator" content="@wiseduckdev" />
+        <meta
+          name="twitter:title"
+          content={translation.metaTitle[activeLanguage]}
+        />
+        <meta
+          name="twitter:description"
+          content={translation.metaDescription[activeLanguage]}
+        />
+        <meta
+          name="twitter:image"
+          content={
+            activeLanguage === "FR"
+              ? `https://${siteUrl}/images/policy_privacy/privacy-policy-page-secure-data-protection-wise-duck-dev-twitter-FR`
+              : `https://${siteUrl}/images/policy_privacy/privacy-policy-page-secure-data-protection-wise-duck-dev-twitter-EN`
+          }
+        />
+        <meta
+          name="twitter:image:alt"
+          content={translation.altDescription[activeLanguage]}
+        />
+        {siteUrl && (
+          <>
+            <link
+              rel="alternate"
+              hrefLang="en"
+              href={`https://${siteUrl}/privacy-policy`}
+            />
+            <link
+              rel="alternate"
+              hrefLang="fr"
+              href={`https://${siteUrl}/fr/privacy-policy`}
+            />
+          </>
+        )}
+        <link rel="canonical" href={`https://${siteUrl}/privacy-policy`} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(policySchema) }}
+        />
+      </Head>
       <Header />
       <main className={classes.mainContainer}>
         <div className={classes.imageContainer}>
