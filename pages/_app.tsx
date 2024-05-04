@@ -26,7 +26,11 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-433NXG83KC');
+            gtag('config', 'G-433NXG83KC', {
+              cookie_domain: 'auto',
+              cookie_flags: 'SameSite=None; Secure',
+              anonymize_ip: true
+            });
           `,
           }}
         />

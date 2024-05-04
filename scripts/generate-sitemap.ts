@@ -75,8 +75,20 @@ async function generateSitemap() {
 </url>
 `;
 
+  const policyUrlBlock = `
+  <url>
+  <loc>https://${baseUrl}/privacy-policy</loc>
+  <image:image>
+  <image:loc>https://${baseUrl}/images/privacy_policy/privacy-policy-page-secure-data-protection-wise-duck-dev-EN.webp</image:loc>
+  </image:image>
+  <lastmod>01-05-2024</lastmod>
+  <changefreq>Monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+`;
+
   // Initialize urlEntries with specific blocks
-  let urlEntries = `${indexUrlBlock}${gptsUrlBlock}${promptingTipsUrlBlock}`;
+  let urlEntries = `${indexUrlBlock}${gptsUrlBlock}${promptingTipsUrlBlock}${policyUrlBlock}`;
 
   // Process the gpts_categories.json and gpts_test.json files
   try {
