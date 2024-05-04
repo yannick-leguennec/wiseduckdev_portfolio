@@ -49,36 +49,36 @@ class MyDocument extends Document<MyDocumentProps> {
           />
           <link
             rel="icon"
-            href={`https://${siteUrl}/images/favicons/favicon-chrome-192x192.png`}
+            href={`https://${siteUrl}/images/favicons/black-favicon-chrome-192x192.png`}
             type="image/png"
             sizes="192x192"
           />
           <link
             rel="icon"
-            href={`https://${siteUrl}/images/favicons/favicon-chrome-96x96.png`}
+            href={`https://${siteUrl}/images/favicons/black-favicon-chrome-96x96.png`}
             type="image/png"
             sizes="96x96"
           />
           <link
             rel="icon"
-            href={`https://${siteUrl}/images/favicons/favicon-chrome-48x48.png`}
+            href={`https://${siteUrl}/images/favicons/black-favicon-chrome-48x48.png`}
             type="image/png"
             sizes="48x48"
           />
           <link
             rel="shortcut icon"
-            href={`https://${siteUrl}/images/favicons/favicon-chrome-48x48.png`}
+            href={`https://${siteUrl}/images/favicons/black-favicon-chrome-48x48.png`}
             type="image/png"
           />
           <link
             rel="icon"
-            href={`https://${siteUrl}/images/favicons/favicon-32x32.png`}
+            href={`https://${siteUrl}/images/favicons/black-favicon-32x32.png`}
             type="image/png"
             sizes="32x32"
           />
           <link
             rel="icon"
-            href={`https://${siteUrl}/images/favicons/favicon-16x16.png`}
+            href={`https://${siteUrl}/images/favicons/black-favicon-16x16.png`}
             type="image/png"
             sizes="16x16"
           />
@@ -86,13 +86,13 @@ class MyDocument extends Document<MyDocumentProps> {
             rel="android-chrome"
             sizes="192x192"
             type="image/png"
-            href={`https://${siteUrl}/images/favicons/android-chrome-192x192.png`}
+            href={`https://${siteUrl}/images/favicons/black-android-chrome-192x192.png`}
           />
           <link
             rel="android-chrome"
             sizes="512x512"
             type="image/png"
-            href={`https://${siteUrl}/images/favicons/android-chrome-512x512.png`}
+            href={`https://${siteUrl}/images/favicons/black-android-chrome-512x512.png`}
           />
           <link
             rel="apple-touch-icon"
@@ -104,13 +104,13 @@ class MyDocument extends Document<MyDocumentProps> {
             rel="apple-touch-icon"
             sizes="152x152"
             type="image/png"
-            href={`https://${siteUrl}/images/favicons/apple-icon-152x152.png`}
+            href={`https://${siteUrl}/images/favicons/black-apple-icon-152x152.png`}
           />
           <link
             rel="apple-touch-icon"
             sizes="120x120"
             type="image/png"
-            href={`https://${siteUrl}/images/favicons/apple-icon-120x120.png`}
+            href={`https://${siteUrl}/images/favicons/black-apple-icon-120x120.png`}
           />
           <link
             rel="apple-touch-icon"
