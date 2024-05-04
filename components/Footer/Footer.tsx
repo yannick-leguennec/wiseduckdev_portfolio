@@ -31,6 +31,8 @@ function Footer() {
   // Determine the GPTs link based on the active language
   const gptsLink = activeLanguage === "FR" ? `/fr/gpts` : `/gpts`;
   const mainLink = activeLanguage === "FR" ? `/fr` : `/`;
+  const policyLink =
+    activeLanguage === "FR" ? `/fr/privacy-policy` : `/privacy-policy`;
 
   // Function to handle the copy to clipboard
   const handleCopy = (info) => {
@@ -68,6 +70,10 @@ function Footer() {
     buttonClose: {
       EN: "Close",
       FR: "Fermer",
+    },
+    privacyPolicy: {
+      EN: "Privacy Policy",
+      FR: "Politique de confidentialité",
     },
   };
 
@@ -281,6 +287,20 @@ function Footer() {
           )}
         </div>
         <div className={classes.textContainer}>
+          <a
+            href={policyLink}
+            rel="noopener noreferrer"
+            onClick={() => {
+              if (window.gtag) {
+                window.gtag("event", "navigation_click", {
+                  event_category: "Navigation",
+                  event_navigation: "Footer Privacy Policy Clicked",
+                });
+              }
+            }}
+          >
+            <p>{translations.privacyPolicy[activeLanguage]}</p>
+          </a>
           <p>© 2024 Wise Duck Dev</p>
         </div>
       </footer>

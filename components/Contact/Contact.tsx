@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ModalContact from "../Modals/modalContact/modalContact";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
@@ -6,13 +6,26 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import classes from "./Contact.module.scss";
 
-function Contact() {
+// Contact Props
+interface ContactProps {
+  id: string;
+  onLoaded: (loaded: boolean) => void;
+}
+
+function Contact({ id, onLoaded }: ContactProps) {
   // State to manage the modal
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
 
   // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (ref.current) {
+      onLoaded(true); // Notify that Contact is loaded
+    }
+  }, [onLoaded]);
 
   // Object to store the translations
   const translations: TranslationsType = {
@@ -89,7 +102,7 @@ function Contact() {
   });
 
   return (
-    <section id="contact" className={classes.contactSection}>
+    <section ref={ref} id={id} className={classes.contactSection}>
       <div className={classes.containerTitle}>
         <h1 className={classes.title}>Contact</h1>
       </div>

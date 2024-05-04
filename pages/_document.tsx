@@ -40,44 +40,40 @@ class MyDocument extends Document<MyDocumentProps> {
             rel="icon"
             href={`https://${siteUrl}/favicon.ico`}
             type="image/x-icon"
-          />
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href={`https://${siteUrl}/images/favicons/apple-touch-icon.png`}
+            sizes="48x48"
           />
           <link
             rel="icon"
-            href={`https://${siteUrl}/images/favicons/favicon-chrome-192x192.png`}
+            href={`https://${siteUrl}/images/favicons/black-favicon-chrome-192x192.png`}
             type="image/png"
             sizes="192x192"
           />
           <link
             rel="icon"
-            href={`https://${siteUrl}/images/favicons/favicon-chrome-96x96.png`}
+            href={`https://${siteUrl}/images/favicons/black-favicon-chrome-96x96.png`}
             type="image/png"
             sizes="96x96"
           />
           <link
             rel="icon"
-            href={`https://${siteUrl}/images/favicons/favicon-chrome-48x48.png`}
+            href={`https://${siteUrl}/images/favicons/black-favicon-chrome-48x48.png`}
             type="image/png"
             sizes="48x48"
           />
           <link
             rel="shortcut icon"
-            href={`https://${siteUrl}/images/favicons/favicon-chrome-48x48.png`}
+            href={`https://${siteUrl}/images/favicons/black-favicon-chrome-48x48.png`}
             type="image/png"
           />
           <link
             rel="icon"
-            href={`https://${siteUrl}/images/favicons/favicon-32x32.png`}
+            href={`https://${siteUrl}/images/favicons/black-favicon-32x32.png`}
             type="image/png"
             sizes="32x32"
           />
           <link
             rel="icon"
-            href={`https://${siteUrl}/images/favicons/favicon-16x16.png`}
+            href={`https://${siteUrl}/images/favicons/black-favicon-16x16.png`}
             type="image/png"
             sizes="16x16"
           />
@@ -85,13 +81,13 @@ class MyDocument extends Document<MyDocumentProps> {
             rel="android-chrome"
             sizes="192x192"
             type="image/png"
-            href={`https://${siteUrl}/images/favicons/android-chrome-192x192.png`}
+            href={`https://${siteUrl}/images/favicons/black-android-chrome-192x192.png`}
           />
           <link
             rel="android-chrome"
             sizes="512x512"
             type="image/png"
-            href={`https://${siteUrl}/images/favicons/android-chrome-512x512.png`}
+            href={`https://${siteUrl}/images/favicons/black-android-chrome-512x512.png`}
           />
           <link
             rel="apple-touch-icon"
@@ -103,27 +99,21 @@ class MyDocument extends Document<MyDocumentProps> {
             rel="apple-touch-icon"
             sizes="152x152"
             type="image/png"
-            href={`https://${siteUrl}/images/favicons/apple-icon-152x152.png`}
+            href={`https://${siteUrl}/images/favicons/black-apple-icon-152x152.png`}
           />
           <link
             rel="apple-touch-icon"
             sizes="120x120"
             type="image/png"
-            href={`https://${siteUrl}/images/favicons/apple-icon-120x120.png`}
+            href={`https://${siteUrl}/images/favicons/black-apple-icon-120x120.png`}
           />
           <link
             rel="apple-touch-icon"
             sizes="76x76"
             type="image/png"
-            href={`https://${siteUrl}/images/favicons/apple-icon-76x76.png`}
+            href={`https://${siteUrl}/images/favicons/black-apple-icon-76x76.png`}
           />
-          <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
           <link rel="manifest" href="/site.webmanifest" />
-          <link
-            rel="mask-icon"
-            href="/favicons/safari-pinned-tab.svg"
-            color="#5bbad5"
-          />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
         </Head>

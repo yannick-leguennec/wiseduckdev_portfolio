@@ -1,6 +1,7 @@
 import { GetStaticProps } from "next";
 import indexSchema from "../public/schemas/indexSchema";
 import React, { useState, useEffect, Suspense } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -26,8 +27,12 @@ export default function Home() {
   const { activeLanguage } = useLanguage();
   // State to manage the initial content loading
   const [initialContentLoaded, setInitialContentLoaded] = useState(false);
+  // State to know when the contact form is loaded
+  const [contactLoaded, setContactLoaded] = useState(false);
   // Site URL
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  // Router
+  const router = useRouter();
 
   // Effect to manage the initial content loading
   useEffect(() => {
@@ -38,6 +43,29 @@ export default function Home() {
   useEffect(() => {
     setLoading(false);
   }, [setLoading]);
+
+  useEffect(() => {
+    const scrollToElement = (elementId) => {
+      const element = document.getElementById(elementId);
+      if (element) {
+        element.scrollIntoView({ behavior: "auto", block: "end" });
+      }
+    };
+
+    if (router.asPath.includes("contact") && contactLoaded) {
+      scrollToElement("contact");
+    }
+  }, [router.asPath, contactLoaded]);
+
+  const logElementDetails = (elementId) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      console.log(`Details for ${elementId}:`, {
+        offsetTop: element.offsetTop,
+        clientHeight: element.clientHeight,
+      });
+    }
+  };
 
   // Object to store the translations
   const translation: TranslationsType = {
@@ -212,7 +240,7 @@ export default function Home() {
               />
               <Experience />
               <Portfolio />
-              <Contact />
+              <Contact id="contact" onLoaded={setContactLoaded} />
               <Footer />
             </>
           )}

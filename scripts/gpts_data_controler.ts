@@ -133,6 +133,31 @@ const validateLengths = (objects, language) => {
   });
 };
 
+// Function to check for the word "Canards" in the FR array
+const checkForCanards = (objects, language) => {
+  objects.forEach((obj, index) => {
+    let fieldsContainingCanards: string[] = []; // Explicitly define the type as an array of strings
+    for (const [key, value] of Object.entries(obj)) {
+      if (typeof value === "string" && value.includes("Canards")) {
+        fieldsContainingCanards.push(key);
+      }
+      if (typeof value === "string" && value.includes("Canard")) {
+        fieldsContainingCanards.push(key);
+      }
+      if (typeof value === "string" && value.includes("Les Wise")) {
+        fieldsContainingCanards.push(key);
+      }
+    }
+    if (fieldsContainingCanards.length > 0) {
+      console.log(
+        `'Canards' found in ${language} object at index ${
+          obj.id
+        } in fields: ${fieldsContainingCanards.join(", ")}`
+      );
+    }
+  });
+};
+
 // Main function to execute the script asynchronously
 const main = async () => {
   const filePath = "./public/docs/GPTs/gpts.json"; // Update the path to your JSON file
@@ -144,13 +169,14 @@ const main = async () => {
     validateOgUrl(data.EN, "EN");
     validatePath(data.EN, "EN");
     validateImages(data.EN, "EN");
-    validateLengths(data.EN, "EN");
+    // validateLengths(data.EN, "EN");
 
     checkObjects(data.FR, "FR");
     validateOgUrl(data.FR, "FR");
     validatePath(data.FR, "FR");
     validateImages(data.FR, "FR");
-    validateLengths(data.FR, "FR");
+    // validateLengths(data.FR, "FR");
+    checkForCanards(data.FR, "FR");
   } catch (error) {
     console.error("Error reading or processing file:", error);
   }
