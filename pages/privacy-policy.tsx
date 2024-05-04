@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { GetStaticProps } from "next";
 import React from "react";
 import Head from "next/head";
-import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -10,10 +11,10 @@ import { useLoader } from "../context/LoaderContext";
 import { useLanguage } from "../context/LanguageContext";
 import { TranslationsType } from "../types/TranslationsType";
 import classes from "../styles/privacy_policy.module.scss";
-import { date } from "yup";
 import policyPictureEN from "../public/images/policy_privacy/privacy-policy-page-secure-data-protection-wise-duck-dev-EN.webp";
 import policyPictureFR from "../public/images/policy_privacy/privacy-policy-page-secure-data-protection-wise-duck-dev-FR.webp";
-import policyPictureMobile from "../public/images/policy_privacy/privacy-policy-page-secure-data-protection-wise-duck-dev-mobile.webp";
+import policyPictureMobileFR from "../public/images/policy_privacy/privacy-policy-page-secure-data-protection-wise-duck-dev-mobile-FR.webp";
+import policyPictureMobileEN from "../public/images/policy_privacy/privacy-policy-page-secure-data-protection-wise-duck-dev-mobile-EN.webp";
 
 export default function PrivacyPolicy() {
   // Custom hook to manage the language changes
@@ -22,6 +23,8 @@ export default function PrivacyPolicy() {
   const { loading, setLoading } = useLoader();
   // Site URL
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  // Router
+  const router = useRouter();
 
   // Effect to manage the loading state and turn it off when the content is loaded
   useEffect(() => {
@@ -62,7 +65,9 @@ export default function PrivacyPolicy() {
     // Determine the correct image path based on screen orientation and active language
     const getImagePath = (): string => {
       if (isPortrait) {
-        return policyPictureMobile.src;
+        return activeLanguage === "FR"
+          ? policyPictureMobileFR.src
+          : policyPictureMobileEN.src;
       } else {
         return activeLanguage === "FR"
           ? policyPictureFR.src
@@ -80,6 +85,11 @@ export default function PrivacyPolicy() {
       />
     );
   }
+
+  // Function to go back to the previous page
+  const handleBackClick = () => {
+    window.history.back();
+  };
 
   const translation: TranslationsType = {
     altDescription: {
@@ -478,6 +488,10 @@ export default function PrivacyPolicy() {
       EN: "Or by using our contact form : ",
       FR: "Ou en utilisant notre formulaire de contact: ",
     },
+    contactLink: {
+      EN: "Contact Form",
+      FR: "Formulaire de contact",
+    },
     licenseTitle: {
       EN: "Content License Policy - The Wise Duck Dev",
       FR: "Politique de licence de contenu - The Wise Duck Dev",
@@ -537,6 +551,10 @@ export default function PrivacyPolicy() {
     enforcementParagraph1: {
       EN: "The Wise Duck Dev reserves the right to take legal action against any individual or entity that violates the terms of this Content License Policy. Violators may be subject to civil and criminal penalties.",
       FR: "The Wise Duck Dev se réserve le droit d'intenter une action en justice contre toute personne ou entité qui viole les termes de cette politique de licence de contenu. Les contrevenants peuvent être passibles de sanctions civiles et pénales.",
+    },
+    button: {
+      EN: "Go back",
+      FR: "Retourner",
     },
   };
 
@@ -896,9 +914,14 @@ export default function PrivacyPolicy() {
                 rel="noreferrer"
                 className={classes.link}
               >
-                Contact
+                {translation.contactLink[activeLanguage]}
               </a>
             </p>
+            <div className={classes.buttonContainer}>
+              <button onClick={handleBackClick} className={classes.button}>
+                {translation.button[activeLanguage]}
+              </button>
+            </div>
           </section>
         </div>
       </main>

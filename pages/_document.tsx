@@ -43,11 +43,6 @@ class MyDocument extends Document<MyDocumentProps> {
             sizes="48x48"
           />
           <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href={`https://${siteUrl}/images/favicons/apple-touch-icon.png`}
-          />
-          <link
             rel="icon"
             href={`https://${siteUrl}/images/favicons/black-favicon-chrome-192x192.png`}
             type="image/png"
@@ -116,15 +111,9 @@ class MyDocument extends Document<MyDocumentProps> {
             rel="apple-touch-icon"
             sizes="76x76"
             type="image/png"
-            href={`https://${siteUrl}/images/favicons/apple-icon-76x76.png`}
+            href={`https://${siteUrl}/images/favicons/black-apple-icon-76x76.png`}
           />
-          <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
           <link rel="manifest" href="/site.webmanifest" />
-          <link
-            rel="mask-icon"
-            href="/favicons/safari-pinned-tab.svg"
-            color="#5bbad5"
-          />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
         </Head>
