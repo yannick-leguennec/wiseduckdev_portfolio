@@ -217,7 +217,14 @@ export default function Home() {
             />
           </>
         )}
-        <link rel="canonical" href={`https://${siteUrl}`} />
+        <link
+          rel="canonical"
+          href={
+            activeLanguage === "EN"
+              ? `https://${siteUrl}`
+              : `https://${siteUrl}/fr`
+          }
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(indexSchema) }}

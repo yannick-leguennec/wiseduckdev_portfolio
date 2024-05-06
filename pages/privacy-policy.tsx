@@ -693,7 +693,14 @@ export default function PrivacyPolicy() {
             />
           </>
         )}
-        <link rel="canonical" href={`https://${siteUrl}/privacy-policy`} />
+        <link
+          rel="canonical"
+          href={
+            activeLanguage === "EN"
+              ? `https://${siteUrl}/privacy-policy`
+              : `https://${siteUrl}/fr/privacy-policy`
+          }
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(policySchema) }}

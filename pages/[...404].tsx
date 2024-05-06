@@ -25,6 +25,7 @@ export default function Custom404() {
           name="description"
           content="The Wise Duck Dev - 404 Page Not Found"
         />
+        <meta name="robots" content="noindex, nofollow"></meta>
       </Head>
       <NotFoundWithNoSSR />
       <SpeedInsights />
