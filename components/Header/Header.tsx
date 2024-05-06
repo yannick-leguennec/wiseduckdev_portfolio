@@ -176,10 +176,10 @@ function Header() {
           className={classes.containerLogo_logo}
           priority
         />
-        <h1 className={classes.containerLogo_logoName}>
+        <p className={classes.containerLogo_logoName}>
           the <strong>wise</strong>duck<strong>dev</strong>{" "}
           {spanContent && <span className={spanClass}> {spanContent}</span>}
-        </h1>
+        </p>
       </a>
 
       <div className={classes.containerNav}>
