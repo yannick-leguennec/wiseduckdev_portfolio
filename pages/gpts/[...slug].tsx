@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { v4 as uuidv4 } from "uuid";
 import UAParser from "ua-parser-js";
 import { GetServerSideProps } from "next";
@@ -8,6 +9,7 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useLoader } from "../../context/LoaderContext";
+import { useConsent } from "../../context/ConsentContext";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
 import GPTs_Categories_Type from "../../types/GPTs_Categories_Type";
@@ -15,6 +17,7 @@ import GPTs_Type from "../../types/GPTs_Type";
 import Header from "../../components/Header/Header";
 import GPTs_Card from "../../components/GPTs_Card/GPTs_Card";
 import GPTS_Card_Type from "../../types/GPTs_Card_Type";
+import ConsentModal from "../../components/Modals/consentModal/consentModal";
 const Footer = dynamic(() => import("../../components/Footer/Footer"));
 import {
   EmailShareButton,
@@ -71,6 +74,18 @@ export default function GPTsSlug({ initialPageData, deviceType }) {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
   // Determine the GPTs link based on the active language
   const portfolioLink = activeLanguage === "FR" ? `/fr` : `/`;
+  //   usState hook managing the consent status
+  const { consent, updateConsent } = useConsent();
+  // Manage the consent modal
+  const [showModal, setShowModal] = useState(false);
+
+  // Effect to manage the consent modal visibility based on the consent status
+  useEffect(() => {
+    // Trigger modal display logic based on the consent value
+    if (consent === null) {
+      setShowModal(true);
+    }
+  }, [consent]);
 
   // Set loading to false when the component mounts
   useEffect(() => {
@@ -346,6 +361,31 @@ export default function GPTsSlug({ initialPageData, deviceType }) {
               __html: JSON.stringify(categoriesSchemaTemplate),
             }}
           />
+          {consent === true && (
+            <>
+              {/* Google Analytics script */}
+              <Script
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
+                strategy="afterInteractive"
+              />
+              <Script
+                id="google-analytics"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                  __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}', {
+            cookie_domain: 'auto',
+            cookie_flags: 'SameSite=None; Secure',
+            anonymize_ip: true
+          });
+        `,
+                }}
+              />
+            </>
+          )}
         </Head>
       )}
       {/* HEAD TAG GPT */}
@@ -426,6 +466,31 @@ export default function GPTsSlug({ initialPageData, deviceType }) {
               __html: JSON.stringify(gptSchemaTemplate),
             }}
           />
+          {consent === true && (
+            <>
+              {/* Google Analytics script */}
+              <Script
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
+                strategy="afterInteractive"
+              />
+              <Script
+                id="google-analytics"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                  __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}', {
+            cookie_domain: 'auto',
+            cookie_flags: 'SameSite=None; Secure',
+            anonymize_ip: true
+          });
+        `,
+                }}
+              />
+            </>
+          )}
         </Head>
       )}
 
@@ -620,6 +685,12 @@ export default function GPTsSlug({ initialPageData, deviceType }) {
               </span>
             </Link>
           </section>
+          {showModal && (
+            <ConsentModal
+              updateConsent={updateConsent}
+              setShowModal={setShowModal}
+            />
+          )}
         </main>
       )}
       {/* GPTS PAGE TEMPLATE */}
@@ -830,6 +901,12 @@ export default function GPTsSlug({ initialPageData, deviceType }) {
               {activeLanguage === "FR" ? "ici" : "here"}
             </span>
           </Link>
+          {showModal && (
+            <ConsentModal
+              updateConsent={updateConsent}
+              setShowModal={setShowModal}
+            />
+          )}
         </main>
       )}
 

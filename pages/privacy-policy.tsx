@@ -1,10 +1,13 @@
+import Script from "next/script";
 import { useState, useEffect } from "react";
 import { GetStaticProps } from "next";
 import React from "react";
 import Head from "next/head";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import ConsentModal from "../components/Modals/consentModal/consentModal";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { useConsent } from "../context/ConsentContext";
 import { useLoader } from "../context/LoaderContext";
 import { useLanguage } from "../context/LanguageContext";
 import { TranslationsType } from "../types/TranslationsType";
@@ -21,6 +24,18 @@ export default function PrivacyPolicy() {
   const { loading, setLoading } = useLoader();
   // Site URL
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  //   usState hook managing the consent status
+  const { consent, updateConsent } = useConsent();
+  // Manage the consent modal
+  const [showModal, setShowModal] = useState(false);
+
+  // Effect to trigger consent modal display logic based on the consent value
+  useEffect(() => {
+    // Trigger modal display logic based on the consent value
+    if (consent === null) {
+      setShowModal(true);
+    }
+  }, [consent]);
 
   // Effect to manage the loading state and turn it off when the content is loaded
   useEffect(() => {
@@ -697,6 +712,31 @@ export default function PrivacyPolicy() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(policySchema) }}
         />
+        {consent === true && (
+          <>
+            {/* Google Analytics script */}
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script
+              id="google-analytics"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}', {
+            cookie_domain: 'auto',
+            cookie_flags: 'SameSite=None; Secure',
+            anonymize_ip: true
+          });
+        `,
+              }}
+            />
+          </>
+        )}
       </Head>
       <Header />
       <main className={classes.mainContainer}>
@@ -1057,6 +1097,12 @@ export default function PrivacyPolicy() {
         </div>
       </main>
       <Footer />
+      {showModal && (
+        <ConsentModal
+          updateConsent={updateConsent}
+          setShowModal={setShowModal}
+        />
+      )}
       <SpeedInsights />
     </>
   );
