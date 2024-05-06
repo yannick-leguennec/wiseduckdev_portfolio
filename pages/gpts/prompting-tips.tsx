@@ -126,7 +126,14 @@ const PromptingTips = () => {
             />
           </>
         )}
-        <link rel="canonical" href={`https://${siteUrl}/gpts/prompting-tips`} />
+        <link
+          rel="canonical"
+          href={
+            activeLanguage === "EN"
+              ? `https://${siteUrl}/gpts/prompting-tips`
+              : `https://${siteUrl}/fr/gpts/prompting-tips`
+          }
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

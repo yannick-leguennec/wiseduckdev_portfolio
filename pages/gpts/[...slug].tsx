@@ -334,7 +334,11 @@ export default function GPTsSlug({ initialPageData, deviceType }) {
           )}
           <link
             rel="canonical"
-            href={`https://${siteUrl}/gpts/${pageData.category.category}`}
+            href={
+              activeLanguage === "EN"
+                ? `https://${siteUrl}/gpts/${pageData.category.category}`
+                : `https://${siteUrl}/fr/gpts/${pageData.category.category}`
+            }
           />
           <script
             type="application/ld+json"
@@ -410,7 +414,11 @@ export default function GPTsSlug({ initialPageData, deviceType }) {
           )}
           <link
             rel="canonical"
-            href={`https://${siteUrl}/gpts/${pageData.gpt.og_url}`}
+            href={
+              activeLanguage === "EN"
+                ? `https://${siteUrl}/gpts/${pageData.gpt.og_url}`
+                : `https://${siteUrl}/fr/gpts/${pageData.gpt.og_url}`
+            }
           />
           <script
             type="application/ld+json"

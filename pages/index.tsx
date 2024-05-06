@@ -44,29 +44,6 @@ export default function Home() {
     setLoading(false);
   }, [setLoading]);
 
-  useEffect(() => {
-    const scrollToElement = (elementId) => {
-      const element = document.getElementById(elementId);
-      if (element) {
-        element.scrollIntoView({ behavior: "auto", block: "end" });
-      }
-    };
-
-    if (router.asPath.includes("contact") && contactLoaded) {
-      scrollToElement("contact");
-    }
-  }, [router.asPath, contactLoaded]);
-
-  const logElementDetails = (elementId) => {
-    const element = document.getElementById(elementId);
-    if (element) {
-      console.log(`Details for ${elementId}:`, {
-        offsetTop: element.offsetTop,
-        clientHeight: element.clientHeight,
-      });
-    }
-  };
-
   // Object to store the translations
   const translation: TranslationsType = {
     altPicture: {
@@ -217,7 +194,14 @@ export default function Home() {
             />
           </>
         )}
-        <link rel="canonical" href={`https://${siteUrl}`} />
+        <link
+          rel="canonical"
+          href={
+            activeLanguage === "EN"
+              ? `https://${siteUrl}`
+              : `https://${siteUrl}/fr`
+          }
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(indexSchema) }}

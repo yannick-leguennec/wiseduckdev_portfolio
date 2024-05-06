@@ -160,6 +160,10 @@
   display: flex;
   flex-wrap: wrap;
 
+  @media (orientation: portrait) {
+    width: 100%;
+  }
+
   @media (max-width: 1024px) {
     width: 100%;
   }

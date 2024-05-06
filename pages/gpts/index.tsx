@@ -149,7 +149,14 @@ export default function GPTS({ deviceType }) {
             />
           </>
         )}
-        <link rel="canonical" href={`https://${siteUrl}/gpts`} />
+        <link
+          rel="canonical"
+          href={
+            activeLanguage === "EN"
+              ? `https://${siteUrl}/gpts`
+              : `https://${siteUrl}/fr/gpts`
+          }
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(indexSchemaGPTs) }}

@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import { GetStaticProps } from "next";
 import React from "react";
 import Head from "next/head";
-import Link from "next/link";
-import { useRouter } from "next/router";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -23,8 +21,6 @@ export default function PrivacyPolicy() {
   const { loading, setLoading } = useLoader();
   // Site URL
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  // Router
-  const router = useRouter();
 
   // Effect to manage the loading state and turn it off when the content is loaded
   useEffect(() => {
@@ -485,12 +481,8 @@ export default function PrivacyPolicy() {
       FR: "Par courriel : wiseduckdev@gmail.com",
     },
     contactForm: {
-      EN: "Or by using our contact form : ",
-      FR: "Ou en utilisant notre formulaire de contact: ",
-    },
-    contactLink: {
-      EN: "Contact Form",
-      FR: "Formulaire de contact",
+      EN: "Or by using our contact form on the main page. ",
+      FR: "Ou en utilisant notre formulaire de contact sur la page principale. ",
     },
     licenseTitle: {
       EN: "Content License Policy - The Wise Duck Dev",
@@ -693,7 +685,14 @@ export default function PrivacyPolicy() {
             />
           </>
         )}
-        <link rel="canonical" href={`https://${siteUrl}/privacy-policy`} />
+        <link
+          rel="canonical"
+          href={
+            activeLanguage === "EN"
+              ? `https://${siteUrl}/privacy-policy`
+              : `https://${siteUrl}/fr/privacy-policy`
+          }
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(policySchema) }}
@@ -1048,13 +1047,6 @@ export default function PrivacyPolicy() {
             </p>
             <p className={classes.paragraph}>
               {translation.contactForm[activeLanguage]}
-              <a
-                href={activeLanguage === "EN" ? `/#contact` : `/fr#contact`}
-                rel="noreferrer"
-                className={classes.link}
-              >
-                {translation.contactLink[activeLanguage]}
-              </a>
             </p>
             <div className={classes.buttonContainer}>
               <button onClick={handleBackClick} className={classes.button}>

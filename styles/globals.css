@@ -20,7 +20,7 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: black;
   /* DEV MODE */
   /* background: yellow; */
   /* PROD MODE */
