@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-      
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">  // Added namespace declaration for XHTML
+    
   <url>
   <loc>https://localhost:3000</loc>
   <xhtml:link
@@ -105,7 +106,7 @@
   <image:image>
   <image:loc>https://localhost:3000/images/privacy_policy/privacy-policy-page-secure-data-protection-wise-duck-dev-EN.webp</image:loc>
   </image:image>
-  <lastmod>01-05-2024</lastmod>
+  <lastmod>2024-05-06</lastmod>
   <changefreq>Monthly</changefreq>
   <priority>0.8</priority>
 </url>
@@ -4496,4 +4497,4 @@
           <changefreq>Monthly</changefreq>
           <priority>0.8</priority>
         </url>
-    </urlset>
+  </urlset>
