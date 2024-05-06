@@ -6,6 +6,7 @@ import Document, {
   DocumentContext,
   DocumentInitialProps,
 } from "next/document";
+import { useConsent } from "../context/ConsentContext";
 
 // MyDocumentProps interface
 interface MyDocumentProps extends DocumentInitialProps {

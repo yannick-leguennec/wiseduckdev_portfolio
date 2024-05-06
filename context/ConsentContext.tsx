@@ -20,23 +20,36 @@ export const ConsentProvider = ({
       localStorage.setItem("consent", "null");
       setConsent(null);
     } else {
-      setConsent(
-        storedConsent === "true"
-          ? true
-          : storedConsent === "false"
-          ? false
-          : null
-      );
+      const isConsentTrue = storedConsent === "true";
+      setConsent(isConsentTrue ? true : false);
+      // If consent value is found in local storage, update GA settings
+      if (isConsentTrue) {
+        updateGAConsent(true);
+      }
     }
   }, []);
+
+  const updateConsent = (newConsent: boolean) => {
+    setConsent(newConsent);
+    localStorage.setItem("consent", newConsent.toString());
+    // Update GA settings anytime the consent changes
+    updateGAConsent(newConsent);
+  };
+
+  // Function to update Google Analytics consent configuration
+  const updateGAConsent = (consent: boolean) => {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("consent", "update", {
+        ad_storage: consent ? "granted" : "denied",
+        analytics_storage: consent ? "granted" : "denied",
+      });
+    }
+  };
 
   const contextValue = useMemo(
     () => ({
       consent,
-      updateConsent: (newConsent: boolean) => {
-        setConsent(newConsent);
-        localStorage.setItem("consent", newConsent.toString());
-      },
+      updateConsent,
     }),
     [consent]
   );
