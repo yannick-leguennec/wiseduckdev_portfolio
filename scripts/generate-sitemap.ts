@@ -14,6 +14,16 @@ async function generateSitemap() {
   const indexUrlBlock = `
   <url>
   <loc>https://${baseUrl}</loc>
+  <xhtml:link
+  rel="alternate"
+  hreflang="en"
+  href="https://${baseUrl}"
+  />
+  <xhtml:link
+  rel="alternate"
+  hreflang="fr"
+  href="https://${baseUrl}/fr"
+  />
   <image:image>
 <image:loc>https://${baseUrl}/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp</image:loc>
 </image:image>
@@ -52,6 +62,16 @@ async function generateSitemap() {
   const gptsUrlBlock = `
   <url>
   <loc>https://${baseUrl}/gpts</loc>
+  <xhtml:link
+  rel="alternate"
+  hreflang="en"
+  href="https://${baseUrl}/gpts"
+  />
+  <xhtml:link
+  rel="alternate"
+  hreflang="fr"
+  href="https://${baseUrl}/fr/gpts"
+  />
   <image:image>
 <image:loc>https://${baseUrl}/images/index_gpts/the-wise-duck-dev-gpt-expert-men-in-black-style-profile.webp</image:loc>
 </image:image>
@@ -66,6 +86,16 @@ async function generateSitemap() {
   const promptingTipsUrlBlock = `
   <url>
   <loc>https://${baseUrl}/gpts/prompting-tips</loc>
+  <xhtml:link
+  rel="alternate"
+  hreflang="en"
+  href="https://${baseUrl}/gpts/prompting-tips"
+  />
+  <xhtml:link
+  rel="alternate"
+  hreflang="fr"
+  href="https://${baseUrl}/fr/gpts/prompting-tips"
+  />
   <image:image>
 <image:loc>https://${baseUrl}/images/index_gpts/the-wise-duck-dev-educational-tips-for-gpt-web-mobile-blockchain-development.webp</image:loc>
 </image:image>
@@ -78,6 +108,16 @@ async function generateSitemap() {
   const policyUrlBlock = `
   <url>
   <loc>https://${baseUrl}/privacy-policy</loc>
+  <xhtml:link
+  rel="alternate"
+  hreflang="en"
+  href="https://${baseUrl}/privacy-policy"
+  />
+  <xhtml:link
+  rel="alternate"
+  hreflang="fr"
+  href="https://${baseUrl}/fr/privacy-policy"
+  />
   <image:image>
   <image:loc>https://${baseUrl}/images/privacy_policy/privacy-policy-page-secure-data-protection-wise-duck-dev-EN.webp</image:loc>
   </image:image>
@@ -103,6 +143,16 @@ async function generateSitemap() {
       urlEntries += `
         <url>
           <loc>https://${baseUrl}/gpts/${category.path}</loc>
+          <xhtml:link
+          rel="alternate"
+          hreflang="en"
+          href="https://${baseUrl}/gpts/${category.path}"
+          />
+          <xhtml:link
+          rel="alternate"
+          hreflang="fr"
+          href="https://${baseUrl}/fr/gpts/${category.path}"
+          />
           <image:image><image:loc>https://${baseUrl}${category.image}</image:loc></image:image>
           <lastmod>${currentDate}</lastmod>
           <changefreq>Monthly</changefreq>
@@ -121,6 +171,16 @@ async function generateSitemap() {
       urlEntries += `
         <url>
           <loc>https://${baseUrl}/gpts${gpt.path}</loc>
+          <xhtml:link
+          rel="alternate"
+          hreflang="en"
+          href="https://${baseUrl}/gpts${gpt.path}"
+          />
+          <xhtml:link
+          rel="alternate"
+          hreflang="fr"
+          href="https://${baseUrl}/fr/gpts${gpt.path}"
+          />
           <image:image><image:loc>https://${baseUrl}${gpt.image}</image:loc></image:image>
           <lastmod>${currentDate}</lastmod>
           <changefreq>Monthly</changefreq>
