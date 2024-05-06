@@ -281,7 +281,7 @@ function Footer() {
               <Image
                 src={logo}
                 alt={translations.altLogo[activeLanguage]}
-                className={classes.logo}
+                className={classes.logoDuck}
               />
             </a>
           )}
