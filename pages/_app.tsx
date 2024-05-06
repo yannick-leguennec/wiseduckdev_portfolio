@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       <LoaderProvider>
         {/* Google Analytics script */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-433NXG83KC"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`}
           strategy="afterInteractive"
         />
         <Script
@@ -23,14 +23,14 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-433NXG83KC', {
-              cookie_domain: 'auto',
-              cookie_flags: 'SameSite=None; Secure',
-              anonymize_ip: true
-            });
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}', {
+            cookie_domain: 'auto',
+            cookie_flags: 'SameSite=None; Secure',
+            anonymize_ip: true
+          });
           `,
           }}
         />

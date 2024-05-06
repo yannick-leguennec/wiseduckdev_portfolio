@@ -44,29 +44,6 @@ export default function Home() {
     setLoading(false);
   }, [setLoading]);
 
-  useEffect(() => {
-    const scrollToElement = (elementId) => {
-      const element = document.getElementById(elementId);
-      if (element) {
-        element.scrollIntoView({ behavior: "auto", block: "end" });
-      }
-    };
-
-    if (router.asPath.includes("contact") && contactLoaded) {
-      scrollToElement("contact");
-    }
-  }, [router.asPath, contactLoaded]);
-
-  const logElementDetails = (elementId) => {
-    const element = document.getElementById(elementId);
-    if (element) {
-      console.log(`Details for ${elementId}:`, {
-        offsetTop: element.offsetTop,
-        clientHeight: element.clientHeight,
-      });
-    }
-  };
-
   // Object to store the translations
   const translation: TranslationsType = {
     altPicture: {
