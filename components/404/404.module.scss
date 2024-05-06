@@ -55,6 +55,7 @@
 .text1 {
   font-family: $primery-font;
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 
   @media (max-width: 768px) {
     font-size: 1.2rem;
@@ -69,6 +70,7 @@
   @media (max-width: 768px) {
     font-size: 1rem;
     margin: 0 0 0.7rem 0;
+    text-align: center;
   }
 }
 
