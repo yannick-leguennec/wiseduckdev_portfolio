@@ -121,7 +121,7 @@ async function generateSitemap() {
   <image:image>
   <image:loc>https://${baseUrl}/images/privacy_policy/privacy-policy-page-secure-data-protection-wise-duck-dev-EN.webp</image:loc>
   </image:image>
-  <lastmod>01-05-2024</lastmod>
+  <lastmod>${currentDate}</lastmod>
   <changefreq>Monthly</changefreq>
   <priority>0.8</priority>
 </url>
