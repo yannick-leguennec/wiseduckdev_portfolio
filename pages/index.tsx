@@ -1,19 +1,15 @@
 import { GetStaticProps } from "next";
-import Script from "next/script";
 import indexSchema from "../public/schemas/indexSchema";
 import React, { useState, useEffect, Suspense } from "react";
-import { useRouter } from "next/router";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useLoader } from "../context/LoaderContext";
-import { useConsent } from "../context/ConsentContext";
 import { useLanguage } from "../context/LanguageContext";
 import { TranslationsType } from "../types/TranslationsType";
 import Image, { StaticImageData } from "next/image";
 import duckCoachDesktop from "../public/images/index/innovative-developer-wise-duck-dev-white-suit-couch-tropical-plants.webp";
 import duckCoachMobile from "../public/images/index/innovative-developer-wise-duck-dev-white-suit-couch-tropical-plants-mobile.webp";
-import ConsentModal from "../components/Modals/consentModal/consentModal";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
 
@@ -35,20 +31,6 @@ export default function Home() {
   const [contactLoaded, setContactLoaded] = useState(false);
   // Site URL
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  // Router
-  const router = useRouter();
-  //   usState hook managing the consent status
-  const { consent, updateConsent } = useConsent();
-  // Manage the consent modal
-  const [showModal, setShowModal] = useState(false);
-
-  // Effect to trigger consent modal display logic based on the consent value
-  useEffect(() => {
-    // Trigger modal display logic based on the consent value
-    if (consent === null) {
-      setShowModal(true);
-    }
-  }, [consent]);
 
   // Effect to manage the initial content loading
   useEffect(() => {
@@ -222,31 +204,6 @@ export default function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(indexSchema) }}
         />
-        {consent === true && (
-          <>
-            {/* Google Analytics script */}
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script
-              id="google-analytics"
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}', {
-            cookie_domain: 'auto',
-            cookie_flags: 'SameSite=None; Secure',
-            anonymize_ip: true
-          });
-        `,
-              }}
-            />
-          </>
-        )}
       </Head>
       <Header />
       <main>
@@ -271,12 +228,7 @@ export default function Home() {
           )}
         </Suspense>
       </main>
-      {showModal && (
-        <ConsentModal
-          updateConsent={updateConsent}
-          setShowModal={setShowModal}
-        />
-      )}
+
       <SpeedInsights />
     </>
   );

@@ -15,6 +15,11 @@ interface GtagFunction {
   (command: "config", targetId: string, config?: GtagConfigParams): void;
   (command: "event", eventName: string, params?: GtagEventParams): void;
   (command: "set", params: GtagConfigParams): void;
+  (
+    command: "consent",
+    consentAction: "update" | "default",
+    params: GtagConsentParams
+  ): void;
 }
 
 declare global {
