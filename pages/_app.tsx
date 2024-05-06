@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       <LoaderProvider>
         {/* Google Analytics script */}
         <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
           strategy="afterInteractive"
         />
         <Script
@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}', {
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}', {
             cookie_domain: 'auto',
             cookie_flags: 'SameSite=None; Secure',
             anonymize_ip: true
@@ -34,16 +34,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           `,
           }}
         />
-        {/* GTM Script */}
-        <Script strategy="afterInteractive" id="gtm-script">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-WRGDT78G');
-          `}
-        </Script>
         <ComponentWithLoader
           Component={Component}
           pageProps={pageProps}
