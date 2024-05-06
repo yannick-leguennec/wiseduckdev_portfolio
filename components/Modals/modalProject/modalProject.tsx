@@ -93,7 +93,7 @@ const ModalProject = ({ project, onClose }) => {
             onClick={() => {
               if (window.gtag)
                 window.gtag("event", "navigation_click", {
-                  event_category: "Navigations",
+                  event_category: "Navigation",
                   event_navigation: `Open project ${project.project_title}`,
                 });
             }}

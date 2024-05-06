@@ -116,7 +116,7 @@ function Profil() {
               onClick={() => {
                 if (window.gtag)
                   window.gtag("event", "navigation_click", {
-                    event_category: "Navigations",
+                    event_category: "Navigation",
                     event_navigation: "Portfolio to GPTs from Profil",
                   });
               }}
@@ -143,7 +143,7 @@ function Profil() {
             onClick={() => {
               if (window.gtag)
                 window.gtag("event", "navigation_click", {
-                  event_category: "Navigations",
+                  event_category: "Navigation",
                   event_navigation: `See the resume in ${activeLanguage} from Profil`,
                 });
             }}

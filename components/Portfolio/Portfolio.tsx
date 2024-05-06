@@ -49,7 +49,7 @@ function Portfolio() {
                 handleImageClick(project);
                 if (window.gtag)
                   window.gtag("event", "navigation_click", {
-                    event_category: "Navigations",
+                    event_category: "Navigation",
                     event_navigation: `Open modal of the ${project.project_title} project`,
                   });
               }}
