@@ -34,7 +34,7 @@
 //   return data.map((item) => [
 //     item.id.toString(),
 //     item.title,
-//     `https://wiseduckdev.com/gpts${item.path}`, // Prepend the base URL to the path
+//     `https://wiseduckdev.com/gpts${item.path}`,
 //   ]);
 // }
 

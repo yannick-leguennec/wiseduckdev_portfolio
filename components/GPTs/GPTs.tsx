@@ -274,7 +274,9 @@ const GPTs = ({ deviceType }: GPTsProps) => {
           ) : (
             <>
               {" "}
-              <p>{translations.noResults[activeLanguage]}</p>{" "}
+              <p className={classes.noResults}>
+                {translations.noResults[activeLanguage]}
+              </p>{" "}
               <h2 className={classes.collectionTitle}>
                 {translations.collection[activeLanguage]}
               </h2>{" "}

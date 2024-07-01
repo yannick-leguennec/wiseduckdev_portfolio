@@ -52,7 +52,7 @@ function Profil() {
       FR: "Apprentissage continue",
     },
     point7: {
-      EN: "AI Enthusiast (Discover my GPTs specialized in wev, mobile, AI and blockchain developement ",
+      EN: "AI Enthusiast (Discover my GPTs specialized in web, mobile, AI and blockchain developement ",
       FR: "Passionné d'IA (Découvrez mes GPTs spécialisés en développement web, mobile, IA et blockchain ",
     },
     point8: {

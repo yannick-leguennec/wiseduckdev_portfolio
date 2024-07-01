@@ -37,7 +37,9 @@
         "GPT-4",
         "DALL-E 3",
         "Midjourney",
-        "Figma"
+        "Figma",
+        "Photoshop",
+        "Google Analytics"
       ],
       "project_description": "Discover The Wise Duck Dev GPTs—the definitive library for web, mobile, AI, and blockchain developers. This innovative platform offers over 200 custom GPTs across 12 categories, tailored to enhance skills and streamline development processes. Developed with a philantropic aim, this resource enables both novice and veteran developers to tackle complex challenges with advanced tools designed for productivity and innovation. Join our community and revolutionize your development approach with The Wise Duck Dev GPTs.",
       "project_github_repo": "https://github.com/yannick-leguennec/wiseduck_porfolio_website",
