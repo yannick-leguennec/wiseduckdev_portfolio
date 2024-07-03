@@ -11,6 +11,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import Image from "next/image";
 import logo from "../../public/images/logos/simple_logo_white.png";
 import { BsCopy } from "react-icons/bs";
+import useScreenOrientation from "../../hooks/Screen_orientation/useScreeOrientation";
 
 function Footer() {
   // Custom hook to manage the language changes
