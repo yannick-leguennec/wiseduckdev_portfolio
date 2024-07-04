@@ -30,7 +30,6 @@ import {
 import { TwitterIcon } from "next-share";
 import { IoMdShareAlt } from "react-icons/io";
 import classes from "./GPTs.module.scss";
-import useScreenOrientation from "../../hooks/Screen_orientation/useScreeOrientation";
 
 interface GPTsProps {
   deviceType: string;
@@ -55,16 +54,6 @@ const GPTs = ({ deviceType }: GPTsProps) => {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
   // Router
   const router = useRouter();
-  // Detrmine the screen orientation
-  const isPortrait = useScreenOrientation();
-
-  // Function to determine the class name based on the number of filtered GPTs and the screen orientation
-  const getClassName = () => {
-    if (filteredGPTs.length === 1) {
-      return isPortrait ? classes.cardsContainer3 : classes.cardsContainer2;
-    }
-    return classes.cardsContainer;
-  };
 
   // Fetch the GPTs categories data from the JSON file
   useEffect(() => {
@@ -306,7 +295,13 @@ const GPTs = ({ deviceType }: GPTsProps) => {
           {translations.collection[activeLanguage]}
         </h2>
       )}
-      <div className={getClassName()}>
+      <div
+        className={
+          filteredGPTs.length === 1
+            ? classes.cardsContainer2
+            : classes.cardsContainer
+        }
+      >
         {searchTerm === "" || (searchTerm !== "" && filteredGPTs.length === 0)
           ? // Display categories when no search or search has no results
             gptsCategories.map((category: GPTS_Card_Category_Type) => (
