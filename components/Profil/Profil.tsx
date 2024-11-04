@@ -121,7 +121,6 @@ function Profil() {
                   });
               }}
             >
-              {activeLanguage === "FR" ? "IA" : "AI"}{" "}
               {translations.point7[activeLanguage]}
               <span className={`${classes.gptsLinkOrange}`}>
                 {activeLanguage === "FR" ? "ici" : "here"}
