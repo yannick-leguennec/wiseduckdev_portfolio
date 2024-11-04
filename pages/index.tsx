@@ -1,8 +1,8 @@
 import { GetStaticProps } from "next";
-import indexSchema from "../public/schemas/indexSchema";
+import indexSchemaEN from "../public/schemas/index_schema_en.json";
+import indexSchemaFR from "../public/schemas/index_schema_fr.json";
 import React, { useState, useEffect, Suspense } from "react";
 import Head from "next/head";
-import dynamic from "next/dynamic";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useLoader } from "../context/LoaderContext";
 import { useLanguage } from "../context/LanguageContext";
@@ -12,30 +12,22 @@ import duckCoachDesktop from "../public/images/index/innovative-developer-wise-d
 import duckCoachMobile from "../public/images/index/innovative-developer-wise-duck-dev-white-suit-couch-tropical-plants-mobile.webp";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
-
-const Profil = dynamic(() => import("../components/Profil/Profil"));
-const Skills = dynamic(() => import("../components/Skills/Skills"));
-const Experience = dynamic(() => import("../components/Experience/Experience"));
-const Portfolio = dynamic(() => import("../components/Portfolio/Portfolio"));
-const Contact = dynamic(() => import("../components/Contact/Contact"));
-const Footer = dynamic(() => import("../components/Footer/Footer"));
+import Profil from "../components/Profil/Profil";
+import Skills from "../components/Skills/Skills";
+import Experience from "../components/Experience/Experience";
+import Portfolio from "../components/Portfolio/Portfolio";
+import Contact from "../components/Contact/Contact";
+import Footer from "../components/Footer/Footer";
 
 export default function Home() {
   // Custom hook to manage the loading state
   const { loading, setLoading } = useLoader();
   // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
-  // State to manage the initial content loading
-  const [initialContentLoaded, setInitialContentLoaded] = useState(false);
   // State to know when the contact form is loaded
   const [contactLoaded, setContactLoaded] = useState(false);
   // Site URL
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-
-  // Effect to manage the initial content loading
-  useEffect(() => {
-    setInitialContentLoaded(true);
-  }, []);
 
   // Effect to manage the loading state and turn it off when the content is loaded
   useEffect(() => {
@@ -202,31 +194,27 @@ export default function Home() {
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(indexSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              activeLanguage === "EN" ? indexSchemaEN : indexSchemaFR
+            ),
+          }}
         />
       </Head>
       <Header />
       <main>
         <Main />
-        <Suspense
-          fallback={<div>{translation.loadingContent[activeLanguage]}</div>}
-        >
-          {initialContentLoaded && (
-            <>
-              <Profil />
-              <Skills />
-              <ResponsiveImage
-                srcDesktop={duckCoachDesktop}
-                srcMobile={duckCoachMobile}
-                alt={translation.altPicture[activeLanguage]}
-              />
-              <Experience />
-              <Portfolio />
-              <Contact id="contact" onLoaded={setContactLoaded} />
-              <Footer />
-            </>
-          )}
-        </Suspense>
+        <Profil />
+        <Skills />
+        <ResponsiveImage
+          srcDesktop={duckCoachDesktop}
+          srcMobile={duckCoachMobile}
+          alt={translation.altPicture[activeLanguage]}
+        />
+        <Experience />
+        <Portfolio />
+        <Contact id="contact" onLoaded={setContactLoaded} />
+        <Footer />
       </main>
 
       <SpeedInsights />

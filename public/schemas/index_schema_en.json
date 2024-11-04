@@ -1,0 +1,111 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "The Wise Duck Dev",
+  "alternateName": "Wise Duck Dev",
+  "jobTitle": "Full Stack JavaScript Developer specialized in React",
+  "description": "The Wise Duck Dev is a creative and innovative Full Stack JS Developer specializing in React. Providing cutting-edge web and mobile solutions.",
+  "url": "https://wiseduckdev.com",
+  "image": "https://wiseduckdev.com/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp",
+  "sameAs": [
+    "https://github.com/yannick-leguennec",
+    "https://twitter.com/wiseduckdev",
+    "https://www.linkedin.com/in/wise-duck-dev/",
+    "https://wiseduckdevgpts.com"
+  ],
+  "email": "wiseduckdev@gmail.com",
+  "alumniOf": [
+    {
+      "@type": "EducationalOrganization",
+      "name": "O'clock"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "HEC Montreal"
+    }
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "The Wise Duck Dev",
+    "url": "https://wiseduckdev.com",
+    "logo": "https://wiseduckdev.com/images/logos/main_logo1.png",
+    "description": "Innovative full stack JS web and mobile development solutions, specializing in React."
+  },
+  "knowsAbout": [
+    "Web Development",
+    "Mobile Web Development",
+    "React",
+    "Next.js",
+    "JavaScript",
+    "TypeScript",
+    "Node.js",
+    "UI/UX Design",
+    "Automation",
+    "Blockchain",
+    "Business Development",
+    "Software Development",
+    "Web Development",
+    "Web Application Development",
+    "Mobile Application Development",
+    "PWA Development",
+    "Specialized GPT Creation"
+  ],
+  "knowsLanguage": [
+    {
+      "@type": "Language",
+      "name": "French"
+    },
+    {
+      "@type": "Language",
+      "name": "English"
+    },
+    {
+      "@type": "Language",
+      "name": "Spanish"
+    }
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Professional Title in Web and Web Mobile Development",
+      "credentialCategory": "Professional",
+      "educationalLevel": "Professional Title",
+      "recognizedBy": {
+        "@type": "GovernmentOrganization",
+        "name": "Ministry in charge of Employment, DGEFP"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "HEC Montréal Diploma in Entrepreneurship and Business Creation",
+      "credentialCategory": "Certificate",
+      "award": "First of its promotion",
+      "educationalLevel": "Diploma",
+      "recognizedBy": {
+        "@type": "CollegeOrUniversity",
+        "name": "HEC Montreal"
+      }
+    }
+  ],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://wiseduckdev.com",
+    "inLanguage": "en"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "wiseduckdev@gmail.com",
+    "url": "https://wiseduckdev.com/contact",
+    "availableLanguage": [
+      {
+        "@type": "Language",
+        "name": "English"
+      },
+      {
+        "@type": "Language",
+        "name": "French"
+      }
+    ]
+  }
+}
