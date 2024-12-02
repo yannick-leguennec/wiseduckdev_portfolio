@@ -26,7 +26,7 @@
       "project_id": 2,
       "project_link": "https://wiseduckdevgpts.com",
       "project_title": "The Wise Duck Dev GPTs",
-      "project_subtitle": "The largest library of custom GPTs for web, mobile, ai and blockchain developers in the  world.",
+      "project_subtitle": "The largest library of custom GPTs for web, mobile, ai, blockchain and video games developers in the  world.",
       "project_role": "Product Manager, Scrum Master, Git Master and Lead developer",
       "project_creation_year": "2024",
       "project_technologies_list": [
@@ -39,12 +39,13 @@
         "Midjourney",
         "Figma",
         "Photoshop",
-        "Google Analytics"
+        "Google Analytics",
+        "PWA"
       ],
-      "project_description": "Discover The Wise Duck Dev GPTs—the definitive library for web, mobile, AI, and blockchain developers. This innovative platform offers over 200 custom GPTs across 12 categories, tailored to enhance skills and streamline development processes. Developed with a philantropic aim, this resource enables both novice and veteran developers to tackle complex challenges with advanced tools designed for productivity and innovation. Join our community and revolutionize your development approach with The Wise Duck Dev GPTs.",
-      "project_github_repo": "https://github.com/yannick-leguennec/wiseduck_porfolio_website",
+      "project_description": "Discover The Wise Duck Dev GPTs—the definitive library for web, mobile, AI, blockchain and video games developers. This innovative platform offers over 600 custom GPTs across 14 categories, tailored to enhance skills and streamline development processes. Developed with a philantropic aim, this resource enables both novice and veteran developers to tackle complex challenges with advanced tools designed for productivity and innovation. Join our community and revolutionize your development approach with The Wise Duck Dev GPTs.",
+      "project_github_repo": "https://github.com/yannick-leguennec/wiseduckdevgpts",
       "project_image": "/images/projectsPictures/the-wise-duck-dev-gpts-library.webp",
-      "project_image_alt": "The Wise Duck Dev GPTs platform showcasing a diverse library of over 200 custom GPTs for web, mobile, AI, and blockchain development, organized across 12 key categories."
+      "project_image_alt": "The Wise Duck Dev GPTs platform showcasing a diverse library of over 600 custom GPTs for web, mobile, AI, blockchain and video games development, organized across 14 key categories."
     }
   ],
   "FR": [
@@ -74,7 +75,7 @@
       "project_id": 2,
       "project_link": "https://wiseduckdevgpts.com",
       "project_title": "The Wise Duck Dev GPTs",
-      "project_subtitle": "La plus grande bibliothèque de GPTs personnalisés pour les développeurs web, mobiles, IA et blockchain au monde.",
+      "project_subtitle": "La plus grande bibliothèque de GPTs personnalisés pour les développeurs web, mobiles, IA, blockchain et de jeux vidéos au monde.",
       "project_role": "Chef de produit, Scrum Master, Git Master et Développeur principal",
       "project_creation_year": "2024",
       "project_technologies_list": [
@@ -85,12 +86,15 @@
         "GPT-4",
         "DALL-E 3",
         "Midjourney",
-        "Figma"
+        "Figma",
+        "Photoshop",
+        "Google Analytics",
+        "PWA"
       ],
-      "project_description": "Découvrez The Wise Duck Dev GPTs - la resource ultime pour les développeurs web, mobiles, IA et blockchain. Cette plateforme innovante propose plus de 200 GPTs personnalisés répartis dans 12 catégories, conçus pour améliorer les compétences et rationaliser les processus de développement. Développée dans un but philanthropique, cette ressource permet aux développeurs novices et vétérans de relever des défis complexes avec des outils avancés conçus pour la productivité et l'innovation. Rejoignez notre communauté et révolutionnez votre approche du développement avec The Wise Duck Dev GPTs.",
-      "project_github_repo": "https://github.com/yannick-leguennec/wiseduck_porfolio_website",
+      "project_description": "Découvrez The Wise Duck Dev GPTs - la resource ultime pour les développeurs web, mobiles, IA, blockchain et jeux vidéos. Cette plateforme innovante propose plus de 600 GPTs personnalisés répartis dans 14 catégories, conçus pour améliorer les compétences et rationaliser les processus de développement. Développée dans un but philanthropique, cette ressource permet aux développeurs novices et vétérans de relever des défis complexes avec des outils avancés conçus pour la productivité et l'innovation. Rejoignez notre communauté et révolutionnez votre approche du développement avec The Wise Duck Dev GPTs.",
+      "project_github_repo": "https://github.com/yannick-leguennec/wiseduckdevgpts",
       "project_image": "/images/projectsPictures/the-wise-duck-dev-gpts-library.webp",
-      "project_image_alt": "La plateforme The Wise Duck Dev GPTs présentant une bibliothèque diversifiée de plus de 200 GPTs personnalisés pour le développement web, mobile, IA et blockchain, organisés dans 12 catégories clés."
+      "project_image_alt": "La plateforme The Wise Duck Dev GPTs présentant une bibliothèque diversifiée de plus de 600 GPTs personnalisés pour le développement web, mobile, IA, blockchain et jeux vidéos organisés dans 14 catégories clés."
     }
   ]
 }
