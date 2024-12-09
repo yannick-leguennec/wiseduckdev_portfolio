@@ -10,21 +10,14 @@ import classes from "./Header.module.scss";
 import { TranslationsType } from "../../types/TranslationsType";
 
 function Header() {
-  // State variable to store the current section
   const [activeSection, setActiveSection] = useState("main");
-  // State variable to store the burger menu status
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // Function to toggle the burger menu
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  // Custom hook to manage the language changes
   const { activeLanguage, toggleLanguage } = useLanguage();
-  // Router
   const router = useRouter();
-  const { pathname, locale } = router;
-  // Site URL
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  const { pathname, query } = router;
 
-  // Allow to detect the current section when the user scrolls
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight * 0.1;
@@ -62,17 +55,23 @@ function Header() {
     };
   }, []);
 
-  // Function to add the activeLink class to the current section
-  const isActive = (sectionName: string) =>
+  // Check if there's a query parameter to scroll to a section on load
+  useEffect(() => {
+    if (query.section) {
+      scrollToSectionDirect(query.section);
+      router.replace(pathname); // Clear the query parameter from the URL
+    }
+  }, [query.section]);
+
+  const isActive = (sectionName) =>
     activeSection === sectionName ? classes.activeLink : "";
 
-  // This function is used to scroll to the section when the user clicks on the navigation buttons
-  const scrollToSection = (id: string) => {
+  const scrollToSectionDirect = (id) => {
     const element = document.getElementById(id);
     if (element) {
       const elementPosition =
         element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - window.innerHeight * (6 / 100);
+      const offsetPosition = elementPosition - window.innerHeight * 0.06;
 
       requestAnimationFrame(() => {
         window.scrollTo({
@@ -80,35 +79,24 @@ function Header() {
           behavior: "smooth",
         });
       });
+
       if (isMenuOpen) toggleMenu();
     }
   };
 
-  // Prevent the default anchor tag behavior and use Next.js router for navigation
-  const handleLogoClick = (e) => {
-    e.preventDefault(); // Prevent the default anchor action
+  const scrollToSection = (id) => {
+    const isOnHomePage = pathname === "/" || pathname === "/fr";
+    const homePath = activeLanguage === "FR" ? "/fr" : "/";
 
-    // Determine the base path depending on whether the user is within the GPTs section
-    let basePath;
-    if (pathname.startsWith("/gpts")) {
-      basePath = activeLanguage === "FR" ? "/fr/gpts" : "/gpts";
+    if (!isOnHomePage) {
+      // Navigate to the homepage with the section query parameter
+      router.push({ pathname: homePath, query: { section: id } });
     } else {
-      basePath = activeLanguage === "FR" ? "/fr" : "/";
-    }
-
-    // Navigate to the determined path
-    router.push(basePath);
-
-    if (window.gtag) {
-      window.gtag("event", "navigation_click", {
-        event_category: "Navigation",
-        event_navigation: `Clicked on Logo from Header to ${basePath}`,
-      });
+      scrollToSectionDirect(id); // Scroll directly if already on the homepage
     }
   };
 
-  // Object to store the translations
-  const translations: TranslationsType = {
+  const translations = {
     main: { EN: "Main", FR: "Accueil" },
     profil: { EN: "Profile", FR: "Profil" },
     skills: { EN: "Skills", FR: "Expertise" },
@@ -117,45 +105,7 @@ function Header() {
     contact: { EN: "Contact", FR: "Contact" },
   };
 
-  // New navigation items for GPTs and Blog pages
-  const newNavItems = [
-    {
-      name: "Portfolio Dev",
-      path: locale === "fr" ? "/fr" : "/",
-      key: "portfolio",
-    },
-    {
-      name: "GPTs",
-      path: locale === "fr" ? "/fr/gpts" : "/gpts",
-      key: "gpts",
-      active: pathname.includes("gpts"),
-    },
-    // ! Blog is not ready yet
-    // {
-    //   name: "Blog",
-    //   path: locale === "fr" ? "/fr/blog" : "/blog",
-    //   key: "blog",
-    //   active: pathname.includes("blog"),
-    // },
-  ];
-
-  // Determine the content and font style based on the path
-  let spanContent = "";
-  let spanClass = "";
-
-  if (pathname.includes("/gpts")) {
-    spanContent = "GPTs";
-    spanClass = classes.containerLogo_fontCaramel; // Make sure your classes object is correctly imported/defined
-  } else if (pathname.includes("/blog")) {
-    spanContent = "Blog";
-    spanClass = classes.containerLogo_fontSpecialElite;
-  }
-
-  // Determine if we're on the homepage
-  const isHomePage = pathname === "/" || pathname === "/fr";
-
-  // Object to store the translations for the alt attribute of the logo
-  const translationAlt: TranslationsType = {
+  const translationAlt = {
     altLogo: {
       EN: "Logo of The Wise Duck Dev, certified Full Stack JavaScript and React Developer",
       FR: "Logo du développeur certifié Full Stack JavaScript et React The Wise Duck Dev",
@@ -167,8 +117,12 @@ function Header() {
       <a
         href={activeLanguage === "FR" ? "/fr" : "/"}
         tabIndex={0}
-        onClick={handleLogoClick}
-        className={`${classes.containerLogo}`}
+        className={classes.containerLogo}
+        aria-label={
+          activeLanguage === "FR"
+            ? "Retour à la page d'accueil"
+            : "Return to homepage"
+        }
       >
         <Image
           src={logo}
@@ -177,8 +131,7 @@ function Header() {
           priority
         />
         <p className={classes.containerLogo_logoName}>
-          the <strong>wise</strong>duck<strong>dev</strong>{" "}
-          {spanContent && <span className={spanClass}> {spanContent}</span>}
+          the <strong>wise</strong>duck<strong>dev</strong>
         </p>
       </a>
 
@@ -186,72 +139,65 @@ function Header() {
         <nav
           className={classes.navigation}
           role="navigation"
-          aria-label="Main navigation"
+          aria-label={
+            activeLanguage === "FR"
+              ? "Navigation principale"
+              : "Main navigation"
+          }
         >
           <ul className={classes.navList}>
-            {isHomePage
-              ? Object.keys(translations).map((key: string) => (
-                  <li key={key} className={classes.navItem}>
-                    <a
-                      href={`#${key}`}
-                      tabIndex={0}
-                      className={`${classes.navLink} ${isActive(key)}`}
-                      onClick={() => {
-                        scrollToSection(key);
-                        if (window.gtag) {
-                          window.gtag("event", "navigation_click", {
-                            event_category: "Navigation",
-                            event_navigation: `${key} from Header`,
-                          });
-                        }
-                      }}
-                    >
-                      {translations[key][activeLanguage]}
-                    </a>
-                  </li>
-                ))
-              : newNavItems.map(({ name, path, key, active }) => (
-                  <li key={key}>
-                    <a
-                      href={path}
-                      tabIndex={0}
-                      className={`${classes.navLink} ${
-                        active ? classes.activeLink : ""
-                      }`}
-                      onClick={() => {
-                        if (window.gtag) {
-                          window.gtag("event", "navigation_click", {
-                            event_category: "Navigation",
-                            event_navigation: `${name} from GPTs Header`,
-                          });
-                        }
-                      }}
-                    >
-                      {name}
-                    </a>
-                  </li>
-                ))}
-            {isHomePage && (
-              <li>
+            {Object.keys(translations).map((key) => (
+              <li key={key} className={classes.navItem}>
                 <a
-                  href={activeLanguage === "FR" ? "/fr/gpts" : "/gpts"}
+                  href={`#${key}`}
                   tabIndex={0}
-                  className={classes.navLinkGPTs}
+                  className={`${classes.navLink} ${isActive(key)}`}
+                  aria-label={
+                    activeLanguage === "FR"
+                      ? `Aller à la section ${translations[key].FR}`
+                      : `Go to ${translations[key].EN} section`
+                  }
                   onClick={() => {
+                    scrollToSection(key);
                     if (window.gtag) {
                       window.gtag("event", "navigation_click", {
                         event_category: "Navigation",
-                        event_navigation: "Portofolio to GPTs from Header",
+                        event_navigation: `${key} from Header`,
                       });
                     }
                   }}
                 >
-                  GPTs
+                  {translations[key][activeLanguage]}
                 </a>
               </li>
-            )}
+            ))}
+            <li>
+              <a
+                href="https://wiseduckdevgpts.com"
+                tabIndex={0}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes.navLinkGPTs}
+                aria-label={
+                  activeLanguage === "FR"
+                    ? "Accéder à la plateforme GPTs dans un nouvel onglet"
+                    : "Open GPTs platform in a new tab"
+                }
+                onClick={() => {
+                  if (window.gtag) {
+                    window.gtag("event", "navigation_click", {
+                      event_category: "Navigation",
+                      event_navigation: "Portfolio to GPTs from Header",
+                    });
+                  }
+                }}
+              >
+                GPTs
+              </a>
+            </li>
           </ul>
         </nav>
+
         <div className={classes.buttonsContainer}>
           <button
             className={`${classes.buttonLang} ${
@@ -269,7 +215,7 @@ function Header() {
               }
             }}
             role="button"
-            aria-label="Change language to English"
+            aria-label="Switch to English"
           >
             EN
           </button>
@@ -289,136 +235,91 @@ function Header() {
               }
             }}
             role="button"
-            aria-label="Change language to French"
+            aria-label="Passer au français"
           >
             FR
           </button>
         </div>
       </div>
+
       <div
         role="button"
         tabIndex={0}
         aria-expanded={isMenuOpen ? "true" : "false"}
-        aria-label="Toggle navigation menu"
+        aria-label={
+          activeLanguage === "FR"
+            ? "Ouvrir le menu de navigation"
+            : "Open navigation menu"
+        }
         className={classes.containerBurger}
         onClick={toggleMenu}
       >
-        <RxHamburgerMenu
-          className={classes.containerBurger_hamburger}
-          aria-label=""
-        />
+        <RxHamburgerMenu className={classes.containerBurger_hamburger} />
       </div>
+
       {isMenuOpen && (
         <div className={classes.mobileMenu}>
-          {" "}
-          <nav role="navigation">
+          <nav
+            role="navigation"
+            aria-label={
+              activeLanguage === "FR"
+                ? "Navigation mobile principale"
+                : "Main mobile navigation"
+            }
+          >
             <ul className={classes.navigationMobile}>
-              {isHomePage
-                ? Object.keys(translations).map((key: string) => (
-                    <li key={key} className={classes.navItem}>
-                      <a
-                        href={`#${key}`}
-                        tabIndex={0}
-                        className={`${classes.navLink} ${isActive(key)}`}
-                        onClick={() => {
-                          scrollToSection(key);
-                          if (window.gtag) {
-                            window.gtag("event", "navigation_click", {
-                              event_category: "Navigation",
-                              event_navigation: `${key} from Hamburger Menu`,
-                            });
-                          }
-                        }}
-                      >
-                        {translations[key][activeLanguage]}
-                      </a>
-                    </li>
-                  ))
-                : newNavItems.map(({ name, path, key, active }) => (
-                    <li key={key} className={classes.navItem}>
-                      <a
-                        href={path}
-                        tabIndex={0}
-                        className={`${classes.navLink} ${
-                          active ? classes.activeLink : ""
-                        }`}
-                        onClick={() => {
-                          if (window.gtag) {
-                            window.gtag("event", "navigation_click", {
-                              event_category: "Navigation",
-                              event_navigation: `${name} from Hamburger Menu`,
-                            });
-                          }
-                        }}
-                      >
-                        {name}
-                      </a>
-                    </li>
-                  ))}
-              {isHomePage && (
-                <li>
+              {Object.keys(translations).map((key) => (
+                <li key={key} className={classes.navItem}>
                   <a
-                    href={activeLanguage === "FR" ? "/fr/gpts" : "/gpts"}
+                    href={`#${key}`}
                     tabIndex={0}
-                    className={classes.navLinkGPTs}
+                    className={`${classes.navLink} ${isActive(key)}`}
+                    aria-label={
+                      activeLanguage === "FR"
+                        ? `Aller à la section ${translations[key].FR}`
+                        : `Go to ${translations[key].EN} section`
+                    }
                     onClick={() => {
+                      scrollToSection(key);
                       if (window.gtag) {
                         window.gtag("event", "navigation_click", {
                           event_category: "Navigation",
-                          event_navigation:
-                            "Portofolio to GPTs from Hambuger Menu",
+                          event_navigation: `${key} from Hamburger Menu`,
                         });
                       }
                     }}
                   >
-                    GPTs
+                    {translations[key][activeLanguage]}
                   </a>
                 </li>
-              )}
+              ))}
+              <li>
+                <a
+                  href="https://wiseduckdevgpts.com"
+                  tabIndex={0}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={classes.navLinkGPTs}
+                  aria-label={
+                    activeLanguage === "FR"
+                      ? "Accéder à la plateforme GPTs dans un nouvel onglet"
+                      : "Open GPTs platform in a new tab"
+                  }
+                  onClick={() => {
+                    if (window.gtag) {
+                      window.gtag("event", "navigation_click", {
+                        event_category: "Navigation",
+                        event_navigation:
+                          "Portfolio to GPTs from Hamburger Menu",
+                      });
+                    }
+                  }}
+                >
+                  GPTs
+                </a>
+              </li>
             </ul>
           </nav>
-          <div className={classes.buttonsContainer}>
-            <button
-              className={`${classes.buttonLang} ${
-                activeLanguage === "EN"
-                  ? classes.activeButton
-                  : classes.inactiveButton
-              }`}
-              onClick={() => {
-                toggleLanguage("EN");
-                if (isMenuOpen) toggleMenu();
-                if (window.gtag) {
-                  window.gtag("event", "language_change", {
-                    event_category: "Language",
-                    event_navigation: "EN from Hamburger Menu",
-                  });
-                }
-              }}
-              role="button"
-            >
-              EN
-            </button>
-            <button
-              className={`${classes.buttonLang} ${
-                activeLanguage === "FR"
-                  ? classes.activeButton
-                  : classes.inactiveButton
-              }`}
-              onClick={() => {
-                toggleLanguage("FR");
-                if (isMenuOpen) toggleMenu();
-                if (window.gtag) {
-                  window.gtag("event", "language_change", {
-                    event_category: "Language",
-                    event_navigation: "FR from Hamburger Menu",
-                  });
-                }
-              }}
-              role="button"
-            >
-              FR
-            </button>
-          </div>
         </div>
       )}
     </header>
