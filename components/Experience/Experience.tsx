@@ -55,29 +55,29 @@ function Experience() {
   return (
     <section id="experience" className={classes.experienceSection}>
       <div className={classes.contentContainer}>
-        <h1 className={classes.title}>{translation.title[activeLanguage]}</h1>
+        <h2 className={classes.title}>{translation.title[activeLanguage]}</h2>
         <article className={classes.article}>
-          <h2 className={classes.subtitle}>
+          <h3 className={classes.subtitle}>
             {translation.subtitle1[activeLanguage]}
-          </h2>
+          </h3>
           <p>{translation.point1[activeLanguage]}</p>
         </article>
         <article className={classes.article}>
-          <h2 className={classes.subtitle}>
+          <h3 className={classes.subtitle}>
             {translation.subtitle2[activeLanguage]}
-          </h2>
+          </h3>
           <p>{translation.point2[activeLanguage]}</p>
         </article>
         <article className={classes.article}>
-          <h2 className={classes.subtitle}>
+          <h3 className={classes.subtitle}>
             {translation.subtitle3[activeLanguage]}
-          </h2>
+          </h3>
           <p>{translation.point3[activeLanguage]}</p>
         </article>
         <article className={classes.article}>
-          <h2 className={classes.subtitle}>
+          <h3 className={classes.subtitle}>
             {translation.subtitle4[activeLanguage]}
-          </h2>
+          </h3>
           <p>{translation.point4[activeLanguage]}</p>
         </article>
       </div>

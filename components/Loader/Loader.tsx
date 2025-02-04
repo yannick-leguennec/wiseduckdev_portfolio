@@ -26,10 +26,10 @@ function Loader() {
         className={classes.image}
         priority
       />
-      <h1 className={classes.text1}>{translations.text1[activeLanguage]}</h1>
-      <h2 className={classes.text2}>
+      <h2 className={classes.text1}>{translations.text1[activeLanguage]}</h2>
+      <h3 className={classes.text2}>
         the <strong>wise</strong>duck<strong>dev</strong>
-      </h2>
+      </h3>
       <div className={classes.loaderCircle}></div>
     </div>
   );

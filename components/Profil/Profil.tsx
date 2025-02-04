@@ -92,12 +92,12 @@ function Profil() {
       </div>
       <div className={`${classes.contentContainer}`}>
         <div>
-          <h1 className={`${classes.title}`}>
+          <h2 className={`${classes.title}`}>
             {translations.title[activeLanguage]}
-          </h1>
-          <h2 className={`${classes.subtitle}`}>
-            {translations.subtitle[activeLanguage]}
           </h2>
+          <h3 className={`${classes.subtitle}`}>
+            {translations.subtitle[activeLanguage]}
+          </h3>
         </div>
         <p className={`${classes.description}`}>
           {translations.description[activeLanguage]}

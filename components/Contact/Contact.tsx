@@ -104,7 +104,7 @@ function Contact({ id, onLoaded }: ContactProps) {
   return (
     <section ref={ref} id={id} className={classes.contactSection}>
       <div className={classes.containerTitle}>
-        <h1 className={classes.title}>Contact</h1>
+        <h2 className={classes.title}>Contact</h2>
       </div>
       {/* Form initial values */}
       <Formik

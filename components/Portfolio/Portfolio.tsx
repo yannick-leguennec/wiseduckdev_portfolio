@@ -35,7 +35,7 @@ function Portfolio() {
 
   return (
     <section id="portfolio" className={classes.portfolioSection}>
-      <h1 className={classes.title}>Portfolio</h1>
+      <h2 className={classes.title}>Portfolio</h2>
 
       <div className={classes.projectsContainer}>
         {/* <img src="/images/logos/simple_logo_white.png" alt="Portfolio" /> */}
@@ -56,7 +56,7 @@ function Portfolio() {
               tabIndex={0}
             />
             <div className={classes.projectTitleContainer} tabIndex={1}>
-              <h2 className={classes.projectTitle}>{project.project_title}</h2>
+              <h3 className={classes.projectTitle}>{project.project_title}</h3>
             </div>
           </div>
         ))}

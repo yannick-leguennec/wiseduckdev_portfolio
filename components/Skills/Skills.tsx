@@ -97,9 +97,9 @@ const Skills = () => {
     <section id="skills" className={classes.skillsSection}>
       <div className={classes.mainContainer}>
         <div className={classes.leftContainer}>
-          <h1 className={classes.title}>
+          <h2 className={classes.title}>
             {translations.title[activeLanguage]}
-          </h1>
+          </h2>
           <div className={classes.navContainer}>
             <nav>
               <ul>
@@ -127,9 +127,9 @@ const Skills = () => {
                 : classes.hidden
             }`}
           >
-            <h2 className={classes.subtitle1}>
+            <h3 className={classes.subtitle1}>
               {translations.programmingLanguages[activeLanguage]}
-            </h2>
+            </h3>
             <p className={classes.para1}>
               {translations.programmingLanguageIntro[activeLanguage]}
             </p>
@@ -149,9 +149,9 @@ const Skills = () => {
                 : classes.hidden
             }`}
           >
-            <h2 className={classes.subtitle}>
+            <h3 className={classes.subtitle}>
               {translations.toolsFrameworks[activeLanguage]}
-            </h2>
+            </h3>
             <p className={classes.para1}>
               {translations.toolsFrameworksIntro[activeLanguage]}
             </p>
@@ -204,9 +204,9 @@ const Skills = () => {
               activeCategory === "designTools" ? classes.active : classes.hidden
             }`}
           >
-            <h2 className={classes.subtitle}>
+            <h3 className={classes.subtitle}>
               {translations.designTools[activeLanguage]}
-            </h2>
+            </h3>
             <p className={classes.para1}>
               {translations.designToolsIntro[activeLanguage]}
             </p>
@@ -226,9 +226,9 @@ const Skills = () => {
                 : classes.hidden
             }`}
           >
-            <h2 className={classes.subtitle}>
+            <h3 className={classes.subtitle}>
               {translations.communication[activeLanguage]}
-            </h2>
+            </h3>
             <p className={classes.para1}>
               {translations.communicationIntro[activeLanguage]}
             </p>
@@ -250,9 +250,9 @@ const Skills = () => {
                 : classes.hidden
             }`}
           >
-            <h2 className={classes.subtitle}>
+            <h3 className={classes.subtitle}>
               {translations.aiAutomation[activeLanguage]}
-            </h2>
+            </h3>
             <p className={classes.para1}>
               {translations.aiAutomationIntro[activeLanguage]}
             </p>
