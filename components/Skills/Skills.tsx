@@ -138,7 +138,9 @@ const Skills = () => {
               <div className={classes.list}>CSS3/SASS</div>
               <div className={classes.list}>JavaScript</div>
               <div className={classes.list}>TypeScript</div>
+              <div className={classes.list}>Python</div>
               <div className={classes.list}>SQL</div>
+              <div className={classes.list}>YAML</div>
               <div className={classes.list}>Markdown</div>
             </div>
           </article>
@@ -194,9 +196,15 @@ const Skills = () => {
             <div className={classes.itemsContainer}>
               <div className={classes.list}>Git</div>
               <div className={classes.list}>GitHub</div>
+              <div className={classes.list}>Git Actions</div>
+              <div className={classes.list}>Selenium</div>
+              <div className={classes.list}>Vercel</div>
+              <div className={classes.list}>Railway</div>
               <div className={classes.list}>Docker</div>
               <div className={classes.list}>WordPress</div>
               <div className={classes.list}>Linux</div>
+              <div className={classes.list}>HashiCorp Vault</div>
+              <div className={classes.list}>Google Analytics</div>
             </div>
           </article>
           <article
@@ -257,15 +265,21 @@ const Skills = () => {
               {translations.aiAutomationIntro[activeLanguage]}
             </p>
             <div className={classes.itemsContainer}>
-              <div className={classes.list}>GPT4</div>
+              <div className={classes.list}>OpenAI API</div>
+              <div className={classes.list}>OpenAI Platform</div>
+              <div className={classes.list}>ChatGPT</div>
+              <div className={classes.list}>Perplexity API</div>
+              <div className={classes.list}>Xai API</div>
               <div className={classes.list}>Claude</div>
               <div className={classes.list}>Gemini</div>
               <div className={classes.list}>DALL E 3</div>
               <div className={classes.list}>Midjourney</div>
-              <div className={classes.list}>Notion</div>
-              <div className={classes.list}>Make</div>
-              <div className={classes.list}>Zapier</div>
               <div className={classes.list}>Google Console</div>
+              <div className={classes.list}>Google API</div>
+              <div className={classes.list}>X API</div>
+              <div className={classes.list}>LinkedIn API</div>
+              <div className={classes.list}>Make</div>
+              <div className={classes.list}>Notion</div>
               <div className={classes.list}>
                 {translations.more[activeLanguage]}
               </div>
