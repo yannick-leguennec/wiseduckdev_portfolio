@@ -141,6 +141,7 @@ const Skills = () => {
               <div className={classes.list}>Python</div>
               <div className={classes.list}>SQL</div>
               <div className={classes.list}>YAML</div>
+              <div className={classes.list}>Shell</div>
               <div className={classes.list}>Markdown</div>
             </div>
           </article>
@@ -269,6 +270,8 @@ const Skills = () => {
               <div className={classes.list}>OpenAI Platform</div>
               <div className={classes.list}>ChatGPT</div>
               <div className={classes.list}>Perplexity API</div>
+              <div className={classes.list}>Perplexity</div>
+              <div className={classes.list}>Grok</div>
               <div className={classes.list}>Xai API</div>
               <div className={classes.list}>Claude</div>
               <div className={classes.list}>Gemini</div>

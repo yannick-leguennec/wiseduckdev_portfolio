@@ -79,6 +79,8 @@
       "project_creation_year": "2025",
       "project_technologies_list": [
         "Python",
+        "YAML",
+        "Shell",
         "OpenAI API",
         "Perplexity API",
         "X API (v1 & v2)",
@@ -91,7 +93,8 @@
         "GitHub Actions",
         "python-dotenv",
         "pytz",
-        "requests"
+        "requests",
+        "Linux"
       ],
       "project_description": "The Babylon Archives Project automates the creation, enhancement, and publication of timely news content for The Babylon Archives on X and Substack. It leverages AI for classification and contextual enrichment of X posts, generates long‑form Substack articles, securely manages credentials with Vault, and orchestrates fully automated, scheduled workflows via GitHub Actions.",
       "project_github_repo": "https://github.com/yannick-leguennec/babylon_archives_bot",
@@ -179,6 +182,8 @@
       "project_creation_year": "2025",
       "project_technologies_list": [
         "Python",
+        "YAML",
+        "Shell",
         "OpenAI API",
         "Perplexity API",
         "X API (v1 & v2)",
@@ -191,7 +196,8 @@
         "GitHub Actions",
         "python‑dotenv",
         "pytz",
-        "requests"
+        "requests",
+        "Linux"
       ],
       "project_description": "Le projet The Babylon Archives automatise la création, l’enrichissement et la publication de contenus d’actualité pour The Babylon Archives sur X et Substack. Il utilise l’IA pour classifier et contextualiser les publications X, génère des articles long format pour Substack, gère les identifiants de manière sécurisée via Vault et orchestre des workflows entièrement automatisés et planifiés avec GitHub Actions.",
       "project_github_repo": "https://github.com/yannick-leguennec/babylon_archives_bot",
