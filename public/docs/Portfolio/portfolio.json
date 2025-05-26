@@ -72,9 +72,9 @@
     },
     {
       "project_id": 4,
-      "project_link": "https://github.com/yannick-leguennec/babylon_archives_bot",
-      "project_title": "The Babylon Archives",
-      "project_subtitle": "Automated Content Generation & Publication System for The Babylon Archives",
+      "project_link": "https://github.com/yannick-leguennec/evidence_media_news",
+      "project_title": "Evidence Media",
+      "project_subtitle": "Automated Content Generation & Publication System for Evidence Media",
       "project_role": "Lead Developer, AI Integration & Automation Specialist",
       "project_creation_year": "2025",
       "project_technologies_list": [
@@ -84,6 +84,7 @@
         "OpenAI API",
         "Perplexity API",
         "X API (v1 & v2)",
+        "Xai API",
         "Tweepy (Twitter API v1 & v2)",
         "Substack",
         "Google Sheets & Gmail API",
@@ -96,10 +97,10 @@
         "requests",
         "Linux"
       ],
-      "project_description": "The Babylon Archives Project automates the creation, enhancement, and publication of timely news content for The Babylon Archives on X and Substack. It leverages AI for classification and contextual enrichment of X posts, generates long‑form Substack articles, securely manages credentials with Vault, and orchestrates fully automated, scheduled workflows via GitHub Actions.",
-      "project_github_repo": "https://github.com/yannick-leguennec/babylon_archives_bot",
-      "project_image": "images/projectsPictures/babylon-archives_social_media_ai_automation_project.webp",
-      "project_image_alt": "Overview diagram of the Babylon Archives Bot showing automated AI‑driven workflows for generating and publishing news content on X and Substack"
+      "project_description": "The Evidence Media Project automates the creation, enhancement, and publication of timely news content for Evidence Media on X and Substack. It leverages AI for classification and contextual enrichment of X posts, generates long‑form Substack articles, securely manages credentials with Vault, and orchestrates fully automated, scheduled workflows via GitHub Actions.",
+      "project_github_repo": "https://github.com/yannick-leguennec/evidence_media_news",
+      "project_image": "images/projectsPictures/evidence_media_social_media_ai_automation_project.webp",
+      "project_image_alt": "Overview diagram of the Evidence Media Bot showing automated AI‑driven workflows for generating and publishing news content on X and Substack"
     }
   ],
   "FR": [
@@ -175,9 +176,9 @@
     },
     {
       "project_id": 4,
-      "project_link": "https://github.com/yannick-leguennec/babylon_archives_bot",
-      "project_title": "The Babylon Archives",
-      "project_subtitle": "Système automatisé de génération et de publication de contenu pour The Babylon Archives",
+      "project_link": "https://github.com/yannick-leguennec/evidence_media_news",
+      "project_title": "Evidence Media",
+      "project_subtitle": "Système automatisé de génération et de publication de contenu pour Evidence Media",
       "project_role": "Développeur principal, spécialiste de l’intégration IA et de l’automatisation",
       "project_creation_year": "2025",
       "project_technologies_list": [
@@ -187,6 +188,7 @@
         "OpenAI API",
         "Perplexity API",
         "X API (v1 & v2)",
+        "Xai API",
         "Tweepy (API Twitter v1 & v2)",
         "Substack",
         "Google Sheets & Gmail API",
@@ -199,10 +201,10 @@
         "requests",
         "Linux"
       ],
-      "project_description": "Le projet The Babylon Archives automatise la création, l’enrichissement et la publication de contenus d’actualité pour The Babylon Archives sur X et Substack. Il utilise l’IA pour classifier et contextualiser les publications X, génère des articles long format pour Substack, gère les identifiants de manière sécurisée via Vault et orchestre des workflows entièrement automatisés et planifiés avec GitHub Actions.",
-      "project_github_repo": "https://github.com/yannick-leguennec/babylon_archives_bot",
-      "project_image": "images/projectsPictures/babylon-archives_social_media_ai_automation_project.webp",
-      "project_image_alt": "Schéma d’ensemble de Babylon Archives Bot montrant les workflows automatisés pilotés par IA pour générer et publier du contenu d’actualité sur X et Substack"
+      "project_description": "Le projet Evidence Media automatise la création, l’enrichissement et la publication de contenus d’actualité pour Evidence Media sur X et Substack. Il utilise l’IA pour classifier et contextualiser les publications X, génère des articles long format pour Substack, gère les identifiants de manière sécurisée via Vault et orchestre des workflows entièrement automatisés et planifiés avec GitHub Actions.",
+      "project_github_repo": "https://github.com/yannick-leguennec/evidence_media_news",
+      "project_image": "images/projectsPictures/evidence_media_social_media_ai_automation_project.webp",
+      "project_image_alt": "Schéma d’ensemble de Evidence Media montrant les workflows automatisés pilotés par IA pour générer et publier du contenu d’actualité sur X et Substack"
     }
   ]
 }
