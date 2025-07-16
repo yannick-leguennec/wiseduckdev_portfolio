@@ -15,6 +15,9 @@
     "diamond_categories_data": "ts-node scripts/diamond_categories_data.ts",
     "index_now": "ts-node scripts/bing_index_now.ts"
   },
+  "engines": {
+    "node": "22.x"
+  },
   "dependencies": {
     "@vercel/speed-insights": "^1.0.10",
     "axios": "^1.6.8",
