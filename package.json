@@ -24,6 +24,7 @@
     "date-fns": "^3.3.1",
     "dotenv": "^16.4.5",
     "formik": "^2.4.5",
+    "framer-motion": "^12.23.12",
     "googleapis": "^134.0.0",
     "next": "15.0.2",
     "next-share": "^0.27.0",

@@ -24,40 +24,45 @@ function Profil() {
       FR: "Le Wise Duck ?",
     },
     description: {
-      EN: "Hi there! More than a developer, I am the force that will propel your web projects to the next level. Resourceful, creative, and passionate, I am the Wise Duck Dev, and it is with a lot of enthusiasm that I bring to you my set of skills built from 20 years of experience in very diverse fields:",
-      FR: "Salut! Plus qu'un développeur, je suis la force qui propulsera vos projets web vers de nouveaux sommets. Débrouillard, créatif et passionné, je suis le Wise Duck Dev, et c'est avec beaucoup d'enthousiasme que je vous apporte mes compétences acquises au fil de plus de 20 ans d'expérience dans des domaines très diversifiés :",
+      EN: "Hi there! More than a developer, I’m a builder of scalable, AI-powered systems designed to drive real impact. As the Wise Duck Dev, I bring a rare blend of creativity, engineering precision, and strategic thinking, forged through 20+ years of diverse experience across tech, business, and creativity. Every project I take on is an opportunity to deliver smart, elegant, and future-ready solutions.",
+      FR: "Salut! Je ne suis pas qu’un développeur — je conçois des systèmes puissants et scalables, propulsés par l’IA, pensés pour générer un impact concret. En tant que Wise Duck Dev, je combine créativité, rigueur d’ingénierie et vision stratégique, fruits de plus de 20 ans d’expérience riche mêlant tech, entrepreneuriat et créativité. Chaque projet est pour moi une occasion de livrer des solutions intelligentes, élégantes et tournées vers l’avenir.",
     },
+
     point1: {
       EN: "Certified Full Stack JS Web and Web Mobile Developer",
       FR: "Développeur web et web mobile certifié Full-Stack JS",
     },
     point2: {
-      EN: "Specialized in React and interconnected technologies",
+      EN: "Specialized in React, Next.js and interconnected technologies",
       FR: "Spécialisé en React et ses technologies interconnectées",
     },
     point3: {
+      EN: "Skilled in Python, Node.js, REST APIs, and various backend technologies",
+      FR: "Compétent en Python, Node.js, REST APIs et diverses technologies backend",
+    },
+    point4: {
       EN: "Over 10 years experience in Management",
       FR: "Plus de 10 ans d'expérience en gestion",
     },
-    point4: {
+    point5: {
       EN: "Scientific background",
       FR: "Formation scientifique",
     },
-    point5: {
-      EN: "Diplomed from HEC Montréal in Entrepreneurship and Business Creation",
+    point6: {
+      EN: "Top graduate from HEC Montréal in Entrepreneurship and Business Creation",
       FR: "Diplômé de HEC Montréal en Entrepreunariat et Création d'Entreprise",
     },
-    point6: {
+    point7: {
       EN: "Continuous learning",
       FR: "Apprentissage continue",
     },
-    point7: {
+    point8: {
       EN: "AI Enthusiast (Discover my GPTs specialized in web, mobile, AI and blockchain developement ",
       FR: "Passionné d'IA (Découvrez mes GPTs spécialisés en développement web, mobile, IA et blockchain ",
     },
-    point8: {
-      EN: "Skilled in automation technologies and optimization",
-      FR: "Féru de processus d'automatisation et d'optimisation",
+    point9: {
+      EN: "Expert in automation, AI workflows, and prompt engineering",
+      FR: "Expert en automatisation, intégration d'IA et prompt engineering",
     },
     description2: {
       EN: "Looking for a cutting edge web and web developer? Let's connect and chart the course to success in the vast digital landscape.",
@@ -72,8 +77,8 @@ function Profil() {
       FR: "Consultez Mon CV",
     },
     cv: {
-      EN: "/docs/wise_duck_dev_resume_en.pdf",
-      FR: "/docs/wise_duck_dev_cv_fr.pdf",
+      EN: "docs/yannick_legunnec_full_stack_dev_resume_2025.pdf",
+      FR: "docs/yannick_legunnec_full_stack_dev_resume_2025_fr.pdf",
     },
     aria: {
       EN: "Download my CV in English",
@@ -121,14 +126,14 @@ function Profil() {
                   });
               }}
             >
-              {translations.point7[activeLanguage]}
+              {translations.point8[activeLanguage]}
               <span className={`${classes.gptsLinkOrange}`}>
                 {activeLanguage === "FR" ? "ici" : "here"}
               </span>
             </Link>
             {")"}
           </li>
-          <li>{translations.point8[activeLanguage]}</li>
+          <li>{translations.point9[activeLanguage]}</li>
         </ul>
         <p>{translations.description2[activeLanguage]}</p>
         <div className={`${classes.buttonContainer}`}>

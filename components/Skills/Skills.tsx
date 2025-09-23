@@ -177,6 +177,7 @@ const Skills = () => {
                 {translations.API[activeLanguage]}
               </div>
               <div className={classes.list}>Sequelize</div>
+              <div className={classes.list}>Prisma</div>
               <div className={classes.list}>Swagger</div>
               <div className={classes.list}>Postman</div>
               <div className={classes.list}>Tests HTTP</div>
@@ -224,8 +225,6 @@ const Skills = () => {
               <div className={classes.list}>Canva</div>
               <div className={classes.list}>Adobe Photoshop</div>
               <div className={classes.list}>Adobe Express</div>
-              <div className={classes.list}>Tldraw</div>
-              <div className={classes.list}>Excalidraw</div>
             </div>
           </article>
           <article
@@ -274,7 +273,6 @@ const Skills = () => {
               <div className={classes.list}>Grok</div>
               <div className={classes.list}>Xai API</div>
               <div className={classes.list}>Claude</div>
-              <div className={classes.list}>Gemini</div>
               <div className={classes.list}>DALL E 3</div>
               <div className={classes.list}>Midjourney</div>
               <div className={classes.list}>Google Console</div>

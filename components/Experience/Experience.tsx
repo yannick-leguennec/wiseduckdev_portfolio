@@ -19,36 +19,36 @@ function Experience() {
       FR: "Expérience",
     },
     subtitle1: {
-      EN: "Passionned Full Stack JS Web and Web Mobile Developer",
-      FR: "Développeur Web et Mobile Full Stack passionné",
+      EN: "Full Stack Developer & Builder of AI-Driven Platforms",
+      FR: "Développeur Full Stack et Créateur de Plateformes Propulsées par l'IA",
     },
     point1: {
-      EN: "Starting my career in web and mobile development, I combine technical expertise and strategic vision, thanks to specialized training in React and a solid foundation in full stack JS. My journey is marked in addition by over 30 online courses, reflecting my commitment to continuous learning and my desire to stay at the forefront of technological innovation.",
-      FR: "Débutant ma nouvelle carrière en développement web et mobile, je combine expertise technique et vision stratégique, grâce à une formation spécialisée en React et une solide base en full stack JS. Mon parcours est deplus renforcé par plus de 30 cours en ligne, refletant mon engagement envers l'apprentissage continu et de mon désir de rester à l'avant-garde de l'innovation technologique.",
+      EN: "With 2+ years of experience in full stack JavaScript development, I've built and deployed AI-powered ecosystems such as Wise Duck Dev GPTs (800+ GPTs), Evidence Media, and Jean the Writer. I combine deep technical skills with product vision to design tools that are fast, scalable, and genuinely useful.",
+      FR: "Fort de plus de deux ans d'expérience en développement full stack JavaScript, j'ai conçu et déployé des écosystèmes propulsés par l’IA tels que Wise Duck Dev GPTs (800+ GPTs), Evidence Media et Jean the Writer. Je combine compétences techniques avancées et vision produit pour créer des outils rapides, scalables et réellement utiles.",
     },
     subtitle2: {
-      EN: "A Team Spirit Forged in the Diversity of Experiences",
-      FR: "Un Esprit d'Équipe Forgé dans la Diversité des Expériences",
+      EN: "Systems Thinking, Automation & Product Consistency",
+      FR: "Vision Systémique, Automatisation et Cohérence Produit",
     },
     point2: {
-      EN: "My experience in management and entrepreneurship, enriched by over 10 years in the restaurant industry, demonstrates my ability to work in a team and to adapt to dynamic environments. This versatility allows me to quickly understand the needs of projects and to respond to them with creativity and efficiency.",
-      FR: "Mon expérience en management et en entrepreneuriat, enrichie par plus de 10 ans dans l'industrie de la restauration, témoigne de ma capacité à travailler en équipe et à m'adapter à des environnements dynamiques. Cette polyvalence me permet de comprendre rapidement les besoins des projets et d'y répondre avec créativité et efficacité.",
-    },
-    point3: {
-      EN: "Graduated from HEC Montréal in entrepreneurship and from the O'clock school in web/mobile development, I have developed advanced expertise in teleworking and virtual collaboration. My distance learning has made me particularly autonomous and competent in the management of virtual teams, qualifying me as an agile full stack developer adapted to the innovative digital projects of modern companies.",
-      FR: "Diplômé de HEC Montréal en entrepreneuriat et de l'école O'clock en développement web/mobile, j'ai développé une expertise avancée en télétravail et en collaboration virtuelle. Mes formations à distance m'ont rendu particulièrement autonome et compétent dans la gestion d'équipes virtuelles, me qualifiant comme un développeur full stack agile adapté aux projets numériques innovants des entreprises modernes.",
+      EN: "I specialize in building systems that scale: automation pipelines, standardized frameworks, resilient AI workflows, and advanced Chain of Thought architectures that guide complex reasoning across AI-powered automations.",
+      FR: "Je me spécialise dans la création de systèmes scalables : pipelines d'automatisation, structures normalisées, workflows IA résilients, ainsi qu’une maîtrise poussée des architectures Chain of Thought, qui orchestrent des raisonnements complexes dans mes automatisations propulsées par l’IA.",
     },
     subtitle3: {
-      EN: "Expertise in Remote Work and Virtual Collaboration",
-      FR: "Expertise en Travail à Distance et Collaboration Virtuelle",
+      EN: "Strategic Training, Remote Collaboration & Versatility",
+      FR: "Formation Stratégique, Collaboration à Distance et Polyvalence",
+    },
+    point3: {
+      EN: "Graduated from O'clock (Full Stack JS) and HEC Montréal (Entrepreneurship), I bring a dual technical and strategic mindset. My background in management and remote-first training made me autonomous, adaptable, and fully operational in distributed teams and async environments.",
+      FR: "Diplômé de l'école O'clock (Full Stack JS) et de HEC Montréal (Entrepreneuriat), je combine esprit technique et vision stratégique. Mon parcours en gestion et en formation à distance m’a rendu autonome, adaptable et parfaitement à l’aise dans des équipes distribuées et des environnements asynchrones.",
     },
     subtitle4: {
-      EN: "Passionate about Continuous Learning and Technological Watch",
-      FR: "Passionné par l'Apprentissage Continu et la Veille Technologique",
+      EN: "Obsessed With Learning, Experimentation and AI Innovation",
+      FR: "Passionné d’Apprentissage, d’Expérimentation et d’Innovation IA",
     },
     point4: {
-      EN: "I am constantly investing in learning, whether through online courses, specialized newsletters, or constant monitoring of market trends. This thirst for knowledge allows me to stay informed of the latest innovations, ensuring that my skills and projects remain at the forefront.",
-      FR: "Je m'investis continuellement dans l'apprentissage, que ce soit à travers des cours en ligne, des newsletters spécialisées, ou une veille constante des tendances du marché. Cette soif de connaissances me permet de rester informé des dernières innovations, assurant ainsi que mes compétences et mes projets demeurent à l'avant-garde.",
+      EN: "From prompt engineering to API orchestration, I constantly refine my skills across React, Next.js, Python, LLMs, and AI automation. I actively monitor tech trends, test new tools, and turn experiments into production-ready workflows. My curiosity fuels everything I build.",
+      FR: "Du prompt engineering à l’orchestration d’API, je perfectionne constamment mes compétences en React, Next.js, Python, LLMs et automatisation employant l'IA. Je surveille activement les tendances, teste de nouveaux outils et transforme mes expérimentations en workflows prêts pour la production. Ma curiosité est le moteur de tout ce que je construis.",
     },
   };
 
