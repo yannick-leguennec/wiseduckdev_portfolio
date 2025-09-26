@@ -30,16 +30,20 @@ export default function FamilyFlowProject() {
 
   const translations: TranslationsType = {
     pageTitle: {
-      EN: "The Wise Duck Dev GPTs Project",
-      FR: "Le projet Wise Duck Dev GPTs",
+      EN: "Jean the Writer",
+      FR: "Jean L'écrivain",
     },
     pageSubtitle: {
-      EN: "AI-Powered Custom GPT Ecosystem for Developers",
-      FR: "Un écosystème de plus de 800 custom GPTs spécialisés pour les développeurs",
+      EN: "AI-Powered Manuscript Correction & Editorial Review Tool",
+      FR: "Outil de correction de manuscrit et de révision éditoriale alimenté par IA",
     },
-    pageIntroduction: {
-      EN: "In 2024, I launched Wise Duck Dev GPTs, a groundbreaking platform offering over 800 custom GPTs tailored for developers. Born from my journey as a newly certified developer, this project evolved from a personal portfolio idea into a vibrant resource, empowering coders with AI-driven productivity tools.",
-      FR: "En 2024, j’ai lancé The Wise Duck Dev GPTs, une plateforme avant-gardiste rassemblant plus de 800 GPTs sur mesure, conçus pour accompagner les développeurs dans leur quotidien. Initialement pensée comme un simple projet de portfolio, l’initiative a rapidement évolué en un véritable catalyseur de productivité et d’innovation, offrant des solutions concrètes aux professionnels du web, du mobile, de l’intelligence artificielle, de la blockchain et du jeu vidéo.",
+    pageIntroduction1: {
+      EN: "At the beginning of 2025, shortly after releasing Wise Duck Dev GPTs V2, I was approached by a writer with an unusual request: could I design an AI-powered system capable of correcting his entire manuscript (600 pages, in French, without a single punctuation mark), providing structured editorial feedback, and even suggesting publishers?",
+      FR: "Début 2025, juste après avoir déployé la version 2 de Wise Duck Dev GPTs, j’ai été approché par un écrivain avec une demande aussi originale qu’ambitieuse : corriger un manuscrit de 600 pages, rédigé sans aucune ponctuation, suivi d’une relecture éditoriale approfondie de celui-ci, et suggérer des pistes d’amélioration concrètes.",
+    },
+    pageIntroduction2: {
+      EN: "What started as a client-specific challenge evolved into Jean The Writer: a powerful backend tool that automates grammar and syntax correction, delivers chapter-by-chapter editorial reviews, and compiles polished, publication-ready manuscripts.",
+      FR: "Ce qui ne devait être qu’une solution sur mesure pour un client s’est rapidement transformé en Jean The Writer : un outil backend puissant qui automatise la correction grammaticale et syntaxique, génère des retours éditoriaux par chapitre, et compile des manuscrits propres, structurés et prêts à l’édition.",
     },
     projectOverviewTitle: {
       EN: "Project Overview",
@@ -512,7 +516,8 @@ export default function FamilyFlowProject() {
         <h1>{translations.pageTitle[activeLanguage]}</h1>
         {/* Introduction Section */}
         <h2>{translations.pageSubtitle[activeLanguage]}</h2>
-        <p>{translations.pageIntroduction[activeLanguage]}</p>
+        <p>{translations.pageIntroduction1[activeLanguage]}</p>
+        <p>{translations.pageIntroduction2[activeLanguage]}</p>
         {/* Overview Section */}
         <h2>{translations.projectOverviewTitle[activeLanguage]}</h2>
         <p>{translations.projectOverviewContent1[activeLanguage]}</p>

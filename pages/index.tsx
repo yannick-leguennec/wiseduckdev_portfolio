@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
-import indexSchemaEN from "../public/schemas/index_schema_en.json";
-import indexSchemaFR from "../public/schemas/index_schema_fr.json";
+import indexSchemaEN from "../public/schemas/index_schema_en_v2.json";
+import indexSchemaFR from "../public/schemas/index_schema_fr_v2.json";
 import React, { useState, useEffect, Suspense } from "react";
 import Head from "next/head";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -196,7 +196,7 @@ export default function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(
-              activeLanguage === "EN" ? indexSchemaEN : indexSchemaFR
+              activeLanguage === "FR" ? indexSchemaFR : indexSchemaEN
             ),
           }}
         />

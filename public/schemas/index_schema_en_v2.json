@@ -1,0 +1,174 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://wiseduckdev.com#website",
+      "url": "https://wiseduckdev.com",
+      "name": "Wise Duck Dev"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://wiseduckdev.com#organization",
+      "name": "Wise Duck Dev",
+      "url": "https://wiseduckdev.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wiseduckdev.com/images/logos/wise-duck-dev-full-stack-js-logo-vertical.png"
+      },
+      "sameAs": [
+        "https://github.com/yannick-leguennec",
+        "https://x.com/wiseduckdev",
+        "https://www.linkedin.com/in/wise-duck-dev/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "mailto:wiseduckdev@gmail.com",
+        "url": "https://wiseduckdev.com/#contact",
+        "availableLanguage": ["English", "French"]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://wiseduckdev.com#person",
+      "name": "Yannick Le Guennec",
+      "alternateName": ["The Wise Duck Dev", "Wise Duck Dev"],
+      "givenName": "Yannick",
+      "familyName": "Le Guennec",
+      "jobTitle": "Full Stack JavaScript Developer specialized in React",
+      "description": "The Wise Duck Dev is a creative and innovative Full Stack JS Developer specializing in React. Providing cutting-edge web and web mobile solutions.",
+      "url": "https://wiseduckdev.com",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://wiseduckdev.com/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp"
+      },
+      "sameAs": [
+        "https://github.com/yannick-leguennec",
+        "https://x.com/wiseduckdev",
+        "https://www.linkedin.com/in/wise-duck-dev/"
+      ],
+      "email": "mailto:wiseduckdev@gmail.com",
+      "alumniOf": [
+        { "@type": "EducationalOrganization", "name": "O'clock" },
+        { "@type": "CollegeOrUniversity", "name": "HEC Montreal" },
+        { "@type": "CollegeOrUniversity", "name": "Birmingham City University" }
+      ],
+      "worksFor": { "@id": "https://wiseduckdev.com#organization" },
+      "knowsAbout": [
+        "Web Development",
+        "Mobile Web Development",
+        "Responsive Web Design",
+        "HTML5",
+        "CSS3",
+        "Sass",
+        "React",
+        "Next.js",
+        "JavaScript",
+        "TypeScript",
+        "Node.js",
+        "Express.js",
+        "RESTful APIs",
+        "Python",
+        "Flask",
+        "Prisma ORM",
+        "Sequelize ORM",
+        "PostgreSQL",
+        "SQL",
+        "YAML",
+        "Shell Scripting",
+        "Git",
+        "GitHub",
+        "Linux",
+        "Docker",
+        "UI/UX Design",
+        "Automation",
+        "Selenium",
+        "Web Scraping",
+        "AI",
+        "Machine Learning",
+        "Chain of Thought",
+        "Blockchain",
+        "Business Development",
+        "Software Development",
+        "Web Application Development",
+        "Mobile Application Development",
+        "PWA Development",
+        "Application Deployment",
+        "Vercel",
+        "Railway",
+        "Specialized GPT Creation",
+        "OpenAI API",
+        "Perplexity API",
+        "xAI API",
+        "Hugging Face API",
+        "AI Integration",
+        "WordPress",
+        "SEO",
+        "Google Analytics",
+        "Google Search Console",
+        "Figma",
+        "Canva",
+        "Photoshop",
+        "Midjourney"
+      ],
+      "knowsLanguage": ["English", "French", "Spanish"],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Titre Professionnel Développeur Web et Web Mobile (RNCP 31114, Niveau 5 – Bac+2)",
+          "credentialCategory": "ProfessionalQualification",
+          "educationalLevel": "BAC+2 (Level 5 EQF)",
+          "recognizedBy": {
+            "@type": "GovernmentOrganization",
+            "name": "Ministère du Travail, du Plein emploi et de l’Insertion (France)"
+          },
+          "awardedBy": {
+            "@type": "EducationalOrganization",
+            "name": "École O'clock",
+            "url": "https://oclock.io"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "HEC Montréal Diploma in Entrepreneurship and Business Creation",
+          "credentialCategory": "Certificate",
+          "educationalLevel": "Diploma",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "HEC Montreal"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "BSc (Hons) in Gemmology",
+          "educationalLevel": "Bachelor's degree",
+          "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "Birmingham City University"
+          }
+        }
+      ],
+      "award": [
+        "First of its promotion (HEC Montréal)",
+        "First-class honours (BSc Gemmology, Birmingham City University)"
+      ],
+      "mainEntityOfPage": { "@id": "https://wiseduckdev.com#webpage" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://wiseduckdev.com#webpage",
+      "url": "https://wiseduckdev.com",
+      "isPartOf": { "@id": "https://wiseduckdev.com#website" },
+      "inLanguage": "en-US",
+      "about": { "@id": "https://wiseduckdev.com#person" },
+      "name": "The Wise Duck Dev - Full Stack JS Developer specialized in React",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://wiseduckdev.com/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp"
+      },
+      "publisher": { "@id": "https://wiseduckdev.com#organization" },
+      "isAccessibleForFree": true
+    }
+  ]
+}
