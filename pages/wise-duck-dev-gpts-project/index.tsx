@@ -194,7 +194,7 @@ export default function FamilyFlowProject() {
       FR: "La plateforme a été déployée en tant que Progressive Web App (PWA) via Vercel, avec un pipeline d’intégration et de déploiement continu (CI/CD) garantissant des mises en production rapides et fiables. Google Analytics a été intégré pour assurer un suivi précis de l’usage. Aujourd’hui, la plateforme compte plus de 400 utilisateurs actifs et dépasse les 10 000 interactions avec les GPTs. Son architecture modulaire et évolutive permet d’ajouter de nouvelles catégories et d’absorber la croissance du trafic sans compromis sur la performance.",
     },
     projectRoadmapTitle: {
-      EN: "From the start, it was important for us to establish an architecture that could support future iterations and evolutions. Our vision went far beyond the MVP: we designed Family Flow with the ambitious goal that one day, this project could potentially become the social network for families.",
+      EN: "Roadmap & Vision",
       FR: "Feuille de route & Vision",
     },
     projectRoadmapPoint1: {

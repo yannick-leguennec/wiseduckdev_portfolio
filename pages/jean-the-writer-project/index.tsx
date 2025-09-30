@@ -50,220 +50,268 @@ export default function FamilyFlowProject() {
       FR: "Aperçu du projet",
     },
     projectOverviewContent1: {
-      EN: "Wise Duck Dev GPTs is a revolutionary platform delivering advanced custom GPTs designed for web, mobile, AI, blockchain, and video game developers. With over 800 specialized GPTs, it boosts productivity, enhances code quality, and simplifies complex tasks. Leveraging cutting-edge AI technologies, the platform not only helps complete projects efficiently but also serves as a technology repository for exploring new tools. Whether you’re building AI models, web apps, or blockchain solutions, Wise Duck Dev GPTs is your partner in pushing boundaries.  ",
-      FR: "The Wise Duck Dev GPTs est une plateforme intelligente conçue pour les développeurs, centralisant une vaste collection de GPTs personnalisés destinés à automatiser, accélérer et fiabiliser leur travail au quotidien. Grâce à ces outils spécialisés, elle permet d’améliorer la qualité du code, de résoudre rapidement des problèmes complexes, et d’explorer de nouvelles technologies. Que ce soit pour prototyper une application mobile, automatiser un flux backend, affiner un modèle d’IA ou intégrer un smart contract, chaque GPT est pensé pour guider, stimuler et faire gagner un temps précieux.",
+      EN: "Jean The Writer automates comprehensive grammar and syntax correction for manuscripts, then delivers structured editorial reviews and actionable recommendations for every chapter. By combining AI proofreading with targeted structural feedback, it transforms raw drafts into polished, publication-ready texts.",
+      FR: "Jean The Writer automatise la correction complète de manuscrit, puis fournit des relectures éditoriales structurées ainsi que des recommandations actionnables pour chaque chapitre. En combinant correction grammaticale et feedback ciblé, il transforme des brouillons bruts en textes fluides, cohérents et prêts à l’édition.",
     },
     projectOverviewContent2: {
-      EN: "The idea for the platform came right after I completed my developer certification. I wanted to build a portfolio that truly reflected who I was,  something original, useful, and personal. During my time at O’clock, I had created several custom GPTs to help me learn and code more efficiently. They made such a difference in my workflow that I thought: why not share them with others? What started as a small personal library of 10-15 GPTs quickly grew. By the summer of 2024, the platform hosted over 250 tools (Version 1), and by early 2025, that number had soared to more than 800 (Version 2). Each GPT is crafted to support developers in web, mobile, AI, blockchain, and gaming,  helping them code faster, solve problems smarter, and boost their creativity.",
-      FR: "L’idée du projet a émergé juste après l’obtention de ma certification. Je souhaitais créer un portfolio qui me ressemble vraiment : original, utile, et profondément aligné avec mes valeurs. Pendant ma formation chez O’clock, j’avais conçu plusieurs GPTs personnalisés pour m’aider à apprendre et coder plus efficacement. Leur impact sur mon flux de travail a été tel qu’un tout nouveau champ de possibilités s’est ouvert à moi. Très vite, une conviction s’est imposée : ces outils devaient être partagés. Ce qui n’était au départ qu’une modeste bibliothèque personnelle d’une quinzaine de GPTs s’est transformé en un véritable écosystème. À l’été 2024, la plateforme hébergeait déjà plus de 250 outils (version 1), et début 2025, elle en proposait plus de 800 (version 2). Chaque GPT a été conçu pour accompagner les développeurs du web, du mobile, de l’IA, de la blockchain ou encore du jeu vidéo, afin de coder plus vite, résoudre plus intelligemment et créer avec plus d’élan.",
+      EN: "Unlike generic AI writing tools, Jean The Writer is built for long-form manuscripts. It splits texts into manageable blocks, ensures continuity, and produces clean Google Docs output with professional formatting. Writers receive not just corrections, but tailored insights that respect their style while improving clarity and flow.",
+      FR: "Contrairement aux outils généralistes du marché, Jean The Writer est pensé pour les manuscrits longs. Il segmente les textes en blocs, assure la continuité, et génère des Google Docs professionnels directement exploitables. Les auteurs reçoivent non seulement des corrections, mais aussi des analyses respectueuses de leur style, tout en améliorant la clarté et la fluidité.",
+    },
+    projectOverviewPoint1: {
+      EN: "Problem solved: Saves authors weeks (or months) of manual correction and expensive editorial reviews.",
+      FR: "Problème résolu : économise de semaines (voire de mois) de corrections manuelles et de coûteuses relectures éditoriales.",
+    },
+    projectOverviewPoint2: {
+      EN: "Target users: Independent writers seeking affordable, reliable, and high-quality manuscript preparation.",
+      FR: "Utilisateurs cibles : écrivains indépendants.",
+    },
+    projectOverviewPoint3: {
+      EN: "Timeline: Developed in early 2025, first used on 8 manuscripts (French & Spanish).",
+      FR: "Calendrier : développé début 2025, déjà utilisé sur 8 manuscrits (en français et en espagnol).",
+    },
+    projectOverviewPoint4: {
+      EN: "Differentiator: Prompt engineering and workflow automation tailored to each manuscript’s context, offering more precise, style-aware results than general-purpose tools.",
+      FR: "Différenciateur : un prompt engineering sur mesure et des workflows automatisés, adaptés au contexte de chaque manuscrit, pour des résultats plus précis et plus personnalisés que les solutions génériques.",
     },
     projectMyRoleTitle: {
       EN: "My Role",
       FR: "Mon rôle",
     },
     projectMyRoleContent1: {
-      EN: "This was a solo project, meaning I handled everything from idea to launch, across design, development, AI, and automation.",
-      FR: "Ce projet a été mené en solo, ce qui signifie que j’ai assuré l’ensemble des étapes : de l’idéation à la mise en ligne, en passant par la conception produit, le développement full-stack, l’ingénierie IA et l’automatisation.",
+      EN: "This was a solo project, and I owned every part of the build,  from idea to execution.",
+      FR: "Projet réalisé en solo, j’en ai géré l’intégralité, de l’idée à la livraison.",
     },
     projectMyRoleContentPoint1: {
-      EN: "Product Design: I imagined the entire user experience, from how developers would browse GPTs to how each section should feel. I structured the app’s features, interface flow, and content to make everything intuitive and developer-friendly.",
-      FR: "Conception produit : J’ai imaginé l’expérience utilisateur dans sa globalité, navigation, structure des collections, hiérarchie de l’information,  en veillant à ce que chaque interaction soit fluide, intuitive et pensée pour les développeurs.",
+      EN: "Product Strategy: Defined features directly from client needs (correction, review, suggestions, publisher search).",
+      FR: "Stratégie produit : définition des fonctionnalités en fonction des besoins du client (correction, relecture, suggestions, recherche d’éditeurs).",
     },
     projectMyRoleContentPoint2: {
-      EN: "Technical Architecture: I built the foundation of the app with scalability and automation in mind, using a modular approach that supports innovation and future iterations.",
-      FR: "Architecture technique : J’ai conçu une base solide en adoptant une approche modulaire et évolutive, pensée pour la scalabilité, la performance et les futures itérations.",
+      EN: "Architecture & Workflows: Designed modular AI workflows inspired by my experience with Wise Duck Dev GPTs, using Chain-of-Thought style processing.",
+      FR: "Architecture & Workflows : conception de flux modulaires inspirés de mon expérience avec Wise Duck Dev GPTs, basés sur une logique de type Chain of Thought.",
     },
     projectMyRoleContentPoint3: {
-      EN: "Full-Stack Development: I built the platform using Next.js, TypeScript, and Sass. For data management, I initially started with a simple JSON-based structure, then progressively migrated to a SQL database using Prisma to ensure scalability and reliability. I also integrated Meilisearch to deliver a fast, relevant, and seamless search experience.",
-      FR: "Développement full-stack :J’ai développé la plateforme avec Next.js, TypeScript et Sass. Pour la gestion des données, j’ai d’abord opté pour une base JSON simple, puis migré progressivement vers une base SQL structurée avec Prisma afin d’assurer évolutivité et fiabilité. J’ai également intégré Meilisearch pour offrir une expérience de recherche rapide, pertinente et fluide.",
+      EN: "AI Engineering: Selected the best LLMs per task. After extensive testing, OpenAI’s GPT-4o mini proved optimal for correction, review, and suggestions, balancing cost and quality. Deep Search from OpenAI was used for publisher discovery.",
+      FR: "Ingénierie IA : sélection du meilleur LLM pour chaque étape. Après tests, GPT-4o mini s’est révélé optimal pour la correction, la relecture et les recommandations. Pour la recherche d’éditeurs, j’ai utilisé Deep Search d’OpenAI.",
     },
     projectMyRoleContentPoint4: {
-      EN: "AI Engineering: I designed over 800 custom GPTs by leveraging automated systems that combined the latest AI technologies with advanced prompt engineering techniques. Each GPT follows a structured logic that ensures ecosystem-wide consistency, high-quality responses, and fast, centralized updates when needed.",
-      FR: "Ingénierie IA : J’ai conçu plus de 800 GPTs personnalisés en m’appuyant sur des systèmes automatisés combinant les dernières IA du marché et des techniques avancées de prompt engineering. Chaque GPT suit une logique structurée garantissant la cohérence de l’écosystème, la qualité des réponses, ainsi qu’une mise à jour rapide et centralisée en cas d’évolution.",
+      EN: "Automation: Developed resume-capable logic for handling large manuscripts, ensuring the process could pick up where it left off after token/rate-limit errors.",
+      FR: "Automatisation : mise en place de scripts permettant de traiter de très longs manuscrits, pouvant reprendre au bon endroit dans le cas d’une interruption.",
     },
     projectMyRoleContentPoint5: {
-      EN: "Automation: I used Make.com and OpenAI’s API to automate the creation of the custom GPTs and their bilingual documentation, saving a lot of time and making the platform highly scalable.",
-      FR: "Automatisation : J’ai conçu un système d’automatisation complet en combinant Make.com et l’API d’OpenAI, permettant de générer à grande échelle les GPTs ainsi que leur documentation bilingue (FR/EN). Cette infrastructure m’a permis de maintenir un rythme de publication soutenu tout en garantissant rigueur, cohérence et qualité de contenu.",
+      EN: "Output UX: Choose clear Google Docs formatting (Times New Roman, 12pt, 1.5 spacing) with optional diff highlighting, chapter-level review scores, and consolidated editorial recommendations.",
+      FR: "Expérience de sortie : formatage clair sous Google Docs (Times New Roman, 12 pt, interligne 1,5), avec mise en évidence optionnelle des corrections apportées par l’IA, accompagné de rapports éditoriaux consolidés.",
     },
     projectMyRoleContentPoint6: {
-      EN: "SEO & Deployment: I optimized the site for search engines and deployed it as a lightning-fast PWA using Vercel, ensuring users have a smooth, mobile-friendly experience.",
-      FR: "SEO & Déploiement : J’ai structuré l’ensemble des contenus selon les meilleures pratiques de référencement multilingue, en ciblant spécifiquement les intentions de recherche des développeurs. La plateforme a ensuite été déployée en tant que Progressive Web App (PWA) via Vercel, offrant des performances élevées, une accessibilité optimale sur mobile, et un pipeline d’intégration et de déploiement continu (CI/CD) robuste.",
-    },
-    projectMyRoleContent2: {
-      EN: "From ideation to deployment, I led every aspect, blending technical prowess with product strategy.",
-      FR: "De la stratégie à l’exécution, j’ai assumé chaque décision avec une double casquette : développeur full-stack et concepteur produit, alliant vision d’ensemble et rigueur technique à chaque étape du projet.",
+      EN: "Delivery: Ensured scalability so the workflow could easily be extended into a full public SaaS if needed.",
+      FR: "Livraison : architecture conçue pour évoluer vers une plateforme publique si besoin.",
     },
     projectCreativityTitle: {
       EN: "Creativity & Inspiration",
       FR: "Créativité & inspiration",
     },
     projectCreativityContent1: {
-      EN: "The idea first came to me during a meditation session while I was completing my intensive Web & Mobile Development certification at O’Clock. I was reflecting on the portfolio I would need to build after graduating, and how, despite being a junior developer, I could stand out from the crowd and offer something truly unique to recruiters. That’s when I envisioned what would eventually become the logo of the Wise Duck Dev: a bold, stylized rubber duck seen in profile, almost like a playful nod to the iconic Apple logo.",
-      FR: "L’idée m’est venue lors d’une séance de méditation, alors que je terminais ma certification intensive en développement web et mobile chez O’clock. Je réfléchissais au portfolio que je devrais construire une fois diplômé, et à la manière dont, en tant que développeur junior, je pourrais réellement me démarquer. C’est à ce moment-là que j’ai visualisé ce qui allait devenir le logo de Wise Duck Dev : un canard stylisé de profil, un clin d’œil assumé et ludique à l’iconique logo d’Apple.",
+      EN: "Unlike my other projects, Jean The Writer wasn’t born from personal observation but from a client’s unusual request. Yet it revealed an important gap: writers are underserved by AI when it comes to long-form, book-length correction and review.",
+      FR: "À la différence de mes autres projets, Jean The Writer n’est pas né d’une observation personnelle mais d’une demande client singulière. Pourtant, ce projet a mis en lumière un manque : les écrivains disposent de peu de solutions adaptées à la correction et à la relecture long format pour leurs manuscrits.",
     },
     projectCreativityContent2: {
-      EN: "At first, I laughed. A duck? Really? That’s my big idea?  But the more I thought about it, the more it made sense. Ducks are among the few animals that can move seamlessly across air, land, and water, they fly, swim, and walk. That adaptability resonated deeply with me. It perfectly symbolized the versatility of a Full-Stack developer, able to navigate front-end, back-end, and databases with ease. That was the spark: the Wise Duck Dev was born.",
-      FR: "Sur le coup, j’ai souri. Un canard ? Vraiment ? C’était donc ça, mon idée ? Et pourtant, plus j’y pensais, plus cela faisait sens. Le canard est l’un des rares animaux capables de se déplacer avec aisance dans les airs, sur terre et dans l’eau. Il vole, nage et marche. Cette polyvalence naturelle résonnait profondément avec l’essence du métier de développeur full-stack : naviguer fluidement entre front-end, back-end et bases de données. C’était l’étincelle. The Wise Duck Dev était né.",
-    },
-    projectCreativityContent3: {
-      EN: "A few months later, in November 2023, OpenAI released the Custom GPT feature, and that completely changed the game for me. I began creating specialized GPTs to support my learning in technologies like JavaScript and Next.js, and quickly realized how powerful they could be. Once I graduated and started working on my portfolio, the next step felt obvious: share these tools with the wider developer community. Not just to showcase my skills, but to empower others and help them work faster, better, and smarter.",
-      FR: "Quelques mois plus tard, en novembre 2023, OpenAI lançait les Custom GPTs. Une révolution. J’ai immédiatement commencé à en créer pour m’accompagner dans l’apprentissage de technologies telles que JavaScript ou Next.js. J’ai rapidement compris leurs potentiel. Et quand le moment est venu de construire mon portfolio, partager ces outils avec la communauté dev m’est juste apparu comme une évidence. Pas seulement pour valoriser mon expertise en prompt engineering, mais pour offrir à d’autres ce que j’aurais moi-même rêvé d’avoir : un écosystème d’outils IA utiles, efficaces et pensés pour les besoins réels des devs.",
-    },
-    projectCreativityContent4: {
-      EN: "That’s how the Wise Duck Dev GPTs platform was born, a blend of creativity, innovation, and a genuine desire to elevate other developers through the power of AI.",
-      FR: "C’est ainsi qu’est née la plateforme Wise Duck Dev GPTs, le fruit d’un croisement entre intuition, vision stratégique et passion pour l’innovation.",
+      EN: "This project taught me that creativity often lies in adaptation, in recognizing that a highly specific need (a punctuation-free manuscript!) can spark the creation of a tool that serves many more. It was a reminder that innovation isn’t always about ideating from scratch, but about turning challenges into repeatable, scalable solutions.",
+      FR: "Ce projet m’a rappelé que l’innovation vient souvent de l’adaptation : une demande atypique (un manuscrit sans ponctuation !) peut déclencher la création d’un outil réutilisable et scalable utile à la communauté.",
     },
     projectProcessTitle: {
       EN: "Process & Strategy",
       FR: "Processus & Stratégie",
     },
     projectProcessContent1: {
-      EN: "The project initially began as a simple extension of my portfolio (version 1). However, once I envisioned the long-term potential of the project, and its version 2, it became clear that both the technical architecture and the overall business approach needed to be completely rethought.",
-      FR: "Le projet a d’abord vu le jour comme une simple extension de mon portfolio (version 1). Mais très vite, en entrevoyant son potentiel à long terme et l’ambition d’une version 2, il est devenu très clair que l’architecture du projet, tout comme l’approche stratégique devaient être entièrement repensées.",
+      EN: "I approached the project step by step, directly aligned with the client’s needs :",
+      FR: "Le projet a suivi pas à pas les besoins exprimés par le client :",
     },
-    projectProcessContent2: {
-      EN: "Drawing on insights from my training at HEC Montréal and O’Clock, I developed a full business model and a SMART strategic roadmap. I clearly defined the core questions: What real needs would this platform address? Who are the target users? What are their expectations, habits, and preferred channels of communication?",
-      FR: "En m’appuyant sur les enseignements reçus à HEC Montréal et O’clock, j’ai conçu un modèle d’affaires structuré ainsi qu’une feuille de route SMART. J’ai commencé par poser les bonnes questions : à quels besoins concrets cette plateforme devait-elle répondre ? Qui sont ses utilisateurs cibles ? Quelles sont leurs attentes, leurs habitudes, leurs comportements numériques, et quels canaux privilégient-ils pour découvrir de nouveaux outils ?",
+    projectProcessPoint1: {
+      EN: "Correction : Split the manuscript into blocks, correct grammar/syntax with GPT-4o mini, output to Google Docs.",
+      FR: "Correction : segmentation du manuscrit, correction grammaticale/syntaxique avec GPT-4o mini, export Google Docs.",
     },
-    projectProcessContent3: {
-      EN: "With a monetization goal set for 2026 (version 3), I designed a scalable and future-ready platform. I built the new concept using Midjourney and Figma, and followed Agile principles with rapid iterations, testing each version live on Vercel to guarantee a seamless PWA deployment.",
-      FR: "Avec un objectif de monétisation fixé pour 2026 (version 3), j’ai développé une plateforme robuste, scalable et orientée vers l’avenir. Le concept a été matérialisé à l’aide de Midjourney pour l’identité visuelle, et de Figma pour le maquettage. L’ensemble du processus a suivi une méthodologie agile, avec des itérations rapides et des tests en continu via Vercel utilisant sa fonctionnalité preview , garantissant une expérience fluide et parfaitement optimisée en PWA.",
+    projectProcessPoint2: {
+      EN: "Review : Generate per-chapter editorial reviews + suggestions with scoring.",
+      FR: "Relecture : génération de retours éditoriaux par chapitre (avec notes et suggestions).",
     },
-    projectProcessContent4: {
-      EN: "Content creation was automated using a custom 40-step Make.com workflow that generated GPTs and their bilingual (English/French) SEO-optimized documentation. Finally, to ensure content quality and alignment with Google’s SEO best practices, I leveraged one of my own custom GPTs specialized in SEO to support the writing process.",
-      FR: "La création de contenu a été entièrement automatisée grâce à un scénario personnalisé créé sur Make.com comportant 40 étapes, permettant de générer chaque GPT ainsi que leur documentation bilingue (anglais/français) optimisée pour le référencement. Pour assurer la qualité rédactionnelle et le respect des bonnes pratiques SEO de Google, j’ai également mobilisé l’un de mes propres GPTs spécialisés en SEO, garantissant une cohérence éditoriale à grande échelle.",
+    projectProcessPoint3: {
+      EN: "Recommendation : Aggregate suggestions into a final editorial review document.",
+      FR: "Recommandations : compilation des suggestions en un rapport éditorial final.",
+    },
+    projectProcessPoint4: {
+      EN: "Publisher Search : Use OpenAI Deep Search to identify relevant publishers.",
+      FR: "Recherche d’éditeurs : exploitation de Deep Search pour identifier les maisons d’éditions pertinentes.",
+    },
+    projectProcessPoint5: {
+      EN: "Methodology: Agile, with iterative testing. Each step was validated on subsets of the manuscript before scaling to the full 600 pages.",
+      FR: "Méthodologie : Agile, avec tests itératifs sur des extraits avant passage à l’intégralité du manuscrit.",
+    },
+    projectProcessPoint6: {
+      EN: "Testing & Feedback: The hardest part was tuning prompts to prevent AI from altering the author’s voice. Iteration was key, striking the balance between correction and stylistic respect.",
+      FR: "Tests & feedback : le défi majeur fut d’empêcher l’IA de modifier le style de l’auteur. Le prompt engineering a permis d’atteindre le juste équilibre.",
+    },
+    projectProcessPoint7: {
+      EN: "Scaling Logic: Resume scripts ensured the process could handle very large manuscripts without restarting from scratch.",
+      FR: "Scalabilité : les scripts à reprise automatique garantissent la résilience du processus, même sur des textes massifs.",
     },
     projectStackTitle: {
       EN: "Stack and Tooling",
       FR: "Stack & outils",
     },
     projectStackPoint1: {
-      EN: "Front-End : React, Next.js, TypeScript, Sass",
-      FR: "Front-End: React, Next.js, TypeScript, Sass",
+      EN: "Core: Node.js, TypeScripts",
+      FR: "Core : Node.js, TypeScript",
     },
     projectStackPoint2: {
-      EN: "Back-End : Node.js, Express, Prisma",
-      FR: "Back-End : Node.js, Express, Prisma",
+      EN: "AI: OpenAI GPT-4o mini (correction, review, suggestions), OpenAI Deep Search (publisher matching)",
+      FR: "IA : OpenAI GPT-4o mini (correction, relecture, suggestions), OpenAI Deep Search (éditeurs)",
     },
     projectStackPoint3: {
-      EN: "Database : PostgreSQL",
-      FR: "Base de données : PostgreSQL",
+      EN: "APIs: OpenAI API, Google Docs & Google Drive API (for output & storage)",
+      FR: "APIs : OpenAI API,  Google Docs & Drive API (production et stockage)",
     },
     projectStackPoint4: {
-      EN: "AI : OpenAI, ChatGPT, Midjourney",
-      FR: "IA : OpenAI, ChatGPT, Midjourney",
+      EN: "Automation: Custom TypeScript workflows with checkpointing (resume logic)",
+      FR: "Automatisation : workflows en TypeScript avec checkpointing",
     },
     projectStackPoint5: {
-      EN: "Search engine : Meilisearch",
-      FR: "Moteur de recherche : Meilisearch",
+      EN: "Utilities: diff-match-patch (for highlighting changes), p-limit (for concurrency control)",
+      FR: "Utilitaires : diff-match-patch (mise en évidence des différences), p-limit (contrôle de concurrence)",
     },
     projectStackPoint6: {
-      EN: "Deployment : Vercel, PWA",
-      FR: "Déploiement : Vercel, PWA",
+      EN: "Dev Tools: Jest, ts-node, ts-jest, Prettier, ESLint",
+      FR: "Outils dev : Jest, ts-node, ts-jest, Prettier, ESLint",
     },
-    projectStackPoint7: {
-      EN: "Automatisation : Make.com",
-      FR: "Automatisation : Make.com",
+    projectStackContent1: {
+      EN: "Why these choices?",
+      FR: "Pourquoi ces choix ?",
     },
-    projectStackPoint8: {
-      EN: "Versioning : Git, GitHub",
-      FR: "Versionnage : Git, GitHub",
-    },
-    projectStackPoint9: {
-      EN: "Design : Figma",
-      FR: "Design : Figma",
-    },
-    projectStackContent: {
-      EN: "I chose Next.js and Vercel for their free, community-backed deployment platform, which made it easy to launch quickly and reliably. As a junior developer, Make.com helped me automate key processes without deep backend knowledge, though I now code those flows myself. For design, I switched from component libraries like MantineUI (used in Family Flow) to Sass, which gave me full creative control over the UI. I integrated Meilisearch to deliver a fast, Google-like search experience at no cost. Finally, using OpenAI and TypeScript allowed me to build high-quality features while minimizing bugs and runtime errors.",
-      FR: "J’ai opté pour Next.js et Vercel afin de bénéficier d’une plateforme de déploiement gratuite, fiable et soutenue par une forte communauté, idéale pour un lancement rapide et efficient. En tant que développeur junior à l’époque, Make.com m’a permis d’automatiser les processus clés sans expertise backend avancée. Il est important de noter ici que je code maintenant tous mes scripts d’automatisation. Côté design, j’ai délaissé les bibliothèques comme MantineUI (utilisée dans Family Flow) au profit de Sass, afin de gagner en contrôle et liberté créative quant à l’interface. Pour la recherche, Meilisearch m’a offert une solution rapide, performante et sans coût, comparable à l’expérience Google, exactement ce dont j’avais besoin. Enfin, l’intégration de TypeScript m’a permis de concevoir des fonctionnalités robustes, tout en limitant les bugs et les erreurs à l’exécution",
+    projectStackContent2: {
+      EN: "They were the technologies I knew best from previous projects, ensuring reliability. GPT-4o mini offered the best cost-to-quality ratio for manuscript correction at scale. Google Docs output was chosen for accessibility, since nearly every author is familiar with it.",
+      FR: "J’ai privilégié des outils que je maîtrisais déjà, garantissant rapidité et fiabilité. GPT-4o mini offrait le meilleur compromis coût/qualité pour ce type de tâches lourdes. Google Docs a été retenu pour sa familiarité auprès des écrivains.",
     },
     projectDesignTitle: {
       EN: "Design and UX Highlights",
       FR: "UX et points clés de conception",
     },
     projectDesignContent1: {
-      EN: "Showcasing over 800 custom GPTs meant designing a user experience that made exploration easy and enjoyable. I organized the platform into 14 clear categories (like Frontend, AI, or Blockchain), added a powerful Meilisearch-based search bar, and built intuitive navigation with breadcrumb trails. Each GPT is presented as a clean, visual card, featuring logos, concise descriptions, and links to detailed documentation. ",
-      FR: "Présenter plus de 800 GPTs personnalisés exigeait une expérience utilisateur claire, fluide et engageante. J’ai structuré la plateforme autour de 14 catégories explicites (Frontend, IA, Blockchain, etc.), enrichies d’un moteur de recherche ultra-performant basé sur Meilisearch, et d’une navigation intuitive renforcée par un système de fil d’Ariane. Chaque GPT est mis en valeur via une carte visuelle épurée, incluant un logo, une description concise et un lien vers une documentation dédiée.",
+      EN: "Though there was no frontend, the user experience of the output was a core design focus:",
+      FR: "Même sans interface front-end, j’ai pensé l’expérience utilisateur à travers la sortie livrée :",
+    },
+    projectDesignPoint1: {
+      EN: "Professional Formatting : All corrected manuscripts exported in Times New Roman, 12pt, 1.5 spacing.",
+      FR: "Format professionnel : Times New Roman, 12 pt, interligne 1,5.",
+    },
+    projectDesignPoint2: {
+      EN: "Diff Highlighting : Optional side-by-side or inline highlights to visualize AI changes.",
+      FR: "Mise en évidence : surlignage optionnel des modifications.",
+    },
+    projectDesignPoint3: {
+      EN: "Editorial Review : Chapter-by-chapter reviews with scores and actionable suggestions.",
+      FR: "Relecture éditoriale : notes et suggestions par chapitre.",
+    },
+    projectDesignPoint4: {
+      EN: "Final Deliverable : Consolidated “Editorial Review Report” Google Doc with prioritized recommendations and a concluding summary.",
+      FR: "Rapport final : document éditorial consolidé avec recommandations prioritaires.",
     },
     projectDesignContent2: {
-      EN: "Drawing from my 15 years of experience as a restaurant manager, I treated the site like a well-run dining room: everything in its place, easy to find, and designed to keep people coming back.",
-      FR: "Fort de mes 15 années d’expérience comme gestionnaire de restaurant, j’ai abordé ce projet comme l’organisation d’une salle à manger bien orchestrée : chaque élément à sa place, facilement accessible, et pensé pour donner envie aux visiteurs de revenir.",
+      EN: "These choices made the AI output directly usable by writers, without further formatting work.",
+      FR: "Ces choix ont rendu la production de l’IA directement exploitable par les auteurs, sans nécessiter de travail de mise en forme supplémentaire.",
     },
     projectDeploymentTitle: {
       EN: "Deployment & Scalability",
       FR: "Déploiement & Scalabilité",
     },
     projectDeploymentContent1: {
-      EN: "We deployed Family Flow via Railway, leveraging a CI/CD pipeline for fast and reliable releases. Throughout the development cycle, we applied agile practices: daily syncs, feature-based branching with Git, and weekly retrospectives. We also implemented tests with Vitest to ensure the platform’s proper functionality, while simultaneously running manual tests on different devices such as tablets and smartphones to guarantee smooth performance across mediums.",
-      FR: "La plateforme a été déployée en tant que Progressive Web App (PWA) via Vercel, avec un pipeline d’intégration et de déploiement continu (CI/CD) garantissant des mises en production rapides et fiables. Google Analytics a été intégré pour assurer un suivi précis de l’usage. Aujourd’hui, la plateforme compte plus de 400 utilisateurs actifs et dépasse les 10 000 interactions avec les GPTs. Son architecture modulaire et évolutive permet d’ajouter de nouvelles catégories et d’absorber la croissance du trafic sans compromis sur la performance.",
+      EN: "Jean The Writer remains a private tool, not deployed publicly. However, the backend is designed for scalability:",
+      FR: "Le projet reste privé, mais son architecture est prête pour le public :",
+    },
+    projectDeploymentPoint1: {
+      EN: "Could be extended into a SaaS with user accounts, manuscript uploads, and on-demand corrections.",
+      FR: "Création possible d’une plateforme SaaS avec comptes utilisateurs et dépôts de manuscrits.",
+    },
+    projectDeploymentPoint2: {
+      EN: "Modular architecture already supports additional languages or manuscript types.",
+      FR: "Extensible à d’autres langues et formats.",
+    },
+    projectDeploymentPoint3: {
+      EN: "Pricing potential: pay-per-manuscript correction/review.",
+      FR: "Modèle économique envisageable : correction/relecture à la demande, facturée par manuscrit.",
+    },
+    projectDeploymentContent2: {
+      EN: "For now, it’s client-driven: writers approach me, and I run their manuscripts through the system.",
+      FR: "Pour l’instant, c’est une approche orientée client : les auteurs me contactent directement et je traite leurs manuscrits via le système.",
     },
     projectRoadmapTitle: {
-      EN: "From the start, it was important for us to establish an architecture that could support future iterations and evolutions. Our vision went far beyond the MVP: we designed Family Flow with the ambitious goal that one day, this project could potentially become the social network for families.",
+      EN: "Roadmap & Vision",
       FR: "Feuille de route & Vision",
     },
-    projectRoadmapPoint1: {
-      EN: "Expanding activity categories for finer filtering",
-      FR: "Phase 1 (2024) : 250 GPTs, 12 collections, 1 000 utilisateurs",
+    projectRoadmapContent1: {
+      EN: "This project was designed to solve a concrete client problem, not to evolve into a commercial SaaS. However, its potential is clear: a scalable backend that could become a platform for writers seeking affordable, professional manuscript prep.",
+      FR: "Jean The Writer a été conçu pour répondre à un besoin ponctuel, pas pour devenir un produit grand public. Mais son potentiel est évident : offrir aux écrivains une alternative abordable et professionnelle pour préparer leurs manuscrits.",
     },
-    projectRoadmapPoint2: {
-      EN: "A family newsfeed to share updates and important moments",
-      FR: "Phase 2 (2025) : 800+ GPTs, 14 collections, 10 000 utilisateurs, PWA, assistant IA Ducky.",
-    },
-    projectRoadmapPoint3: {
-      EN: "Transforming the project into a PWA",
-      FR: "Phase 3 (2026) : 800+ GPTs, 16 collections, 100 000 utilisateurs, interface de chat.",
-    },
-    projectRoadmapPoint4: {
-      EN: "A built-in chat feature to further enhance communication",
-      FR: "Phase 4 (2027/2028) : 1 000 000 utilisateurs, mise en place des communautés.",
-    },
-    projectRoadmapContent: {
-      EN: "Some of the possible evolutions we envisioned included:",
-      FR: "Cette vision à long terme a guidé le développement d’une architecture modulaire, pensée pour évoluer. La version 3 a toutefois été mise en pause en anticipation des bouleversements liés à l’IGA attendus d’ici 2026, me poussant à recentrer mes efforts vers de nouvelles opportunités à fort impact.",
+    projectRoadmapContent2: {
+      EN: "For now, the roadmap is simple: continue refining prompts and workflows when new manuscripts arrive, adapting to each author’s style and needs.",
+      FR: "La feuille de route reste simple : affiner les prompts et workflows selon les projets clients.",
     },
     projectResultsTitle: {
       EN: "Outcomes",
       FR: "Résultats",
     },
+    projectResultsPoint1: {
+      EN: "Manuscripts processed: 8 (French & Spanish).",
+      FR: "Manuscrits traités : 8 (en français et en espagnol).",
+    },
+    projectResultsPoint2: {
+      EN: "Unique challenge: First commission was a 600-page book written entirely without punctuation,  successfully corrected and reviewed.",
+      FR: "Défi notable : premier manuscrit sans ponctuation (600 pages) : corrigé et relu avec succès.",
+    },
+    projectResultsPoint3: {
+      EN: "Feedbacks:",
+      FR: "Feedbacks :",
+    },
+    projectResultsPoint4: {
+      EN: "Corrections and publisher suggestions : highly appreciated.",
+      FR: "Corrections et recherche d’éditeurs : très positifs.",
+    },
+    projectResultsPoint5: {
+      EN: "Reviews and recommendations : mixed (some authors resist stylistic changes).",
+      FR: "Recommandations : parfois mal reçues (résistance au changement stylistique).",
+    },
     projectResultsContent1: {
-      EN: "Version 2 of the platform launched with an initial core of 400 to 500 active users, generating over 10,000 interactions with the GPTs. Feedback was overwhelmingly positive, highlighting the clarity of the interface and the relevance of the tools provided. This project allowed me to strengthen key skills such as software modularity, large-scale automation (notably through Chain of Thought-style reasoning chains), and the design of scalable architectures, all of which now position me to take on higher-impact, large-scale projects.",
-      FR: "La version 2 de la plateforme a été lancée avec un premier noyau de 400 à 500 utilisateurs actifs, générant plus de 10 000 interactions avec les GPTs. Les retours ont été largement positifs, soulignant la clarté de l’interface et la pertinence des outils proposés. Ce projet m’a permis de consolider des compétences clés comme la modularité logicielle, l’automatisation à grande échelle (notamment via des chaînes de raisonnement type Chain of Thoughts) et la conception d’architectures scalables, autant d’acquis qui me préparent aujourd’hui à des projets d’envergure supérieure.",
+      EN: "The value was clear: saving weeks of manual editing and giving independent writers a professional-level editorial process at a fraction of the cost.",
+      FR: "Bilan : gain de temps énorme pour les auteurs et une approche éditoriale professionnelle, accessible et rapide.",
     },
     projectConclusionTitle: {
       EN: "What I Took Away",
       FR: "Ce que j'en ai retiré",
     },
     projectConclusionContent1: {
-      EN: "This project solidified my capabilities not just as a developer, but as a full-stack product builder with a deep understanding of AI integration.",
-      FR: "Ce projet a solidement renforcé mes compétences, non seulement en tant que développeur, mais aussi en tant que responsable de produit full-stack, avec une expertise approfondie dans l’intégration de l’intelligence artificielle.",
+      EN: "This project reinforced and expanded my skills as both a developer and product builder.",
+      FR: "Ce projet a renforcé et élargi mes compétences, autant en tant que développeur qu’en tant que chef de produit.",
+    },
+    projectConclusionPoint1: {
+      EN: "I learned to design AI workflows for extreme edge cases (like punctuation-free manuscripts).",
+      FR: "J’ai appris à concevoir des workflows IA capables de gérer des cas extrêmes, comme des manuscrits entièrement dépourvus de ponctuation.",
+    },
+    projectConclusionPoint2: {
+      EN: "I strengthened my ability to engineer prompts at scale while respecting authorial voice.",
+      FR: "J’ai perfectionné ma capacité à concevoir des prompts à grande échelle tout en respectant la voix et le style des auteurs.",
+    },
+    projectConclusionPoint3: {
+      EN: "I deepened my OpenAI API and Google API integration skills (Docs & Drive).",
+      FR: "J’ai approfondi mes compétences d’intégration avec les APIs de OpenAI et de Google (Docs & Drive).",
+    },
+    projectConclusionPoint4: {
+      EN: "I advanced my experience in data handling and checkpointing, ensuring resilience for long-form AI processing.",
+      FR: "J’ai consolidé mon expérience en gestion de données et en mise en place de systèmes de reprise, garantissant la robustesse du traitement IA sur des formats longs.",
+    },
+    projectConclusionPoint5: {
+      EN: "I discovered the importance of managing user psychology: authors are protective of their style, so AI must support, not overwrite, their voice.",
+      FR: "J’ai découvert l’importance de prendre en compte la psychologie utilisateur : dans le cas présent par exemple les auteurs sont attachés à leur style, et l’IA doit soutenir leur voix, pas la remplacer.",
     },
     projectConclusionContent2: {
-      EN: "I learned how to independently scale a complex product from concept to production, designing, developing, and deploying every layer myself. From the initial database schema to the frontend search experience, I took full ownership of the architecture and roadmap.",
-      FR: "J’ai appris à faire évoluer un produit complexe de bout en bout, de l’idée initiale à la mise en production, en prenant en charge chaque couche de l’architecture : de la structure de base de données jusqu’à l’expérience de recherche côté front. J’ai assumé seul la conception, le développement et le déploiement, en pilotant également la feuille de route produit.",
-    },
-    projectConclusionContent3: {
-      EN: "Through this process, I mastered large-scale prompt engineering. I developed robust systems for structuring GPTs with consistent logic, leveraging advanced chaining techniques to maintain modularity and ensure each GPT remained functional, relevant, and easy to adopt.",
-      FR: "Au fil du projet, j’ai perfectionné mon ingénierie de prompts à grande échelle. J’ai conçu des systèmes robustes de structuration logique des GPTs, combinés à des techniques de chaînage avancées, garantissant modularité, cohérence, maintenabilité et adoption rapide.",
-    },
-    projectConclusionContent4: {
-      EN: "Shipping with coherence became a guiding principle. I aligned design, UX, performance, and backend strategy around a unified vision, ensuring that every layer of the platform worked harmoniously together.",
-      FR: "Développer des produits cohérent est devenu un principe central dans ma pratique : chaque décision, de l’UX au backend, a été alignée autour d’une vision unifiée, assurant que l’ensemble de la plateforme fonctionne de façon fluide, stable et efficace.",
-    },
-    projectConclusionContent5: {
-      EN: "I also gained hands-on experience with no-code automation through Make.com, and later on using code, building scalable content workflows that allowed me to maintain and grow a database of over 800 GPTs efficiently. Automation wasn't just a productivity tool, it was a key enabler of platform sustainability.",
-      FR: "J’ai aussi développé une réelle maîtrise de l’automatisation des processus, d’abord sans code via Make.com, puis avec du code, en mettant en place des workflows scalables capables de générer, maintenir et enrichir une base de plus de 800 GPTs. L’automatisation n’a pas seulement renforcé ma productivité : elle a été le socle de la viabilité et de la scalabilité de la plateforme.",
-    },
-    projectConclusionContent6: {
-      EN: "Beyond development, I built expertise in multilingual SEO. I structured content and meta strategies specifically around how developers search for GPT tools across different languages and intents, ensuring discoverability and relevance at scale.",
-      FR: "Sur le plan du référencement, j’ai acquis une expertise concrète en SEO multilingue. J’ai structuré mon contenu et mes métadonnées en fonction des intentions de recherche spécifiques des développeurs à l’international, garantissant visibilité, pertinence et portée organique.",
-    },
-    projectConclusionContent7: {
-      EN: "Perhaps most importantly, I gained a deeper understanding of how developers actually search for, evaluate, and use AI tools within their daily workflows. That insight shaped every product decision and continues to inform how I build developer-first platforms.",
-      FR: "Mais surtout, j’ai développé une compréhension fine de la façon dont les développeurs découvrent, évaluent et utilisent les outils d’IA dans leur quotidien. Cette compréhension a nourri chaque choix produit et continue d’orienter ma manière de concevoir des outils réellement utiles, pensés pour eux.",
-    },
-    projectConclusionContent8: {
-      EN: "Ultimately, Wise Duck Dev GPTs taught me how to transform personal productivity needs into a globally useful solution. It reflects what I love most: building innovative, AI-powered tools that push the boundaries of what's possible for the next generation of developers.",
-      FR: "En définitive, Wise Duck Dev GPTs m’a appris à transformer un besoin personnel en une solution concrète, utile à l’échelle mondiale. Ce projet incarne parfaitement ce qui me passionne le plus : créer des outils innovants, alimentés par l’IA, qui repoussent les limites du possible pour toute une génération de développeurs.",
+      EN: "Above all, Jean The Writer showed me that AI isn’t about replacing creativity, but about empowering it. By automating the repetitive, it gives writers more time to focus on storytelling,  and that is where the real value lies.",
+      FR: "Mais surtout, Jean The Writer m’a rappelé que l’IA ne vise pas à remplacer la créativité, mais à l’amplifier. En automatisant les tâches répétitives, elle libère du temps pour ce qui compte vraiment : raconter de bonnes histoires.",
     },
     buttonViewLive: {
       EN: "View Live Project",
@@ -522,6 +570,12 @@ export default function FamilyFlowProject() {
         <h2>{translations.projectOverviewTitle[activeLanguage]}</h2>
         <p>{translations.projectOverviewContent1[activeLanguage]}</p>
         <p>{translations.projectOverviewContent2[activeLanguage]}</p>
+        <ul>
+          <li>{translations.projectOverviewPoint1[activeLanguage]}</li>
+          <li>{translations.projectOverviewPoint2[activeLanguage]}</li>
+          <li>{translations.projectOverviewPoint3[activeLanguage]}</li>
+          <li>{translations.projectOverviewPoint4[activeLanguage]}</li>
+        </ul>
         {/* My Role Section */}
         <h2>{translations.projectMyRoleTitle[activeLanguage]}</h2>
         <p>{translations.projectMyRoleContent1[activeLanguage]}</p>
@@ -533,19 +587,25 @@ export default function FamilyFlowProject() {
           <li>{translations.projectMyRoleContentPoint5[activeLanguage]}</li>
           <li>{translations.projectMyRoleContentPoint6[activeLanguage]}</li>
         </ul>
-        <p>{translations.projectMyRoleContent2[activeLanguage]}</p>
         {/* Creativity Section */}
         <h2>{translations.projectCreativityTitle[activeLanguage]}</h2>
         <p>{translations.projectCreativityContent1[activeLanguage]}</p>
         <p>{translations.projectCreativityContent2[activeLanguage]}</p>
-        <p>{translations.projectCreativityContent3[activeLanguage]}</p>
-        <p>{translations.projectCreativityContent4[activeLanguage]}</p>
         {/* Process Section */}
         <h2>{translations.projectProcessTitle[activeLanguage]}</h2>
         <p>{translations.projectProcessContent1[activeLanguage]}</p>
+        <ol>
+          <li>{translations.projectProcessPoint1[activeLanguage]}</li>
+          <li>{translations.projectProcessPoint2[activeLanguage]}</li>
+          <li>{translations.projectProcessPoint3[activeLanguage]}</li>
+          <li>{translations.projectProcessPoint4[activeLanguage]}</li>
+        </ol>
+        <ul>
+          <li>{translations.projectProcessPoint5[activeLanguage]}</li>
+          <li>{translations.projectProcessPoint6[activeLanguage]}</li>
+          <li>{translations.projectProcessPoint7[activeLanguage]}</li>
+        </ul>
         <p>{translations.projectProcessContent2[activeLanguage]}</p>
-        <p>{translations.projectProcessContent3[activeLanguage]}</p>
-        <p>{translations.projectProcessContent4[activeLanguage]}</p>
         {/* Stack Section */}
         <h2>{translations.projectStackTitle[activeLanguage]}</h2>
         <ul>
@@ -555,29 +615,43 @@ export default function FamilyFlowProject() {
           <li>{translations.projectStackPoint4[activeLanguage]}</li>
           <li>{translations.projectStackPoint5[activeLanguage]}</li>
           <li>{translations.projectStackPoint6[activeLanguage]}</li>
-          <li>{translations.projectStackPoint7[activeLanguage]}</li>
-          <li>{translations.projectStackPoint8[activeLanguage]}</li>
-          <li>{translations.projectStackPoint9[activeLanguage]}</li>
         </ul>
-        <p>{translations.projectStackContent[activeLanguage]}</p>
+        <p>{translations.projectStackContent1[activeLanguage]}</p>
+        <p>{translations.projectStackContent2[activeLanguage]}</p>
         {/* Design Section */}
         <h2>{translations.projectDesignTitle[activeLanguage]}</h2>
         <p>{translations.projectDesignContent1[activeLanguage]}</p>
+        <ul>
+          <li>{translations.projectDesignPoint1[activeLanguage]}</li>
+          <li>{translations.projectDesignPoint2[activeLanguage]}</li>
+          <li>{translations.projectDesignPoint3[activeLanguage]}</li>
+          <li>{translations.projectDesignPoint4[activeLanguage]}</li>
+        </ul>
         <p>{translations.projectDesignContent2[activeLanguage]}</p>
         {/* Deployment Section */}
         <h2>{translations.projectDeploymentTitle[activeLanguage]}</h2>
         <p>{translations.projectDeploymentContent1[activeLanguage]}</p>
+        <ul>
+          <li>{translations.projectDeploymentPoint1[activeLanguage]}</li>
+          <li>{translations.projectDeploymentPoint2[activeLanguage]}</li>
+          <li>{translations.projectDeploymentPoint3[activeLanguage]}</li>
+        </ul>
+        <p>{translations.projectDeploymentContent2[activeLanguage]}</p>
         {/* Roadmap Section */}
         <h2>{translations.projectRoadmapTitle[activeLanguage]}</h2>
-        <ul>
-          <li>{translations.projectRoadmapPoint1[activeLanguage]}</li>
-          <li>{translations.projectRoadmapPoint2[activeLanguage]}</li>
-          <li>{translations.projectRoadmapPoint3[activeLanguage]}</li>
-          <li>{translations.projectRoadmapPoint4[activeLanguage]}</li>
-        </ul>
+        <p>{translations.projectRoadmapContent1[activeLanguage]}</p>
         <p>{translations.projectRoadmapContent[activeLanguage]}</p>
         {/* Results Section */}
         <h2>{translations.projectResultsTitle[activeLanguage]}</h2>
+        <ul>
+          <li>{translations.projectResultsPoint1[activeLanguage]}</li>
+          <li>{translations.projectResultsPoint2[activeLanguage]}</li>
+          <li>{translations.projectResultsPoint3[activeLanguage]}</li>
+          <ul>
+            <li>{translations.projectResultsPoint4[activeLanguage]}</li>
+            <li>{translations.projectResultsPoint5[activeLanguage]}</li>
+          </ul>
+        </ul>
         <p>{translations.projectResultsContent1[activeLanguage]}</p>
         {/* Conclusion Section */}
         <h2>{translations.projectConclusionTitle[activeLanguage]}</h2>
