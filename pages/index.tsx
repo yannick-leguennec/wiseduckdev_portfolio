@@ -121,7 +121,14 @@ export default function Home() {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href={`https://${siteUrl}`}
+        />
+
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Wise Duck Dev" />
         <meta
           property="og:title"
           content={translation.og_title[activeLanguage]}

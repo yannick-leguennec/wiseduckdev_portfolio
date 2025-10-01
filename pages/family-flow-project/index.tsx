@@ -300,6 +300,7 @@ export default function FamilyFlowProject() {
         about: { "@id": `${familyFlowUrl}#software` }, // this page is about the live app
         publisher: { "@id": `${orgUrl}#organization` },
         isAccessibleForFree: true,
+        mainEntityOfPage: `${familyFlowProjectUrl}#webpage`,
       },
       {
         // The live app being showcased
@@ -379,8 +380,14 @@ export default function FamilyFlowProject() {
           content={translations.metaDescription[activeLanguage]}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href={`https://${siteUrl}/family-flow-project`}
+        />
 
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Wise Duck Dev" />
         <meta
           property="og:title"
           content={translations.metaTitle[activeLanguage]}
@@ -397,8 +404,8 @@ export default function FamilyFlowProject() {
           property="og:url"
           content={
             activeLanguage === "FR"
-              ? `${siteUrl}/fr/family-flow-project`
-              : `${siteUrl}/family-flow-project`
+              ? `https://${siteUrl}/fr/family-flow-project`
+              : `https://${siteUrl}/family-flow-project`
           }
         />
         <meta

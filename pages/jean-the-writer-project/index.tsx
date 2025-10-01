@@ -31,7 +31,7 @@ export default function FamilyFlowProject() {
   const translations: TranslationsType = {
     pageTitle: {
       EN: "Jean the Writer",
-      FR: "Jean L'écrivain",
+      FR: "Jean l'Écrivain",
     },
     pageSubtitle: {
       EN: "AI-Powered Manuscript Correction & Editorial Review Tool",
@@ -43,7 +43,7 @@ export default function FamilyFlowProject() {
     },
     pageIntroduction2: {
       EN: "What started as a client-specific challenge evolved into Jean The Writer: a powerful backend tool that automates grammar and syntax correction, delivers chapter-by-chapter editorial reviews, and compiles polished, publication-ready manuscripts.",
-      FR: "Ce qui ne devait être qu’une solution sur mesure pour un client s’est rapidement transformé en Jean The Writer : un outil backend puissant qui automatise la correction grammaticale et syntaxique, génère des retours éditoriaux par chapitre, et compile des manuscrits propres, structurés et prêts à l’édition.",
+      FR: "Ce qui ne devait être qu’une solution sur mesure pour un client s’est rapidement transformé en Jean l'Écrivain : un outil backend puissant qui automatise la correction grammaticale et syntaxique, génère des retours éditoriaux par chapitre, et compile des manuscrits propres, structurés et prêts à l’édition.",
     },
     projectOverviewTitle: {
       EN: "Project Overview",
@@ -51,11 +51,11 @@ export default function FamilyFlowProject() {
     },
     projectOverviewContent1: {
       EN: "Jean The Writer automates comprehensive grammar and syntax correction for manuscripts, then delivers structured editorial reviews and actionable recommendations for every chapter. By combining AI proofreading with targeted structural feedback, it transforms raw drafts into polished, publication-ready texts.",
-      FR: "Jean The Writer automatise la correction complète de manuscrit, puis fournit des relectures éditoriales structurées ainsi que des recommandations actionnables pour chaque chapitre. En combinant correction grammaticale et feedback ciblé, il transforme des brouillons bruts en textes fluides, cohérents et prêts à l’édition.",
+      FR: "Jean l'Écrivain automatise la correction complète de manuscrit, puis fournit des relectures éditoriales structurées ainsi que des recommandations actionnables pour chaque chapitre. En combinant correction grammaticale et feedback ciblé, il transforme des brouillons bruts en textes fluides, cohérents et prêts à l’édition.",
     },
     projectOverviewContent2: {
       EN: "Unlike generic AI writing tools, Jean The Writer is built for long-form manuscripts. It splits texts into manageable blocks, ensures continuity, and produces clean Google Docs output with professional formatting. Writers receive not just corrections, but tailored insights that respect their style while improving clarity and flow.",
-      FR: "Contrairement aux outils généralistes du marché, Jean The Writer est pensé pour les manuscrits longs. Il segmente les textes en blocs, assure la continuité, et génère des Google Docs professionnels directement exploitables. Les auteurs reçoivent non seulement des corrections, mais aussi des analyses respectueuses de leur style, tout en améliorant la clarté et la fluidité.",
+      FR: "Contrairement aux outils généralistes du marché, Jean l'Écrivain est pensé pour les manuscrits longs. Il segmente les textes en blocs, assure la continuité, et génère des Google Docs professionnels directement exploitables. Les auteurs reçoivent non seulement des corrections, mais aussi des analyses respectueuses de leur style, tout en améliorant la clarté et la fluidité.",
     },
     projectOverviewPoint1: {
       EN: "Problem solved: Saves authors weeks (or months) of manual correction and expensive editorial reviews.",
@@ -111,7 +111,7 @@ export default function FamilyFlowProject() {
     },
     projectCreativityContent1: {
       EN: "Unlike my other projects, Jean The Writer wasn’t born from personal observation but from a client’s unusual request. Yet it revealed an important gap: writers are underserved by AI when it comes to long-form, book-length correction and review.",
-      FR: "À la différence de mes autres projets, Jean The Writer n’est pas né d’une observation personnelle mais d’une demande client singulière. Pourtant, ce projet a mis en lumière un manque : les écrivains disposent de peu de solutions adaptées à la correction et à la relecture long format pour leurs manuscrits.",
+      FR: "À la différence de mes autres projets, Jean l'Écrivain n’est pas né d’une observation personnelle mais d’une demande client singulière. Pourtant, ce projet a mis en lumière un manque : les écrivains disposent de peu de solutions adaptées à la correction et à la relecture long format pour leurs manuscrits.",
     },
     projectCreativityContent2: {
       EN: "This project taught me that creativity often lies in adaptation, in recognizing that a highly specific need (a punctuation-free manuscript!) can spark the creation of a tool that serves many more. It was a reminder that innovation isn’t always about ideating from scratch, but about turning challenges into repeatable, scalable solutions.",
@@ -158,7 +158,7 @@ export default function FamilyFlowProject() {
       FR: "Stack & outils",
     },
     projectStackPoint1: {
-      EN: "Core: Node.js, TypeScripts",
+      EN: "Core: Node.js, TypeScript",
       FR: "Core : Node.js, TypeScript",
     },
     projectStackPoint2: {
@@ -247,7 +247,7 @@ export default function FamilyFlowProject() {
     },
     projectRoadmapContent1: {
       EN: "This project was designed to solve a concrete client problem, not to evolve into a commercial SaaS. However, its potential is clear: a scalable backend that could become a platform for writers seeking affordable, professional manuscript prep.",
-      FR: "Jean The Writer a été conçu pour répondre à un besoin ponctuel, pas pour devenir un produit grand public. Mais son potentiel est évident : offrir aux écrivains une alternative abordable et professionnelle pour préparer leurs manuscrits.",
+      FR: "Jean l'Écrivain a été conçu pour répondre à un besoin ponctuel, pas pour devenir un produit grand public. Mais son potentiel est évident : offrir aux écrivains une alternative abordable et professionnelle pour préparer leurs manuscrits.",
     },
     projectRoadmapContent2: {
       EN: "For now, the roadmap is simple: continue refining prompts and workflows when new manuscripts arrive, adapting to each author’s style and needs.",
@@ -266,8 +266,8 @@ export default function FamilyFlowProject() {
       FR: "Défi notable : premier manuscrit sans ponctuation (600 pages) : corrigé et relu avec succès.",
     },
     projectResultsPoint3: {
-      EN: "Feedbacks:",
-      FR: "Feedbacks :",
+      EN: "Feedback:",
+      FR: "Retours:",
     },
     projectResultsPoint4: {
       EN: "Corrections and publisher suggestions : highly appreciated.",
@@ -311,7 +311,7 @@ export default function FamilyFlowProject() {
     },
     projectConclusionContent2: {
       EN: "Above all, Jean The Writer showed me that AI isn’t about replacing creativity, but about empowering it. By automating the repetitive, it gives writers more time to focus on storytelling,  and that is where the real value lies.",
-      FR: "Mais surtout, Jean The Writer m’a rappelé que l’IA ne vise pas à remplacer la créativité, mais à l’amplifier. En automatisant les tâches répétitives, elle libère du temps pour ce qui compte vraiment : raconter de bonnes histoires.",
+      FR: "Mais surtout, Jean l'Écrivain m’a rappelé que l’IA ne vise pas à remplacer la créativité, mais à l’amplifier. En automatisant les tâches répétitives, elle libère du temps pour ce qui compte vraiment : raconter de bonnes histoires.",
     },
     buttonViewLive: {
       EN: "View Live Project",
@@ -326,16 +326,16 @@ export default function FamilyFlowProject() {
       FR: "Retour",
     },
     metaTitle: {
-      EN: "Wise Duck Dev GPTs - Developer-focused Custom GPT Ecosystem",
-      FR: "Wise Duck Dev GPTs - Écosystème de GPTs personnalisés axé sur les développeurs",
+      EN: "Jean the Writer - AI-Powered Manuscript Correction & Editorial Review Tool",
+      FR: "Jean l'Écrivain - Outil de correction de manuscrits et de révision éditoriale alimenté par l'IA",
     },
     metaDescription: {
-      EN: "Discover Wise Duck Dev GPTs, a developer-focused ecosystem designed to simplify the creation and management of custom GPTs. Co-developed as part of an intensive Web & Mobile Development program.",
-      FR: "Découvrez Wise Duck Dev GPTs, un écosystème axé sur les développeurs conçu pour simplifier la création et la gestion de GPTs personnalisés. Co-développé dans le cadre d'un programme intensif de développement Web & Mobile.",
+      EN: "Discover Jean the Writer, an AI-powered tool designed to automate manuscript correction and provide in-depth editorial reviews. Co-developed as part of an intensive Web & Mobile Development program.",
+      FR: "Découvrez Jean l'Écrivain, un outil alimenté par l'IA conçu pour automatiser la correction de manuscrits et fournir des révisions éditoriales approfondies. Co-développé dans le cadre d'un programme intensif de développement Web & Mobile.",
     },
     twitterImageAltDescription: {
-      EN: "Wise Duck Dev GPTs - White Anthropomorphic Duck wearing a suit with a V2 logo on its chest, standing in front of a dark violet background",
-      FR: "Wise Duck Dev GPTs - Canard anthropomorphe blanc en costume avec un logo V2 sur la poitrine, se tenant devant un fond violet foncé",
+      EN: "Jean the Writer - AI-Powered Manuscript Correction & Editorial Review Tool depicted by an AI generated image of an old man writing on a wooden desk",
+      FR: "Jean l'Écrivain - Outil de correction de manuscrits et de révision éditoriale alimenté par l'IA, représenté par une image générée par IA d'un vieil homme écrivant sur un bureau en bois",
     },
     og_locale: {
       EN: "en_US",
@@ -343,23 +343,14 @@ export default function FamilyFlowProject() {
     },
   };
 
-  const primaryImage =
-    activeLanguage === "EN"
-      ? `https://www.wiseduckdevgpts.com/images/index/the_wise_duck_dev_gpts_application_version2_main_picture_landscape_EN_Facebook.webp`
-      : `https://www.wiseduckdevgpts.com/images/index/the_wise_duck_dev_gpts_application_version2_main_picture_landscape_FR_Facebook.webp`;
-
-  const twitterImage =
-    activeLanguage === "EN"
-      ? `https://www.wiseduckdevgpts.com/images/index/the_wise_duck_dev_gpts_application_version2_main_picture_landscape_EN_Twitter.webp`
-      : `https://www.wiseduckdevgpts.com/images/index/the_wise_duck_dev_gpts_application_version2_main_picture_landscape_FR_Twitter.webp`;
-
+  const primaryImage = `https://www.wiseduckdev.com/images/projectsPictures/jean_the_writer/jean_the_writer_automated_manuscripts_revision_and_correction_ai_project.webp`;
+  const secondaryImage = `https://www.wiseduckdev.com/images/projectsPictures/jean_the_writer/jean_the_writer_automated_manuscripts_revision_and_correction_ai_project_Twitter.webp`;
   const orgUrl = `https://${siteUrl}`;
-  const wiseDuckDevGPTsUrl = `https://www.wiseduckdevgpts.com`;
 
-  const wddProjectUrl =
+  const jeanTheWriterProjectUrl =
     activeLanguage === "EN"
-      ? `https://${siteUrl}/wise-duck-dev-gpts-project`
-      : `https://${siteUrl}/fr/wise-duck-dev-gpts-project`;
+      ? `https://${siteUrl}/jean-the-writer-project`
+      : `https://${siteUrl}/fr/jean-the-writer-project`;
 
   const pageLanguage = activeLanguage === "EN" ? "en-US" : "fr-FR";
 
@@ -385,68 +376,85 @@ export default function FamilyFlowProject() {
       },
       {
         "@type": "WebPage",
-        "@id": `${wddProjectUrl}#webpage`,
-        url: wddProjectUrl,
+        "@id": `${jeanTheWriterProjectUrl}#webpage`,
+        url: jeanTheWriterProjectUrl,
         name: translations.metaTitle[activeLanguage],
         description: translations.metaDescription[activeLanguage],
         isPartOf: { "@id": `${orgUrl}#website` },
         inLanguage: pageLanguage,
         primaryImageOfPage: { "@type": "ImageObject", url: primaryImage },
-        image: [primaryImage, twitterImage],
-        breadcrumb: { "@id": `${wddProjectUrl}#breadcrumb` },
-        about: { "@id": `${wiseDuckDevGPTsUrl}#website` },
+        image: [primaryImage, secondaryImage],
+        breadcrumb: { "@id": `${jeanTheWriterProjectUrl}#breadcrumb` },
+        about: [
+          { "@id": `${jeanTheWriterProjectUrl}#software` },
+          { "@id": `${jeanTheWriterProjectUrl}#service` },
+        ],
         publisher: { "@id": `${orgUrl}#organization` },
         isAccessibleForFree: true,
+        mainEntityOfPage: `${jeanTheWriterProjectUrl}#webpage`,
       },
       {
-        // External platform modeled as a WebSite (catalog/listing of GPTs)
-        "@type": "WebSite",
-        "@id": `${wiseDuckDevGPTsUrl}#website`, // <-- fixed fragment
-        url: wiseDuckDevGPTsUrl,
-        name: "Wise Duck Dev GPTs",
-        inLanguage: ["en-US", "fr-FR"],
+        "@type": "SoftwareApplication",
+        "@id": `${jeanTheWriterProjectUrl}#software`,
+        name: "Jean the Writer",
+        url: jeanTheWriterProjectUrl,
+        applicationCategory: "ProductivityApplication",
+        operatingSystem: "Any",
+        availableLanguage: ["fr-FR", "es-ES", "en-US"],
         description:
           activeLanguage === "EN"
-            ? "A website cataloging 800+ custom GPTs for web, mobile, AI, blockchain, and game developers—boosting productivity, code quality, and exploration."
-            : "Un site web référençant plus de 800 GPTs personnalisés pour les développeurs web, mobile, IA, blockchain et jeu vidéo — améliorant productivité, qualité du code et exploration.",
+            ? "An AI-powered tool that automates manuscript correction and provides in-depth editorial reviews with scalable, resilient workflows."
+            : "Un outil IA qui automatise la correction de manuscrits et fournit des révisions éditoriales approfondies avec des workflows scalables et résilients.",
         publisher: { "@id": `${orgUrl}#organization` },
+        creator: { "@id": `${orgUrl}#organization` },
         image: primaryImage,
-        thumbnailUrl: twitterImage,
+        thumbnailUrl: secondaryImage,
+        softwareVersion: "1.0",
         audience: {
           "@type": "Audience",
           audienceType: [
-            "Web developers",
-            "Mobile developers",
-            "AI/ML engineers",
-            "Blockchain developers",
-            "Game developers",
+            "Authors",
+            "Writers",
+            "Independent Authors",
+            "Self-Publishing Authors",
+            "Editors",
+            "Publishing Professionals",
           ],
         },
         keywords: [
-          "Next.js",
-          "React",
+          "Manuscript correction",
+          "Editorial review",
+          "Node.js",
           "TypeScript",
-          "Sass",
-          "PostgreSQL",
-          "Prisma",
-          "Meilisearch",
-          "OpenAI",
           "OpenAI API",
-          "Midjourney",
-          "Make.com",
-          "Vercel",
-          "PWA",
-          "Prompt Engineering",
-          "AI for Developers",
-          "Custom GPTs",
-          "Multilingual SEO",
-          "Automation",
-          "Full-Stack Development",
+          "GPT-4o mini",
+          "Deep Search",
+          "Google Docs API",
+          "Google Drive API",
+          "diff-match-patch",
+          "AI proofreading",
+          "Writing assistant",
+          "Publishing tools",
         ],
       },
       {
+        // The service you offer (you run the tool for clients)
+        "@type": "Service",
+        "@id": `${jeanTheWriterProjectUrl}#service`,
+        name: "Manuscript Correction & Editorial Review",
+        serviceType: "AI-powered manuscript correction and editorial review",
+        provider: { "@id": `${orgUrl}#organization` },
+        areaServed: "Worldwide",
+        availableLanguage: ["English", "French", "Spanish"],
+        isSimilarTo: { "@id": `${jeanTheWriterProjectUrl}#software` },
+        description:
+          activeLanguage === "EN"
+            ? "Professional service using Jean the Writer Software to correct manuscripts and provide structured editorial feedback."
+            : "Service professionnel utilisant l'application Jean l'Écrivain pour corriger des manuscrits et fournir des retours éditoriaux structurés.",
+      },
+      {
         "@type": "BreadcrumbList",
-        "@id": `${wddProjectUrl}#breadcrumb`,
+        "@id": `${jeanTheWriterProjectUrl}#breadcrumb`,
         itemListElement: [
           {
             "@type": "ListItem",
@@ -459,9 +467,9 @@ export default function FamilyFlowProject() {
             position: 2,
             name:
               activeLanguage === "EN"
-                ? "Wise Duck Dev GPTs Project"
-                : "Projet Wise Duck Dev GPTs",
-            item: wddProjectUrl,
+                ? "Jean the Writer Project"
+                : "Projet Jean l'Écrivain",
+            item: jeanTheWriterProjectUrl,
           },
         ],
       },
@@ -477,8 +485,14 @@ export default function FamilyFlowProject() {
           content={translations.metaDescription[activeLanguage]}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href={`https://${siteUrl}/jean-the-writer-project`}
+        />
 
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Wise Duck Dev" />
         <meta
           property="og:title"
           content={translations.metaTitle[activeLanguage]}
@@ -488,19 +502,15 @@ export default function FamilyFlowProject() {
           content={translations.metaDescription[activeLanguage]}
         />
         <meta
-          property="og:imgage"
-          content={
-            activeLanguage === "EN"
-              ? `https://www.wiseduckdevgpts.com/images/index/the_wise_duck_dev_gpts_application_version2_main_picture_landscape_EN_Facebook.webp`
-              : `https://www.wiseduckdevgpts.com/images/index/the_wise_duck_dev_gpts_application_version2_main_picture_landscape_FR_Facebook.webp`
-          }
+          property="og:image"
+          content={`https://www.wiseduckdev.com/images/projectsPictures/jean_the_writer/jean_the_writer_automated_manuscripts_revision_and_correction_ai_project_Facebook.webp`}
         />
         <meta
           property="og:url"
           content={
             activeLanguage === "FR"
-              ? `${siteUrl}/fr/wise-duck-dev-gpts-project`
-              : `${siteUrl}/wise-duck-dev-gpts-project`
+              ? `https://${siteUrl}/fr/jean-the-writer-project`
+              : `https://${siteUrl}/jean-the-writer-project`
           }
         />
         <meta
@@ -521,11 +531,7 @@ export default function FamilyFlowProject() {
         />
         <meta
           name="twitter:image"
-          content={
-            activeLanguage === "EN"
-              ? `https://www.wiseduckdevgpts.com/images/index/the_wise_duck_dev_gpts_application_version2_main_picture_landscape_EN_Twitter.webp`
-              : `https://www.wiseduckdevgpts.com/images/index/the_wise_duck_dev_gpts_application_version2_main_picture_landscape_FR_Twitter.webp`
-          }
+          content={`https://www.wiseduckdev.com/images/projectsPictures/jean_the_writer/jean_the_writer_automated_manuscripts_revision_and_correction_ai_project_Twitter.webp`}
         />
         <meta
           name="twitter:image:alt"
@@ -537,12 +543,12 @@ export default function FamilyFlowProject() {
             <link
               rel="alternate"
               hrefLang="en"
-              href={`https://${siteUrl}/wise-duck-dev-gpts-project`}
+              href={`https://${siteUrl}/jean-the-writer-project`}
             />
             <link
               rel="alternate"
               hrefLang="fr"
-              href={`https://${siteUrl}/fr/wise-duck-dev-gpts-project`}
+              href={`https://${siteUrl}/fr/jean-the-writer-project`}
             />
           </>
         )}
@@ -550,8 +556,8 @@ export default function FamilyFlowProject() {
           rel="canonical"
           href={
             activeLanguage === "EN"
-              ? `https://${siteUrl}/wise-duck-dev-gpts-project`
-              : `https://${siteUrl}/fr/wise-duck-dev-gpts-project`
+              ? `https://${siteUrl}/jean-the-writer-project`
+              : `https://${siteUrl}/fr/jean-the-writer-project`
           }
         />
         <script
@@ -605,7 +611,6 @@ export default function FamilyFlowProject() {
           <li>{translations.projectProcessPoint6[activeLanguage]}</li>
           <li>{translations.projectProcessPoint7[activeLanguage]}</li>
         </ul>
-        <p>{translations.projectProcessContent2[activeLanguage]}</p>
         {/* Stack Section */}
         <h2>{translations.projectStackTitle[activeLanguage]}</h2>
         <ul>
@@ -640,7 +645,7 @@ export default function FamilyFlowProject() {
         {/* Roadmap Section */}
         <h2>{translations.projectRoadmapTitle[activeLanguage]}</h2>
         <p>{translations.projectRoadmapContent1[activeLanguage]}</p>
-        <p>{translations.projectRoadmapContent[activeLanguage]}</p>
+        <p>{translations.projectRoadmapContent2[activeLanguage]}</p>
         {/* Results Section */}
         <h2>{translations.projectResultsTitle[activeLanguage]}</h2>
         <ul>
@@ -656,11 +661,14 @@ export default function FamilyFlowProject() {
         {/* Conclusion Section */}
         <h2>{translations.projectConclusionTitle[activeLanguage]}</h2>
         <p>{translations.projectConclusionContent1[activeLanguage]}</p>
+        <ul>
+          <li>{translations.projectConclusionPoint1[activeLanguage]}</li>
+          <li>{translations.projectConclusionPoint2[activeLanguage]}</li>
+          <li>{translations.projectConclusionPoint3[activeLanguage]}</li>
+          <li>{translations.projectConclusionPoint4[activeLanguage]}</li>
+          <li>{translations.projectConclusionPoint5[activeLanguage]}</li>
+        </ul>
         <p>{translations.projectConclusionContent2[activeLanguage]}</p>
-        <p>{translations.projectConclusionContent3[activeLanguage]}</p>
-        <p>{translations.projectConclusionContent4[activeLanguage]}</p>
-        <p>{translations.projectConclusionContent5[activeLanguage]}</p>
-        <p>{translations.projectConclusionContent6[activeLanguage]}</p>
       </main>
       <Footer />
       <SpeedInsights />
