@@ -10,7 +10,7 @@ import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
 import classes from "../../styles/family_flow_project.module.scss";
 
-export default function FamilyFlowProject() {
+export default function WiseDuckDevGPTsProject() {
   // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
   // Custom hook to manage the loading state
@@ -596,7 +596,7 @@ export default function FamilyFlowProject() {
   );
 }
 
-export const getStaGetStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {},
   };

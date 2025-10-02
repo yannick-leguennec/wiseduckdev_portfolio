@@ -33,7 +33,7 @@ export default function Custom404() {
   );
 }
 
-export const getStaGetStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {},
   };

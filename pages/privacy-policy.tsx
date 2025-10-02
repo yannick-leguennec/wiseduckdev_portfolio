@@ -1063,7 +1063,7 @@ export default function PrivacyPolicy() {
   );
 }
 
-export const getStaGetStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {},
   };
