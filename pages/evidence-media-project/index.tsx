@@ -178,8 +178,8 @@ export default function EvidenceMediaProject() {
       FR: "Autres : Tweepy, PyVirtualDisplay",
     },
     projectStackContent1: {
-      EN: "J’ai choisi Python pour la richesse de son écosystème en automatisation (notamment avec Selenium et BeautifulSoup). C’était une nouvelle aventure technique, qui s’est rapidement transformée en véritable coup de cœur. Toutes les technologies utilisées sont fiables, bien documentées, gratuites (à l’exception des APIs IA) et parfaitement adaptées aux scripts automatisés.",
-      FR: "I chose Python for its rich ecosystem in automation, especially tools like Selenium and BeautifulSoup. What started as a new technical venture quickly became a passion. All the technologies I used are reliable, well-documented, free (except for the AI APIs), and perfectly suited for automated scripting.",
+      EN: "I chose Python for its rich ecosystem in automation, especially tools like Selenium and BeautifulSoup. What started as a new technical venture quickly became a passion. All the technologies I used are reliable, well-documented, free (except for the AI APIs), and perfectly suited for automated scripting.",
+      FR: "J’ai choisi Python pour la richesse de son écosystème en automatisation (notamment avec Selenium et BeautifulSoup). C’était une nouvelle aventure technique, qui s’est rapidement transformée en véritable coup de cœur. Toutes les technologies utilisées sont fiables, bien documentées, gratuites (à l’exception des APIs IA) et parfaitement adaptées aux scripts automatisés.",
     },
     projectStackContent2: {
       EN: "AI integration (e.g., xAI) and secure automation (via GitHub Actions and Vault) are central pillars of the project.",
@@ -294,16 +294,16 @@ export default function EvidenceMediaProject() {
       FR: "Retour",
     },
     metaTitle: {
-      EN: "Jean the Writer - AI-Powered Manuscript Correction & Editorial Review Tool",
-      FR: "Jean l'Écrivain - Outil de correction de manuscrits et de révision éditoriale alimenté par l'IA",
+      EN: "Evidence Media - AI-Powered Automated Content Generation & Publication System",
+      FR: "Evidence Media - Système de génération et de publication de contenu automatisé alimenté par l'IA",
     },
     metaDescription: {
-      EN: "Discover Jean the Writer, an AI-powered tool designed to automate manuscript correction and provide in-depth editorial reviews. Co-developed as part of an intensive Web & Mobile Development program.",
-      FR: "Découvrez Jean l'Écrivain, un outil alimenté par l'IA conçu pour automatiser la correction de manuscrits et fournir des révisions éditoriales approfondies. Co-développé dans le cadre d'un programme intensif de développement Web & Mobile.",
+      EN: "Evidence Media is an AI-powered platform automating the curation and publication of sourced independent news on X and Substack for North America.",
+      FR: "Evidence Media est une plateforme IA automatisant la curation et la publication d’actualités indépendantes sourcées sur X et Substack en Amérique du Nord.",
     },
     twitterImageAltDescription: {
-      EN: "Jean the Writer - AI-Powered Manuscript Correction & Editorial Review Tool depicted by an AI generated image of an old man writing on a wooden desk",
-      FR: "Jean l'Écrivain - Outil de correction de manuscrits et de révision éditoriale alimenté par l'IA, représenté par une image générée par IA d'un vieil homme écrivant sur un bureau en bois",
+      EN: "Evidence Media - AI-Powered Automated Content Generation & Publication System depicted by an AI generated image of Evidence Media logo",
+      FR: "Evidence Media - Système de génération et de publication de contenu automatisé alimenté par l'IA, représenté par une image générée par IA du logo d'Evidence Media",
     },
     og_locale: {
       EN: "en_US",
@@ -311,14 +311,17 @@ export default function EvidenceMediaProject() {
     },
   };
 
-  const primaryImage = `https://www.wiseduckdev.com/images/projectsPictures/jean_the_writer/jean_the_writer_automated_manuscripts_revision_and_correction_ai_project.webp`;
-  const secondaryImage = `https://www.wiseduckdev.com/images/projectsPictures/jean_the_writer/jean_the_writer_automated_manuscripts_revision_and_correction_ai_project_Twitter.webp`;
+  const primaryImage = `https://www.wiseduckdev.com/images/projectsPictures/evidence_media/evidence_media_social_media_ai_automation_project.webp`;
+  const secondaryImage = `https://www.wiseduckdev.com/images/projectsPictures/evidence_media/evidence_media_social_media_ai_automation_project_Twitter.webp`;
   const orgUrl = `https://${siteUrl}`;
 
-  const jeanTheWriterProjectUrl =
+  const evidenceMediaProjectUrl =
     activeLanguage === "EN"
-      ? `https://${siteUrl}/jean-the-writer-project`
-      : `https://${siteUrl}/fr/jean-the-writer-project`;
+      ? `https://${siteUrl}/evidence-media-project`
+      : `https://${siteUrl}/fr/evidence-media-project`;
+
+  const evidenceMediaSubstackUrl = `https://evidencemedianewsletter.substack.com/`;
+  const evidenceMediaXUrl = `https://x.com/Evidence_X_News`;
 
   const pageLanguage = activeLanguage === "EN" ? "en-US" : "fr-FR";
 
@@ -343,86 +346,81 @@ export default function EvidenceMediaProject() {
         sameAs: ["https://x.com/wiseduckdev"],
       },
       {
+        "@type": "WebSite",
+        "@id": `${evidenceMediaSubstackUrl}#website`,
+        url: evidenceMediaSubstackUrl,
+        name: "Evidence Media on Substack",
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${evidenceMediaXUrl}#website`,
+        url: evidenceMediaXUrl,
+        name: "Evidence Media on X (Twitter)",
+      },
+      {
         "@type": "WebPage",
-        "@id": `${jeanTheWriterProjectUrl}#webpage`,
-        url: jeanTheWriterProjectUrl,
+        "@id": `${evidenceMediaProjectUrl}#webpage`,
+        url: evidenceMediaProjectUrl,
         name: translations.metaTitle[activeLanguage],
         description: translations.metaDescription[activeLanguage],
         isPartOf: { "@id": `${orgUrl}#website` },
         inLanguage: pageLanguage,
         primaryImageOfPage: { "@type": "ImageObject", url: primaryImage },
         image: [primaryImage, secondaryImage],
-        breadcrumb: { "@id": `${jeanTheWriterProjectUrl}#breadcrumb` },
-        about: [
-          { "@id": `${jeanTheWriterProjectUrl}#software` },
-          { "@id": `${jeanTheWriterProjectUrl}#service` },
-        ],
+        breadcrumb: { "@id": `${evidenceMediaProjectUrl}#breadcrumb` },
+        about: [{ "@id": `${evidenceMediaProjectUrl}#software` }],
         publisher: { "@id": `${orgUrl}#organization` },
         isAccessibleForFree: true,
-        mainEntityOfPage: `${jeanTheWriterProjectUrl}#webpage`,
+        mainEntityOfPage: { "@id": `${evidenceMediaProjectUrl}#software` },
       },
       {
         "@type": "SoftwareApplication",
-        "@id": `${jeanTheWriterProjectUrl}#software`,
-        name: "Jean the Writer",
-        url: jeanTheWriterProjectUrl,
+        "@id": `${evidenceMediaProjectUrl}#software`,
+        name: "Evidence Media",
+        url: evidenceMediaProjectUrl,
+        additionalType: "https://schema.org/WebApplication",
         applicationCategory: "ProductivityApplication",
         operatingSystem: "Any",
-        availableLanguage: ["fr-FR", "es-ES", "en-US"],
+        inLanguage: ["en-US"],
         description:
           activeLanguage === "EN"
-            ? "An AI-powered tool that automates manuscript correction and provides in-depth editorial reviews with scalable, resilient workflows."
-            : "Un outil IA qui automatise la correction de manuscrits et fournit des révisions éditoriales approfondies avec des workflows scalables et résilients.",
+            ? "Evidence Media is an AI-powered news automation system that curates, generates, and publishes sourced independent news on X and Substack at scale."
+            : "Evidence Media est un système d’automatisation IA qui sélectionne, génère et publie à grande échelle des actualités indépendantes sourcées sur X et Substack.",
         publisher: { "@id": `${orgUrl}#organization` },
         creator: { "@id": `${orgUrl}#organization` },
         image: primaryImage,
         thumbnailUrl: secondaryImage,
-        softwareVersion: "1.0",
-        audience: {
-          "@type": "Audience",
-          audienceType: [
-            "Authors",
-            "Writers",
-            "Independent Authors",
-            "Self-Publishing Authors",
-            "Editors",
-            "Publishing Professionals",
-          ],
-        },
+        softwareVersion: "3.0",
+        sameAs: [evidenceMediaSubstackUrl, evidenceMediaXUrl],
+        audienceType: [
+          "General Public",
+          "Researchers",
+          "Journalists",
+          "Media Professionals",
+          "Civic-Minded Individuals",
+          "Policy Makers",
+          "Academics",
+          "Students",
+          "Lifelong Learners",
+          "Information Enthusiasts",
+          "American Citizens",
+          "Canadian Citizens",
+        ],
         keywords: [
-          "Manuscript correction",
-          "Editorial review",
-          "Node.js",
-          "TypeScript",
-          "OpenAI API",
-          "GPT-4o mini",
-          "Deep Search",
-          "Google Docs API",
-          "Google Drive API",
-          "diff-match-patch",
-          "AI proofreading",
-          "Writing assistant",
-          "Publishing tools",
+          "AI-powered news automation",
+          "sourced independent news",
+          "automated content generation",
+          "X news publication",
+          "Substack articles",
+          "media transparency",
+          "fact-based journalism",
+          "information reliability",
+          "news curation",
         ],
       },
       {
-        // The service you offer (you run the tool for clients)
-        "@type": "Service",
-        "@id": `${jeanTheWriterProjectUrl}#service`,
-        name: "Manuscript Correction & Editorial Review",
-        serviceType: "AI-powered manuscript correction and editorial review",
-        provider: { "@id": `${orgUrl}#organization` },
-        areaServed: "Worldwide",
-        availableLanguage: ["English", "French", "Spanish"],
-        isSimilarTo: { "@id": `${jeanTheWriterProjectUrl}#software` },
-        description:
-          activeLanguage === "EN"
-            ? "Professional service using Jean the Writer Software to correct manuscripts and provide structured editorial feedback."
-            : "Service professionnel utilisant l'application Jean l'Écrivain pour corriger des manuscrits et fournir des retours éditoriaux structurés.",
-      },
-      {
         "@type": "BreadcrumbList",
-        "@id": `${jeanTheWriterProjectUrl}#breadcrumb`,
+        "@id": `${evidenceMediaProjectUrl}#breadcrumb`,
         itemListElement: [
           {
             "@type": "ListItem",
@@ -435,9 +433,9 @@ export default function EvidenceMediaProject() {
             position: 2,
             name:
               activeLanguage === "EN"
-                ? "Jean the Writer Project"
-                : "Projet Jean l'Écrivain",
-            item: jeanTheWriterProjectUrl,
+                ? "Evidence Media Project"
+                : "Projet Evidence Media",
+            item: evidenceMediaProjectUrl,
           },
         ],
       },
@@ -456,7 +454,7 @@ export default function EvidenceMediaProject() {
         <link
           rel="alternate"
           hrefLang="x-default"
-          href={`https://${siteUrl}/jean-the-writer-project`}
+          href={`https://${siteUrl}/evidence-media-project`}
         />
 
         <meta property="og:type" content="website" />
@@ -471,14 +469,14 @@ export default function EvidenceMediaProject() {
         />
         <meta
           property="og:image"
-          content={`https://www.wiseduckdev.com/images/projectsPictures/jean_the_writer/jean_the_writer_automated_manuscripts_revision_and_correction_ai_project_Facebook.webp`}
+          content={`https://www.wiseduckdev.com/images/projectsPictures/evidence_media/evidence_media_social_media_ai_automation_project_Facebook.webp`}
         />
         <meta
           property="og:url"
           content={
             activeLanguage === "FR"
-              ? `https://${siteUrl}/fr/jean-the-writer-project`
-              : `https://${siteUrl}/jean-the-writer-project`
+              ? `https://${siteUrl}/fr/evidence-media-project`
+              : `https://${siteUrl}/evidence-media-project`
           }
         />
         <meta
@@ -499,7 +497,7 @@ export default function EvidenceMediaProject() {
         />
         <meta
           name="twitter:image"
-          content={`https://www.wiseduckdev.com/images/projectsPictures/jean_the_writer/jean_the_writer_automated_manuscripts_revision_and_correction_ai_project_Twitter.webp`}
+          content={`https://www.wiseduckdev.com/images/projectsPictures/evidence_media/evidence_media_social_media_ai_automation_project_Twitter.webp`}
         />
         <meta
           name="twitter:image:alt"
@@ -511,12 +509,12 @@ export default function EvidenceMediaProject() {
             <link
               rel="alternate"
               hrefLang="en"
-              href={`https://${siteUrl}/jean-the-writer-project`}
+              href={`https://${siteUrl}/evidence-media-project`}
             />
             <link
               rel="alternate"
               hrefLang="fr"
-              href={`https://${siteUrl}/fr/jean-the-writer-project`}
+              href={`https://${siteUrl}/fr/evidence-media-project`}
             />
           </>
         )}
@@ -524,8 +522,8 @@ export default function EvidenceMediaProject() {
           rel="canonical"
           href={
             activeLanguage === "EN"
-              ? `https://${siteUrl}/jean-the-writer-project`
-              : `https://${siteUrl}/fr/jean-the-writer-project`
+              ? `https://${siteUrl}/evidence-media-project`
+              : `https://${siteUrl}/fr/evidence-media-project`
           }
         />
         <script
@@ -593,7 +591,7 @@ export default function EvidenceMediaProject() {
         <h2>{translations.projectDeploymentTitle[activeLanguage]}</h2>
         <p>{translations.projectDeploymentContent1[activeLanguage]}</p>
         <p>{translations.projectDeploymentContent2[activeLanguage]}</p>
-        <p>{translations.projectDeployemntContent3[activeLanguage]}</p>
+        <p>{translations.projectDeploymentContent3[activeLanguage]}</p>
         <p>{translations.projectDeploymentContent4[activeLanguage]}</p>
         {/* Roadmap Section */}
         <h2>{translations.projectRoadmapTitle[activeLanguage]}</h2>

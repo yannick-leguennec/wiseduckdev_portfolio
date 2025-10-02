@@ -44,7 +44,7 @@
       ],
       "project_description": "Discover The Wise Duck Dev GPTs—the definitive library for web, mobile, AI, blockchain and video games developers. This innovative platform offers over 700 custom GPTs across 14 categories, tailored to enhance skills and streamline development processes. Developed with a philantropic aim, this resource enables both novice and veteran developers to tackle complex challenges with advanced tools designed for productivity and innovation. Join our community and revolutionize your development approach with The Wise Duck Dev GPTs.",
       "project_github_repo": "https://github.com/yannick-leguennec/wiseduckdevgpts",
-      "project_image": "/images/projectsPictures/the-wise-duck-dev-gpts-library.webp",
+      "project_image": "/images/projectsPictures/wise_duck_dev_gpts/the-wise-duck-dev-gpts-library.webp",
       "project_image_alt": "The Wise Duck Dev GPTs platform showcasing a diverse library of over 700 custom GPTs for web, mobile, AI, blockchain and video games development, organized across 14 key categories."
     },
     {
@@ -99,7 +99,7 @@
       ],
       "project_description": "The Evidence Media Project automates the creation, enhancement, and publication of timely news content for Evidence Media on X and Substack. It leverages AI for classification and contextual enrichment of X posts, generates long‑form Substack articles, securely manages credentials with Vault, and orchestrates fully automated, scheduled workflows via GitHub Actions.",
       "project_github_repo": "https://github.com/yannick-leguennec/evidence_media_news",
-      "project_image": "images/projectsPictures/evidence_media_social_media_ai_automation_project.webp",
+      "project_image": "images/projectsPictures/evidence_media/evidence_media_social_media_ai_automation_project.webp",
       "project_image_alt": "Overview diagram of the Evidence Media Bot showing automated AI‑driven workflows for generating and publishing news content on X and Substack"
     }
   ],
@@ -123,7 +123,7 @@
       ],
       "project_description": "Family Flow est une application web innovante conçue pour simplifier la coordination et la communication des activités familiales, permettant à chaque membre de participer activement à la vie familiale, quel que soit son emplacement.",
       "project_github_repo": "https://github.com/family-flow-app/FamilyFlow-FrontEnd",
-      "project_image": "/images/projectsPictures/family_flowfamily-flow-project-management-lead-developer.webp",
+      "project_image": "/images/projectsPictures/family_flow/family_flowfamily-flow-project-management-lead-developer.webp",
       "project_image_alt": "Capture d'écran de l'interface de l'application Family Flow, mettant en valeur mon projet de coordination familiale utilisant React, TypeScript et Mantine UI, soulignant mon expertise en tant que Product Manager et Lead Front-End Developer."
     },
     {
@@ -148,7 +148,7 @@
       ],
       "project_description": "Découvrez The Wise Duck Dev GPTs - la resource ultime pour les développeurs web, mobiles, IA, blockchain et jeux vidéos. Cette plateforme innovante propose plus de 700 GPTs personnalisés répartis dans 14 catégories, conçus pour améliorer les compétences et rationaliser les processus de développement. Développée dans un but philanthropique, cette ressource permet aux développeurs novices et vétérans de relever des défis complexes avec des outils avancés conçus pour la productivité et l'innovation. Rejoignez notre communauté et révolutionnez votre approche du développement avec The Wise Duck Dev GPTs.",
       "project_github_repo": "https://github.com/yannick-leguennec/wiseduckdevgpts",
-      "project_image": "/images/projectsPictures/the-wise-duck-dev-gpts-library.webp",
+      "project_image": "/images/projectsPictures/wise_duck_dev_gpts/the-wise-duck-dev-gpts-library.webp",
       "project_image_alt": "La plateforme The Wise Duck Dev GPTs présentant une bibliothèque diversifiée de plus de 700 GPTs personnalisés pour le développement web, mobile, IA, blockchain et jeux vidéos organisés dans 14 catégories clés."
     },
     {
@@ -203,7 +203,7 @@
       ],
       "project_description": "Le projet Evidence Media automatise la création, l’enrichissement et la publication de contenus d’actualité pour Evidence Media sur X et Substack. Il utilise l’IA pour classifier et contextualiser les publications X, génère des articles long format pour Substack, gère les identifiants de manière sécurisée via Vault et orchestre des workflows entièrement automatisés et planifiés avec GitHub Actions.",
       "project_github_repo": "https://github.com/yannick-leguennec/evidence_media_news",
-      "project_image": "images/projectsPictures/evidence_media_social_media_ai_automation_project.webp",
+      "project_image": "images/projectsPictures/evidence_media/evidence_media_social_media_ai_automation_project.webp",
       "project_image_alt": "Schéma d’ensemble de Evidence Media montrant les workflows automatisés pilotés par IA pour générer et publier du contenu d’actualité sur X et Substack"
     }
   ]
