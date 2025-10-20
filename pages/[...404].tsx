@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 import { useLoader } from "../context/LoaderContext";
 
-const NotFoundWithNoSSR = dynamic(() => import("../components/404/404"), {
+const NotFoundWithNoSSR = dynamic(() => import("../components/v1/404/404"), {
   ssr: false,
 });
 

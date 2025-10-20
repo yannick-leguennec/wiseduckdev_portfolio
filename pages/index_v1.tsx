@@ -8,9 +8,10 @@ import { useLoader } from "../context/LoaderContext";
 import { useLanguage } from "../context/LanguageContext";
 import { TranslationsType } from "../types/TranslationsType";
 import Image, { StaticImageData } from "next/image";
-import picture_yannick_horizontal from "../public/images/index/v2/images_index_page/yannick_leguennec_full_stack_javascript_developer_specialized_in_react_horizontal.webp";
-import picture_yannick_vertical from "../public/images/index/v2/images_index_page/yannick_leguennec_full_stack_javascript_developer_specialized_in_react_mobile.webp";
-import WrappedMain from "../components/v2/WrappedMain/WrappedMain";
+import duckCoachDesktop from "../public/images/index/innovative-developer-wise-duck-dev-white-suit-couch-tropical-plants.webp";
+import duckCoachMobile from "../public/images/index/innovative-developer-wise-duck-dev-white-suit-couch-tropical-plants-mobile.webp";
+import Header from "../components/v1/Header/Header";
+import Main from "../components/v1/Main/Main";
 import Profil from "../components/v1/Profil/Profil";
 import Skills from "../components/v1/Skills/Skills";
 import Experience from "../components/v1/Experience/Experience";
@@ -36,8 +37,8 @@ export default function Home() {
   // Object to store the translations
   const translation: TranslationsType = {
     altPicture: {
-      EN: "Professional picture of the full stack javascript developer specialized in react Yannick Le Guennec aka The Wise Duck Dev in a tropical plant background",
-      FR: "Image professionnelle du développeur full stack javascript spécialisé en react Yannick Le Guennec aka The Wise Duck Dev dans un fond de plantes tropicales",
+      EN: "AI and Photoshop-crafted image of The Wise Duck Dev in a white suit, embracing innovation and style, seating in a modern couch amidst tropical plants, bridging the Skills and Experience sections with a blend of professionalism and creativity.",
+      FR: "Image du Wise Duck Dev en costume blanc, créée par IA et optimisée avec Photoshop, évoquant l'innovation avec style, assis dans un canapé moderne entouré de plantes tropicales, faisant le lien entre les sections 'Compétences' et 'Expérience' avec un mélange de professionnalisme et de créativité.",
     },
     logText: {
       EN: "🚀 Driven by a passion for web and mobile development with a specialization in React, I turn creative ideas into captivating digital realities. If you're seeking to bring your projects to life with a dedicated and innovative developer, feel free to reach out to explore fruitful collaborations together. Let's take a step towards the future of technology together! 🌐✨",
@@ -207,18 +208,19 @@ export default function Home() {
           }}
         />
       </Head>
-      <WrappedMain />
+      <Header />
       <main>
+        <Main />
         <Profil />
-        <Experience />
-        <Portfolio />
         <Skills />
-        <Contact id="contact" onLoaded={setContactLoaded} />
         <ResponsiveImage
-          srcDesktop={picture_yannick_horizontal}
-          srcMobile={picture_yannick_vertical}
+          srcDesktop={duckCoachDesktop}
+          srcMobile={duckCoachMobile}
           alt={translation.altPicture[activeLanguage]}
         />
+        <Experience />
+        <Portfolio />
+        <Contact id="contact" onLoaded={setContactLoaded} />
         <Footer />
       </main>
 
