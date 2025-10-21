@@ -10,7 +10,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  height: 6vh;
+  height: 8vh;
   background: transparent;
 }
 
@@ -68,7 +68,7 @@
   margin-right: 4rem;
   gap: 5rem;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1400px) {
     display: none;
   }
 }
@@ -131,7 +131,7 @@
 .containerBurger {
   display: none;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1400px) {
     display: flex;
     align-items: center;
     margin-right: 2rem;
@@ -150,7 +150,9 @@
   min-height: 94vh;
   max-height: 94vh;
   width: 100%;
-  background-color: white;
+  background-color: transparent;
+  backdrop-filter: blur(200px);
+  -webkit-backdrop-filter: blur(200px);
   display: flex;
   flex-direction: column;
   align-items: center;

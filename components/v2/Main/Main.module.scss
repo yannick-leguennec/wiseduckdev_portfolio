@@ -1,3 +1,6 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
 // MAIN SECTION
 .mainSection {
   background-color: transparent;
@@ -7,85 +10,152 @@
   position: relative;
 }
 
-// IMAGE
-.image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-// TEXT CONTAINER
-.textContainer {
+// MAIN CONTAINER
+.mainContainer {
   width: auto;
   position: absolute;
-  top: 20%;
-  left: 24%;
+  top: 30%;
+  left: 15%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
 
   @media (max-width: 1024px) {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-left: auto;
+    align-items: start;
     margin-right: auto;
-    top: 10rem;
-    left: 0;
+    top: 15rem;
+    left: 25%;
     z-index: 2;
+  }
+
+  @media (max-width: 820px) {
+    left: 18%;
+    top: 12rem;
+  }
+
+  @media (max-width: 768px) {
+    left: 17%;
+    top: 10rem;
   }
 
   @media (max-width: 540px) {
     top: 6rem;
+    left: 0;
+    align-items: center;
   }
 }
 
-// SUBTITLE CONTAINER
-.subtitleContainer {
+// TOP CONTAINER
+.topContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+//SUBCONTAINER
+.subContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding-left: 6rem;
+
   @media (max-width: 1024px) {
-    display: flex;
-    flex-direction: column;
+    padding-left: 4rem;
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 3rem;
+  }
+
+  @media (max-width: 540px) {
+    padding-left: 0;
     align-items: center;
+  }
+}
+
+// BUTTONS CONTAINER
+.buttonsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 0.5rem;
+  gap: 1rem;
+
+  @media (max-width: 540px) {
+    padding-top: 0.3rem;
   }
 }
 
 // MAIN TITLE
 .title {
+  font-size: 2rem;
+  border-bottom: black 2px solid;
+  font-weight: 600;
+  text-align: center;
+
+  @media (max-width: 1024px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 1rem;
+    border-bottom: black 1px solid;
+  }
+}
+
+// SUBTITLE
+.subtitle1,
+.subtitle2 {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  line-height: 1; // optional: tightens text block
+}
+
+.subtitle1 {
   font-size: 5rem;
+  font-weight: 600;
+  margin: 0;
 
   @media (max-width: 1024px) {
     font-size: 3.5rem;
   }
 
   @media (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 3rem;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 1.8rem;
   }
 }
 
-// SUBTITLE
-.subtitle {
-  font-size: 2rem;
-  font-weight: 550;
-
+.subtitle2 {
+  font-size: 5rem;
+  font-weight: 800;
+  margin: 0;
   @media (max-width: 1024px) {
-    font-size: 1.7rem;
+    font-size: 3.5rem;
   }
 
   @media (max-width: 768px) {
-    font-size: 1.2rem;
+    font-size: 3rem;
+  }
+  @media (max-width: 540px) {
+    font-size: 1.8rem;
   }
 }
 
-// DESCRIPTION
-.description   {
-  font-size: 1.5rem;
-  font-weight: 500;
+// STYLES FOR BUTTONS
 
-  @media (max-width: 768px) {
-    font-size: 0.8rem;
-  }
+.mainButton {
+  @include button-style-v2;
 }

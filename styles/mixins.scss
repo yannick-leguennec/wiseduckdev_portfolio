@@ -22,6 +22,27 @@
   }
 }
 
+@mixin button-style-v2 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  background-color: $button-color-v2;
+  border-radius: 25px;
+  width: 170px;
+  padding: 0.5rem 2rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 0.8rem;
+    width: 120px;
+  }
+}
+
 @mixin button-style-reverted {
   font-size: 1rem;
   font-weight: 600;

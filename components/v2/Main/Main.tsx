@@ -8,27 +8,45 @@ function Main() {
 
   // Object to store the translations
   const translations: TranslationsType = {
-    subtitle: {
-      EN: "Full-Stack JS Developer",
-      FR: "Développeur Full-Stack JS",
+    subtitle1: {
+      EN: "FULL-STACK",
+      FR: "FULL-STACK",
     },
-    description: {
-      EN: "Specialized in React",
-      FR: "Spécialisé en React",
+    subtitle2: {
+      EN: "JavaScript Developer",
+      FR: "Développeur JavaScript",
+    },
+    button1: {
+      EN: "Say Hello",
+      FR: "Dites Bonjour",
+    },
+    button2: {
+      EN: "See My Work",
+      FR: "Voir Mon Travail",
     },
   };
 
   return (
     <section id="main" className={classes.mainSection}>
-      <div className={classes.textContainer}>
-        <h1 className={classes.title}>The Wise Duck Dev</h1>
-        <div className={classes.subtitleContainer}>
-          <h2 className={classes.subtitle}>
-            {translations.subtitle[activeLanguage]}
+      <div className={classes.mainContainer}>
+        <div className={classes.topContainer}>
+          <h2 className={classes.subtitle1}>
+            {translations.subtitle1[activeLanguage]}
           </h2>
-          <p className={classes.description}>
-            {translations.description[activeLanguage]}
-          </p>
+          <h2 className={classes.subtitle2}>
+            {translations.subtitle2[activeLanguage]}
+          </h2>
+        </div>
+        <div className={classes.subContainer}>
+          <h1 className={classes.title}>THE WISE DUCK DEV</h1>
+          <div className={classes.buttonsContainer}>
+            <a href="#contact" className={classes.mainButton}>
+              {translations.button1[activeLanguage]}
+            </a>
+            <a href="#portfolio" className={classes.mainButton}>
+              {translations.button2[activeLanguage]}
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -68,7 +68,7 @@ export default function Home() {
   // Custom console message for companies and recruiters
   console.log(
     `%c ${translation.logText[activeLanguage]}`,
-    "background: #ff7300; color: #fafafa; font-size: 14px; padding: 10px; border-radius: 5px; font-weight: bold;"
+    "background: #000000; color: #fafafa; font-size: 14px; padding: 10px; border-radius: 5px; font-weight: bold;"
   );
 
   // Props for the ResponsiveImage component
