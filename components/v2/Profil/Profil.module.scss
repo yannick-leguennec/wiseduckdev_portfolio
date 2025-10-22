@@ -3,7 +3,7 @@
 
 // PROFIL CONTAINER
 .profileSection {
-  min-height: 94vh;
+  min-height: 90vh;
   max-height: auto;
   width: 100%;
   background-color: $primary-color;
@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  padding: 2rem 0;
+  padding: 4rem 0;
 
   @media (max-width: 1024px) {
     position: relative;
@@ -20,24 +20,16 @@
     padding: 4rem 0;
     gap: 1.5rem;
   }
-}
 
-// PROFIL PICTURE
-.imageContainer {
-  width: 30%;
-
-  @media (max-width: 768px) {
-    width: 40%;
-  }
-
-  @media (max-width: 430px) {
-    width: 70%;
+  @media (max-width: 540px) {
+    padding: 2rem 0;
+    gap: 1rem;
   }
 }
 
 // CONTENT CONTAINER
 .contentContainer {
-  width: 35%;
+  width: 55%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -45,30 +37,61 @@
   @media (max-width: 1024px) {
     width: 70%;
   }
+
+  @media (max-width: 540px) {
+    width: 80%;
+    gap: 1rem;
+  }
+}
+//LIST CONTAINER
+.listContainer {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  padding-left: 25%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    padding-left: 0;
+  }
 }
 
 // MAIN TITLE
 .title {
   font-size: 5rem;
+  font-weight: 900;
+  text-align: center;
+
+  @media (max-width: 1024px) {
+    font-size: 4rem;
+  }
+
   @media (max-width: 768px) {
     font-size: 3rem;
   }
 
   @media (max-width: 540px) {
+    font-size: 2.5rem;
     text-align: center;
   }
 }
 
 // SUBTITLE
 .subtitle {
-  font-size: 2rem;
-  font-weight: 550;
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+
+  @media (max-width: 1024px) {
+    font-size: 2.5rem;
+  }
 
   @media (max-width: 768px) {
     font-size: 1.5rem;
   }
 
   @media (max-width: 540px) {
+    font-size: 1.3rem;
     text-align: center;
   }
 }
@@ -81,11 +104,12 @@
 
 .gptsLinkOrange {
   font-weight: 900;
-  color: $navigation-color;
+  color: black;
 }
 
 // BUTTON CONTAINER
 .buttonContainer {
+  width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 1rem;
@@ -93,5 +117,5 @@
 
 // BUTTON
 .button {
-  @include button-style;
+  @include button-style-v2-fit-content;
 }

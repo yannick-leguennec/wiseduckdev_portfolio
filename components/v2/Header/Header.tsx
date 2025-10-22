@@ -71,7 +71,7 @@ function Header() {
     if (element) {
       const elementPosition =
         element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - window.innerHeight * 0.06;
+      const offsetPosition = elementPosition;
 
       requestAnimationFrame(() => {
         window.scrollTo({

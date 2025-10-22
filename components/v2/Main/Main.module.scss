@@ -4,8 +4,8 @@
 // MAIN SECTION
 .mainSection {
   background-color: transparent;
-  min-height: 100vh;
-  max-height: 100vh;
+  min-height: 90vh;
+  max-height: 90vh;
   width: auto;
   position: relative;
 }
@@ -157,5 +157,5 @@
 // STYLES FOR BUTTONS
 
 .mainButton {
-  @include button-style-v2;
+  @include button-style-v2-fixed;
 }
