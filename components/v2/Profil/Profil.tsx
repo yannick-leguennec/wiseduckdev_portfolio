@@ -75,8 +75,8 @@ function Profil() {
       FR: "Expert en automatisation, intégration d'IA et prompt engineering",
     },
     button: {
-      EN: "Check Out My Resume",
-      FR: "Consultez Mon CV",
+      EN: "Check out my resume",
+      FR: "Consultez mon CV",
     },
     cv: {
       EN: "docs/yannick_legunnec_full_stack_dev_resume_2025.pdf",

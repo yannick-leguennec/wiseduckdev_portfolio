@@ -1,19 +1,17 @@
 import { useLanguage } from "../../../context/LanguageContext";
 import { TranslationsType } from "../../../types/TranslationsType";
-import Image from "next/image";
-import plantPicture from "../../../public/images/index/tropical-plants-assortment-growth-innovation.webp";
 import classes from "./Experience.module.scss";
-
+import icon_ai from "../../../public/images/index/v2/icons/icon_artificial_intelligence.webp";
+import icon_automation from "../../../public/images/index/v2/icons/icon_automation.webp";
+import icon_learning from "../../../public/images/index/v2/icons/icon_remote_work.webp";
+import icon_remote from "../../../public/images/index/v2/icons/icon_continuous_learning.webp";
+import Image from "next/image";
 function Experience() {
   // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
 
   // Object containing the translations for the Experience component
   const translation: TranslationsType = {
-    altPicture: {
-      EN: "AI-generated vibrant assortment of tropical plants symbolizing growth and innovation, echoing the dynamic evolution in web and mobile development.",
-      FR: "Assortiment de plantes tropicales vibrant généré par IA symbolisant la croissance et l'innovation, faisant écho à l'évolution dynamique dans le développement web et mobile.",
-    },
     title: {
       EN: "Experience",
       FR: "Expérience",
@@ -56,37 +54,60 @@ function Experience() {
     <section id="experience" className={classes.experienceSection}>
       <div className={classes.contentContainer}>
         <h2 className={classes.title}>{translation.title[activeLanguage]}</h2>
-        <article className={classes.article}>
-          <h3 className={classes.subtitle}>
-            {translation.subtitle1[activeLanguage]}
-          </h3>
-          <p>{translation.point1[activeLanguage]}</p>
-        </article>
-        <article className={classes.article}>
-          <h3 className={classes.subtitle}>
-            {translation.subtitle2[activeLanguage]}
-          </h3>
-          <p>{translation.point2[activeLanguage]}</p>
-        </article>
-        <article className={classes.article}>
-          <h3 className={classes.subtitle}>
-            {translation.subtitle3[activeLanguage]}
-          </h3>
-          <p>{translation.point3[activeLanguage]}</p>
-        </article>
-        <article className={classes.article}>
-          <h3 className={classes.subtitle}>
-            {translation.subtitle4[activeLanguage]}
-          </h3>
-          <p>{translation.point4[activeLanguage]}</p>
-        </article>
-      </div>
-      <div className={classes.imageContainer}>
-        <Image
-          src={plantPicture}
-          alt={translation.altPicture[activeLanguage]}
-          className={classes.image}
-        />
+        <div className={classes.articlesContainer}>
+          <article className={classes.article}>
+            <img
+              src={icon_ai.src}
+              alt="icon artificial intelligence"
+              className={classes.icon}
+            />
+            <h3 className={classes.subtitle}>
+              {translation.subtitle1[activeLanguage]}
+            </h3>
+            <p className={classes.point}>
+              {translation.point1[activeLanguage]}
+            </p>
+          </article>
+          <article className={classes.article}>
+            <img
+              src={icon_automation.src}
+              alt="icon automation"
+              className={classes.icon}
+            />
+            <h3 className={classes.subtitle}>
+              {translation.subtitle2[activeLanguage]}
+            </h3>
+            <p className={classes.point}>
+              {translation.point2[activeLanguage]}
+            </p>
+          </article>
+          <article className={classes.article}>
+            <img
+              src={icon_learning.src}
+              alt="icon continuous learning"
+              className={classes.icon}
+            />
+            <h3 className={classes.subtitle}>
+              {translation.subtitle3[activeLanguage]}
+            </h3>
+            <p className={classes.point}>
+              {translation.point3[activeLanguage]}
+            </p>
+          </article>
+          <article className={classes.article}>
+            <img
+              src={icon_remote.src}
+              alt="icon remote collaboration"
+              className={classes.icon}
+            />
+            <h3 className={classes.subtitle}>
+              {translation.subtitle4[activeLanguage]}
+            </h3>
+            <p className={classes.point}>
+              {translation.point4[activeLanguage]}
+            </p>
+          </article>
+        </div>
       </div>
     </section>
   );

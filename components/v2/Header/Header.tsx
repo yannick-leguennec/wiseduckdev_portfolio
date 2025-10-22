@@ -25,9 +25,9 @@ function Header() {
       const sections = [
         "main",
         "profil",
-        "skills",
         "experience",
         "portfolio",
+        "skills",
         "contact",
       ];
       const currentSection = sections.find((section) => {
@@ -99,9 +99,9 @@ function Header() {
   const translations = {
     main: { EN: "Main", FR: "Accueil" },
     profil: { EN: "Profile", FR: "À propos" },
-    skills: { EN: "Toolkit", FR: "Boîte à outils" },
     experience: { EN: "Expertise", FR: "Expertise" },
     portfolio: { EN: "Projects", FR: "Projets" },
+    skills: { EN: "Toolkit", FR: "Boîte à outils" },
     contact: { EN: "Contact", FR: "Me contacter" },
   };
 

@@ -13,7 +13,7 @@ import picture_yannick_vertical from "../public/images/index/v2/images_index_pag
 import WrappedMain from "../components/v2/WrappedMain/WrappedMain";
 import Profil from "../components/v2/Profil/Profil";
 import Skills from "../components/v1/Skills/Skills";
-import Experience from "../components/v1/Experience/Experience";
+import Experience from "../components/v2/Experience/Experience";
 import Portfolio from "../components/v1/Portfolio/Portfolio";
 import Contact from "../components/v1/Contact/Contact";
 import Footer from "../components/v1/Footer/Footer";
