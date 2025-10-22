@@ -17,14 +17,20 @@ interface MyDocumentProps extends DocumentInitialProps {
 class MyDocument extends Document<MyDocumentProps> {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps, siteUrl: process.env.NEXT_PUBLIC_SITE_URL };
+    return {
+      ...initialProps,
+      siteUrl: process.env.NEXT_PUBLIC_SITE_URL,
+      locale: ctx.locale,
+    };
   }
   render() {
     // Get the siteUrl from the props
     const { siteUrl } = this.props;
+    // Get the locale - current language - from the props
+    const { locale } = this.props;
 
     return (
-      <Html>
+      <Html lang={locale}>
         <Head>
           <meta property="fb:app_id" content="451991680722269" />
           <meta

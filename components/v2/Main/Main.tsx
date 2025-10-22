@@ -32,7 +32,7 @@ function Main() {
     },
     button2: {
       EN: "See My Work",
-      FR: "Voir Mon Travail",
+      FR: "Portfolio",
     },
   };
 
@@ -42,7 +42,6 @@ function Main() {
       className={classes.mainSection}
       role="region"
       aria-labelledby="main-heading"
-      lang={activeLanguage.toLowerCase()}
     >
       <div className={classes.mainContainer}>
         <div className={classes.topContainer}>
