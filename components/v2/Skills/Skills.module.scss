@@ -23,6 +23,7 @@
   font-weight: 900;
   color: $title-color-v2;
   margin-bottom: 4rem;
+  text-align: center;
 
   @media (max-width: 1024px) {
     font-size: 4rem;
@@ -51,7 +52,12 @@
     gap: 3rem;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
+    gap: 2rem;
+    width: 95%;
+  }
+
+  @media (max-width: 540px) {
     flex-direction: column;
     align-items: center;
   }
@@ -61,8 +67,12 @@
 // LEFT COLUMN - Category Navigation
 // ===============================
 .categoryNav {
-  flex: 0 0 25%;
+  width: 30%;
   text-align: left;
+
+  @media (max-width: 1024px) {
+    width: 40%;
+  }
 
   ul {
     list-style: none;
@@ -71,10 +81,6 @@
 
   li {
     margin-bottom: 1.2rem;
-  }
-
-  @media (max-width: 900px) {
-    text-align: center;
   }
 }
 
@@ -96,13 +102,14 @@
 }
 
 .activeCategory {
-  font-weight: 700;
-  border-left: 4px solid #111;
+  font-weight: 750;
+  // border-left: 4px solid #111;
+  border-bottom: 2px solid black;
   padding-left: 0.5rem;
 
-  @media (max-width: 900px) {
-    border-left: none;
-    border-bottom: 2px solid #111;
+  @media (max-width: 1024px) {
+    // border-left: none;
+    // border-bottom: 2px solid #111;
     padding-left: 0;
   }
 }
@@ -117,7 +124,7 @@
   align-items: flex-start;
   text-align: left;
 
-  @media (max-width: 768px) {
+  @media (max-width: 540px) {
     align-items: center;
     text-align: center;
   }
@@ -148,11 +155,53 @@
   gap: 1rem;
   justify-content: flex-start;
 
-  @media (max-width: 900px) {
+  @media (max-width: 540px) {
     justify-content: center;
   }
 }
 
 .tag {
   @include list-item-v2;
+}
+
+.categorySection {
+  transition: opacity 0.4s ease;
+}
+
+.visibleCategory {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.hiddenCategory {
+  opacity: 0;
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+// =============================================
+// MOBILE LAYOUT (≤540px)
+// =============================================
+.mobileSkills {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileCategory {
+  width: 100%;
+  text-align: center;
+}
+
+.mobileCategoryTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111;
 }

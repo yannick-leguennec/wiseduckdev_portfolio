@@ -53,39 +53,43 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
    */
   const toggleLanguage = useCallback(
     (lang: Language) => {
-      if (typeof window === "undefined") return; // Prevent running during SSR (server-side rendering)
+      if (typeof window === "undefined") return;
 
-      // Save the user's current scroll position so it can be restored after language switch
+      // Save current scroll position
       localStorage.setItem("scrollPosition", window.scrollY.toString());
 
-      // Convert the target language (EN/FR) to lowercase because Next.js uses "en"/"fr"
       const newLocale = lang.toLowerCase();
-      let newPath = router.asPath; // current URL path (e.g., "/", "/portfolio", etc.)
 
-      // Adjust the URL structure based on the target language
+      // Extract any section hash (e.g., "#skills")
+      const currentPath = router.asPath;
+      const [basePath, hash] = currentPath.split("#");
+
+      // Clean base path for locale change
+      let newPath = basePath.split("?")[0];
+
       if (newLocale === "fr") {
-        // If switching to French, add the "/fr" prefix if it's not already there
-        if (!newPath.startsWith("/fr")) {
-          newPath = `/fr${newPath}`;
-        }
+        if (!newPath.startsWith("/fr")) newPath = `/fr${newPath}`;
       } else {
-        // If switching to English, remove the "/fr" prefix if present
         newPath = newPath.replace(/^\/fr/, "");
       }
 
-      // Navigate to the new path with the correct locale
+      // Navigate to new locale without hash first
       router
         .push(newPath, newPath, { locale: newLocale, shallow: true })
         .then(() => {
-          // Once the navigation is complete, restore the previous scroll position
-          const savedPosition = localStorage.getItem("scrollPosition");
-          if (savedPosition) {
-            window.scrollTo(0, parseInt(savedPosition, 10));
-            localStorage.removeItem("scrollPosition");
+          // Restore scroll or hash navigation after switch
+          if (hash) {
+            const targetEl = document.getElementById(hash);
+            if (targetEl) targetEl.scrollIntoView({ behavior: "smooth" });
+          } else {
+            const savedPos = localStorage.getItem("scrollPosition");
+            if (savedPos) {
+              window.scrollTo(0, parseInt(savedPos, 10));
+              localStorage.removeItem("scrollPosition");
+            }
           }
         });
 
-      // Store the newly selected language in localStorage
       localStorage.setItem("appLanguage", lang);
     },
     [router]
