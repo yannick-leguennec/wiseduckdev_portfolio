@@ -1,20 +1,35 @@
 @import "../../../styles/variables.scss";
 
-// HEADER
-/* Header.module.scss */
+/* ===========================================================
+   HEADER MODULE STYLES
+   This file controls both the desktop and mobile header display.
+   It includes:
+     - Header layout and logo
+     - Desktop navigation
+     - Language switch buttons
+     - Mobile hamburger menu
+     - Smooth open/close menu animations
+   =========================================================== */
+
+/* =============================
+   1. HEADER CONTAINER
+   ============================= */
 .header {
-  position: relative; /* was: static */
-  z-index: 2; /* any number > 0 beats the bg's 0 */
+  position: relative; /* Keeps the header above background layers */
+  z-index: 2; /* Ensure it's above other page elements (background image, etc.) */
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 8vh;
-  background: transparent;
+  background: transparent; /* Transparent to blend with the page background */
 }
 
-// LOGO
+/* =============================
+   2. LOGO CONTAINER
+   ============================= */
 .containerLogo {
   display: flex;
   align-items: center;
@@ -24,6 +39,7 @@
     margin-left: 2rem;
   }
 
+  /* Logo image */
   &_logo {
     height: 30px;
     width: auto;
@@ -34,6 +50,7 @@
     }
   }
 
+  /* Text name beside the logo */
   &_logoName {
     font-size: 1.3rem;
 
@@ -42,6 +59,7 @@
     }
   }
 
+  /* Optional stylized logo font variants */
   &_fontCaramel {
     font-family: "Caramel", sans-serif;
     font-size: 1.8rem;
@@ -61,40 +79,54 @@
   }
 }
 
-// NAVIGATION MENU
+/* =============================
+   3. DESKTOP NAVIGATION
+   ============================= */
 .containerNav {
   display: flex;
   align-items: center;
   margin-right: 4rem;
   gap: 5rem;
 
+  /* Hide desktop nav on smaller screens */
   @media (max-width: 1400px) {
     display: none;
   }
 }
 
+/* Desktop navigation list */
 .navList {
   display: flex;
   align-items: center;
   gap: 5rem;
 }
 
+/* Navigation links */
 .navLink {
   font-size: 18px;
   font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $navigation-color; /* Subtle hover color for desktop links */
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: solid black 1px;
+  }
 }
 
-.navLink:focus {
-  outline: none;
-  border-bottom: solid black 1px;
-}
-
+/* Active section link (highlight current page section) */
 .activeLink {
   border-bottom: 2px solid $navigation-color;
   color: $navigation-color;
 }
 
-// LANGUAGES BUTTONS
+/* =============================
+   4. LANGUAGE SWITCH BUTTONS
+   ============================= */
 .buttonsContainer {
   display: flex;
   align-items: center;
@@ -106,63 +138,144 @@
   }
 }
 
-.buttonLang:focus {
-  outline: none;
-  border-bottom: solid black 1px;
+/* Individual button styles */
+.buttonLang {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.2s ease;
+  font-size: 18px;
+  font-weight: 500;
+
+  &:focus {
+    outline: none;
+    border-bottom: solid black 1px;
+  }
 }
 
+/* Active (selected) language button */
 .activeButton {
   padding: 1px 4px;
   background: black;
   color: white;
-  font-size: 18px;
   font-weight: 600;
   border-radius: 2px;
 }
 
+/* Inactive (non-selected) language button */
 .inactiveButton {
   background: transparent;
   color: black;
-  font-size: 18px;
-  font-weight: 500;
 }
 
-// BURGER MENU
+/* =============================
+   5. BURGER MENU (HAMBURGER ICON)
+   ============================= */
 .containerBurger {
-  display: none;
+  display: none; /* Hidden by default (desktop) */
 
   @media (max-width: 1400px) {
     display: flex;
     align-items: center;
     margin-right: 2rem;
+    cursor: pointer;
   }
 
+  /* The hamburger icon itself */
   &_.hamburger {
     width: 2rem;
     height: 2rem;
   }
 }
 
-// MOBILE MENU
+/* =============================
+   6. MOBILE MENU OVERLAY
+   ============================= */
+
+/*
+  This section defines the full-screen overlay menu
+  that appears when the user clicks the hamburger icon.
+  It uses opacity and transform transitions for smooth animation.
+*/
+
 .mobileMenu {
   position: fixed;
-  margin-top: 6vh;
+  top: 0;
+  margin-top: 6vh; /* Leaves room for header height */
   min-height: 94vh;
-  max-height: 94vh;
   width: 100%;
+
+  /* Background blur + transparency */
   background-color: transparent;
   backdrop-filter: blur(200px);
   -webkit-backdrop-filter: blur(200px);
+
+  /* Layout setup */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  /* Default: hidden (used with React state) */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  pointer-events: none; /* Prevent interaction while invisible */
+
+  /* Smooth animation for open/close */
+  transition: all 0.5s ease-in-out;
 }
 
+/* State: when menu is OPEN (isMenuOpen = true) */
+.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto; /* Make clickable */
+  backdrop-filter: blur(200px) brightness(1);
+  transition: all 0.5s ease-in-out;
+}
+
+/* State: when menu is CLOSING (fade out) */
+.close {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  backdrop-filter: blur(0px) brightness(0.8);
+  transition: all 0.5s ease-in-out;
+}
+
+/* =============================
+   7. MOBILE NAVIGATION LIST
+   ============================= */
 .navigationMobile {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
   margin-top: 2rem;
+  text-align: center;
+
+  /* Links larger for easier tapping */
+  a {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}
+
+/* =============================
+   8. MOBILE LANGUAGE BUTTONS
+   ============================= */
+.mobileLangButtons {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-content: center; /* Center align by default */
+}
+
+/* Responsive fallback */
+@media (max-width: 1400px) {
+  .mobileLangButtons {
+    justify-content: center;
+  }
 }

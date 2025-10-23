@@ -1,17 +1,30 @@
+// =============================================
+// Experience.tsx
+// =============================================
+// This component displays the "Experience" section of the portfolio.
+// It describes the developer’s technical background, specialization,
+// and philosophy through four themed articles.
+// It supports bilingual display (EN / FR) using the LanguageContext.
+//
+
 import { useLanguage } from "../../../context/LanguageContext";
 import { TranslationsType } from "../../../types/TranslationsType";
 import classes from "./Experience.module.scss";
+
+// Import local images (icons) for each experience item
 import icon_ai from "../../../public/images/index/v2/icons/icon_artificial_intelligence.webp";
 import icon_automation from "../../../public/images/index/v2/icons/icon_automation.webp";
-import icon_learning from "../../../public/images/index/v2/icons/icon_remote_work.webp";
-import icon_remote from "../../../public/images/index/v2/icons/icon_continuous_learning.webp";
-import Image from "next/image";
+import icon_learning from "../../../public/images/index/v2/icons/icon_continuous_learning.webp";
+import icon_remote from "../../../public/images/index/v2/icons/icon_remote_work.webp";
+
 function Experience() {
-  // Custom hook to manage the language changes
+  // Get the active language from the global context (either "EN" or "FR")
   const { activeLanguage } = useLanguage();
 
-  // Object containing the translations for the Experience component
-  const translation: TranslationsType = {
+  // =============================================
+  // Translations object for both English and French
+  // =============================================
+  const translations: TranslationsType = {
     title: {
       EN: "Experience",
       FR: "Expérience",
@@ -50,63 +63,83 @@ function Experience() {
     },
   };
 
+  // =============================================
+  // Data array for each article (cleaner and scalable)
+  // =============================================
+  const experienceArticles = [
+    {
+      icon: icon_ai,
+      alt: {
+        EN: "Icon representing artificial intelligence",
+        FR: "Icône représentant l'intelligence artificielle",
+      },
+      subtitle: translations.subtitle1[activeLanguage],
+      point: translations.point1[activeLanguage],
+    },
+    {
+      icon: icon_automation,
+      alt: {
+        EN: "Icon representing automation",
+        FR: "Icône représentant l'automatisation",
+      },
+      subtitle: translations.subtitle2[activeLanguage],
+      point: translations.point2[activeLanguage],
+    },
+    {
+      icon: icon_learning,
+      alt: {
+        EN: "Icon representing continuous learning",
+        FR: "Icône représentant l'apprentissage continu",
+      },
+      subtitle: translations.subtitle3[activeLanguage],
+      point: translations.point3[activeLanguage],
+    },
+    {
+      icon: icon_remote,
+      alt: {
+        EN: "Icon representing remote collaboration",
+        FR: "Icône représentant la collaboration à distance",
+      },
+      subtitle: translations.subtitle4[activeLanguage],
+      point: translations.point4[activeLanguage],
+    },
+  ];
+
+  // =============================================
+  // Render JSX
+  // =============================================
   return (
-    <section id="experience" className={classes.experienceSection}>
+    // Use <section> for semantic grouping
+    <section
+      id="experience"
+      className={classes.experienceSection}
+      role="region"
+      aria-labelledby="experience-heading"
+    >
       <div className={classes.contentContainer}>
-        <h2 className={classes.title}>{translation.title[activeLanguage]}</h2>
+        {/* Main heading for SEO and accessibility */}
+        <h2 id="experience-heading" className={classes.title}>
+          {translations.title[activeLanguage]}
+        </h2>
+
+        {/* Container for all the experience blocks */}
         <div className={classes.articlesContainer}>
-          <article className={classes.article}>
-            <img
-              src={icon_ai.src}
-              alt="icon artificial intelligence"
-              className={classes.icon}
-            />
-            <h3 className={classes.subtitle}>
-              {translation.subtitle1[activeLanguage]}
-            </h3>
-            <p className={classes.point}>
-              {translation.point1[activeLanguage]}
-            </p>
-          </article>
-          <article className={classes.article}>
-            <img
-              src={icon_automation.src}
-              alt="icon automation"
-              className={classes.icon}
-            />
-            <h3 className={classes.subtitle}>
-              {translation.subtitle2[activeLanguage]}
-            </h3>
-            <p className={classes.point}>
-              {translation.point2[activeLanguage]}
-            </p>
-          </article>
-          <article className={classes.article}>
-            <img
-              src={icon_learning.src}
-              alt="icon continuous learning"
-              className={classes.icon}
-            />
-            <h3 className={classes.subtitle}>
-              {translation.subtitle3[activeLanguage]}
-            </h3>
-            <p className={classes.point}>
-              {translation.point3[activeLanguage]}
-            </p>
-          </article>
-          <article className={classes.article}>
-            <img
-              src={icon_remote.src}
-              alt="icon remote collaboration"
-              className={classes.icon}
-            />
-            <h3 className={classes.subtitle}>
-              {translation.subtitle4[activeLanguage]}
-            </h3>
-            <p className={classes.point}>
-              {translation.point4[activeLanguage]}
-            </p>
-          </article>
+          {/* Map dynamically through experience items */}
+          {experienceArticles.map((item, index) => (
+            <article key={index} className={classes.article}>
+              {/* Accessible and lightweight <img> (instead of <Image/>) */}
+              <img
+                src={item.icon.src}
+                alt={item.alt[activeLanguage]}
+                className={classes.icon}
+                loading="lazy"
+              />
+
+              {/* Subheading and description */}
+              <h3 className={classes.subtitle}>{item.subtitle}</h3>
+              <p className={classes.point}>{item.point}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

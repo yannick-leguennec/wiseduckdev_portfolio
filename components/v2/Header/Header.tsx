@@ -1,5 +1,22 @@
 "use client";
 
+/**
+ * Header Component
+ *
+ * This component renders the main navigation bar for the website.
+ * It includes:
+ *  - A logo that links back to the homepage.
+ *  - A desktop navigation menu.
+ *  - A mobile hamburger menu that opens a full-screen overlay.
+ *  - Language switch buttons (EN / FR).
+ *
+ * It also:
+ *  - Tracks the active section while scrolling.
+ *  - Smoothly scrolls to sections when navigation links are clicked.
+ *  - Uses the Language Context to toggle site language.
+ *  - Sends Google Analytics events for interactions.
+ */
+
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useLanguage } from "../../../context/LanguageContext";
@@ -10,18 +27,50 @@ import classes from "./Header.module.scss";
 import { TranslationsType } from "../../../types/TranslationsType";
 
 function Header() {
+  /** ----------------------------
+   *  STATE MANAGEMENT
+   *  ---------------------------- */
+  // Track which section is currently active (used to highlight nav links)
   const [activeSection, setActiveSection] = useState("main");
+
+  // Track if the mobile menu is currently open
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Controls visibility of the mobile menu (kept visible during transition)
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
+
+  // Access language context (active language + function to toggle)
   const { activeLanguage, toggleLanguage } = useLanguage();
+
+  // Next.js router instance (used for navigation and query detection)
   const router = useRouter();
   const { pathname, query } = router;
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  /** ----------------------------
+   *  MENU TOGGLING LOGIC
+   *  ---------------------------- */
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
+  // Keep the menu visible slightly longer after closing (for smooth fade-out)
+  useEffect(() => {
+    if (isMenuOpen) {
+      setIsMenuVisible(true);
+    } else {
+      // Wait for the CSS transition (0.5s) before removing from DOM
+      const timer = setTimeout(() => setIsMenuVisible(false), 500);
+      return () => clearTimeout(timer);
+    }
+  }, [isMenuOpen]);
+
+  /** ----------------------------
+   *  ACTIVE SECTION DETECTION (ScrollSpy)
+   *  ---------------------------- */
   useEffect(() => {
     const handleScroll = () => {
+      // Determine current scroll position + small offset
       const scrollPosition = window.scrollY + window.innerHeight * 0.1;
 
+      // IDs of all page sections (must match section `id` attributes)
       const sections = [
         "main",
         "profil",
@@ -30,6 +79,8 @@ function Header() {
         "skills",
         "contact",
       ];
+
+      // Find which section is currently in view
       const currentSection = sections.find((section) => {
         const el = document.getElementById(section);
         if (el) {
@@ -43,60 +94,67 @@ function Header() {
         return false;
       });
 
-      if (currentSection) {
-        setActiveSection(currentSection);
-      }
+      // Update the state if we’ve found an active section
+      if (currentSection) setActiveSection(currentSection);
     };
 
+    // Attach and clean up the scroll listener
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Check if there's a query parameter to scroll to a section on load
+  /** ----------------------------
+   *  QUERY-BASED SCROLL HANDLING
+   *  ---------------------------- */
+  // If the page loads with ?section=xyz, scroll directly to that section
   useEffect(() => {
-    if (query.section) {
+    if (query.section && typeof query.section === "string") {
       scrollToSectionDirect(query.section);
-      router.replace(pathname); // Clear the query parameter from the URL
+      router.replace(pathname); // Clear the query from the URL
     }
   }, [query.section]);
 
-  const isActive = (sectionName) =>
+  /** ----------------------------
+   *  SCROLL LOGIC
+   *  ---------------------------- */
+  // Add an "active" class for highlighting current section links
+  const isActive = (sectionName: string) =>
     activeSection === sectionName ? classes.activeLink : "";
 
-  const scrollToSectionDirect = (id) => {
+  // Scroll to a section directly (smooth behavior)
+  const scrollToSectionDirect = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       const elementPosition =
         element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition;
 
-      requestAnimationFrame(() => {
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
+      // Smooth scroll animation
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth",
       });
 
+      // Close menu if it’s open
       if (isMenuOpen) toggleMenu();
     }
   };
 
-  const scrollToSection = (id) => {
+  // Scroll to section, or navigate to homepage first if needed
+  const scrollToSection = (id: string) => {
     const isOnHomePage = pathname === "/" || pathname === "/fr";
     const homePath = activeLanguage === "FR" ? "/fr" : "/";
 
     if (!isOnHomePage) {
-      // Navigate to the homepage with the section query parameter
       router.push({ pathname: homePath, query: { section: id } });
     } else {
-      scrollToSectionDirect(id); // Scroll directly if already on the homepage
+      scrollToSectionDirect(id);
     }
   };
 
-  const translations = {
+  /** ----------------------------
+   *  TEXT & TRANSLATIONS
+   *  ---------------------------- */
+  const translations: TranslationsType = {
     main: { EN: "Main", FR: "Accueil" },
     profil: { EN: "Profile", FR: "À propos" },
     experience: { EN: "Expertise", FR: "Expertise" },
@@ -112,8 +170,12 @@ function Header() {
     },
   };
 
+  /** ----------------------------
+   *  RENDER
+   *  ---------------------------- */
   return (
     <header className={classes.header} role="banner">
+      {/* ---------------- LOGO SECTION ---------------- */}
       <a
         href={activeLanguage === "FR" ? "/fr" : "/"}
         tabIndex={0}
@@ -135,6 +197,7 @@ function Header() {
         </p>
       </a>
 
+      {/* ---------------- DESKTOP NAVIGATION ---------------- */}
       <div className={classes.containerNav}>
         <nav
           className={classes.navigation}
@@ -174,50 +237,39 @@ function Header() {
           </ul>
         </nav>
 
+        {/* ---------------- LANGUAGE BUTTONS (DESKTOP) ---------------- */}
         <div className={classes.buttonsContainer}>
-          <button
-            className={`${classes.buttonLang} ${
-              activeLanguage === "EN"
-                ? classes.activeButton
-                : classes.inactiveButton
-            }`}
-            onClick={() => {
-              toggleLanguage("EN");
-              if (window.gtag) {
-                window.gtag("event", "language_change", {
-                  event_category: "Language",
-                  event_navigation: "EN from Header",
-                });
+          {(["EN", "FR"] as const).map((lang) => (
+            <button
+              key={lang}
+              className={`${classes.buttonLang} ${
+                activeLanguage === lang
+                  ? classes.activeButton
+                  : classes.inactiveButton
+              }`}
+              onClick={() => {
+                toggleLanguage(lang);
+                setIsMenuOpen(false);
+                if (window.gtag) {
+                  window.gtag("event", "language_change", {
+                    event_category: "Language",
+                    event_navigation: `${lang} from Header`,
+                  });
+                }
+              }}
+              aria-label={
+                lang === "EN"
+                  ? "Switch to English"
+                  : "Passer le site en français"
               }
-            }}
-            role="button"
-            aria-label="Switch to English"
-          >
-            EN
-          </button>
-          <button
-            className={`${classes.buttonLang} ${
-              activeLanguage === "FR"
-                ? classes.activeButton
-                : classes.inactiveButton
-            }`}
-            onClick={() => {
-              toggleLanguage("FR");
-              if (window.gtag) {
-                window.gtag("event", "language_change", {
-                  event_category: "Language",
-                  event_navigation: "FR from Header",
-                });
-              }
-            }}
-            role="button"
-            aria-label="Passer au français"
-          >
-            FR
-          </button>
+            >
+              {lang}
+            </button>
+          ))}
         </div>
       </div>
 
+      {/* ---------------- HAMBURGER BUTTON (MOBILE) ---------------- */}
       <div
         role="button"
         tabIndex={0}
@@ -233,8 +285,14 @@ function Header() {
         <RxHamburgerMenu className={classes.containerBurger_hamburger} />
       </div>
 
-      {isMenuOpen && (
-        <div className={classes.mobileMenu}>
+      {/* ---------------- MOBILE MENU OVERLAY ---------------- */}
+      {isMenuVisible && (
+        <div
+          className={`${classes.mobileMenu} ${
+            isMenuOpen ? classes.open : classes.close
+          }`}
+        >
+          {/* Mobile Navigation Links */}
           <nav
             role="navigation"
             aria-label={
@@ -257,10 +315,11 @@ function Header() {
                     }
                     onClick={() => {
                       scrollToSection(key);
+                      setIsMenuOpen(false); // Close menu after click
                       if (window.gtag) {
                         window.gtag("event", "navigation_click", {
                           event_category: "Navigation",
-                          event_navigation: `${key} from Hamburger Menu`,
+                          event_navigation: `${key} from Mobile Menu`,
                         });
                       }
                     }}
@@ -271,6 +330,37 @@ function Header() {
               ))}
             </ul>
           </nav>
+
+          {/* Mobile Language Buttons */}
+          <div className={classes.mobileLangButtons}>
+            {(["EN", "FR"] as const).map((lang) => (
+              <button
+                key={lang}
+                className={`${classes.buttonLang} ${
+                  activeLanguage === lang
+                    ? classes.activeButton
+                    : classes.inactiveButton
+                }`}
+                onClick={() => {
+                  toggleLanguage(lang);
+                  setIsMenuOpen(false);
+                  if (window.gtag) {
+                    window.gtag("event", "language_change", {
+                      event_category: "Language",
+                      event_navigation: `${lang} from Mobile Menu`,
+                    });
+                  }
+                }}
+                aria-label={
+                  lang === "EN"
+                    ? "Switch to English"
+                    : "Passer le site en français"
+                }
+              >
+                {lang}
+              </button>
+            ))}
+          </div>
         </div>
       )}
     </header>

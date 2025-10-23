@@ -26,14 +26,20 @@
 // CONTENT CONTAINER
 .contentContainer {
   width: 70%;
-  margin-left: 2rem;
   padding: 2rem 4rem;
   gap: 2rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     width: 95%;
-    margin-left: 0;
-    padding: 2rem 2rem 0 2rem;
+    padding: 2rem 3rem 0 3rem;
+  }
+
+  @media (max-width: 900px) {
+    padding: 2rem 0;
+  }
+
+  @media (max-width: 540px) {
+    width: 100%;
   }
 }
 
@@ -45,6 +51,10 @@
   justify-content: center; // centers the articles on the row
   gap: 3rem;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
 }
 
 // ARTICLE
@@ -54,13 +64,12 @@
   flex-direction: column;
   align-items: center;
   padding: 1.5rem;
-  border-radius: 8px;
-  box-sizing: border-box;
   text-align: start;
   margin: 0; // flex-gap handles spacing now
 
-  @media (max-width: 768px) {
+  @media (max-width: 540px) {
     flex: 1 1 100%; // stack 1 per row on mobile
+    padding: 0.5rem 2rem 1rem 2rem;
   }
 }
 
@@ -71,10 +80,16 @@
   text-align: center;
   margin-bottom: 2rem;
 
+  @media (max-width: 1024px) {
+    font-size: 4rem;
+  }
+
   @media (max-width: 768px) {
     font-size: 3rem;
-    display: block;
-    text-align: center;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 2.5rem;
   }
 }
 
@@ -85,7 +100,11 @@
   margin-bottom: 0.7rem;
 
   @media (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 1.3rem;
   }
 }
 
