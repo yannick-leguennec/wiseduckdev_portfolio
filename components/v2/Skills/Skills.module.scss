@@ -1,94 +1,28 @@
 @import "../../../styles/variables.scss";
 @import "../../../styles/mixins.scss";
-
-// SECTION CONTAINER
+// ===============================
+// SECTION WRAPPER
+// ===============================
 .skillsSection {
-  min-height: 94vh;
-  max-height: auto;
+  background-color: #ffdc5e; // Matches your screenshot color
+  min-height: auto;
   width: 100%;
-  background-color: $secondary-color;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 2rem 0;
-
-  @media (max-width: 1024px) {
-    min-height: fit-content;
-  }
-
-  @media (max-width: 768px) {
-    position: relative;
-    flex-direction: column;
-    padding: 2rem 1rem;
-  }
+  justify-content: flex-start;
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
-// MAIN CONTAINER
-.mainContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-height: auto;
-  width: 100%;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    max-height: fit-content;
-  }
-}
-
-// MAIN NAVIGATION CONTAINER
-.leftContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2rem;
-  width: 30%;
-  margin-left: 10%;
-
-  @media (max-width: 1024px) {
-    width: 35%;
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-    margin-left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-// NAVIGATION CONTAINER
-.navContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  height: auto;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-}
-
-// NAVIGATION ITEMS
-.navItem {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin: 0.8rem 0;
-}
-
-.activeLink {
-  border-bottom: 2px solid $navigation-color;
-  color: $navigation-color;
-}
-
-// MAIN TITLE
+// ===============================
+// TITLE
+// ===============================
 .title {
   font-size: 5rem;
+  font-weight: 900;
+  color: $title-color-v2;
+  margin-bottom: 4rem;
 
   @media (max-width: 1024px) {
     font-size: 4rem;
@@ -96,85 +30,129 @@
 
   @media (max-width: 768px) {
     font-size: 3rem;
-    display: block;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 2.5rem;
   }
 }
 
-// SKILLS CONTAINER
-.skillsContainer {
-  width: 80%;
+// ===============================
+// LAYOUT: Left (nav) + Right (skills)
+// ===============================
+.skillsLayout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 90%;
+
+  @media (max-width: 1024px) {
+    gap: 3rem;
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// ===============================
+// LEFT COLUMN - Category Navigation
+// ===============================
+.categoryNav {
+  flex: 0 0 25%;
+  text-align: left;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 1.2rem;
+  }
+
+  @media (max-width: 900px) {
+    text-align: center;
+  }
+}
+
+.categoryButton {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #111;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: #000;
+    font-weight: 700;
+    outline: none;
+  }
+}
+
+.activeCategory {
+  font-weight: 700;
+  border-left: 4px solid #111;
+  padding-left: 0.5rem;
+
+  @media (max-width: 900px) {
+    border-left: none;
+    border-bottom: 2px solid #111;
+    padding-left: 0;
+  }
+}
+
+// ===============================
+// RIGHT COLUMN - Skills & Tags
+// ===============================
+.skillsContent {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-right: 5%;
-  margin-left: 5%;
-  padding: 2rem;
+  align-items: flex-start;
+  text-align: left;
 
   @media (max-width: 768px) {
-    width: 100%;
-    margin-right: 0;
-    margin-left: 0;
+    align-items: center;
+    text-align: center;
   }
 }
 
-// SKILLS TITLE
-.subtitle1 {
-  font-size: 2rem;
-  font-weight: 550;
-  margin-bottom: 1.5rem;
-
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-  }
+.intro {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #222;
+  max-width: auto;
 }
 
-.subtitle {
-  font-size: 2rem;
-  font-weight: 550;
-  margin-bottom: 1.5rem;
-
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-  }
+.groupContainer {
+  margin-bottom: 2.5rem;
 }
 
-// SKILLS DESCRIPTION
-.para1 {
-  margin-bottom: 1.5rem;
-}
-
-.para {
+.groupTitle {
   font-weight: 600;
-  margin: 1.5rem 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #111;
 }
 
-// SKILLS LIST
-.itemsContainer {
+.tagsContainer {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-}
+  justify-content: flex-start;
 
-.list {
-  @include list-item;
-}
-
-// MANAGE ARTICLES DISPLAY WITH NAV BARRE
-.active {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
-
-// MOBILE STYLES
-@media (max-width: 768px) {
-  // Ajuste la largeur selon tes besoins
-  .active,
-  .hidden {
-    display: block; // Affiche tous les articles en mode mobile
+  @media (max-width: 900px) {
+    justify-content: center;
   }
+}
+
+.tag {
+  @include list-item-v2;
 }
