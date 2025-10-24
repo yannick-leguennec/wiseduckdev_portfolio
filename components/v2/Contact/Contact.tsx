@@ -74,8 +74,8 @@ function Contact({ id, onLoaded }: ContactProps) {
       FR: "À la recherche d'un développeur web à la pointe de la technologie?",
     },
     text2: {
-      EN: "Let's get to know each other and pave the way for success in the vast digital landscape.",
-      FR: "Faisons connaissance et traçons ensemble la voie du succès dans l'immensité du paysage numérique.",
+      EN: "Let’s collaborate and start building something meaningful together.",
+      FR: "Collaborons et construisons ensemble quelque chose de concret.",
     },
     name: { EN: "Name", FR: "Nom" },
     subject: { EN: "Subject", FR: "Sujet" },

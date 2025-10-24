@@ -6,8 +6,8 @@ import { AppProps } from "next/app";
 import { LanguageProvider } from "../context/LanguageContext";
 import { LoaderProvider, useLoader } from "../context/LoaderContext";
 import { ConsentProvider } from "../context/ConsentContext";
-import ConsentModal from "../components/v1/Modals/consentModal/consentModal";
-import Loader from "../components/v1/Loader/Loader";
+import ConsentModal from "../components/v2/Modals/consentModal/consentModal";
+import Loader from "../components/v2/Loader/Loader";
 import Router from "next/router";
 import "../styles/globals.css";
 
