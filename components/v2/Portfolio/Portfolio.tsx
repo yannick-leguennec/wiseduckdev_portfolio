@@ -16,7 +16,18 @@ import evidence_profile from "../../../public/images/projectsPictures/evidence_m
 import evidence_main from "../../../public/images/projectsPictures/evidence_media/evidence_media_project_main_picture.webp";
 
 function Portfolio() {
+  // Custom hook to manage the language changes
   const { activeLanguage } = useLanguage();
+
+  // Handle navigation click for analytics
+  function handleNavigationClick(label: string) {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "navigation_click", {
+        event_category: "Navigation",
+        event_label: label,
+      });
+    }
+  }
 
   // =============================================
   // TRANSLATIONS
@@ -30,25 +41,6 @@ function Portfolio() {
   // PROJECTS DATA
   // =============================================
   const projects = [
-    {
-      id: "wise_duck_dev_gpts",
-      title: "The Wise Duck Dev GPTs",
-      description: {
-        EN: "Discover The Wise Duck Dev GPTs — the ultimate library for web, mobile, AI, blockchain, and game developers. This innovative platform features over 800 custom GPTs across 14 categories, designed to enhance skills, streamline workflows, and inspire innovation. Created with a philanthropic vision, it empowers developers to build faster, smarter, and better.",
-        FR: "Découvrez The Wise Duck Dev GPTs — la bibliothèque ultime pour les développeurs web, mobiles, IA, blockchain et jeux vidéo. Cette plateforme innovante regroupe plus de 800 GPTs répartis en 14 catégories, conçus pour améliorer les compétences, optimiser les processus et stimuler l’innovation. Pensée dans un esprit philanthropique, elle renforce chaque développeur.",
-      },
-      profile: wise_duck_profile.src,
-      main: wise_duck_main.src,
-      profileAlt: {
-        EN: "The Wise Duck Dev GPTs Project logo depicting an audacious and bold rubber duck from profile with spiky hairs on the head",
-        FR: "Logo du projet The Wise Duck Dev GPTs représentant un canard en caoutchouc audacieux et intrépide de profil avec des cheveux en piques sur la tête",
-      },
-      mainAlt: {
-        EN: "The Wise Duck Dev GPTs Project main screenshot showing the opening page of the website",
-        FR: "Capture d'écran principale du projet The Wise Duck Dev GPTs montrant la page d'accueil du site web",
-      },
-      link: "/wise-duck-dev-gpts-project",
-    },
     {
       id: "family_flow",
       title: "Family Flow",
@@ -67,6 +59,25 @@ function Portfolio() {
         FR: "Capture d'écran principale du projet Family Flow montrant le calendrier familial et l'interface de gestion des tâches",
       },
       link: "/family-flow-project",
+    },
+    {
+      id: "wise_duck_dev_gpts",
+      title: "The Wise Duck Dev GPTs",
+      description: {
+        EN: "Discover The Wise Duck Dev GPTs — the ultimate library for web, mobile, AI, blockchain, and game developers. This innovative platform features over 800 custom GPTs across 14 categories, designed to enhance skills, streamline workflows, and inspire innovation. Created with a philanthropic vision, it empowers developers to build faster, smarter, and better.",
+        FR: "Découvrez The Wise Duck Dev GPTs — la bibliothèque ultime pour les développeurs web, mobiles, IA, blockchain et jeux vidéo. Cette plateforme innovante regroupe plus de 800 GPTs répartis en 14 catégories, conçus pour améliorer les compétences, optimiser les processus et stimuler l’innovation. Pensée dans un esprit philanthropique, elle renforce chaque développeur.",
+      },
+      profile: wise_duck_profile.src,
+      main: wise_duck_main.src,
+      profileAlt: {
+        EN: "The Wise Duck Dev GPTs Project logo depicting an audacious and bold rubber duck from profile with spiky hairs on the head",
+        FR: "Logo du projet The Wise Duck Dev GPTs représentant un canard en caoutchouc audacieux et intrépide de profil avec des cheveux en piques sur la tête",
+      },
+      mainAlt: {
+        EN: "The Wise Duck Dev GPTs Project main screenshot showing the opening page of the website",
+        FR: "Capture d'écran principale du projet The Wise Duck Dev GPTs montrant la page d'accueil du site web",
+      },
+      link: "/wise-duck-dev-gpts-project",
     },
     {
       id: "jean_the_writer",
@@ -132,7 +143,15 @@ function Portfolio() {
                 {project.description[activeLanguage]}
               </p>
               <div className={classes.buttonWrapper}>
-                <Link href={project.link} className={classes.projectButton}>
+                <Link
+                  href={project.link}
+                  className={classes.projectButton}
+                  onClick={() =>
+                    handleNavigationClick(
+                      `Click on ${project.title} from Portfolio section`
+                    )
+                  }
+                >
                   {translations.button[activeLanguage]}
                 </Link>
               </div>

@@ -52,25 +52,6 @@ const Skills = () => {
   // TECHNOLOGY DATA
   // =============================================
   const skillsContent: Record<string, any> = {
-    programmingLanguages: {
-      intro:
-        activeLanguage === "EN"
-          ? "As a full-stack developer, I use multiple languages to build modern and responsive web applications."
-          : "En tant que développeur full-stack, j'utilise plusieurs langages pour créer des applications web modernes et réactives.",
-      groups: [
-        {
-          title: "",
-          items: [
-            "JavaScript",
-            "TypeScript",
-            "Python",
-            "SQL",
-            "YAML",
-            "Shell Scripting",
-          ],
-        },
-      ],
-    },
     toolsFrameworks: {
       intro:
         activeLanguage === "EN"
@@ -156,6 +137,25 @@ const Skills = () => {
         {
           title: "Automation Libraries & Scripting Tools",
           items: ["Selenium", "BeautifulSoup4", "Requests"],
+        },
+      ],
+    },
+    programmingLanguages: {
+      intro:
+        activeLanguage === "EN"
+          ? "As a full-stack developer, I use multiple languages to build modern and responsive web applications."
+          : "En tant que développeur full-stack, j'utilise plusieurs langages pour créer des applications web modernes et réactives.",
+      groups: [
+        {
+          title: "",
+          items: [
+            "JavaScript",
+            "TypeScript",
+            "Python",
+            "SQL",
+            "YAML",
+            "Shell Scripting",
+          ],
         },
       ],
     },
