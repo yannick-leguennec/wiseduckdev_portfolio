@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { GetStaticProps } from "next";
 import React from "react";
 import Head from "next/head";
-import Header from "../components/v2/Header/Header";
+import WrappedPrivacyPolicy from "../components/v2/WrappedPrivacyPolicy/WrappedPrivacyPolicy";
 import Footer from "../components/v2/Footer/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useLoader } from "../context/LoaderContext";
@@ -698,11 +698,8 @@ export default function PrivacyPolicy() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(policySchema) }}
         />
       </Head>
-      <Header />
+      <WrappedPrivacyPolicy />
       <main className={classes.mainContainer}>
-        <div className={classes.imageContainer}>
-          <ResponsiveImageComponent />
-        </div>
         <div className={classes.textContainer}>
           <section className={classes.policyTextContainer}>
             <h1 className={classes.title1}>

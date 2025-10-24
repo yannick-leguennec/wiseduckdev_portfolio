@@ -4,34 +4,8 @@
 @import "mixins";
 
 // MAIN CONTAINER
-
-// IMAGE
-.imageContainer {
-  min-height: 94vh;
-  max-height: 94vh;
-  margin-top: 6vh;
-  width: auto;
-  position: relative;
-}
-
-.imageDesktop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 10;
-}
-
-.imageMobile {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 10;
+.mainContainer {
+  background-color: $primary-color;
 }
 
 // TEXT CONTAINER
@@ -200,5 +174,5 @@
 }
 
 .button {
-  @include button-style;
+  @include button-style-v2-fit-content;
 }

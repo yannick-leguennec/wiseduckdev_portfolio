@@ -1,0 +1,29 @@
+/* WrappedMain.module.scss */
+.wrappedMain {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.headerLayer {
+  position: relative;
+  z-index: 2; /* above .image (0) */
+  height: 6vh;
+}
+
+.mainLayer {
+  position: relative;
+  z-index: 1; /* above .image, below header if needed */
+  min-height: 94vh;
+}
+
+/* WrappedMain.module.scss */
+.image {
+  position: absolute;
+  inset: 0; /* shorthand for top/left/right/bottom: 0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none; /* <- important */
+}
