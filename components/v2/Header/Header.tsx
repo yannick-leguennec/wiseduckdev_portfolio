@@ -145,7 +145,8 @@ function Header() {
     const homePath = activeLanguage === "FR" ? "/fr" : "/";
 
     if (!isOnHomePage) {
-      router.push({ pathname: homePath, query: { section: id } });
+      // ✅ Use `window.location` for hash navigation across routes
+      window.location.href = `${homePath}#${id}`;
     } else {
       scrollToSectionDirect(id);
     }
