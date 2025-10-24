@@ -2,14 +2,7 @@ import classes from "./Footer.module.scss";
 import { useState } from "react";
 import { useLanguage } from "../../../context/LanguageContext";
 import { TranslationsType } from "../../../types/TranslationsType";
-import { FaGithub } from "react-icons/fa";
-import { MdOutlineAlternateEmail } from "react-icons/md";
-import { FaXTwitter } from "react-icons/fa6";
 import { FaRobot } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import Image from "next/image";
-import logo from "../../public/images/logos/simple_logo_white.png";
-import { BsCopy } from "react-icons/bs";
 
 function Footer() {
   const { activeLanguage } = useLanguage();
@@ -35,91 +28,7 @@ function Footer() {
 
   return (
     <footer className={classes.footer}>
-      <div className={classes.linksContainer}>
-        <a
-          href="mailto:wiseduckdev@gmail.com"
-          rel="noopener noreferrer"
-          target="_blank"
-          aria-label={
-            activeLanguage === "FR"
-              ? "Envoyer un e-mail à Wise Duck Dev"
-              : "Send an email to Wise Duck Dev"
-          }
-          onClick={() => {
-            if (window.gtag) {
-              window.gtag("event", "navigation_click", {
-                event_category: "Navigation",
-                event_navigation: "Footer Email Clicked",
-              });
-            }
-          }}
-        >
-          <MdOutlineAlternateEmail className={classes.logo} />
-        </a>
-
-        <a
-          href="https://github.com/yannick-leguennec"
-          rel="noopener noreferrer"
-          target="_blank"
-          aria-label={
-            activeLanguage === "FR"
-              ? "Accéder au profil GitHub de Wise Duck Dev"
-              : "Visit Wise Duck Dev's GitHub profile"
-          }
-          onClick={() => {
-            if (window.gtag) {
-              window.gtag("event", "navigation_click", {
-                event_category: "Navigation",
-                event_navigation: "Footer GitHub Clicked",
-              });
-            }
-          }}
-        >
-          <FaGithub className={classes.logo} />
-        </a>
-
-        <a
-          href="https://twitter.com/wiseduckdev"
-          rel="noopener noreferrer"
-          target="_blank"
-          aria-label={
-            activeLanguage === "FR"
-              ? "Accéder au profil Twitter de Wise Duck Dev"
-              : "Visit Wise Duck Dev's Twitter profile"
-          }
-          onClick={() => {
-            if (window.gtag) {
-              window.gtag("event", "navigation_click", {
-                event_category: "Navigation",
-                event_navigation: "Footer Twitter Clicked",
-              });
-            }
-          }}
-        >
-          <FaXTwitter className={classes.logo} />
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/wise-duck-dev/"
-          rel="noopener noreferrer"
-          target="_blank"
-          aria-label={
-            activeLanguage === "FR"
-              ? "Accéder au profil LinkedIn de Wise Duck Dev"
-              : "Visit Wise Duck Dev's LinkedIn profile"
-          }
-          onClick={() => {
-            if (window.gtag) {
-              window.gtag("event", "navigation_click", {
-                event_category: "Navigation",
-                event_navigation: "Footer LinkedIn Clicked",
-              });
-            }
-          }}
-        >
-          <FaLinkedinIn className={classes.logo} />
-        </a>
-
+      <div className={classes.textContainer}>
         <a
           href="https://wiseduckdevgpts.com"
           rel="noopener noreferrer"
@@ -140,9 +49,6 @@ function Footer() {
         >
           <FaRobot className={classes.logo} />
         </a>
-      </div>
-
-      <div className={classes.textContainer}>
         <a
           href={
             activeLanguage === "FR" ? "/fr/privacy-policy" : "/privacy-policy"

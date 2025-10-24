@@ -59,13 +59,15 @@
 
 // TEXT CONTAINER
 .textContainer {
+  width: 100%;
   display: flex;
+  justify-content: flex-end;
   gap: 2rem;
   margin-right: 4rem;
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 0.2rem;
+    justify-content: space-around;
+    gap: 0.1rem;
   }
 
   @media (max-width: 478px) {

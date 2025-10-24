@@ -1,4 +1,5 @@
 @import "../../../../styles//variables.scss";
+@import "../../../../styles//mixins.scss";
 
 // MODAL CONTAINER
 .modalBackdrop {
@@ -39,11 +40,5 @@
 
 // BUTTON DESIGN
 .button {
-  font-size: 1rem;
-  font-weight: 600;
-  color: white;
-  background-color: $button-color;
-  border-radius: 25px;
-  width: fit-content;
-  padding: 0.5rem 2rem;
+  @include button-style-v2-fit-content;
 }

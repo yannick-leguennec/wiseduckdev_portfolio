@@ -15,8 +15,8 @@ import Profil from "../components/v2/Profil/Profil";
 import Skills from "../components/v2/Skills/Skills";
 import Experience from "../components/v2/Experience/Experience";
 import Portfolio from "../components/v2/Portfolio/Portfolio";
-import Contact from "../components/v1/Contact/Contact";
-import Footer from "../components/v1/Footer/Footer";
+import Contact from "../components/v2/Contact/Contact";
+import Footer from "../components/v2/Footer/Footer";
 
 export default function Home() {
   // Custom hook to manage the loading state

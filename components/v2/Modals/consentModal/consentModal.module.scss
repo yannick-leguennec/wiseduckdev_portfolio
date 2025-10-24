@@ -68,7 +68,7 @@
 }
 
 .acceptButton {
-  @include button-style;
+  @include button-style-v2-fit-content;
 }
 
 .rejectButton {

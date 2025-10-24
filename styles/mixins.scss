@@ -86,6 +86,29 @@
   }
 }
 
+@mixin button-style-reverted-v2-fit-content {
+  font-size: 1rem;
+  font-weight: 600;
+  color: button-color-v2;
+  background-color: rgb(252, 250, 243);
+  border: 1px solid button-color-v2;
+  border-radius: 25px;
+  width: fit-content;
+  padding: 0.5rem 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  &:hover {
+    background-color: darken(
+      rgb(252, 250, 243),
+      5%
+    ); // Darken the background color by 10% on hover
+  }
+}
+
 @mixin button-style-social {
   display: flex;
   align-items: center;
