@@ -1,134 +1,137 @@
-@import "../../../../styles/variables.scss";
-@import "../../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
 
-// PORFOLIO SECTION CONTAINER
+// ====== SECTION WRAPPER ======
 .portfolioSection {
-  min-height: 94vh;
-  max-height: auto;
   width: 100%;
-  background-color: $secondary-color;
-  padding: 3rem;
+  padding: 4rem 2rem;
+  background-color: $primary-color;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-
-  @media (max-width: 1024px) {
-    min-height: fit-content;
-    padding: 2rem;
-  }
+  text-align: center;
 }
 
-// PORFOLIO SECTION MAIN TITLE
 .title {
-  width: 78%;
-  color: rgb(255, 115, 0);
   font-size: 5rem;
-  margin-bottom: 2rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 4rem;
 
   @media (max-width: 1024px) {
-    display: block;
-    margin-left: 0;
+    font-size: 4rem;
   }
 
   @media (max-width: 768px) {
     font-size: 3rem;
-    display: block;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 2.5rem;
     text-align: center;
-    margin-bottom: 1rem;
   }
 }
 
+// ====== PROJECTS CONTAINER ======
 .projectsContainer {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  gap: 6rem;
+  width: 100%;
+  max-width: 1200px;
   align-items: center;
+
+  @media (max-width: 540px) {
+    gap: 4rem;
+  }
+}
+
+// ====== PROJECT CARD ======
+.projectCard {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
   width: 100%;
   gap: 4rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     flex-direction: column;
-    gap: 0;
+    align-items: center;
+    text-align: center;
   }
 }
 
-// Settings for single article
-.imageContainer {
-  position: relative;
+// ====== PROJECT INFO ======
+.projectInfo {
+  flex: 0.9;
   display: flex;
-  justify-content: center;
-  width: 35%;
-  height: auto;
-  margin-bottom: 2rem;
-  border-radius: 25px;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1rem;
 
   @media (max-width: 1024px) {
-    width: 65%;
-    margin: 1rem 0 2rem 0;
-    display: flex;
-    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.projectProfile {
+  width: 500px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+
+  @media (max-width: 1024px) {
+    width: 400px;
   }
 
   @media (max-width: 768px) {
-    margin: 1rem 0 1.5rem 0;
+    width: 350px;
   }
-
-  @media (max-width: 480px) {
-    width: 100%;
-  }
-}
-
-.imageContainer:hover {
-  transform: scale(1.05);
-  transition: all 0.1s ease;
-}
-
-// IMAGE PROJECT
-.image {
-  width: 100%;
-  max-width: fit-content;
-  border: 1px solid black;
-  border-radius: 25px;
-}
-
-.image:hover {
-  border: 1.5px solid rgb(255, 115, 0);
-}
-
-.image:focus {
-  outline: none;
-  transform: scale(1.05);
-  transition: all 0.1s ease;
-  border: 1.5px solid rgb(255, 115, 0);
-}
-
-.projectTitleContainer {
-  position: absolute; // Absolutely position this within the imageContainer
-  bottom: 0; // Align it to the bottom
-  left: 0; // Align it to the left
-  width: 100%; // Span the entire width of the container
-  background: rgba(0, 0, 0, 0.6); // Semi-transparent dark background
-  backdrop-filter: blur(5px); // Blur effect for the background
-  color: white; // Text color
-  text-align: center; // Center-align the text
-  padding: 10px 0;
-  border-radius: 0 0 25px 25px;
 }
 
 .projectTitle {
-  margin: 0; // Remove default margin from h2
-  padding: 0.5rem; // Add some padding
-  font-size: 1.1rem; // Choose a font size that fits well
-  font-weight: bold;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #111;
+}
 
-  @media (max-width: 768px) {
-    font-size: 0.8rem;
-    padding: 0.3rem;
-  }
+.projectDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 500px;
+}
 
-  @media (max-width: 480px) {
-    font-size: 0.7rem;
-    padding: 0.2rem;
+.buttonWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.projectButton {
+  @include button-style-v2-fit-content;
+}
+
+// ====== PROJECT PREVIEW ======
+.projectPreview {
+  flex: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @media (max-width: 1024px) {
+    display: none;
   }
+}
+
+.projectMainImage {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+  align-self: flex-start;
 }

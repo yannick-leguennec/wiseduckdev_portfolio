@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { GetStaticProps } from "next";
 import React from "react";
 import Head from "next/head";
-import Header from "../../components/v1/Header/Header";
+import Header from "../../components/v2/Header/Header";
 import Footer from "../../components/v1/Footer/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useLoader } from "../../context/LoaderContext";
@@ -213,7 +213,7 @@ export default function EvidenceMediaProject() {
       EN: "Each functional component, from scraping to AI generation to publishing, is encapsulated in discrete scripts that can be scaled horizontally or triggered independently, as needed.",
       FR: "Chaque composant fonctionnel, de l’extraction de contenu à la génération via IA, jusqu’à la publication, est encapsulé dans des scripts indépendants, pouvant être scalés horizontalement ou déclenchés séparément, selon les besoins.",
     },
-    projectDeployemntContent3: {
+    projectDeploymentContent3: {
       EN: "The system supports CI/CD via GitHub Actions, while monitoring and performance analytics are handled through native platform dashboards (X and Substack). The only true limitations are API usage quotas (OpenAI, Perplexity, X API, etc.), which define throughput, but the architecture itself is capable of 24/7 continuous publishing at industrial scale with minimal adjustments.",
       FR: "L’intégration continue (CI/CD) est assurée par GitHub Actions, tandis que le suivi des performances et l’analytique s’effectuent directement via les tableaux de bord natifs de X et Substack. Les seules véritables limites proviennent des quotas des API (OpenAI, Perplexity, X API, etc.), qui définissent le débit, mais l’architecture en elle-même permet une publication continue 24/7 à l’échelle industrielle avec un minimum d’ajustements.",
     },

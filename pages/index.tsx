@@ -14,7 +14,7 @@ import WrappedMain from "../components/v2/WrappedMain/WrappedMain";
 import Profil from "../components/v2/Profil/Profil";
 import Skills from "../components/v2/Skills/Skills";
 import Experience from "../components/v2/Experience/Experience";
-import Portfolio from "../components/v1/Portfolio/Portfolio";
+import Portfolio from "../components/v2/Portfolio/Portfolio";
 import Contact from "../components/v1/Contact/Contact";
 import Footer from "../components/v1/Footer/Footer";
 

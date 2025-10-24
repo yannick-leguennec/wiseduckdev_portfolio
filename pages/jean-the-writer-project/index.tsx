@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { GetStaticProps } from "next";
 import React from "react";
 import Head from "next/head";
-import Header from "../../components/v1/Header/Header";
+import Header from "../../components/v2/Header/Header";
 import Footer from "../../components/v1/Footer/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useLoader } from "../../context/LoaderContext";
