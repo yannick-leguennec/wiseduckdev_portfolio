@@ -1,4 +1,3 @@
-import { GetStaticProps } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useEffect } from "react";
 import dynamic from "next/dynamic";
@@ -12,7 +11,7 @@ const NotFoundWithNoSSR = dynamic(() => import("../components/v1/404/404"), {
 export default function Custom404() {
   const { setLoading } = useLoader();
 
-  // Effect to manage the loading state and turn it off when the content is loaded
+  // Turn off the loading animation when the 404 page loads
   useEffect(() => {
     setLoading(false);
   }, [setLoading]);
@@ -25,16 +24,11 @@ export default function Custom404() {
           name="description"
           content="The Wise Duck Dev - 404 Page Not Found"
         />
-        <meta name="robots" content="noindex, nofollow"></meta>
+        <meta name="robots" content="noindex, nofollow" />
       </Head>
+
       <NotFoundWithNoSSR />
       <SpeedInsights />
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {},
-  };
-};
