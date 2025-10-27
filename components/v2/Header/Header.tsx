@@ -16,7 +16,7 @@
  *  - Uses the Language Context to toggle site language.
  *  - Sends Google Analytics events for interactions.
  */
-
+import { createPortal } from "react-dom";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useLanguage } from "../../../context/LanguageContext";
@@ -38,6 +38,8 @@ function Header() {
 
   // Controls visibility of the mobile menu (kept visible during transition)
   const [isMenuVisible, setIsMenuVisible] = useState(false);
+
+  const [menuRoot, setMenuRoot] = useState<HTMLElement | null>(null);
 
   // Access language context (active language + function to toggle)
   const { activeLanguage, toggleLanguage } = useLanguage();
@@ -61,6 +63,10 @@ function Header() {
       return () => clearTimeout(timer);
     }
   }, [isMenuOpen]);
+
+  useEffect(() => {
+    setMenuRoot(document.getElementById("menu-root"));
+  }, []);
 
   /** ----------------------------
    *  ACTIVE SECTION DETECTION (ScrollSpy)
@@ -287,83 +293,86 @@ function Header() {
       </div>
 
       {/* ---------------- MOBILE MENU OVERLAY ---------------- */}
-      {isMenuVisible && (
-        <div
-          className={`${classes.mobileMenu} ${
-            isMenuOpen ? classes.open : classes.close
-          }`}
-        >
-          {/* Mobile Navigation Links */}
-          <nav
-            role="navigation"
-            aria-label={
-              activeLanguage === "FR"
-                ? "Navigation mobile principale"
-                : "Main mobile navigation"
-            }
+      {isMenuVisible &&
+        createPortal(
+          <div
+            className={`${classes.mobileMenu} ${
+              isMenuOpen ? classes.open : classes.close
+            }`}
+            aria-hidden={!isMenuOpen}
           >
-            <ul className={classes.navigationMobile}>
-              {Object.keys(translations).map((key) => (
-                <li key={key} className={classes.navItem}>
-                  <a
-                    href={`#${key}`}
-                    tabIndex={0}
-                    className={`${classes.navLink} ${isActive(key)}`}
-                    aria-label={
-                      activeLanguage === "FR"
-                        ? `Aller à la section ${translations[key].FR}`
-                        : `Go to ${translations[key].EN} section`
-                    }
-                    onClick={() => {
-                      scrollToSection(key);
-                      setIsMenuOpen(false); // Close menu after click
-                      if (window.gtag) {
-                        window.gtag("event", "navigation_click", {
-                          event_category: "Navigation",
-                          event_navigation: `${key} from Mobile Menu`,
-                        });
+            {/* Mobile Navigation Links */}
+            <nav
+              role="navigation"
+              aria-label={
+                activeLanguage === "FR"
+                  ? "Navigation mobile principale"
+                  : "Main mobile navigation"
+              }
+            >
+              <ul className={classes.navigationMobile}>
+                {Object.keys(translations).map((key) => (
+                  <li key={key} className={classes.navItem}>
+                    <a
+                      href={`#${key}`}
+                      tabIndex={0}
+                      className={`${classes.navLink} ${isActive(key)}`}
+                      aria-label={
+                        activeLanguage === "FR"
+                          ? `Aller à la section ${translations[key].FR}`
+                          : `Go to ${translations[key].EN} section`
                       }
-                    }}
-                  >
-                    {translations[key][activeLanguage]}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
+                      onClick={() => {
+                        scrollToSection(key);
+                        setIsMenuOpen(false); // Close menu after click
+                        if (window.gtag) {
+                          window.gtag("event", "navigation_click", {
+                            event_category: "Navigation",
+                            event_navigation: `${key} from Mobile Menu`,
+                          });
+                        }
+                      }}
+                    >
+                      {translations[key][activeLanguage]}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
 
-          {/* Mobile Language Buttons */}
-          <div className={classes.mobileLangButtons}>
-            {(["EN", "FR"] as const).map((lang) => (
-              <button
-                key={lang}
-                className={`${classes.buttonLang} ${
-                  activeLanguage === lang
-                    ? classes.activeButton
-                    : classes.inactiveButton
-                }`}
-                onClick={() => {
-                  toggleLanguage(lang);
-                  setIsMenuOpen(false);
-                  if (window.gtag) {
-                    window.gtag("event", "language_change", {
-                      event_category: "Language",
-                      event_navigation: `${lang} from Mobile Menu`,
-                    });
+            {/* Mobile Language Buttons */}
+            <div className={classes.mobileLangButtons}>
+              {(["EN", "FR"] as const).map((lang) => (
+                <button
+                  key={lang}
+                  className={`${classes.buttonLang} ${
+                    activeLanguage === lang
+                      ? classes.activeButton
+                      : classes.inactiveButton
+                  }`}
+                  onClick={() => {
+                    toggleLanguage(lang);
+                    setIsMenuOpen(false);
+                    if (window.gtag) {
+                      window.gtag("event", "language_change", {
+                        event_category: "Language",
+                        event_navigation: `${lang} from Mobile Menu`,
+                      });
+                    }
+                  }}
+                  aria-label={
+                    lang === "EN"
+                      ? "Switch to English"
+                      : "Passer le site en français"
                   }
-                }}
-                aria-label={
-                  lang === "EN"
-                    ? "Switch to English"
-                    : "Passer le site en français"
-                }
-              >
-                {lang}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
+                >
+                  {lang}
+                </button>
+              ))}
+            </div>
+          </div>,
+          menuRoot!
+        )}
     </header>
   );
 }

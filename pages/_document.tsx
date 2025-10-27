@@ -126,6 +126,7 @@ class MyDocument extends Document<MyDocumentProps> {
         </Head>
         <body>
           <Main />
+          <div id="menu-root"></div>
           <NextScript />
         </body>
       </Html>

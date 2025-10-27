@@ -25,6 +25,7 @@
   align-items: center;
   height: 8vh;
   background: transparent; /* Transparent to blend with the page background */
+  z-index: 10000;
 }
 
 /* =============================
@@ -200,49 +201,39 @@
 
 .mobileMenu {
   position: fixed;
-  top: 0;
-  margin-top: 6vh; /* Leaves room for header height */
-  min-height: 94vh;
+  top: var(--header-h, 8vh); /* start below the header */
+  left: 0;
   width: 100%;
-
-  /* Background blur + transparency */
+  height: calc(100vh - var(--header-h, 8vh)); /* fill the rest of the screen */
+  z-index: 9998; /* under the header */
   background-color: transparent;
-  backdrop-filter: blur(200px);
-  -webkit-backdrop-filter: blur(200px);
+  backdrop-filter: blur(90px);
+  -webkit-backdrop-filter: blur(90px);
 
-  /* Layout setup */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  /* Default: hidden (used with React state) */
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
-  pointer-events: none; /* Prevent interaction while invisible */
-
-  /* Smooth animation for open/close */
-  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
 }
 
-/* State: when menu is OPEN (isMenuOpen = true) */
 .open {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  pointer-events: auto; /* Make clickable */
-  backdrop-filter: blur(200px) brightness(1);
-  transition: all 0.5s ease-in-out;
+  pointer-events: auto;
 }
 
-/* State: when menu is CLOSING (fade out) */
 .close {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
-  backdrop-filter: blur(0px) brightness(0.8);
-  transition: all 0.5s ease-in-out;
+  pointer-events: none;
 }
 
 /* =============================
