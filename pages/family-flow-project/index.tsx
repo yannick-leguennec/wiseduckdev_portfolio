@@ -9,6 +9,7 @@ import { useLoader } from "../../context/LoaderContext";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
 import classes from "../../styles/family_flow_project.module.scss";
+import WrappedFamilyFlow from "../../components/v2/WrappedFamilyFlow/WrappedFamilyFlow";
 
 export default function FamilyFlowProject() {
   // Custom hook to manage the language changes
@@ -58,8 +59,8 @@ export default function FamilyFlowProject() {
       FR: "J’ai joué un rôle clé sur plusieurs aspects :",
     },
     projectMyRoleContentPoint1: {
-      EN: "Product strategy : defined features, roadmap, and target personas",
-      FR: "Stratégie produit : définition des fonctionnalités, roadmap et personas cibles",
+      EN: "Product Manager : defined features, roadmap, and target personas",
+      FR: "Chef de produit : définition des fonctionnalités, roadmap et personas cibles",
     },
     projectMyRoleContentPoint2: {
       EN: "Scrum Master : led sprint planning and async communication",
@@ -460,8 +461,8 @@ export default function FamilyFlowProject() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       </Head>
-      <Header />
-      <main className={classes.mainContainer}>
+      <div className={classes.mainContainer}>
+        <WrappedFamilyFlow />
         <h1>{translations.pageTitle[activeLanguage]}</h1>
         <h2>{translations.pageSubtitle[activeLanguage]}</h2>
         <p>{translations.pageIntroduction[activeLanguage]}</p>
@@ -516,7 +517,7 @@ export default function FamilyFlowProject() {
         <p>{translations.projectConclusionContent4[activeLanguage]}</p>
         <p>{translations.projectConclusionContent5[activeLanguage]}</p>
         <p>{translations.projectConclusionContent6[activeLanguage]}</p>
-      </main>
+      </div>
       <Footer />
       <SpeedInsights />
     </>
