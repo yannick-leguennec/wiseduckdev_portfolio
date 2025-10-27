@@ -1,18 +1,19 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import { useLoader } from "../context/LoaderContext";
 
-const NotFoundWithNoSSR = dynamic(() => import("../components/v1/404/404"), {
+const NotFoundWithNoSSR = dynamic(() => import("../components/v2/404/404"), {
   ssr: false,
 });
 
 export default function Custom404() {
   const { setLoading } = useLoader();
+  const [mounted, setMounted] = useState(false);
 
-  // Turn off the loading animation when the 404 page loads
   useEffect(() => {
+    setMounted(true);
     setLoading(false);
   }, [setLoading]);
 
@@ -27,7 +28,7 @@ export default function Custom404() {
         <meta name="robots" content="noindex, nofollow" />
       </Head>
 
-      <NotFoundWithNoSSR />
+      {mounted && <NotFoundWithNoSSR />}
       <SpeedInsights />
     </>
   );

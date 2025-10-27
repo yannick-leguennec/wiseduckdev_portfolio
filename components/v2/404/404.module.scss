@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 94vh;
+  height: 100vh;
   width: 100%;
   background-color: white;
 
@@ -76,7 +76,7 @@
 
 // BUTTON
 .button {
-  @include button-style;
+  @include button-style-v2-fit-content;
   margin-top: 2rem;
   border: none;
 

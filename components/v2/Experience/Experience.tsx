@@ -86,22 +86,22 @@ function Experience() {
       point: translations.point2[activeLanguage],
     },
     {
-      icon: icon_learning,
-      alt: {
-        EN: "Icon representing continuous learning",
-        FR: "Icône représentant l'apprentissage continu",
-      },
-      subtitle: translations.subtitle3[activeLanguage],
-      point: translations.point3[activeLanguage],
-    },
-    {
       icon: icon_remote,
       alt: {
         EN: "Icon representing remote collaboration",
         FR: "Icône représentant la collaboration à distance",
       },
+      subtitle: translations.subtitle3[activeLanguage],
+      point: translations.point3[activeLanguage],
+    },
+    {
+      icon: icon_learning,
+      alt: {
+        EN: "Icon representing continuous learning",
+        FR: "Icône représentant l'apprentissage continu",
+      },
       subtitle: translations.subtitle4[activeLanguage],
-      point: translations.point4[activeLanguage],
+      point: translations.point3[activeLanguage],
     },
   ];
 
