@@ -43,6 +43,28 @@
   }
 }
 
+@mixin button-style-v2-fixed-reverted {
+  font-size: 1rem;
+  font-weight: 400;
+  color: $button-color-v2;
+  background-color: $primary-color;
+  border-radius: 25px;
+  border: 1px solid $button-color-v2;
+  width: 170px;
+  padding: 0.5rem 2rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 0.8rem;
+    width: 120px;
+  }
+}
+
 @mixin button-style-v2-fit-content {
   font-size: 1rem;
   font-weight: 400;

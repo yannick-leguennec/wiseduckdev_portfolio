@@ -16,7 +16,6 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Header from "../Header/Header";
 import { useLanguage } from "../../../context/LanguageContext";
-import { TranslationsType } from "../../../types/TranslationsType";
 import classes from "./WrappedFamilyFlow.module.scss";
 
 // ===============================
@@ -31,7 +30,7 @@ import background_image_portrait from "../../../public/images/projectsPictures/p
 // ===============================
 // All text displayed on this page is stored here.
 // Each key includes English (EN) and French (FR) versions.
-const translations: TranslationsType = {
+const translations = {
   altPicture: {
     EN: "golden background image",
     FR: "image de fond dorée",
@@ -150,7 +149,7 @@ function WrappedFamilyFlow() {
       <div className={classes.contentContainer}>
         {/* === Title & Introduction === */}
         <header className={classes.titleContainer}>
-          <h2 className={classes.title}>{translations.pageTitle[lang]}</h2>
+          <h1 className={classes.title}>{translations.pageTitle[lang]}</h1>
           <p className={classes.introductionSentence}>
             {translations.pageIntroductionSentence[lang]}
           </p>

@@ -2,14 +2,17 @@ import { useState, useEffect } from "react";
 import { GetStaticProps } from "next";
 import React from "react";
 import Head from "next/head";
-import Header from "../../components/v2/Header/Header";
 import Footer from "../../components/v1/Footer/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useLoader } from "../../context/LoaderContext";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
-import classes from "../../styles/family_flow_project.module.scss";
+import classes from "../../styles/projects_pages.module.scss";
 import WrappedFamilyFlow from "../../components/v2/WrappedFamilyFlow/WrappedFamilyFlow";
+import mainPicture from "../../public/images/projectsPictures/family_flow/family_flow_project_main_picture.webp";
+import secondPicture from "../../public/images/projectsPictures/family_flow/family_flow_second_picture.webp";
+import rick_profile_picture from "../../public/images/projectsPictures/family_flow/family_flow_rick_profile_picture.webp";
+import Link from "next/link";
 
 export default function FamilyFlowProject() {
   // Custom hook to manage the language changes
@@ -30,10 +33,6 @@ export default function FamilyFlowProject() {
   };
 
   const translations: TranslationsType = {
-    pageTitle: {
-      EN: "Family Flow",
-      FR: "Family Flow",
-    },
     pageSubtitle: {
       EN: "React-based task manager for modern families",
       FR: "Gestionnaire de tâches familial conçu avec React",
@@ -99,22 +98,30 @@ export default function FamilyFlowProject() {
       FR: "Stack & outils",
     },
     projectStackPoint1: {
-      EN: "Front-End: React, TypeScript, Mantine UI",
-      FR: "Front-End: React, TypeScript, Mantine UI",
+      EN: "Front-End: React, TypeScript, Mantine UI, CSS, Sass, Axios, Day.js, dotenv",
+      FR: "Front-End: React, TypeScript, Mantine UI, CSS, Sass, Axios, Day.js, dotenv",
     },
     projectStackPoint2: {
-      EN: "Testing: Vitest",
-      FR: "Tests : Vitest",
+      EN: "Back-End: Node.js, Express, bcrypt, cors, express-jsdoc-swagger, joi, jsonwebtoken, multer, nodemailer, pg, faker",
+      FR: "Back-End: Node.js, Express, bcrypt, cors, express-jsdoc-swagger, joi, jsonwebtoken, multer, nodemailer, pg, faker",
     },
     projectStackPoint3: {
+      EN: "Database: PostgreSQL, SQL, Sqitch",
+      FR: "Base de données : PostgreSQL, SQL, Sqitch",
+    },
+    projectStackPoint4: {
+      EN: "Testing: Vitest, Jest",
+      FR: "Tests : Vitest, Jest",
+    },
+    projectStackPoint5: {
       EN: "Deployment: Railway",
       FR: "Déploiement : Railway",
     },
-    projectStackPoint4: {
+    projectStackPoint6: {
       EN: "Design & Prototyping: Excalidraw",
       FR: "Design & prototypage : Excalidraw",
     },
-    projectStackPoint5: {
+    projectStackPoint7: {
       EN: "Versioning: Git, GitHub",
       FR: "Versioning : Git, GitHub",
     },
@@ -222,13 +229,9 @@ export default function FamilyFlowProject() {
       EN: "Finally, my background in Entrepreneurship and Business Creation at HEC Montréal was instrumental in shaping this project. It gave me the invaluable opportunity to think not only as a developer but also as a product manager, someone who imagines, designs, and delivers useful solutions that are perfectly aligned with the target market, and for that I am deeply grateful.",
       FR: "Enfin, mon parcours en Entrepreneuriat et Création d’Entreprise à HEC Montréal a été déterminant dans l’orientation de ce projet. Il m’a donné l’incroyable opportunité de penser non seulement comme un développeur, mais également comme un gestionnaire de produit : quelqu’un qui imagine, conçoit et livre des solutions utiles et parfaitement cohérentes avec le marché visé, et pour cela je suis profondément reconnaissant.",
     },
-    buttonViewLive: {
-      EN: "View Live Project",
-      FR: "Voir le projet en ligne",
-    },
-    buttonGitHubRepo: {
-      EN: "View GitHub Repo",
-      FR: "Voir le dépôt GitHub",
+    buttonNextProject: {
+      EN: "Next Project",
+      FR: "Projet Suivant",
     },
     buttonBack: {
       EN: "Go Back",
@@ -245,6 +248,18 @@ export default function FamilyFlowProject() {
     twitterImageAltDescription: {
       EN: "Family Flow - Logo of the project on a blue background",
       FR: "Family Flow - Logo du projet sur fond bleu",
+    },
+    mainPictureAltDescription: {
+      EN: "Family Flow Project main screenshot showing the family calendar and task management interface",
+      FR: "Capture d'écran principale du projet Family Flow montrant le calendrier familial et l'interface de gestion des tâches",
+    },
+    secondPictureAltDescription: {
+      EN: "Family Flow Project screenshot showing the activities and event management interface",
+      FR: "Capture d'écran du projet Family Flow montrant l'interface de gestion des activités et des événements",
+    },
+    rickProfilePictureAltDescription: {
+      EN: "Family Flow Project screenshot showing the interface of a user profile with avatar customization",
+      FR: "Capture d'écran du projet Family Flow montrant l'interface d'un profil utilisateur avec personnalisation de l'avatar",
     },
     og_locale: {
       EN: "en-US",
@@ -463,60 +478,214 @@ export default function FamilyFlowProject() {
       </Head>
       <div className={classes.mainContainer}>
         <WrappedFamilyFlow />
-        <h1>{translations.pageTitle[activeLanguage]}</h1>
-        <h2>{translations.pageSubtitle[activeLanguage]}</h2>
-        <p>{translations.pageIntroduction[activeLanguage]}</p>
-        <h2>{translations.projectOverviewTitle[activeLanguage]}</h2>
-        <p>{translations.projectOverviewContent[activeLanguage]}</p>
-        <h2>{translations.projectMyRoleTitle[activeLanguage]}</h2>
-        <p>{translations.projectMyRoleContent1[activeLanguage]}</p>
-        <ul>
-          <li>{translations.projectMyRoleContentPoint1[activeLanguage]}</li>
-          <li>{translations.projectMyRoleContentPoint2[activeLanguage]}</li>
-          <li>{translations.projectMyRoleContentPoint3[activeLanguage]}</li>
-        </ul>
-        <p>{translations.projectMyRoleContent2[activeLanguage]}</p>
-        <h2>{translations.projectCreativityTitle[activeLanguage]}</h2>
-        <p>{translations.projectCreativityContent1[activeLanguage]}</p>
-        <p>{translations.projectCreativityContent2[activeLanguage]}</p>
-        <p>{translations.projectCreativityContent3[activeLanguage]}</p>
-        <p>{translations.projectCreativityContent4[activeLanguage]}</p>
-        <h2>{translations.projectStackTitle[activeLanguage]}</h2>
-        <ul>
-          <li>{translations.projectStackPoint1[activeLanguage]}</li>
-          <li>{translations.projectStackPoint2[activeLanguage]}</li>
-          <li>{translations.projectStackPoint3[activeLanguage]}</li>
-          <li>{translations.projectStackPoint4[activeLanguage]}</li>
-          <li>{translations.projectStackPoint5[activeLanguage]}</li>
-        </ul>
-        <p>{translations.projectStackContent[activeLanguage]}</p>
-        <h2>{translations.projectDesignTitle[activeLanguage]}</h2>
-        <p>{translations.projectDesignContent1[activeLanguage]}</p>
-        <p>{translations.projectDesignContent2[activeLanguage]}</p>
-        <p>{translations.projectDesignContent3[activeLanguage]}</p>
-        <p>{translations.projectDesignContent4[activeLanguage]}</p>
-        <p>{translations.projectDesignContent5[activeLanguage]}</p>
-        <p>{translations.projectDesignContent6[activeLanguage]}</p>
-        <h2>{translations.projectDeploymentTitle[activeLanguage]}</h2>
-        <p>{translations.projectDeploymentContent1[activeLanguage]}</p>
-        <p>{translations.projectDeploymentContent2[activeLanguage]}</p>
-        <p>{translations.projectDeploymentContent3[activeLanguage]}</p>
-        <ul>
-          <li>{translations.projectDeploymentPoint1[activeLanguage]}</li>
-          <li>{translations.projectDeploymentPoint2[activeLanguage]}</li>
-          <li>{translations.projectDeploymentPoint3[activeLanguage]}</li>
-          <li>{translations.projectDeploymentPoint4[activeLanguage]}</li>
-          <li>{translations.projectDeploymentPoint5[activeLanguage]}</li>
-        </ul>
-        <h2>{translations.projectResultsTitle[activeLanguage]}</h2>
-        <p>{translations.projectResultsContent1[activeLanguage]}</p>
-        <h2>{translations.projectConclusionTitle[activeLanguage]}</h2>
-        <p>{translations.projectConclusionContent1[activeLanguage]}</p>
-        <p>{translations.projectConclusionContent2[activeLanguage]}</p>
-        <p>{translations.projectConclusionContent3[activeLanguage]}</p>
-        <p>{translations.projectConclusionContent4[activeLanguage]}</p>
-        <p>{translations.projectConclusionContent5[activeLanguage]}</p>
-        <p>{translations.projectConclusionContent6[activeLanguage]}</p>
+        <div className={classes.contentContainer}>
+          <div className={classes.imagesContainer}>
+            <img
+              src={mainPicture.src}
+              alt={translations.mainPictureAltDescription[activeLanguage]}
+              className={classes.images}
+            />
+          </div>
+          <h2 className={classes.subtitle}>
+            {translations.pageSubtitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <p className={classes.textParagraph}>
+              {translations.pageIntroduction[activeLanguage]}
+            </p>
+          </div>
+          <h2 className={classes.subtitle}>
+            {translations.projectOverviewTitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <p className={classes.textParagraph}>
+              {translations.projectOverviewContent[activeLanguage]}
+            </p>
+          </div>
+          <h2 className={classes.subtitle}>
+            {translations.projectMyRoleTitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <p className={classes.textParagraph}>
+              {translations.projectMyRoleContent1[activeLanguage]}
+            </p>
+            <ul className={classes.textList}>
+              <li className={classes.textListItem}>
+                {translations.projectMyRoleContentPoint1[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectMyRoleContentPoint2[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectMyRoleContentPoint3[activeLanguage]}
+              </li>
+            </ul>
+            <p className={classes.textParagraph}>
+              {translations.projectMyRoleContent2[activeLanguage]}
+            </p>
+          </div>
+          <h2 className={classes.subtitle}>
+            {translations.projectCreativityTitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <p className={classes.textParagraph}>
+              {translations.projectCreativityContent1[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectCreativityContent2[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectCreativityContent3[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectCreativityContent4[activeLanguage]}
+            </p>
+          </div>
+          <div className={classes.imagesContainer}>
+            <img
+              src={secondPicture.src}
+              alt={translations.secondPictureAltDescription[activeLanguage]}
+              className={classes.images}
+            />
+          </div>
+          <h2 className={classes.subtitle}>
+            {translations.projectStackTitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <ul className={classes.textList}>
+              <li className={classes.textListItem}>
+                {translations.projectStackPoint1[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectStackPoint2[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectStackPoint3[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectStackPoint4[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectStackPoint5[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectStackPoint6[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectStackPoint7[activeLanguage]}
+              </li>
+            </ul>
+            <p className={classes.textParagraph}>
+              {translations.projectStackContent[activeLanguage]}
+            </p>
+          </div>
+          <h2 className={classes.subtitle}>
+            {translations.projectDesignTitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <p className={classes.textParagraph}>
+              {translations.projectDesignContent1[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectDesignContent2[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectDesignContent3[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectDesignContent4[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectDesignContent5[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectDesignContent6[activeLanguage]}
+            </p>
+          </div>
+          <h2 className={classes.subtitle}>
+            {translations.projectDeploymentTitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <p className={classes.textParagraph}>
+              {translations.projectDeploymentContent1[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectDeploymentContent2[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectDeploymentContent3[activeLanguage]}
+            </p>
+            <ul className={classes.textList}>
+              <li className={classes.textListItem}>
+                {translations.projectDeploymentPoint1[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectDeploymentPoint2[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectDeploymentPoint3[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectDeploymentPoint4[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectDeploymentPoint5[activeLanguage]}
+              </li>
+            </ul>
+          </div>
+          <div className={classes.imagesContainer}>
+            <img
+              src={rick_profile_picture.src}
+              alt={
+                translations.rickProfilePictureAltDescription[activeLanguage]
+              }
+              className={classes.images}
+            />
+          </div>
+          <h2 className={classes.subtitle}>
+            {translations.projectResultsTitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <p className={classes.textParagraph}>
+              {translations.projectResultsContent1[activeLanguage]}
+            </p>
+          </div>
+
+          <h2 className={classes.subtitle}>
+            {translations.projectConclusionTitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <p className={classes.textParagraph}>
+              {translations.projectConclusionContent1[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectConclusionContent2[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectConclusionContent3[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectConclusionContent4[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectConclusionContent5[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectConclusionContent6[activeLanguage]}
+            </p>
+          </div>
+          <div className={classes.buttonsContainer}>
+            <button
+              onClick={handleBackClick}
+              className={classes.buttonReverted}
+            >
+              {translations.buttonBack[activeLanguage]}
+            </button>
+            <Link href="/wise-duck-dev-gpts-project" className={classes.button}>
+              {translations.buttonNextProject[activeLanguage]}
+            </Link>
+          </div>
+        </div>
       </div>
       <Footer />
       <SpeedInsights />

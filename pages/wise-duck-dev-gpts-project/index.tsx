@@ -8,7 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useLoader } from "../../context/LoaderContext";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
-import classes from "../../styles/family_flow_project.module.scss";
+import classes from "../../styles/projects_pages.module.scss";
 
 export default function WiseDuckDevGPTsProject() {
   // Custom hook to manage the language changes
