@@ -72,11 +72,17 @@ function Header() {
    *  ACTIVE SECTION DETECTION (ScrollSpy)
    *  ---------------------------- */
   useEffect(() => {
+    const isOnHomePage = pathname === "/" || pathname === "/fr";
+
+    if (!isOnHomePage) {
+      // If not on the homepage, clear the highlight
+      setActiveSection("");
+      return; // Skip setting up the scroll listener
+    }
+
     const handleScroll = () => {
-      // Determine current scroll position + small offset
       const scrollPosition = window.scrollY + window.innerHeight * 0.1;
 
-      // IDs of all page sections (must match section `id` attributes)
       const sections = [
         "main",
         "profil",
@@ -86,7 +92,6 @@ function Header() {
         "contact",
       ];
 
-      // Find which section is currently in view
       const currentSection = sections.find((section) => {
         const el = document.getElementById(section);
         if (el) {
@@ -100,14 +105,18 @@ function Header() {
         return false;
       });
 
-      // Update the state if we’ve found an active section
-      if (currentSection) setActiveSection(currentSection);
+      if (currentSection) {
+        setActiveSection(currentSection);
+      } else {
+        setActiveSection("");
+      }
     };
 
-    // Attach and clean up the scroll listener
+    // Run once and attach listener
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
 
   /** ----------------------------
    *  QUERY-BASED SCROLL HANDLING
