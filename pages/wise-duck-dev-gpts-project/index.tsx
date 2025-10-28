@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { GetStaticProps } from "next";
 import React from "react";
 import Head from "next/head";
-import Header from "../../components/v2/Header/Header";
+import WrappedWiseDuckDevGPTs from "../../components/v2/WrappedWiseDuckDevGPTs/WrappedWiseDuckDevGPTs";
 import Footer from "../../components/v1/Footer/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useLoader } from "../../context/LoaderContext";
@@ -62,28 +62,28 @@ export default function WiseDuckDevGPTsProject() {
       FR: "Ce projet a été mené en solo, ce qui signifie que j’ai assuré l’ensemble des étapes : de l’idéation à la mise en ligne, en passant par la conception produit, le développement full-stack, l’ingénierie IA et l’automatisation.",
     },
     projectMyRoleContentPoint1: {
-      EN: "Product Design: I imagined the entire user experience, from how developers would browse GPTs to how each section should feel. I structured the app’s features, interface flow, and content to make everything intuitive and developer-friendly.",
-      FR: "Conception produit : J’ai imaginé l’expérience utilisateur dans sa globalité, navigation, structure des collections, hiérarchie de l’information,  en veillant à ce que chaque interaction soit fluide, intuitive et pensée pour les développeurs.",
+      EN: "Product Manager: I imagined the entire user experience, from how developers would browse GPTs to how each section should feel. I structured the app’s features, interface flow, and content to make everything intuitive and developer-friendly.",
+      FR: "Chef de produit : J’ai imaginé l’expérience utilisateur dans sa globalité, navigation, structure des collections, hiérarchie de l’information,  en veillant à ce que chaque interaction soit fluide, intuitive et pensée pour les développeurs.",
     },
     projectMyRoleContentPoint2: {
       EN: "Technical Architecture: I built the foundation of the app with scalability and automation in mind, using a modular approach that supports innovation and future iterations.",
       FR: "Architecture technique : J’ai conçu une base solide en adoptant une approche modulaire et évolutive, pensée pour la scalabilité, la performance et les futures itérations.",
     },
     projectMyRoleContentPoint3: {
-      EN: "Full-Stack Development: I built the platform using Next.js, TypeScript, and Sass. For data management, I initially started with a simple JSON-based structure, then progressively migrated to a SQL database using Prisma to ensure scalability and reliability. I also integrated Meilisearch to deliver a fast, relevant, and seamless search experience.",
-      FR: "Développement full-stack :J’ai développé la plateforme avec Next.js, TypeScript et Sass. Pour la gestion des données, j’ai d’abord opté pour une base JSON simple, puis migré progressivement vers une base SQL structurée avec Prisma afin d’assurer évolutivité et fiabilité. J’ai également intégré Meilisearch pour offrir une expérience de recherche rapide, pertinente et fluide.",
+      EN: "Full-Stack Developer: I built the platform using Next.js, TypeScript, and Sass. For data management, I initially started with a simple JSON-based structure, then progressively migrated to a SQL database using Prisma to ensure scalability and reliability. I also integrated Meilisearch to deliver a fast, relevant, and seamless search experience.",
+      FR: "Développeur full-stack :J’ai développé la plateforme avec Next.js, TypeScript et Sass. Pour la gestion des données, j’ai d’abord opté pour une base JSON simple, puis migré progressivement vers une base SQL structurée avec Prisma afin d’assurer évolutivité et fiabilité. J’ai également intégré Meilisearch pour offrir une expérience de recherche rapide, pertinente et fluide.",
     },
     projectMyRoleContentPoint4: {
-      EN: "AI Engineering: I designed over 800 custom GPTs by leveraging automated systems that combined the latest AI technologies with advanced prompt engineering techniques. Each GPT follows a structured logic that ensures ecosystem-wide consistency, high-quality responses, and fast, centralized updates when needed.",
-      FR: "Ingénierie IA : J’ai conçu plus de 800 GPTs personnalisés en m’appuyant sur des systèmes automatisés combinant les dernières IA du marché et des techniques avancées de prompt engineering. Chaque GPT suit une logique structurée garantissant la cohérence de l’écosystème, la qualité des réponses, ainsi qu’une mise à jour rapide et centralisée en cas d’évolution.",
+      EN: "AI Engineer: I designed over 800 custom GPTs by leveraging automated systems that combined the latest AI technologies with advanced prompt engineering techniques. Each GPT follows a structured logic that ensures ecosystem-wide consistency, high-quality responses, and fast, centralized updates when needed.",
+      FR: "Ingénieur IA : J’ai conçu plus de 800 GPTs personnalisés en m’appuyant sur des systèmes automatisés combinant les dernières IA du marché et des techniques avancées de prompt engineering. Chaque GPT suit une logique structurée garantissant la cohérence de l’écosystème, la qualité des réponses, ainsi qu’une mise à jour rapide et centralisée en cas d’évolution.",
     },
     projectMyRoleContentPoint5: {
-      EN: "Automation: I used Make.com and OpenAI’s API to automate the creation of the custom GPTs and their bilingual documentation, saving a lot of time and making the platform highly scalable.",
-      FR: "Automatisation : J’ai conçu un système d’automatisation complet en combinant Make.com et l’API d’OpenAI, permettant de générer à grande échelle les GPTs ainsi que leur documentation bilingue (FR/EN). Cette infrastructure m’a permis de maintenir un rythme de publication soutenu tout en garantissant rigueur, cohérence et qualité de contenu.",
+      EN: "Automation Engineer: I used Make.com and OpenAI’s API to automate the creation of the custom GPTs and their bilingual documentation, saving a lot of time and making the platform highly scalable.",
+      FR: "Ingénieur en automatisation : J’ai conçu un système d’automatisation complet en combinant Make.com et l’API d’OpenAI, permettant de générer à grande échelle les GPTs ainsi que leur documentation bilingue (FR/EN). Cette infrastructure m’a permis de maintenir un rythme de publication soutenu tout en garantissant rigueur, cohérence et qualité de contenu.",
     },
     projectMyRoleContentPoint6: {
-      EN: "SEO & Deployment: I optimized the site for search engines and deployed it as a lightning-fast PWA using Vercel, ensuring users have a smooth, mobile-friendly experience.",
-      FR: "SEO & Déploiement : J’ai structuré l’ensemble des contenus selon les meilleures pratiques de référencement multilingue, en ciblant spécifiquement les intentions de recherche des développeurs. La plateforme a ensuite été déployée en tant que Progressive Web App (PWA) via Vercel, offrant des performances élevées, une accessibilité optimale sur mobile, et un pipeline d’intégration et de déploiement continu (CI/CD) robuste.",
+      EN: "DevOps & SEO Specialist: I optimized the site for search engines and deployed it as a lightning-fast PWA using Vercel, ensuring users have a smooth, mobile-friendly experience.",
+      FR: "Spécialiste DevOps & SEO : J’ai structuré l’ensemble des contenus selon les meilleures pratiques de référencement multilingue, en ciblant spécifiquement les intentions de recherche des développeurs. La plateforme a ensuite été déployée en tant que Progressive Web App (PWA) via Vercel, offrant des performances élevées, une accessibilité optimale sur mobile, et un pipeline d’intégration et de déploiement continu (CI/CD) robuste.",
     },
     projectMyRoleContent2: {
       EN: "From ideation to deployment, I led every aspect, blending technical prowess with product strategy.",
@@ -514,8 +514,8 @@ export default function WiseDuckDevGPTsProject() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       </Head>
-      <Header />
       <main className={classes.mainContainer}>
+        <WrappedWiseDuckDevGPTs />
         <h1>{translations.pageTitle[activeLanguage]}</h1>
         {/* Introduction Section */}
         <h2>{translations.pageSubtitle[activeLanguage]}</h2>
