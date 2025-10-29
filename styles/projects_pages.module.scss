@@ -43,9 +43,11 @@
 // ===============================
 .imagesContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 90%;
+  margin-bottom: 2rem;
 }
 
 // ===============================
@@ -53,9 +55,12 @@
 // ===============================
 .images {
   width: 100%;
-  margin-bottom: 2rem;
 }
 
+.imagesBordered {
+  width: 100%;
+  border: 1px solid black;
+}
 // ===============================
 // SUBTITLE
 // ===============================
@@ -139,6 +144,24 @@
 
 .textList {
   list-style-type: disc;
+  padding: 1rem 0 1rem 2rem;
+
+  @media (max-width: 540px) {
+    padding-left: 1rem;
+  }
+}
+
+.textListNumbered {
+  list-style-type: decimal;
+  padding: 1rem 0 1rem 2rem;
+
+  @media (max-width: 540px) {
+    padding-left: 1rem;
+  }
+}
+
+.textListCircle {
+  list-style-type: circle;
   padding: 1rem 0 1rem 2rem;
 
   @media (max-width: 540px) {

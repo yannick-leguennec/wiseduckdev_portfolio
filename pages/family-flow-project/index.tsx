@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { GetStaticProps } from "next";
 import React from "react";
 import Head from "next/head";
-import Footer from "../../components/v1/Footer/Footer";
+import Footer from "../../components/v2/Footer/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useLoader } from "../../context/LoaderContext";
 import { useLanguage } from "../../context/LanguageContext";
@@ -67,7 +67,7 @@ export default function FamilyFlowProject() {
     },
     projectMyRoleContentPoint3: {
       EN: "Lead Front-End Developer : owned component architecture, UI state logic, and styling",
-      FR: "Lead Front-End — conception de l’architecture des composants, logique des états, et stylisation, UI/UX",
+      FR: "Lead Front-End : conception de l’architecture des composants, logique des états, et stylisation, UI/UX",
     },
     projectMyRoleContent2: {
       EN: "This dual focus on technical depth and product thinking allowed me to make impactful decisions from both perspectives.",
