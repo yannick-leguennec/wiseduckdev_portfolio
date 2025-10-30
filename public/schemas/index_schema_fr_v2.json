@@ -23,13 +23,15 @@
         "https://www.linkedin.com/in/wise-duck-dev/",
         "https://wiseduckdevgpts.com"
       ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "Service Client",
-        "email": "wiseduckdev@gmail.com",
-        "url": "https://wiseduckdev.com/fr#contact",
-        "availableLanguage": ["Français", "Anglais"]
-      }
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "Service Client",
+          "email": "wiseduckdev@gmail.com",
+          "url": "https://wiseduckdev.com/fr#contact",
+          "availableLanguage": ["Français", "Anglais"]
+        }
+      ]
     },
     {
       "@type": "Person",
@@ -125,7 +127,7 @@
             "@type": "GovernmentOrganization",
             "name": "Ministère du Travail, du Plein emploi et de l’Insertion (France)"
           },
-          "awardedBy": {
+          "provider": {
             "@type": "EducationalOrganization",
             "name": "École O'clock",
             "url": "https://oclock.io"
@@ -139,6 +141,10 @@
           "recognizedBy": {
             "@type": "CollegeOrUniversity",
             "name": "HEC Montréal"
+          },
+          "provider": {
+            "@type": "CollegeOrUniversity",
+            "name": "HEC Montréal"
           }
         },
         {
@@ -146,6 +152,10 @@
           "name": "BSc (Hons) en Gemmologie",
           "educationalLevel": "Licence (Bachelor)",
           "recognizedBy": {
+            "@type": "CollegeOrUniversity",
+            "name": "Birmingham City University"
+          },
+          "provider": {
             "@type": "CollegeOrUniversity",
             "name": "Birmingham City University"
           }
@@ -163,7 +173,9 @@
       "url": "https://wiseduckdev.com/fr",
       "isPartOf": { "@id": "https://wiseduckdev.com#website" },
       "inLanguage": "fr-FR",
+      "headline": "The Wise Duck Dev – Développeur Full Stack JavaScript spécialisé en React",
       "about": { "@id": "https://wiseduckdev.com#person" },
+      "mainEntity": { "@id": "https://wiseduckdev.com#person" },
       "name": "The Wise Duck Dev - Développeur Full Stack JS spécialisé en React",
       "primaryImageOfPage": {
         "@type": "ImageObject",
@@ -172,7 +184,24 @@
       "publisher": { "@id": "https://wiseduckdev.com#organization" },
       "isAccessibleForFree": true,
       "datePublished": "2024-03-08",
-      "dateModified": "2025-11-01"
+      "dateModified": "2025-11-01",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": "https://wiseduckdev.com/fr"
+        },
+        {
+          "@type": "CommunicateAction",
+          "target": "https://wiseduckdev.com/fr#contact",
+          "name": "Envoyer un message via le formulaire de contact",
+          "description": "Contacter The Wise Duck Dev via le formulaire de contact du site web."
+        },
+        {
+          "@type": "ViewAction",
+          "target": "https://wiseduckdev.com/fr#portfolio",
+          "name": "Voir les projets dans le portfolio"
+        }
+      ]
     }
   ]
 }

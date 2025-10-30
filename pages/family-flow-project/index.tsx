@@ -13,6 +13,7 @@ import mainPicture from "../../public/images/projectsPictures/family_flow/family
 import secondPicture from "../../public/images/projectsPictures/family_flow/family_flow_second_picture.webp";
 import rick_profile_picture from "../../public/images/projectsPictures/family_flow/family_flow_rick_profile_picture.webp";
 import Link from "next/link";
+import { date } from "yup";
 
 export default function FamilyFlowProject() {
   // Custom hook to manage the language changes
@@ -277,6 +278,11 @@ export default function FamilyFlowProject() {
 
   const pageLanguage = activeLanguage === "EN" ? "en-US" : "fr-FR";
 
+  const contactPoint =
+    activeLanguage === "EN"
+      ? "https://wiseduckdev.com/#contact"
+      : "https://wiseduckdev.com/fr/#contact";
+
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -296,10 +302,22 @@ export default function FamilyFlowProject() {
           url: `${orgUrl}/images/logo/android-chrome-512x512.png`,
         },
         sameAs: ["https://x.com/wiseduckdev"],
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            contactType: "inquiries",
+            email: "wiseduckdev@gmail.com",
+            url: contactPoint,
+          },
+        ],
       },
       {
         "@type": "WebPage",
         "@id": `${familyFlowProjectUrl}#webpage`,
+        author: {
+          "@type": "Organization",
+          "@id": "https://wiseduckdev.com#organization",
+        },
         url: familyFlowProjectUrl,
         name: translations.metaTitle[activeLanguage], // localized
         description: translations.metaDescription[activeLanguage], // localized
@@ -312,6 +330,13 @@ export default function FamilyFlowProject() {
         publisher: { "@id": `${orgUrl}#organization` },
         isAccessibleForFree: true,
         mainEntityOfPage: `${familyFlowProjectUrl}#webpage`,
+        datePublished: "2025-11-01",
+        dateModified: "2025-11-01",
+
+        potentialAction: {
+          "@type": "ReadAction",
+          target: `${familyFlowProjectUrl}`,
+        },
       },
       {
         // The live app being showcased
@@ -408,7 +433,7 @@ export default function FamilyFlowProject() {
           content={translations.metaDescription[activeLanguage]}
         />
         <meta
-          property="og:imgage"
+          property="og:image"
           content={`https://${siteUrl}/images/projectsPictures/family_flow/family_flow_og_image.png`}
         />
         <meta
@@ -541,6 +566,7 @@ export default function FamilyFlowProject() {
               src={secondPicture.src}
               alt={translations.secondPictureAltDescription[activeLanguage]}
               className={classes.images}
+              loading="lazy"
             />
           </div>
           <h2 className={classes.subtitle}>
@@ -635,6 +661,7 @@ export default function FamilyFlowProject() {
                 translations.rickProfilePictureAltDescription[activeLanguage]
               }
               className={classes.images}
+              loading="lazy"
             />
           </div>
           <h2 className={classes.subtitle}>

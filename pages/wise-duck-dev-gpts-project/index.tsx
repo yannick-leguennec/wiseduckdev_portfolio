@@ -13,6 +13,7 @@ import Link from "next/link";
 import mainPicture from "../../public/images/projectsPictures/wise_duck_dev_gpts/wise_duck_dev_gpts_project_main_picture.webp";
 import collectionsPagePicture from "../../public/images/projectsPictures/wise_duck_dev_gpts/wise_duck_dev_gpts_v2_collections_page_EN_screenshot.webp";
 import reactAssistantProfilePage from "../../public/images/projectsPictures/wise_duck_dev_gpts/wise_duck_dev_gpts_v2_react_mastery_pro_assistant_profile_page.webp";
+import { date } from "yup";
 
 export default function WiseDuckDevGPTsProject() {
   // Custom hook to manage the language changes
@@ -318,6 +319,11 @@ export default function WiseDuckDevGPTsProject() {
 
   const pageLanguage = activeLanguage === "EN" ? "en-US" : "fr-FR";
 
+  const contactPoint =
+    activeLanguage === "EN"
+      ? "https://wiseduckdev.com/#contact"
+      : "https://wiseduckdev.com/fr/#contact";
+
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -337,10 +343,22 @@ export default function WiseDuckDevGPTsProject() {
           url: `${orgUrl}/images/favicons/android-chrome-512x512.png`,
         },
         sameAs: ["https://x.com/wiseduckdev"],
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            contactType: "inquiries",
+            email: "wiseduckdev@gmail.com",
+            url: contactPoint,
+          },
+        ],
       },
       {
         "@type": "WebPage",
         "@id": `${wddProjectUrl}#webpage`,
+        author: {
+          "@type": "Organization",
+          "@id": "https://wiseduckdev.com#organization",
+        },
         url: wddProjectUrl,
         name: translations.metaTitle[activeLanguage],
         description: translations.metaDescription[activeLanguage],
@@ -353,6 +371,13 @@ export default function WiseDuckDevGPTsProject() {
         publisher: { "@id": `${orgUrl}#organization` },
         isAccessibleForFree: true,
         mainEntityOfPage: `${wddProjectUrl}#webpage`,
+        datePublished: "2025-11-01",
+        dateModified: "2025-11-01",
+
+        potentialAction: {
+          "@type": "ReadAction",
+          target: `${wddProjectUrl}`,
+        },
       },
       {
         // External platform modeled as a WebSite (catalog/listing of GPTs)
@@ -450,7 +475,7 @@ export default function WiseDuckDevGPTsProject() {
           content={translations.metaDescription[activeLanguage]}
         />
         <meta
-          property="og:imgage"
+          property="og:image"
           content={
             activeLanguage === "EN"
               ? `https://www.wiseduckdevgpts.com/images/index/the_wise_duck_dev_gpts_application_version2_main_picture_landscape_EN_Facebook.webp`
@@ -612,6 +637,7 @@ export default function WiseDuckDevGPTsProject() {
                 ]
               }
               className={classes.imagesBordered}
+              loading="lazy"
             />
           </div>
           {/* Process Section */}
@@ -691,6 +717,7 @@ export default function WiseDuckDevGPTsProject() {
                 ]
               }
               className={classes.imagesBordered}
+              loading="lazy"
             />
           </div>
           {/* Deployment Section */}

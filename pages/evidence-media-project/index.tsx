@@ -11,6 +11,7 @@ import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
 import classes from "../../styles/projects_pages.module.scss";
 import mainPicture from "../../public/images/projectsPictures/evidence_media/evidence_media_project_main_picture.webp";
+import { date } from "yup";
 
 export default function EvidenceMediaProject() {
   // Custom hook to manage the language changes
@@ -322,6 +323,11 @@ export default function EvidenceMediaProject() {
 
   const pageLanguage = activeLanguage === "EN" ? "en-US" : "fr-FR";
 
+  const contactPoint =
+    activeLanguage === "EN"
+      ? "https://wiseduckdev.com/#contact"
+      : "https://wiseduckdev.com/fr/#contact";
+
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -341,6 +347,14 @@ export default function EvidenceMediaProject() {
           url: `${orgUrl}/images/favicons/android-chrome-512x512.png`,
         },
         sameAs: ["https://x.com/wiseduckdev"],
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            contactType: "inquiries",
+            email: "wiseduckdev@gmail.com",
+            url: contactPoint,
+          },
+        ],
       },
       {
         "@type": "WebSite",
@@ -357,6 +371,10 @@ export default function EvidenceMediaProject() {
       {
         "@type": "WebPage",
         "@id": `${evidenceMediaProjectUrl}#webpage`,
+        author: {
+          "@type": "Organization",
+          "@id": "https://wiseduckdev.com#organization",
+        },
         url: evidenceMediaProjectUrl,
         name: translations.metaTitle[activeLanguage],
         description: translations.metaDescription[activeLanguage],
@@ -369,6 +387,13 @@ export default function EvidenceMediaProject() {
         publisher: { "@id": `${orgUrl}#organization` },
         isAccessibleForFree: true,
         mainEntityOfPage: { "@id": `${evidenceMediaProjectUrl}#software` },
+        datePublished: "2025-11-01",
+        dateModified: "2025-11-01",
+
+        potentialAction: {
+          "@type": "ReadAction",
+          target: `${evidenceMediaProjectUrl}`,
+        },
       },
       {
         "@type": "SoftwareApplication",
@@ -377,7 +402,7 @@ export default function EvidenceMediaProject() {
         url: evidenceMediaProjectUrl,
         additionalType: "https://schema.org/WebApplication",
         applicationCategory: "ProductivityApplication",
-        operatingSystem: "Any",
+        operatingSystem: "All",
         inLanguage: ["en-US"],
         description:
           activeLanguage === "EN"

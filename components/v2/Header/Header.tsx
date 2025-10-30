@@ -278,6 +278,7 @@ function Header() {
                   ? "Switch to English"
                   : "Passer le site en français"
               }
+              aria-pressed={activeLanguage === lang}
             >
               {lang}
             </button>
@@ -374,6 +375,7 @@ function Header() {
                       ? "Switch to English"
                       : "Passer le site en français"
                   }
+                  aria-pressed={activeLanguage === lang}
                 >
                   {lang}
                 </button>

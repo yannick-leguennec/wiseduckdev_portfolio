@@ -12,6 +12,7 @@ import classes from "../../styles/projects_pages.module.scss";
 import WrappedJeanTheWriter from "../../components/v2/WrappedHeaderComponents/WrappedJeanTheWriter/WrappedJeanTheWriter";
 import mainPicture from "../../public/images/projectsPictures/jean_the_writer/jean_the_writer_project_main_picture.webp";
 import manuscriptCorrectionScreenshot from "../../public/images/projectsPictures/jean_the_writer/jean_the_writer_example_of_ manuscript_correction.webp";
+import { date } from "yup";
 
 export default function JeanTheWriterProject() {
   // Custom hook to manage the language changes
@@ -356,6 +357,11 @@ export default function JeanTheWriterProject() {
 
   const pageLanguage = activeLanguage === "EN" ? "en-US" : "fr-FR";
 
+  const contactPoint =
+    activeLanguage === "EN"
+      ? "https://wiseduckdev.com/#contact"
+      : "https://wiseduckdev.com/fr/#contact";
+
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -375,10 +381,22 @@ export default function JeanTheWriterProject() {
           url: `${orgUrl}/images/favicons/android-chrome-512x512.png`,
         },
         sameAs: ["https://x.com/wiseduckdev"],
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            contactType: "inquiries",
+            email: "wiseduckdev@gmail.com",
+            url: contactPoint,
+          },
+        ],
       },
       {
         "@type": "WebPage",
         "@id": `${jeanTheWriterProjectUrl}#webpage`,
+        author: {
+          "@type": "Organization",
+          "@id": "https://wiseduckdev.com#organization",
+        },
         url: jeanTheWriterProjectUrl,
         name: translations.metaTitle[activeLanguage],
         description: translations.metaDescription[activeLanguage],
@@ -394,6 +412,13 @@ export default function JeanTheWriterProject() {
         publisher: { "@id": `${orgUrl}#organization` },
         isAccessibleForFree: true,
         mainEntityOfPage: `${jeanTheWriterProjectUrl}#webpage`,
+        datePublished: "2025-11-01",
+        dateModified: "2025-11-01",
+
+        potentialAction: {
+          "@type": "ReadAction",
+          target: `${jeanTheWriterProjectUrl}`,
+        },
       },
       {
         "@type": "SoftwareApplication",
@@ -401,7 +426,7 @@ export default function JeanTheWriterProject() {
         name: "Jean the Writer",
         url: jeanTheWriterProjectUrl,
         applicationCategory: "ProductivityApplication",
-        operatingSystem: "Any",
+        operatingSystem: "All",
         availableLanguage: ["fr-FR", "es-ES", "en-US"],
         description:
           activeLanguage === "EN"
