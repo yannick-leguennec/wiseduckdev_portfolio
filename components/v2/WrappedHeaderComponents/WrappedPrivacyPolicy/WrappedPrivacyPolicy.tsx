@@ -6,10 +6,10 @@ import Image from "next/image";
 import { TranslationsType } from "../../../../types/TranslationsType";
 
 // ====== IMPORT ALL LANGUAGE + ORIENTATION VARIANTS ======
-import policyPictureEN from "../../../public/images/policy_privacy/privacy-policy-page-secure-data-protection-wise-duck-dev-EN.webp";
-import policyPictureFR from "../../../public/images/policy_privacy/privacy-policy-page-secure-data-protection-wise-duck-dev-FR.webp";
-import policyPictureMobileEN from "../../../public/images/policy_privacy/privacy-policy-page-secure-data-protection-wise-duck-dev-mobile-EN.webp";
-import policyPictureMobileFR from "../../../public/images/policy_privacy/privacy-policy-page-secure-data-protection-wise-duck-dev-mobile-FR.webp";
+import policyPictureEN from "../../../../public/images/policy_privacy/privacy-policy-page-secure-data-protection-wise-duck-dev-EN.webp";
+import policyPictureFR from "../../../../public/images/policy_privacy/privacy-policy-page-secure-data-protection-wise-duck-dev-FR.webp";
+import policyPictureMobileEN from "../../../../public/images/policy_privacy/privacy-policy-page-secure-data-protection-wise-duck-dev-mobile-EN.webp";
+import policyPictureMobileFR from "../../../../public/images/policy_privacy/privacy-policy-page-secure-data-protection-wise-duck-dev-mobile-FR.webp";
 
 // =============================================
 // TRANSLATIONS
