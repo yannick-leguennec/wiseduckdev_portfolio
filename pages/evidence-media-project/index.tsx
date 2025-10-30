@@ -25,11 +25,6 @@ export default function EvidenceMediaProject() {
     setLoading(false);
   }, [setLoading]);
 
-  // Function to go back to the previous page
-  const handleBackClick = () => {
-    window.history.back();
-  };
-
   const translations: TranslationsType = {
     pageTitle: {
       EN: "Evidence Media",
@@ -770,14 +765,8 @@ export default function EvidenceMediaProject() {
             </p>
           </div>
           <div className={classes.buttonsContainer}>
-            <button
-              onClick={handleBackClick}
-              className={classes.buttonReverted}
-            >
+            <Link href="/#portfolio" className={classes.buttonReverted}>
               {translations.buttonBack[activeLanguage]}
-            </button>
-            <Link href="/" className={classes.button}>
-              {translations.buttonMainPage[activeLanguage]}
             </Link>
           </div>
         </div>

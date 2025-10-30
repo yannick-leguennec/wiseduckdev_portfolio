@@ -120,6 +120,8 @@ function Profil() {
             <li>
               <Link
                 href={gptsLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() =>
                   handleNavigationClick("Click on WDD GPTs link from Profil")
                 }

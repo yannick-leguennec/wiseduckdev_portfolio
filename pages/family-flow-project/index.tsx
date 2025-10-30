@@ -27,11 +27,6 @@ export default function FamilyFlowProject() {
     setLoading(false);
   }, [setLoading]);
 
-  // Function to go back to the previous page
-  const handleBackClick = () => {
-    window.history.back();
-  };
-
   const translations: TranslationsType = {
     pageSubtitle: {
       EN: "React-based task manager for modern families",
@@ -66,8 +61,8 @@ export default function FamilyFlowProject() {
       FR: "Scrum Master : gestion des sprints et de la communication asynchrone",
     },
     projectMyRoleContentPoint3: {
-      EN: "Lead Front-End Developer : owned component architecture, UI state logic, and styling",
-      FR: "Lead Front-End : conception de l’architecture des composants, logique des états, et stylisation, UI/UX",
+      EN: "Lead Frontend Developer : owned component architecture, UI state logic, and styling",
+      FR: "Lead Frontend : conception de l’architecture des composants, logique des états, et stylisation, UI/UX",
     },
     projectMyRoleContent2: {
       EN: "This dual focus on technical depth and product thinking allowed me to make impactful decisions from both perspectives.",
@@ -675,12 +670,9 @@ export default function FamilyFlowProject() {
             </p>
           </div>
           <div className={classes.buttonsContainer}>
-            <button
-              onClick={handleBackClick}
-              className={classes.buttonReverted}
-            >
+            <Link href="/#portfolio" className={classes.buttonReverted}>
               {translations.buttonBack[activeLanguage]}
-            </button>
+            </Link>
             <Link href="/wise-duck-dev-gpts-project" className={classes.button}>
               {translations.buttonNextProject[activeLanguage]}
             </Link>

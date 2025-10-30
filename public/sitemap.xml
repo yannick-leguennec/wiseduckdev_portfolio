@@ -1,35 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
+<urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- Homepage -->
   <url>
-    <loc>https://wiseduckdev.com</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://wiseduckdev.com"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="https://wiseduckdev.com/fr"
-    />
+    <loc>https://wiseduckdev.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiseduckdev.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiseduckdev.com/fr/"/>
     <image:image>
-      <image:loc>https://wiseduckdev.com/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp</image:loc>
+      <image:loc>https://wiseduckdev.com/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_2_main_picture_Facebook_EN.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://wiseduckdev.com/images/index/full-stack-react-wise-duck-developer-profile.webp</image:loc>
+      <image:loc>https://wiseduckdev.com/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_2_main_picture_Twitter_EN.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://wiseduckdev.com/images/index/professional-wise-duck-developer-coding-laptop-office.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://wiseduckdev.com/images/index/professional-wise-duck-developer-mobile-coding-office.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://wiseduckdev.com/images/index/innovative-developer-wise-duck-dev-white-suit-couch-tropical-plants-mobile.webp</image:loc>
+      <image:loc>https://wiseduckdev.com/images/index/v2/images_index_page/yannick_leguennec_full_stack_javascript_developer_specialized_in_react_horizontal.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://wiseduckdev.com/images/logos/wise-duck-dev-full-stack-js-logo-vertical.png</image:loc>
@@ -40,14 +27,75 @@
     <image:image>
       <image:loc>https://wiseduckdev.com/images/logos/wise-duck-dev-full-stack-js-logo.png</image:loc>
     </image:image>
-    <image:image>
-      <image:loc>https://wiseduckdev.com/images/projectsPictures/family-flow-project-management-lead-developer.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://wiseduckdev.com/images/404/innovative-developer-wise-duck-dev-relaxing-drink-404-page.webp</image:loc>
-    </image:image>
-    <lastmod>2024-05-06</lastmod>
-    <changefreq>Monthly</changefreq>
+    <lastmod>2025-10-29</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Family Flow Project -->
+  <url>
+    <loc>https://wiseduckdev.com/family-flow-project</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiseduckdev.com/family-flow-project"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiseduckdev.com/fr/family-flow-project"/>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/family_flow/family_flow_project_profile_picture.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/family_flow/family_flow_project_main_picture.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/family_flow/family_flow_second_picture.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/family_flow/family_flow_rick_profile_picture.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/family_flow/family-flow-project-management-lead-developer.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/family_flow/family_flow_og_image.png</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/family_flow/family_flow_twitter_image.png</image:loc></image:image>
+    <lastmod>2025-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Wise Duck Dev GPTs Project -->
+  <url>
+    <loc>https://wiseduckdev.com/wise-duck-dev-gpts-project</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiseduckdev.com/wise-duck-dev-gpts-project"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiseduckdev.com/fr/wise-duck-dev-gpts-project"/>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/wise_duck_dev_gpts/wise_duck_dev_gpts_project_profile_picture.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/wise_duck_dev_gpts/wise_duck_dev_gpts_project_main_picture.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/wise_duck_dev_gpts/wise_duck_dev_gpts_v2_collections_page_EN_screenshot.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/wise_duck_dev_gpts/wise_duck_dev_gpts_v2_react_mastery_pro_assistant_profile_page.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/wise_duck_dev_gpts/the_wise_duck_dev_gpts_application_version2_main_picture_Facebook.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/wise_duck_dev_gpts/the_wise_duck_dev_gpts_application_version2_main_picture_Twitter.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/wise_duck_dev_gpts/wise_duck_dev_gpts_project_profile_picture_2.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/wise_duck_dev_gpts/the-wise-duck-dev-gpts-library.webp</image:loc></image:image>
+    <lastmod>2025-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Jean the Writer Project -->
+  <url>
+    <loc>https://wiseduckdev.com/jean-the-writer-project</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiseduckdev.com/jean-the-writer-project"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiseduckdev.com/fr/jean-the-writer-project"/>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/jean_the_writer/jean_the_writer_project_profile_picture.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/jean_the_writer/jean_the_writer_project_main_picture.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/jean_the_writer/jean_the_writer_example_of_manuscript_correction.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/jean_the_writer/jean_the_writer_automated_manuscripts_revision_and_correction_ai_project.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/jean_the_writer/jean_the_writer_automated_manuscripts_revision_and_correction_ai_project_Facebook.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/jean_the_writer/jean_the_writer_automated_manuscripts_revision_and_correction_ai_project_Twitter.webp</image:loc></image:image>
+    <lastmod>2025-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Evidence Media Project -->
+  <url>
+    <loc>https://wiseduckdev.com/evidence-media-project</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiseduckdev.com/evidence-media-project"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiseduckdev.com/fr/evidence-media-project"/>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/evidence_media/evidence_media_project_profile_picture.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/evidence_media/evidence_media_project_main_picture.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/evidence_media/evidence_media_social_media_ai_automation_project.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/evidence_media/evidence_media_social_media_ai_automation_project_Facebook.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/evidence_media/evidence_media_social_media_ai_automation_project_Twitter.webp</image:loc></image:image>
+    <lastmod>2025-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>

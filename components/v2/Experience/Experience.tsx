@@ -101,7 +101,7 @@ function Experience() {
         FR: "Icône représentant l'apprentissage continu",
       },
       subtitle: translations.subtitle4[activeLanguage],
-      point: translations.point3[activeLanguage],
+      point: translations.point4[activeLanguage],
     },
   ];
 

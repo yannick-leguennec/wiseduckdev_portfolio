@@ -46,14 +46,14 @@ const translations = {
   },
   pageRoles: {
     EN: [
-      "Product Designer",
+      "Product Manager",
       "Full-Stack Developer",
       "AI Engineer",
       "Automation Engineer",
       "DevOps & SEO Specialist",
     ],
     FR: [
-      "Concepteur Produit",
+      "Chef de Produit",
       "Développeur Full-Stack",
       "Ingénieur IA",
       "Ingénieur en Automatisation",

@@ -171,7 +171,7 @@ const Skills = () => {
         },
         {
           title: "Containerization & Infrastructure",
-          items: ["Docker", "Linux Ubuntu"],
+          items: ["Docker", "Windows", "Linux Ubuntu"],
         },
         {
           title: "Cloud & Deployment",

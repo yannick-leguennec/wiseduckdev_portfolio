@@ -27,11 +27,6 @@ export default function WiseDuckDevGPTsProject() {
     setLoading(false);
   }, [setLoading]);
 
-  // Function to go back to the previous page
-  const handleBackClick = () => {
-    window.history.back();
-  };
-
   const translations: TranslationsType = {
     pageTitle: {
       EN: "The Wise Duck Dev GPTs Project",
@@ -764,12 +759,9 @@ export default function WiseDuckDevGPTsProject() {
             </p>
           </div>
           <div className={classes.buttonsContainer}>
-            <button
-              onClick={handleBackClick}
-              className={classes.buttonReverted}
-            >
+            <Link href="/#portfolio" className={classes.buttonReverted}>
               {translations.buttonBack[activeLanguage]}
-            </button>
+            </Link>
             <Link href="/jean-the-writer-project" className={classes.button}>
               {translations.buttonNextProject[activeLanguage]}
             </Link>

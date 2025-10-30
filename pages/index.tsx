@@ -39,6 +39,10 @@ export default function Home() {
       EN: "Professional picture of the full stack javascript developer specialized in react Yannick Le Guennec aka The Wise Duck Dev in a tropical plant background",
       FR: "Image professionnelle du développeur full stack javascript spécialisé en react Yannick Le Guennec aka The Wise Duck Dev dans un fond de plantes tropicales",
     },
+    altTwitterPicture: {
+      EN: "Professional AI generated picture of The Wise Duck Dev persona, an anthropomorphic white duck wearing a golden shirt with golden glasses on a golden background",
+      FR: "Image professionnelle générée par IA de The Wise Duck Dev, un canard blanc anthropomorphe portant une chemise dorée et des lunettes dorées sur un fond doré",
+    },
     logText: {
       EN: "Hey there, fellow dev! I'm The Wise Duck Dev — a Full-Stack JavaScript & React specialist who loves automation, AI, and bold ideas. After over a decade running businesses, I now craft smart web apps, automation pipelines, and AI-powered tools for developers. From X & Substack media flows to a library of 800+ custom GPTs, I blend creative tech, product vision, and a dash of fun in every build. If you're a recruiter, founder, or tech leader looking for impact — let's connect and build the future together! 🚀🌐`",
       FR: "Salut à toi, cher dev curieux ! Je suis The Wise Duck Dev — développeur full-stack JavaScript & React, passionné d’automatisation, d’IA et d’innovations audacieuses. Après plus de 10 ans dans la gestion d’entreprise, je crée aujourd’hui des apps web intelligentes, des pipelines d’automatisation et des outils AI sur mesure pour les développeurs. De l’écosystème média X & Substack à une collection de plus de 800 GPTs, j’allie créativité, vision produit et fun dans chaque projet. Recruteur, entrepreneur ou décideur tech ? Contactez-moi et construisons ensemble le futur du digital ! 🚀🌐",
@@ -114,7 +118,7 @@ export default function Home() {
         />
         <meta
           name="keywords"
-          content="The Wise Duck Dev, Full Stack JS Developer, JavaScript, React Developer, Web Mobile Developer, Next.js, TypeScript, Web Development Canada, Web Development USA, React Development, Full Stack JS Solutions, Innovative Web Solutions"
+          content="The Wise Duck Dev, Full Stack JS Developer, JavaScript, React Developer, Web Mobile Developer, Next.js, TypeScript, Web Development Canada, Web Development USA, React Development, Full Stack JS Solutions, Innovative Web Solutions, AI integration specialist, Automation Engineering, Creative Web Applications, Modern Web Technologies"
         />
         <meta
           name="viewport"
@@ -140,8 +144,8 @@ export default function Home() {
           property="og:image"
           content={
             activeLanguage === "FR"
-              ? `https://${siteUrl}/images/index/professional-wise-duck-developer-coding-laptop-office-Facebook-FR.webp`
-              : `https://${siteUrl}/images/index/professional-wise-duck-developer-coding-laptop-office-Facebook-EN.webp`
+              ? `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_2_main_picture_Facebook_FR.webp`
+              : `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_2_main_picture_Facebook_EN.webp`
           }
         />
         <meta
@@ -171,13 +175,13 @@ export default function Home() {
           name="twitter:image"
           content={
             activeLanguage === "FR"
-              ? `https://${siteUrl}/images/index/professional-wise-duck-developer-coding-laptop-office-Twitter-FR.webp`
-              : `https://${siteUrl}/images/index/professional-wise-duck-developer-coding-laptop-office-Twitter-EN.webp`
+              ? `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_2_main_picture_Twitter_FR.webp`
+              : `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_2_main_picture_Twitter_EN.webp`
           }
         />
         <meta
           name="twitter:image:alt"
-          content={translation.altPicture[activeLanguage]}
+          content={translation.altTwitterPicture[activeLanguage]}
         />
 
         {siteUrl && (

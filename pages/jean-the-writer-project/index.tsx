@@ -26,11 +26,6 @@ export default function JeanTheWriterProject() {
     setLoading(false);
   }, [setLoading]);
 
-  // Function to go back to the previous page
-  const handleBackClick = () => {
-    window.history.back();
-  };
-
   const translations: TranslationsType = {
     pageTitle: {
       EN: "Jean the Writer",
@@ -857,12 +852,9 @@ export default function JeanTheWriterProject() {
             </p>
           </div>
           <div className={classes.buttonsContainer}>
-            <button
-              onClick={handleBackClick}
-              className={classes.buttonReverted}
-            >
+            <Link href="/#portfolio" className={classes.buttonReverted}>
               {translations.buttonBack[activeLanguage]}
-            </button>
+            </Link>
             <Link href="/evidence-media-project" className={classes.button}>
               {translations.buttonNextProject[activeLanguage]}
             </Link>
