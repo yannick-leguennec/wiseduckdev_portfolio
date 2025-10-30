@@ -8,7 +8,7 @@ import { useLoader } from "../../context/LoaderContext";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
 import classes from "../../styles/projects_pages.module.scss";
-import WrappedFamilyFlow from "../../components/v2/WrappedFamilyFlow/WrappedFamilyFlow";
+import WrappedFamilyFlow from "../../components/v2/WrappedHeaderComponents/WrappedFamilyFlow/WrappedFamilyFlow";
 import mainPicture from "../../public/images/projectsPictures/family_flow/family_flow_project_main_picture.webp";
 import secondPicture from "../../public/images/projectsPictures/family_flow/family_flow_second_picture.webp";
 import rick_profile_picture from "../../public/images/projectsPictures/family_flow/family_flow_rick_profile_picture.webp";

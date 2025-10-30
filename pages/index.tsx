@@ -10,7 +10,7 @@ import { TranslationsType } from "../types/TranslationsType";
 import Image, { StaticImageData } from "next/image";
 import picture_yannick_horizontal from "../public/images/index/v2/images_index_page/yannick_leguennec_full_stack_javascript_developer_specialized_in_react_horizontal.webp";
 import picture_yannick_vertical from "../public/images/index/v2/images_index_page/yannick_leguennec_full_stack_javascript_developer_specialized_in_react_mobile.webp";
-import WrappedMain from "../components/v2/WrappedMain/WrappedMain";
+import WrappedMain from "../components/v2/WrappedHeaderComponents/WrappedMain/WrappedMain";
 import Profil from "../components/v2/Profil/Profil";
 import Skills from "../components/v2/Skills/Skills";
 import Experience from "../components/v2/Experience/Experience";

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { GetStaticProps } from "next";
 import React from "react";
 import Head from "next/head";
-import WrappedWiseDuckDevGPTs from "../../components/v2/WrappedWiseDuckDevGPTs/WrappedWiseDuckDevGPTs";
+import WrappedWiseDuckDevGPTs from "../../components/v2/WrappedHeaderComponents/WrappedWiseDuckDevGPTs/WrappedWiseDuckDevGPTs";
 import Footer from "../../components/v2/Footer/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useLoader } from "../../context/LoaderContext";

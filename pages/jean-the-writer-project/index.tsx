@@ -9,7 +9,7 @@ import { useLoader } from "../../context/LoaderContext";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
 import classes from "../../styles/projects_pages.module.scss";
-import WrappedJeanTheWriter from "../../components/v2/WrappedJeanTheWriter/WrappedJeanTheWriter";
+import WrappedJeanTheWriter from "../../components/v2/WrappedHeaderComponents/WrappedJeanTheWriter/WrappedJeanTheWriter";
 import mainPicture from "../../public/images/projectsPictures/jean_the_writer/jean_the_writer_project_main_picture.webp";
 import manuscriptCorrectionScreenshot from "../../public/images/projectsPictures/jean_the_writer/jean_the_writer_example_of_ manuscript_correction.webp";
 

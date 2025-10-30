@@ -14,15 +14,15 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Header from "../Header/Header";
-import { useLanguage } from "../../../context/LanguageContext";
+import Header from "../../Header/Header";
+import { useLanguage } from "../../../../context/LanguageContext";
 import classes from "./WrappedWiseDuckDevGPTs.module.scss"; // Same styles reused
 
 // ===============================
 // IMPORT IMAGES
 // ===============================
-import background_image_landscape from "../../../public/images/projectsPictures/project_background_pictures/wise_duck_dev_background_project_image_landscape.webp";
-import background_image_portrait from "../../../public/images/projectsPictures/project_background_pictures/wise_duck_dev_background_project_image_portrait.webp";
+import background_image_landscape from "../../../../public/images/projectsPictures/project_background_pictures/wise_duck_dev_background_project_image_landscape.webp";
+import background_image_portrait from "../../../../public/images/projectsPictures/project_background_pictures/wise_duck_dev_background_project_image_portrait.webp";
 
 // ===============================
 // TRANSLATIONS

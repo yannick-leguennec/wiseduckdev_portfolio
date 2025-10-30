@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { useLanguage } from "../../../context/LanguageContext";
-import Header from "../Header/Header";
+import { useLanguage } from "../../../../context/LanguageContext";
+import Header from "../../Header/Header";
 import classes from "./WrappedPrivacyPolicy.module.scss";
 import Image from "next/image";
-import { TranslationsType } from "../../../types/TranslationsType";
+import { TranslationsType } from "../../../../types/TranslationsType";
 
 // ====== IMPORT ALL LANGUAGE + ORIENTATION VARIANTS ======
 import policyPictureEN from "../../../public/images/policy_privacy/privacy-policy-page-secure-data-protection-wise-duck-dev-EN.webp";

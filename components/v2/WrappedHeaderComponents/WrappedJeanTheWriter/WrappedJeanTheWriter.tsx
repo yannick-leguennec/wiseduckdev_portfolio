@@ -1,7 +1,7 @@
 /**
- * WrappedFamilyFlow.tsx
+ * WrappedJeanTheWriter.tsx
  *
- * Displays the "Family Flow" project page.
+ * Displays the "Jean the Writer" project page.
  *
  * Features:
  * - Dynamically loads a responsive background image based on screen orientation.
@@ -12,76 +12,73 @@
  * This component is fully client-rendered (uses React hooks).
  */
 
+"use client";
+
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Header from "../Header/Header";
-import { useLanguage } from "../../../context/LanguageContext";
-import classes from "./WrappedFamilyFlow.module.scss";
-
-// ===============================
-// IMPORT IMAGES
-// ===============================
-// These are static background images for landscape and portrait orientations.
-import background_image_landscape from "../../../public/images/projectsPictures/project_background_pictures/wise_duck_dev_background_project_image_landscape.webp";
-import background_image_portrait from "../../../public/images/projectsPictures/project_background_pictures/wise_duck_dev_background_project_image_portrait.webp";
+import Header from "../../Header/Header";
+import { useLanguage } from "../../../../context/LanguageContext";
+import classes from "./WrappedJeanTheWriter.module.scss";
+import background_image_landscape from "../../../../public/images/projectsPictures/project_background_pictures/wise_duck_dev_background_project_image_landscape.webp";
+import background_image_portrait from "../../../../public/images/projectsPictures/project_background_pictures/wise_duck_dev_background_project_image_portrait.webp";
 
 // ===============================
 // TRANSLATIONS
 // ===============================
-// All text displayed on this page is stored here.
-// Each key includes English (EN) and French (FR) versions.
 const translations = {
   altPicture: {
     EN: "golden background image",
     FR: "image de fond dorée",
   },
   pageTitle: {
-    EN: "Family Flow",
-    FR: "Family Flow",
+    EN: "Jean the Writer",
+    FR: "Jean l'Écrivain",
   },
   pageIntroductionSentence: {
-    EN: "Discover Family Flow, a React-based web app designed to simplify task sharing and planning in households. Co-developed as part of an intensive Web & Mobile Development program.",
-    FR: "Découvrez Family Flow, une application web conçue avec React pour simplifier le partage des tâches et la planification au sein des foyers. Co-développée dans le cadre d'un programme intensif de développement Web & Mobile.",
+    EN: "AI-powered manuscript correction & editorial review tool designed to help writers prepare polished, publication-ready texts.",
+    FR: "Outil de correction de manuscrit et de révision éditoriale alimenté par IA, conçu pour aider les écrivains à produire des textes prêts à l'édition.",
   },
   pageRoleTitle: {
     EN: "ROLE",
     FR: "RÔLE",
   },
   pageRoles: {
-    EN: ["Product Manager", "Scrum Master", "Front-End Lead Developer"],
-    FR: ["Chef de produit", "Scrum Master", "Développeur principal Front-End"],
+    EN: ["Product Manager", "Automation Engineer", "Full-Stack Developer"],
+    FR: [
+      "Chef de produit",
+      "Ingénieur en automatisation",
+      "Développeur Full-Stack",
+    ],
   },
   pageTechnologies: {
     EN: [
-      "React",
+      "Node.js",
       "TypeScript",
-      "Mantine UI",
-      "Axios",
-      "CSS / Sass",
-      "Dotenv",
-      "Vitest",
+      "OpenAI API",
+      "Google Drive API",
+      "Google Docs API",
+      "diff-match-patch",
+      "p-limit",
       "Git",
       "GitHub",
-      "Railway",
+      "ts-node",
+      "ESLint",
     ],
     FR: [
-      "React",
+      "Node.js",
       "TypeScript",
-      "Mantine UI",
-      "Axios",
-      "CSS / Sass",
-      "Dotenv",
-      "Vitest",
+      "OpenAI API",
+      "Google Drive API",
+      "Google Docs API",
+      "diff-match-patch",
+      "p-limit",
       "Git",
       "GitHub",
-      "Railway",
+      "ts-node",
+      "ESLint",
     ],
   },
-  button1: {
-    EN: "View live",
-    FR: "Voir en direct",
-  },
-  button2: {
+  button: {
     EN: "GitHub",
     FR: "GitHub",
   },
@@ -90,30 +87,24 @@ const translations = {
 // ===============================
 // RESPONSIVE IMAGE COMPONENT
 // ===============================
-// This subcomponent handles selecting the appropriate background image
-// based on the user's screen orientation (portrait or landscape).
 const ResponsiveImage = ({ alt }: { alt: string }) => {
   const [isPortrait, setIsPortrait] = useState(false);
 
   useEffect(() => {
-    // Detect whether the screen is in portrait mode
     const handleOrientationChange = () => {
       setIsPortrait(window.matchMedia("(orientation: portrait)").matches);
     };
 
-    // Run once on mount and set up listeners for orientation and resize
     handleOrientationChange();
     window.addEventListener("orientationchange", handleOrientationChange);
     window.addEventListener("resize", handleOrientationChange);
 
-    // Clean up event listeners on unmount
     return () => {
       window.removeEventListener("orientationchange", handleOrientationChange);
       window.removeEventListener("resize", handleOrientationChange);
     };
   }, []);
 
-  // Select the correct image based on orientation
   const src = isPortrait
     ? background_image_portrait
     : background_image_landscape;
@@ -132,10 +123,9 @@ const ResponsiveImage = ({ alt }: { alt: string }) => {
 // ===============================
 // MAIN WRAPPER COMPONENT
 // ===============================
-// This is the main component rendered on the Family Flow project page.
-function WrappedFamilyFlow() {
+function WrappedJeanTheWriter() {
   const { activeLanguage } = useLanguage();
-  const lang = activeLanguage; // Short alias for cleaner references
+  const lang = activeLanguage;
 
   return (
     <section className={classes.wrappedMain}>
@@ -178,40 +168,21 @@ function WrappedFamilyFlow() {
           ))}
         </section>
 
-        {/* === Action Buttons (Links) === */}
+        {/* === Action Buttons === */}
         <div className={classes.buttonsContainer}>
-          {/* Live App Button */}
           <a
-            href="https://familyflow.up.railway.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => {
-              // Track the click in Google Analytics, if gtag is available
-              window.gtag?.("event", "navigation_click", {
-                event_category: "Navigation",
-                event_navigation: "Clicked on View live Family Flow Button",
-              });
-            }}
-          >
-            <button className={classes.button}>
-              {translations.button1[lang]}
-            </button>
-          </a>
-
-          {/* GitHub Repository Button */}
-          <a
-            href="https://github.com/family-flow-app/FamilyFlow-FrontEnd"
+            href="https://github.com/yannick-leguennec/manuscrits_corrector"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {
               window.gtag?.("event", "navigation_click", {
                 event_category: "Navigation",
-                event_navigation: "Clicked on GitHub Family Flow Button",
+                event_navigation: "Clicked on GitHub Jean The Writer Button",
               });
             }}
           >
             <button className={classes.button}>
-              {translations.button2[lang]}
+              {translations.button[lang]}
             </button>
           </a>
         </div>
@@ -220,4 +191,4 @@ function WrappedFamilyFlow() {
   );
 }
 
-export default WrappedFamilyFlow;
+export default WrappedJeanTheWriter;

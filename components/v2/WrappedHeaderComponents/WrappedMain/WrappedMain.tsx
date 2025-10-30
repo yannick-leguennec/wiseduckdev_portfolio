@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { useLanguage } from "../../../context/LanguageContext";
-import Header from "../Header/Header";
-import Main from "../Main/Main";
+import { useLanguage } from "../../../../context/LanguageContext";
+import Header from "../../Header/Header";
+import Main from "../../Main/Main";
 import classes from "./WrappedMain.module.scss";
 import Image from "next/image";
-import picture_background_main_horizontal from "../../../public/images/index/v2/images_index_page/wise_duck_dev_profile_picture_portfolio_website_version_2_main_picture_horizontal.webp";
-import picture_background_main_vertical from "../../../public/images/index/v2/images_index_page/wise_duck_dev_profile_picture_portfolio_website_version_2_main_picture_vertical.webp";
-import { TranslationsType } from "../../../types/TranslationsType";
+import picture_background_main_horizontal from "../../../../public/images/index/v2/images_index_page/wise_duck_dev_profile_picture_portfolio_website_version_2_main_picture_horizontal.webp";
+import picture_background_main_vertical from "../../../../public/images/index/v2/images_index_page/wise_duck_dev_profile_picture_portfolio_website_version_2_main_picture_vertical.webp";
+import { TranslationsType } from "../../../../types/TranslationsType";
 
 // 🔸 Translations
 const translation: TranslationsType = {

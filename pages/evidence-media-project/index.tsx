@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 import { GetStaticProps } from "next";
 import React from "react";
+import Link from "next/link";
 import Head from "next/head";
-import Header from "../../components/v2/Header/Header";
-import Footer from "../../components/v1/Footer/Footer";
+import Footer from "../../components/v2/Footer/Footer";
+import WrappedEvidenceMedia from "../../components/v2/WrappedHeaderComponents/WrappedEvidenceMedia/WrappedEvidenceMedia";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useLoader } from "../../context/LoaderContext";
 import { useLanguage } from "../../context/LanguageContext";
 import { TranslationsType } from "../../types/TranslationsType";
 import classes from "../../styles/projects_pages.module.scss";
+import mainPicture from "../../public/images/projectsPictures/evidence_media/evidence_media_project_main_picture.webp";
 
 export default function EvidenceMediaProject() {
   // Custom hook to manage the language changes
@@ -78,8 +80,8 @@ export default function EvidenceMediaProject() {
       FR: "Evidence Media est un projet que j’ai mené 100 % en solo, de la vision initiale jusqu’à l’exécution finale :",
     },
     projectMyRoleContentPoint1: {
-      EN: "Product Strategy: I defined the mission, editorial identity, positioning, target personas, and long-term vision.",
-      FR: "Stratégie produit : définition des fonctionnalités en fonction des besoins du client (correction, relecture, suggestions, recherche d’éditeurs).",
+      EN: "Product Manager: I defined the mission, editorial identity, positioning, target personas, and long-term vision.",
+      FR: "Chef de produit : définition des fonctionnalités en fonction des besoins du client (correction, relecture, suggestions, recherche d’éditeurs).",
     },
     projectMyRoleContentPoint2: {
       EN: "Backend Development: I built all automation scripts in Python, structured a modular architecture, and managed data workflows.",
@@ -150,7 +152,7 @@ export default function EvidenceMediaProject() {
       FR: "Stack & outils",
     },
     projectStackPoint1: {
-      EN: "Languages/Frameworks: Python, Flask",
+      EN: "Languages/Frameworks: Python, Flask, YAML, Shell Scripting",
       FR: "Langages / Frameworks : Python, Flask",
     },
     projectStackPoint2: {
@@ -281,13 +283,9 @@ export default function EvidenceMediaProject() {
       EN: "Key takeaway: Think independently. Iterate rapidly. Automate relentlessly. Build solutions that you would genuinely use—and others will follow.",
       FR: "Leçon fondamentale : Pense librement. Itère rapidement. Automatise sans relâche. Crée des solutions que tu utiliserais toi-même, et d’autres suivront.",
     },
-    buttonViewLive: {
-      EN: "View Live Project",
-      FR: "Voir le projet en ligne",
-    },
-    buttonGitHubRepo: {
-      EN: "View GitHub Repo",
-      FR: "Voir le dépôt GitHub",
+    buttonMainPage: {
+      EN: "Main Page",
+      FR: "Page Principale",
     },
     buttonBack: {
       EN: "Go Back",
@@ -304,6 +302,10 @@ export default function EvidenceMediaProject() {
     twitterImageAltDescription: {
       EN: "Evidence Media - AI-Powered Automated Content Generation & Publication System depicted by an AI generated image of Evidence Media logo",
       FR: "Evidence Media - Système de génération et de publication de contenu automatisé alimenté par l'IA, représenté par une image générée par IA du logo d'Evidence Media",
+    },
+    mainPictureAltDescription: {
+      EN: "The Evidence Media Project main screenshot showing the Evidence Media Substack profile page",
+      FR: "Capture d'écran principale du projet Evidence Media montrant la page de profil Substack d'Evidence Media",
     },
     og_locale: {
       EN: "en_US",
@@ -531,89 +533,255 @@ export default function EvidenceMediaProject() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       </Head>
-      <Header />
-      <main className={classes.mainContainer}>
-        <h1>{translations.pageTitle[activeLanguage]}</h1>
-        {/* Introduction Section */}
-        <h2>{translations.pageSubtitle[activeLanguage]}</h2>
-        <p>{translations.pageIntroduction1[activeLanguage]}</p>
-        {/* Overview Section */}
-        <h2>{translations.projectOverviewTitle[activeLanguage]}</h2>
-        <p>{translations.projectOverviewContent1[activeLanguage]}</p>
-        <p>{translations.projectOverviewContent2[activeLanguage]}</p>
-        <p>{translations.projectOverviewContent3[activeLanguage]}</p>
-        <p>{translations.projectOverviewContent4[activeLanguage]}</p>
-        <p>{translations.projectOverviewContent5[activeLanguage]}</p>
-        <p>{translations.projectOverviewContent6[activeLanguage]}</p>
-        {/* My Role Section */}
-        <h2>{translations.projectMyRoleTitle[activeLanguage]}</h2>
-        <p>{translations.projectMyRoleContent1[activeLanguage]}</p>
-        <ul>
-          <li>{translations.projectMyRoleContentPoint1[activeLanguage]}</li>
-          <li>{translations.projectMyRoleContentPoint2[activeLanguage]}</li>
-          <li>{translations.projectMyRoleContentPoint3[activeLanguage]}</li>
-          <li>{translations.projectMyRoleContentPoint4[activeLanguage]}</li>
-        </ul>
-        <p>{translations.projectMyRoleContent2[activeLanguage]}</p>
-        {/* Creativity Section */}
-        <h2>{translations.projectCreativityTitle[activeLanguage]}</h2>
-        <p>{translations.projectCreativityContent1[activeLanguage]}</p>
-        <p>{translations.projectCreativityContent2[activeLanguage]}</p>
-        <p>{translations.projectCreativityContent3[activeLanguage]}</p>
-        {/* Process Section */}
-        <h2>{translations.projectProcessTitle[activeLanguage]}</h2>
-        <p>{translations.projectProcessContent1[activeLanguage]}</p>
-        <p>{translations.projectProcessContent2[activeLanguage]}</p>
-        <p>{translations.projectProcessContent3[activeLanguage]}</p>
-        <p>{translations.projectProcessContent4[activeLanguage]}</p>
-        <p>{translations.projectProcessContent5[activeLanguage]}</p>
-        <p>{translations.projectProcessContent6[activeLanguage]}</p>
-        <p>{translations.projectProcessContent7[activeLanguage]}</p>
-        {/* Stack Section */}
-        <h2>{translations.projectStackTitle[activeLanguage]}</h2>
-        <ul>
-          <li>{translations.projectStackPoint1[activeLanguage]}</li>
-          <li>{translations.projectStackPoint2[activeLanguage]}</li>
-          <li>{translations.projectStackPoint3[activeLanguage]}</li>
-          <li>{translations.projectStackPoint4[activeLanguage]}</li>
-          <li>{translations.projectStackPoint5[activeLanguage]}</li>
-          <li>{translations.projectStackPoint6[activeLanguage]}</li>
-          <li>{translations.projectStackPoint7[activeLanguage]}</li>
-        </ul>
-        <p>{translations.projectStackContent1[activeLanguage]}</p>
-        <p>{translations.projectStackContent2[activeLanguage]}</p>
-        {/* Design Section */}
-        <h2>{translations.projectDesignTitle[activeLanguage]}</h2>
-        <p>{translations.projectDesignContent1[activeLanguage]}</p>
-        <p>{translations.projectDesignContent2[activeLanguage]}</p>
-        <p>{translations.projectDesignContent3[activeLanguage]}</p>
-        {/* Deployment Section */}
-        <h2>{translations.projectDeploymentTitle[activeLanguage]}</h2>
-        <p>{translations.projectDeploymentContent1[activeLanguage]}</p>
-        <p>{translations.projectDeploymentContent2[activeLanguage]}</p>
-        <p>{translations.projectDeploymentContent3[activeLanguage]}</p>
-        <p>{translations.projectDeploymentContent4[activeLanguage]}</p>
-        {/* Roadmap Section */}
-        <h2>{translations.projectRoadmapTitle[activeLanguage]}</h2>
-        <ul>
-          <li>{translations.projectRoadmapPoint1[activeLanguage]}</li>
-          <li>{translations.projectRoadmapPoint2[activeLanguage]}</li>
-          <li>{translations.projectRoadmapPoint3[activeLanguage]}</li>
-          <li>{translations.projectRoadmapPoint4[activeLanguage]}</li>
-        </ul>
-        <p>{translations.projectRoadmapContent1[activeLanguage]}</p>
-        {/* Results Section */}
-        <h2>{translations.projectResultsTitle[activeLanguage]}</h2>
-        <p>{translations.projectResultsContent1[activeLanguage]}</p>
-        <p>{translations.projectResultsContent2[activeLanguage]}</p>
-        {/* Conclusion Section */}
-        <h2>{translations.projectConclusionTitle[activeLanguage]}</h2>
-        <p>{translations.projectConclusionContent1[activeLanguage]}</p>
-        <p>{translations.projectConclusionContent2[activeLanguage]}</p>
-        <p>{translations.projectConclusionContent3[activeLanguage]}</p>
-        <p>{translations.projectConclusionContent4[activeLanguage]}</p>
-        <p>{translations.projectConclusionContent5[activeLanguage]}</p>
-      </main>
+      <div className={classes.mainContainer}>
+        <WrappedEvidenceMedia />
+        <div className={classes.contentContainer}>
+          <div className={classes.imagesContainer}>
+            <img
+              src={mainPicture.src}
+              alt={translations.mainPictureAltDescription[activeLanguage]}
+              className={classes.imagesBordered}
+            />
+          </div>
+          {/* Introduction Section */}
+          <h2 className={classes.subtitle}>
+            {translations.pageSubtitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <p className={classes.textParagraph}>
+              {translations.pageIntroduction1[activeLanguage]}
+            </p>
+          </div>
+          {/* Overview Section */}
+          <h2 className={classes.subtitle}>
+            {translations.projectOverviewTitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <p className={classes.textParagraph}>
+              {translations.projectOverviewContent1[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectOverviewContent2[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectOverviewContent3[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectOverviewContent4[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectOverviewContent5[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectOverviewContent6[activeLanguage]}
+            </p>
+          </div>
+          {/* My Role Section */}
+          <h2 className={classes.subtitle}>
+            {translations.projectMyRoleTitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <p className={classes.textParagraph}>
+              {translations.projectMyRoleContent1[activeLanguage]}
+            </p>
+
+            <ul className={classes.textList}>
+              <li className={classes.textListItem}>
+                {translations.projectMyRoleContentPoint1[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectMyRoleContentPoint2[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectMyRoleContentPoint3[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectMyRoleContentPoint4[activeLanguage]}
+              </li>
+            </ul>
+            <p className={classes.textParagraph}>
+              {translations.projectMyRoleContent2[activeLanguage]}
+            </p>
+          </div>
+          {/* Creativity Section */}
+          <h2 className={classes.subtitle}>
+            {translations.projectCreativityTitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <p className={classes.textParagraph}>
+              {translations.projectCreativityContent1[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectCreativityContent2[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectCreativityContent3[activeLanguage]}
+            </p>
+          </div>
+          {/* Process Section */}
+          <h2 className={classes.subtitle}>
+            {translations.projectProcessTitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <p className={classes.textParagraph}>
+              {translations.projectProcessContent1[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectProcessContent2[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectProcessContent3[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectProcessContent4[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectProcessContent5[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectProcessContent6[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectProcessContent7[activeLanguage]}
+            </p>
+          </div>
+          {/* Stack Section */}
+          <h2 className={classes.subtitle}>
+            {translations.projectStackTitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <ul className={classes.textList}>
+              <li className={classes.textListItem}>
+                {translations.projectStackPoint1[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectStackPoint2[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectStackPoint3[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectStackPoint4[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectStackPoint5[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectStackPoint6[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectStackPoint7[activeLanguage]}
+              </li>
+            </ul>
+            <p className={classes.textParagraph}>
+              {translations.projectStackContent1[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectStackContent2[activeLanguage]}
+            </p>
+          </div>
+          {/* Design Section */}
+          <h2 className={classes.subtitle}>
+            {translations.projectDesignTitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <p className={classes.textParagraph}>
+              {translations.projectDesignContent1[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectDesignContent2[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectDesignContent3[activeLanguage]}
+            </p>
+          </div>
+          {/* Deployment Section */}
+          <h2 className={classes.subtitle}>
+            {translations.projectDeploymentTitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <p className={classes.textParagraph}>
+              {translations.projectDeploymentContent1[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectDeploymentContent2[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectDeploymentContent3[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectDeploymentContent4[activeLanguage]}
+            </p>
+          </div>
+          {/* Roadmap Section */}
+          <h2 className={classes.subtitle}>
+            {translations.projectRoadmapTitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <ul className={classes.textList}>
+              <li className={classes.textListItem}>
+                {translations.projectRoadmapPoint1[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectRoadmapPoint2[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectRoadmapPoint3[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectRoadmapPoint4[activeLanguage]}
+              </li>
+            </ul>
+            <p className={classes.textParagraph}>
+              {translations.projectRoadmapContent1[activeLanguage]}
+            </p>
+          </div>
+          {/* Results Section */}
+          <h2 className={classes.subtitle}>
+            {translations.projectResultsTitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <p className={classes.textParagraph}>
+              {translations.projectResultsContent1[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectResultsContent2[activeLanguage]}
+            </p>
+          </div>
+          {/* Conclusion Section */}
+          <h2 className={classes.subtitle}>
+            {translations.projectConclusionTitle[activeLanguage]}
+          </h2>
+          <div className={classes.textContainer}>
+            <p className={classes.textParagraph}>
+              {translations.projectConclusionContent1[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectConclusionContent2[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectConclusionContent3[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectConclusionContent4[activeLanguage]}
+            </p>
+            <p className={classes.textParagraph}>
+              {translations.projectConclusionContent5[activeLanguage]}
+            </p>
+          </div>
+          <div className={classes.buttonsContainer}>
+            <button
+              onClick={handleBackClick}
+              className={classes.buttonReverted}
+            >
+              {translations.buttonBack[activeLanguage]}
+            </button>
+            <Link href="/" className={classes.button}>
+              {translations.buttonMainPage[activeLanguage]}
+            </Link>
+          </div>
+        </div>
+      </div>
       <Footer />
       <SpeedInsights />
     </>

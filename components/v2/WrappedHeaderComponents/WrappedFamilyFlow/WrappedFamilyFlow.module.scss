@@ -1,5 +1,5 @@
-@import "../../../styles/variables.scss";
-@import "../../../styles/mixins.scss";
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/mixins.scss";
 
 // ===============================
 // MAIN CONTAINER
@@ -15,7 +15,7 @@
 }
 
 // ===============================
-// BACKGROUND IMAGE
+// BACKGROUND IMAGE/
 // ===============================
 .image {
   position: absolute;
@@ -175,7 +175,6 @@
   justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
-  width: 65%;
 
   @media (max-width: 1024px) {
     width: 65%;
