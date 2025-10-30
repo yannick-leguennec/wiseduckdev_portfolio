@@ -1046,7 +1046,15 @@ export default function PrivacyPolicy() {
               {translation.contactForm[activeLanguage]}
             </p>
             <div className={classes.buttonContainer}>
-              <button onClick={handleBackClick} className={classes.button}>
+              <button
+                onClick={handleBackClick}
+                className={classes.button}
+                aria-label={
+                  activeLanguage === "FR"
+                    ? "Retourner à la page précédente"
+                    : "Go back to the previous page"
+                }
+              >
                 {translation.button[activeLanguage]}
               </button>
             </div>

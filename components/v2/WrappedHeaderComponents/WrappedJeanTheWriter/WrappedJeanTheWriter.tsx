@@ -181,7 +181,14 @@ function WrappedJeanTheWriter() {
               });
             }}
           >
-            <button className={classes.button}>
+            <button
+              className={classes.button}
+              aria-label={
+                activeLanguage === "FR"
+                  ? "Voir le dépôt GitHub de Jean l'Écrivain"
+                  : "View Jean the Writer GitHub repository"
+              }
+            >
               {translations.button[lang]}
             </button>
           </a>

@@ -205,7 +205,14 @@ function WrappedEvidenceMedia() {
               });
             }}
           >
-            <button className={classes.button}>
+            <button
+              className={classes.button}
+              aria-label={
+                activeLanguage === "EN"
+                  ? "View Live Evidence Media X account"
+                  : "Voir le compte X d'Evidence Media"
+              }
+            >
               {translations.button1[lang]}
             </button>
           </a>
@@ -222,7 +229,14 @@ function WrappedEvidenceMedia() {
               });
             }}
           >
-            <button className={classes.button}>
+            <button
+              className={classes.button}
+              aria-label={
+                activeLanguage === "EN"
+                  ? "View Live Evidence Media Substack account"
+                  : "Voir le compte Substack d'Evidence Media"
+              }
+            >
               {translations.button2[lang]}
             </button>
           </a>
@@ -240,7 +254,14 @@ function WrappedEvidenceMedia() {
               });
             }}
           >
-            <button className={classes.button}>
+            <button
+              className={classes.button}
+              aria-label={
+                activeLanguage === "EN"
+                  ? "View Evidence Media GitHub repository"
+                  : "Voir le dépôt GitHub d'Evidence Media"
+              }
+            >
               {translations.button3[lang]}
             </button>
           </a>

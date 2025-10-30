@@ -153,12 +153,22 @@ const ConsentModal = () => {
           <button
             className={classes.rejectButton}
             onClick={() => updateConsent(false)}
+            aria-label={
+              activeLanguage === "EN"
+                ? "Reject data collection"
+                : "Rejeter la collecte de données"
+            }
           >
             {translations.rejectButton[activeLanguage]}
           </button>
           <button
             className={classes.acceptButton}
             onClick={() => updateConsent(true)}
+            aria-label={
+              activeLanguage === "EN"
+                ? "Accept data collection"
+                : "Accepter la collecte de données"
+            }
           >
             {translations.acceptButton[activeLanguage]}
           </button>

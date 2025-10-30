@@ -213,7 +213,14 @@ function WrappedWiseDuckDevGPTs() {
               });
             }}
           >
-            <button className={classes.button}>
+            <button
+              className={classes.button}
+              aria-label={
+                activeLanguage === "FR"
+                  ? "Voir le projet en direct Wise Duck Dev GPTs"
+                  : "View Live Wise Duck Dev GPTs Project"
+              }
+            >
               {translations.button1[lang]}
             </button>
           </a>
@@ -230,7 +237,14 @@ function WrappedWiseDuckDevGPTs() {
               });
             }}
           >
-            <button className={classes.button}>
+            <button
+              className={classes.button}
+              aria-label={
+                activeLanguage === "FR"
+                  ? "Voir le dépôt GitHub de Wise Duck Dev GPTs"
+                  : "View Wise Duck Dev GPTs GitHub repository"
+              }
+            >
               {translations.button2[lang]}
             </button>
           </a>

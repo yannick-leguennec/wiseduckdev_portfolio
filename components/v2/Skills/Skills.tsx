@@ -226,6 +226,11 @@ const Skills = () => {
                     }`}
                     onClick={() => setActiveCategory(key)}
                     aria-pressed={activeCategory === key}
+                    arial-label={
+                      activeLanguage === "EN"
+                        ? `Select ${translations[key]["EN"]} skills category`
+                        : `Sélectionner la catégorie ${translations[key]["FR"]}`
+                    }
                   >
                     {translations[key][activeLanguage]}
                   </button>

@@ -23,7 +23,13 @@ const ModalContact: React.FC<ModalProps> = ({ message, onClose }) => {
     <div className={classes.modalBackdrop}>
       <div className={classes.modalContent}>
         <p className={classes.message}>{message}</p>
-        <button className={classes.button} onClick={onClose}>
+        <button
+          className={classes.button}
+          onClick={onClose}
+          aria-label={
+            activeLanguage === "EN" ? "Close modal" : "Fermer la fenêtre modale"
+          }
+        >
           {translations.close[activeLanguage]}
         </button>
       </div>

@@ -151,6 +151,11 @@ function Portfolio() {
                       `Click on ${project.title} from Portfolio section`
                     )
                   }
+                  aria-label={
+                    activeLanguage === "EN"
+                      ? `See details about ${project.title} project`
+                      : `Voir les détails du projet ${project.title}`
+                  }
                 >
                   {translations.button[activeLanguage]}
                 </Link>
