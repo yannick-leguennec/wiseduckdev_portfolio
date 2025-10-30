@@ -44,6 +44,11 @@ class MyDocument extends Document<MyDocumentProps> {
           <meta charSet="UTF-8" />
           <meta name="author" content="The Wise Duck Dev" />
           <link
+            rel="sitemap"
+            type="application/xml"
+            href="https://wiseduckdev.com/sitemap.xml"
+          />
+          <link
             rel="icon"
             href={`https://${siteUrl}/favicon.ico`}
             type="image/x-icon"

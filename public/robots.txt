@@ -1,6 +1,8 @@
+# Wise Duck Dev - robots.txt
+# Blocks API routes, allows all public content
+
 User-agent: *
 Disallow: /pages/api/
 
 Sitemap: https://wiseduckdev.com/sitemap.xml
-
 

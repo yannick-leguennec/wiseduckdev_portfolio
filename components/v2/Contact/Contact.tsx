@@ -304,6 +304,7 @@ function Contact({ id, onLoaded }: ContactProps) {
               autoComplete="name"
               placeholder={translations.placeholderName[activeLanguage]}
               className={classes.input}
+              aria-label={activeLanguage === "FR" ? "Nom" : "Name"}
             />
             <ErrorMessage
               name="name"
@@ -322,6 +323,7 @@ function Contact({ id, onLoaded }: ContactProps) {
               autoComplete="email"
               placeholder={translations.placeholderEmail[activeLanguage]}
               className={classes.input}
+              aria-label={activeLanguage === "FR" ? "Email" : "Email"}
             />
             <ErrorMessage
               name="email"
@@ -339,6 +341,7 @@ function Contact({ id, onLoaded }: ContactProps) {
               type="text"
               placeholder={translations.placeholderSubject[activeLanguage]}
               className={classes.input}
+              aria-label={activeLanguage === "FR" ? "Sujet" : "Subject"}
             />
             <ErrorMessage
               name="subject"
@@ -357,6 +360,9 @@ function Contact({ id, onLoaded }: ContactProps) {
               rows="5"
               placeholder={translations.placeholderMessage[activeLanguage]}
               className={classes.textarea}
+              aria-label={
+                activeLanguage === "FR" ? "Votre message" : "Your message"
+              }
             />
             <ErrorMessage
               name="message"
@@ -377,6 +383,11 @@ function Contact({ id, onLoaded }: ContactProps) {
               disabled={isSubmitting}
               className={classes.button}
               aria-disabled={isSubmitting}
+              aria-label={
+                activeLanguage === "FR"
+                  ? "Envoyer le formulaire"
+                  : "Submit the form"
+              }
             >
               {translations.send[activeLanguage]}
             </button>

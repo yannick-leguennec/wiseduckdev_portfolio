@@ -41,7 +41,15 @@ function NotFound() {
         <h1 className={classes.title}>404</h1>
         <h2 className={classes.text1}>{translations.text1[activeLanguage]}</h2>
         <p className={classes.text2}>{translations.text2[activeLanguage]}</p>
-        <button onClick={handleBackClick} className={classes.button}>
+        <button
+          onClick={handleBackClick}
+          className={classes.button}
+          aria-label={
+            activeLanguage === "FR"
+              ? "Retourner à la page précédente"
+              : "Go back to the previous page"
+          }
+        >
           {translations.button[activeLanguage]}
         </button>
       </div>

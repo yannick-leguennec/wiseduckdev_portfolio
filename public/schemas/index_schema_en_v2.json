@@ -24,7 +24,7 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "Customer Support",
-        "email": "mailto:wiseduckdev@gmail.com",
+        "email": "wiseduckdev@gmail.com",
         "url": "https://wiseduckdev.com/#contact",
         "availableLanguage": ["English", "French"]
       }
@@ -48,7 +48,7 @@
         "https://x.com/wiseduckdev",
         "https://www.linkedin.com/in/wise-duck-dev/"
       ],
-      "email": "mailto:wiseduckdev@gmail.com",
+      "email": "wiseduckdev@gmail.com",
       "alumniOf": [
         { "@type": "EducationalOrganization", "name": "O'clock" },
         { "@type": "CollegeOrUniversity", "name": "HEC Montreal" },
@@ -168,7 +168,9 @@
         "url": "https://wiseduckdev.com/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp"
       },
       "publisher": { "@id": "https://wiseduckdev.com#organization" },
-      "isAccessibleForFree": true
+      "isAccessibleForFree": true,
+      "datePublished": "2024-03-08",
+      "dateModified": "2025-11-01"
     }
   ]
 }

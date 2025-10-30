@@ -193,7 +193,14 @@ function WrappedFamilyFlow() {
               });
             }}
           >
-            <button className={classes.button}>
+            <button
+              className={classes.button}
+              aria-label={
+                activeLanguage === "FR"
+                  ? "Voir l'application Family Flow en direct"
+                  : "View the Family Flow live application"
+              }
+            >
               {translations.button1[lang]}
             </button>
           </a>
@@ -210,7 +217,14 @@ function WrappedFamilyFlow() {
               });
             }}
           >
-            <button className={classes.button}>
+            <button
+              className={classes.button}
+              aria-label={
+                activeLanguage === "FR"
+                  ? "Voir le dépôt GitHub de Family Flow"
+                  : "View the Family Flow GitHub repository"
+              }
+            >
               {translations.button2[lang]}
             </button>
           </a>
