@@ -192,17 +192,14 @@ function WrappedFamilyFlow() {
                 event_navigation: "Clicked on View live Family Flow Button",
               });
             }}
+            className={classes.button}
+            aria-label={
+              activeLanguage === "FR"
+                ? "Voir l'application Family Flow en direct"
+                : "View the Family Flow live application"
+            }
           >
-            <button
-              className={classes.button}
-              aria-label={
-                activeLanguage === "FR"
-                  ? "Voir l'application Family Flow en direct"
-                  : "View the Family Flow live application"
-              }
-            >
-              {translations.button1[lang]}
-            </button>
+            {translations.button1[lang]}
           </a>
 
           {/* GitHub Repository Button */}
@@ -216,17 +213,14 @@ function WrappedFamilyFlow() {
                 event_navigation: "Clicked on GitHub Family Flow Button",
               });
             }}
+            className={classes.button}
+            aria-label={
+              activeLanguage === "FR"
+                ? "Voir le dépôt GitHub de Family Flow"
+                : "View the Family Flow GitHub repository"
+            }
           >
-            <button
-              className={classes.button}
-              aria-label={
-                activeLanguage === "FR"
-                  ? "Voir le dépôt GitHub de Family Flow"
-                  : "View the Family Flow GitHub repository"
-              }
-            >
-              {translations.button2[lang]}
-            </button>
+            {translations.button2[lang]}
           </a>
         </div>
       </div>

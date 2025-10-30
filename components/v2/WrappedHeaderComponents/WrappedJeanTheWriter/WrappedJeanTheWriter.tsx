@@ -180,17 +180,14 @@ function WrappedJeanTheWriter() {
                 event_navigation: "Clicked on GitHub Jean The Writer Button",
               });
             }}
+            className={classes.button}
+            aria-label={
+              activeLanguage === "FR"
+                ? "Voir le dépôt GitHub de Jean l'Écrivain"
+                : "View Jean the Writer GitHub repository"
+            }
           >
-            <button
-              className={classes.button}
-              aria-label={
-                activeLanguage === "FR"
-                  ? "Voir le dépôt GitHub de Jean l'Écrivain"
-                  : "View Jean the Writer GitHub repository"
-              }
-            >
-              {translations.button[lang]}
-            </button>
+            {translations.button[lang]}
           </a>
         </div>
       </div>

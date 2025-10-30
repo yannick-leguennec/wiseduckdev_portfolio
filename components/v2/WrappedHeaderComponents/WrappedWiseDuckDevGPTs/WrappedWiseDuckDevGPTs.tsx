@@ -212,17 +212,14 @@ function WrappedWiseDuckDevGPTs() {
                   "Clicked on View Live Wise Duck Dev GPTs Button",
               });
             }}
+            className={classes.button}
+            aria-label={
+              activeLanguage === "FR"
+                ? "Voir le projet en direct Wise Duck Dev GPTs"
+                : "View Live Wise Duck Dev GPTs Project"
+            }
           >
-            <button
-              className={classes.button}
-              aria-label={
-                activeLanguage === "FR"
-                  ? "Voir le projet en direct Wise Duck Dev GPTs"
-                  : "View Live Wise Duck Dev GPTs Project"
-              }
-            >
-              {translations.button1[lang]}
-            </button>
+            {translations.button1[lang]}
           </a>
 
           {/* GitHub */}
@@ -236,17 +233,14 @@ function WrappedWiseDuckDevGPTs() {
                 event_navigation: "Clicked on GitHub Wise Duck Dev GPTs Button",
               });
             }}
+            className={classes.button}
+            aria-label={
+              activeLanguage === "FR"
+                ? "Voir le dépôt GitHub de Wise Duck Dev GPTs"
+                : "View Wise Duck Dev GPTs GitHub repository"
+            }
           >
-            <button
-              className={classes.button}
-              aria-label={
-                activeLanguage === "FR"
-                  ? "Voir le dépôt GitHub de Wise Duck Dev GPTs"
-                  : "View Wise Duck Dev GPTs GitHub repository"
-              }
-            >
-              {translations.button2[lang]}
-            </button>
+            {translations.button2[lang]}
           </a>
         </div>
       </div>

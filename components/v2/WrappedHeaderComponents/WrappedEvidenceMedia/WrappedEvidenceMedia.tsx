@@ -204,17 +204,14 @@ function WrappedEvidenceMedia() {
                   "Clicked on View Live Evidence Media X account Button",
               });
             }}
+            className={classes.button}
+            aria-label={
+              activeLanguage === "EN"
+                ? "View Live Evidence Media X account"
+                : "Voir le compte X d'Evidence Media"
+            }
           >
-            <button
-              className={classes.button}
-              aria-label={
-                activeLanguage === "EN"
-                  ? "View Live Evidence Media X account"
-                  : "Voir le compte X d'Evidence Media"
-              }
-            >
-              {translations.button1[lang]}
-            </button>
+            {translations.button1[lang]}
           </a>
 
           <a
@@ -228,17 +225,14 @@ function WrappedEvidenceMedia() {
                   "Clicked on View Live Evidence Media Substack account Button",
               });
             }}
+            className={classes.button}
+            aria-label={
+              activeLanguage === "EN"
+                ? "View Live Evidence Media Substack account"
+                : "Voir le compte Substack d'Evidence Media"
+            }
           >
-            <button
-              className={classes.button}
-              aria-label={
-                activeLanguage === "EN"
-                  ? "View Live Evidence Media Substack account"
-                  : "Voir le compte Substack d'Evidence Media"
-              }
-            >
-              {translations.button2[lang]}
-            </button>
+            {translations.button2[lang]}
           </a>
 
           {/* GitHub Repo */}
@@ -253,17 +247,14 @@ function WrappedEvidenceMedia() {
                   "Clicked on View GitHub Evidence Media Repo Button",
               });
             }}
+            className={classes.button}
+            aria-label={
+              activeLanguage === "EN"
+                ? "View Evidence Media GitHub repository"
+                : "Voir le dépôt GitHub d'Evidence Media"
+            }
           >
-            <button
-              className={classes.button}
-              aria-label={
-                activeLanguage === "EN"
-                  ? "View Evidence Media GitHub repository"
-                  : "Voir le dépôt GitHub d'Evidence Media"
-              }
-            >
-              {translations.button3[lang]}
-            </button>
+            {translations.button3[lang]}
           </a>
         </div>
       </div>
