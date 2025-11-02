@@ -81,6 +81,8 @@ const translations = {
       "Git",
       "GitHub",
       "Figma",
+      "Google Analytics",
+      "SEO",
     ],
     FR: [
       "React",
@@ -102,6 +104,8 @@ const translations = {
       "Git",
       "GitHub",
       "Figma",
+      "Google Analytics",
+      "SEO",
     ],
   },
   button1: {
