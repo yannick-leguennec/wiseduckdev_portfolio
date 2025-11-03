@@ -33,8 +33,8 @@ const translations = {
     FR: "image de fond dorée",
   },
   pageTitle: {
-    EN: "The Wise Duck Dev GPTs Project",
-    FR: "Le projet Wise Duck Dev GPTs",
+    EN: "Wise Duck Dev GPTs",
+    FR: "Wise Duck Dev GPTs",
   },
   pageIntroductionSentence: {
     EN: "Discover Wise Duck Dev GPTs — a platform hosting over 800 AI-powered custom GPTs built for developers across web, mobile, AI, blockchain, and gaming. A project born from curiosity, crafted for innovation.",

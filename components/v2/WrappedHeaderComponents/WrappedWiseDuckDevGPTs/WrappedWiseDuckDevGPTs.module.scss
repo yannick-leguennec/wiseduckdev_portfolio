@@ -67,8 +67,9 @@
   font-size: 5rem;
   font-weight: 900;
   color: $title-color-v2;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   text-align: center;
+  line-height: 5rem;
 
   @media (max-width: 1024px) {
     font-size: 4rem;
