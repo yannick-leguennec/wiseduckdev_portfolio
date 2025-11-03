@@ -79,8 +79,9 @@
 // SUBTITLE
 .subtitle {
   font-size: 2.8rem;
-  font-weight: 900;
+  font-weight: 800;
   text-align: center;
+  line-height: 3rem;
 
   @media (max-width: 1024px) {
     font-size: 2.5rem;
@@ -88,11 +89,13 @@
 
   @media (max-width: 768px) {
     font-size: 1.5rem;
+    line-height: 1.8rem;
   }
 
   @media (max-width: 540px) {
     font-size: 1.3rem;
     text-align: center;
+    line-height: 1.5rem;
   }
 }
 
@@ -103,8 +106,8 @@
 }
 
 .gptsLinkOrange {
-  font-weight: 900;
-  color: black;
+  font-weight: 700;
+  color: $icon-color-v2;
 }
 
 // BUTTON CONTAINER

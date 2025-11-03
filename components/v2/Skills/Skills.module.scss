@@ -13,6 +13,10 @@
   justify-content: flex-start;
   padding: 4rem 2rem;
   text-align: center;
+
+  @media (max-width: 1024px) {
+    min-height: auto;
+  }
 }
 
 // ===============================
@@ -136,10 +140,18 @@
   line-height: 1.6;
   color: #222;
   max-width: auto;
+
+  @media (max-width: 540px) {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .groupContainer {
   margin-bottom: 2.5rem;
+
+  @media (max-width: 540px) {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .groupTitle {
@@ -147,6 +159,9 @@
   margin-bottom: 1rem;
   font-size: 1.2rem;
   color: #111;
+
+  @media (max-width: 540px) {
+  }
 }
 
 .tagsContainer {
@@ -204,4 +219,12 @@
   font-weight: 700;
   margin-bottom: 1rem;
   color: #111;
+}
+
+.mobileCategoryTitle {
+  @media (max-width: 540px) {
+    font-size: 1.7rem;
+    line-height: 2.1rem;
+    margin: 0;
+  }
 }

@@ -67,7 +67,7 @@ function Contact({ id, onLoaded }: ContactProps) {
    *  TRANSLATIONS (EN / FR)
    *  ---------------------------- */
   const translations: TranslationsType = {
-    title: { EN: "Let's connect", FR: "Connectons" },
+    title: { EN: "Let's Connect", FR: "Connectons" },
     subtitle: { EN: "The Wise Duck Dev", FR: "The Wise Duck Dev" },
     text1: {
       EN: "Looking for a cutting-edge web developer?",
