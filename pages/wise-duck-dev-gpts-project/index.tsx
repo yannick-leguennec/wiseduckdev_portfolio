@@ -138,8 +138,8 @@ export default function WiseDuckDevGPTsProject() {
       FR: "Front-End: React, Next.js, TypeScript, Sass",
     },
     projectStackPoint2: {
-      EN: "Back-End : Node.js, Express, Prisma",
-      FR: "Back-End : Node.js, Express, Prisma",
+      EN: "Back-End : Prisma",
+      FR: "Back-End : Prisma",
     },
     projectStackPoint3: {
       EN: "Database : PostgreSQL",
