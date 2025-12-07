@@ -1,5 +1,5 @@
-// VARIABLES
-@import "variables";
+@use "styles" as *;
+
 .mainContainer {
   width: 100%;
   min-height: 94vh;
