@@ -26,7 +26,7 @@
     "formik": "^2.4.5",
     "framer-motion": "^12.23.12",
     "googleapis": "^134.0.0",
-    "next": "15.0.2",
+    "next": "16.0.7",
     "next-share": "^0.27.0",
     "nodemailer": "^6.9.11",
     "react": "18.3.1",
@@ -49,7 +49,7 @@
     "eslint": "^8.57.0",
     "eslint-config-next": "15.0.2",
     "postcss": "^8.4.35",
-    "sass": "^1.71.1",
+    "sass": "^1.94.2",
     "tailwindcss": "^3.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.2"

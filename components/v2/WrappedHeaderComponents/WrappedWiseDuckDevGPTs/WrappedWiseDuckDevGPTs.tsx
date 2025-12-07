@@ -88,8 +88,6 @@ const translations = {
       "TypeScript",
       "CSS",
       "Sass",
-      "Node.js",
-      "Express.js",
       "Prisma",
       "PostgreSQL",
       "Meilisearch",

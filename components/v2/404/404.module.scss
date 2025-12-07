@@ -1,7 +1,4 @@
-// MIXINS
-@import "../../../styles/mixins.scss";
-// VARIABLES
-@import "../../../styles/variables.scss";
+@use "../../../styles" as *;
 
 // MAIN CONTAINER
 .container {

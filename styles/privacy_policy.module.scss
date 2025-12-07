@@ -1,7 +1,4 @@
-// VARIABLES
-@import "variables";
-// MIXINS
-@import "mixins";
+@use "styles" as *;
 
 // MAIN CONTAINER
 .mainContainer {

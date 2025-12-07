@@ -1,13 +1,20 @@
+// next.config.js
 const path = require("path");
 
-module.exports = {
-  sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
-  },
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   i18n: {
     locales: ["en", "fr"],
     defaultLocale: "en",
   },
+
+  sassOptions: {
+    // project root as Sass load path
+    includePaths: [path.resolve(__dirname)],
+    // no additionalData, no @use in there
+  },
+
+  turbopack: {},
 
   async redirects() {
     return [
@@ -1573,3 +1580,5 @@ module.exports = {
     ];
   },
 };
+
+module.exports = nextConfig;
