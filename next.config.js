@@ -8,19 +8,13 @@ const nextConfig = {
     defaultLocale: "en",
   },
 
-  webpack(config) {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      "@": path.resolve(__dirname), // JS/TS only
-    };
-    return config;
-  },
-
   sassOptions: {
     // project root as Sass load path
     includePaths: [path.resolve(__dirname)],
     // no additionalData, no @use in there
   },
+
+  turbopack: {},
 
   async redirects() {
     return [
