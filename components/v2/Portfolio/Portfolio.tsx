@@ -102,8 +102,8 @@ function Portfolio() {
       id: "evidence_media",
       title: "Evidence Media Project",
       description: {
-        EN: "The Evidence Media Project automates the creation, enhancement, and publication of timely news content for Evidence Media on X and Substack. It leverages AI for classification and contextual enrichment of X posts, generates long‑form Substack articles, securely manages credentials with Vault, and orchestrates fully automated, scheduled workflows via GitHub Actions.",
-        FR: "Le projet Evidence Media automatise la création, l’enrichissement et la publication de contenus d’actualité pour Evidence Media sur X et Substack. Il utilise l’IA pour classifier et contextualiser les publications X, génère des articles long format pour Substack, gère les identifiants de manière sécurisée via Vault et orchestre des workflows entièrement automatisés et planifiés avec GitHub Actions.",
+        EN: "Evidence Media is a fully autonomous, AI-powered independent news media operating on X and Substack. It covers 8 news categories daily, publishing multiple content formats on X and deep-dive articles, a free Daily Brief, and Notes on Substack. The entire system is orchestrated by automated workflows with self-healing infrastructure.",
+        FR: "Evidence Media est un media d'information independant entierement autonome et propulse par l'IA, operant sur X et Substack. Il couvre 8 categories d'actualites quotidiennement, publiant dans plusieurs formats sur X ainsi que des articles de fond, un Daily Brief gratuit et des Notes sur Substack. L'ensemble est orchestre par des workflows automatises avec une infrastructure auto-reparatrice.",
       },
       profile: evidence_profile.src,
       main: evidence_main.src,
@@ -148,7 +148,7 @@ function Portfolio() {
                   className={classes.projectButton}
                   onClick={() =>
                     handleNavigationClick(
-                      `Click on ${project.title} from Portfolio section`
+                      `Click on ${project.title} from Portfolio section`,
                     )
                   }
                   aria-label={

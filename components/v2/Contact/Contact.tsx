@@ -370,12 +370,15 @@ function Contact({ id, onLoaded }: ContactProps) {
               className={classes.errorMessage}
             />
 
-            <Field
-              type="text"
-              name="hiddenField"
-              autoComplete="off"
-              className={classes.hiddenField}
-            />
+            {/* Honeypot Field */}
+            <div className={classes.honeypot} aria-hidden="true">
+              <Field
+                type="text"
+                name="hiddenField"
+                autoComplete="off"
+                tabIndex={-1}
+              />
+            </div>
 
             {/* Submit Button */}
             <button
