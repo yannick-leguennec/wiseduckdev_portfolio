@@ -217,11 +217,12 @@
    HIDDEN FIELD
    Used as a honeypot for spam prevention
    ============================================ */
-.hiddenField {
-  display: none !important;
-  visibility: hidden;
-  height: 0;
-  width: 0;
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 /* ============================================

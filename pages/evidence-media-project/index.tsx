@@ -36,16 +36,16 @@ export default function EvidenceMediaProject() {
       FR: "Système automatisé de génération et de publication de contenu",
     },
     pageIntroduction1: {
-      EN: "In spring 2025, I launched Evidence Media, a groundbreaking platform that automates the curation and publication of independent online news, delivering sourced posts on X and detailed articles on Substack. Born from my desire to counter misinformation, this solo project evolved from a personal idea into an essential resource for informing the North American public.",
-      FR: "Au printemps 2025, j’ai lancé Evidence Media, une plateforme innovante qui automatise la curation et la publication de nouvelles indépendantes en ligne, diffusant des publications sourcées sur X et des articles détaillés sur Substack. Né de ma volonté de contrer la désinformation, ce projet solo a évolué d’une idée personnelle vers une ressource essentielle pour informer le public nord-américain.",
+      EN: "In spring 2025, I launched Evidence Media, an independent news platform that automates the curation and publication of sourced news across X and Substack. What started as a personal project to counter mainstream media bias has evolved through five major versions into a fully autonomous media outlet covering 8 categories daily across multiple publication formats and platforms.",
+      FR: "Au printemps 2025, j'ai lance Evidence Media, une plateforme mediatique independante qui automatise la curation et la publication d'actualites sourcees sur X et Substack. Ce qui a debute comme un projet personnel pour contrer les biais mediatiques a evolue a travers cinq versions majeures en un media entierement autonome couvrant 8 categories quotidiennement sur plusieurs formats et plateformes.",
     },
     projectOverviewTitle: {
       EN: "Project Overview",
       FR: "Aperçu du projet",
     },
     projectOverviewContent1: {
-      EN: "Evidence Media is a fully automated, AI-powered news pipeline designed to curate, aggregate, and distribute information from independent online sources. It publishes daily sourced updates on X (formerly Twitter) and long-form articles on Substack.",
-      FR: "Evidence Media est un pipeline d'information entièrement automatisé et propulsé par l'IA, conçu pour sélectionner, agréger et diffuser les actualités provenant de sources indépendantes en ligne. Il génère quotidiennement des publications sourcées sur X et des articles sur Substack.",
+      EN: "Evidence Media is a fully autonomous, AI-powered news pipeline designed to curate, analyze, and distribute independent news for North American audiences. It publishes daily across X (news briefs, threads, ultra-shorts, quote-tweets) and Substack (deep-dive articles by category, a free Daily Brief newsletter, and Notes throughout the day).",
+      FR: "Evidence Media est un pipeline d'information entierement autonome et propulse par l'IA, concu pour selectionner, analyser et diffuser des actualites independantes pour le public nord-americain. Il publie quotidiennement sur X (breves, threads, ultra-courts, citations) et Substack (articles de fond par categorie, un Daily Brief gratuit et des Notes tout au long de la journee).",
     },
     projectOverviewContent2: {
       EN: "Since the COVID-19 pandemic, public trust in mainstream media has been severely undermined due to widespread collusion between institutions, governments, and news organizations. This convergence gave rise to a homogenized narrative, accompanied by systemic censorship—now widely referred to as the censorship industrial complex. In response, a growing number of citizens have turned to independent sources of information: freelance journalists, niche newsletters, alternative podcasts, and social platforms like X.",
@@ -64,8 +64,8 @@ export default function EvidenceMediaProject() {
       FR: "Chaque information relayée est accompagnée de sa source primaire, permettant au lecteur d’en juger la pertinence, d’en vérifier l’exactitude ou d’approfondir ses recherches s’il le souhaite. Contrairement aux médias traditionnels, souvent inféodés à une ligne éditoriale imposée, ou à certains médias indépendants peu rigoureux sur la traçabilité de leurs contenus, Evidence Media se distingue par sa transparence, sa fiabilité et son engagement méthodologique.",
     },
     projectOverviewContent6: {
-      EN: "The project was initiated in early spring 2025, with its first official version launched by late spring of the same year.",
-      FR: "Le projet a été initié au début du printemps 2025, et sa version 1 a été lancée à la fin du printemps de la même année.",
+      EN: "The project launched in spring 2025. After four major iterations, V5 shipped in spring 2026 as a complete ground-up rebuild with comprehensive test coverage, automated workflows, structured logging, and a continuous editorial improvement system.",
+      FR: "Le projet a ete lance au printemps 2025. Apres quatre iterations majeures, la V5 a ete livree au printemps 2026, une reconstruction complete avec une couverture de tests exhaustive, des workflows automatises, un logging structure et un systeme d'amelioration editoriale continue.",
     },
     projectMyRoleTitle: {
       EN: "My Role",
@@ -77,19 +77,19 @@ export default function EvidenceMediaProject() {
     },
     projectMyRoleContentPoint1: {
       EN: "Product Manager: I defined the mission, editorial identity, positioning, target personas, and long-term vision.",
-      FR: "Chef de produit : définition des fonctionnalités en fonction des besoins du client (correction, relecture, suggestions, recherche d’éditeurs).",
+      FR: "Chef de produit : j'ai defini la mission, l'identite editoriale, le positionnement, les personas cibles et la vision a long terme.",
     },
     projectMyRoleContentPoint2: {
-      EN: "Backend Development: I built all automation scripts in Python, structured a modular architecture, and managed data workflows.",
-      FR: "Développement backend : j’ai conçu tous les scripts d’automatisation en Python, structuré une architecture modulaire, et mis en place les flux de traitement des données.",
+      EN: "Backend Development: I built the entire V5 architecture in Python following TDD/SOLID principles, with domain models, adapters, pipelines, and 919 unit tests.",
+      FR: "Developpement backend : j'ai concu l'architecture V5 complete en Python selon les principes TDD/SOLID, avec des modeles de domaine, des adaptateurs, des pipelines et 919 tests unitaires.",
     },
     projectMyRoleContentPoint3: {
-      EN: "AI Integration: I orchestrated a multi-model pipeline using OpenAI, Perplexity, and xAI APIs to generate contextualized, sourced content, as their relative media.",
-      FR: "Intégration de l’IA : j’ai orchestré un pipeline multi-modèles utilisant les API d’OpenAI, Perplexity et xAI, afin de générer des contenus contextualisés, sourcés, et accompagnés de leurs médias associés.",
+      EN: "AI Integration: I orchestrated a multi-model pipeline using xAI Grok (all LLM tasks), OpenAI (embeddings), and Anthropic Claude (self-healing Selenium), with batch API optimization and prompt caching for cost efficiency.",
+      FR: "Integration IA : j'ai orchestre un pipeline multi-modeles utilisant xAI Grok (toutes les taches LLM), OpenAI (embeddings) et Anthropic Claude (Selenium auto-reparateur), avec optimisation par API batch et mise en cache des prompts.",
     },
     projectMyRoleContentPoint4: {
-      EN: "Advanced Automation: I implemented GitHub Actions for scheduling and deployment, secured secrets with HashiCorp Vault, and designed a system built for scale.",
-      FR: "Automatisation avancée : j’ai intégré GitHub Actions pour déclencher chaque étape clé du système de manière autonome, sécurisé l’ensemble des données sensibles du projet avec HashiCorp Vault, et bâti un socle technique capable d’absorber la croissance sans compromis.",
+      EN: "Advanced Automation: I designed a fully automated CI/CD pipeline with early-exit guardrails, dual failure alerts (issue tracking + email), and intelligent scheduling across multiple daily publishing windows.",
+      FR: "Automatisation avancee : j'ai concu un pipeline CI/CD entierement automatise avec des gardes de sortie anticipee, des alertes de defaillance doubles (suivi d'issues + email) et une planification intelligente sur plusieurs fenetres de publication quotidiennes.",
     },
     projectMyRoleContent2: {
       EN: "From concept to iteration, from the first line of code to editorial strategy, I drove every decision with one clear goal: to build a resilient, automated, and trustworthy news platform that serves the public good.",
@@ -128,12 +128,12 @@ export default function EvidenceMediaProject() {
       FR: "Cette approche centrée produit et guidée par mes valeurs m’a naturellement conduit à définir une doctrine politique unique, qui est devenue la colonne vertébrale éditoriale du projet,  garantissant la cohérence, l’honnêteté et la responsabilité civique de chaque contenu diffusé.",
     },
     projectProcessContent4: {
-      EN: "Operational workflows were designed in response to the constraints of the platforms used. For example, X’s free API limits posting to 17 publications per day—this technical limitation directly shaped the platform’s daily editorial cadence. Substack, on the other hand, emerged as the ideal channel for long-form daily articles, organized across eight key content categories. The goal: to help readers build a cross-disciplinary, contextual, and informed understanding of current events.",
-      FR: "Les workflows opérationnels ont été pensés en fonction des contraintes des plateformes utilisées. L’API gratuite de X limite à 17 publications quotidiennes, une contrainte qui a façonné le rythme éditorial journalier. Substack, de son côté, s’est imposé comme canal idéal pour des articles plus longs et quotidiens, couvrant huit grandes catégories essentielles. L’objectif : aider les lecteurs à construire une vision transversale, contextuelle et éclairée de l’actualité.",
+      EN: "V5 publishes multiple content formats on X throughout the day across strategic peak windows, including news briefs, threads, ultra-shorts, and quote-tweets. On Substack, it publishes daily articles by category (paid), a free Daily Brief newsletter every morning, and Notes throughout the day.",
+      FR: "La V5 publie plusieurs formats de contenu sur X tout au long de la journee sur des fenetres strategiques, incluant des breves, threads, ultra-courts et citations. Sur Substack, elle publie des articles quotidiens par categorie (payants), un Daily Brief gratuit chaque matin et des Notes tout au long de la journee.",
     },
     projectProcessContent5: {
-      EN: "Instead of chasing conventional growth metrics, I chose to focus on strategic milestones: reaching 500 verified subscribers and 5 million impressions on X within the first year to unlock monetization, then reinvesting in the paid API. On Substack, I made the decision to keep all content fully free for a year to build reader trust before introducing a premium model.",
-      FR: "Plutôt que de courir après les métriques classiques de croissance, j’ai préféré viser des jalons stratégiques : atteindre 500 abonnés vérifiés et 5 millions d’impressions sur X en un an pour activer la monétisation, puis investir dans l’API payante. Côté Substack, j’ai choisi de rendre le contenu entièrement gratuit pendant un an, afin de bâtir la confiance avec les lecteurs avant de proposer un modèle premium.",
+      EN: "Growth strategy focuses on content quality over vanity metrics. The free Daily Brief builds trust and audience, paid articles convert engaged readers, and a Kaizen ideology feedback loop continuously improves the editorial framework based on real-world story coverage.",
+      FR: "La strategie de croissance privilegie la qualite du contenu aux metriques de vanite. Le Daily Brief gratuit construit la confiance et l'audience, les articles payants convertissent les lecteurs engages, et une boucle de retour Kaizen ameliore continuellement le cadre editorial a partir de la couverture reelle des actualites.",
     },
     projectProcessContent6: {
       EN: "The methodology was agile and iterative—constantly refining the formats, editorial tone, and automation workflows based on personal observations, user feedback, comments, and algorithmic signals.",
@@ -148,41 +148,42 @@ export default function EvidenceMediaProject() {
       FR: "Stack & outils",
     },
     projectStackPoint1: {
-      EN: "Languages/Frameworks: Python, Flask, YAML, Shell Scripting",
-      FR: "Langages / Frameworks : Python, Flask",
+      EN: "Language: Python 3.12",
+      FR: "Langage : Python 3.12",
     },
     projectStackPoint2: {
-      EN: "AI: OpenAI, Perplexity, Xai",
-      FR: " IA : OpenAI, Perplexity, Xai",
+      EN: "AI: xAI Grok (all LLM tasks), OpenAI (embeddings), Anthropic Claude (self-healing)",
+      FR: "IA : xAI Grok (toutes les taches LLM), OpenAI (embeddings), Anthropic Claude (auto-reparation)",
     },
     projectStackPoint3: {
-      EN: "APIs: X API v2, Xai API, Perplexity API, OpenAI API, Google API",
-      FR: "APIs : X API v2, API Xai, API Perplexity, API OpenAI, API Google",
+      EN: "APIs: xAI SDK, xdk (X official SDK), OpenAI API, Anthropic API, Google API, Wikidata API",
+      FR: "APIs : xAI SDK, xdk (SDK officiel X), OpenAI API, Anthropic API, Google API, Wikidata API",
     },
     projectStackPoint4: {
-      EN: "Automation: GitHub Actions",
-      FR: " Automatisation : GitHub Actions",
+      EN: "Automation: GitHub Actions (CI/CD), cron scheduling, intelligent daily randomization",
+      FR: "Automatisation : GitHub Actions (CI/CD), planification cron, randomisation quotidienne intelligente",
     },
     projectStackPoint5: {
-      EN: "Security: HashiCorp Vault",
-      FR: "Sécurité : HashiCorp Vault",
+      EN: "Security: HashiCorp Vault, OAuth 2.0 token rotation",
+      FR: "Securite : HashiCorp Vault, rotation de tokens OAuth 2.0",
     },
     projectStackPoint6: {
-      EN: "Scraping: BeautifulSoup, Selenium",
-      FR: " Scraping : BeautifulSoup, Selenium",
+      EN: "Publishing: curl_cffi (Substack API), Selenium (fallback), Tweepy (X media upload)",
+      FR: "Publication : curl_cffi (API Substack), Selenium (fallback), Tweepy (upload media X)",
     },
     projectStackPoint7: {
-      EN: "Others: Tweepy, PyVirtualDisplay",
-      FR: "Autres : Tweepy, PyVirtualDisplay",
+      EN: "Quality: pytest (comprehensive test suite), Pydantic (domain models), GCP-compatible structured logging",
+      FR: "Qualite : pytest (suite de tests exhaustive), Pydantic (modeles de domaine), logging structure compatible GCP",
     },
     projectStackContent1: {
-      EN: "I chose Python for its rich ecosystem in automation, especially tools like Selenium and BeautifulSoup. What started as a new technical venture quickly became a passion. All the technologies I used are reliable, well-documented, free (except for the AI APIs), and perfectly suited for automated scripting.",
-      FR: "J’ai choisi Python pour la richesse de son écosystème en automatisation (notamment avec Selenium et BeautifulSoup). C’était une nouvelle aventure technique, qui s’est rapidement transformée en véritable coup de cœur. Toutes les technologies utilisées sont fiables, bien documentées, gratuites (à l’exception des APIs IA) et parfaitement adaptées aux scripts automatisés.",
+      EN: "The V5 architecture follows clean separation of concerns: domain models (Pydantic), adapters (external APIs), pipelines (orchestration), and entrypoints (CLI). Every external integration is wrapped in a typed adapter with retry logic, structured logging, and cost tracking.",
+      FR: "L'architecture V5 suit une separation claire des responsabilites : modeles de domaine (Pydantic), adaptateurs (APIs externes), pipelines (orchestration) et points d'entree (CLI). Chaque integration externe est encapsulee dans un adaptateur type avec logique de retry, logging structure et suivi des couts.",
     },
     projectStackContent2: {
-      EN: "AI integration (e.g., xAI) and secure automation (via GitHub Actions and Vault) are central pillars of the project.",
-      FR: "L’intégration de l’IA (Xai, etc.) et l’automatisation sécurisée (GitHub Actions, Vault) sont au cœur du projet.",
+      EN: "Cost optimization is central: xAI Batch API (50% token discount), prompt caching via conversation IDs (up to 75% off), and centralized pricing tracking across all providers.",
+      FR: "L'optimisation des couts est centrale : API Batch xAI (50% de reduction sur les tokens), mise en cache des prompts via conversation IDs (jusqu'a 75% de reduction) et suivi centralise des tarifs de tous les fournisseurs.",
     },
+
     projectDesignTitle: {
       EN: "Design and UX Highlights",
       FR: "UX et points clés de conception",
@@ -212,8 +213,8 @@ export default function EvidenceMediaProject() {
       FR: "Chaque composant fonctionnel, de l’extraction de contenu à la génération via IA, jusqu’à la publication, est encapsulé dans des scripts indépendants, pouvant être scalés horizontalement ou déclenchés séparément, selon les besoins.",
     },
     projectDeploymentContent3: {
-      EN: "The system supports CI/CD via GitHub Actions, while monitoring and performance analytics are handled through native platform dashboards (X and Substack). The only true limitations are API usage quotas (OpenAI, Perplexity, X API, etc.), which define throughput, but the architecture itself is capable of 24/7 continuous publishing at industrial scale with minimal adjustments.",
-      FR: "L’intégration continue (CI/CD) est assurée par GitHub Actions, tandis que le suivi des performances et l’analytique s’effectuent directement via les tableaux de bord natifs de X et Substack. Les seules véritables limites proviennent des quotas des API (OpenAI, Perplexity, X API, etc.), qui définissent le débit, mais l’architecture en elle-même permet une publication continue 24/7 à l’échelle industrielle avec un minimum d’ajustements.",
+      EN: "The system supports CI/CD via GitHub Actions, while monitoring and performance analytics are handled through native platform dashboards (X and Substack). The only true limitations are API usage quotas (xAI, X API, OpenAI, etc.), which define throughput, but the architecture itself is capable of 24/7 continuous publishing at industrial scale with minimal adjustments.",
+      FR: "L'integration continue (CI/CD) est assuree par GitHub Actions, tandis que le suivi des performances et l'analytique s'effectuent directement via les tableaux de bord natifs de X et Substack. Les seules veritables limites proviennent des quotas des API (xAI, X API, OpenAI, etc.), qui definissent le debit, mais l'architecture en elle-meme permet une publication continue 24/7 a l'echelle industrielle avec un minimum d'ajustements.",
     },
     projectDeploymentContent4: {
       EN: "In short, the pipeline is not just automated, it’s built to grow.",
@@ -225,31 +226,35 @@ export default function EvidenceMediaProject() {
     },
     projectRoadmapPoint1: {
       EN: "V1: X pipeline (short-form, sourced posts).",
-      FR: "V1 : Lancement du pipeline d’information pour X (posts courts et sourcés).",
+      FR: "V1 : Pipeline X (posts courts et sources).",
     },
     projectRoadmapPoint2: {
       EN: "V2: Content redesign, improved cadence and formatting.",
-      FR: " V2 : Refonte du contenu, amélioration du rythme et du format.",
+      FR: "V2 : Refonte du contenu, amelioration du rythme et du format.",
     },
     projectRoadmapPoint3: {
       EN: "V3: Substack integration (daily sourced articles).",
-      FR: "V3 : Intégration de Substack (articles quotidiens sourcés).",
+      FR: "V3 : Integration Substack (articles quotidiens sources).",
     },
     projectRoadmapPoint4: {
-      EN: "V4: Toward a fully autonomous 24/7 pipeline.",
-      FR: "V4 : Vers un pipeline 100% autonome fonctionnant 24/7.",
+      EN: "V4: Fully autonomous 24/7 pipeline on Raspberry Pi + GitHub Actions.",
+      FR: "V4 : Pipeline 100% autonome 24/7 sur Raspberry Pi + GitHub Actions.",
+    },
+    projectRoadmapPoint5: {
+      EN: "V5 (current): Complete ground-up rebuild with clean architecture, multiple publication formats, self-healing infrastructure, paid tier, and continuous editorial improvement.",
+      FR: "V5 (actuel) : Reconstruction complete avec architecture propre, multiples formats de publication, infrastructure auto-reparatrice, abonnement payant et amelioration editoriale continue.",
     },
     projectRoadmapContent1: {
-      EN: "Next: progress from Chain of Thoughts (CoT) pipelines to agentic AI, and once a sufficient vetted corpus exists, fine-tune a model on the curated dataset to improve cross-story linking and historical context.",
-      FR: "Prochaine étape : passer d’une architecture basée sur le raisonnement en chaîne (Chain of Thoughts) à une intelligence agentique. Une fois un corpus suffisamment riche et vérifié, l’objectif est de fine-tuner un modèle sur ce dataset afin d’améliorer la mise en contexte historique et les connexions transversales entre les actualités.",
+      EN: "Next: fine-tune a model on the curated dataset for improved cross-story context and historical linking.",
+      FR: "Prochaine etape : fine-tuner un modele sur le dataset curate pour ameliorer le contexte inter-actualites et les liens historiques.",
     },
     projectResultsTitle: {
       EN: "Outcomes",
       FR: "Résultats",
     },
     projectResultsContent1: {
-      EN: "Evidence Media’s X account quickly reached over 500 organic followers, with consistent growth driven by high-quality, source-backed content. Substack adoption is slower but steadily increasing. Audience feedback reflects the polarized landscape of modern media consumption: while many users appreciate the transparency, reliability, and AI-powered curation (notably the “Evidence” AI editor persona), others remain skeptical of AI involvement.",
-      FR: "Le compte X d’Evidence Media a rapidement dépassé les 500 abonnés organiques, avec une croissance constante portée par un contenu de qualité, sourcé et pertinent. L’adoption sur Substack progresse plus lentement, mais de manière régulière. Les retours du public reflètent la polarisation actuelle dans la consommation médiatique : beaucoup saluent la transparence, la fiabilité et la rigueur de la curation assistée par IA (notamment la figure éditoriale d’Evidence), tandis que d’autres restent méfiants envers l’implication de l’IA dans les médias.",
+      EN: "Evidence Media's X account grew to over 500 organic followers, with consistent growth driven by sourced, high-quality content. Substack adoption is growing steadily with the introduction of the paid tier and Daily Brief. Audience feedback validates the editorial approach: readers appreciate the transparency, consistent sourcing, and the publication's willingness to cover stories mainstream outlets ignore.",
+      FR: "Le compte X d'Evidence Media a depasse les 500 abonnes organiques, avec une croissance constante portee par un contenu source et de qualite. L'adoption sur Substack progresse regulierement avec l'introduction de l'abonnement payant et du Daily Brief. Les retours du public valident l'approche editoriale : les lecteurs apprecient la transparence, le sourcing systematique et la volonte de couvrir les actualites ignorees par les medias traditionnels.",
     },
     projectResultsContent2: {
       EN: "Engagement varies by topic, but the overall reception validates the project’s mission, offering verifiable, independent information in a time of institutional distrust. The system’s success further confirmed that automation, sourcing, and fast iteration are key levers for building trust and reach in digital media.",
@@ -388,7 +393,7 @@ export default function EvidenceMediaProject() {
         isAccessibleForFree: true,
         mainEntityOfPage: { "@id": `${evidenceMediaProjectUrl}#software` },
         datePublished: "2025-11-01",
-        dateModified: "2025-11-01",
+        dateModified: "2026-04-30",
 
         potentialAction: {
           "@type": "ReadAction",
@@ -412,7 +417,7 @@ export default function EvidenceMediaProject() {
         creator: { "@id": `${orgUrl}#organization` },
         image: primaryImage,
         thumbnailUrl: secondaryImage,
-        softwareVersion: "3.0",
+        softwareVersion: "5.0",
         sameAs: [evidenceMediaSubstackUrl, evidenceMediaXUrl],
         audienceType: [
           "General Public",
@@ -750,6 +755,9 @@ export default function EvidenceMediaProject() {
               </li>
               <li className={classes.textListItem}>
                 {translations.projectRoadmapPoint4[activeLanguage]}
+              </li>
+              <li className={classes.textListItem}>
+                {translations.projectRoadmapPoint5[activeLanguage]}
               </li>
             </ul>
             <p className={classes.textParagraph}>
