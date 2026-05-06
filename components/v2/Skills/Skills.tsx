@@ -43,6 +43,7 @@ const Skills = () => {
     devOpsDeployment: { EN: "DevOps & Deployment", FR: "DevOps & Déploiement" },
     cybersecurity: { EN: "Cybersecurity", FR: "Cybersécurité" },
     designTools: { EN: "Design Tools", FR: "Outils de design" },
+    methodology: { EN: "Methodology", FR: "Méthodologie" },
     API: { EN: "REST API", FR: "API REST" },
     database: { EN: "Database", FR: "Base de données" },
     more: { EN: "And more...", FR: "Et bien plus..." },
@@ -67,9 +68,13 @@ const Skills = () => {
             "Mantine UI",
             "React",
             "Redux",
+            "MobX",
             "Next.js",
+            "Axios",
             "WordPress",
             "Vitest",
+            "Jest",
+            "React Testing Library",
             "Formik",
             "Yup",
           ],
@@ -79,7 +84,12 @@ const Skills = () => {
           items: [
             "Node.js",
             "Express",
+            "Flask",
             translations.API[activeLanguage],
+            "Zod",
+            "Pydantic",
+            "pytest",
+            "tsx",
             "Swagger",
             "Postman",
             "Dotenv",
@@ -90,10 +100,12 @@ const Skills = () => {
           title: translations.database[activeLanguage],
           items: [
             "PostgreSQL",
+            "MongoDB",
             "pgAdmin",
             "Sqitch",
+            "PyMongo",
             "Looping",
-            "Facker",
+            "Faker",
             "Sequelize",
             "Prisma",
           ],
@@ -109,16 +121,19 @@ const Skills = () => {
         {
           title:
             activeLanguage === "EN" ? "AI LLMs Used" : "Modèles d'IA utilisés",
-          items: ["ChatGPT", "Grok", "Perplexity", "Midjourney"],
+          items: ["ChatGPT", "Claude", "Grok", "Perplexity", "Midjourney"],
         },
         {
           title: activeLanguage === "EN" ? "Known APIs" : "APIs Connues",
           items: [
             "OpenAI API",
-            "Xai API",
+            "Anthropic API",
+            "xAI API",
+            "xAI SDK",
             "Perplexity API",
             "Google API",
             "X API",
+            "xdk (X SDK)",
             "LinkedIn API",
           ],
         },
@@ -128,7 +143,8 @@ const Skills = () => {
             "Make",
             "Platform OpenAI",
             "Hugging Face",
-            "Git Actions",
+            "GitHub Actions",
+            "Claude Code",
             "Copilot",
             "Codex",
             "Cursor",
@@ -136,7 +152,16 @@ const Skills = () => {
         },
         {
           title: "Automation Libraries & Scripting Tools",
-          items: ["Selenium", "BeautifulSoup4", "Requests"],
+          items: [
+            "Selenium",
+            "Playwright",
+            "dree",
+            "dependency-cruiser",
+            "Tweepy",
+            "curl_cffi",
+            "BeautifulSoup4",
+            "Requests",
+          ],
         },
       ],
     },
@@ -167,7 +192,14 @@ const Skills = () => {
       groups: [
         {
           title: "DevOps & Version Control",
-          items: ["Git", "GitHub", "GitHub Project", "GitHub Actions"],
+          items: [
+            "Git",
+            "GitHub",
+            "GitHub Project",
+            "GitHub Actions",
+            "Confluence",
+            "JIRA",
+          ],
         },
         {
           title: "Containerization & Infrastructure",
@@ -188,7 +220,26 @@ const Skills = () => {
       groups: [
         {
           title: "",
-          items: ["OWASP", "Hashicorp Vault", "OAuth2", "Stem", "Node Vault"],
+          items: [
+            "OWASP",
+            "Hashicorp Vault",
+            "OAuth2",
+            "JWT",
+            "Stem",
+            "Node Vault",
+          ],
+        },
+      ],
+    },
+    methodology: {
+      intro:
+        activeLanguage === "EN"
+          ? "I apply rigorous engineering methodologies to deliver maintainable, testable, and scalable software, with explicit standards designed for human and AI collaboration."
+          : "J'applique des méthodologies d'ingénierie rigoureuses pour livrer du logiciel maintenable, testable et scalable, avec des standards explicites conçus pour la collaboration humaine et IA.",
+      groups: [
+        {
+          title: "",
+          items: ["TDD", "SOLID", "DRY", "KISS", "YAGNI", "Agile", "Scrum"],
         },
       ],
     },
@@ -256,7 +307,7 @@ const Skills = () => {
                 {skillsContent[categoryKey].groups.map(
                   (
                     group: { title: string; items: string[] },
-                    index: number
+                    index: number,
                   ) => (
                     <div key={index} className={classes.groupContainer}>
                       {group.title && (
@@ -270,7 +321,7 @@ const Skills = () => {
                         ))}
                       </div>
                     </div>
-                  )
+                  ),
                 )}
               </div>
             ))}
@@ -304,7 +355,7 @@ const Skills = () => {
                       ))}
                     </div>
                   </div>
-                )
+                ),
               )}
             </article>
           ))}
