@@ -880,7 +880,7 @@ export default function JeanTheWriterProject() {
             <Link href="/#portfolio" className={classes.buttonReverted}>
               {translations.buttonBack[activeLanguage]}
             </Link>
-            <Link href="/evidence-media-project" className={classes.button}>
+            <Link href="/archmapper-project" className={classes.button}>
               {translations.buttonNextProject[activeLanguage]}
             </Link>
           </div>

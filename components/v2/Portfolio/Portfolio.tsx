@@ -14,6 +14,8 @@ import jean_profile from "../../../public/images/projectsPictures/jean_the_write
 import jean_main from "../../../public/images/projectsPictures/jean_the_writer/jean_the_writer_project_main_picture.webp";
 import evidence_profile from "../../../public/images/projectsPictures/evidence_media/evidence_media_project_profile_picture.webp";
 import evidence_main from "../../../public/images/projectsPictures/evidence_media/evidence_media_project_main_picture.webp";
+import archmapper_profile from "../../../public/images/projectsPictures/archmapper/archmapper_project_profile_picture.webp";
+import archmapper_main from "../../../public/images/projectsPictures/archmapper/archmapper_project_ai_automation_main_page_image.webp";
 
 function Portfolio() {
   // Custom hook to manage the language changes
@@ -97,6 +99,25 @@ function Portfolio() {
         FR: "Capture d'écran principale du projet Jean L'écrivain montrant un manuscrit en cours de correction.",
       },
       link: "/jean-the-writer-project",
+    },
+    {
+      id: "archmapper",
+      title: "ArchMapper",
+      description: {
+        EN: "ArchMapper is a fully automated, resumable, bottom-up reverse-engineering pipeline that turns any codebase into a structured architectural document, ready for human or LLM analysis. Powered by Claude Sonnet and Claude Opus, it produces a canonical architecture.json plus Markdown spec cards, validated against repositories of more than 10,000 files, MIT-licensed.",
+        FR: "ArchMapper est un pipeline de retro-ingenierie ascendant entierement automatise et reprenable, qui transforme n'importe quel codebase en un document architectural structure, pret pour une analyse humaine ou par LLM. Propulse par Claude Sonnet et Claude Opus, il produit un architecture.json canonique accompagne de fiches spec Markdown, valide sur des depots de plus de 10 000 fichiers, sous licence MIT.",
+      },
+      profile: archmapper_profile.src,
+      main: archmapper_main.src,
+      profileAlt: {
+        EN: "The ArchMapper Project profile picture depicting the AI-driven architectural mapping branding",
+        FR: "Image de profil du projet ArchMapper représentant l'identité visuelle de la cartographie architecturale pilotée par IA",
+      },
+      mainAlt: {
+        EN: "The ArchMapper Project main image showing the AI automation branding of the reverse-engineering pipeline",
+        FR: "Image principale du projet ArchMapper montrant l'identité visuelle d'automatisation IA du pipeline de rétro-ingénierie",
+      },
+      link: "/archmapper-project",
     },
     {
       id: "evidence_media",
