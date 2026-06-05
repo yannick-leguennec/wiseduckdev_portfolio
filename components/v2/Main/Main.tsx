@@ -19,12 +19,12 @@ function Main() {
   // Object to store the translations
   const translations: TranslationsType = {
     subtitle1: {
-      EN: "FULL-STACK",
-      FR: "FULL-STACK",
+      EN: "AI & AUTOMATION",
+      FR: "IA & AUTOMATISATION",
     },
     subtitle2: {
-      EN: "JavaScript Developer",
-      FR: "Développeur JavaScript",
+      EN: "Full Stack Developer",
+      FR: "Développeur Full Stack",
     },
     button1: {
       EN: "Say Hello",

@@ -27,16 +27,16 @@ function Profil() {
       FR: "Bienvenu-es",
     },
     subtitle: {
-      EN: "I am a Full-Stack Developer passionate about Automation and AI",
-      FR: "Je suis un développpeur Full-Stack passionné par l'automatisation et l'IA",
+      EN: "I am a Full-Stack Developer specialized in AI Integration & Automation",
+      FR: "Développeur Full-Stack spécialisé en Intégration d'IA & Automatisation",
     },
     description1: {
-      EN: "Full-Stack JavaScript Developer with 2 years of hands-on experience building web and AI-powered systems using React, Next.js, Node.js, and automation tools. After 17 years managing restaurant operations, I transitioned into tech with a focus on creativity, innovation, agile teamwork, problemsolving, and business development.",
-      FR: "Développeur Full-Stack JavaScript avec 2 ans d’expérience concrète dans la création de systèmes web et d’applications alimentées par l’IA, en utilisant React, Next.js, Node.js et divers outils d’automatisation. Après 17 ans de gestion opérationnelle dans la restauration, j’ai opéré une transition vers le secteur technologique, en mettant à profit ma créativité, mon esprit d’innovation, ma rigueur, mes compétences en résolution de problèmes et en développement d’affaires.",
+      EN: "Full-Stack JavaScript developer with over 2 years of hands-on experience integrating AI into real production systems and building automation that runs itself, using React, Next.js, Node.js, and Python. Most teams know they need AI but not where to start — I find where it creates real value, then build it end-to-end.",
+      FR: "Développeur Full-Stack JavaScript avec plus de 2 ans d'expérience pratique à intégrer l'IA dans des systèmes réels en production et à créer des automatisations autonomes, avec React, Next.js, Node.js et Python. La plupart des équipes savent qu'elles ont besoin d'IA, mais pas par où commencer — je trouve où elle crée de la valeur, puis je la construis de bout en bout.",
     },
     description2: {
-      EN: "Since March 2024, I’ve delivered multiple freelance projects and led bold personal initiatives, from an autonomous AI-powered media pipeline (X & Substack) to a platform hosting 800+ custom GPTs for web, mobile, AI, blockchain, and game developers. I also apply my background in business strategy, acquired at HEC Montreal, to support startups with business models, marketing, and growth strategies.",
-      FR: "Depuis mars 2024, j’ai mené à bien plusieurs mandats en freelance et piloté des projets personnels audacieux, notamment un pipeline médiatique entièrement autonome utilisant l’intelligence artificielle (X & Substack), ainsi qu’une plateforme regroupant plus de 800 GPTs personnalisés destinés aux développeurs web, mobile, IA, blockchain et jeux vidéo. J’appuie également des startups grâce à mon expertise en stratégie d’affaires, acquise à HEC Montréal, en contribuant à l’élaboration de modèles d’affaires, de plans marketing et de stratégies de croissance.",
+      EN: "Since March 2024, under my Wise Duck Dev brand, I've shipped projects from an autonomous AI-powered media pipeline (X & Substack) to ArchMapper, a reverse-engineering pipeline tested on 10,000+ file codebases, and a platform of 800+ custom GPTs. My earlier 17 years leading operations and a first-in-class Entrepreneurship certificate from HEC Montréal shape how I build: I think in systems and look for leverage.",
+      FR: "Depuis mars 2024, sous ma marque Wise Duck Dev, j'ai livré des projets allant d'un pipeline média autonome propulsé par l'IA (X & Substack) à ArchMapper, un pipeline de rétro-ingénierie testé sur des bases de code de plus de 10 000 fichiers, et une plateforme de 800+ GPTs personnalisés. Mes 17 années à diriger des opérations et un certificat en Entrepreneuriat de HEC Montréal (major de promotion) façonnent ma manière de construire : je pense en systèmes et je cherche le levier.",
     },
     point1: {
       EN: "Certified Full Stack JS Web and Web Mobile Developer",
@@ -71,8 +71,8 @@ function Profil() {
       FR: "Passionné d'IA (Découvrez mes GPTs spécialisés en développement web, mobile, IA et blockchain ",
     },
     point9: {
-      EN: "Expert in automation, AI workflows, and prompt engineering",
-      FR: "Expert en automatisation, intégration d'IA et prompt engineering",
+      EN: "Expert in AI integration, automation, AI workflows, and prompt engineering",
+      FR: "Expert en intégration d'IA, automatisation, workflows IA et prompt engineering",
     },
     button: {
       EN: "Check out my resume",

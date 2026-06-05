@@ -206,9 +206,7 @@
   width: 100%;
   height: calc(100vh - var(--header-h, 8vh)); /* fill the rest of the screen */
   z-index: 9998; /* under the header */
-  background-color: transparent;
-  backdrop-filter: blur(90px);
-  -webkit-backdrop-filter: blur(90px);
+  background-color: #d19510;
 
   display: flex;
   flex-direction: column;

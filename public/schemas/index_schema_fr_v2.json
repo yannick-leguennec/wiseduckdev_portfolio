@@ -40,8 +40,8 @@
       "alternateName": ["The Wise Duck Dev", "Wise Duck Dev"],
       "givenName": "Yannick",
       "familyName": "Le Guennec",
-      "jobTitle": "Développeur Full Stack JavaScript spécialisé en React",
-      "description": "The Wise Duck Dev est un développeur Full Stack JS créatif et innovant, spécialisé en React. Propose des solutions web et web mobile de pointe.",
+      "jobTitle": "Spécialiste Intégration d'IA & Automatisation — Développeur Full-Stack JavaScript",
+      "description": "Développeur Full-Stack JavaScript spécialisé en intégration d'IA et automatisation. The Wise Duck Dev trouve où l'IA crée de la valeur, puis la construit de bout en bout avec React, Next.js, Node.js et Python.",
       "url": "https://wiseduckdev.com/fr",
       "image": {
         "@type": "ImageObject",
@@ -173,10 +173,10 @@
       "url": "https://wiseduckdev.com/fr",
       "isPartOf": { "@id": "https://wiseduckdev.com#website" },
       "inLanguage": "fr-FR",
-      "headline": "The Wise Duck Dev – Développeur Full Stack JavaScript spécialisé en React",
+      "headline": "The Wise Duck Dev — Spécialiste Intégration d'IA & Automatisation | Développeur Full-Stack JS",
       "about": { "@id": "https://wiseduckdev.com#person" },
       "mainEntity": { "@id": "https://wiseduckdev.com#person" },
-      "name": "The Wise Duck Dev - Développeur Full Stack JS spécialisé en React",
+      "name": "The Wise Duck Dev — Spécialiste Intégration d'IA & Automatisation | Développeur Full-Stack JS",
       "primaryImageOfPage": {
         "@type": "ImageObject",
         "url": "https://wiseduckdev.com/images/index/professional-wise-duck-dev-developer-brand-profile-image.webp"

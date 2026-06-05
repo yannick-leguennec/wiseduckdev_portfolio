@@ -70,8 +70,8 @@ function Contact({ id, onLoaded }: ContactProps) {
     title: { EN: "Let's Connect", FR: "Connectons" },
     subtitle: { EN: "The Wise Duck Dev", FR: "The Wise Duck Dev" },
     text1: {
-      EN: "Looking for a cutting-edge web developer?",
-      FR: "À la recherche d'un développeur web à la pointe de la technologie?",
+      EN: "Need AI integrated where it actually creates value?",
+      FR: "Besoin d'intégrer l'IA là où elle crée vraiment de la valeur ?",
     },
     text2: {
       EN: "Let’s collaborate and start building something meaningful together.",
