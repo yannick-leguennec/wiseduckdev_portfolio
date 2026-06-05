@@ -144,8 +144,8 @@ export default function Home() {
           property="og:image"
           content={
             activeLanguage === "FR"
-              ? `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_2_main_picture_Facebook_FR.webp`
-              : `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_2_main_picture_Facebook_EN.webp`
+              ? `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_3_main_picture_Facebook_FR.webp`
+              : `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_3_main_picture_Facebook_EN.webp`
           }
         />
         <meta
@@ -175,8 +175,8 @@ export default function Home() {
           name="twitter:image"
           content={
             activeLanguage === "FR"
-              ? `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_2_main_picture_Twitter_FR.webp`
-              : `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_2_main_picture_Twitter_EN.webp`
+              ? `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_3_main_picture_Twitter_FR.webp`
+              : `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_3_main_picture_Twitter_EN.webp`
           }
         />
         <meta
