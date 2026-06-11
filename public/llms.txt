@@ -1,0 +1,39 @@
+# The Wise Duck Dev
+
+> AI Integration & Automation Specialist and Full-Stack JavaScript developer. I integrate AI into real production systems and build automation that runs itself, working primarily in Python and TypeScript against the OpenAI, Anthropic, xAI, and Perplexity APIs.
+
+I help businesses turn AI opportunities into production-ready systems. Most teams know they need AI but not where to start — I find where it creates real value, then build it end-to-end. 17+ years of operational leadership across industry and the restaurant sector plus a first-in-class Entrepreneurship certificate (with distinction) from HEC Montréal shape how I build: I think in systems and look for where AI delivers real value.
+
+I author AGENTS.md, CLAUDE.md, and a layered project-standards file at the kickoff of every new engagement so AI assistants stay aligned with the architecture throughout development and long-term maintenance — applied to my own work and offered as a service to teams adopting AI-assisted workflows.
+
+## About
+
+- [Profile and positioning](https://wiseduckdev.com/#profil): full bio, credentials, model-agnostic LLM stack, AGENTS.md / CLAUDE.md engineering-standards practice
+- [Experience](https://wiseduckdev.com/#experience): how I approach AI integration, automation, distributed teams, and continuous learning
+- [Skills and toolbox](https://wiseduckdev.com/#skills): Python, TypeScript, the major LLM APIs (OpenAI, Anthropic, xAI, Perplexity, Google), agentic systems, prompt engineering, AI workflows, modern AI SDKs (Anthropic SDK, xAI SDK, xdk), Claude Code, Cursor, Codex, Make.com, GitHub Actions, plus the full-stack delivery layer (React, Next.js, Node.js, Express, Flask, PostgreSQL, MongoDB, Docker, Vercel, Railway, AWS, Google Cloud)
+- [Contact](https://wiseduckdev.com/#contact): direct contact form for new engagements
+
+## Recent projects
+
+- [ArchMapper](https://wiseduckdev.com/archmapper-project): fully automated, resumable, bottom-up reverse-engineering pipeline that turns any codebase into a structured architectural document. Powered by Claude Sonnet and Claude Opus, produces a canonical `architecture.json` plus Markdown spec cards. Validated on repositories of more than 10,000 files, MIT-licensed.
+- [Evidence Media](https://wiseduckdev.com/evidence-media-project): fully autonomous, AI-powered independent news media operating on X and Substack. Covers 8 news categories daily through self-healing automated workflows.
+- [Jean The Writer](https://wiseduckdev.com/jean-the-writer-project): automated grammar and syntax correction with in-depth editorial review for manuscripts up to 600 pages.
+- [The Wise Duck Dev GPTs](https://wiseduckdev.com/wise-duck-dev-gpts-project): the largest specialized GPT library for developers — 800+ custom GPTs across 14 categories (frontend, backend, design, database, frameworks, CMS, productivity, cybersecurity, automation, AI, blockchain, programming, deployment, and more).
+- [Family Flow](https://wiseduckdev.com/family-flow-project): web app that centralizes family events, reminders, and shared tasks.
+
+## Methodology
+
+I apply rigorous engineering methodologies — TDD, SOLID, DRY, KISS, YAGNI, Agile, Scrum — with explicit standards designed for human + AI collaboration. The AGENTS.md and CLAUDE.md files I author at project kickoff define naming, testing, error handling, provider APIs, and project conventions so that every AI assistant touching the codebase ships aligned code, both during development and across long-term maintenance.
+
+## Resources
+
+- [GPTs platform](https://wiseduckdevgpts.com): live link to the 800+ custom GPTs library
+- [Resume (EN)](https://wiseduckdev.com/docs/yannick_leguennec_full_stack_dev_resume_2025.pdf)
+- [Resume (FR)](https://wiseduckdev.com/docs/yannick_leguennec_full_stack_dev_resume_2025_fr.pdf)
+- [GitHub](https://github.com/yannick-leguennec)
+- [LinkedIn](https://www.linkedin.com/in/wise-duck-dev/)
+- [X / Twitter](https://x.com/wiseduckdev)
+
+## Optional
+
+- [French version of the site](https://wiseduckdev.com/fr): identical content, French locale (the site is fully bilingual EN / FR — the FR version is the same site rendered in French)
