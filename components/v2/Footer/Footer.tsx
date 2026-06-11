@@ -70,7 +70,7 @@ function Footer() {
         >
           <p>{translations.privacyPolicy[activeLanguage]}</p>
         </a>
-        <p>© 2024 Wise Duck Dev</p>
+        <p>© 2024–2026 Wise Duck Dev</p>
       </div>
     </footer>
   );
