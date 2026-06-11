@@ -102,6 +102,10 @@
 .list {
   margin-left: 1rem;
   list-style-type: disc;
+
+  > li + li {
+    margin-top: 0.6rem;
+  }
 }
 
 .gptsLinkOrange {
