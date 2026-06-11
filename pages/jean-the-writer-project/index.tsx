@@ -412,13 +412,31 @@ export default function JeanTheWriterProject() {
         publisher: { "@id": `${orgUrl}#organization` },
         isAccessibleForFree: true,
         mainEntityOfPage: `${jeanTheWriterProjectUrl}#webpage`,
-        datePublished: "2025-11-01",
-        dateModified: "2025-11-01",
+        datePublished: "2025-10-29",
+        dateModified: "2026-05-06",
 
         potentialAction: {
           "@type": "ReadAction",
           target: `${jeanTheWriterProjectUrl}`,
         },
+      },
+      {
+        "@type": "Article",
+        "@id": `${jeanTheWriterProjectUrl}#article`,
+        headline: translations.metaTitle[activeLanguage],
+        description: translations.metaDescription[activeLanguage],
+        image: [primaryImage, secondaryImage],
+        author: {
+          "@type": "Person",
+          name: "Yannick Le Guennec",
+          url: "https://wiseduckdev.com",
+        },
+        publisher: { "@id": `${orgUrl}#organization` },
+        datePublished: "2025-10-29",
+        dateModified: "2026-05-06",
+        inLanguage: pageLanguage,
+        isPartOf: { "@id": `${jeanTheWriterProjectUrl}#webpage` },
+        mainEntityOfPage: { "@id": `${jeanTheWriterProjectUrl}#webpage` },
       },
       {
         "@type": "SoftwareApplication",

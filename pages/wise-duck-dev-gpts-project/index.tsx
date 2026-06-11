@@ -371,13 +371,31 @@ export default function WiseDuckDevGPTsProject() {
         publisher: { "@id": `${orgUrl}#organization` },
         isAccessibleForFree: true,
         mainEntityOfPage: `${wddProjectUrl}#webpage`,
-        datePublished: "2025-11-01",
-        dateModified: "2025-11-01",
+        datePublished: "2025-10-29",
+        dateModified: "2025-12-07",
 
         potentialAction: {
           "@type": "ReadAction",
           target: `${wddProjectUrl}`,
         },
+      },
+      {
+        "@type": "Article",
+        "@id": `${wddProjectUrl}#article`,
+        headline: translations.metaTitle[activeLanguage],
+        description: translations.metaDescription[activeLanguage],
+        image: [primaryImage, twitterImage],
+        author: {
+          "@type": "Person",
+          name: "Yannick Le Guennec",
+          url: "https://wiseduckdev.com",
+        },
+        publisher: { "@id": `${orgUrl}#organization` },
+        datePublished: "2025-10-29",
+        dateModified: "2025-12-07",
+        inLanguage: pageLanguage,
+        isPartOf: { "@id": `${wddProjectUrl}#webpage` },
+        mainEntityOfPage: { "@id": `${wddProjectUrl}#webpage` },
       },
       {
         // External platform modeled as a WebSite (catalog/listing of GPTs)
