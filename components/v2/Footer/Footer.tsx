@@ -10,8 +10,8 @@ function Footer() {
 
   const translations: TranslationsType = {
     altLogo: {
-      EN: "Certified Full Stack JavaScript Web and Web Mobile Developer specialized in React Wise Duck Dev Logo",
-      FR: "Logo du développeur certifié web et web mobile Full Stack JavaScript spécialisé en React Wise Duck Dev",
+      EN: "Wise Duck Dev — AI Integration & Automation Specialist and certified Full-Stack JavaScript Developer logo",
+      FR: "Logo de Wise Duck Dev — Spécialiste Intégration d'IA & Automatisation et Développeur Full-Stack JavaScript certifié",
     },
     privacyPolicy: {
       EN: "Privacy Policy",

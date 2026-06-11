@@ -14,8 +14,8 @@ function Loader() {
       FR: "Chargement de",
     },
     altLogo: {
-      EN: "Logo of The Wise Duck Dev, certified Full Stack JavaScript and React Developer",
-      FR: "Logo du développeur certifié Full Stack JavaScript et React The Wise Duck Dev",
+      EN: "Logo of The Wise Duck Dev — AI Integration & Automation Specialist and certified Full-Stack JavaScript Developer",
+      FR: "Logo de The Wise Duck Dev — Spécialiste Intégration d'IA & Automatisation et Développeur Full-Stack JavaScript certifié",
     },
   };
   return (

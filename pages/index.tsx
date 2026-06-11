@@ -36,16 +36,16 @@ export default function Home() {
   // Object to store the translations
   const translation: TranslationsType = {
     altPicture: {
-      EN: "Professional picture of the full stack javascript developer specialized in react Yannick Le Guennec aka The Wise Duck Dev in a tropical plant background",
-      FR: "Image professionnelle du développeur full stack javascript spécialisé en react Yannick Le Guennec aka The Wise Duck Dev dans un fond de plantes tropicales",
+      EN: "Professional picture of Yannick Le Guennec aka The Wise Duck Dev, AI Integration & Automation Specialist and Full-Stack JavaScript developer, in a tropical plant background",
+      FR: "Image professionnelle de Yannick Le Guennec aka The Wise Duck Dev, Spécialiste Intégration d'IA & Automatisation et Développeur Full-Stack JavaScript, dans un fond de plantes tropicales",
     },
     altTwitterPicture: {
       EN: "Professional AI generated picture of The Wise Duck Dev persona, an anthropomorphic white duck wearing a golden shirt with golden glasses on a golden background",
       FR: "Image professionnelle générée par IA de The Wise Duck Dev, un canard blanc anthropomorphe portant une chemise dorée et des lunettes dorées sur un fond doré",
     },
     logText: {
-      EN: "Hey there, fellow dev! I'm The Wise Duck Dev — a Full-Stack JavaScript developer specialized in AI integration & automation. Most teams know they need AI but not where to start; I find where it creates real value, then build it end-to-end with React, Next.js, Node.js, and Python. From an autonomous AI-powered media pipeline (X & Substack) to ArchMapper (a reverse-engineering pipeline tested on 10,000+ file codebases) and a platform of 800+ custom GPTs — I think in systems and look for leverage. If you're a recruiter, founder, or tech leader looking for impact, let's connect. 🚀🌐",
-      FR: "Salut à toi, cher dev curieux ! Je suis The Wise Duck Dev — développeur Full-Stack JavaScript spécialisé en intégration d'IA et automatisation. La plupart des équipes savent qu'elles ont besoin d'IA, mais pas par où commencer ; je trouve où elle crée de la valeur réelle, puis je la construis de bout en bout avec React, Next.js, Node.js et Python. D'un pipeline média autonome propulsé par l'IA (X & Substack) à ArchMapper (un pipeline de rétro-ingénierie testé sur des bases de plus de 10 000 fichiers) et une plateforme de 800+ GPTs personnalisés — je pense en systèmes et je cherche le levier. Recruteur, entrepreneur ou décideur tech ? Contactez-moi. 🚀🌐",
+      EN: "Hey there, fellow dev! I'm The Wise Duck Dev — an AI Integration & Automation Specialist and Full-Stack JavaScript developer. Most teams know they need AI but not where to start; I find where it creates real value, then build it end-to-end. I work primarily in Python and TypeScript against the OpenAI, Anthropic, xAI, and Perplexity APIs. From an autonomous AI-powered media pipeline (X & Substack) to ArchMapper (a reverse-engineering pipeline tested on 10,000+ file codebases) and a platform of 800+ custom GPTs — I think in systems and look for where AI delivers real value. If you're a recruiter, founder, or tech leader looking for impact, let's connect. 🚀🌐",
+      FR: "Salut à toi, cher dev curieux ! Je suis The Wise Duck Dev — Spécialiste Intégration d'IA & Automatisation et développeur Full-Stack JavaScript. La plupart des équipes savent qu'elles ont besoin d'IA, mais pas par où commencer ; je trouve où elle crée de la valeur réelle, puis je la construis de bout en bout. Je travaille principalement en Python et TypeScript avec les APIs d'OpenAI, Anthropic, xAI et Perplexity. D'un pipeline média autonome propulsé par l'IA (X & Substack) à ArchMapper (un pipeline de rétro-ingénierie testé sur des bases de plus de 10 000 fichiers) et une plateforme de 800+ GPTs personnalisés — je pense en systèmes et je cherche là où l'IA apporte une véritable valeur. Recruteur, entrepreneur ou décideur tech ? Contactez-moi. 🚀🌐",
     },
     pageTitle: {
       EN: "The Wise Duck Dev — AI Integration & Automation Specialist | Full-Stack JS Developer",
