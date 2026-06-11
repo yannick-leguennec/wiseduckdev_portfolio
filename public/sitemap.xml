@@ -13,10 +13,19 @@
       <image:loc>https://wiseduckdev.com/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_3_main_picture_Facebook_EN.webp</image:loc>
     </image:image>
     <image:image>
+      <image:loc>https://wiseduckdev.com/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_3_main_picture_Facebook_FR.webp</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>https://wiseduckdev.com/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_3_main_picture_Twitter_EN.webp</image:loc>
     </image:image>
     <image:image>
+      <image:loc>https://wiseduckdev.com/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_3_main_picture_Twitter_FR.webp</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>https://wiseduckdev.com/images/index/v2/images_index_page/yannick_leguennec_ai_integration_automation_specialist_horizontal.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://wiseduckdev.com/images/index/v2/images_index_page/yannick_leguennec_ai_integration_automation_specialist_mobile.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://wiseduckdev.com/images/logos/wise-duck-dev-full-stack-js-logo-vertical.png</image:loc>
@@ -27,7 +36,7 @@
     <image:image>
       <image:loc>https://wiseduckdev.com/images/logos/wise-duck-dev-full-stack-js-logo.png</image:loc>
     </image:image>
-    <lastmod>2025-10-29</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -79,6 +88,21 @@
     <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/jean_the_writer/jean_the_writer_automated_manuscripts_revision_and_correction_ai_project_Facebook.webp</image:loc></image:image>
     <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/jean_the_writer/jean_the_writer_automated_manuscripts_revision_and_correction_ai_project_Twitter.webp</image:loc></image:image>
     <lastmod>2025-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ArchMapper Project -->
+  <url>
+    <loc>https://wiseduckdev.com/archmapper-project</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wiseduckdev.com/archmapper-project"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://wiseduckdev.com/fr/archmapper-project"/>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/archmapper/archmapper_project_profile_picture.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/archmapper/archmapper_project_ai_automation_main_page_image.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/archmapper/archmapper_project_ai_automation.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/archmapper/archmapper_project_ai_automation_Facebook.webp</image:loc></image:image>
+    <image:image><image:loc>https://wiseduckdev.com/images/projectsPictures/archmapper/archmapper_project_ai_automation_Twitter.webp</image:loc></image:image>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

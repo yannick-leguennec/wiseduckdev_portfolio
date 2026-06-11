@@ -184,7 +184,7 @@
       "publisher": { "@id": "https://wiseduckdev.com#organization" },
       "isAccessibleForFree": true,
       "datePublished": "2024-03-08",
-      "dateModified": "2025-11-01",
+      "dateModified": "2026-06-11",
       "potentialAction": [
         {
           "@type": "ReadAction",
