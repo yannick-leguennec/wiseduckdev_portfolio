@@ -8,8 +8,8 @@ import { useLoader } from "../context/LoaderContext";
 import { useLanguage } from "../context/LanguageContext";
 import { TranslationsType } from "../types/TranslationsType";
 import Image, { StaticImageData } from "next/image";
-import picture_yannick_horizontal from "../public/images/index/v2/images_index_page/yannick_leguennec_full_stack_javascript_developer_specialized_in_react_horizontal.webp";
-import picture_yannick_vertical from "../public/images/index/v2/images_index_page/yannick_leguennec_full_stack_javascript_developer_specialized_in_react_mobile.webp";
+import picture_yannick_horizontal from "../public/images/index/v2/images_index_page/yannick_leguennec_ai_integration_automation_specialist_horizontal.webp";
+import picture_yannick_vertical from "../public/images/index/v2/images_index_page/yannick_leguennec_ai_integration_automation_specialist_mobile.webp";
 import WrappedMain from "../components/v2/WrappedHeaderComponents/WrappedMain/WrappedMain";
 import Profil from "../components/v2/Profil/Profil";
 import Skills from "../components/v2/Skills/Skills";
@@ -36,32 +36,36 @@ export default function Home() {
   // Object to store the translations
   const translation: TranslationsType = {
     altPicture: {
-      EN: "Professional picture of the full stack javascript developer specialized in react Yannick Le Guennec aka The Wise Duck Dev in a tropical plant background",
-      FR: "Image professionnelle du développeur full stack javascript spécialisé en react Yannick Le Guennec aka The Wise Duck Dev dans un fond de plantes tropicales",
+      EN: "Professional picture of Yannick Le Guennec aka The Wise Duck Dev, AI Integration & Automation Specialist and Full-Stack JavaScript developer, in a tropical plant background",
+      FR: "Image professionnelle de Yannick Le Guennec aka The Wise Duck Dev, Spécialiste Intégration d'IA & Automatisation et Développeur Full-Stack JavaScript, dans un fond de plantes tropicales",
     },
     altTwitterPicture: {
       EN: "Professional AI generated picture of The Wise Duck Dev persona, an anthropomorphic white duck wearing a golden shirt with golden glasses on a golden background",
       FR: "Image professionnelle générée par IA de The Wise Duck Dev, un canard blanc anthropomorphe portant une chemise dorée et des lunettes dorées sur un fond doré",
     },
     logText: {
-      EN: "Hey there, fellow dev! I'm The Wise Duck Dev — a Full-Stack JavaScript & React specialist who loves automation, AI, and bold ideas. After over a decade running businesses, I now craft smart web apps, automation pipelines, and AI-powered tools for developers. From X & Substack media flows to a library of 800+ custom GPTs, I blend creative tech, product vision, and a dash of fun in every build. If you're a recruiter, founder, or tech leader looking for impact — let's connect and build the future together! 🚀🌐`",
-      FR: "Salut à toi, cher dev curieux ! Je suis The Wise Duck Dev — développeur full-stack JavaScript & React, passionné d’automatisation, d’IA et d’innovations audacieuses. Après plus de 10 ans dans la gestion d’entreprise, je crée aujourd’hui des apps web intelligentes, des pipelines d’automatisation et des outils AI sur mesure pour les développeurs. De l’écosystème média X & Substack à une collection de plus de 800 GPTs, j’allie créativité, vision produit et fun dans chaque projet. Recruteur, entrepreneur ou décideur tech ? Contactez-moi et construisons ensemble le futur du digital ! 🚀🌐",
+      EN: "Hey there, fellow dev! I'm The Wise Duck Dev — an AI Integration & Automation Specialist and Full-Stack JavaScript developer. Most teams know they need AI but not where to start; I find where it creates real value, then build it end-to-end. I work primarily in Python and TypeScript against the OpenAI, Anthropic, xAI, and Perplexity APIs. From an autonomous AI-powered media pipeline (X & Substack) to ArchMapper (a reverse-engineering pipeline tested on 10,000+ file codebases) and a platform of 800+ custom GPTs — I think in systems and look for where AI delivers real value. If you're a recruiter, founder, or tech leader looking for impact, let's connect. 🚀🌐",
+      FR: "Salut à toi, cher dev curieux ! Je suis The Wise Duck Dev — Spécialiste Intégration d'IA & Automatisation et développeur Full-Stack JavaScript. La plupart des équipes savent qu'elles ont besoin d'IA, mais pas par où commencer ; je trouve où elle crée de la valeur réelle, puis je la construis de bout en bout. Je travaille principalement en Python et TypeScript avec les APIs d'OpenAI, Anthropic, xAI et Perplexity. D'un pipeline média autonome propulsé par l'IA (X & Substack) à ArchMapper (un pipeline de rétro-ingénierie testé sur des bases de plus de 10 000 fichiers) et une plateforme de 800+ GPTs personnalisés — je pense en systèmes et je cherche là où l'IA apporte une véritable valeur. Recruteur, entrepreneur ou décideur tech ? Contactez-moi. 🚀🌐",
+    },
+    pageTitle: {
+      EN: "The Wise Duck Dev — AI Integration & Automation Specialist | Full-Stack JS Developer",
+      FR: "The Wise Duck Dev — Spécialiste Intégration d'IA & Automatisation | Développeur Full-Stack JS",
     },
     pageDescription: {
-      EN: "Meet The Wise Duck Dev : A creative & innovative Full Stack JS Developer specializing in React. Dive into a world of cutting-edge web & mobile solutions!",
-      FR: "Rencontrez The Wise Duck Dev : un développeur Full Stack JS créatif et innovant spécialisé en React. Plongez dans un monde de solutions web et mobile de pointe!",
+      EN: "Full-Stack JavaScript developer specialized in AI integration and automation. I find where AI creates real value, then build it end-to-end — React, Next.js, Node.js, Python.",
+      FR: "Développeur Full-Stack JavaScript spécialisé en intégration d'IA et automatisation. Je trouve où l'IA crée de la valeur, puis je la construis de bout en bout — React, Next.js, Node.js, Python.",
     },
     loadingContent: {
       EN: "Loading more content...",
       FR: "Chargement du contenu en cours...",
     },
     og_title: {
-      EN: "The Wise Duck Dev - Full Stack JS Developer specialized in React",
-      FR: "The Wise Duck Dev - Développeur Full Stack JS spécialisé en React",
+      EN: "The Wise Duck Dev — AI Integration & Automation Specialist | Full-Stack JS Developer",
+      FR: "The Wise Duck Dev — Spécialiste Intégration d'IA & Automatisation | Développeur Full-Stack JS",
     },
     og_description: {
-      EN: "The Wise Duck Dev is your go-to destination for innovative full stack JS web and mobile development solutions, specializing in React.",
-      FR: "The Wise Duck Dev est votre destination de prédilection pour des solutions innovantes de développement web et mobile Full Stack JS, spécialisé en React.",
+      EN: "AI integration & automation, built end-to-end. I help teams who know they need AI but not where to start — I find where it creates value, then build it. Full-Stack JS: React, Next.js, Node.js, Python.",
+      FR: "Intégration d'IA & automatisation, de bout en bout. J'aide les équipes qui savent qu'elles ont besoin d'IA, mais pas par où commencer — je trouve où elle crée de la valeur, puis je la construis. Full-Stack JS : React, Next.js, Node.js, Python.",
     },
     og_locale: {
       EN: "en_US",
@@ -111,7 +115,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>The Wise Duck Dev | Portfolio</title>
+        <title>{translation.pageTitle[activeLanguage]}</title>
         <meta
           name="description"
           content={translation.pageDescription[activeLanguage]}
@@ -140,8 +144,8 @@ export default function Home() {
           property="og:image"
           content={
             activeLanguage === "FR"
-              ? `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_2_main_picture_Facebook_FR.webp`
-              : `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_2_main_picture_Facebook_EN.webp`
+              ? `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_3_main_picture_Facebook_FR.webp`
+              : `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_3_main_picture_Facebook_EN.webp`
           }
         />
         <meta
@@ -171,8 +175,8 @@ export default function Home() {
           name="twitter:image"
           content={
             activeLanguage === "FR"
-              ? `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_2_main_picture_Twitter_FR.webp`
-              : `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_2_main_picture_Twitter_EN.webp`
+              ? `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_3_main_picture_Twitter_FR.webp`
+              : `https://${siteUrl}/images/index/v2/images_index_page/wise_duck_dev_portfolio_version_3_main_picture_Twitter_EN.webp`
           }
         />
         <meta

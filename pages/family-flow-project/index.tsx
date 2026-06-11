@@ -330,13 +330,31 @@ export default function FamilyFlowProject() {
         publisher: { "@id": `${orgUrl}#organization` },
         isAccessibleForFree: true,
         mainEntityOfPage: `${familyFlowProjectUrl}#webpage`,
-        datePublished: "2025-11-01",
-        dateModified: "2025-11-01",
+        datePublished: "2025-10-28",
+        dateModified: "2025-10-30",
 
         potentialAction: {
           "@type": "ReadAction",
           target: `${familyFlowProjectUrl}`,
         },
+      },
+      {
+        "@type": "Article",
+        "@id": `${familyFlowProjectUrl}#article`,
+        headline: translations.metaTitle[activeLanguage],
+        description: translations.metaDescription[activeLanguage],
+        image: [primaryImage, twitterImage],
+        author: {
+          "@type": "Person",
+          name: "Yannick Le Guennec",
+          url: "https://wiseduckdev.com",
+        },
+        publisher: { "@id": `${orgUrl}#organization` },
+        datePublished: "2025-10-28",
+        dateModified: "2025-10-30",
+        inLanguage: pageLanguage,
+        isPartOf: { "@id": `${familyFlowProjectUrl}#webpage` },
+        mainEntityOfPage: { "@id": `${familyFlowProjectUrl}#webpage` },
       },
       {
         // The live app being showcased

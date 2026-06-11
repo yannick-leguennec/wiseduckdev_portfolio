@@ -34,8 +34,8 @@ function Experience() {
       FR: "Développeur Full Stack et Créateur de Plateformes Propulsées par l'IA",
     },
     point1: {
-      EN: "With 2+ years of experience in full stack JavaScript development, I've built and deployed AI-powered ecosystems such as Wise Duck Dev GPTs (800+ GPTs), Evidence Media, and Jean the Writer. I combine deep technical skills with product vision to design tools that are fast, scalable, and genuinely useful.",
-      FR: "Fort de plus de deux ans d'expérience en développement full stack JavaScript, j'ai conçu et déployé des écosystèmes propulsés par l’IA tels que Wise Duck Dev GPTs (800+ GPTs), Evidence Media et Jean the Writer. Je combine compétences techniques avancées et vision produit pour créer des outils rapides, scalables et réellement utiles.",
+      EN: "With 2+ years of experience in full stack JavaScript development, I've built and deployed AI-powered ecosystems such as Wise Duck Dev GPTs (800+ GPTs), Evidence Media, Jean the Writer, and ArchMapper (tested on 10,000+ file codebases). I combine technical depth with product vision to ship tools that are fast, scalable, and useful.",
+      FR: "Fort de plus de deux ans d'expérience en développement full stack JavaScript, j'ai conçu et déployé des écosystèmes propulsés par l’IA tels que Wise Duck Dev GPTs (800+ GPTs), Evidence Media, Jean the Writer et ArchMapper (testé sur des bases de plus de 10 000 fichiers). Je combine compétences techniques et vision produit pour créer des outils rapides, scalables et utiles.",
     },
     subtitle2: {
       EN: "Systems Thinking, Automation & Product Consistency",
@@ -50,16 +50,16 @@ function Experience() {
       FR: "Formation Stratégique, Collaboration à Distance et Polyvalence",
     },
     point3: {
-      EN: "Graduated from O'clock (Full Stack JS) and HEC Montréal (Entrepreneurship), I bring a dual technical and strategic mindset. My background in management and remote-first training made me autonomous, adaptable, and fully operational in distributed teams and async environments.",
-      FR: "Diplômé de l'école O'clock (Full Stack JS) et de HEC Montréal (Entrepreneuriat), je combine esprit technique et vision stratégique. Mon parcours en gestion et en formation à distance m’a rendu autonome, adaptable et parfaitement à l’aise dans des équipes distribuées et des environnements asynchrones.",
+      EN: "Graduated from O'clock (Full Stack JS) and HEC Montréal (Entrepreneurship, first-in-class with distinction), I bring a dual technical and strategic mindset. My 17+ years of operational leadership and remote-first training made me autonomous, adaptable, and fully operational in distributed teams and async environments.",
+      FR: "Diplômé de l'école O'clock (Full Stack JS) et de HEC Montréal (Entrepreneuriat, premier de promotion avec distinction), je combine esprit technique et vision stratégique. Mes 17+ années de leadership opérationnel et de formation à distance m’ont rendu autonome, adaptable et parfaitement à l’aise dans des équipes distribuées et des environnements asynchrones.",
     },
     subtitle4: {
       EN: "Obsessed With Learning, Experimentation and AI Innovation",
       FR: "Passionné d’Apprentissage, d’Expérimentation et d’Innovation IA",
     },
     point4: {
-      EN: "From prompt engineering to API orchestration, I constantly refine my skills across React, Next.js, Python, LLMs, and AI automation. I actively monitor tech trends, test new tools, and turn experiments into production-ready workflows. My curiosity fuels everything I build.",
-      FR: "Du prompt engineering à l’orchestration d’API, je perfectionne constamment mes compétences en React, Next.js, Python, LLMs et automatisation employant l'IA. Je surveille activement les tendances, teste de nouveaux outils et transforme mes expérimentations en workflows prêts pour la production. Ma curiosité est le moteur de tout ce que je construis.",
+      EN: "From prompt engineering to API orchestration, I constantly refine my skills across Python, TypeScript, the major LLM SDKs, and AI automation. I actively monitor tech trends, test new tools, and turn experiments into production-ready workflows. My curiosity fuels everything I build.",
+      FR: "Du prompt engineering à l’orchestration d’API, je perfectionne constamment mes compétences en Python, TypeScript, les SDKs des principaux LLMs et automatisation employant l'IA. Je surveille activement les tendances, teste de nouveaux outils et transforme mes expérimentations en workflows prêts pour la production. Ma curiosité est le moteur de tout ce que je construis.",
     },
   };
 

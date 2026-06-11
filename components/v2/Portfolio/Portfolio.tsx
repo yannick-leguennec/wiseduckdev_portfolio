@@ -105,7 +105,7 @@ function Portfolio() {
       title: "ArchMapper",
       description: {
         EN: "ArchMapper is a fully automated, resumable, bottom-up reverse-engineering pipeline that turns any codebase into a structured architectural document, ready for human or LLM analysis. Powered by Claude Sonnet and Claude Opus, it produces a canonical architecture.json plus Markdown spec cards, validated against repositories of more than 10,000 files, MIT-licensed.",
-        FR: "ArchMapper est un pipeline de retro-ingenierie ascendant entierement automatise et reprenable, qui transforme n'importe quel codebase en un document architectural structure, pret pour une analyse humaine ou par LLM. Propulse par Claude Sonnet et Claude Opus, il produit un architecture.json canonique accompagne de fiches spec Markdown, valide sur des depots de plus de 10 000 fichiers, sous licence MIT.",
+        FR: "ArchMapper est un pipeline de rétro-ingénierie ascendant entièrement automatisé et reprenable, qui transforme n'importe quelle base de code en un document architectural structuré, prêt pour une analyse humaine ou par LLM. Propulsé par Claude Sonnet et Claude Opus, il produit un architecture.json canonique accompagné de fiches spec Markdown, validé sur des dépôts de plus de 10 000 fichiers, sous licence MIT.",
       },
       profile: archmapper_profile.src,
       main: archmapper_main.src,
@@ -124,7 +124,7 @@ function Portfolio() {
       title: "Evidence Media Project",
       description: {
         EN: "Evidence Media is a fully autonomous, AI-powered independent news media operating on X and Substack. It covers 8 news categories daily, publishing multiple content formats on X and deep-dive articles, a free Daily Brief, and Notes on Substack. The entire system is orchestrated by automated workflows with self-healing infrastructure.",
-        FR: "Evidence Media est un media d'information independant entierement autonome et propulse par l'IA, operant sur X et Substack. Il couvre 8 categories d'actualites quotidiennement, publiant dans plusieurs formats sur X ainsi que des articles de fond, un Daily Brief gratuit et des Notes sur Substack. L'ensemble est orchestre par des workflows automatises avec une infrastructure auto-reparatrice.",
+        FR: "Evidence Media est un média d'information indépendant entièrement autonome et propulsé par l'IA, opérant sur X et Substack. Il couvre 8 catégories d'actualités quotidiennement, publiant dans plusieurs formats sur X ainsi que des articles de fond, un Daily Brief gratuit et des Notes sur Substack. L'ensemble est orchestré par des workflows automatisés avec une infrastructure auto-réparatrice.",
       },
       profile: evidence_profile.src,
       main: evidence_main.src,

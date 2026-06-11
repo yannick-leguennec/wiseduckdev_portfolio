@@ -27,64 +27,68 @@ function Profil() {
       FR: "Bienvenu-es",
     },
     subtitle: {
-      EN: "I am a Full-Stack Developer passionate about Automation and AI",
-      FR: "Je suis un développpeur Full-Stack passionné par l'automatisation et l'IA",
+      EN: "I am a Full-Stack Developer specialized in AI Integration & Automation",
+      FR: "Développeur Full-Stack spécialisé en Intégration d'IA & Automatisation",
     },
     description1: {
-      EN: "Full-Stack JavaScript Developer with 2 years of hands-on experience building web and AI-powered systems using React, Next.js, Node.js, and automation tools. After 17 years managing restaurant operations, I transitioned into tech with a focus on creativity, innovation, agile teamwork, problemsolving, and business development.",
-      FR: "Développeur Full-Stack JavaScript avec 2 ans d’expérience concrète dans la création de systèmes web et d’applications alimentées par l’IA, en utilisant React, Next.js, Node.js et divers outils d’automatisation. Après 17 ans de gestion opérationnelle dans la restauration, j’ai opéré une transition vers le secteur technologique, en mettant à profit ma créativité, mon esprit d’innovation, ma rigueur, mes compétences en résolution de problèmes et en développement d’affaires.",
+      EN: "Full-Stack JavaScript developer with over 2 years of hands-on experience integrating AI into real production systems and building automation that runs itself. I work primarily in Python and TypeScript against the OpenAI, Anthropic, xAI, and Perplexity APIs, and I ship the result end-to-end. Most teams today know they need to integrate AI to stay competitive — they just don't know where to start. I help them find where AI can genuinely create value inside their business, develop and implement the chosen solution all the way to production, and support its maintenance after launch.",
+      FR: "Développeur Full-Stack JavaScript avec plus de 2 ans d'expérience pratique à intégrer l'IA dans des systèmes réels en production et à créer des automatisations autonomes. Je travaille principalement en Python et TypeScript avec les APIs d'OpenAI, Anthropic, xAI et Perplexity, et je livre les solutions de bout en bout. La plupart des équipes savent qu'il est important aujourd'hui d'intégrer l'IA dans leur structure pour rester compétitives, mais ne savent pas par où commencer. Je les aide à trouver où l'IA peut réellement créer de la valeur dans leur entreprise, puis je développe et implémente la ou les solutions retenues jusqu'à la mise en production, et je les accompagne dans la maintenance.",
     },
     description2: {
-      EN: "Since March 2024, I’ve delivered multiple freelance projects and led bold personal initiatives, from an autonomous AI-powered media pipeline (X & Substack) to a platform hosting 800+ custom GPTs for web, mobile, AI, blockchain, and game developers. I also apply my background in business strategy, acquired at HEC Montreal, to support startups with business models, marketing, and growth strategies.",
-      FR: "Depuis mars 2024, j’ai mené à bien plusieurs mandats en freelance et piloté des projets personnels audacieux, notamment un pipeline médiatique entièrement autonome utilisant l’intelligence artificielle (X & Substack), ainsi qu’une plateforme regroupant plus de 800 GPTs personnalisés destinés aux développeurs web, mobile, IA, blockchain et jeux vidéo. J’appuie également des startups grâce à mon expertise en stratégie d’affaires, acquise à HEC Montréal, en contribuant à l’élaboration de modèles d’affaires, de plans marketing et de stratégies de croissance.",
+      EN: "Since March 2024, under my Wise Duck Dev brand, I've shipped projects ranging from creating an independent, fully automated AI-powered media outlet (X & Substack) to ArchMapper, a reverse-engineering pipeline tested on 10,000+ file codebases, and a platform of 800+ specialized GPTs for developers. My 17 years leading operations across industry and the restaurant sector, and a first-in-class Entrepreneurship certificate (with distinction) from HEC Montréal, mean I don't just integrate AI — I know where to integrate it. I think in systems and look for where AI delivers real value.",
+      FR: "Depuis mars 2024, sous ma marque Wise Duck Dev, j'ai livré des projets allant de la création d'un média indépendant entièrement automatisé utilisant l'IA (X & Substack) à ArchMapper, un pipeline de rétro-ingénierie testé sur des bases de code de plus de 10 000 fichiers, jusqu'au développement d'une plateforme de 800+ GPTs spécialisés pour les développeurs. Mes 17 années d'expérience à diriger les opérations au sein de l'industrie et de la restauration et un certificat en Entrepreneuriat de HEC Montréal (obtenu avec distinction, premier de ma promotion) signifient que je n'intègre pas seulement l'IA — je sais où l'intégrer. Je pense en systèmes et je cherche là où l'IA apporte une véritable valeur.",
     },
     point1: {
-      EN: "Certified Full Stack JS Web and Web Mobile Developer",
+      EN: "Certified Full-Stack JS Web & Web Mobile Developer",
       FR: "Développeur web et web mobile certifié Full-Stack JS",
     },
     point2: {
-      EN: "Specialized in React, Next.js and interconnected technologies",
-      FR: "Spécialisé en React et ses technologies interconnectées",
+      EN: "Model-agnostic across LLMs: OpenAI, Anthropic (Claude), xAI, Perplexity, and Google APIs in production",
+      FR: "Polyvalent à travers les LLMs : APIs OpenAI, Anthropic (Claude), xAI, Perplexity et Google en production",
     },
     point3: {
-      EN: "Skilled in Python, Node.js, REST APIs, and various backend technologies",
-      FR: "Compétent en Python, Node.js, REST APIs et diverses technologies backend",
+      EN: "Python, TypeScript, Node.js, REST APIs, and modern AI SDKs for end-to-end product delivery",
+      FR: "Python, TypeScript, Node.js, APIs REST et SDKs IA modernes pour livrer des produits de bout en bout",
     },
     point4: {
-      EN: "Over 10 years of experience in management",
-      FR: "Plus de 10 ans d'expérience en gestion",
+      EN: "Expert in AI integration, automation, AI workflows, agentic systems, and prompt engineering",
+      FR: "Expert en intégration d'IA, automatisation, workflows IA, systèmes agentiques et prompt engineering",
     },
     point5: {
-      EN: "Scientific background",
-      FR: "Formation scientifique",
+      EN: "Creator of an 800+ custom GPTs platform for web, mobile, AI, and blockchain developers (explore ",
+      FR: "Créateur d'une plateforme de 800+ GPTs personnalisés pour les développeurs web, mobile, IA et blockchain (à découvrir ",
     },
     point6: {
-      EN: "Top graduate from HEC Montréal in Entrepreneurship and Business Creation",
-      FR: "Diplômé de HEC Montréal en Entrepreneuriat et Création d'Entreprise",
+      EN: "Disciplined engineering methodologies — TDD, SOLID, DRY, KISS, YAGNI — for tested, maintainable code that ships",
+      FR: "Méthodologies d'ingénierie rigoureuses — TDD, SOLID, DRY, KISS, YAGNI — pour du code testé et maintenable, livré",
     },
     point7: {
-      EN: "Continuous learning",
-      FR: "Apprentissage continu",
+      EN: "Design and implementation of AI development standards — AGENTS.md, CLAUDE.md, and project conventions",
+      FR: "Conception et mise en place de standards de développement IA — AGENTS.md, CLAUDE.md et conventions de projet",
     },
     point8: {
-      EN: "AI Enthusiast (Discover my GPTs specialized in web, mobile, AI and blockchain developement ",
-      FR: "Passionné d'IA (Découvrez mes GPTs spécialisés en développement web, mobile, IA et blockchain ",
+      EN: "17+ years of operational leadership and management experience",
+      FR: "17+ années de leadership opérationnel et de gestion",
     },
     point9: {
-      EN: "Expert in automation, AI workflows, and prompt engineering",
-      FR: "Expert en automatisation, intégration d'IA et prompt engineering",
+      EN: "Scientific and analytical background with a systems-thinking approach",
+      FR: "Formation scientifique et analytique avec une approche systémique",
+    },
+    point10: {
+      EN: "Top graduate from HEC Montréal in Entrepreneurship and Business Creation",
+      FR: "Diplômé major de promotion de HEC Montréal en Entrepreneuriat et Création d'Entreprise",
     },
     button: {
       EN: "Check out my resume",
       FR: "Consultez mon CV",
     },
     cv: {
-      EN: "docs/yannick_legunnec_full_stack_dev_resume_2025.pdf",
-      FR: "docs/yannick_legunnec_full_stack_dev_resume_2025_fr.pdf",
+      EN: "docs/yannick_leguennec_full_stack_dev_resume_2025.pdf",
+      FR: "docs/yannick_leguennec_full_stack_dev_resume_2025_fr.pdf",
     },
     aria1: {
-      EN: "Discover my GPTs specialized in web, mobile, AI and blockchain developement here",
-      FR: "Découvrez mes GPTs spécialisés en développement web, mobile, IA et blockchain ici",
+      EN: "Explore my 800+ custom GPTs platform for web, mobile, AI, and blockchain developers",
+      FR: "Découvrir ma plateforme de 800+ GPTs personnalisés pour les développeurs web, mobile, IA et blockchain",
     },
     aria2: {
       EN: "Download my CV in English here",
@@ -115,8 +119,6 @@ function Profil() {
             <li>{translations.point2[activeLanguage]}</li>
             <li>{translations.point3[activeLanguage]}</li>
             <li>{translations.point4[activeLanguage]}</li>
-            <li>{translations.point5[activeLanguage]}</li>
-            <li>{translations.point6[activeLanguage]}</li>
             <li>
               <Link
                 href={gptsLink}
@@ -127,14 +129,18 @@ function Profil() {
                 }
                 aria-label={translations.aria1[activeLanguage]}
               >
-                {translations.point8[activeLanguage]}
+                {translations.point5[activeLanguage]}
                 <span className={`${classes.gptsLinkOrange}`}>
                   {activeLanguage === "FR" ? "ici" : "here"}
                 </span>
               </Link>
               {")"}
             </li>
+            <li>{translations.point6[activeLanguage]}</li>
+            <li>{translations.point7[activeLanguage]}</li>
+            <li>{translations.point8[activeLanguage]}</li>
             <li>{translations.point9[activeLanguage]}</li>
+            <li>{translations.point10[activeLanguage]}</li>
           </ul>
         </div>
         <div className={`${classes.buttonContainer}`}>

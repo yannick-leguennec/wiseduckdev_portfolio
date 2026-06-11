@@ -392,13 +392,31 @@ export default function EvidenceMediaProject() {
         publisher: { "@id": `${orgUrl}#organization` },
         isAccessibleForFree: true,
         mainEntityOfPage: { "@id": `${evidenceMediaProjectUrl}#software` },
-        datePublished: "2025-11-01",
+        datePublished: "2025-10-29",
         dateModified: "2026-04-30",
 
         potentialAction: {
           "@type": "ReadAction",
           target: `${evidenceMediaProjectUrl}`,
         },
+      },
+      {
+        "@type": "Article",
+        "@id": `${evidenceMediaProjectUrl}#article`,
+        headline: translations.metaTitle[activeLanguage],
+        description: translations.metaDescription[activeLanguage],
+        image: [primaryImage, secondaryImage],
+        author: {
+          "@type": "Person",
+          name: "Yannick Le Guennec",
+          url: "https://wiseduckdev.com",
+        },
+        publisher: { "@id": `${orgUrl}#organization` },
+        datePublished: "2025-10-29",
+        dateModified: "2026-04-30",
+        inLanguage: pageLanguage,
+        isPartOf: { "@id": `${evidenceMediaProjectUrl}#webpage` },
+        mainEntityOfPage: { "@id": `${evidenceMediaProjectUrl}#webpage` },
       },
       {
         "@type": "SoftwareApplication",

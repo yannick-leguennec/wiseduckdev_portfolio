@@ -14,7 +14,7 @@ import { TranslationsType } from "../../../types/TranslationsType";
 
 const Skills = () => {
   // State: active category for desktop
-  const [activeCategory, setActiveCategory] = useState("toolsFrameworks");
+  const [activeCategory, setActiveCategory] = useState("aiAutomation");
   // State: check if user is on mobile
   const [isMobile, setIsMobile] = useState(false);
 
