@@ -45,6 +45,7 @@ function Portfolio() {
   const projects = [
     {
       id: "family_flow",
+      year: 2023,
       title: "Family Flow",
       description: {
         EN: "Family Flow is an intuitive web app that simplifies family coordination and communication. It centralizes events, reminders, and shared tasks, enabling every member to stay connected and actively involved in daily life — wherever they are. Designed for modern families, it brings structure, harmony, and clarity to household organization.",
@@ -64,6 +65,7 @@ function Portfolio() {
     },
     {
       id: "wise_duck_dev_gpts",
+      year: 2024,
       title: "The Wise Duck Dev GPTs",
       description: {
         EN: "Discover The Wise Duck Dev GPTs — the ultimate library for web, mobile, AI, blockchain, and game developers. This innovative platform features over 800 custom GPTs across 14 categories, designed to enhance skills, streamline workflows, and inspire innovation. Created with a philanthropic vision, it empowers developers to build faster, smarter, and better.",
@@ -83,6 +85,7 @@ function Portfolio() {
     },
     {
       id: "jean_the_writer",
+      year: 2025,
       title: "Jean The Writer",
       description: {
         EN: "Jean The Writer automates comprehensive grammar and syntax correction for manuscripts up to 600 pages, then delivers in‑depth editorial reviews and actionable recommendations for every chapter. By combining AI‑driven proofreading with targeted structural feedback, it transforms raw drafts into polished, publication‑ready manuscripts—giving your work the best possible chance of success.",
@@ -102,6 +105,7 @@ function Portfolio() {
     },
     {
       id: "archmapper",
+      year: 2026,
       title: "ArchMapper",
       description: {
         EN: "ArchMapper is a fully automated, resumable, bottom-up reverse-engineering pipeline that turns any codebase into a structured architectural document, ready for human or LLM analysis. Powered by Claude Sonnet and Claude Opus, it produces a canonical architecture.json plus Markdown spec cards, validated against repositories of more than 10,000 files, MIT-licensed.",
@@ -121,6 +125,7 @@ function Portfolio() {
     },
     {
       id: "evidence_media",
+      year: 2026,
       title: "Evidence Media Project",
       description: {
         EN: "Evidence Media is a fully autonomous, AI-powered independent news media operating on X and Substack. It covers 8 news categories daily, publishing multiple content formats on X and deep-dive articles, a free Daily Brief, and Notes on Substack. The entire system is orchestrated by automated workflows with self-healing infrastructure.",
@@ -140,6 +145,8 @@ function Portfolio() {
     },
   ];
 
+  const sortedProjects = [...projects].sort((a, b) => b.year - a.year);
+
   // =============================================
   // RENDER
   // =============================================
@@ -150,7 +157,7 @@ function Portfolio() {
       </h2>
 
       <div className={classes.projectsContainer}>
-        {projects.map((project) => (
+        {sortedProjects.map((project) => (
           <article key={project.id} className={classes.projectCard}>
             {/* LEFT: Project Information */}
             <div className={classes.projectInfo}>
